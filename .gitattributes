@@ -28,3 +28,11 @@ tools/powershell/system-maintenance/SystemMaintenance.ps1 -text
 docs/media/iptv/images/open-media.png -text
 docs/media/iptv/images/tool-bar.png -text
 docs/media/iptv/images/your-tv.png -text
+
+# Repository metadata only: preserve application and data checkout behavior.
+/*.md text eol=lf
+/.editorconfig text eol=lf
+/.gitattributes text eol=lf
+/.gitignore text eol=lf
+/_config.yml text eol=lf
+/.github/** text eol=lf

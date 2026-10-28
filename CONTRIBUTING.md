@@ -32,3 +32,7 @@ Do not add credentials, personal application-state files, private account identi
 Describe the user-visible correction, relevant resource versions and actual validation. For ML changes, install the Tkinter example requirements and run python scripts/validate-ml-handbook.py --smoke. The graphical window and every notebook block require separate manual checks.
 
 The source-folder checksum audit is a local migration check; normal contributions do not need the original sibling folders.
+
+## Shared repository conventions
+
+Follow [repository standards](REPOSITORY_STANDARDS.md). Run `python .github/scripts/check_repository.py` with Python 3.12 or later, alongside the content and site checks above. Keep Markdown links case-correct and preserve stable public routes, anchors and imported snapshots.

@@ -36,6 +36,7 @@ exclude:
   - package-lock.json
   - CONTRIBUTING.md
   - SECURITY.md
+  - REPOSITORY_STANDARDS.md
   - THIRD_PARTY_NOTICES.md
   - LICENSE
   - apps/linux-command-reference/generate-static.cjs

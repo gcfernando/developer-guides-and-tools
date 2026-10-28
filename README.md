@@ -192,3 +192,7 @@ All **176 original files** from the three supplied folders have a destination or
 [Migration notes](maintenance/migration/README.md) document the merged content and old URL mappings. Redirecting an old hosted page requires a separate action at that hosting location.
 
 No reuse license was supplied for the original collections, and this consolidation does not grant new rights. See [LICENSE](LICENSE) and [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md), including the dataset and external-source qualifications.
+
+## Repository maintenance
+
+[Contributing](https://github.com/gcfernando/developer-guides-and-tools/blob/main/CONTRIBUTING.md) · [Security policy](https://github.com/gcfernando/developer-guides-and-tools/blob/main/SECURITY.md) · [Repository standards](https://github.com/gcfernando/developer-guides-and-tools/blob/main/REPOSITORY_STANDARDS.md)

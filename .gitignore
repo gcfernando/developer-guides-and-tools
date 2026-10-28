@@ -15,3 +15,18 @@ examples/machine-learning/ml-handbook/models/
 examples/machine-learning/ml-handbook/data/
 examples/machine-learning/ml-handbook/tkinter_app/models/
 examples/machine-learning/ml-handbook/tkinter_app/data/
+
+# Shared local files and documentation build caches
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+.env
+.env.*
+!.env.example
+!.env.sample
+_site/
+.jekyll-cache/
+.sass-cache/
+.bundle/
