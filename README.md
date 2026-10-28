@@ -1,13 +1,25 @@
 ---
 layout: default
-title: "Developer Guides, Cheat Sheets & Tools"
-description: "Python, data science, machine learning, C#/.NET, SQL and Azure guides, command cheat sheets, interactive references and practical developer tools."
+title: "Developer Guides, Cheat Sheets and Practical Tools"
+description: "Study Python, machine learning, C#/.NET, SQL and Azure. Find Linux, Git and container references, interactive learning tools and documented utilities."
 permalink: /repository/
 canonical_url: https://gcfernando.github.io/developer-guides-and-tools/
 sitemap: false
 ---
 
-# Developer Guides, Cheat Sheets & Tools
+<a id="developer-guides-cheat-sheets--tools"></a>
+
+<div align="center" markdown="1">
+
+# Developer Guides, Cheat Sheets and Practical Tools
+
+<p align="center"><strong>Learn a subject. Find a command. Build something useful.</strong></p>
+
+[![Repository standards](https://github.com/gcfernando/developer-guides-and-tools/actions/workflows/repository-standards.yml/badge.svg)](https://github.com/gcfernando/developer-guides-and-tools/actions/workflows/repository-standards.yml) [![Read the documentation](https://img.shields.io/badge/Read-the_documentation-2563eb?style=flat-square)](https://gcfernando.github.io/developer-guides-and-tools/)
+
+</div>
+
+> **Start here:** [Choose a learning path](#guide-choose-a-learning-path) · [Study machine learning](#guide-data-science-and-machine-learning) · [Find a command](#guide-command-cheat-sheets-and-interactive-references) · [Build and verify](#guide-build-and-validate)
 
 A practical library for learning **Python, data science, machine learning, C#/.NET, SQL and Azure**, finding **Linux, Git, Docker and Podman commands**, and using developer utilities, configuration examples and AI learning resources.
 
@@ -27,6 +39,8 @@ This collection combines the supplied KnowledgeBase, Other_Projects and MLHandbo
 - [Build and validate](#build-and-validate)
 - [Contributing, provenance and licensing](#contributing-provenance-and-licensing)
 
+<a id="guide-choose-a-learning-path"></a>
+
 ## Choose a learning path
 
 | Your goal | Suggested starting point |
@@ -39,6 +53,8 @@ This collection combines the supplied KnowledgeBase, Other_Projects and MLHandbo
 | Build a local Ollama and Streamlit chat app | [Local AI learning path](docs/learning-paths/local-ai.md) |
 
 Reading requires a browser or Markdown viewer. Running an example requires the tools and environment named by its own guide; there is no installer that runs every project in this repository.
+
+<a id="guide-data-science-and-machine-learning"></a>
 
 ## Data science and machine learning
 
@@ -72,6 +88,8 @@ The figures and recorded outputs are supplied teaching material. Consolidation c
 | AI coding environments | [Coding add-ons installation and configuration guide](docs/ai/coding-addons.md) |
 
 The long-form courses remain complete during this consolidation. Follow their prerequisites, exercise order and code context. Keep SQL dialects separate and check version-dependent cloud and tool details against their linked official sources.
+
+<a id="guide-command-cheat-sheets-and-interactive-references"></a>
 
 ## Command cheat sheets and interactive references
 
@@ -150,6 +168,8 @@ assets/        Shared website styles and branding
 
 The complete MLHandbook is under examples/machine-learning/ml-handbook/. Its integrated documentation page is under docs/data-science/.
 
+<a id="guide-build-and-validate"></a>
+
 ## Build and validate
 
 Use Node.js 22 or newer for the documentation tooling:
@@ -181,7 +201,7 @@ bundle exec jekyll serve
 
 Open the local address printed by Jekyll. The site builds from the repository root with /developer-guides-and-tools/ as its configured base path.
 
-Validation and GitHub Pages workflows are included. The owner still needs to publish the repository and enable Pages with GitHub Actions; this local consolidation does not deploy a public site.
+Validation and GitHub Pages workflows are included. The [published documentation site](https://gcfernando.github.io/developer-guides-and-tools/) is built and deployed by the Pages workflow after changes reach the main branch. The commands above build and verify a local copy.
 
 ## Contributing, provenance and licensing
 

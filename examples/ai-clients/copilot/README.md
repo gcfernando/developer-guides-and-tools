@@ -1,13 +1,33 @@
 ---
-title: "Copilot Configuration Guidance"
-description: "Keep user preferences separate from automatically managed account and application state."
+title: "Copilot Configuration and Instruction Guidance"
+description: "Separate reusable Copilot instructions from personal account state. Find the instruction template and guidance for configuring your own client."
 permalink: /examples/ai-clients/copilot/
 ---
 
-# Copilot configuration guidance
+[Developer guides and tools](../../../README.md)
 
-The imported copilot-config.json was automatically managed application state containing account identifiers, first-launch information and UI flags. It is deliberately not distributed as a reusable configuration example.
+<a id="copilot-configuration-guidance"></a>
 
-Configure preferences through the installed client's supported settings interface and consult that version's official documentation. Do not copy another user's login or application-state file.
+# Copilot Configuration and Instruction Guidance
 
-A reusable [Copilot instruction template](../../../templates/ai-instructions/copilot/copilot-instructions.md) is included separately. The [source map](../../../maintenance/migration/source-map.csv) records the excluded source file's checksum and disposition without reproducing its account state.
+Use your installed client's supported settings interface for preferences and a reusable instruction file for project guidance. Keep personal account state out of both.
+
+> **In this guide:** [Start with the instruction template](#guide-start-with-the-instruction-template) · [Configure your own client](#guide-configure-your-own-client) · [Why the imported state is excluded](#guide-why-the-imported-state-is-excluded)
+
+<a id="guide-start-with-the-instruction-template"></a>
+
+## Start with the instruction template
+
+The [Copilot instruction template](../../../templates/ai-instructions/copilot/copilot-instructions.md) is maintained separately from client preferences. Inspect its guidance and install it deliberately for your workflow.
+
+<a id="guide-configure-your-own-client"></a>
+
+## Configure your own client
+
+Consult the official documentation for your installed client version. Do not copy another user's login, first-launch information or application-state file.
+
+<a id="guide-why-the-imported-state-is-excluded"></a>
+
+## Why the imported state is excluded
+
+The original `copilot-config.json` was automatically managed state containing account identifiers and UI flags. It is not distributed as a reusable configuration example. The [source map](../../../maintenance/migration/source-map.csv) records its checksum and exclusion without reproducing account data.

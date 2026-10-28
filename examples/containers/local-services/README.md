@@ -1,12 +1,20 @@
 ---
 title: "Local Development Services with Podman Compose"
-description: "A local development stack for SQL Server, MySQL, Oracle, MongoDB, Elasticsearch, Kibana, RabbitMQ, Kafka, Kafka UI, Redis and Keycloak."
+description: "Configure an opt-in Podman Compose stack with 11 database, messaging, search and identity services. Review credentials, port bindings and resource needs."
 permalink: /examples/local-services/
 ---
 
-# Local development services
+[Developer guides and tools](../../../README.md)
+
+<a id="local-development-services"></a>
+
+# Local Development Services with Podman Compose
 
 [compose.yml](compose.yml) contains 11 services: SQL Server, Elasticsearch, Kibana, Oracle XE, MongoDB, RabbitMQ, MySQL, Kafka, Kafka UI, Redis and Keycloak. It is an example environment, not a production deployment.
+
+> **In this guide:** [Get started](#guide-configure)
+
+<a id="guide-configure"></a>
 
 ## Configure
 

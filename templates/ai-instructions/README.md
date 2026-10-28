@@ -1,23 +1,39 @@
 ---
-title: "Reusable AI Instruction Templates"
-description: "Opt-in instruction templates for Codex, Claude, Copilot and ChatGPT."
+title: "Reusable AI Instruction Templates for Developers"
+description: "Inspect and deliberately install reusable instruction templates for Codex, Claude, Copilot and ChatGPT. Keep instructions separate from permissions."
 permalink: /templates/ai-instructions/
 ---
 
-# Reusable AI instruction templates
+[Developer guides and tools](../../README.md)
 
-These documents are examples to inspect and deliberately install, rather than repository-wide instructions for this library.
+<a id="reusable-ai-instruction-templates"></a>
 
-| Client | Template |
-|---|---|
+# Reusable AI Instruction Templates for Developers
+
+Choose an instruction template, inspect its guidance and install it deliberately for the client you use. These files are examples, not repository-wide instructions for this library.
+
+> **In this guide:** [Get started](#guide-choose-a-template) · [Understand the details](#guide-keep-settings-and-permissions-separate) · [Install with the correct filenames](#guide-install-with-the-correct-filenames)
+
+<a id="guide-choose-a-template"></a>
+
+## Choose a template
+
+| Client or purpose | Template |
+| --- | --- |
 | Codex | [AGENTS.md](codex/AGENTS.md) |
 | Claude | [CLAUDE.md](claude/CLAUDE.md) |
 | Copilot | [copilot-instructions.md](copilot/copilot-instructions.md) |
 | ChatGPT custom instructions | [custom-instructions.txt](chatgpt/custom-instructions.txt) |
 | Shared policy used by the Claude example | [ENGINEERING.md](shared/ENGINEERING.md) |
 
-The Claude template references ~/.ai/ENGINEERING.md. If you choose to use that template, install the shared file at that path or update the import to the location you deliberately select. Other clients retain their self-contained source templates.
+<a id="guide-install-with-the-correct-filenames"></a>
 
-Preserve required filenames and confirm instruction-loading behavior in the installed client. The [configuration examples](../../examples/ai-clients/README.md) are a separate concern. Instructions describe behavior; permissions and sandboxing are controlled by the actual environment.
+## Install with the correct filenames
 
-Shared sections are similar across templates but have client-specific application notes. Review those notes before propagating a policy edit between them.
+Preserve each client's required filename and confirm instruction-loading behavior in the installed version. The Claude example references `~/.ai/ENGINEERING.md`: install the shared file there or update the import to the location you deliberately choose. Other templates retain their self-contained guidance.
+
+<a id="guide-keep-settings-and-permissions-separate"></a>
+
+## Keep settings and permissions separate
+
+The [AI client configuration examples](../../examples/ai-clients/README.md) contain preference snapshots and separate setup notes. Instruction text guides behavior; it does not grant account access or enforce tool permissions, approval rules or a sandbox.

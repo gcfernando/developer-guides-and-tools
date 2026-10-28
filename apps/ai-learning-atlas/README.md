@@ -1,18 +1,27 @@
 ---
 layout: default
 permalink: /apps/ai-learning-atlas/guide/
-title: "AI Learning Atlas: Offline Reader and Progress Guide"
-description: Use role paths, search AI topics, record progress and export a
-  backup in the standalone AI Learning Atlas.
+title: "AI Learning Atlas — Study Paths and Progress Guide"
+description: Use role paths, search AI topics, record progress and export a backup in the standalone AI Learning Atlas.
 ---
 
-# 🧠 AI Learning Atlas — Offline Reader and Progress Guide
+[Developer guides and tools](../../README.md) · **Interactive learning**
+
+<a id="-ai-learning-atlas--offline-reader-and-progress-guide"></a>
+
+# AI Learning Atlas — Study Paths and Progress Guide
 
 The [AI Learning Atlas](index.html) is a standalone HTML study handbook with 51 topic groups, 1,607 subtopics and 14 suggested professional paths. It helps you choose what to study, find a topic, plan a lab and record your own progress.
+
+> **In this guide:** [Get started](#guide-prerequisites) · [Quick start](#guide-quick-start) · [Search and navigation](#guide-search-and-navigation)
+
+<a id="guide-prerequisites"></a>
 
 ## 📦 Prerequisites
 
 Open the hosted handbook through the link above, or download the HTML file for offline use in a modern browser. No web server, Python environment, account or API key is needed to read it. JavaScript enables search, role selection, copying and progress controls. External reference links require internet access; the handbook uses no external fonts or scripts.
+
+<a id="guide-quick-start"></a>
 
 ## 🚀 Quick start
 
@@ -23,6 +32,8 @@ Open the hosted handbook through the link above, or download the HTML file for o
 5. Mark the topic complete when you have evidence, and export a JSON backup of your progress.
 
 The role priorities are editorial recommendations. They are not a certification syllabus or a guarantee that a particular curriculum suits every job.
+
+<a id="guide-search-and-navigation"></a>
 
 ## 🔎 Search and navigation
 

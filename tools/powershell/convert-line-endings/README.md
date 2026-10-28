@@ -1,12 +1,22 @@
 ---
-title: "PowerShell Line-Ending Converter"
-description: "Convert supported UTF-8 text files between LF and CRLF, with exclusions and verification."
+title: "Convert LF and CRLF Line Endings with PowerShell"
+description: "Convert supported UTF-8 text files between LF and CRLF with a PowerShell utility, documented exclusions, usage examples and diff-based verification."
 permalink: /utilities/line-endings/
 ---
 
-# Line-ending converter
+[Developer guides and tools](../../../README.md)
 
-[Convert-LineEndings.ps1](Convert-LineEndings.ps1) accepts a file or folder and the EXISTING ending to convert FROM.
+<a id="line-ending-converter"></a>
+
+# Convert LF and CRLF Line Endings with PowerShell
+
+Convert supported UTF-8 files between LF and CRLF with a PowerShell utility that accepts a file or folder and the **existing** ending to convert **from**.
+
+> **In this guide:** [Get started](#guide-run-the-converter) · [Understand the details](#guide-understand-the-scope) · [Check the limits](#guide-verify-the-result)
+
+<a id="guide-run-the-converter"></a>
+
+## Run the converter
 
 From the repository root:
 
@@ -20,8 +30,19 @@ From the repository root:
 git ls-files --eol
 ~~~
 
-Use a disposable file or a committed working tree first. Folder mode includes hidden files, prunes .git, bin, obj and node_modules, and skips reparse points. Explicit file arguments are processed directly.
 
-Empty files, NUL-containing files and UTF-8 BOM files are skipped. Invalid UTF-8 is reported as a failure. Converted output is UTF-8 without BOM. The script reports counts but does not set a failing process exit code; inspect its output and review the diff.
+<a id="guide-understand-the-scope"></a>
 
-The script's behavior is preserved from the source collection.
+## Understand the scope
+
+Use a disposable file or a committed working tree first. Folder mode includes hidden files, prunes `.git`, `bin`, `obj` and `node_modules`, and skips reparse points. Explicit file arguments are processed directly.
+
+Empty files, NUL-containing files and UTF-8 BOM files are skipped. Invalid UTF-8 is reported as a failure. Converted output is UTF-8 without BOM.
+
+<a id="guide-verify-the-result"></a>
+
+## Verify the result
+
+The script reports counts but does not set a failing process exit code. Inspect its output and review `git diff` rather than relying only on the command's exit status.
+
+The utility implementation is preserved from the imported source. [Contribution guidance](../../../CONTRIBUTING.md) describes the repository's maintenance process.

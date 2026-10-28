@@ -1,14 +1,19 @@
 ---
 layout: default
 permalink: /apps/linux-command-reference/guide/
-title: "Linux Command Reference: Offline Search and Security Examples"
-description: Use and maintain a searchable reference of 361 Linux commands
-  across 16 categories.
+title: "Linux Command Reference — Search 361 Commands Offline"
+description: Search 361 Linux commands across 16 categories, read examples and use the reference offline. Review tool requirements and authorized-use boundaries.
 ---
 
-# Linux Command Reference for Cybersecurity — 361 Commands, Searchable and Offline 🐧🔐
+[Developer guides and tools](../../README.md) · **Linux and security**
+
+<a id="linux-command-reference-for-cybersecurity--361-commands-searchable-and-offline-"></a>
+
+# Linux Command Reference — Search 361 Commands Offline
 
 **A searchable, offline reference for 361 Linux commands** used in system administration, penetration testing, CTFs and digital forensics. Browse commands by category or search their descriptions and usage examples in any browser.
+
+> **In this guide:** [Get started](#guide-prerequisites) · [Understand the details](#guide-features-and-categories) · [Check the limits](#guide-development-and-verification)
 
 ---
 
@@ -24,11 +29,15 @@ description: Use and maintain a searchable reference of 361 Linux commands
 <a id="-related"></a>
 <a id="documentation-links"></a>
 
+<a id="guide-prerequisites"></a>
+
 ## 📦 Prerequisites
 
 A modern browser is enough for reading. JavaScript enables search and filters. Node.js is required only when maintaining generated HTML or running the checks. To execute catalog examples, use a Linux environment with the relevant packages and permissions.
 
 ---
+
+<a id="guide-features-and-categories"></a>
 
 ## ✨ Features and categories
 
@@ -107,6 +116,8 @@ ls -la
 ```
 
 The catalog also includes commands that alter files, permissions, networking or services. Read the surrounding context and work only in an environment you are authorized to administer or test.
+
+<a id="guide-development-and-verification"></a>
 
 ## 🧪 Development and verification
 

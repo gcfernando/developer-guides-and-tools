@@ -1,14 +1,19 @@
 ---
 layout: default
 permalink: /utilities/windows-maintenance/
-title: "Windows Maintenance PowerShell Script: Behavior and Limitations"
-description: Review the maintenance script’s SFC, DISM, Windows Update,
-  networking and cleanup sequence before running it.
+title: "Windows Maintenance with PowerShell — Script Guide"
+description: Review a PowerShell Windows maintenance script's repair, update, networking and cleanup sequence, its prerequisites, side effects and limitations.
 ---
 
-# 🪟 Windows System Maintenance — PowerShell Script Reference
+[Developer guides and tools](../../../README.md)
+
+<a id="-windows-system-maintenance--powershell-script-reference"></a>
+
+# Windows Maintenance with PowerShell — Script Guide
 
 `SystemMaintenance.ps1` runs a fixed sequence of Windows repair, update, networking and cleanup operations. This guide explains the checked-in script's behavior so an administrator can decide whether it suits a particular machine.
+
+> **In this guide:** [Get started](#guide-prerequisites) · [Walk through the example](#guide-usage) · [Check the limits](#guide-verification-and-logs)
 
 <!-- Preserve links to earlier section headings. -->
 <a id="windows-system-maintenance-powershell-script--sfc-dism-chkdsk-windows-update-and-cleanup"></a>
@@ -19,6 +24,8 @@ description: Review the maintenance script’s SFC, DISM, Windows Update,
 <a id="things-to-know-before-running"></a>
 <a id="related-tools"></a>
 <a id="documentation-links"></a>
+
+<a id="guide-prerequisites"></a>
 
 ## 📦 Prerequisites
 
@@ -48,6 +55,8 @@ The script does not check every prerequisite, request elevation itself, provide 
 
 Network operations can disconnect remote access. Keep local access available. Crash dumps and the CBS log may be needed for an existing investigation; preserve them before deciding to use the script.
 
+<a id="guide-usage"></a>
+
 ## 💡 Usage
 
 First read [`SystemMaintenance.ps1`](SystemMaintenance.ps1). If you have decided to run the complete sequence, open an elevated PowerShell in this folder:
@@ -57,6 +66,8 @@ First read [`SystemMaintenance.ps1`](SystemMaintenance.ps1). If you have decided
 ```
 
 If execution is blocked, check your organization's policy and the script's provenance before changing settings. SFC, DISM, updates and disk checks can take a long time. Decide when to restart based on actual update and CHKDSK output; the script does not reboot the machine itself.
+
+<a id="guide-verification-and-logs"></a>
 
 ## 🧪 Verification and logs
 
