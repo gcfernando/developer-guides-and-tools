@@ -1,0 +1,158 @@
+[
+  {
+    "path": "docs/python/oop.md",
+    "topic": "Python",
+    "type": "Course",
+    "level": "Beginner to advanced"
+  },
+  {
+    "path": "docs/python/special-methods.md",
+    "topic": "Python",
+    "type": "Reference",
+    "level": "Intermediate"
+  },
+  {
+    "path": "docs/csharp-dotnet/oop.md",
+    "topic": "C# and .NET",
+    "type": "Course",
+    "level": "Beginner to advanced"
+  },
+  {
+    "path": "docs/data-science/machine-learning-handbook.md",
+    "topic": "Data science and machine learning",
+    "type": "Illustrated handbook",
+    "level": "Beginner to advanced"
+  },
+  {
+    "path": "examples/machine-learning/ml-handbook/README.md",
+    "topic": "Data science and machine learning",
+    "type": "Datasets and desktop example",
+    "level": "Beginner to advanced"
+  },
+  {
+    "path": "docs/databases/sql-server-and-mysql.md",
+    "topic": "Databases",
+    "type": "Course",
+    "level": "Beginner to advanced"
+  },
+  {
+    "path": "docs/cloud/azure/engineering-cheat-sheet.md",
+    "topic": "Cloud and Azure",
+    "type": "Cheat sheet",
+    "level": "Beginner to advanced"
+  },
+  {
+    "path": "docs/cloud/azure/resource-reference.md",
+    "topic": "Cloud and Azure",
+    "type": "Reference",
+    "level": "Intermediate"
+  },
+  {
+    "path": "docs/containers/docker-cheat-sheet.md",
+    "topic": "Containers",
+    "type": "Cheat sheet",
+    "level": "Beginner to advanced"
+  },
+  {
+    "path": "docs/containers/podman-cheat-sheet.md",
+    "topic": "Containers",
+    "type": "Cheat sheet",
+    "level": "Beginner to advanced"
+  },
+  {
+    "path": "docs/version-control/git-cheat-sheet.md",
+    "topic": "Version control",
+    "type": "Cheat sheet",
+    "level": "Beginner to advanced"
+  },
+  {
+    "path": "docs/ai/local-ai-chat-lab.md",
+    "topic": "AI",
+    "type": "Lab",
+    "level": "Beginner"
+  },
+  {
+    "path": "docs/ai/coding-addons.md",
+    "topic": "AI",
+    "type": "Guide",
+    "level": "Beginner"
+  },
+  {
+    "path": "apps/ai-coding-addons/index.html",
+    "topic": "AI",
+    "type": "Interactive reader",
+    "level": "Beginner",
+    "title": "AI Coding Add-ons Browser Guide",
+    "description": "A searchable, standalone HTML edition generated from the Markdown guide."
+  },
+  {
+    "path": "apps/ai-learning-atlas/index.html",
+    "topic": "AI",
+    "type": "Interactive reader",
+    "level": "All levels",
+    "title": "AI Learning Atlas",
+    "description": "Explore AI topic groups, role paths and suggested labs; export your progress."
+  },
+  {
+    "path": "apps/ai-learning-atlas/README.md",
+    "topic": "AI",
+    "type": "Application guide",
+    "level": "All levels"
+  },
+  {
+    "path": "apps/linux-command-reference/index.html",
+    "topic": "Linux",
+    "type": "Interactive reference",
+    "level": "All levels",
+    "title": "Linux Command Reference",
+    "description": "Browse and search 361 commands across 16 categories, online or offline."
+  },
+  {
+    "path": "apps/linux-command-reference/README.md",
+    "topic": "Linux",
+    "type": "Application guide",
+    "level": "All levels"
+  },
+  {
+    "path": "tools/powershell/system-maintenance/README.md",
+    "topic": "Utilities",
+    "type": "Utility",
+    "level": "Administrator"
+  },
+  {
+    "path": "tools/powershell/convert-line-endings/README.md",
+    "topic": "Utilities",
+    "type": "Utility",
+    "level": "Intermediate"
+  },
+  {
+    "path": "examples/containers/local-services/README.md",
+    "topic": "Examples",
+    "type": "Development environment",
+    "level": "Intermediate"
+  },
+  {
+    "path": "examples/wsl/README.md",
+    "topic": "Examples",
+    "type": "Configuration example",
+    "level": "Intermediate"
+  },
+  {
+    "path": "examples/ai-clients/README.md",
+    "topic": "Examples",
+    "type": "Configuration examples",
+    "level": "Intermediate"
+  },
+  {
+    "path": "templates/ai-instructions/README.md",
+    "topic": "Templates",
+    "type": "Instruction templates",
+    "level": "All levels"
+  },
+  {
+    "path": "docs/media/iptv/playlists.md",
+    "topic": "Media",
+    "type": "Reference",
+    "level": "Beginner"
+  }
+]

@@ -1,0 +1,30 @@
+* text=auto
+*.md text eol=lf
+*.html text eol=lf
+*.css text eol=lf
+*.js text eol=lf
+*.cjs text eol=lf
+*.yml text eol=lf
+*.json text eol=lf
+*.ps1 text eol=crlf
+*.png binary
+
+# Preserve imported byte-exact snapshots across Windows and Linux checkouts.
+examples/machine-learning/ml-handbook/** -text
+maintenance/migration/legacy/** -text
+templates/ai-instructions/chatgpt/custom-instructions.txt -text
+examples/ai-clients/codex/config.example.toml -text
+examples/ai-clients/claude/settings.example.json -text
+assets/css/documentation.css -text
+assets/images/mark.svg -text
+examples/wsl/.wslconfig.example -text
+tools/powershell/convert-line-endings/Convert-LineEndings.ps1 -text
+apps/linux-command-reference/app.js -text
+apps/linux-command-reference/data.js -text
+apps/linux-command-reference/generate-static.cjs -text
+apps/linux-command-reference/seo.test.cjs -text
+apps/linux-command-reference/styles.css -text
+tools/powershell/system-maintenance/SystemMaintenance.ps1 -text
+docs/media/iptv/images/open-media.png -text
+docs/media/iptv/images/tool-bar.png -text
+docs/media/iptv/images/your-tv.png -text

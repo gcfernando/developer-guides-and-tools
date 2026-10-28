@@ -1,0 +1,457 @@
+[
+  {
+    "path": "images/01_basics_lab_plot_006.png",
+    "width": 551,
+    "height": 351
+  },
+  {
+    "path": "images/01_basics_plots_001.png",
+    "width": 556,
+    "height": 334
+  },
+  {
+    "path": "images/01_basics_plots_002.png",
+    "width": 540,
+    "height": 334
+  },
+  {
+    "path": "images/01_basics_plots_003.png",
+    "width": 556,
+    "height": 351
+  },
+  {
+    "path": "images/01_basics_plots_004.png",
+    "width": 558,
+    "height": 351
+  },
+  {
+    "path": "images/01_basics_plots_005.png",
+    "width": 556,
+    "height": 334
+  },
+  {
+    "path": "images/01_basics_stats_007.png",
+    "width": 724,
+    "height": 272
+  },
+  {
+    "path": "images/24_outliers_lab_out_010.png",
+    "width": 541,
+    "height": 334
+  },
+  {
+    "path": "images/24_outliers_out_tiny_008.png",
+    "width": 558,
+    "height": 334
+  },
+  {
+    "path": "images/24_outliers_outliers_009.png",
+    "width": 747,
+    "height": 337
+  },
+  {
+    "path": "images/29_datetime_datetime_012.png",
+    "width": 551,
+    "height": 392
+  },
+  {
+    "path": "images/29_datetime_dt_tiny_011.png",
+    "width": 383,
+    "height": 364
+  },
+  {
+    "path": "images/2B_techniques_scalers_013.png",
+    "width": 1034,
+    "height": 239
+  },
+  {
+    "path": "images/2B_techniques_scalers_014.png",
+    "width": 669,
+    "height": 253
+  },
+  {
+    "path": "images/2B_techniques_scalers_015.png",
+    "width": 855,
+    "height": 241
+  },
+  {
+    "path": "images/2B_techniques_scalers_016.png",
+    "width": 549,
+    "height": 351
+  },
+  {
+    "path": "images/30_eda_eda_tiny_017.png",
+    "width": 554,
+    "height": 351
+  },
+  {
+    "path": "images/30_eda_hr_018.png",
+    "width": 1031,
+    "height": 552
+  },
+  {
+    "path": "images/30_eda_hr_019.png",
+    "width": 1032,
+    "height": 317
+  },
+  {
+    "path": "images/30_eda_hr_020.png",
+    "width": 614,
+    "height": 543
+  },
+  {
+    "path": "images/30_eda_lab_eda_021.png",
+    "width": 533,
+    "height": 334
+  },
+  {
+    "path": "images/31_features_hr_022.png",
+    "width": 627,
+    "height": 334
+  },
+  {
+    "path": "images/33_training_hr_024.png",
+    "width": 573,
+    "height": 351
+  },
+  {
+    "path": "images/33_training_train_tiny_023.png",
+    "width": 561,
+    "height": 352
+  },
+  {
+    "path": "images/34_evaluation_eval_tiny_025.png",
+    "width": 554,
+    "height": 351
+  },
+  {
+    "path": "images/34_evaluation_hr_026.png",
+    "width": 558,
+    "height": 351
+  },
+  {
+    "path": "images/34_evaluation_hr_027.png",
+    "width": 577,
+    "height": 351
+  },
+  {
+    "path": "images/40_datasets_a_iris_031.png",
+    "width": 554,
+    "height": 351
+  },
+  {
+    "path": "images/40_datasets_a_salary_028.png",
+    "width": 577,
+    "height": 351
+  },
+  {
+    "path": "images/40_datasets_a_salary_029.png",
+    "width": 577,
+    "height": 332
+  },
+  {
+    "path": "images/40_datasets_a_titanic_030.png",
+    "width": 554,
+    "height": 351
+  },
+  {
+    "path": "images/41_datasets_b_mall_034.png",
+    "width": 556,
+    "height": 351
+  },
+  {
+    "path": "images/41_datasets_b_mall_035.png",
+    "width": 726,
+    "height": 272
+  },
+  {
+    "path": "images/41_datasets_b_mall_036.png",
+    "width": 556,
+    "height": 351
+  },
+  {
+    "path": "images/41_datasets_b_mnist_032.png",
+    "width": 760,
+    "height": 114
+  },
+  {
+    "path": "images/41_datasets_b_mnist_033.png",
+    "width": 326,
+    "height": 351
+  },
+  {
+    "path": "images/41_datasets_b_playstore_037.png",
+    "width": 544,
+    "height": 351
+  },
+  {
+    "path": "images/52_unsupervised_anomaly_048.png",
+    "width": 658,
+    "height": 303
+  },
+  {
+    "path": "images/52_unsupervised_dbscan_041.png",
+    "width": 736,
+    "height": 303
+  },
+  {
+    "path": "images/52_unsupervised_dbscan_042.png",
+    "width": 561,
+    "height": 351
+  },
+  {
+    "path": "images/52_unsupervised_dbscan_043.png",
+    "width": 568,
+    "height": 351
+  },
+  {
+    "path": "images/52_unsupervised_hier_040.png",
+    "width": 558,
+    "height": 336
+  },
+  {
+    "path": "images/52_unsupervised_kmeans_038.png",
+    "width": 1023,
+    "height": 301
+  },
+  {
+    "path": "images/52_unsupervised_kmeans_039.png",
+    "width": 726,
+    "height": 272
+  },
+  {
+    "path": "images/52_unsupervised_pca_044.png",
+    "width": 534,
+    "height": 334
+  },
+  {
+    "path": "images/52_unsupervised_pca_045.png",
+    "width": 554,
+    "height": 351
+  },
+  {
+    "path": "images/52_unsupervised_pca_046.png",
+    "width": 636,
+    "height": 362
+  },
+  {
+    "path": "images/52_unsupervised_tsne_047.png",
+    "width": 479,
+    "height": 426
+  },
+  {
+    "path": "images/54_rl_bandit_049.png",
+    "width": 554,
+    "height": 351
+  },
+  {
+    "path": "images/54_rl_cliff_051.png",
+    "width": 760,
+    "height": 148
+  },
+  {
+    "path": "images/54_rl_rl_050.png",
+    "width": 565,
+    "height": 351
+  },
+  {
+    "path": "images/58_algorithms_algorithms_052.png",
+    "width": 536,
+    "height": 351
+  },
+  {
+    "path": "images/58_algorithms_algorithms_053.png",
+    "width": 636,
+    "height": 324
+  },
+  {
+    "path": "images/58_algorithms_algorithms_054.png",
+    "width": 551,
+    "height": 334
+  },
+  {
+    "path": "images/58_algorithms_algorithms_055.png",
+    "width": 657,
+    "height": 290
+  },
+  {
+    "path": "images/58_algorithms_algorithms_056.png",
+    "width": 554,
+    "height": 351
+  },
+  {
+    "path": "images/58_algorithms_algorithms_057.png",
+    "width": 538,
+    "height": 334
+  },
+  {
+    "path": "images/58_algorithms_algorithms_058.png",
+    "width": 666,
+    "height": 334
+  },
+  {
+    "path": "images/app_1_train.png",
+    "width": 680,
+    "height": 440
+  },
+  {
+    "path": "images/app_2_predict_v1.png",
+    "width": 680,
+    "height": 440
+  },
+  {
+    "path": "images/app_3_update.png",
+    "width": 680,
+    "height": 440
+  },
+  {
+    "path": "images/app_4_predict_v2.png",
+    "width": 680,
+    "height": 440
+  },
+  {
+    "path": "images/app_5_history.png",
+    "width": 680,
+    "height": 440
+  },
+  {
+    "path": "images/app_tiny_1.png",
+    "width": 294,
+    "height": 99
+  },
+  {
+    "path": "images/app_tiny_2.png",
+    "width": 277,
+    "height": 79
+  },
+  {
+    "path": "images/app_tiny_3.png",
+    "width": 320,
+    "height": 140
+  },
+  {
+    "path": "images/concept_app_flow.png",
+    "width": 1027,
+    "height": 283
+  },
+  {
+    "path": "images/concept_categories.png",
+    "width": 1107,
+    "height": 268
+  },
+  {
+    "path": "images/concept_confusion.png",
+    "width": 707,
+    "height": 362
+  },
+  {
+    "path": "images/concept_deploy.png",
+    "width": 867,
+    "height": 236
+  },
+  {
+    "path": "images/concept_drift.png",
+    "width": 626,
+    "height": 299
+  },
+  {
+    "path": "images/concept_fit.png",
+    "width": 947,
+    "height": 283
+  },
+  {
+    "path": "images/concept_kfold.png",
+    "width": 851,
+    "height": 315
+  },
+  {
+    "path": "images/concept_kmeans.png",
+    "width": 467,
+    "height": 354
+  },
+  {
+    "path": "images/concept_knn.png",
+    "width": 433,
+    "height": 393
+  },
+  {
+    "path": "images/concept_linreg.png",
+    "width": 627,
+    "height": 315
+  },
+  {
+    "path": "images/concept_log.png",
+    "width": 867,
+    "height": 299
+  },
+  {
+    "path": "images/concept_log_ruler.png",
+    "width": 787,
+    "height": 283
+  },
+  {
+    "path": "images/concept_mask.png",
+    "width": 787,
+    "height": 299
+  },
+  {
+    "path": "images/concept_missing.png",
+    "width": 627,
+    "height": 299
+  },
+  {
+    "path": "images/concept_ml_vs_programming.png",
+    "width": 867,
+    "height": 393
+  },
+  {
+    "path": "images/concept_onehot.png",
+    "width": 867,
+    "height": 315
+  },
+  {
+    "path": "images/concept_outliers.png",
+    "width": 867,
+    "height": 315
+  },
+  {
+    "path": "images/concept_pipeline.png",
+    "width": 947,
+    "height": 252
+  },
+  {
+    "path": "images/concept_precision_recall.png",
+    "width": 787,
+    "height": 283
+  },
+  {
+    "path": "images/concept_rl_grid.png",
+    "width": 619,
+    "height": 526
+  },
+  {
+    "path": "images/concept_scaling.png",
+    "width": 867,
+    "height": 315
+  },
+  {
+    "path": "images/concept_split.png",
+    "width": 867,
+    "height": 205
+  },
+  {
+    "path": "images/concept_table_anatomy.png",
+    "width": 772,
+    "height": 362
+  },
+  {
+    "path": "images/concept_tree.png",
+    "width": 787,
+    "height": 354
+  },
+  {
+    "path": "images/concept_zscore.png",
+    "width": 627,
+    "height": 299
+  }
+]

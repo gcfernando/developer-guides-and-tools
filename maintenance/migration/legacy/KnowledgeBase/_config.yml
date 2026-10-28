@@ -1,0 +1,81 @@
+# GitHub Pages documentation site; does not configure application deployment.
+url: "https://gcfernando.github.io"
+baseurl: "/developer-guides-and-cheatsheets"
+title: "Developer Knowledge Base"
+description: "Learning paths and guides for Python, C# and .NET, SQL, Azure, Docker, Podman, Git and local AI applications."
+lang: "en"
+plugins:
+  - jekyll-sitemap
+exclude:
+  - packages
+  - bin
+  - obj
+  - node_modules
+  - vendor
+  - tests
+  - .claude
+  - .agents
+  - .codex
+  - ai-cli
+defaults:
+  - scope:
+      path: "azure_cheatsheet.md"
+    values:
+      title: "Azure Engineering Cheat Sheet: Services, CLI and Architecture"
+      description: "Compare Azure services and review identity, networking, storage, compute and operations with explanations, Azure CLI examples and practice exercises."
+  - scope:
+      path: "azure_resources_cheatsheet.md"
+    values:
+      title: "Azure Resources Reference: Compute, Networking, Storage and Data"
+      description: "Explore Azure resource families, their responsibilities and dependencies, with CLI examples, operational considerations and links to official sources."
+  - scope:
+      path: "csharp_dotnet_oop_guide.md"
+    values:
+      title: "Object-Oriented Programming with C# and .NET"
+      description: "Learn C# and .NET object-oriented programming through classes, inheritance, interfaces, design decisions, exercises and a structured study plan."
+  - scope:
+      path: "docker_cheatsheet.md"
+    values:
+      title: "Docker Command Cheat Sheet: Containers, Images and Compose"
+      description: "Find Docker commands for images, containers, Dockerfiles, Compose, networking and troubleshooting, with explanations and practical examples."
+  - scope:
+      path: "git_cheatsheet.md"
+    values:
+      title: "Git Command Cheat Sheet: Branching, Collaboration and Recovery"
+      description: "Practice Git setup, commits, branching, collaboration, releases and recovery with explained command examples and guidance on destructive operations."
+  - scope:
+      path: "local_ai_learning_lab.md"
+    values:
+      title: "Local AI Chat App with Ollama and Streamlit on Windows"
+      description: "Build a local Python chat app on Windows with Ollama and Streamlit. Follow model setup, context configuration, verification and troubleshooting steps."
+  - scope:
+      path: "podman_cheatsheet.md"
+    values:
+      title: "Podman Command Cheat Sheet: Rootless Containers, Pods and Quadlet"
+      description: "Review Podman commands for rootless containers, images, pods, virtual machines and Quadlet, with examples and troubleshooting guidance."
+  - scope:
+      path: "python_dunder.md"
+    values:
+      title: "Python Dunder Methods Reference: Special Methods and Attributes"
+      description: "Understand Python special methods and attributes for object creation, operators, containers, descriptors, async behavior and serialization."
+  - scope:
+      path: "python_oop_guide.md"
+    values:
+      title: "Object-Oriented Programming with Python: Classes, Design and Testing"
+      description: "Learn Python object-oriented programming with classes, inheritance, composition, protocols, testing, design exercises and a structured study plan."
+  - scope:
+      path: "README.md"
+    values:
+      title: "Developer Learning Paths — Python, C#, SQL, Azure and Containers"
+      description: "Learning paths and guides for Python, C# and .NET, SQL, Azure, Docker, Podman, Git and local AI applications."
+  - scope:
+      path: "sql_complete_guide.md"
+    values:
+      title: "SQL Guide for Microsoft SQL Server and MySQL"
+      description: "Learn SQL with Microsoft SQL Server and MySQL examples covering tables, queries, joins, transactions, indexing, database design and practice exercises."
+
+# Public documentation navigation and presentation.
+repository: gcfernando/developer-guides-and-cheatsheets
+theme: jekyll-theme-primer
+projects_hub: https://gcfernando.github.io/gcfernando/projects/
+project_category: "Learn & reference"

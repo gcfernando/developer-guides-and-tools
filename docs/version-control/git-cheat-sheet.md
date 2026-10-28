@@ -1,0 +1,268 @@
+---
+layout: default
+permalink: /version-control/git-cheat-sheet/
+title: "Git Command Cheat Sheet: Branching, Collaboration and Recovery"
+description: "Practice Git setup, commits, branching, collaboration, releases and recovery with explained command examples and guidance on destructive operations."
+---
+
+# 🌿 Git Command Cheat Sheet
+
+[![Git](https://img.shields.io/badge/Git-Version%20control-F05032?style=for-the-badge&logo=git&logoColor=white)](https://git-scm.com/docs)
+[![Safety](https://img.shields.io/badge/Safety-Recover%20before%20resetting-F59E0B?style=for-the-badge)](#-collaboration-and-recovery)
+[![Reference](https://img.shields.io/badge/Reference-Command%20catalog-0EA5E9?style=for-the-badge)](#-everyday-command-cards)
+
+> Official command reference: [git-scm.com/docs](https://git-scm.com/docs). Git has a working tree, staging area (index), commits, refs, and remotes. Prefer `git switch`/`git restore` over legacy `git checkout` for everyday branch/file operations.
+
+> [!TIP]
+> **🎨 Visual legend:** 🟢 everyday command · 🟡 collaboration practice · 🔴 expert/recovery operation · 💻 copyable command · 🔍 option behavior · 💡 safer habit · ⚠️ history- or file-destructive action.
+
+## 📚 Contents
+- [🚀 Essential command cards](#-essential-command-cards)
+- [🧩 Everyday command cards](#-everyday-command-cards)
+- [🌳 Collaboration and recovery](#-collaboration-and-recovery)
+- [🏷️ Releases and tags](#git-releases)
+- [🛠️ Advanced workflows](#git-advanced)
+
+## 👋 First-time Git walkthrough
+
+**Git** is a tool that records changes to files. A **repository** is a folder whose changes Git tracks. A **commit** is a saved checkpoint; a **branch** is a movable line of development; a **remote** is a copy elsewhere (often on a server). The **working tree** contains your current files, and the **staging area** is the list of file changes that will enter your next commit. A **terminal** is a window where you type commands.
+
+**Before starting:** [install Git](https://git-scm.com/downloads) and open Terminal (macOS/Linux) or Git Bash/PowerShell (Windows). For this safe local exercise, choose a **new empty folder**, not an existing work repository. Type one command per line:
+
+```bash
+git --version
+mkdir git-beginner-lab
+cd git-beginner-lab
+git init -b main
+git config user.name "Demo Learner"
+git config user.email "learner@example.com"
+printf 'Hello, Git!\n' > README.md
+git status
+git add README.md
+git commit -m "Add welcome file"
+git log -1 --oneline
+```
+
+**PowerShell:** replace the `printf` line with `Set-Content -LiteralPath README.md -Value 'Hello, Git!'`. The block above uses Bash syntax; the Git commands work in either shell.
+
+`mkdir` creates a directory; `cd` enters it; `git init -b main` creates a repository with initial branch **main**; `git config` sets the author identity **for this practice repository only**; `printf ... > README.md` writes a text file (the `>` replaces its contents); `status` shows what changed; `add` stages the file; `commit -m` saves it with a message; `log -1 --oneline` displays the latest commit. **Check:** `git status` after the commit should say the working tree is clean. No account or internet connection is needed for this exercise. To clean up, leave the folder and delete **only** this `git-beginner-lab` directory using your file manager.
+
+**About examples below:** `origin` is the conventional name for a remote, but a fresh local repository has none. Commands such as `git fetch`, `git pull`, and `git push` require you to add a real remote first. `HEAD` means the current commit; `HASH` stands for a commit ID such as `abc1234` (replace it with an ID from `git log --oneline`); `NAME`/`FILE`/`URL` mean names, file paths, or addresses **you substitute**. `-m` supplies a message, `-b` names a branch, `-c` creates one, `-a` often means “all” depending on the command, and `--` separates options from path names. For any potentially destructive command, first run `git status` and `git diff`, and read the warning in its row. Use `git COMMAND --help` for flags specific to your version.
+
+
+## 🚀 Essential command cards
+
+The complete command catalog follows; every displayed command includes its use and copyable syntax.
+
+| Command | 📖 Purpose / 🎯 when | 💻 Example | 🔍 Note |
+|---|---|---|---|
+| `git init` | Initialize a new repository in the current folder. | `git init -b main` | Use in a project not already version-controlled. |
+| `git clone` | Copy a remote repository, including its history. | `git clone https://github.com/octocat/Hello-World.git` | Replace URL with your repository. |
+| `git status` | Show staged/unstaged/untracked state. | `git status` | Run before every risky action. |
+| `git add` | Stage selected changes. | `git add src/app.cs` | Use `-p` to review hunks. |
+| `git commit` | Record staged snapshot. | `git commit -m "Add health endpoint"` | Write imperative messages. |
+| `git log` | Inspect history. | `git log --oneline --graph --all` | Great branch visualizer. |
+| `git diff` | Compare changes. | `git diff --staged` | Default is unstaged only. |
+| `git branch` | List, create, rename, or delete local branches. | `git branch -a` | `-a` includes remote-tracking branches; `-d` deletes merged local branches. |
+| `git switch` | Move to an existing branch. | `git switch main` | Use `-c NAME` to create and switch to a new branch. |
+| `git checkout` | Legacy command to switch branches or restore files. | `git checkout main` | `git checkout -- FILE` discards unstaged edits; prefer `switch` or `restore` for clarity. |
+| `git switch -c` | Create/switch branch. | `git switch -c feature/search` | Modern branch workflow. |
+| `git fetch` | Download remote refs without changing current branch. | `git fetch origin` | Safe first sync step. |
+| `git pull` | Fetch then integrate upstream. | `git pull --ff-only` | `--ff-only` avoids surprise merge commits. |
+| `git push` | Send local commits to the configured upstream branch. | `git push` | Set tracking first with `git push -u origin BRANCH` if necessary. |
+| `git push -u` | Publish/set upstream. | `git push -u origin feature/search` | Future `git push` can omit names. |
+| `git merge` | Integrate a branch. | `git merge feature/search` | Resolve conflicts then commit. |
+| `git rebase` | Replay commits on another base. | `git rebase origin/main` | Do not rewrite shared commits. |
+| `git cherry-pick` | Apply a chosen commit from another branch. | `git cherry-pick abc1234` | Resolve conflicts then use `--continue`, or cancel with `--abort`. |
+| `git reset` | Unstage changes or move a branch's HEAD. | `git reset` | Without flags, unstages paths while keeping file edits; **⚠️** `--hard` discards edits. |
+| `git restore` | Discard/unstage selected changes. | `git restore --staged app.cs` | Preserve edits while unstaging. |
+| `git revert` | Safely undo a published commit. | `git revert abc1234` | Creates a new inverse commit. |
+| `git stash` | Temporarily shelve work. | `git stash push -u -m "WIP"` | Include untracked with `-u`. |
+| `git tag` | Mark a release point. | `git tag -a v1.0.0 -m "Release v1.0.0"` | Prefer annotated release tags. |
+| `git reflog` | Find previous ref positions. | `git reflog` | Recovery tool after reset/rebase. |
+| `git worktree` | Use another checkout of same repo. | `git worktree add ../fix bugfix` | Enables parallel branches. |
+| `git blame` | Attribute lines to commits. | `git blame src/app.cs` | Investigate context, not blame people. |
+| `git bisect` | Binary-search a regression. | `git bisect start` | Mark known good/bad commits. |
+| `git clean` | **⚠️** Remove untracked files. | `git clean -nd` | Dry-run first, always. |
+
+## 🧩 Everyday command cards
+
+> [!IMPORTANT]
+> **🧭 Safe Git rhythm:** `status` → `diff` → selective `add` → `commit` → `fetch` → integrate → `push`. Read before rewriting history.
+
+| Command | 📖 Description / 🎯 when | 💻 Example | 🔍 Flags and advice |
+|---|---|---|---|
+| `git config` | Reads/writes configuration; use once per machine/repo. | `git config --global user.name "Alex Example"` | Also set `user.email`; `--list --show-origin` audits source. |
+| `git init/clone` | Creates a repository or copies an existing one. | `git init -b main demo-project`<br>`git clone https://github.com/octocat/Hello-World.git` | `--recurse-submodules` initializes dependencies. **Each command has its own example.** Run them only on resources you own, in an order that makes sense. 
+| `git status/add/commit` | Inspects, stages, and commits work. | `git status`<br>`git add README.md`<br>`git commit -m "Update README"` | `add -p` avoids unrelated commits. **Each command has its own example.** Run them only on resources you own, in an order that makes sense. 
+| `git diff/show/log` | Compares work, displays an object, or searches history. | `git diff`<br>`git show --stat HEAD`<br>`git log --oneline -5` | `git show TAG` inspects a release/tag. **Each command has its own example.** Run them only on resources you own, in an order that makes sense. 
+| `git switch/branch` | Switches/creates/lists/renames/deletes branches. | `git switch main`<br>`git branch -a` | `git branch -d NAME` is safe; `-D` is **⚠️** force deletion. **Each command has its own example.** Run them only on resources you own, in an order that makes sense. 
+| `git checkout` | Legacy branch switching and file checkout; useful when reading older scripts. | `git checkout -b feature/api` | Prefer `git switch -c feature/api`; **⚠️** `git checkout -- FILE` overwrites unstaged edits. |
+| `git remote` | Manages remote names/URLs. | `git remote add origin https://github.com/octocat/Hello-World.git` | `git remote -v` verifies fetch/push URLs. This public URL is for reading; pushes require a repository you own or have permission to update. |
+| `git fetch/pull/push` | Downloads refs, integrates upstream, publishes refs. | `git fetch origin`<br>`git pull --ff-only origin main`<br>`git push origin main` | `fetch` **does not update your current branch**. **Each command has its own example.** Run them only on resources you own, in an order that makes sense. **⚠️ Creation, permissions, special setup, or destructive operations may be required.** 
+| `git merge` | Combines another branch into current. | `git merge --no-ff feature/api` | Fix conflict markers, `git add`, then `git commit`. |
+| `git rebase` | Replays commits on a new base. | `git rebase -i HEAD~3` | Use `--continue`, `--skip`, or `--abort`; never rebase published shared work. |
+| `git cherry-pick` | Applies selected commit(s). | `git cherry-pick abc1234` | Resolve then `--continue`; `--abort` restores pre-pick state. |
+| `git restore/reset/revert` | Discards working/index changes, moves refs, or makes a reversal commit. | `git restore --staged README.md`<br>`git reset --mixed HEAD`<br>`git revert HEAD` | **⚠️** `reset --hard` discards work; use `revert` for shared history. **Each command has its own example.** Run them only on resources you own, in an order that makes sense. **⚠️ Creation, permissions, special setup, or destructive operations may be required.** 
+| `git reset` | Removes paths from the index or moves local HEAD depending on arguments. | `git reset --mixed HEAD` | Unstages changes without deleting working edits; avoid `--hard` unless you have a backup. |
+| `git stash` | Stores/restores temporary changes. | `git stash push -u -m "WIP login"` | `list`, `show -p`, `pop`, `apply`, and `drop` manage entries. |
+| `git grep/blame/bisect` | Searches tracked text, attributes lines, or finds a bad commit. | `git grep TODO`<br>`git blame README.md`<br>`git bisect start` | `bisect reset` ends a bisect session. **Each command has its own example.** Run them only on resources you own, in an order that makes sense. 
+| `git clean` | **⚠️** Deletes untracked paths. | `git clean -nd` | Use dry-run `-n`; `-fd` removes directories too. |
+| `git archive/bundle` | Creates source archive or portable repository bundle. | `git archive --format=zip -o source.zip HEAD`<br>`git bundle create repo.bundle --all` | `bundle create repo.bundle --all` supports offline transfer. **Each command has its own example.** Run them only on resources you own, in an order that makes sense. 
+| `git format-patch/am` | Exports/applies email-style commits. | `git format-patch -1 HEAD`<br>`git am 0001-Add-welcome-file.patch` | Apply with `git am 0001-*.patch`; use `--abort` if needed. **Each command has its own example.** Run them only on resources you own, in an order that makes sense. **⚠️ Creation, permissions, special setup, or destructive operations may be required.** 
+| `git worktree` | Creates/removes parallel work directories. | `git worktree add ../hotfix hotfix/login` | `remove` deletes the worktree directory—confirm first. |
+| `git submodule` | Manages nested repositories. | `git submodule update --init --recursive` | Commit `.gitmodules` and gitlink changes together. |
+| `git sparse-checkout` | Checks out only selected paths. | `git sparse-checkout init --cone; git sparse-checkout set src docs` | Useful for monorepos; disable with `sparse-checkout disable`. |
+
+## 🌳 Collaboration and recovery
+
+> [!WARNING]
+> **🧯 Recovery principle:** prefer `git revert` for published commits. Before `reset --hard`, preserve recoverable work with a commit, branch, patch, or stash.
+
+| Scenario | Safe workflow |
+|---|---|
+| Start feature | `git switch main` (base), `git pull --ff-only` (sync), `git switch -c feature/name` (branch), then stage/commit/push. |
+| Resolve merge conflict | `git status` (files), edit markers, `git add FILE` (mark resolved), `git commit` (complete merge); use `git merge --abort` to cancel. |
+| Update own branch | `git fetch origin` (download), `git rebase origin/main` (replay local commits), resolve/`git rebase --continue`, then `git push --force-with-lease` only for your branch. |
+| Undo published commit | `git show HASH` (inspect), `git revert HASH` (inverse commit), `git push` (share). |
+| Recover after reset | `git reflog` (find previous HEAD), `git switch -c recovery HASH` (preserve it), then inspect/merge/cherry-pick. |
+| Find regression | `git bisect start`, `git bisect bad`, `git bisect good TAG`, test each checkout and mark `good`/`bad`, then `git bisect reset`. |
+| Review before cleanup | `git clean -nd` (preview), then only if correct `git clean -fd`; never run blindly. |
+| Sign commits/tags | Configure `user.signingkey`, use `git commit -S` or `git tag -s`; verify a **signed** commit with `git verify-commit HEAD`, or a **signed** tag with `git verify-tag v1.0.7`. Unsigned objects will not verify as signed. |
+| GitHub Flow | Branch from `main`, small commits, push, open PR, review/CI, merge, delete branch, sync local `main`. |
+| Trunk-based delivery | Keep short-lived branches, integrate frequently, protect `main`, use feature flags for incomplete work. |
+
+<a id="git-releases"></a>
+
+## 🏷️ Releases and tags
+
+> [!TIP]
+> **🚀 Release habit:** tag a reviewed, synchronized commit; inspect the tag locally; then publish one explicit tag—not every local tag by accident.
+
+### 🏷️ Create Annotated Release Tag
+
+```bash
+git tag -a v1.0.6 -m "Release v1.0.6"
+```
+
+**📖 Description:** Creates an annotated Git tag named `v1.0.6` on the current commit with the message `Release v1.0.6`.
+
+**🎯 When to Use:** Mark a reviewed commit as an official application release.
+
+**🔍 Explanation:** `tag` manages tags; `-a` creates an annotated tag; `v1.0.6` is the release version; `-m` supplies the annotation message.
+
+### 🚀 Push Release Tag to Remote
+
+```bash
+git push origin v1.0.6
+```
+
+**📖 Description:** Publishes the local `v1.0.6` tag to the remote repository named `origin`.
+
+**🎯 When to Use:** Publish a release version for other developers and CI/CD pipelines.
+
+**🔍 Explanation:** `push` publishes refs; `origin` is the remote name; `v1.0.6` is the tag reference.
+
+### 🔥 Complete Git Release Workflow
+
+```bash
+# Check the working tree and current branch
+git status
+
+# Fetch latest remote information
+git fetch origin
+
+# Inspect the commit to be tagged
+git log -1 --oneline
+
+# Create the annotated release tag
+git tag -a v1.0.6 -m "Release v1.0.6"
+
+# Inspect the tag
+git show v1.0.6
+
+# Push the tag to origin
+git push origin v1.0.6
+
+# Verify published remote tags
+git ls-remote --tags origin
+```
+
+`git fetch origin` downloads remote information but does **not** automatically update the current branch. Review and synchronize the intended release commit before tagging it.
+
+| Command | 📖 Description / 🎯 when | 💻 Example | 🔍 Note |
+|---|---|---|---|
+| `git tag` | Lists local tags; use to inspect releases. | `git tag --sort=-version:refname` | Sort newest semantic-looking versions first. |
+| `git tag NAME` | Creates a lightweight pointer; use for temporary/local markers. | `git tag test-2026-10-10` | Prefer annotated tags for releases. |
+| `git show TAG` | Inspects tag object and target commit. | `git show v1.0.6` | Confirm target before publishing. |
+| `git push origin TAG` | Publishes one tag. | `git push origin v1.0.6` | Safer than indiscriminate tag pushes. |
+| `git push origin --tags` | Publishes all local tags. | `git push origin --tags` | Review tags first; this can publish unintended tags. |
+| `git fetch --tags` | Downloads tags from remote. | `git fetch origin --tags` | Does not change current branch files. |
+| `git tag -d TAG` / `git push origin :refs/tags/TAG` | Deletes local / remote tag. | `git tag -d v1.0.6`<br>`git push origin :refs/tags/v1.0.6` | **⚠️** Coordinate before deleting published release tags. **Each command has its own example.** Run them only on resources you own, in an order that makes sense. **⚠️ Creation, permissions, special setup, or destructive operations may be required.** 
+| `git tag -s` / `git verify-tag` | Creates/verifies signed tag. | `git tag -s v1.0.7 -m "Signed v1.0.7"`<br>`git verify-tag v1.0.7` | Requires configured signing key/trust. **Each command has its own example.** Run them only on resources you own, in an order that makes sense. 
+
+<a id="git-advanced"></a>
+
+## 🛠️ Advanced workflows
+
+> [!NOTE]
+> **🔬 Advanced commands are powerful inspection tools.** Use them to understand repository state, not as shortcuts around review, backups, or team process.
+
+- **Aliases:** `git config --global alias.lg "log --oneline --graph --decorate --all"` creates `git lg`; use aliases for inspection, not to hide dangerous operations.
+- **Internal inspection:** `git cat-file -t HEAD` identifies the current commit object type; `git cat-file -p HEAD` displays its contents. Use an actual commit hash from `git log --oneline` instead of `HEAD` to inspect an older object. Use for forensic learning, not ordinary workflow.
+- **Reference maintenance:** `git fsck --full` checks the repository for object errors; `git gc` performs local storage maintenance. A successful `git fsck --full` can print nothing; inspect its exit status and errors. Avoid running maintenance blindly on shared/network filesystems.
+- **Authentication:** use SSH keys or credential managers; never commit tokens. Audit accidental exposure immediately, rotate the secret, then follow approved history-remediation procedures.
+
+## 🔗 Official documentation
+
+- [Git documentation](https://git-scm.com/docs)
+- [Git command categories](https://git-scm.com/docs/git#_git_commands_by_category)
+- [Git checkout](https://git-scm.com/docs/git-checkout)
+- [Git reset](https://git-scm.com/docs/git-reset)
+- [Git tags](https://git-scm.com/docs/git-tag)
+- [Git worktree](https://git-scm.com/docs/git-worktree)
+- [Git submodule](https://git-scm.com/docs/git-submodule)
+
+## ➕ Additional Git command cards
+
+| Command | 📖 Description / 🎯 when | 💻 Usage example | 🔍 Notes |
+|---|---|---|---|
+| `git init` | Creates an empty repository or reinitializes an existing one; use when starting local version control. | `git init --initial-branch=main` | Creates `.git`; reinitializing does not erase tracked files, but run it only in the intended folder. |
+| `git mv` | Renames/moves a tracked path and stages the change; use when restructuring files. | `git mv old_name.md new_name.md` | Equivalent to move + `git add` + staged deletion. |
+| `git rm` | Removes a tracked path and stages the deletion; use when the file should leave the repository. | `git rm obsolete.txt` | `--cached` stops tracking but leaves the local file; use for accidentally tracked config. |
+| `git diff --check` | Finds whitespace errors; use before committing or in CI. | `git diff --check` | Reports trailing whitespace and conflict-marker issues without changing files. |
+| `git difftool` | Opens configured visual diff tool; use for complex changes. | `git difftool main...feature/api` | Configure a trusted diff tool first. |
+| `git mergetool` | Opens configured conflict-resolution tool; use after a merge/rebase conflict. | `git mergetool` | Run after Git identifies conflicts; verify and `git add` resolved paths. |
+| `git apply` | Applies a plain patch without creating commits; use for patch review or vendor changes. | `git apply fix.patch` | Run `git apply --check fix.patch` first; use `--index` to stage applied changes. |
+| `git check-ignore` | Explains why a path is ignored; use when a file does not appear in status. | `git check-ignore -v .env` | `-v` shows the matching ignore rule and source. |
+| `git check-attr` | Shows attributes assigned to paths; use to debug line-ending or diff rules. | `git check-attr -a -- src/app.cs` | Reads `.gitattributes` rules. |
+| `git hook run` | Runs a configured hook manually; use to test repository hooks. | `git hook run pre-commit` | Hook availability is version/repository dependent. |
+| `git interpret-trailers` | Adds/parses structured commit trailers; use for review or co-author metadata. | `git interpret-trailers --in-place --trailer "Reviewed-by: Name <email@example.com>" MESSAGE` | Review the message file before committing. |
+| `git credential` | Invokes configured credential helpers; use to diagnose authentication integration. | `git credential fill` | Do not echo/store real credentials in terminal history. |
+| `git count-objects` | Reports loose/packed object storage; use for repository-size diagnosis. | `git count-objects -vH` | Pair with `git maintenance run --auto` for routine local optimization. |
+| `git bugreport` | Creates a Git diagnostic report; use when filing a Git bug. | `git bugreport` | Review generated environment information before sharing. |
+| `git request-pull` | Produces a summary request for a range of commits; use in email-based workflows. | `git request-pull origin/main https://github.com/octocat/Hello-World.git feature/api` | Verify the base reference and public URL. |
+| `git ls-files` | Lists index-tracked paths; use to verify whether Git tracks a file. | `git ls-files src` | `--others --exclude-standard` lists untracked, non-ignored files. |
+| `git ls-tree` | Lists a commit/tree's paths; use to inspect a historical snapshot without checkout. | `git ls-tree -r --name-only HEAD` | `HEAD:path` addresses a specific historical path. |
+| `git show-ref` | Lists local refs and object IDs; use for ref troubleshooting. | `git show-ref --heads --tags` | Read-only inspection command. |
+| `git rev-parse` | Resolves revision/path information; use in scripts. | `git rev-parse --show-toplevel` | Confirms the repository root. |
+| `git shortlog` | Groups commits by author; use for release acknowledgements. | `git shortlog -sne v1.0.0..HEAD` | Range controls the release window. |
+| `git describe` | Names a commit relative to reachable tags; use for build version strings. | `git describe --tags --always` | Annotated tags are normally preferred. |
+| `git ls-remote` | Lists remote refs without cloning/fetching; use to verify published tags/branches. | `git ls-remote --tags origin` | Reads remote metadata only. |
+| `git remote set-url` | Changes a remote URL; use after repository migration. | `git remote set-url origin https://github.com/octocat/Hello-World.git` | Verify with `git remote -v`. |
+| `git remote prune` | Removes stale remote-tracking refs; use after remote branch cleanup. | `git remote prune origin` | Review `git remote show origin` first. |
+| `git merge-base` | Finds a best common ancestor; use in advanced comparisons/scripts. | `git merge-base main feature/api` | Helpful for three-dot diff reasoning. |
+| `git range-diff` | Compares two patch series; use after rebasing a review branch. | `git range-diff origin/main...HEAD@{1} origin/main...HEAD` | Advanced review aid; verify revisions carefully. |
+| `git notes add` | Adds non-commit metadata; use for local/review annotations. | `git notes add -m "Reviewed" HEAD` | Notes are separate refs and must be pushed explicitly. |
+| `git replace` | Locally substitutes object ancestry; use for advanced history experiments. | `git replace "$(git rev-parse HEAD~1)" "$(git rev-parse HEAD)"` | **⚠️** Expert-only; replacements affect local history views. |
+| `git maintenance run` | Performs configured repository maintenance; use for large active repos. | `git maintenance run --auto` | Modern alternative to manually scheduling common maintenance. |
+
+---
+
+<a id="documentation-links"></a>
+
+## 🔗 Related documentation
+
+[Docker command reference](../containers/docker-cheat-sheet.md) · [Podman command reference](../containers/podman-cheat-sheet.md)
+
+[Learning paths](../../README.md) · [Documentation index](../../documentation.md)

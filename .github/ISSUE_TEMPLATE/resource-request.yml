@@ -1,0 +1,14 @@
+name: Resource request
+description: Suggest a focused addition to the library.
+title: "[Resource] "
+body:
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Topic, audience and practical goal
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Relevant official sources or examples

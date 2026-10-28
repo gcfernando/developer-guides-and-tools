@@ -1,0 +1,479 @@
+{
+  "dataset_files": 31,
+  "images": 91,
+  "datasets": [
+    {
+      "path": "datasets/accounts_messy_booleans.csv",
+      "type": "csv",
+      "rows": 12,
+      "columns": [
+        "account_id",
+        "is_active",
+        "newsletter_opt_in",
+        "has_premium"
+      ]
+    },
+    {
+      "path": "datasets/apartment_listings_outliers.csv",
+      "type": "csv",
+      "rows": 805,
+      "columns": [
+        "area_m2",
+        "price_usd",
+        "is_injected_error"
+      ]
+    },
+    {
+      "path": "datasets/breast_cancer.csv",
+      "type": "csv",
+      "rows": 569,
+      "columns": [
+        "mean radius",
+        "mean texture",
+        "mean perimeter",
+        "mean area",
+        "mean smoothness",
+        "mean compactness",
+        "mean concavity",
+        "mean concave points",
+        "mean symmetry",
+        "mean fractal dimension",
+        "radius error",
+        "texture error",
+        "perimeter error",
+        "area error",
+        "smoothness error",
+        "compactness error",
+        "concavity error",
+        "concave points error",
+        "symmetry error",
+        "fractal dimension error",
+        "worst radius",
+        "worst texture",
+        "worst perimeter",
+        "worst area",
+        "worst smoothness",
+        "worst compactness",
+        "worst concavity",
+        "worst concave points",
+        "worst symmetry",
+        "worst fractal dimension",
+        "target"
+      ]
+    },
+    {
+      "path": "datasets/cars.csv",
+      "type": "csv",
+      "rows": 404,
+      "columns": [
+        "plate",
+        "owner_name",
+        "country",
+        "age_years",
+        "km_driven",
+        "services_done",
+        "colour",
+        "passed",
+        "repair_cost_after_test"
+      ]
+    },
+    {
+      "path": "datasets/coffee_customers.csv",
+      "type": "csv",
+      "rows": 400,
+      "columns": [
+        "visits_per_month",
+        "avg_spend_eur",
+        "usual_hour",
+        "segment_truth"
+      ]
+    },
+    {
+      "path": "datasets/crm_customers_duplicates.csv",
+      "type": "csv",
+      "rows": 10,
+      "columns": [
+        "customer_id",
+        "name",
+        "email",
+        "city",
+        "updated_at",
+        "lifetime_value"
+      ]
+    },
+    {
+      "path": "datasets/customer_export_messy.csv",
+      "type": "csv",
+      "rows": 2000,
+      "columns": [
+        "customer_id",
+        "full_name",
+        "phone",
+        "account_type",
+        "tenure_months",
+        "monthly_spend_gbp",
+        "monthly_spend_pence",
+        "fax_number",
+        "cancellation_date",
+        "is_test_account",
+        "region",
+        "churned"
+      ]
+    },
+    {
+      "path": "datasets/diabetes.csv",
+      "type": "csv",
+      "rows": 442,
+      "columns": [
+        "age",
+        "sex",
+        "bmi",
+        "bp",
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6",
+        "target"
+      ]
+    },
+    {
+      "path": "datasets/drivers.db",
+      "type": "sqlite",
+      "tables": {
+        "drivers": 5
+      }
+    },
+    {
+      "path": "datasets/event_log_mixed_dates.csv",
+      "type": "csv",
+      "rows": 8,
+      "columns": [
+        "event_id",
+        "raw_ts"
+      ]
+    },
+    {
+      "path": "datasets/googleplaystore_messy.csv",
+      "type": "csv",
+      "rows": 1561,
+      "columns": [
+        "App",
+        "Category",
+        "Rating",
+        "Reviews",
+        "Size",
+        "Installs",
+        "Type",
+        "Price",
+        "Content Rating",
+        "Last Updated",
+        "Android Ver"
+      ]
+    },
+    {
+      "path": "datasets/houses_2025.csv",
+      "type": "csv",
+      "rows": 500,
+      "columns": [
+        "area_m2",
+        "bedrooms",
+        "age_years",
+        "distance_km",
+        "has_garden",
+        "price",
+        "sold_year"
+      ]
+    },
+    {
+      "path": "datasets/houses_2026_new.csv",
+      "type": "csv",
+      "rows": 300,
+      "columns": [
+        "area_m2",
+        "bedrooms",
+        "age_years",
+        "distance_km",
+        "has_garden",
+        "price",
+        "sold_year"
+      ]
+    },
+    {
+      "path": "datasets/houses_2027_new.csv",
+      "type": "csv",
+      "rows": 200,
+      "columns": [
+        "area_m2",
+        "bedrooms",
+        "age_years",
+        "distance_km",
+        "has_garden",
+        "price",
+        "sold_year"
+      ]
+    },
+    {
+      "path": "datasets/hr_attrition.csv",
+      "type": "csv",
+      "rows": 3000,
+      "columns": [
+        "employee_id",
+        "team_id",
+        "department",
+        "job_level",
+        "age",
+        "tenure_years",
+        "salary",
+        "overtime",
+        "satisfaction",
+        "commute_km",
+        "monthly_salary",
+        "hire_date",
+        "left"
+      ]
+    },
+    {
+      "path": "datasets/iris.csv",
+      "type": "csv",
+      "rows": 150,
+      "columns": [
+        "sepal length (cm)",
+        "sepal width (cm)",
+        "petal length (cm)",
+        "petal width (cm)",
+        "target"
+      ]
+    },
+    {
+      "path": "datasets/mall_customers.csv",
+      "type": "csv",
+      "rows": 200,
+      "columns": [
+        "CustomerID",
+        "Gender",
+        "Age",
+        "Annual Income (k$)",
+        "Spending Score (1-100)"
+      ]
+    },
+    {
+      "path": "datasets/orders_international_messy.csv",
+      "type": "csv",
+      "rows": 10,
+      "columns": [
+        "order_id",
+        "country",
+        "weight",
+        "phone",
+        "status",
+        "customer_age"
+      ]
+    },
+    {
+      "path": "datasets/patients_with_missing.csv",
+      "type": "csv",
+      "rows": 1000,
+      "columns": [
+        "age",
+        "sex",
+        "bmi",
+        "systolic_bp",
+        "cholesterol",
+        "smoker"
+      ]
+    },
+    {
+      "path": "datasets/product_reviews.csv",
+      "type": "csv",
+      "rows": 8,
+      "columns": [
+        "review",
+        "sentiment"
+      ]
+    },
+    {
+      "path": "datasets/salary_experience.csv",
+      "type": "csv",
+      "rows": 30,
+      "columns": [
+        "years_experience",
+        "salary"
+      ]
+    },
+    {
+      "path": "datasets/shop.db",
+      "type": "sqlite",
+      "tables": {
+        "customers": 2300,
+        "orders": 12935,
+        "tickets": 2259,
+        "labels": 2300,
+        "predictions": 2300
+      }
+    },
+    {
+      "path": "datasets/shop_customers.csv",
+      "type": "csv",
+      "rows": 3000,
+      "columns": [
+        "age",
+        "annual_income",
+        "sessions_per_month",
+        "basket_value",
+        "days_since_last_purchase",
+        "churned"
+      ]
+    },
+    {
+      "path": "datasets/startups_big_numbers.csv",
+      "type": "csv",
+      "rows": 8,
+      "columns": [
+        "company",
+        "valuation",
+        "users"
+      ]
+    },
+    {
+      "path": "datasets/students.csv",
+      "type": "csv",
+      "rows": 303,
+      "columns": [
+        "student_id",
+        "name",
+        "email",
+        "school",
+        "hours_studied",
+        "attendance_pct",
+        "previous_score",
+        "favourite_color",
+        "teacher_notes",
+        "final_grade",
+        "passed"
+      ]
+    },
+    {
+      "path": "datasets/titanic.csv",
+      "type": "csv",
+      "rows": 891,
+      "columns": [
+        "survived",
+        "pclass",
+        "sex",
+        "age",
+        "sibsp",
+        "parch",
+        "fare",
+        "embarked",
+        "class",
+        "who",
+        "adult_male",
+        "deck",
+        "embark_town",
+        "alive",
+        "alone"
+      ]
+    },
+    {
+      "path": "datasets/trips.jsonl",
+      "type": "jsonl",
+      "rows": 600,
+      "columns": [
+        "trip_id",
+        "driver_id",
+        "km",
+        "rain",
+        "minutes"
+      ]
+    },
+    {
+      "path": "datasets/used_cars.csv",
+      "type": "csv",
+      "rows": 2000,
+      "columns": [
+        "brand",
+        "fuel",
+        "condition",
+        "city",
+        "mileage_km",
+        "price_usd"
+      ]
+    },
+    {
+      "path": "datasets/wine.csv",
+      "type": "csv",
+      "rows": 178,
+      "columns": [
+        "alcohol",
+        "malic_acid",
+        "ash",
+        "alcalinity_of_ash",
+        "magnesium",
+        "total_phenols",
+        "flavanoids",
+        "nonflavanoid_phenols",
+        "proanthocyanins",
+        "color_intensity",
+        "hue",
+        "od280/od315_of_diluted_wines",
+        "proline",
+        "target"
+      ]
+    },
+    {
+      "path": "tkinter_app/houses_2025.csv",
+      "type": "csv",
+      "rows": 500,
+      "columns": [
+        "area_m2",
+        "bedrooms",
+        "age_years",
+        "distance_km",
+        "has_garden",
+        "price",
+        "sold_year"
+      ]
+    },
+    {
+      "path": "tkinter_app/houses_2026_new.csv",
+      "type": "csv",
+      "rows": 300,
+      "columns": [
+        "area_m2",
+        "bedrooms",
+        "age_years",
+        "distance_km",
+        "has_garden",
+        "price",
+        "sold_year"
+      ]
+    }
+  ],
+  "python_syntax": "passed",
+  "model_smoke": {
+    "status": "passed",
+    "train_metrics": {
+      "mae": 18944,
+      "r2": 0.906
+    },
+    "first_prediction": 387751.78125995916,
+    "update": {
+      "old_version": 1,
+      "old_mae_on_new_data": 35921,
+      "new_version": 2,
+      "new_mae_on_new_data": 28863,
+      "promoted": true
+    },
+    "rollback": "passed",
+    "duplicate_update": "rejected",
+    "gui": "not opened"
+  },
+  "versions": {
+    "python": "3.12.10",
+    "pandas": "2.2.3",
+    "scikit-learn": "1.6.1",
+    "joblib": "1.4.2"
+  }
+}

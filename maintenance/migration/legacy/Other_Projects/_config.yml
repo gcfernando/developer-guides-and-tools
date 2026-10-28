@@ -1,0 +1,55 @@
+# GitHub Pages documentation site; does not configure application deployment.
+url: "https://gcfernando.github.io"
+baseurl: "/developer-tools-and-guides"
+title: "Gehan's Project Lab"
+description: "Developer tools and guides: AI coding add-ons, an offline Linux command reference, Windows maintenance, containers and IPTV playlists."
+lang: "en"
+plugins:
+  - jekyll-sitemap
+include:
+  - .wslconfig
+exclude:
+  - packages
+  - bin
+  - obj
+  - node_modules
+  - vendor
+  - tests
+  - .claude
+  - .agents
+  - .codex
+defaults:
+  - scope:
+      path: "Files/ai_coding_plugins_beginners_guide.md"
+    values:
+      title: "AI Coding Add-ons — Beginner's Project Guide"
+      description: "A beginner’s guide to 39 AI coding add-ons, with installation, configuration and usage steps for Claude Code, Codex CLI, GitHub Copilot CLI and VS Code."
+      permalink: "/Files/ai-coding-addons-markdown/"
+      canonical_url: "https://gcfernando.github.io/developer-tools-and-guides/Files/ai-coding-addons-markdown/"
+      sitemap: false
+  - scope:
+      path: "Files/iptv_world_explorer_2026.md"
+    values:
+      title: "IPTV-org Playlist Directory — Countries, Languages and Categories"
+      description: "Browse IPTV-org playlists by country, category, language and region, with a guide to opening playlists in VLC."
+  - scope:
+      path: "Linux_Commands/readme.md"
+    values:
+      title: "Linux Command Reference — Offline Search and Security Examples"
+      description: "A searchable offline reference of 361 Linux commands across 16 categories, with practical examples for cybersecurity and system administration."
+  - scope:
+      path: "README.md"
+    values:
+      title: "Gehan's Project Lab — Developer Tools, Linux and AI Coding Guides"
+      description: "Developer tools and guides: AI coding add-ons, an offline Linux command reference, Windows maintenance, containers and IPTV playlists."
+  - scope:
+      path: "SystemMaintenance/readme.md"
+    values:
+      title: "Windows Maintenance PowerShell Script — SFC, DISM and Cleanup"
+      description: "Review a PowerShell maintenance script for Windows: SFC, DISM, CHKDSK, Windows Update and cleanup, with run instructions and operational cautions."
+
+# Public documentation navigation and presentation.
+repository: gcfernando/developer-tools-and-guides
+theme: jekyll-theme-primer
+projects_hub: https://gcfernando.github.io/gcfernando/projects/
+project_category: "Tools & reference"

@@ -1,0 +1,20 @@
+name: Documentation error
+description: Report an incorrect explanation, broken example or link.
+title: "[Docs] "
+body:
+  - type: input
+    id: resource
+    attributes:
+      label: Resource and section
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem and expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment, versions and verification

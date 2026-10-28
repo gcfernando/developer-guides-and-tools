@@ -1,0 +1,27 @@
+{
+  "name": "developer-guides-and-tools",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Developer guides, cheat sheets, interactive references and practical utilities.",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build:catalog": "node scripts/build-catalog.cjs",
+    "build:addons": "node scripts/build-ai-addons.cjs",
+    "build": "npm run build:addons && npm run build:handbook && npm run build:catalog",
+    "check:generated": "node scripts/build-catalog.cjs --check && node scripts/build-ai-addons.cjs --check && node scripts/build-ml-handbook.cjs --check",
+    "check:links": "node scripts/check-links.cjs",
+    "check:site": "node scripts/check-site.cjs",
+    "test": "npm run check:generated && node apps/linux-command-reference/seo.test.cjs && node --check apps/linux-command-reference/app.js && node --test tests/*.test.cjs && node scripts/verify-migration.cjs && npm run check:links",
+    "site:build": "bundle exec jekyll build",
+    "site:serve": "bundle exec jekyll serve",
+    "build:handbook": "node scripts/build-ml-handbook.cjs",
+    "check:ml": "python scripts/validate-ml-handbook.py --smoke"
+  },
+  "devDependencies": {
+    "linkedom": "^0.18.14",
+    "markdown-it": "^14.3.3",
+    "yaml": "^2.9.1"
+  }
+}

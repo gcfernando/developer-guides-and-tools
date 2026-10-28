@@ -1,0 +1,11 @@
+customer_id,name,email,city,updated_at,lifetime_value
+1,Olivia Brown,olivia.brown@gmail.com,London,2026-01-10,1200
+2,Liam Smith,liam.smith@yahoo.com,Manchester,2026-02-02,340
+2,Liam Smith,liam.smith@yahoo.com,Manchester,2026-02-02,340
+3,Emma Wilson,emma.w@outlook.com,Leeds,2026-01-15,560
+3,Emma Wilson,emma.w@outlook.com,Bristol,2026-06-20,610
+4,Noah Taylor ,NOAH.TAYLOR@gmail.com,London,2026-03-01,80
+5,noah taylor,noah.taylor@gmail.com ,london,2026-03-05,95
+6,Ava Johnson,ava.johnson@gmail.com,Leeds,2026-04-11,430
+7,Ava Jonson,ava.j@gmail.com,Leeds,2026-04-12,120
+8,Mia Davies,mia.d@icloud.com,York,2026-05-30,760

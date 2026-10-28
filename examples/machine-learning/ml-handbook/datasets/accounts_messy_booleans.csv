@@ -1,0 +1,13 @@
+account_id,is_active,newsletter_opt_in,has_premium
+1,Yes,true,1
+2,no,false,0
+3,Y,False,0
+4,1,True,1
+5,1,0,1
+6,True,1,0
+7,TRUE,yes,1
+8,false,no,0
+9,N,,0
+10,,Y,1
+11,n/a,N,0
+12,yes ,t,1

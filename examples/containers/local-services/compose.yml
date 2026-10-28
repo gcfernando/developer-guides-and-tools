@@ -1,0 +1,483 @@
+# compose.yml
+#
+# Local development stack for Podman Compose:
+#   - Microsoft SQL Server 2025
+#   - Elasticsearch 9.5.2
+#   - Kibana 9.5.2
+#   - Oracle Database XE 21c
+#   - MongoDB 8.0
+#   - RabbitMQ 4.3 + Management UI
+#   - MySQL 8.4
+#   - Apache Kafka 4.3.1 (KRaft, single node)
+#   - Kafbat UI 1.5.0 (Kafka web UI)
+#   - Redis 8.10
+#   - Keycloak 26.8.1 (dev mode)
+#
+# IMPORTANT:
+# Passwords must be supplied through an ignored .env file.
+# Use only for a local development environment; read README.md first.
+
+# ---------------------------------------------------------------------------
+# VARIABLES - edit these values here
+# ---------------------------------------------------------------------------
+x-variables:
+  sql_username: &sql_username "sa"              # SQL Server built-in admin login
+  sql_password: &sql_password "${SQL_PASSWORD:?Set SQL_PASSWORD in .env}"
+
+  oracle_username: &oracle_username "ORA"        # Application/schema user
+  oracle_password: &oracle_password "${ORACLE_PASSWORD:?Set ORACLE_PASSWORD in .env}" # Used for ORA, SYS and SYSTEM
+
+  default_root_username: &default_root_username "root"
+  default_root_password: &default_root_password "${DEFAULT_ROOT_PASSWORD:?Set DEFAULT_ROOT_PASSWORD in .env}"
+
+  timezone: &timezone "${TZ:-Europe/Stockholm}"
+
+  sql_image: &sql_image "mcr.microsoft.com/mssql/server:2025-latest"
+  elasticsearch_image: &elasticsearch_image "docker.elastic.co/elasticsearch/elasticsearch:9.5.2"
+  kibana_image: &kibana_image "docker.elastic.co/kibana/kibana:9.5.2"
+  oracle_image: &oracle_image "docker.io/gvenzl/oracle-xe:21-slim"
+  mongodb_image: &mongodb_image "docker.io/library/mongo:8.0.30-noble"
+  rabbitmq_image: &rabbitmq_image "docker.io/library/rabbitmq:4.3.5-management"
+  mysql_image: &mysql_image "docker.io/library/mysql:8.4.11"
+  kafka_image: &kafka_image "docker.io/apache/kafka:4.3.1"
+  kafka_ui_image: &kafka_ui_image "ghcr.io/kafbat/kafka-ui:v1.5.0"
+  redis_image: &redis_image "docker.io/library/redis:8.10"
+  keycloak_image: &keycloak_image "quay.io/keycloak/keycloak:26.8.1"
+
+services:
+
+  # -------------------------------------------------------------------------
+  # Microsoft SQL Server 2025
+  # -------------------------------------------------------------------------
+  sqlserver:
+    image: *sql_image
+    container_name: sqlserver2025
+    hostname: sqlserver2025
+    restart: unless-stopped
+
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: *sql_password
+      TZ: *timezone
+
+    ports:
+      - "127.0.0.1:1433:1433"
+
+    volumes:
+      - sqlserver_data:/var/opt/mssql
+
+    networks:
+      - database_network
+
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "/opt/mssql-tools18/bin/sqlcmd -S localhost -U sa -P \"$$MSSQL_SA_PASSWORD\" -Q \"SELECT 1\" -No >/dev/null 2>&1 || exit 1"
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 20
+      start_period: 30s
+
+  # -------------------------------------------------------------------------
+  # Elasticsearch
+  # Security is disabled here intentionally for local development.
+  # -------------------------------------------------------------------------
+  elasticsearch:
+    image: *elasticsearch_image
+    container_name: elasticsearch
+    hostname: elasticsearch
+    restart: unless-stopped
+
+    environment:
+      discovery.type: "single-node"
+      xpack.security.enabled: "false"
+      ES_JAVA_OPTS: "-Xms1g -Xmx1g"
+      TZ: *timezone
+
+    ports:
+      - "127.0.0.1:9200:9200"
+
+    volumes:
+      - elasticsearch_data:/usr/share/elasticsearch/data
+
+    networks:
+      - database_network
+
+    ulimits:
+      nofile:
+        soft: 65535
+        hard: 65535
+
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "curl -fsS http://localhost:9200/_cluster/health >/dev/null 2>&1 || exit 1"
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 30
+      start_period: 30s
+
+  # -------------------------------------------------------------------------
+  # Kibana
+  # -------------------------------------------------------------------------
+  kibana:
+    image: *kibana_image
+    container_name: kibana
+    hostname: kibana
+    restart: unless-stopped
+
+    environment:
+      SERVER_HOST: "0.0.0.0"
+      ELASTICSEARCH_HOSTS: '["http://elasticsearch:9200"]'
+      TZ: *timezone
+
+    ports:
+      - "127.0.0.1:5601:5601"
+
+    depends_on:
+      - elasticsearch
+
+    networks:
+      - database_network
+
+  # -------------------------------------------------------------------------
+  # Oracle Database Express Edition 21c
+  #
+  # SYS       / <configured in .env>
+  # SYSTEM    / <configured in .env>
+  # ORA       / <configured in .env>
+  # Service   : XEPDB1
+  # Port      : 1521
+  # -------------------------------------------------------------------------
+  oracle:
+    image: *oracle_image
+    container_name: oracle-xe
+    hostname: oracle-xe
+    restart: unless-stopped
+
+    environment:
+      ORACLE_PASSWORD: *oracle_password
+      APP_USER: *oracle_username
+      APP_USER_PASSWORD: *oracle_password
+      TZ: *timezone
+
+    ports:
+      - "127.0.0.1:1521:1521"
+
+    volumes:
+      - oracle_data:/opt/oracle/oradata
+
+    networks:
+      - database_network
+
+    healthcheck:
+      test: ["CMD", "healthcheck.sh"]
+      interval: 10s
+      timeout: 5s
+      retries: 30
+      start_period: 60s
+
+  # -------------------------------------------------------------------------
+  # MongoDB
+  #
+  # Username : root
+  # Password : <configured in .env>
+  # Port     : 27017
+  # Auth DB  : admin
+  # -------------------------------------------------------------------------
+  mongodb:
+    image: *mongodb_image
+    container_name: mongodb
+    hostname: mongodb
+    restart: unless-stopped
+
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: *default_root_username
+      MONGO_INITDB_ROOT_PASSWORD: *default_root_password
+      TZ: *timezone
+
+    ports:
+      - "127.0.0.1:27017:27017"
+
+    volumes:
+      - mongodb_data:/data/db
+
+    networks:
+      - database_network
+
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "mongosh --quiet --host 127.0.0.1 --username \"$$MONGO_INITDB_ROOT_USERNAME\" --password \"$$MONGO_INITDB_ROOT_PASSWORD\" --authenticationDatabase admin --eval \"db.adminCommand({ ping: 1 }).ok\" | grep -q 1 || exit 1"
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 20
+      start_period: 20s
+
+  # -------------------------------------------------------------------------
+  # RabbitMQ + Management UI
+  #
+  # Username      : root
+  # Password      : <configured in .env>
+  # AMQP port     : 5672
+  # Management UI : http://localhost:15672
+  # -------------------------------------------------------------------------
+  rabbitmq:
+    image: *rabbitmq_image
+    container_name: rabbitmq
+    hostname: rabbitmq
+    restart: unless-stopped
+
+    environment:
+      RABBITMQ_DEFAULT_USER: *default_root_username
+      RABBITMQ_DEFAULT_PASS: *default_root_password
+      TZ: *timezone
+
+    ports:
+      - "127.0.0.1:5672:5672"
+      - "127.0.0.1:15672:15672"
+
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
+
+    networks:
+      - database_network
+
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "-q", "ping"]
+      interval: 10s
+      timeout: 10s
+      retries: 20
+      start_period: 20s
+
+  # -------------------------------------------------------------------------
+  # MySQL 8.4
+  #
+  # Username : root
+  # Password : <configured in .env>
+  # Port     : 3306
+  # -------------------------------------------------------------------------
+  mysql:
+    image: *mysql_image
+    container_name: mysql
+    hostname: mysql
+    restart: unless-stopped
+
+    environment:
+      MYSQL_ROOT_PASSWORD: *default_root_password
+      MYSQL_ROOT_HOST: "%"
+      TZ: *timezone
+
+    ports:
+      - "127.0.0.1:3306:3306"
+
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+    networks:
+      - database_network
+
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "mysqladmin ping -h 127.0.0.1 -uroot -p\"$$MYSQL_ROOT_PASSWORD\" --silent >/dev/null 2>&1 || exit 1"
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 30
+      start_period: 60s
+
+  # -------------------------------------------------------------------------
+  # Apache Kafka (KRaft mode, single node - no ZooKeeper)
+  #
+  # From your host (apps on Windows) : localhost:9092
+  # From other containers            : kafka:19092
+  # No authentication (PLAINTEXT) - local development only.
+  # -------------------------------------------------------------------------
+  kafka:
+    image: *kafka_image
+    container_name: kafka
+    hostname: kafka
+    restart: unless-stopped
+
+    environment:
+      CLUSTER_ID: "5L6g3nShT-eMCtK--X86sw"
+      KAFKA_NODE_ID: "1"
+      KAFKA_PROCESS_ROLES: "broker,controller"
+      KAFKA_LISTENERS: "PLAINTEXT://:19092,PLAINTEXT_HOST://:9092,CONTROLLER://:9093"
+      KAFKA_ADVERTISED_LISTENERS: "PLAINTEXT://kafka:19092,PLAINTEXT_HOST://localhost:9092"
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: "CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT"
+      KAFKA_CONTROLLER_LISTENER_NAMES: "CONTROLLER"
+      KAFKA_INTER_BROKER_LISTENER_NAME: "PLAINTEXT"
+      KAFKA_CONTROLLER_QUORUM_VOTERS: "1@kafka:9093"
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: "1"
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: "1"
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: "1"
+      KAFKA_SHARE_COORDINATOR_STATE_TOPIC_REPLICATION_FACTOR: "1"
+      KAFKA_SHARE_COORDINATOR_STATE_TOPIC_MIN_ISR: "1"
+      KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: "0"
+      KAFKA_NUM_PARTITIONS: "1"
+      KAFKA_LOG_DIRS: "/var/lib/kafka/data"
+      KAFKA_HEAP_OPTS: "-Xms512m -Xmx512m"
+      TZ: *timezone
+
+    ports:
+      - "127.0.0.1:9092:9092"
+
+    volumes:
+      - kafka_data:/var/lib/kafka/data
+
+    networks:
+      - database_network
+
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "/opt/kafka/bin/kafka-broker-api-versions.sh --bootstrap-server localhost:9092 >/dev/null 2>&1 || exit 1"
+        ]
+      interval: 10s
+      timeout: 15s
+      retries: 20
+      start_period: 30s
+
+  # -------------------------------------------------------------------------
+  # Kafbat UI (Kafka web UI, formerly provectus kafka-ui)
+  #
+  # URL : http://localhost:8081
+  # Host port 8081 is used because Keycloak uses 8080.
+  # -------------------------------------------------------------------------
+  kafka-ui:
+    image: *kafka_ui_image
+    container_name: kafka-ui
+    hostname: kafka-ui
+    restart: unless-stopped
+
+    environment:
+      KAFKA_CLUSTERS_0_NAME: "local"
+      KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: "kafka:19092"
+      DYNAMIC_CONFIG_ENABLED: "true"
+      TZ: *timezone
+
+    ports:
+      - "127.0.0.1:8081:8080"
+
+    depends_on:
+      - kafka
+
+    networks:
+      - database_network
+
+  # -------------------------------------------------------------------------
+  # Redis
+  #
+  # Username : default
+  # Password : <configured in .env>
+  # Port     : 6379
+  # Persistence: append-only file (AOF) enabled
+  # -------------------------------------------------------------------------
+  redis:
+    image: *redis_image
+    container_name: redis
+    hostname: redis
+    restart: unless-stopped
+
+    command: ["redis-server", "--requirepass", *default_root_password, "--appendonly", "yes"]
+
+    environment:
+      REDIS_PASSWORD: *default_root_password
+      TZ: *timezone
+
+    ports:
+      - "127.0.0.1:6379:6379"
+
+    volumes:
+      - redis_data:/data
+
+    networks:
+      - database_network
+
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "redis-cli -a \"$$REDIS_PASSWORD\" --no-auth-warning ping | grep -q PONG || exit 1"
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 20
+      start_period: 10s
+
+  # -------------------------------------------------------------------------
+  # Keycloak (dev mode - built-in H2 database, HTTP only)
+  #
+  # Admin console : http://localhost:8080
+  # Admin user    : root
+  # Password      : <configured in .env>
+  # Health        : http://localhost:9000/health/ready
+  # Realms and users are kept in the keycloak_data volume.
+  # -------------------------------------------------------------------------
+  keycloak:
+    image: *keycloak_image
+    container_name: keycloak
+    hostname: keycloak
+    restart: unless-stopped
+
+    command: ["start-dev"]
+
+    environment:
+      KC_BOOTSTRAP_ADMIN_USERNAME: *default_root_username
+      KC_BOOTSTRAP_ADMIN_PASSWORD: *default_root_password
+      KC_HEALTH_ENABLED: "true"
+      TZ: *timezone
+
+    ports:
+      - "127.0.0.1:8080:8080"
+      - "127.0.0.1:9000:9000"
+
+    volumes:
+      - keycloak_data:/opt/keycloak/data
+
+    networks:
+      - database_network
+
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          'exec 3<>/dev/tcp/127.0.0.1/9000 && printf "GET /health/ready HTTP/1.1\r\nHost: localhost\r\nConnection: close\r\n\r\n" >&3 && grep -q "UP" <&3'
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 30
+      start_period: 60s
+
+
+# ---------------------------------------------------------------------------
+# Persistent named volumes
+# ---------------------------------------------------------------------------
+volumes:
+  sqlserver_data:
+  elasticsearch_data:
+  oracle_data:
+  mongodb_data:
+  rabbitmq_data:
+  mysql_data:
+  kafka_data:
+  redis_data:
+  keycloak_data:
+
+
+# ---------------------------------------------------------------------------
+# Shared container network
+# ---------------------------------------------------------------------------
+networks:
+  database_network:
+    driver: bridge

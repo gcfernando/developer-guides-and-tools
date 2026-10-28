@@ -1,0 +1,17 @@
+{
+  "docs/python/oop.md": "/python/oop/",
+  "docs/python/special-methods.md": "/python/special-methods/",
+  "docs/csharp-dotnet/oop.md": "/csharp-dotnet/oop/",
+  "docs/databases/sql-server-and-mysql.md": "/databases/sql-server-and-mysql/",
+  "docs/cloud/azure/engineering-cheat-sheet.md": "/cloud/azure/engineering-cheat-sheet/",
+  "docs/cloud/azure/resource-reference.md": "/cloud/azure/resource-reference/",
+  "docs/containers/docker-cheat-sheet.md": "/containers/docker-cheat-sheet/",
+  "docs/containers/podman-cheat-sheet.md": "/containers/podman-cheat-sheet/",
+  "docs/version-control/git-cheat-sheet.md": "/version-control/git-cheat-sheet/",
+  "docs/ai/local-ai-chat-lab.md": "/ai/local-ai-chat-lab/",
+  "docs/ai/coding-addons.md": "/ai/coding-addons/guide/",
+  "docs/media/iptv/playlists.md": "/media/iptv/",
+  "apps/linux-command-reference/README.md": "/apps/linux-command-reference/guide/",
+  "apps/ai-learning-atlas/README.md": "/apps/ai-learning-atlas/guide/",
+  "tools/powershell/system-maintenance/README.md": "/utilities/windows-maintenance/"
+}

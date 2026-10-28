@@ -1,0 +1,11 @@
+order_id,country,weight,phone,status,customer_age
+1,USA,12 kg,+1 (415) 555-0132,Delivered,34
+2,U.S.A.,26.4 lbs,415.555.0198,delivered,41
+3,united states,5000 g,1-415-555-0101,DELIVERED,-1
+4, US,3.2kg,4155550177,shipped,29
+5,Germany,7 KG,+49 30 123456,Shipped ,250
+6,germany,15 lb,030-123457,in transit,38
+7,DE,800g,+49 30 123458,In-Transit,52
+8,Deutschland,2.5 kg,0049 30 123459,cancelled,0
+9,UK,11 lbs,+44 20 7946 0958,canceled,45
+10,United Kingdom,4 kg,020 7946 0959,Delivered,31

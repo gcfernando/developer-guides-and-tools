@@ -1,0 +1,49 @@
+url: "https://gcfernando.github.io"
+baseurl: "/developer-guides-and-tools"
+repository: gcfernando/developer-guides-and-tools
+title: "Developer Guides, Cheat Sheets & Tools"
+description: "Practical developer guides, cheat sheets and tools for Python, data science, machine learning, C#/.NET, SQL, Azure, Linux, containers, Git and AI-assisted development."
+author: "Gehan Fernando"
+lang: en
+theme: jekyll-theme-primer
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  hard_wrap: false
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-relative-links
+relative_links:
+  enabled: true
+  collections: false
+include:
+  - examples/wsl/.wslconfig.example
+  - examples/containers/local-services/.env.example
+exclude:
+  - maintenance
+  - scripts
+  - tests
+  - node_modules
+  - vendor
+  - .bundle
+  - .runtime
+  - artifacts
+  - Gemfile
+  - Gemfile.lock
+  - package.json
+  - package-lock.json
+  - CONTRIBUTING.md
+  - SECURITY.md
+  - THIRD_PARTY_NOTICES.md
+  - LICENSE
+  - apps/linux-command-reference/generate-static.cjs
+  - apps/linux-command-reference/seo.test.cjs
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+projects_hub: https://gcfernando.github.io/gcfernando/projects/
+project_category: "Learn, reference & build"
