@@ -1,8 +1,8 @@
 {
-  "documentation.md": "/documentation/",
+  "README.md": "/repository/",
+  "apps/README.md": "/interactive-tools/",
   "apps/ai-learning-atlas/README.md": "/apps/ai-learning-atlas/guide/",
   "apps/linux-command-reference/README.md": "/apps/linux-command-reference/guide/",
-  "apps/README.md": "/interactive-tools/",
   "docs/ai/coding-addons.md": "/ai/coding-addons/guide/",
   "docs/ai/local-ai-chat-lab.md": "/ai/local-ai-chat-lab/",
   "docs/cloud/azure/engineering-cheat-sheet.md": "/cloud/azure/engineering-cheat-sheet/",
@@ -24,16 +24,16 @@
   "docs/python/oop.md": "/python/oop/",
   "docs/python/special-methods.md": "/python/special-methods/",
   "docs/version-control/git-cheat-sheet.md": "/version-control/git-cheat-sheet/",
-  "examples/ai-clients/copilot/README.md": "/examples/ai-clients/copilot/",
+  "documentation.md": "/documentation/",
+  "examples/README.md": "/examples/",
   "examples/ai-clients/README.md": "/examples/ai-clients/",
+  "examples/ai-clients/copilot/README.md": "/examples/ai-clients/copilot/",
   "examples/containers/local-services/README.md": "/examples/local-services/",
   "examples/machine-learning/ml-handbook/README.md": "/examples/machine-learning-handbook/",
-  "examples/README.md": "/examples/",
   "examples/wsl/README.md": "/examples/wsl/",
   "index.md": "/",
-  "README.md": "/repository/",
   "templates/ai-instructions/README.md": "/templates/ai-instructions/",
+  "tools/README.md": "/utilities/",
   "tools/powershell/convert-line-endings/README.md": "/utilities/line-endings/",
-  "tools/powershell/system-maintenance/README.md": "/utilities/windows-maintenance/",
-  "tools/README.md": "/utilities/"
+  "tools/powershell/system-maintenance/README.md": "/utilities/windows-maintenance/"
 }

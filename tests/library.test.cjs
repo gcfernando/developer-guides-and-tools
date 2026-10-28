@@ -3,8 +3,16 @@ const assert=require('node:assert/strict');
 const fs=require('node:fs');
 const path=require('node:path');
 const vm=require('node:vm');
+const {execFileSync}=require('node:child_process');
 const {parseHTML}=require('linkedom');
 const {read,frontMatter,yaml,ROOT}=require('../scripts/lib.cjs');
+
+test('catalog generation is independent of filesystem enumeration order',()=>{
+  const script=path.join(ROOT,'scripts/build-catalog.cjs');
+  const preload=path.join(ROOT,'tests/fixtures/reverse-readdir.cjs');
+  execFileSync(process.execPath,[script,'--check'],{cwd:ROOT,stdio:'pipe'});
+  execFileSync(process.execPath,['--require',preload,script,'--check'],{cwd:ROOT,stdio:'pipe'});
+});
 
 test('all catalog resources and stable page routes resolve',()=>{
   const resources=yaml.parse(read('_data/resources.yml'));

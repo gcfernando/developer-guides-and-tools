@@ -24,5 +24,8 @@ for(const topic of [...new Set(resources.map(r=>r.topic))]) {
 }
 result+='## Reading and verification\n\nResources state their own prerequisites and verification limits. Application self-reported progress, example instructions and historical checks are not proof that an exercise ran in your environment.\n\n[Repository overview](README.md) · [Examples](examples/README.md) · [Instruction templates](templates/ai-instructions/README.md)\n';
 output('documentation.md',result,check);
-output('_data/routes.json',JSON.stringify(routes,null,2)+'\n',check);
+// Filesystem enumeration differs across operating systems. Serialize routes in
+// JavaScript's locale-independent key order so Windows and Linux agree byte for byte.
+const orderedRoutes=Object.fromEntries(Object.keys(routes).sort().map(key=>[key,routes[key]]));
+output('_data/routes.json',JSON.stringify(orderedRoutes,null,2)+'\n',check);
 console.log((check?'Verified':'Built')+' catalog: '+resources.length+' resources, '+Object.keys(routes).length+' page routes.');
