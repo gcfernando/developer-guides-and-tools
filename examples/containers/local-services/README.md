@@ -1,16 +1,22 @@
 ---
 title: "Local Development Services with Podman Compose"
-description: "A local development stack for SQL Server, MySQL, Oracle, MongoDB, Elasticsearch, Kibana, RabbitMQ, Kafka, Kafka UI, Redis and Keycloak."
+description: "Configure an opt-in Podman Compose stack with 11 database, messaging, search and identity services. Review credentials, port bindings and resource needs."
 permalink: /examples/local-services/
 ---
 
-# Local development services
+[Developer guides and tools](../../../README.md)
 
-[compose.yml](compose.yml) contains 11 services: SQL Server, Elasticsearch, Kibana, Oracle XE, MongoDB, RabbitMQ, MySQL, Kafka, Kafka UI, Redis and Keycloak. It is an example environment, not a production deployment.
+<a id="local-development-services"></a>
+
+# Local Development Services with Podman Compose
+
+Use [compose.yml](compose.yml) to explore local database, messaging, search and identity services with Podman Compose. Its 11 services are SQL Server, Elasticsearch, Kibana, Oracle XE, MongoDB, RabbitMQ, MySQL, Kafka, Kafka UI, Redis and Keycloak. Configure and start only the services you need for practice.
+
+<a id="guide-configure"></a>
 
 ## Configure
 
-Install Podman and a compatible Compose provider. Copy [.env.example](.env.example) to .env in this folder and replace the example values. The .env file is ignored by Git. Relative paths below assume the repository root.
+Install Podman and a compatible Compose provider. Work in a separate local copy of this example. Create or review its `.env` file with values you choose for `SQL_PASSWORD`, `ORACLE_PASSWORD` and `DEFAULT_ROOT_PASSWORD`, and an optional `TZ`; use the requirements shown in `compose.yml`. The checkout currently tracks an `.env` file despite the ignore rule: do not commit personal credentials, and do not treat the tracked values as private. There is no supplied `.env.example`. Relative paths below assume the repository root of your practice copy.
 
 Image tags are the imported snapshot. Check availability, architecture, licensing and resource requirements before pulling images. Starting every service can use substantial memory and disk.
 

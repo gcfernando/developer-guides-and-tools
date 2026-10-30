@@ -14,6 +14,10 @@ for(const file of files){
   const {document}=parseHTML(content);
   for(const el of document.querySelectorAll('[href],[src]')){
     const url=el.getAttribute('href')||el.getAttribute('src');
+    if(name.endsWith('.md')&&el.tagName==='A'&&/\.html?(?:[?#]|$)/i.test(url)){
+      if(!/^(?:[a-z][a-z0-9+.-]*:|\/\/|#)/i.test(url))problems.push(name+': HTML page must use its published browser URL: '+url);
+      if(/^https?:\/\/(?:raw\.githubusercontent\.com\/gcfernando\/|github\.com\/gcfernando\/[^/]+\/(?:blob|raw|tree)\/)/i.test(url))problems.push(name+': HTML page opens GitHub source instead of the published site: '+url);
+    }
     if(/^https?:\/\//i.test(url)&&!['preconnect','dns-prefetch'].includes(el.getAttribute('rel'))&&!url.startsWith('https://gcfernando.github.io/developer-guides-and-tools')&&!url.startsWith('https://github.com/gcfernando/developer-guides-and-tools')){
       const clean=url.split('#')[0];
       external.set(clean,[...new Set([...(external.get(clean)||[]),name])]);

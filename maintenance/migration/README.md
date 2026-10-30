@@ -1,17 +1,25 @@
-# Consolidation record
+[Developer guides and tools](../../README.md)
 
-This repository was assembled locally on 28 October 2026 from sibling folders KnowledgeBase and Other_Projects. The original folders remain intact. No .git directories were present, so there was no local commit history to import.
+<a id="consolidation-record"></a>
+
+# Developer Resources Migration and Provenance Record
+
+Trace the imported guides and tools through their source map, preserved snapshots and URL mappings. The initial local consolidation on 28 October 2026 combined the sibling KnowledgeBase and Other_Projects folders; both originals remained intact and had no .git history to import.
 
 The later MLHandbook import adds 125 byte-identical files at examples/machine-learning/ml-handbook/. A published handbook page is generated from that preserved source.
+
+<a id="guide-every-original-file-is-accounted-for"></a>
 
 ## Every original file is accounted for
 
 - source-map.csv records all 176 original files from the three supplied folders, original SHA-256 digests, sizes, destinations and dispositions.
-- legacy/ retains the original repository READMEs, documentation indexes, Jekyll configurations, AI add-ons HTML and Linux workflow.
+- legacy/ retains the original repository READMEs as README.original.md snapshots, alongside maintained README navigation pages, original documentation indexes, Jekyll configurations, AI add-ons HTML and the Linux workflow.
 - Identical layouts, CSS and favicon assets were deduplicated.
 - Personal Copilot application state is excluded, with its checksum recorded and its role replaced by configuration guidance.
 
 Run node scripts/verify-migration.cjs --sources ../ to verify source coverage, unchanged original checksums and destination presence. This check is optional outside this local workspace.
+
+<a id="guide-intentional-consolidation-changes"></a>
 
 ## Intentional consolidation changes
 
@@ -23,9 +31,13 @@ The Compose example now reads passwords from environment variables and binds pub
 
 No reuse license was supplied. LICENSE records the pending owner decision without granting new permissions.
 
-## Publication still needs an owner action
+<a id="guide-publication-and-historical-boundaries"></a>
 
-The planned destination is gcfernando/developer-guides-and-tools. This local merge did not create, rename, push, archive or delete any GitHub repository and did not deploy either old or new website.
+<a id="publication-still-needs-an-owner-action"></a>
+
+## Publication and historical boundaries
+
+The consolidation was initially a local operation and did not create, rename, push, archive or delete GitHub repositories. The destination is now [gcfernando/developer-guides-and-tools](https://github.com/gcfernando/developer-guides-and-tools), with a [published documentation site](https://gcfernando.github.io/developer-guides-and-tools/). The original import record remains a historical description of that initial step.
 
 Use url-map.csv to prepare redirects at each original hosting location. Old repository names, raw file links, fragment links and GitHub Pages URLs need separate consideration. Source layout changes do not automatically preserve old URLs.
 
