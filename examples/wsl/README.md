@@ -10,9 +10,7 @@ permalink: /examples/wsl/
 
 # WSL2 Configuration — Memory, CPU and Swap Settings
 
-Use the [WSL2 configuration example](.wslconfig.example) as a starting point for memory, processor, swap and networking preferences on your own machine.
-
-> **In this guide:** [Get started](#guide-apply-the-settings) · [Review the example values](#guide-review-the-example-values)
+Adapt the [WSL2 configuration example](.wslconfig.example) to set memory, processor, swap and networking preferences for your machine. Review the values below before merging selected settings into your own configuration.
 
 <a id="guide-review-the-example-values"></a>
 

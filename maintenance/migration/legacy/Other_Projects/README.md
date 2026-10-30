@@ -2,9 +2,7 @@
 
 # Archived Project Lab — Find the Current Tools
 
-Find the current Linux reference, AI learning tools, PowerShell utilities and local service examples from the archived project-lab repository.
-
-> **In this guide:** [Walk through the example](#guide-find-the-maintained-content) · [Check the limits](#guide-trace-the-migration) · [Read the original snapshot](#guide-read-the-original-snapshot)
+Use this navigation page to find the maintained Linux reference, AI learning tools, PowerShell utilities and local-service examples after the project-lab consolidation. The original README remains available as a historical snapshot below.
 
 <a id="guide-find-the-maintained-content"></a>
 

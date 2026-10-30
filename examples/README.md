@@ -10,9 +10,7 @@ permalink: /examples/
 
 # Developer Configuration and Environment Examples
 
-Choose an example environment, inspect its configuration and follow its own setup guide. These examples are opt-in starting points for your practice environment.
-
-> **In this guide:** [Get started](#guide-choose-an-example) · [Adapt before running](#guide-adapt-before-running)
+Set up a focused practice environment for machine learning, local services, WSL or an AI client. Choose one example below, inspect its configuration and follow its own requirements before running it.
 
 <a id="guide-choose-an-example"></a>
 

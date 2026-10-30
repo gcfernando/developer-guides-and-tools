@@ -10,9 +10,7 @@ permalink: /examples/ai-clients/copilot/
 
 # Copilot Configuration and Instruction Guidance
 
-Use your installed client's supported settings interface for preferences and a reusable instruction file for project guidance. Keep personal account state out of both.
-
-> **In this guide:** [Start with the instruction template](#guide-start-with-the-instruction-template) · [Configure your own client](#guide-configure-your-own-client) · [Why the imported state is excluded](#guide-why-the-imported-state-is-excluded)
+Start with the reusable Copilot instruction template, then configure preferences through your installed client's supported settings interface. Keep login details and automatically managed account state out of shared files.
 
 <a id="guide-start-with-the-instruction-template"></a>
 

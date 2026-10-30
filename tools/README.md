@@ -10,9 +10,7 @@ permalink: /utilities/
 
 # PowerShell Developer Utilities and Usage Guides
 
-Choose a documented PowerShell utility, understand its effects and run it deliberately. The guides describe prerequisites and verification limits alongside each script.
-
-> **In this guide:** [Get started](#guide-choose-a-utility) · [Prepare and verify](#guide-prepare-and-verify) · [Explore related examples](#guide-explore-related-examples)
+Find a PowerShell utility for line-ending conversion or Windows maintenance. Start with the companion guide: each script changes files or system state, and its prerequisites, effects and verification limits matter before execution.
 
 <a id="guide-choose-a-utility"></a>
 

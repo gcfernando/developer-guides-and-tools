@@ -10,9 +10,7 @@ permalink: /examples/ai-clients/
 
 # AI Client Configuration Examples and Setup Notes
 
-Review the configuration examples for your client, then copy only the settings you intend to use. Instruction templates and account state are separate concerns.
-
-> **In this guide:** [Get started](#guide-choose-a-client) · [Understand the details](#guide-review-compatibility-and-permissions) · [Add instructions deliberately](#guide-add-instructions-deliberately)
+Review the Codex and Claude preference snapshots or the Copilot setup notes before adapting your own client. Copy only settings you understand; reusable instructions and private account state have separate roles.
 
 <a id="guide-choose-a-client"></a>
 

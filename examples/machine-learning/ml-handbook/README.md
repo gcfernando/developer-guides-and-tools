@@ -8,9 +8,7 @@ permalink: /examples/machine-learning-handbook/
 
 # Data Science and Machine Learning Handbook
 
-This self-contained learning bundle contains the complete supplied MLHandbook folder. Its 125 original files are preserved byte for byte, including the handbook, 91 figures, datasets, SQLite databases and the desktop example.
-
-> **In this guide:** [Get started](#guide-run-the-desktop-example) · [Understand the details](#guide-files) · [Check the limits](#guide-validation)
+Study data science and machine learning with a Python handbook, local datasets and a Tkinter house-price example. This bundle preserves the complete supplied MLHandbook folder: 125 original files, including 91 figures, CSV/JSONL data, SQLite databases and desktop application source.
 
 [Read the published handbook source](../../../docs/data-science/machine-learning-handbook.md) · [Original handbook](Data_Science_Handbook.md) · [Machine learning path](../../../docs/learning-paths/machine-learning.md)
 

@@ -11,9 +11,7 @@ description: Review a PowerShell Windows maintenance script's repair, update, ne
 
 # Windows Maintenance with PowerShell — Script Guide
 
-`SystemMaintenance.ps1` runs a fixed sequence of Windows repair, update, networking and cleanup operations. This guide explains the checked-in script's behavior so an administrator can decide whether it suits a particular machine.
-
-> **In this guide:** [Get started](#guide-prerequisites) · [Walk through the example](#guide-usage) · [Check the limits](#guide-verification-and-logs)
+Review [SystemMaintenance.ps1](SystemMaintenance.ps1) before deciding whether to run its fixed Windows repair, update, networking and cleanup sequence. This guide is for administrators evaluating the checked-in script's prerequisites, side effects and diagnostic limits.
 
 <!-- Preserve links to earlier section headings. -->
 <a id="windows-system-maintenance-powershell-script--sfc-dism-chkdsk-windows-update-and-cleanup"></a>
@@ -27,7 +25,7 @@ description: Review a PowerShell Windows maintenance script's repair, update, ne
 
 <a id="guide-prerequisites"></a>
 
-## 📦 Prerequisites
+## Prerequisites
 
 - Windows with the system commands and PowerShell modules used by the script.
 - An elevated PowerShell session and authority to administer the machine.
@@ -37,7 +35,7 @@ description: Review a PowerShell Windows maintenance script's repair, update, ne
 
 The script does not check every prerequisite, request elevation itself, provide a dry run or accept per-task switches. Running it starts the entire sequence.
 
-## ⚙️ Operations and side effects
+## Operations and side effects
 
 | Order | Operation | Actual behavior |
 |---|---|---|
@@ -57,7 +55,7 @@ Network operations can disconnect remote access. Keep local access available. Cr
 
 <a id="guide-usage"></a>
 
-## 💡 Usage
+## Usage
 
 First read [`SystemMaintenance.ps1`](SystemMaintenance.ps1). If you have decided to run the complete sequence, open an elevated PowerShell in this folder:
 
@@ -69,7 +67,7 @@ If execution is blocked, check your organization's policy and the script's prove
 
 <a id="guide-verification-and-logs"></a>
 
-## 🧪 Verification and logs
+## Verification and logs
 
 | Intended path | Content |
 |---|---|
@@ -82,7 +80,7 @@ The cleanup includes `%TEMP%`, where both logs and the registry export are store
 
 For a documentation review, inspect the source and parse PowerShell syntax without invoking the script. Runtime verification needs an authorized disposable Windows environment because the script makes system-wide changes.
 
-## 🛠️ Troubleshooting and limitations
+## Troubleshooting and limitations
 
 - **Missing module or update errors:** inspect the actual PowerShell error and module/provider prerequisites. The script can install a third-party module from the PowerShell Gallery.
 - **Network loss:** use local access and inspect adapter/IP state. Enabling an adapter does not guarantee reconnection to a Wi-Fi network.
@@ -92,8 +90,16 @@ For a documentation review, inspect the source and parse PowerShell syntax witho
 
 Windows versions, device configuration, policy and module availability affect behavior. No cross-version runtime compatibility is established by this guide.
 
-## 🔗 Related documentation
+## Related documentation
 
 - [Repository overview](../../../README.md)
 - [Documentation index](../../../documentation.md)
 - [FixNetwork Python example](https://github.com/gcfernando/python-projects-and-examples/blob/main/FixNetwork/readme.md)
+
+<!-- Preserve links to earlier README sections. -->
+<a id="-operations-and-side-effects"></a>
+<a id="-prerequisites"></a>
+<a id="-related-documentation"></a>
+<a id="-troubleshooting-and-limitations"></a>
+<a id="-usage"></a>
+<a id="-verification-and-logs"></a>

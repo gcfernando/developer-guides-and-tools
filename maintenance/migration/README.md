@@ -4,9 +4,7 @@
 
 # Developer Resources Migration and Provenance Record
 
-This repository was assembled locally on 28 October 2026 from sibling folders KnowledgeBase and Other_Projects. The original folders remain intact. No .git directories were present, so there was no local commit history to import.
-
-> **In this guide:** [Every original file is accounted for](#guide-every-original-file-is-accounted-for) · [Intentional consolidation changes](#guide-intentional-consolidation-changes) · [Publication and historical boundaries](#guide-publication-and-historical-boundaries)
+Trace the imported guides and tools through their source map, preserved snapshots and URL mappings. The initial local consolidation on 28 October 2026 combined the sibling KnowledgeBase and Other_Projects folders; both originals remained intact and had no .git history to import.
 
 The later MLHandbook import adds 125 byte-identical files at examples/machine-learning/ml-handbook/. A published handbook page is generated from that preserved source.
 

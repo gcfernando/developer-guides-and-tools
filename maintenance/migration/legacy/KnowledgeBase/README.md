@@ -2,9 +2,7 @@
 
 # Archived Knowledge Base — Find the Current Guides
 
-Find the current Python, C#/.NET, SQL, Azure and container guides from the archived knowledge-base repository, with the original README preserved.
-
-> **In this guide:** [Walk through the example](#guide-find-the-maintained-content) · [Check the limits](#guide-trace-the-migration) · [Read the original snapshot](#guide-read-the-original-snapshot)
+Use this navigation page to find the maintained Python, C#/.NET, SQL, Azure and container guides after the knowledge-base consolidation. The original README remains available as a historical snapshot below.
 
 <a id="guide-find-the-maintained-content"></a>
 

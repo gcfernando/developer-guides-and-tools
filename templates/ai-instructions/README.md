@@ -10,9 +10,7 @@ permalink: /templates/ai-instructions/
 
 # Reusable AI Instruction Templates for Developers
 
-Choose an instruction template, inspect its guidance and install it deliberately for the client you use. These files are examples, not repository-wide instructions for this library.
-
-> **In this guide:** [Get started](#guide-choose-a-template) · [Understand the details](#guide-keep-settings-and-permissions-separate) · [Install with the correct filenames](#guide-install-with-the-correct-filenames)
+Choose reusable guidance for Codex, Claude, Copilot or ChatGPT, inspect it and install it deliberately for your client. These templates are example content; they do not govern this library as repository-wide instructions.
 
 <a id="guide-choose-a-template"></a>
 

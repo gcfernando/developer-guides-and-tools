@@ -10,9 +10,7 @@ permalink: /interactive-tools/
 
 # Interactive Developer Tools and Offline References
 
-Choose a browser reference for the task in front of you. Each tool has a companion guide covering setup, offline use and maintenance.
-
-> **In this guide:** [Get started](#guide-choose-a-tool) · [Walk through the example](#guide-read-offline) · [Keep generated pages in sync](#guide-keep-generated-pages-in-sync)
+Use these browser tools to find Linux commands, plan AI study or compare coding add-ons. Choose a tool below; its companion guide covers setup, offline use and maintenance.
 
 <a id="guide-choose-a-tool"></a>
 

@@ -10,9 +10,7 @@ permalink: /utilities/line-endings/
 
 # Convert LF and CRLF Line Endings with PowerShell
 
-Convert supported UTF-8 files between LF and CRLF with a PowerShell utility that accepts a file or folder and the **existing** ending to convert **from**.
-
-> **In this guide:** [Get started](#guide-run-the-converter) · [Understand the details](#guide-understand-the-scope) · [Check the limits](#guide-verify-the-result)
+Normalize supported UTF-8 text files between LF and CRLF using [Convert-LineEndings.ps1](Convert-LineEndings.ps1). Pass a file or folder and the **existing** ending to convert **from**; begin with a disposable file and inspect the result.
 
 <a id="guide-run-the-converter"></a>
 
