@@ -29,7 +29,7 @@ permalink: /documentation/
 | Resource | Format | Level |
 |---|---|---|
 | [Data Science and Machine Learning Handbook with Python](docs/data-science/machine-learning-handbook.md) | Illustrated handbook | Beginner to advanced |
-| [Data Science and Machine Learning Handbook: Files, Datasets and Python App](examples/machine-learning/ml-handbook/README.md) | Datasets and desktop example | Beginner to advanced |
+| [Data Science and Machine Learning Handbook](examples/machine-learning/ml-handbook/README.md) | Datasets and desktop example | Beginner to advanced |
 
 ## Databases
 
@@ -63,37 +63,37 @@ permalink: /documentation/
 |---|---|---|
 | [Local AI Chat App with Ollama and Streamlit on Windows](docs/ai/local-ai-chat-lab.md) | Lab | Beginner |
 | [AI Coding Add-ons: Beginner’s Project Guide](docs/ai/coding-addons.md) | Guide | Beginner |
-| [AI Coding Add-ons Browser Guide](apps/ai-coding-addons/index.html) | Interactive reader | Beginner |
-| [AI Learning Atlas](apps/ai-learning-atlas/index.html) | Interactive reader | All levels |
-| [AI Learning Atlas: Offline Reader and Progress Guide](apps/ai-learning-atlas/README.md) | Application guide | All levels |
+| [AI Coding Add-ons Browser Guide](https://gcfernando.github.io/developer-guides-and-tools/apps/ai-coding-addons/index.html) | Interactive reader | Beginner |
+| [AI Learning Atlas](https://gcfernando.github.io/developer-guides-and-tools/apps/ai-learning-atlas/index.html) | Interactive reader | All levels |
+| [AI Learning Atlas — Study Paths and Progress Guide](apps/ai-learning-atlas/README.md) | Application guide | All levels |
 
 ## Linux
 
 | Resource | Format | Level |
 |---|---|---|
-| [Linux Command Reference](apps/linux-command-reference/index.html) | Interactive reference | All levels |
-| [Linux Command Reference: Offline Search and Security Examples](apps/linux-command-reference/README.md) | Application guide | All levels |
+| [Linux Command Reference](https://gcfernando.github.io/developer-guides-and-tools/apps/linux-command-reference/index.html) | Interactive reference | All levels |
+| [Linux Command Reference — Search 361 Commands Offline](apps/linux-command-reference/README.md) | Application guide | All levels |
 
 ## Utilities
 
 | Resource | Format | Level |
 |---|---|---|
-| [Windows Maintenance PowerShell Script: Behavior and Limitations](tools/powershell/system-maintenance/README.md) | Utility | Administrator |
-| [PowerShell Line-Ending Converter](tools/powershell/convert-line-endings/README.md) | Utility | Intermediate |
+| [Windows Maintenance with PowerShell — Script Guide](tools/powershell/system-maintenance/README.md) | Utility | Administrator |
+| [Convert LF and CRLF Line Endings with PowerShell](tools/powershell/convert-line-endings/README.md) | Utility | Intermediate |
 
 ## Examples
 
 | Resource | Format | Level |
 |---|---|---|
 | [Local Development Services with Podman Compose](examples/containers/local-services/README.md) | Development environment | Intermediate |
-| [WSL2 Configuration Example](examples/wsl/README.md) | Configuration example | Intermediate |
-| [AI Client Configuration Examples](examples/ai-clients/README.md) | Configuration examples | Intermediate |
+| [WSL2 Configuration — Memory, CPU and Swap Settings](examples/wsl/README.md) | Configuration example | Intermediate |
+| [AI Client Configuration Examples and Setup Notes](examples/ai-clients/README.md) | Configuration examples | Intermediate |
 
 ## Templates
 
 | Resource | Format | Level |
 |---|---|---|
-| [Reusable AI Instruction Templates](templates/ai-instructions/README.md) | Instruction templates | All levels |
+| [Reusable AI Instruction Templates for Developers](templates/ai-instructions/README.md) | Instruction templates | All levels |
 
 ## Media
 

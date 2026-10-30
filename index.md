@@ -15,8 +15,8 @@ Learn a subject, look up a command, or build something practical. This library b
 - **Learn data science and machine learning:** [Python ML handbook](docs/data-science/machine-learning-handbook.md) with [datasets and a desktop example](examples/machine-learning/ml-handbook/README.md).
 - **Work with data:** [SQL Server and MySQL](docs/databases/sql-server-and-mysql.md).
 - **Choose cloud services:** [Azure engineering](docs/cloud/azure/engineering-cheat-sheet.md) and [Azure resources](docs/cloud/azure/resource-reference.md).
-- **Find commands:** [Git](docs/version-control/git-cheat-sheet.md), [Docker](docs/containers/docker-cheat-sheet.md), [Podman](docs/containers/podman-cheat-sheet.md), [Linux reference](apps/linux-command-reference/index.html).
-- **Explore AI:** [AI Learning Atlas](apps/ai-learning-atlas/index.html), [coding add-ons](apps/ai-coding-addons/index.html), [local AI chat lab](docs/ai/local-ai-chat-lab.md).
+- **Find commands:** [Git](docs/version-control/git-cheat-sheet.md), [Docker](docs/containers/docker-cheat-sheet.md), [Podman](docs/containers/podman-cheat-sheet.md), [Linux reference](https://gcfernando.github.io/developer-guides-and-tools/apps/linux-command-reference/index.html).
+- **Explore AI:** [AI Learning Atlas](https://gcfernando.github.io/developer-guides-and-tools/apps/ai-learning-atlas/index.html), [coding add-ons](https://gcfernando.github.io/developer-guides-and-tools/apps/ai-coding-addons/index.html), [local AI chat lab](docs/ai/local-ai-chat-lab.md).
 - **Use a practical resource:** [utilities](tools/README.md), [configuration examples](examples/README.md), [instruction templates](templates/ai-instructions/README.md).
 
 New to the collection? [Choose a learning path](docs/learning-paths/index.md) or [read the getting-started guide](docs/getting-started.md).
