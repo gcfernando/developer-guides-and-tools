@@ -9,7 +9,7 @@ KnowledgeBase,developer-guides-and-cheatsheets,local_ai_learning_lab.md,73ec992b
 KnowledgeBase,developer-guides-and-cheatsheets,podman_cheatsheet.md,76c823308d5b454507a0275c1ba7fdf4bccd553385d0d2933bffc4e2ed156b9b,34378,docs/containers/podman-cheat-sheet.md,migrated-links-and-metadata
 KnowledgeBase,developer-guides-and-cheatsheets,python_dunder.md,9ac0a542896f60d6f951aa128760574dae4820d3c93b44dad2e2aabc729bc5f8,319882,docs/python/special-methods.md,migrated-links-and-metadata
 KnowledgeBase,developer-guides-and-cheatsheets,python_oop_guide.md,66dee9cdc8ed6f55218c2deb6d1eaf7866f5d332194099cb96ad499ce98bcfa7,340499,docs/python/oop.md,migrated-links-and-metadata
-KnowledgeBase,developer-guides-and-cheatsheets,README.md,89eafeae93be8ec0527e1381d6608965ea8046a79d419c34536a888f705b0dfa,8058,maintenance/migration/legacy/KnowledgeBase/README.md,archived-original
+KnowledgeBase,developer-guides-and-cheatsheets,README.md,89eafeae93be8ec0527e1381d6608965ea8046a79d419c34536a888f705b0dfa,8058,maintenance/migration/legacy/KnowledgeBase/README.original.md,archived-original
 KnowledgeBase,developer-guides-and-cheatsheets,sql_complete_guide.md,f7c86d76197aee6d82e3b4130190dc8ef46db89afa38bdac07f81a29845f22b0,923060,docs/databases/sql-server-and-mysql.md,migrated-links-and-metadata
 KnowledgeBase,developer-guides-and-cheatsheets,_config.yml,0ab32ebade88da265894439ff6c32436ae1c85c08dc310c44acb4cb55110ef9f,3993,maintenance/migration/legacy/KnowledgeBase/_config.yml,archived-original
 KnowledgeBase,developer-guides-and-cheatsheets,ai-cli/AGENTS.md,5dbaaaf2be2de7c810f21ab9765c0319ffed5fd549d12b53c185a6e0c1fe9941,9011,templates/ai-instructions/codex/AGENTS.md,migrated-links-and-metadata
@@ -24,7 +24,7 @@ KnowledgeBase,developer-guides-and-cheatsheets,ai-cli/configuration/settings.jso
 KnowledgeBase,developer-guides-and-cheatsheets,assets/css/documentation.css,211741933421a59bb246d4abc432c28560a7642ba7032df3fe8bffb2c15d4e70,8427,assets/css/documentation.css,copied
 KnowledgeBase,developer-guides-and-cheatsheets,assets/images/mark.svg,4aa9efa70cf0e195bf99f2a1ed80c27ab336649fdbc8d871626dcf1db07875f3,247,assets/images/mark.svg,copied
 Other_Projects,developer-tools-and-guides,documentation.md,ebc048852b4fa7a91331186c19b740acb6a89baae785fced0614edacdab3e9e4,3933,maintenance/migration/legacy/Other_Projects/documentation.md,archived-original
-Other_Projects,developer-tools-and-guides,README.md,18d5f1bfb21da3af7c358fc3ab554ecf20b0ac83e543bcb2985b7cb80908cd30,12440,maintenance/migration/legacy/Other_Projects/README.md,archived-original
+Other_Projects,developer-tools-and-guides,README.md,18d5f1bfb21da3af7c358fc3ab554ecf20b0ac83e543bcb2985b7cb80908cd30,12440,maintenance/migration/legacy/Other_Projects/README.original.md,archived-original
 Other_Projects,developer-tools-and-guides,_config.yml,59f1cc41c29fbee53a49b1aaf1522ab04faed41aa5e1b139441c0c7f88ea8d19,2443,maintenance/migration/legacy/Other_Projects/_config.yml,archived-original
 Other_Projects,developer-tools-and-guides,Files/.wslconfig,a529ec10699eb765575128f15bb5f9cd27e468f448e7b22fd6d1aae1c9df80ec,507,examples/wsl/.wslconfig.example,copied
 Other_Projects,developer-tools-and-guides,Files/AI-Learning-Atlas-Complete.html,46253c053d55c7376bff28dbbd8c5f217be1a3fd4adf8a3d86632d470fafa01f,731869,apps/ai-learning-atlas/index.html,migrated-links-and-metadata

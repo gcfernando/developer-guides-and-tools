@@ -10,7 +10,7 @@ description: Installation, configuration and verification guidance for 39 AI
 
 # AI Coding Add-ons — Beginner's Project Guide
 
-[Open the standalone HTML edition](../../apps/ai-coding-addons/index.html)
+[Open the standalone HTML edition](https://gcfernando.github.io/developer-guides-and-tools/apps/ai-coding-addons/index.html)
 
 **Updated:** 11 October 2026  
 **Works with:** Claude Code CLI · Codex CLI · GitHub Copilot CLI · Visual Studio Code (Copilot Chat)
@@ -47,6 +47,7 @@ description: Installation, configuration and verification guidance for 39 AI
 > **How to know it worked:** A successful AI answer alone does **not** prove a plugin ran. Look for an installed plugin in the tool's manager, a connected MCP server, a created report, a trace of tool use or real output from a project test.
 
 ## Find an add-on
+
 - [01. RTK / Rust Token Killer](#rtk-rust-token-killer)
 - [02. Headroom](#headroom)
 - [03. Claude-Mem](#claude-mem)
@@ -2433,7 +2434,7 @@ The earlier authoring pass rebuilt this guide from the original 39-add-on list a
 
 **RTK Windows note:** The publisher’s Windows/hook guidance has varied between documentation pages and releases. On native Windows, check whether your exact RTK version actually registers a working hook; some paths require WSL or provide only instruction-based fallback. Do not infer hook support from `rtk --version` alone. See [RTK supported agents](https://www.rtk-ai.app/docs/getting-started/supported-agents/).
 
-**Edition maintenance:** This Markdown guide is the source of truth. The [HTML edition](../../apps/ai-coding-addons/index.html) is generated from it, including the SonarQube registration clarification. Run npm run build:addons after changing this guide.
+**Edition maintenance:** This Markdown guide is the source of truth. The [HTML edition](https://gcfernando.github.io/developer-guides-and-tools/apps/ai-coding-addons/index.html) is generated from it, including the SonarQube registration clarification. Run npm run build:addons after changing this guide.
 
 **Testing limit:** The instructions were reviewed against publisher documentation, but they have **not** been executed on your computer, against company policy or across every OS/release.
 

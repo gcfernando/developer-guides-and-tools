@@ -1,12 +1,14 @@
 ---
-title: "Data Science and Machine Learning Handbook: Files, Datasets and Python App"
-description: "Set up the complete Python machine learning handbook with local datasets, diagrams and a Tkinter house-price example."
+title: "Data Science and Machine Learning Handbook"
+description: "Set up a Python data science and machine learning handbook with local datasets, 91 figures and a Tkinter house-price example. Review validation limits."
 permalink: /examples/machine-learning-handbook/
 ---
 
+[Developer guides and tools](../../../README.md)
+
 # Data Science and Machine Learning Handbook
 
-This self-contained learning bundle contains the complete supplied MLHandbook folder. Its 125 original files are preserved byte for byte, including the handbook, 91 figures, datasets, SQLite databases and the desktop example.
+Study data science and machine learning with a Python handbook, local datasets and a Tkinter house-price example. This bundle preserves the complete supplied MLHandbook folder: 125 original files, including 91 figures, CSV/JSONL data, SQLite databases and desktop application source.
 
 [Read the published handbook source](../../../docs/data-science/machine-learning-handbook.md) · [Original handbook](Data_Science_Handbook.md) · [Machine learning path](../../../docs/learning-paths/machine-learning.md)
 
@@ -15,6 +17,8 @@ This self-contained learning bundle contains the complete supplied MLHandbook fo
 The handbook starts with Python, NumPy, pandas, charts and statistics, then follows data cleaning, feature engineering, splitting, training, evaluation, deployment and monitoring. Later sections cover dataset exercises, machine learning categories and algorithms, a model-versioning desktop example, and database/JSON workflows.
 
 The recorded outputs and figures are supplied teaching material. They are not a new verification of every exercise or every library version. Some chapters download additional public datasets or use optional packages.
+
+<a id="guide-files"></a>
 
 ## Files
 
@@ -46,6 +50,8 @@ Launch notebooks with this bundle folder as the working directory; code that ope
 
 The notebook dependencies do not install Tk itself. A desktop Python installation with Tk support is needed for the graphical example. Linux distributions may provide Tk separately.
 
+<a id="guide-run-the-desktop-example"></a>
+
 ## Run the desktop example
 
 From this bundle folder, after installing the smaller dependency set:
@@ -59,6 +65,8 @@ python house_price_app.py
 Start by training on houses_2025.csv. Predict a price, update with houses_2026_new.csv, inspect history and choose an earlier version to roll back. Models and training-history data are written beneath the current working directory.
 
 The input range checks are in [model_service.py](tkinter_app/model_service.py). This is a teaching application for the supplied practice data. Only load model artifacts you trust; joblib model loading is intended for your own saved bundles.
+
+<a id="guide-validation"></a>
 
 ## Validation
 
