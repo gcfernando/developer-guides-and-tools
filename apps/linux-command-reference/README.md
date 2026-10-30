@@ -75,7 +75,7 @@ apps/linux-command-reference/
 
 ## Quick start
 
-[Open the published Linux command reference](index.html). For offline use, keep the downloaded HTML, CSS and scripts together:
+[Open the published Linux command reference](https://gcfernando.github.io/developer-guides-and-tools/apps/linux-command-reference/index.html). For offline use, keep the downloaded HTML, CSS and scripts together:
 
 1. Download or clone the [developer-guides-and-tools repository](https://github.com/gcfernando/developer-guides-and-tools).
 2. Open `apps/linux-command-reference/index.html` in any modern browser — no installation, build step, or web server is needed.
@@ -127,7 +127,7 @@ node --check apps/linux-command-reference/app.js
 node apps/linux-command-reference/generate-static.cjs --check
 ```
 
-The test verifies 361 entries, 16 categories, generated-table consistency, literal search and safe command markup. It does not execute or verify the Linux commands themselves. The [Validate library workflow](../../.github/workflows/validate.yml) runs these checks through `npm test` with Node.js 22.
+The test verifies 361 entries, 16 categories, generated-table consistency, literal search and safe command markup. It does not execute or verify the Linux commands themselves. The [Validate library workflow](https://github.com/gcfernando/developer-guides-and-tools/actions/workflows/validate.yml) runs these checks through `npm test` with Node.js 22.
 
 ## Troubleshooting and limitations
 

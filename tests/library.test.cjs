@@ -5,6 +5,7 @@ const path=require('node:path');
 const vm=require('node:vm');
 const {execFileSync}=require('node:child_process');
 const {parseHTML}=require('linkedom');
+const MarkdownIt=require('markdown-it');
 const {read,frontMatter,yaml,ROOT}=require('../scripts/lib.cjs');
 
 test('catalog generation is independent of filesystem enumeration order',()=>{
@@ -26,6 +27,21 @@ test('all catalog resources and stable page routes resolve',()=>{
       assert.equal(routes[r.path],data.permalink);
       assert.ok(data.title&&data.description,'Page metadata: '+r.path);
     }
+  }
+});
+
+test('catalog HTML tools open their published pages from GitHub and permalink guides',()=>{
+  const site=yaml.parse(read('_config.yml'));
+  const resources=yaml.parse(read('_data/resources.yml')).filter(r=>/\.html?$/i.test(r.path));
+  const {document}=parseHTML(new MarkdownIt().render(frontMatter(read('documentation.md')).body));
+  const links=[...document.querySelectorAll('a[href]')].map(a=>a.getAttribute('href'));
+  for(const resource of resources){
+    const expected=new URL(site.baseurl+'/'+resource.path,site.url).href;
+    assert.ok(links.includes(expected),'Missing published HTML destination: '+resource.path);
+    for(const context of ['https://github.com/gcfernando/developer-guides-and-tools/blob/main/documentation.md',site.url+site.baseurl+'/documentation/']){
+      assert.equal(new URL(expected,context).href,expected);
+    }
+    assert.ok(!links.includes(resource.path),'HTML resource still opens as a repository source file');
   }
 });
 

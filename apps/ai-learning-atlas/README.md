@@ -11,7 +11,7 @@ description: Use role paths, search AI topics, record progress and export a back
 
 # AI Learning Atlas — Study Paths and Progress Guide
 
-Choose an AI study path, search its topics and track your own progress in the [AI Learning Atlas](index.html). The standalone HTML handbook contains 51 topic groups, 1,607 subtopics and 14 suggested professional paths, with lab suggestions and progress backups.
+Choose an AI study path, search its topics and track your own progress in the [AI Learning Atlas](https://gcfernando.github.io/developer-guides-and-tools/apps/ai-learning-atlas/index.html). The standalone HTML handbook contains 51 topic groups, 1,607 subtopics and 14 suggested professional paths, with lab suggestions and progress backups.
 
 <a id="guide-prerequisites"></a>
 
@@ -23,7 +23,7 @@ Open the hosted handbook through the link above, or download the HTML file for o
 
 ## Quick start
 
-1. Open the [published AI Learning Atlas](index.html) or your downloaded `AI-Learning-Atlas-Complete.html` in a browser.
+1. Open the [published AI Learning Atlas](https://gcfernando.github.io/developer-guides-and-tools/apps/ai-learning-atlas/index.html) or your downloaded `AI-Learning-Atlas-Complete.html` in a browser.
 2. Choose the profession closest to your work. Its dashboard shows Essential and Recommended topics and the next unchecked topic.
 3. Open that topic, check its prerequisites and read the suggested lab and completion evidence. A role path can assume knowledge from topics outside its selected list.
 4. Complete the exercise in a separate practice project. The handbook supplies study directions, not runnable implementations for every lab.

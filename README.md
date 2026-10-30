@@ -60,7 +60,7 @@ Keep the courses' exercise order, prerequisites and code context. SQL Server and
 | [Podman cheat sheet](docs/containers/podman-cheat-sheet.md) | Look up rootless containers, pods, machines and Quadlet. |
 | [Linux command reference](apps/linux-command-reference/README.md) | Search commands and usage examples in a browser; the guide explains offline use. |
 | [AI Learning Atlas](apps/ai-learning-atlas/README.md) | Explore topics and role paths, then record and back up your own progress. |
-| [AI coding add-ons](docs/ai/coding-addons.md) | Read installation and configuration notes, or use the [filterable browser reader](apps/ai-coding-addons/index.html). |
+| [AI coding add-ons](docs/ai/coding-addons.md) | Read installation and configuration notes, or use the [filterable browser reader](https://gcfernando.github.io/developer-guides-and-tools/apps/ai-coding-addons/index.html). |
 
 For offline Linux search, keep the complete application folder together. The Atlas and add-ons readers are standalone HTML files; external documentation links still need internet access. Atlas completion is self-reported: export a JSON backup before switching browsers, profiles, hosting locations or local-file contexts.
 

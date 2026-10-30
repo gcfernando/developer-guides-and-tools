@@ -63,15 +63,15 @@ permalink: /documentation/
 |---|---|---|
 | [Local AI Chat App with Ollama and Streamlit on Windows](docs/ai/local-ai-chat-lab.md) | Lab | Beginner |
 | [AI Coding Add-ons: Beginner’s Project Guide](docs/ai/coding-addons.md) | Guide | Beginner |
-| [AI Coding Add-ons Browser Guide](apps/ai-coding-addons/index.html) | Interactive reader | Beginner |
-| [AI Learning Atlas](apps/ai-learning-atlas/index.html) | Interactive reader | All levels |
+| [AI Coding Add-ons Browser Guide](https://gcfernando.github.io/developer-guides-and-tools/apps/ai-coding-addons/index.html) | Interactive reader | Beginner |
+| [AI Learning Atlas](https://gcfernando.github.io/developer-guides-and-tools/apps/ai-learning-atlas/index.html) | Interactive reader | All levels |
 | [AI Learning Atlas — Study Paths and Progress Guide](apps/ai-learning-atlas/README.md) | Application guide | All levels |
 
 ## Linux
 
 | Resource | Format | Level |
 |---|---|---|
-| [Linux Command Reference](apps/linux-command-reference/index.html) | Interactive reference | All levels |
+| [Linux Command Reference](https://gcfernando.github.io/developer-guides-and-tools/apps/linux-command-reference/index.html) | Interactive reference | All levels |
 | [Linux Command Reference — Search 361 Commands Offline](apps/linux-command-reference/README.md) | Application guide | All levels |
 
 ## Utilities

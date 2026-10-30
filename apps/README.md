@@ -18,9 +18,9 @@ Use these browser tools to find Linux commands, plan AI study or compare coding 
 
 | Your goal | Browser tool | Companion guide |
 | --- | --- | --- |
-| Find Linux commands and examples | [Linux command reference](linux-command-reference/index.html) | [Search, offline use and maintenance](linux-command-reference/README.md) |
-| Follow an AI study path and track progress | [AI Learning Atlas](ai-learning-atlas/index.html) | [Learning paths and progress backups](ai-learning-atlas/README.md) |
-| Understand AI coding add-ons | [AI coding add-ons reader](ai-coding-addons/index.html) | [Source guide and setup notes](../docs/ai/coding-addons.md) |
+| Find Linux commands and examples | [Linux command reference](https://gcfernando.github.io/developer-guides-and-tools/apps/linux-command-reference/index.html) | [Search, offline use and maintenance](linux-command-reference/README.md) |
+| Follow an AI study path and track progress | [AI Learning Atlas](https://gcfernando.github.io/developer-guides-and-tools/apps/ai-learning-atlas/index.html) | [Learning paths and progress backups](ai-learning-atlas/README.md) |
+| Understand AI coding add-ons | [AI coding add-ons reader](https://gcfernando.github.io/developer-guides-and-tools/apps/ai-coding-addons/index.html) | [Source guide and setup notes](../docs/ai/coding-addons.md) |
 
 <a id="guide-read-offline"></a>
 
