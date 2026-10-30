@@ -1,14 +1,17 @@
 ---
 layout: default
 permalink: /apps/linux-command-reference/guide/
-title: "Linux Command Reference: Offline Search and Security Examples"
-description: Use and maintain a searchable reference of 361 Linux commands
-  across 16 categories.
+title: "Linux Command Reference — Search 361 Commands Offline"
+description: Search 361 Linux commands across 16 categories, read examples and use the reference offline. Review tool requirements and authorized-use boundaries.
 ---
 
-# Linux Command Reference for Cybersecurity — 361 Commands, Searchable and Offline 🐧🔐
+[Developer guides and tools](../../README.md) · **Linux and security**
 
-**A searchable, offline reference for 361 Linux commands** used in system administration, penetration testing, CTFs and digital forensics. Browse commands by category or search their descriptions and usage examples in any browser.
+<a id="linux-command-reference-for-cybersecurity--361-commands-searchable-and-offline-"></a>
+
+# Linux Command Reference — Search 361 Commands Offline
+
+Find Linux commands by category, description or usage example in a browser. This offline reference contains 361 catalog entries for system administration, penetration testing, capture-the-flag exercises and digital forensics; execution requires the relevant Linux tools and authorization.
 
 ---
 
@@ -24,13 +27,17 @@ description: Use and maintain a searchable reference of 361 Linux commands
 <a id="-related"></a>
 <a id="documentation-links"></a>
 
-## 📦 Prerequisites
+<a id="guide-prerequisites"></a>
+
+## Prerequisites
 
 A modern browser is enough for reading. JavaScript enables search and filters. Node.js is required only when maintaining generated HTML or running the checks. To execute catalog examples, use a Linux environment with the relevant packages and permissions.
 
 ---
 
-## ✨ Features and categories
+<a id="guide-features-and-categories"></a>
+
+## Features and categories
 
 | Category | Commands | Focus |
 |---|---|---|
@@ -56,7 +63,7 @@ Counts are taken from `data.js`. They count catalog entries, including repeated 
 
 ---
 
-## 🏗️ Project structure
+## Project structure
 
 ```text
 apps/linux-command-reference/
@@ -66,9 +73,9 @@ apps/linux-command-reference/
 └── app.js         ← search, filter, category pills
 ```
 
-## 🚀 Quick start
+## Quick start
 
-[Open the published Linux command reference](index.html). For offline use, keep the downloaded HTML, CSS and scripts together:
+[Open the published Linux command reference](https://gcfernando.github.io/developer-guides-and-tools/apps/linux-command-reference/index.html). For offline use, keep the downloaded HTML, CSS and scripts together:
 
 1. Download or clone the [developer-guides-and-tools repository](https://github.com/gcfernando/developer-guides-and-tools).
 2. Open `apps/linux-command-reference/index.html` in any modern browser — no installation, build step, or web server is needed.
@@ -80,18 +87,18 @@ After editing `data.js`, run `node generate-static.cjs` in this folder and commi
 
 ---
 
-## 💡 Browser behavior
+## Browser behavior
 
 - 🔎 **Live search** — filter by command name, category, or usage
 - 🏷️ **Category pills** — click to filter by topic instantly
 - 💻 **Usage examples** — each command includes an example to read and adapt
-- 🌑 **Hacker terminal theme** — scanlines, phosphor green, grid
+- **Terminal theme** — scanlines, phosphor green, grid
 - 📴 **Offline** — no internet required after download (the page can optionally load Google Fonts when online)
-- 🗂️ **Clean code** — HTML, CSS, and JS fully separated
+- **Separate source files** — HTML, CSS, and JS fully separated
 
 ---
 
-## 💡 Read-only practice examples
+## Read-only practice examples
 
 These examples inspect your current Linux environment:
 
@@ -108,7 +115,9 @@ ls -la
 
 The catalog also includes commands that alter files, permissions, networking or services. Read the surrounding context and work only in an environment you are authorized to administer or test.
 
-## 🧪 Development and verification
+<a id="guide-development-and-verification"></a>
+
+## Development and verification
 
 From the repository root:
 
@@ -118,9 +127,9 @@ node --check apps/linux-command-reference/app.js
 node apps/linux-command-reference/generate-static.cjs --check
 ```
 
-The test verifies 361 entries, 16 categories, generated-table consistency, literal search and safe command markup. It does not execute or verify the Linux commands themselves. The workflow in `.github/workflows/seo.yml` runs the reference test and JavaScript syntax check with Node.js 22.
+The test verifies 361 entries, 16 categories, generated-table consistency, literal search and safe command markup. It does not execute or verify the Linux commands themselves. The [Validate library workflow](https://github.com/gcfernando/developer-guides-and-tools/actions/workflows/validate.yml) runs these checks through `npm test` with Node.js 22.
 
-## 🛠️ Troubleshooting and limitations
+## Troubleshooting and limitations
 
 ### Reading the existing command descriptions
 
@@ -144,7 +153,7 @@ Search is a case-insensitive literal substring match across all four fields. It 
 
 ---
 
-## ⚠️ Disclaimer
+## Disclaimer
 
 > This reference is for **educational purposes only**.
 > Always practice in a **legal environment** you own or have explicit permission to test.
@@ -152,7 +161,7 @@ Search is a case-insensitive literal substring match across all four fields. It 
 
 ---
 
-## 👥 Intended audience
+## Intended audience
 
 - Beginners learning Linux for cybersecurity
 - CTF players who want a fast offline reference
@@ -162,10 +171,23 @@ Search is a case-insensitive literal substring match across all four fields. It 
 
 ---
 
-## 🔗 Related documentation
+## Related documentation
 
 - [Developer tools and guides — repository overview](../../README.md)
 - [Python port scanner](https://github.com/gcfernando/python-projects-and-examples/blob/main/Port%20Scanner/readme.md)
 - [Git, Docker, and Podman command cheat sheets](https://github.com/gcfernando/developer-guides-and-tools)
 
 ---
+
+<!-- Preserve links to earlier README sections. -->
+<a id="-browser-behavior"></a>
+<a id="-development-and-verification"></a>
+<a id="-disclaimer"></a>
+<a id="-features-and-categories"></a>
+<a id="-intended-audience"></a>
+<a id="-prerequisites"></a>
+<a id="-project-structure"></a>
+<a id="-quick-start"></a>
+<a id="-read-only-practice-examples"></a>
+<a id="-related-documentation"></a>
+<a id="-troubleshooting-and-limitations"></a>

@@ -3,6 +3,7 @@ const path=require('node:path');
 const {ROOT,walk,relative,read,frontMatter,output,yaml}=require('./lib.cjs');
 const check=process.argv.includes('--check');
 const resources=yaml.parse(read('_data/resources.yml'));
+const site=yaml.parse(read('_config.yml'));
 const routes={'documentation.md':'/documentation/'};
 for(const file of walk()) {
   const name=relative(file);
@@ -18,7 +19,8 @@ for(const topic of [...new Set(resources.map(r=>r.topic))]) {
     const data=r.path.endsWith('.md')?frontMatter(read(r.path)).data:{};
     const title=r.title||data.title;
     if(!title)throw new Error('No title for '+r.path);
-    result+='| ['+title.replace(/\|/g,'\\|')+']('+r.path+') | '+r.type+' | '+r.level+' |\n';
+    const destination=/\.html?$/i.test(r.path)?new URL(site.baseurl.replace(/\/$/,'')+'/'+r.path,site.url).href:r.path;
+    result+='| ['+title.replace(/\|/g,'\\|')+']('+destination+') | '+r.type+' | '+r.level+' |\n';
   }
   result+='\n';
 }
