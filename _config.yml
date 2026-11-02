@@ -41,6 +41,7 @@ exclude:
   - LICENSE
   - apps/linux-command-reference/generate-static.cjs
   - apps/linux-command-reference/seo.test.cjs
+  - apps/ai-learning-atlas/source
 defaults:
   - scope:
       path: ""
