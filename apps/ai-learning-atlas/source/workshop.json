@@ -1,0 +1,187 @@
+{
+  "title": "Build a tested local FAQ assistant",
+  "requirements": "Python 3.10 or newer, a terminal and a text editor. No packages, model download, cloud account, GPU or API key. Installation may require internet; all supplied exercises run offline afterward. Commands use python; use python3 on systems where that is the installed command. Work in a new practice folder, never a production project.",
+  "lessons": [
+    {
+      "id": "setup",
+      "title": "Prepare a folder and trace a program",
+      "topic": 2,
+      "time": "20–40 minutes plus Python installation if needed",
+      "objective": "Run a saved Python file from the correct directory and explain input, processing and output.",
+      "concept": "A terminal runs commands in a working directory. A file path identifies a file. Python executes the statements in a .py file; text inside quotes is data.",
+      "actions": [
+        "Check python --version. If unavailable, install Python from python.org using the official instructions for your OS, reopen the terminal, and check again.",
+        "Create a folder named atlas-practice with your file manager. Open a terminal there (or use cd followed by its full path). Keep every workshop file in this folder.",
+        "Save hello.py containing the three lines below. Run python hello.py. Change the name, predict the output, and run again.",
+        "Optional Git extension: after installing Git, run git init, git add hello.py, and git commit -m \"First program\". Configure your preferred Git identity if Git requests it; Git is not needed to continue the core workshop."
+      ],
+      "code": "name = 'Learner'\nmessage = 'Hello, ' + name\nprint(message)",
+      "expected": "Hello, Learner before the edit. Your changed name should appear after the edit.",
+      "verify": "Close and reopen the terminal, return to atlas-practice, and reproduce the output. Explain which line supplies input, which transforms it and which displays it.",
+      "troubleshoot": "If Python cannot open the file, check the working directory and ensure the editor did not save hello.py.txt. If python is unavailable, try python3 or py -3 and use that command consistently.",
+      "challenge": "Add a second variable for a topic and print a sentence containing both variables. Predict what happens if you remove one closing quote before trying it.",
+      "recall": "Without copying, explain a command, a directory and a file path.",
+      "pass": "Two reproducible runs with different input, plus an explanation of a syntax error and its correction."
+    },
+    {
+      "id": "function",
+      "title": "Separate a decision from its interface",
+      "topic": 3,
+      "time": "30–50 minutes",
+      "objective": "Write and test a function with a defined input/output contract.",
+      "concept": "A function receives input and returns a value. Returning a value lets a command-line client, a test and an HTTP service reuse the same logic. A deterministic rule produces the same result for the same input.",
+      "actions": [
+        "Save the example as rules.py. Run python rules.py.",
+        "Explain strip(), casefold(), return and the equality comparison using the example.",
+        "Add assertions for HOURS, an unknown question and an empty string. Run the file again.",
+        "Change one expected result deliberately, observe the assertion failure, then correct it."
+      ],
+      "code": "def reply(question):\n    if question.strip().casefold() == 'hours':\n        return 'Open 09:00–17:00.'\n    return 'Not found.'\n\nassert reply(' hours ') == 'Open 09:00–17:00.'\nassert reply('weather') == 'Not found.'\nprint('Rule checks passed')",
+      "expected": "Rule checks passed when all assertions are correct; AssertionError when your deliberately incorrect expectation is used.",
+      "verify": "Identify the recognized input, normalization, answer and fallback. Show that a failed expectation produces a visible error.",
+      "troubleshoot": "Indent the function body consistently with four spaces. A missing colon or mixed indentation is a syntax issue; a wrong returned answer is a behavior issue.",
+      "challenge": "Support location as a second question while keeping the original assertions passing. Decide how an empty question should be handled.",
+      "recall": "Explain why return is useful even when nothing is printed.",
+      "pass": "Original and new question checks pass, unknown input has an explicit fallback, and the learner explains the rule without reading a prepared answer."
+    },
+    {
+      "id": "data",
+      "title": "Inspect and test a tiny dataset",
+      "topic": 5,
+      "time": "35–60 minutes",
+      "objective": "Measure missing fields and exact duplicate records before choosing a cleaning policy.",
+      "concept": "Missing data is not zero. An exact duplicate row differs from a repeated identifier containing conflicting values. Profiling measures the issue; cleaning requires a stated policy.",
+      "actions": [
+        "Copy customers.csv, inspect_data.py and test_data.py from the reference files below into atlas-practice.",
+        "Run python inspect_data.py and compare each count with the four CSV records manually.",
+        "Run python -m unittest test_data -v. Keep the original fixture unchanged while experimenting in a second CSV file.",
+        "Write a cleaning policy: retain one copy of an exact duplicate, preserve missing ages as unknown, and reject conflicting records with the same customer_id for manual review. Explain why a missing age must not become zero automatically."
+      ],
+      "files": [
+        "customers.csv",
+        "inspect_data.py",
+        "test_data.py"
+      ],
+      "expected": "4 rows; 3 columns; missing customer_id=0, age=2, city=1; 1 excess exact duplicate row. The two supplied data tests pass.",
+      "verify": "Manually recount after editing your separate fixture. Distinguish the raw count from any cleaned count and record which file each result describes.",
+      "troubleshoot": "Use UTF-8 and a comma-separated file. If you see a single column, inspect the delimiter. Never overwrite the raw fixture to hide a failed assertion.",
+      "challenge": "Implement the cleaning policy in a new function. Add a fifth record with customer_id=2 and a different city; prove that it is flagged instead of silently dropped.",
+      "recall": "Revisit Lesson 2: which parts should be functions so they can be tested without printing?",
+      "pass": "Correct raw counts, a justified policy, and an independent conflicting-record example with a test. The profiler alone does not complete the cleaning challenge.",
+      "hints": [
+        "Start with a list of row dictionaries. Keep a dictionary whose key is customer_id and value is a list of distinct versions.",
+        "Skip an exact duplicate dictionary. If an ID has two different dictionaries, quarantine every version instead of silently keeping the first.",
+        "Compare a missing-age record with an identical copy, then a record with the same ID and a different city. Preserve the empty age."
+      ],
+      "solutionFiles": [
+        "clean_data.py",
+        "test_clean_data.py"
+      ]
+    },
+    {
+      "id": "baseline",
+      "title": "Decide whether a model is needed",
+      "topic": 16,
+      "time": "25–45 minutes",
+      "objective": "Compare exact rules with a proposed model using an explicit quality and cost decision.",
+      "concept": "This workshop's assistant uses exact rules, not machine learning or an LLM. Models may handle language variation but introduce uncertainty, latency, cost and data-handling questions. A plausible answer can still be unsupported.",
+      "actions": [
+        "Create evaluation.csv with columns question,expected_answer,split. Example: hours,Open 09:00–17:00.,development. Write at least six development cases and have a peer prepare four held-out cases when possible. Otherwise reserve four cases without using them to edit the rule. Cover recognized, unknown, blank, case/space variation and paraphrases.",
+        "Run the rules from Lesson 2 on development cases. Record correct answers, explicit abstentions and unsupported answers separately.",
+        "Write a design decision comparing rules, keyword retrieval and an optional hosted model. State when the rules are sufficient and what evidence would justify a model.",
+        "For an offline model comparison, label a few saved hypothetical outputs as correct, unsupported or uncertain. Label them simulated; do not report measured model cost or performance without an actual run."
+      ],
+      "expected": "A small evaluation table and a decision that distinguishes measured rule behavior from proposed or simulated model behavior.",
+      "verify": "Keep the held-out cases unused while editing the rule. Report the numerator and denominator of every rate; a tiny fixture is not a reliable estimate of deployment quality.",
+      "troubleshoot": "If a model sounds convincing, check whether the answer is supported by an allowed source. A source ID alone does not establish that the content supports the claim.",
+      "challenge": "Add the paraphrase 'When do you open?' to development cases. Improve the rule using development cases only. Keep held-out cases unused until Lesson 7; once inspected, treat them as consumed and create new held-out cases for another independent evaluation.",
+      "recall": "Explain why duplicate data and tuning on evaluation examples can make apparent quality misleading.",
+      "pass": "A justified baseline decision, separate development/held-out cases, and an honest account of measured versus simulated evidence."
+    },
+    {
+      "id": "endpoint",
+      "title": "Expose a local request contract",
+      "topic": 26,
+      "time": "45–75 minutes",
+      "objective": "Send JSON to a local service and handle rejected requests and service failure.",
+      "concept": "HTTP carries a request and response. JSON is a data format. A service must validate the request; syntactically valid JSON does not establish valid business input. Keep reusable logic separate from transport.",
+      "actions": [
+        "Copy assistant.py, client.py and test_assistant.py from the reference files below. Read answer() before examining the HTTP handler.",
+        "In terminal A, run python assistant.py. In terminal B, from atlas-practice, run python client.py.",
+        "Inspect the /ask route, Content-Type, response status and the response fields answer and source. Change the client's question to project and explain the guest fallback.",
+        "Stop terminal A with Ctrl+C and rerun the client. It must show service unavailability rather than an invented response. Restart the service if you want another manual request."
+      ],
+      "files": [
+        "assistant.py",
+        "client.py",
+        "test_assistant.py"
+      ],
+      "expected": "The hours request returns source public-hours. The guest project request returns no source. With the server stopped, the client prints the service-unavailable recovery message.",
+      "verify": "Run python -m unittest test_assistant.EndpointTests -v. The tests start their own temporary local server; the manual server need not be running.",
+      "troubleshoot": "If port 8765 is busy, stop your previous workshop process. If you choose another port, change both the server and client. A 400 response is a rejected input; a connection error means there was no usable service response.",
+      "challenge": "Add a request example containing a JSON list rather than an object and confirm a 400 response. Explain why the client must not retry every 400 indefinitely.",
+      "recall": "Which Lesson 2 function boundary lets you test answers without starting a server?",
+      "pass": "Valid request, invalid request and unavailable-service behavior are reproduced and explained."
+    },
+    {
+      "id": "permissions",
+      "title": "Keep identity and source permissions separate",
+      "topic": 34,
+      "time": "40–65 minutes",
+      "objective": "Demonstrate user isolation and explain why untrusted input cannot grant access.",
+      "concept": "Authorization decides which records an identity can access. The toy HTTP service fixes the identity to guest; it has no login system. The internal answer() user argument represents an already trusted caller. A real service must derive identity from verified authentication, not a JSON user field.",
+      "actions": [
+        "Run python -m unittest test_assistant.AnswerTests -v and inspect the permission and deletion tests.",
+        "Trace permitted records for alice, bob and guest. Explain why filtering happens before selecting an answer.",
+        "Inspect test_request_cannot_choose_identity: a request claiming user=alice must still act as guest.",
+        "Draw or describe the boundaries between request data, trusted identity, stored source content and returned output. Use synthetic records only."
+      ],
+      "expected": "Alice and Bob receive their own project records; guest receives neither. Deleted records are unavailable. Instruction-like text does not grant permission.",
+      "verify": "Show the record IDs permitted for each identity. Explain why the exact-match fixture's instruction test does not establish that an LLM application is resistant to prompt injection.",
+      "troubleshoot": "If a request body selects its own identity, remove that behavior. If you add real authentication later, validate identity at the boundary and test failures before accepting it.",
+      "challenge": "Add a second synthetic Alice-only record and a cross-user test. Then remove that record and prove the old answer cannot be retrieved.",
+      "recall": "Revisit the baseline decision: what new trust boundary appears if a third-party model receives context?",
+      "pass": "Positive and negative permission tests, deletion behavior, and an explanation of the trusted-caller assumption."
+    },
+    {
+      "id": "evaluation",
+      "title": "Review evidence and catch a regression",
+      "topic": 33,
+      "time": "35–60 minutes",
+      "objective": "Distinguish regression checks from evidence of general quality and demonstrate a failed check.",
+      "concept": "A test checks a property under specified conditions. Passing fixtures do not establish broad reliability, and self-reported completion is not independent verification.",
+      "actions": [
+        "Run python -m unittest discover -v from atlas-practice. Save your actual output with Python version and the date.",
+        "Copy the project to a separate experiment folder. Deliberately change the public hours answer there, run the tests, and identify the failing expectation. Restore the correct behavior and rerun.",
+        "Review the held-out questions from Lesson 4 once. Record answer quality, abstention and unsupported claims without changing the system based on those same cases and claiming an independent score.",
+        "Write an evaluation note with observed failures, untested conditions, sample size and the limitations of a deterministic fixture."
+      ],
+      "expected": "All supplied tests pass on the reference files. If you completed the optional cleaning reference extension, include its tests too. Your deliberate regression fails a relevant test; restoring it returns the suite to passing.",
+      "verify": "Explain what each test family establishes and one failure it cannot detect. Keep both failed and passing transcripts.",
+      "troubleshoot": "If no tests are found, check that filenames begin test_ and the terminal is in atlas-practice. If a networking test fails because local sockets are restricted, record that limitation and run the pure function and data tests separately.",
+      "challenge": "Add an oversized question and a malformed JSON request test without copying a solution. Explain the expected HTTP behavior before running it.",
+      "recall": "Explain the difference between a reproducible regression suite and an estimate of real user quality.",
+      "pass": "A demonstrated regression, recovery, an independently added negative case and an evaluation note that does not overstate the evidence."
+    },
+    {
+      "id": "capstone",
+      "title": "Adapt, explain and hand over the project",
+      "topic": 26,
+      "time": "60–100 minutes",
+      "objective": "Independently change a small service and give someone enough evidence to reproduce it.",
+      "concept": "Working knowledge includes adapting the system, diagnosing a failure and explaining limitations. A local fixture exercises engineering skills but does not demonstrate LLM training, production authentication or operational readiness.",
+      "actions": [
+        "Without opening the sample extension below, add a public location record and tests for normalized input, an unknown question and source attribution. Preserve all existing behavior.",
+        "Write README.md with Python version, exact startup/test commands, three request scenarios, the identity assumption, data policy and known limitations.",
+        "Recreate the project in a fresh folder using your handover instructions and run every test.",
+        "Record a short review answering: why these rules, why these permission boundaries, what fails without the server, and what would change before using real user data or an actual model?"
+      ],
+      "expected": "A repeatable local project, all original tests plus your new tests, and evidence of one diagnosed failure and its correction.",
+      "verify": "Use the assessment rubric below. Ask a peer or tutor to select an unfamiliar input and a small change request. If no reviewer is available, label the assessment self-reviewed.",
+      "troubleshoot": "If fresh-folder setup fails, correct the handover instructions and rerun from the beginning. Do not copy hidden environment dependencies into an unexplained setup.",
+      "challenge": "Add a second permitted public question with an answer that differs only in punctuation. Keep response semantics separate from formatting and explain your test choice.",
+      "recall": "After two days, explain the architecture without the code. After one week, repeat one permission test and one change request before reviewing your notes.",
+      "pass": "A clean-folder run, independently added behavior and tests, an explained failure, accurate limitations, and all four rubric dimensions passing."
+    }
+  ]
+}

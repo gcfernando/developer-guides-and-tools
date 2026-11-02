@@ -1,0 +1,16 @@
+/* Extend the existing design tokens and components; no external assets. */
+.study-unit{margin:12px 0!important}.study-unit>summary{line-height:1.5}
+.lesson pre,.study-unit pre{background:#121e38;color:#ecf5ff;border-radius:14px;padding:19px;white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.6;font-size:.83rem;max-height:520px;overflow:auto}
+.lesson details{border:1px solid var(--line);border-radius:12px;padding:12px;margin:12px 0;background:var(--surface-soft)}
+.lesson summary{cursor:pointer;font-weight:750}.lesson h4{margin-bottom:8px}
+#study-note{display:block;width:100%;margin-top:10px;padding:14px;border:1px solid var(--line);border-radius:12px;background:var(--surface-soft);color:var(--ink);font:inherit;resize:vertical}
+textarea:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+.glossary{margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.glossary dt{font-weight:800}.glossary dd{margin:3px 0;color:var(--ink-muted)}
+caption{text-align:left;padding:12px;font-weight:750;background:var(--surface-soft);color:var(--ink)}
+[data-theme="dark"] .action-blue{background:#2059c8;color:#fff}
+[hidden]{display:none!important}
+@media(max-width:620px){.glossary{grid-template-columns:1fr}.lesson pre{padding:12px}.lesson li{overflow-wrap:anywhere}}
+@media print{.lesson pre{max-height:none;overflow:visible}.lesson[hidden]{display:block!important}.lesson details>*:not(summary){display:block!important}#study-note{min-height:200px}.lesson{break-inside:auto}}
+
+#lesson-focus{display:block;width:100%;max-width:100%;min-width:0;margin:8px 0;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:10px;padding:10px 12px;font:inherit}
+#entry-check .action-blue{display:inline-flex;max-width:100%;white-space:normal;overflow-wrap:anywhere;text-align:center}

@@ -1,0 +1,22 @@
+[
+  {"id":"api","term":"API — application programming interface","definition":"A defined way for software components to exchange requests and responses."},
+  {"id":"llm","term":"LLM — large language model","definition":"A learned language model that generates or scores token sequences. Fluent output can still be incorrect."},
+  {"id":"ml","term":"ML — machine learning","definition":"Methods that learn patterns from data rather than requiring every decision to be written as a rule."},
+  {"id":"rag","term":"RAG — retrieval-augmented generation","definition":"Retrieve relevant source material and provide it as context for generation. Retrieval and generation need separate evaluation."},
+  {"id":"json","term":"JSON — JavaScript Object Notation","definition":"A text format for structured data. Valid syntax does not establish correct values or authorization."},
+  {"id":"http","term":"HTTP — Hypertext Transfer Protocol","definition":"A request/response protocol used by web clients and services."},
+  {"id":"baseline","term":"Baseline","definition":"A simple comparison system used to judge whether added complexity improves the intended outcome."},
+  {"id":"held-out","term":"Held-out evaluation","definition":"Evaluation on examples kept separate from development and tuning. Repeatedly adapting to them weakens their independence."},
+  {"id":"leakage","term":"Data leakage","definition":"Information unavailable at real prediction time enters development or evaluation and can inflate apparent performance."},
+  {"id":"embedding","term":"Embedding","definition":"A numeric representation used to compare or process items. Similarity is task-dependent and does not establish truth."},
+  {"id":"authentication","term":"Authentication","definition":"Establishing an identity using a trusted verification mechanism."},
+  {"id":"authorization","term":"Authorization","definition":"Deciding which resources or actions an established identity may access."},
+  {"id":"acl","term":"ACL — access control list","definition":"Rules specifying which identities or groups may access a resource."},
+  {"id":"slo","term":"SLO — service level objective","definition":"A measurable target for a service property such as availability or latency, with a defined observation window."},
+  {"id":"latency","term":"Latency","definition":"Elapsed time for a defined operation. State whether you mean time to first output, full response time or another measure."},
+  {"id":"drift","term":"Drift","definition":"A change in data or relationships over time. A drift signal alone does not prove degraded task quality."},
+  {"id":"regression","term":"Regression test","definition":"A repeatable check that detects specified behavior changing unexpectedly. Its coverage is limited to the properties checked."},
+  {"id":"prompt-injection","term":"Prompt injection","definition":"Untrusted content attempts to redirect a model or agent. Protect permissions and action boundaries independently of prompt wording."},
+  {"id":"fixture","term":"Fixture","definition":"Controlled example data or setup used for a repeatable exercise or test."},
+  {"id":"idempotent","term":"Idempotent","definition":"Repeating an operation has the same intended effect as performing it once, such as ingesting a record without creating duplicates."}
+]

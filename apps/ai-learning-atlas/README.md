@@ -2,7 +2,7 @@
 layout: default
 permalink: /apps/ai-learning-atlas/guide/
 title: "AI Learning Atlas — Study Paths and Progress Guide"
-description: Use role paths, search AI topics, record progress and export a backup in the standalone AI Learning Atlas.
+description: Follow dependency-ordered AI study paths, complete a supported local beginner workshop, and record learning evidence.
 ---
 
 [Developer guides and tools](../../README.md) · **Interactive learning**
@@ -11,64 +11,106 @@ description: Use role paths, search AI topics, record progress and export a back
 
 # AI Learning Atlas — Study Paths and Progress Guide
 
-Choose an AI study path, search its topics and track your own progress in the [AI Learning Atlas](https://gcfernando.github.io/developer-guides-and-tools/apps/ai-learning-atlas/index.html). The standalone HTML handbook contains 51 topic groups, 1,607 subtopics and 14 suggested professional paths, with lab suggestions and progress backups.
+Open the [AI Learning Atlas](https://gcfernando.github.io/developer-guides-and-tools/apps/ai-learning-atlas/index.html) to choose a professional learning path, complete a supported beginner workshop, search 51 topic groups and 1,607 original subtopics, and record evidence. All sections use the existing reader design, including dark mode and responsive navigation.
 
 <a id="guide-prerequisites"></a>
 
 ## Prerequisites
 
-Open the hosted handbook through the link above, or download the HTML file for offline use in a modern browser. No web server, Python environment, account or API key is needed to read it. JavaScript enables search, role selection, copying and progress controls. External reference links require internet access; the handbook uses no external fonts or scripts.
+A modern browser reads the generated `index.html` directly, without a server or external assets. JavaScript enables search, role selection and progress. Save this HTML for offline reading: every supplied workshop reference file is also embedded in it. Optional file downloads use the adjacent `exercises/` directory.
+
+The eight-lesson workshop needs Python 3.10 or newer, a text editor and terminal. It uses the standard library, synthetic data and a local-only service. No cloud account, GPU, package installation, model or API key is required after Python is available. Installing Python and following online references need internet. Other topic study briefs state their tool and resource assumptions separately.
 
 <a id="guide-quick-start"></a>
 
 ## Quick start
 
-1. Open the [published AI Learning Atlas](https://gcfernando.github.io/developer-guides-and-tools/apps/ai-learning-atlas/index.html) or your downloaded `AI-Learning-Atlas-Complete.html` in a browser.
-2. Choose the profession closest to your work. Its dashboard shows Essential and Recommended topics and the next unchecked topic.
-3. Open that topic, check its prerequisites and read the suggested lab and completion evidence. A role path can assume knowledge from topics outside its selected list.
-4. Complete the exercise in a separate practice project. The handbook supplies study directions, not runnable implementations for every lab.
-5. Mark the topic complete when you have evidence, and export a JSON backup of your progress.
+1. Use the entry check to establish starting skills. New programmers can begin the supported beginner workshop before taking a full role path.
+2. Choose a profession. Priority labels describe relevance; the sequence follows applied prerequisites, including Recommended bridges before dependent Essential topics.
+3. Choose the applied, internals or research depth within a topic. Record selected concepts, deferred material and evidence in the scope note.
+4. Complete the guided exercise, then an independent variation. Keep actual results, an explained failure, and clean-folder setup instructions.
+5. Use the four-dimension assessment rubric and the role-specific capstone checks. Mark only the scope you demonstrated complete.
+6. Export a progress backup before moving files, clearing browser data or changing browser profiles.
 
-The role priorities are editorial recommendations. They are not a certification syllabus or a guarantee that a particular curriculum suits every job.
+The deterministic FAQ workshop teaches engineering foundations. It does not call a language model, train ML, implement production authentication or establish production readiness. The five mathematics units contain worked calculations. Other topic units are explicitly labeled study briefs; they are not fully supplied courses for every listed subtopic.
 
 <a id="guide-search-and-navigation"></a>
 
 ## Search and navigation
 
-Type at least two characters into search. All query terms must appear in a result's title or context; the interface shows up to 35 results. Search covers professions, topics and individual subtopics. Selecting a result opens collapsed topic content and jumps to its target.
+Search covers roles, topics, original subtopics, workshop lessons and glossary definitions. Type at least two characters; all query terms must appear in a result title or context. Up to 35 results are shown. Selecting a result reveals collapsed content and any lesson hidden by reading focus.
 
-Press `/` outside an editable field to focus search. Down Arrow moves into results; Up/Down navigate them. The profession selector also controls the relevance matrix and progress dashboard. Essential and Recommended topics form the dashboard's core path; Advanced topics and milestones do not contribute to its percentage.
+Press `/` outside editable fields to focus search. Down Arrow enters results; Up/Down moves through them. Escape in results closes them and returns focus; Escape in the field clears its query. Mobile navigation is inert while closed, and Escape returns focus to the menu button.
+
+The workshop initially shows Lesson 1. Choose any lesson or show all with Reading view. Lesson links reveal their destination automatically. Print styles show every lesson and remove code-panel height limits.
 
 ## Progress, backups and privacy
 
-Checkmarks, the selected profession and the theme use browser local storage when available. Storage belongs to that browser context; it is not an account-based sync service. The hosted page and a downloaded local file use separate storage contexts; switching between them does not automatically transfer progress. Export a backup from the original context and restore it in the new one. Local-file storage behavior, private browsing, clearing site data or moving the file can affect persistence.
+The page stores checks, role, theme and one evidence note locally when browser storage is available. It makes no network calls to save progress. A hosted reader and a local file have separate browser storage contexts. Local-file storage, private browsing, moving a file or clearing site data can affect persistence; keep a JSON backup.
 
-| Control | Stored or exported information |
+| Control | Meaning |
 |---|---|
-| Mark done / topic checkboxes | Self-reported completion shared by the topic card and checklist |
-| Copy progress summary | Text list of checked items; it does not include a full selected-role backup |
-| Export progress backup | JSON with schema version, selected profession, export time and all checkbox states |
-| Restore a backup | Validates the JSON structure and boolean checkbox fields, asks before replacing current checks, then restores the selected role |
-| Clear progress | Asks before clearing checkmarks; it does not clear the selected profession or theme |
+| Topic scope check / Mark scope done | Self-reported completion for a declared scope; not proof of all subtopics |
+| Unit practice and transfer checks | Separate records for guided practice and independent adaptation |
+| Lesson practice and transfer checks | Separate records for the eight supported lessons; do not automatically complete topic scopes |
+| Scope and evidence note | Local text with scope, actual results, review and next action; avoid secrets and personal data |
+| Copy summary | Checked-item list; copy the note separately or use the JSON backup |
+| Export backup | Version 2 JSON: role, time, all checks and evidence note |
+| Restore backup | Validates before replacing state; version 1 backups restore old topic/milestone checks and start new checks unchecked |
+| Clear progress | Confirms before clearing checks; keeps the note, selected role and theme |
 
-The import control rejects files larger than 250,000 bytes. Exported JSON does not include the theme, notes, code, screenshots or exercise evidence. Keep that evidence separately. If browser storage is unavailable, a restored session may still display progress without retaining it after closing; keep the exported file.
+Role percentages count selected Essential + Recommended topic scopes. They do not measure study hours, mastery, certification or expert competence. Unit, lesson and milestone counts are separate from that percentage.
 
-The reader makes no network requests to save progress. Following an external reference or pasting material into an AI assistant is a separate action governed by that service's data handling.
+Notes are limited to 50,000 characters and the complete backup to 250,000 bytes. Export checks both limits so it cannot knowingly create an unrestorable backup. Existing oversized notes remain visible for copying or shortening. Version 1 restoration leaves the note unchanged; version 2 replaces it. Unknown roles, missing required checks and non-boolean values are rejected before state changes. If storage fails after restoration, the page reports that the result is session-only.
 
 ## Using the tutor prompt
 
-The workshop section contains a reusable prompt and worked examples. Copy it into an assistant you are authorized to use, fill in your role and subtopics, then perform and verify the exercises yourself. Words such as `DONE`, `DEBUG` and `PROGRESS` are suggested conversational conventions, not built-in commands implemented by this HTML file.
+Use the supplied brief with a human tutor, AI assistant or for self-study. Copy a bounded scope, entry evidence and the rubric into your authorized assistant. The tutor prompt uses practical teaching with enough theory for understanding, without a fixed theory/practice ratio. It asks for one step at a time, evidence review, gradual removal of help and recall/transfer checks.
 
-The handbook does not call a model, execute labs, inspect test results or award completion automatically. A checkmark records your choice; the surrounding assessment criteria describe evidence you should collect.
+`DONE`, `DEBUG` and other workshop words are conversational conventions, not built-in commands. The reader does not run exercises or verify mastery automatically. The Topic 05 filled prompt example illustrates the start of a tutoring conversation; the supported workshop supplies the fuller local exercise.
 
 ## Troubleshooting and maintenance
 
-- **Progress disappeared:** check the browser/profile and file location, then restore your JSON backup. Do not assume local storage will migrate with a renamed or moved file.
-- **Copy fails:** select and copy the displayed text manually. Browser clipboard permissions and secure-context rules vary.
-- **A prerequisite is outside my path:** study the referenced topic or establish equivalent knowledge before continuing.
-- **A tool's API differs:** follow the linked publisher documentation for the installed version. Topic labels and suggested stacks are a learning snapshot.
+- **Cannot run the first exercise:** use Lesson 1's working-directory and filename checks. Use `python3` or `py -3` consistently if that is your installed Python command.
+- **A prerequisite is unfamiliar:** demonstrate it using the entry check or study it first. The applied route and deeper-study route have distinct dependency guidance.
+- **Progress disappeared:** check the original browser profile and file location, then restore a backup.
+- **Copy fails:** manually select the text; the fallback preserves keyboard focus.
+- **Backup is too large:** copy the note separately and shorten it. Do not discard evidence without keeping another copy.
+- **A tool differs:** use the publisher's documentation for your installed version. Tool directories and proposed stacks are a content snapshot.
 
-The file embeds its content, styles, two behavior scripts and a generated search index. When maintaining it, keep topic IDs, search records, role priorities and progress-checkbox IDs aligned. The current search index contains 14 profession records, 51 topic records and 1,607 subtopic records; all targets resolved during the documentation review. That structural check does not validate the educational effectiveness of every proposed lab.
+## Authoring and validation
+
+Edit the sources and rebuild; do not maintain `index.html` manually.
+
+| File | Responsibility |
+|---|---|
+| `source/curriculum.json` | Canonical topics, subtopics, applied/deeper prerequisites, role priorities and capstone requirements |
+| `source/workshop.json` | Eight authored lessons, instructions, expected results, troubleshooting and assessment |
+| `source/glossary.json` | Definitions and generated glossary search records |
+| `source/learning.html` | Entry checks, rubric, scope note, tutor brief and review information |
+| `source/template.html` | Existing reader layout, presentation and stable legacy sections |
+| `source/reader.js`, `dashboard.js`, `learning.js`, `learning.css` | Reader behavior and additions using the existing design tokens |
+| `exercises/` | Runnable Python references, synthetic CSV and tests |
+| `build.py` | Dependency-free generation of one standalone reader |
+| `validate.py`, `source/subtopics.sha256` | Source freshness, original subtopics, IDs, links, search and curriculum checks |
+| `runtime.test.cjs` | Backup compatibility, invalid restore, storage failures, size limits and lesson revelation |
+
+Run from the repository root:
+
+```text
+python apps/ai-learning-atlas/build.py
+python -B apps/ai-learning-atlas/build.py --check
+python -B apps/ai-learning-atlas/validate.py
+python -B -m unittest discover -s apps/ai-learning-atlas/exercises -v
+node --check apps/ai-learning-atlas/source/reader.js
+node --check apps/ai-learning-atlas/source/dashboard.js
+node --check apps/ai-learning-atlas/source/learning.js
+node --test apps/ai-learning-atlas/runtime.test.cjs
+```
+
+The Node runtime tests use the repository's existing `linkedom` development dependency; run `npm ci` if dependencies are absent. Python build/content checks and reference exercises use the standard library only.
+
+Content review date: 2 November 2026. See [validation notes](VALIDATION.md) for performed checks and review limits. Report corrections through the repository issue tracker with a topic/lesson ID and a minimal synthetic example.
 
 ## Related documentation
 
