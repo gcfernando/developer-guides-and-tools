@@ -1,0 +1,2 @@
+PASS 195 numeric/Python reference assertions across 74 authored units.
+Checks cover worked calculations and numeric answer keys; illustrative IDs, dates, budgets and scenario constants are assumptions, not empirical claims.

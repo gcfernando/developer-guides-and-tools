@@ -1,0 +1,162 @@
+{
+  "checked_on": "2026-11-03",
+  "method": "GET with redirects, first 1024 bytes; reachability does not verify every statement",
+  "links": [
+    {
+      "url": "https://a2a-protocol.org/latest/",
+      "status": 200,
+      "final_url": "https://a2a-protocol.org/latest/",
+      "result": "resolved"
+    },
+    {
+      "url": "https://arxiv.org/",
+      "status": 200,
+      "final_url": "https://arxiv.org/",
+      "result": "resolved"
+    },
+    {
+      "url": "https://arxiv.org/abs/2306.05685",
+      "status": 200,
+      "final_url": "https://arxiv.org/abs/2306.05685",
+      "result": "resolved"
+    },
+    {
+      "url": "https://developers.openai.com/api/docs/",
+      "status": 200,
+      "final_url": "https://developers.openai.com/api/docs",
+      "result": "resolved"
+    },
+    {
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+      "status": 200,
+      "final_url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+      "result": "resolved"
+    },
+    {
+      "url": "https://docs.docker.com/get-started/",
+      "status": 200,
+      "final_url": "https://docs.docker.com/get-started/",
+      "result": "resolved"
+    },
+    {
+      "url": "https://docs.python.org/3/tutorial/",
+      "status": 200,
+      "final_url": "https://docs.python.org/3/tutorial/",
+      "result": "resolved"
+    },
+    {
+      "url": "https://docs.pytorch.org/tutorials/",
+      "status": 200,
+      "final_url": "https://docs.pytorch.org/tutorials/",
+      "result": "resolved"
+    },
+    {
+      "url": "https://fastapi.tiangolo.com/tutorial/",
+      "status": 200,
+      "final_url": "https://fastapi.tiangolo.com/tutorial/",
+      "result": "resolved"
+    },
+    {
+      "url": "https://gcfernando.github.io/developer-guides-and-tools/apps/ai-learning-atlas/guide/",
+      "status": 200,
+      "final_url": "https://gcfernando.github.io/developer-guides-and-tools/apps/ai-learning-atlas/guide/",
+      "result": "resolved"
+    },
+    {
+      "url": "https://gcfernando.github.io/developer-guides-and-tools/documentation/",
+      "status": 200,
+      "final_url": "https://gcfernando.github.io/developer-guides-and-tools/documentation/",
+      "result": "resolved"
+    },
+    {
+      "url": "https://gcfernando.github.io/gcfernando/projects/",
+      "status": 200,
+      "final_url": "https://gcfernando.github.io/gcfernando/projects/",
+      "result": "resolved"
+    },
+    {
+      "url": "https://genai.owasp.org/llm-top-10/",
+      "status": 200,
+      "final_url": "https://genai.owasp.org/llm-top-10/",
+      "result": "resolved"
+    },
+    {
+      "url": "https://github.com/gcfernando/developer-guides-and-tools/issues/new",
+      "status": 200,
+      "final_url": "https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Fgcfernando%2Fdeveloper-guides-and-tools%2Fissues%2Fnew",
+      "result": "resolved"
+    },
+    {
+      "url": "https://huggingface.co/learn",
+      "status": 200,
+      "final_url": "https://huggingface.co/learn",
+      "result": "resolved"
+    },
+    {
+      "url": "https://huggingface.co/papers",
+      "status": 200,
+      "final_url": "https://huggingface.co/papers",
+      "result": "resolved"
+    },
+    {
+      "url": "https://modelcontextprotocol.io/specification/latest",
+      "status": 200,
+      "final_url": "https://modelcontextprotocol.io/specification/2026-07-28",
+      "result": "resolved"
+    },
+    {
+      "url": "https://pandas.pydata.org/docs/getting_started/",
+      "status": 200,
+      "final_url": "https://pandas.pydata.org/docs/getting_started/",
+      "result": "resolved"
+    },
+    {
+      "url": "https://platform.openai.com/docs/",
+      "status": 200,
+      "final_url": "https://developers.openai.com/api/docs",
+      "result": "resolved"
+    },
+    {
+      "url": "https://scikit-learn.org/stable/common_pitfalls.html",
+      "status": 200,
+      "final_url": "https://scikit-learn.org/stable/common_pitfalls.html",
+      "result": "resolved"
+    },
+    {
+      "url": "https://scikit-learn.org/stable/modules/calibration.html",
+      "status": 200,
+      "final_url": "https://scikit-learn.org/stable/modules/calibration.html",
+      "result": "resolved"
+    },
+    {
+      "url": "https://scikit-learn.org/stable/modules/cross_validation.html",
+      "status": 200,
+      "final_url": "https://scikit-learn.org/stable/modules/cross_validation.html",
+      "result": "resolved"
+    },
+    {
+      "url": "https://scikit-learn.org/stable/user_guide.html",
+      "status": 200,
+      "final_url": "https://scikit-learn.org/stable/user_guide.html",
+      "result": "resolved"
+    },
+    {
+      "url": "https://www.itl.nist.gov/div898/handbook/prc/section2/prc241.htm",
+      "status": 200,
+      "final_url": "https://www.itl.nist.gov/div898/handbook/prc/section2/prc241.htm",
+      "result": "resolved"
+    },
+    {
+      "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+      "status": 200,
+      "final_url": "https://www.nist.gov/itl/ai-risk-management-framework",
+      "result": "resolved"
+    },
+    {
+      "url": "https://www.w3.org/TR/WCAG22/",
+      "status": 200,
+      "final_url": "https://www.w3.org/TR/WCAG22/",
+      "result": "resolved"
+    }
+  ]
+}

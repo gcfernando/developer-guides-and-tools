@@ -60,8 +60,16 @@ test('AI add-ons reader contains all source sections and registration clarificat
 });
 
 test('Atlas search, progress controls and role priorities remain aligned',()=>{
-  const {document}=parseHTML(read('apps/ai-learning-atlas/index.html'));
+  const {document,CustomEvent}=parseHTML(read('apps/ai-learning-atlas/index.html'));
   const data=JSON.parse(document.getElementById('atlas-data').textContent);
+  // Search targets inside topic bodies are intentionally lazy. Exercise the
+  // shipped hydrator before checking the same destination contract as before.
+  const window={addEventListener(){}};
+  const context=vm.createContext({document,CustomEvent,window,
+    localStorage:{getItem(){return null;},setItem(){}},
+    requestAnimationFrame(){},setTimeout(){}});
+  new vm.Script(read('apps/ai-learning-atlas/source/experience.js')).runInContext(context);
+  for(const card of document.querySelectorAll('.topic-card'))window.AtlasExperience.hydrate(card);
   for(const record of data.search)assert.ok(document.getElementById(record.href.slice(1)),'Missing Atlas search target '+record.href);
   const topics=[...document.querySelectorAll('article.topic-card')];
   assert.equal(topics.length,51);

@@ -30,6 +30,8 @@ class Reader(HTMLParser):
         if tag == 'li' and attrs.get('id', '').startswith('subtopic-'):
             self.capture = 'subtopic'
             self.subtopics.append([attrs['id'], ''])
+        if tag == 'ol' and attrs.get('data-topic-subtopics'):
+            self.subtopics.append(['@directory:'+attrs['data-topic-subtopics'], ''])
         if tag == 'h1':
             self.headings.append(tag)
 
@@ -42,7 +44,14 @@ class Reader(HTMLParser):
     def handle_endtag(self, tag):
         if tag == 'script':
             if self.script_type == 'application/json':
-                self.data = json.loads(self.script_text)
+                parsed = json.loads(self.script_text)
+                if isinstance(parsed, str):
+                    decoded = Reader()
+                    decoded.feed(parsed)
+                    for key in ('ids', 'links', 'scripts', 'headings', 'subtopics'):
+                        getattr(self, key).extend(getattr(decoded, key))
+                else:
+                    self.data = parsed
             else:
                 self.scripts.append(self.script_text)
             self.capture = None
@@ -55,6 +64,17 @@ def main():
     assert page == build(), 'Generated page is stale'
     reader = Reader()
     reader.feed(page)
+    directory = []
+    for key, text in reader.subtopics:
+        if key.startswith('@directory:'):
+            prefix = '#subtopic-'+key.split(':')[1]+'-'
+            for entry in reader.data['search']:
+                if entry['type'] == 'Subtopic' and entry['href'].startswith(prefix):
+                    directory.append([entry['href'][1:], entry['title']])
+                    reader.ids.append(entry['href'][1:])
+        else:
+            directory.append([key, text])
+    reader.subtopics = directory
     assert len(reader.headings) == 1, 'Expected one H1'
     assert not [key for key, count in Counter(reader.ids).items() if count > 1], 'Duplicate IDs'
     ids = set(reader.ids)

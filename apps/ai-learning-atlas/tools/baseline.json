@@ -1,0 +1,7156 @@
+{
+  "sha256": "12a35942ed0fdc4bf92865f1f91669197483725c59d87df2a695e7a66f791346",
+  "topics": [
+    {
+      "id": "topic-01-introduction-to-artificial-intelligence",
+      "title": "Introduction to Artificial Intelligence"
+    },
+    {
+      "id": "topic-02-computer-science-fundamentals",
+      "title": "Computer Science Fundamentals"
+    },
+    {
+      "id": "topic-03-python-programming",
+      "title": "Python Programming"
+    },
+    {
+      "id": "topic-04-mathematics-for-ai",
+      "title": "Mathematics for AI"
+    },
+    {
+      "id": "topic-05-data-fundamentals",
+      "title": "Data Fundamentals"
+    },
+    {
+      "id": "topic-06-classical-ai-and-intelligent-agents",
+      "title": "Classical AI and Intelligent Agents"
+    },
+    {
+      "id": "topic-07-machine-learning-fundamentals",
+      "title": "Machine Learning Fundamentals"
+    },
+    {
+      "id": "topic-08-supervised-learning-algorithms",
+      "title": "Supervised Learning Algorithms"
+    },
+    {
+      "id": "topic-09-unsupervised-learning",
+      "title": "Unsupervised Learning"
+    },
+    {
+      "id": "topic-10-model-evaluation-and-experimentation",
+      "title": "Model Evaluation and Experimentation"
+    },
+    {
+      "id": "topic-11-feature-engineering-and-applied-ml",
+      "title": "Feature Engineering and Applied ML"
+    },
+    {
+      "id": "topic-12-deep-learning-fundamentals",
+      "title": "Deep Learning Fundamentals"
+    },
+    {
+      "id": "topic-13-deep-learning-architectures",
+      "title": "Deep Learning Architectures"
+    },
+    {
+      "id": "topic-14-natural-language-processing-nlp",
+      "title": "Natural Language Processing (NLP)"
+    },
+    {
+      "id": "topic-15-transformer-architecture",
+      "title": "Transformer Architecture"
+    },
+    {
+      "id": "topic-16-large-language-models-llms",
+      "title": "Large Language Models (LLMs)"
+    },
+    {
+      "id": "topic-17-prompt-engineering-and-context-engineering",
+      "title": "Prompt Engineering and Context Engineering"
+    },
+    {
+      "id": "topic-18-embeddings-semantic-search-and-vector-databases",
+      "title": "Embeddings, Semantic Search, and Vector Databases"
+    },
+    {
+      "id": "topic-19-retrieval-augmented-generation-rag",
+      "title": "Retrieval-Augmented Generation (RAG)"
+    },
+    {
+      "id": "topic-20-fine-tuning-and-model-adaptation",
+      "title": "Fine-Tuning and Model Adaptation"
+    },
+    {
+      "id": "topic-21-generative-ai",
+      "title": "Generative AI"
+    },
+    {
+      "id": "topic-22-computer-vision",
+      "title": "Computer Vision"
+    },
+    {
+      "id": "topic-23-speech-and-audio-ai",
+      "title": "Speech and Audio AI"
+    },
+    {
+      "id": "topic-24-multimodal-ai",
+      "title": "Multimodal AI"
+    },
+    {
+      "id": "topic-25-reinforcement-learning-rl",
+      "title": "Reinforcement Learning (RL)"
+    },
+    {
+      "id": "topic-26-ai-application-development",
+      "title": "AI Application Development"
+    },
+    {
+      "id": "topic-27-ai-agents",
+      "title": "AI Agents"
+    },
+    {
+      "id": "topic-28-ai-frameworks-libraries-and-ecosystem",
+      "title": "AI Frameworks, Libraries, and Ecosystem"
+    },
+    {
+      "id": "topic-29-mlops-and-llmops",
+      "title": "MLOps and LLMOps"
+    },
+    {
+      "id": "topic-30-cloud-infrastructure-and-deployment",
+      "title": "Cloud, Infrastructure, and Deployment"
+    },
+    {
+      "id": "topic-31-ai-model-optimization-and-inference-engineering",
+      "title": "AI Model Optimization and Inference Engineering"
+    },
+    {
+      "id": "topic-32-distributed-and-large-scale-ai-training",
+      "title": "Distributed and Large-Scale AI Training"
+    },
+    {
+      "id": "topic-33-ai-evaluation-testing-and-reliability",
+      "title": "AI Evaluation, Testing, and Reliability"
+    },
+    {
+      "id": "topic-34-ai-security-privacy-and-responsible-ai",
+      "title": "AI Security, Privacy, and Responsible AI"
+    },
+    {
+      "id": "topic-35-data-engineering-for-ai-at-scale",
+      "title": "Data Engineering for AI at Scale"
+    },
+    {
+      "id": "topic-36-graph-ai-and-knowledge-based-systems",
+      "title": "Graph AI and Knowledge-Based Systems"
+    },
+    {
+      "id": "topic-37-time-series-ai-and-forecasting",
+      "title": "Time-Series AI and Forecasting"
+    },
+    {
+      "id": "topic-38-recommender-systems-and-search",
+      "title": "Recommender Systems and Search"
+    },
+    {
+      "id": "topic-39-causal-ai-and-decision-intelligence",
+      "title": "Causal AI and Decision Intelligence"
+    },
+    {
+      "id": "topic-40-robotics-and-embodied-ai",
+      "title": "Robotics and Embodied AI"
+    },
+    {
+      "id": "topic-41-autonomous-vehicles-and-intelligent-transportation",
+      "title": "Autonomous Vehicles and Intelligent Transportation"
+    },
+    {
+      "id": "topic-42-neuro-symbolic-ai-and-reasoning-systems",
+      "title": "Neuro-Symbolic AI and Reasoning Systems"
+    },
+    {
+      "id": "topic-43-advanced-learning-paradigms",
+      "title": "Advanced Learning Paradigms"
+    },
+    {
+      "id": "topic-44-scientific-ai-and-ai-for-science",
+      "title": "Scientific AI and AI for Science"
+    },
+    {
+      "id": "topic-45-frontier-ai-research",
+      "title": "Frontier AI Research"
+    },
+    {
+      "id": "topic-46-ai-research-methodology",
+      "title": "AI Research Methodology"
+    },
+    {
+      "id": "topic-47-beginner-ai-projects",
+      "title": "Beginner AI Projects"
+    },
+    {
+      "id": "topic-48-intermediate-ai-projects",
+      "title": "Intermediate AI Projects"
+    },
+    {
+      "id": "topic-49-generative-ai-and-llm-projects",
+      "title": "Generative AI and LLM Projects"
+    },
+    {
+      "id": "topic-50-ai-agent-projects",
+      "title": "AI Agent Projects"
+    },
+    {
+      "id": "topic-51-production-grade-ai-projects",
+      "title": "Production-Grade AI Projects"
+    }
+  ],
+  "subtopics": [
+    {
+      "id": "subtopic-01-001",
+      "text": "What is Artificial Intelligence?"
+    },
+    {
+      "id": "subtopic-01-002",
+      "text": "History and evolution of AI"
+    },
+    {
+      "id": "subtopic-01-003",
+      "text": "Goals and capabilities of AI"
+    },
+    {
+      "id": "subtopic-01-004",
+      "text": "Narrow AI, General AI (AGI), and Superintelligence (ASI)"
+    },
+    {
+      "id": "subtopic-01-005",
+      "text": "Symbolic AI vs Subsymbolic AI"
+    },
+    {
+      "id": "subtopic-01-006",
+      "text": "Traditional AI vs Modern AI"
+    },
+    {
+      "id": "subtopic-01-007",
+      "text": "AI vs Machine Learning vs Deep Learning"
+    },
+    {
+      "id": "subtopic-01-008",
+      "text": "Generative AI vs Predictive AI"
+    },
+    {
+      "id": "subtopic-01-009",
+      "text": "Discriminative vs Generative Models"
+    },
+    {
+      "id": "subtopic-01-010",
+      "text": "Reactive systems and autonomous agents"
+    },
+    {
+      "id": "subtopic-01-011",
+      "text": "AI applications across industries"
+    },
+    {
+      "id": "subtopic-01-012",
+      "text": "Benefits, limitations, and risks of AI"
+    },
+    {
+      "id": "subtopic-01-013",
+      "text": "AI terminology and ecosystem"
+    },
+    {
+      "id": "subtopic-01-014",
+      "text": "Major AI research disciplines"
+    },
+    {
+      "id": "subtopic-01-015",
+      "text": "Overview of the AI development lifecycle"
+    },
+    {
+      "id": "subtopic-02-001",
+      "text": "How computers work"
+    },
+    {
+      "id": "subtopic-02-002",
+      "text": "Hardware and software basics"
+    },
+    {
+      "id": "subtopic-02-003",
+      "text": "Binary numbers and data representation"
+    },
+    {
+      "id": "subtopic-02-004",
+      "text": "Computer architecture"
+    },
+    {
+      "id": "subtopic-02-005",
+      "text": "CPU, GPU, TPU, and AI accelerators"
+    },
+    {
+      "id": "subtopic-02-006",
+      "text": "Operating system fundamentals"
+    },
+    {
+      "id": "subtopic-02-007",
+      "text": "Processes and threads"
+    },
+    {
+      "id": "subtopic-02-008",
+      "text": "Memory, storage, and caching"
+    },
+    {
+      "id": "subtopic-02-009",
+      "text": "Networking fundamentals"
+    },
+    {
+      "id": "subtopic-02-010",
+      "text": "HTTP, HTTPS, REST, and APIs"
+    },
+    {
+      "id": "subtopic-02-011",
+      "text": "JSON and common data formats"
+    },
+    {
+      "id": "subtopic-02-012",
+      "text": "Data structures"
+    },
+    {
+      "id": "subtopic-02-013",
+      "text": "Algorithms"
+    },
+    {
+      "id": "subtopic-02-014",
+      "text": "Time and space complexity"
+    },
+    {
+      "id": "subtopic-02-015",
+      "text": "Big O notation"
+    },
+    {
+      "id": "subtopic-02-016",
+      "text": "Recursion"
+    },
+    {
+      "id": "subtopic-02-017",
+      "text": "Searching algorithms"
+    },
+    {
+      "id": "subtopic-02-018",
+      "text": "Sorting algorithms"
+    },
+    {
+      "id": "subtopic-02-019",
+      "text": "Hashing"
+    },
+    {
+      "id": "subtopic-02-020",
+      "text": "Trees and graphs"
+    },
+    {
+      "id": "subtopic-02-021",
+      "text": "Databases and SQL"
+    },
+    {
+      "id": "subtopic-02-022",
+      "text": "Version control with Git"
+    },
+    {
+      "id": "subtopic-02-023",
+      "text": "Linux and command-line fundamentals"
+    },
+    {
+      "id": "subtopic-02-024",
+      "text": "Software testing and debugging"
+    },
+    {
+      "id": "subtopic-02-025",
+      "text": "Basic software architecture"
+    },
+    {
+      "id": "subtopic-03-001",
+      "text": "Python installation and environment setup"
+    },
+    {
+      "id": "subtopic-03-002",
+      "text": "Python syntax"
+    },
+    {
+      "id": "subtopic-03-003",
+      "text": "Variables and data types"
+    },
+    {
+      "id": "subtopic-03-004",
+      "text": "Operators"
+    },
+    {
+      "id": "subtopic-03-005",
+      "text": "Conditional statements"
+    },
+    {
+      "id": "subtopic-03-006",
+      "text": "Loops"
+    },
+    {
+      "id": "subtopic-03-007",
+      "text": "Strings"
+    },
+    {
+      "id": "subtopic-03-008",
+      "text": "Lists"
+    },
+    {
+      "id": "subtopic-03-009",
+      "text": "Tuples"
+    },
+    {
+      "id": "subtopic-03-010",
+      "text": "Sets"
+    },
+    {
+      "id": "subtopic-03-011",
+      "text": "Dictionaries"
+    },
+    {
+      "id": "subtopic-03-012",
+      "text": "Functions"
+    },
+    {
+      "id": "subtopic-03-013",
+      "text": "Scope and namespaces"
+    },
+    {
+      "id": "subtopic-03-014",
+      "text": "Modules and packages"
+    },
+    {
+      "id": "subtopic-03-015",
+      "text": "File handling"
+    },
+    {
+      "id": "subtopic-03-016",
+      "text": "Exception handling"
+    },
+    {
+      "id": "subtopic-03-017",
+      "text": "Object-oriented programming"
+    },
+    {
+      "id": "subtopic-03-018",
+      "text": "Iterators and generators"
+    },
+    {
+      "id": "subtopic-03-019",
+      "text": "Decorators"
+    },
+    {
+      "id": "subtopic-03-020",
+      "text": "List and dictionary comprehensions"
+    },
+    {
+      "id": "subtopic-03-021",
+      "text": "Lambda functions"
+    },
+    {
+      "id": "subtopic-03-022",
+      "text": "Type hints"
+    },
+    {
+      "id": "subtopic-03-023",
+      "text": "Virtual environments"
+    },
+    {
+      "id": "subtopic-03-024",
+      "text": "Package management"
+    },
+    {
+      "id": "subtopic-03-025",
+      "text": "Logging and debugging"
+    },
+    {
+      "id": "subtopic-03-026",
+      "text": "Unit testing"
+    },
+    {
+      "id": "subtopic-03-027",
+      "text": "Asynchronous programming basics"
+    },
+    {
+      "id": "subtopic-03-028",
+      "text": "NumPy"
+    },
+    {
+      "id": "subtopic-03-029",
+      "text": "Pandas"
+    },
+    {
+      "id": "subtopic-03-030",
+      "text": "Matplotlib and Seaborn"
+    },
+    {
+      "id": "subtopic-03-031",
+      "text": "Jupyter Notebook"
+    },
+    {
+      "id": "subtopic-03-032",
+      "text": "Google Colab"
+    },
+    {
+      "id": "subtopic-03-033",
+      "text": "Python APIs and HTTP clients"
+    },
+    {
+      "id": "subtopic-03-034",
+      "text": "Basic Python performance optimization"
+    },
+    {
+      "id": "subtopic-04-001",
+      "text": "Scalars, vectors, matrices, and tensors"
+    },
+    {
+      "id": "subtopic-04-002",
+      "text": "Vector operations"
+    },
+    {
+      "id": "subtopic-04-003",
+      "text": "Matrix operations"
+    },
+    {
+      "id": "subtopic-04-004",
+      "text": "Dot products"
+    },
+    {
+      "id": "subtopic-04-005",
+      "text": "Matrix multiplication"
+    },
+    {
+      "id": "subtopic-04-006",
+      "text": "Transpose and inverse"
+    },
+    {
+      "id": "subtopic-04-007",
+      "text": "Rank and determinants"
+    },
+    {
+      "id": "subtopic-04-008",
+      "text": "Linear independence"
+    },
+    {
+      "id": "subtopic-04-009",
+      "text": "Vector spaces and bases"
+    },
+    {
+      "id": "subtopic-04-010",
+      "text": "Norms and distances"
+    },
+    {
+      "id": "subtopic-04-011",
+      "text": "Eigenvalues and eigenvectors"
+    },
+    {
+      "id": "subtopic-04-012",
+      "text": "Singular Value Decomposition (SVD)"
+    },
+    {
+      "id": "subtopic-04-013",
+      "text": "Positive definite matrices"
+    },
+    {
+      "id": "subtopic-04-014",
+      "text": "Orthogonality and projections"
+    },
+    {
+      "id": "subtopic-04-015",
+      "text": "Matrix factorization"
+    },
+    {
+      "id": "subtopic-04-016",
+      "text": "Functions and limits"
+    },
+    {
+      "id": "subtopic-04-017",
+      "text": "Derivatives"
+    },
+    {
+      "id": "subtopic-04-018",
+      "text": "Partial derivatives"
+    },
+    {
+      "id": "subtopic-04-019",
+      "text": "Chain rule"
+    },
+    {
+      "id": "subtopic-04-020",
+      "text": "Integrals"
+    },
+    {
+      "id": "subtopic-04-021",
+      "text": "Multivariable calculus"
+    },
+    {
+      "id": "subtopic-04-022",
+      "text": "Gradients"
+    },
+    {
+      "id": "subtopic-04-023",
+      "text": "Jacobians"
+    },
+    {
+      "id": "subtopic-04-024",
+      "text": "Hessian matrices"
+    },
+    {
+      "id": "subtopic-04-025",
+      "text": "Taylor approximation"
+    },
+    {
+      "id": "subtopic-04-026",
+      "text": "Gradient-based optimization"
+    },
+    {
+      "id": "subtopic-04-027",
+      "text": "Automatic differentiation"
+    },
+    {
+      "id": "subtopic-04-028",
+      "text": "Probability fundamentals"
+    },
+    {
+      "id": "subtopic-04-029",
+      "text": "Conditional probability"
+    },
+    {
+      "id": "subtopic-04-030",
+      "text": "Bayes' theorem"
+    },
+    {
+      "id": "subtopic-04-031",
+      "text": "Random variables"
+    },
+    {
+      "id": "subtopic-04-032",
+      "text": "Probability distributions"
+    },
+    {
+      "id": "subtopic-04-033",
+      "text": "Joint and marginal distributions"
+    },
+    {
+      "id": "subtopic-04-034",
+      "text": "Expected value"
+    },
+    {
+      "id": "subtopic-04-035",
+      "text": "Variance and covariance"
+    },
+    {
+      "id": "subtopic-04-036",
+      "text": "Independence"
+    },
+    {
+      "id": "subtopic-04-037",
+      "text": "Likelihood"
+    },
+    {
+      "id": "subtopic-04-038",
+      "text": "Law of large numbers"
+    },
+    {
+      "id": "subtopic-04-039",
+      "text": "Central limit theorem"
+    },
+    {
+      "id": "subtopic-04-040",
+      "text": "Markov chains"
+    },
+    {
+      "id": "subtopic-04-041",
+      "text": "Monte Carlo methods"
+    },
+    {
+      "id": "subtopic-04-042",
+      "text": "Probabilistic inference"
+    },
+    {
+      "id": "subtopic-04-043",
+      "text": "Descriptive statistics"
+    },
+    {
+      "id": "subtopic-04-044",
+      "text": "Mean, median, mode"
+    },
+    {
+      "id": "subtopic-04-045",
+      "text": "Variance and standard deviation"
+    },
+    {
+      "id": "subtopic-04-046",
+      "text": "Sampling"
+    },
+    {
+      "id": "subtopic-04-047",
+      "text": "Estimation"
+    },
+    {
+      "id": "subtopic-04-048",
+      "text": "Confidence intervals"
+    },
+    {
+      "id": "subtopic-04-049",
+      "text": "Hypothesis testing"
+    },
+    {
+      "id": "subtopic-04-050",
+      "text": "P-values"
+    },
+    {
+      "id": "subtopic-04-051",
+      "text": "Correlation vs causation"
+    },
+    {
+      "id": "subtopic-04-052",
+      "text": "Regression analysis"
+    },
+    {
+      "id": "subtopic-04-053",
+      "text": "Statistical significance"
+    },
+    {
+      "id": "subtopic-04-054",
+      "text": "Bias and variance"
+    },
+    {
+      "id": "subtopic-04-055",
+      "text": "Bootstrap methods"
+    },
+    {
+      "id": "subtopic-04-056",
+      "text": "Bayesian vs frequentist statistics"
+    },
+    {
+      "id": "subtopic-04-057",
+      "text": "Experimental design"
+    },
+    {
+      "id": "subtopic-04-058",
+      "text": "Objective functions"
+    },
+    {
+      "id": "subtopic-04-059",
+      "text": "Convex and non-convex optimization"
+    },
+    {
+      "id": "subtopic-04-060",
+      "text": "Constraints and Lagrange multipliers"
+    },
+    {
+      "id": "subtopic-04-061",
+      "text": "Gradient descent"
+    },
+    {
+      "id": "subtopic-04-062",
+      "text": "Stochastic gradient descent"
+    },
+    {
+      "id": "subtopic-04-063",
+      "text": "Momentum and adaptive optimization"
+    },
+    {
+      "id": "subtopic-04-064",
+      "text": "Local and global optima"
+    },
+    {
+      "id": "subtopic-04-065",
+      "text": "Entropy"
+    },
+    {
+      "id": "subtopic-04-066",
+      "text": "Cross-entropy"
+    },
+    {
+      "id": "subtopic-04-067",
+      "text": "Kullback–Leibler divergence"
+    },
+    {
+      "id": "subtopic-04-068",
+      "text": "Mutual information"
+    },
+    {
+      "id": "subtopic-04-069",
+      "text": "Numerical stability"
+    },
+    {
+      "id": "subtopic-04-070",
+      "text": "Floating-point arithmetic"
+    },
+    {
+      "id": "subtopic-05-001",
+      "text": "What is data?"
+    },
+    {
+      "id": "subtopic-05-002",
+      "text": "Structured, semi-structured, and unstructured data"
+    },
+    {
+      "id": "subtopic-05-003",
+      "text": "Data collection"
+    },
+    {
+      "id": "subtopic-05-004",
+      "text": "Data formats: CSV, JSON, Parquet, XML"
+    },
+    {
+      "id": "subtopic-05-005",
+      "text": "Relational databases"
+    },
+    {
+      "id": "subtopic-05-006",
+      "text": "NoSQL databases"
+    },
+    {
+      "id": "subtopic-05-007",
+      "text": "Data querying with SQL"
+    },
+    {
+      "id": "subtopic-05-008",
+      "text": "Data cleaning"
+    },
+    {
+      "id": "subtopic-05-009",
+      "text": "Data preprocessing"
+    },
+    {
+      "id": "subtopic-05-010",
+      "text": "Missing values"
+    },
+    {
+      "id": "subtopic-05-011",
+      "text": "Duplicate data"
+    },
+    {
+      "id": "subtopic-05-012",
+      "text": "Outlier detection"
+    },
+    {
+      "id": "subtopic-05-013",
+      "text": "Data normalization"
+    },
+    {
+      "id": "subtopic-05-014",
+      "text": "Data standardization"
+    },
+    {
+      "id": "subtopic-05-015",
+      "text": "Categorical encoding"
+    },
+    {
+      "id": "subtopic-05-016",
+      "text": "Feature extraction"
+    },
+    {
+      "id": "subtopic-05-017",
+      "text": "Feature selection"
+    },
+    {
+      "id": "subtopic-05-018",
+      "text": "Exploratory Data Analysis (EDA)"
+    },
+    {
+      "id": "subtopic-05-019",
+      "text": "Data visualization"
+    },
+    {
+      "id": "subtopic-05-020",
+      "text": "Data labeling and annotation"
+    },
+    {
+      "id": "subtopic-05-021",
+      "text": "Training, validation, and test datasets"
+    },
+    {
+      "id": "subtopic-05-022",
+      "text": "Data leakage"
+    },
+    {
+      "id": "subtopic-05-023",
+      "text": "Data quality and data lineage"
+    },
+    {
+      "id": "subtopic-05-024",
+      "text": "Data privacy"
+    },
+    {
+      "id": "subtopic-05-025",
+      "text": "Data versioning"
+    },
+    {
+      "id": "subtopic-05-026",
+      "text": "Data pipelines"
+    },
+    {
+      "id": "subtopic-05-027",
+      "text": "Data warehouses and data lakes"
+    },
+    {
+      "id": "subtopic-05-028",
+      "text": "Introduction to data engineering"
+    },
+    {
+      "id": "subtopic-06-001",
+      "text": "Foundations of classical AI"
+    },
+    {
+      "id": "subtopic-06-002",
+      "text": "Rational agents"
+    },
+    {
+      "id": "subtopic-06-003",
+      "text": "Agent environments"
+    },
+    {
+      "id": "subtopic-06-004",
+      "text": "State spaces"
+    },
+    {
+      "id": "subtopic-06-005",
+      "text": "Problem formulation"
+    },
+    {
+      "id": "subtopic-06-006",
+      "text": "Uninformed search"
+    },
+    {
+      "id": "subtopic-06-007",
+      "text": "Breadth-First Search (BFS)"
+    },
+    {
+      "id": "subtopic-06-008",
+      "text": "Depth-First Search (DFS)"
+    },
+    {
+      "id": "subtopic-06-009",
+      "text": "Uniform Cost Search"
+    },
+    {
+      "id": "subtopic-06-010",
+      "text": "Heuristic search"
+    },
+    {
+      "id": "subtopic-06-011",
+      "text": "Greedy Best-First Search"
+    },
+    {
+      "id": "subtopic-06-012",
+      "text": "A* search"
+    },
+    {
+      "id": "subtopic-06-013",
+      "text": "Local search"
+    },
+    {
+      "id": "subtopic-06-014",
+      "text": "Hill climbing"
+    },
+    {
+      "id": "subtopic-06-015",
+      "text": "Simulated annealing"
+    },
+    {
+      "id": "subtopic-06-016",
+      "text": "Genetic algorithms"
+    },
+    {
+      "id": "subtopic-06-017",
+      "text": "Adversarial search"
+    },
+    {
+      "id": "subtopic-06-018",
+      "text": "Minimax"
+    },
+    {
+      "id": "subtopic-06-019",
+      "text": "Alpha-beta pruning"
+    },
+    {
+      "id": "subtopic-06-020",
+      "text": "Constraint Satisfaction Problems (CSP)"
+    },
+    {
+      "id": "subtopic-06-021",
+      "text": "Backtracking"
+    },
+    {
+      "id": "subtopic-06-022",
+      "text": "Knowledge representation"
+    },
+    {
+      "id": "subtopic-06-023",
+      "text": "Propositional logic"
+    },
+    {
+      "id": "subtopic-06-024",
+      "text": "First-order logic"
+    },
+    {
+      "id": "subtopic-06-025",
+      "text": "Logical inference"
+    },
+    {
+      "id": "subtopic-06-026",
+      "text": "Rule-based systems"
+    },
+    {
+      "id": "subtopic-06-027",
+      "text": "Expert systems"
+    },
+    {
+      "id": "subtopic-06-028",
+      "text": "Semantic networks"
+    },
+    {
+      "id": "subtopic-06-029",
+      "text": "Ontologies"
+    },
+    {
+      "id": "subtopic-06-030",
+      "text": "Knowledge graphs"
+    },
+    {
+      "id": "subtopic-06-031",
+      "text": "Automated planning"
+    },
+    {
+      "id": "subtopic-06-032",
+      "text": "STRIPS and action models"
+    },
+    {
+      "id": "subtopic-06-033",
+      "text": "Reasoning under uncertainty"
+    },
+    {
+      "id": "subtopic-06-034",
+      "text": "Bayesian networks"
+    },
+    {
+      "id": "subtopic-06-035",
+      "text": "Hidden Markov Models"
+    },
+    {
+      "id": "subtopic-06-036",
+      "text": "Decision theory"
+    },
+    {
+      "id": "subtopic-06-037",
+      "text": "Markov Decision Processes (MDPs)"
+    },
+    {
+      "id": "subtopic-06-038",
+      "text": "Partially Observable MDPs (POMDPs)"
+    },
+    {
+      "id": "subtopic-07-001",
+      "text": "What is Machine Learning?"
+    },
+    {
+      "id": "subtopic-07-002",
+      "text": "Types of machine learning"
+    },
+    {
+      "id": "subtopic-07-003",
+      "text": "Supervised learning"
+    },
+    {
+      "id": "subtopic-07-004",
+      "text": "Unsupervised learning"
+    },
+    {
+      "id": "subtopic-07-005",
+      "text": "Semi-supervised learning"
+    },
+    {
+      "id": "subtopic-07-006",
+      "text": "Self-supervised learning"
+    },
+    {
+      "id": "subtopic-07-007",
+      "text": "Reinforcement learning overview"
+    },
+    {
+      "id": "subtopic-07-008",
+      "text": "Online vs batch learning"
+    },
+    {
+      "id": "subtopic-07-009",
+      "text": "Parametric vs non-parametric models"
+    },
+    {
+      "id": "subtopic-07-010",
+      "text": "Instance-based vs model-based learning"
+    },
+    {
+      "id": "subtopic-07-011",
+      "text": "Classification vs regression"
+    },
+    {
+      "id": "subtopic-07-012",
+      "text": "Training and inference"
+    },
+    {
+      "id": "subtopic-07-013",
+      "text": "Features and labels"
+    },
+    {
+      "id": "subtopic-07-014",
+      "text": "Loss functions"
+    },
+    {
+      "id": "subtopic-07-015",
+      "text": "Cost functions"
+    },
+    {
+      "id": "subtopic-07-016",
+      "text": "Empirical risk minimization"
+    },
+    {
+      "id": "subtopic-07-017",
+      "text": "Generalization"
+    },
+    {
+      "id": "subtopic-07-018",
+      "text": "Overfitting"
+    },
+    {
+      "id": "subtopic-07-019",
+      "text": "Underfitting"
+    },
+    {
+      "id": "subtopic-07-020",
+      "text": "Bias-variance trade-off"
+    },
+    {
+      "id": "subtopic-07-021",
+      "text": "Regularization"
+    },
+    {
+      "id": "subtopic-07-022",
+      "text": "Cross-validation"
+    },
+    {
+      "id": "subtopic-07-023",
+      "text": "Hyperparameter tuning"
+    },
+    {
+      "id": "subtopic-07-024",
+      "text": "Learning curves"
+    },
+    {
+      "id": "subtopic-07-025",
+      "text": "Model selection"
+    },
+    {
+      "id": "subtopic-07-026",
+      "text": "Baseline models"
+    },
+    {
+      "id": "subtopic-07-027",
+      "text": "Class imbalance"
+    },
+    {
+      "id": "subtopic-07-028",
+      "text": "Data augmentation"
+    },
+    {
+      "id": "subtopic-07-029",
+      "text": "Model interpretability"
+    },
+    {
+      "id": "subtopic-07-030",
+      "text": "ML development workflows"
+    },
+    {
+      "id": "subtopic-08-001",
+      "text": "Linear regression"
+    },
+    {
+      "id": "subtopic-08-002",
+      "text": "Polynomial regression"
+    },
+    {
+      "id": "subtopic-08-003",
+      "text": "Ridge regression"
+    },
+    {
+      "id": "subtopic-08-004",
+      "text": "Lasso regression"
+    },
+    {
+      "id": "subtopic-08-005",
+      "text": "Elastic Net regression"
+    },
+    {
+      "id": "subtopic-08-006",
+      "text": "Logistic regression"
+    },
+    {
+      "id": "subtopic-08-007",
+      "text": "k-Nearest Neighbors (k-NN)"
+    },
+    {
+      "id": "subtopic-08-008",
+      "text": "Naive Bayes"
+    },
+    {
+      "id": "subtopic-08-009",
+      "text": "Decision trees"
+    },
+    {
+      "id": "subtopic-08-010",
+      "text": "Random forests"
+    },
+    {
+      "id": "subtopic-08-011",
+      "text": "Extra Trees"
+    },
+    {
+      "id": "subtopic-08-012",
+      "text": "Support Vector Machines (SVM)"
+    },
+    {
+      "id": "subtopic-08-013",
+      "text": "Support Vector Regression (SVR)"
+    },
+    {
+      "id": "subtopic-08-014",
+      "text": "Bagging"
+    },
+    {
+      "id": "subtopic-08-015",
+      "text": "Boosting"
+    },
+    {
+      "id": "subtopic-08-016",
+      "text": "AdaBoost"
+    },
+    {
+      "id": "subtopic-08-017",
+      "text": "Gradient Boosting"
+    },
+    {
+      "id": "subtopic-08-018",
+      "text": "XGBoost"
+    },
+    {
+      "id": "subtopic-08-019",
+      "text": "LightGBM"
+    },
+    {
+      "id": "subtopic-08-020",
+      "text": "CatBoost"
+    },
+    {
+      "id": "subtopic-08-021",
+      "text": "Stacking"
+    },
+    {
+      "id": "subtopic-08-022",
+      "text": "Voting ensembles"
+    },
+    {
+      "id": "subtopic-08-023",
+      "text": "Generalized linear models"
+    },
+    {
+      "id": "subtopic-08-024",
+      "text": "Gaussian processes"
+    },
+    {
+      "id": "subtopic-08-025",
+      "text": "Neural networks for tabular data"
+    },
+    {
+      "id": "subtopic-09-001",
+      "text": "Clustering fundamentals"
+    },
+    {
+      "id": "subtopic-09-002",
+      "text": "K-Means"
+    },
+    {
+      "id": "subtopic-09-003",
+      "text": "K-Medoids"
+    },
+    {
+      "id": "subtopic-09-004",
+      "text": "Hierarchical clustering"
+    },
+    {
+      "id": "subtopic-09-005",
+      "text": "DBSCAN"
+    },
+    {
+      "id": "subtopic-09-006",
+      "text": "HDBSCAN"
+    },
+    {
+      "id": "subtopic-09-007",
+      "text": "Gaussian Mixture Models"
+    },
+    {
+      "id": "subtopic-09-008",
+      "text": "Expectation-Maximization"
+    },
+    {
+      "id": "subtopic-09-009",
+      "text": "Spectral clustering"
+    },
+    {
+      "id": "subtopic-09-010",
+      "text": "Dimensionality reduction"
+    },
+    {
+      "id": "subtopic-09-011",
+      "text": "Principal Component Analysis (PCA)"
+    },
+    {
+      "id": "subtopic-09-012",
+      "text": "Kernel PCA"
+    },
+    {
+      "id": "subtopic-09-013",
+      "text": "Independent Component Analysis (ICA)"
+    },
+    {
+      "id": "subtopic-09-014",
+      "text": "t-SNE"
+    },
+    {
+      "id": "subtopic-09-015",
+      "text": "UMAP"
+    },
+    {
+      "id": "subtopic-09-016",
+      "text": "Matrix factorization"
+    },
+    {
+      "id": "subtopic-09-017",
+      "text": "Association rule mining"
+    },
+    {
+      "id": "subtopic-09-018",
+      "text": "Apriori algorithm"
+    },
+    {
+      "id": "subtopic-09-019",
+      "text": "Anomaly detection"
+    },
+    {
+      "id": "subtopic-09-020",
+      "text": "Isolation Forest"
+    },
+    {
+      "id": "subtopic-09-021",
+      "text": "One-Class SVM"
+    },
+    {
+      "id": "subtopic-09-022",
+      "text": "Autoencoders for representation learning"
+    },
+    {
+      "id": "subtopic-10-001",
+      "text": "Train-validation-test splitting"
+    },
+    {
+      "id": "subtopic-10-002",
+      "text": "K-fold cross-validation"
+    },
+    {
+      "id": "subtopic-10-003",
+      "text": "Stratified cross-validation"
+    },
+    {
+      "id": "subtopic-10-004",
+      "text": "Time-series validation"
+    },
+    {
+      "id": "subtopic-10-005",
+      "text": "Confusion matrix"
+    },
+    {
+      "id": "subtopic-10-006",
+      "text": "Accuracy"
+    },
+    {
+      "id": "subtopic-10-007",
+      "text": "Precision and recall"
+    },
+    {
+      "id": "subtopic-10-008",
+      "text": "F1-score"
+    },
+    {
+      "id": "subtopic-10-009",
+      "text": "Specificity and sensitivity"
+    },
+    {
+      "id": "subtopic-10-010",
+      "text": "ROC curves and AUC"
+    },
+    {
+      "id": "subtopic-10-011",
+      "text": "Precision-recall curves"
+    },
+    {
+      "id": "subtopic-10-012",
+      "text": "Calibration"
+    },
+    {
+      "id": "subtopic-10-013",
+      "text": "Log loss"
+    },
+    {
+      "id": "subtopic-10-014",
+      "text": "MAE, MSE, RMSE"
+    },
+    {
+      "id": "subtopic-10-015",
+      "text": "R-squared"
+    },
+    {
+      "id": "subtopic-10-016",
+      "text": "Clustering evaluation metrics"
+    },
+    {
+      "id": "subtopic-10-017",
+      "text": "Ranking metrics"
+    },
+    {
+      "id": "subtopic-10-018",
+      "text": "Hyperparameter search"
+    },
+    {
+      "id": "subtopic-10-019",
+      "text": "Grid search"
+    },
+    {
+      "id": "subtopic-10-020",
+      "text": "Random search"
+    },
+    {
+      "id": "subtopic-10-021",
+      "text": "Bayesian optimization"
+    },
+    {
+      "id": "subtopic-10-022",
+      "text": "Ablation studies"
+    },
+    {
+      "id": "subtopic-10-023",
+      "text": "Error analysis"
+    },
+    {
+      "id": "subtopic-10-024",
+      "text": "Statistical model comparisons"
+    },
+    {
+      "id": "subtopic-10-025",
+      "text": "Reproducible experiments"
+    },
+    {
+      "id": "subtopic-11-001",
+      "text": "Feature transformation"
+    },
+    {
+      "id": "subtopic-11-002",
+      "text": "Feature scaling"
+    },
+    {
+      "id": "subtopic-11-003",
+      "text": "Feature encoding"
+    },
+    {
+      "id": "subtopic-11-004",
+      "text": "Feature interactions"
+    },
+    {
+      "id": "subtopic-11-005",
+      "text": "Polynomial features"
+    },
+    {
+      "id": "subtopic-11-006",
+      "text": "Feature selection methods"
+    },
+    {
+      "id": "subtopic-11-007",
+      "text": "Missing-data imputation"
+    },
+    {
+      "id": "subtopic-11-008",
+      "text": "Class imbalance techniques"
+    },
+    {
+      "id": "subtopic-11-009",
+      "text": "SMOTE and resampling"
+    },
+    {
+      "id": "subtopic-11-010",
+      "text": "Data augmentation"
+    },
+    {
+      "id": "subtopic-11-011",
+      "text": "Pipeline construction"
+    },
+    {
+      "id": "subtopic-11-012",
+      "text": "Scikit-learn pipelines"
+    },
+    {
+      "id": "subtopic-11-013",
+      "text": "Tabular ML"
+    },
+    {
+      "id": "subtopic-11-014",
+      "text": "Time-series forecasting"
+    },
+    {
+      "id": "subtopic-11-015",
+      "text": "Recommendation systems"
+    },
+    {
+      "id": "subtopic-11-016",
+      "text": "Ranking systems"
+    },
+    {
+      "id": "subtopic-11-017",
+      "text": "Fraud detection"
+    },
+    {
+      "id": "subtopic-11-018",
+      "text": "Predictive maintenance"
+    },
+    {
+      "id": "subtopic-11-019",
+      "text": "Demand forecasting"
+    },
+    {
+      "id": "subtopic-11-020",
+      "text": "Interpretable ML"
+    },
+    {
+      "id": "subtopic-11-021",
+      "text": "SHAP"
+    },
+    {
+      "id": "subtopic-11-022",
+      "text": "LIME"
+    },
+    {
+      "id": "subtopic-11-023",
+      "text": "Fairness evaluation"
+    },
+    {
+      "id": "subtopic-11-024",
+      "text": "Causal inference fundamentals"
+    },
+    {
+      "id": "subtopic-11-025",
+      "text": "A/B testing"
+    },
+    {
+      "id": "subtopic-12-001",
+      "text": "What is Deep Learning?"
+    },
+    {
+      "id": "subtopic-12-002",
+      "text": "Biological vs artificial neurons"
+    },
+    {
+      "id": "subtopic-12-003",
+      "text": "Perceptrons"
+    },
+    {
+      "id": "subtopic-12-004",
+      "text": "Multilayer perceptrons (MLPs)"
+    },
+    {
+      "id": "subtopic-12-005",
+      "text": "Feedforward neural networks"
+    },
+    {
+      "id": "subtopic-12-006",
+      "text": "Weights and biases"
+    },
+    {
+      "id": "subtopic-12-007",
+      "text": "Activation functions"
+    },
+    {
+      "id": "subtopic-12-008",
+      "text": "Sigmoid"
+    },
+    {
+      "id": "subtopic-12-009",
+      "text": "Tanh"
+    },
+    {
+      "id": "subtopic-12-010",
+      "text": "ReLU and variants"
+    },
+    {
+      "id": "subtopic-12-011",
+      "text": "Softmax"
+    },
+    {
+      "id": "subtopic-12-012",
+      "text": "Forward propagation"
+    },
+    {
+      "id": "subtopic-12-013",
+      "text": "Loss functions"
+    },
+    {
+      "id": "subtopic-12-014",
+      "text": "Backpropagation"
+    },
+    {
+      "id": "subtopic-12-015",
+      "text": "Computational graphs"
+    },
+    {
+      "id": "subtopic-12-016",
+      "text": "Automatic differentiation"
+    },
+    {
+      "id": "subtopic-12-017",
+      "text": "Gradient descent"
+    },
+    {
+      "id": "subtopic-12-018",
+      "text": "Mini-batch training"
+    },
+    {
+      "id": "subtopic-12-019",
+      "text": "Momentum"
+    },
+    {
+      "id": "subtopic-12-020",
+      "text": "RMSProp"
+    },
+    {
+      "id": "subtopic-12-021",
+      "text": "Adam and AdamW"
+    },
+    {
+      "id": "subtopic-12-022",
+      "text": "Weight initialization"
+    },
+    {
+      "id": "subtopic-12-023",
+      "text": "Vanishing gradients"
+    },
+    {
+      "id": "subtopic-12-024",
+      "text": "Exploding gradients"
+    },
+    {
+      "id": "subtopic-12-025",
+      "text": "Batch normalization"
+    },
+    {
+      "id": "subtopic-12-026",
+      "text": "Layer normalization"
+    },
+    {
+      "id": "subtopic-12-027",
+      "text": "Dropout"
+    },
+    {
+      "id": "subtopic-12-028",
+      "text": "Weight decay"
+    },
+    {
+      "id": "subtopic-12-029",
+      "text": "Early stopping"
+    },
+    {
+      "id": "subtopic-12-030",
+      "text": "Learning-rate scheduling"
+    },
+    {
+      "id": "subtopic-12-031",
+      "text": "Residual connections"
+    },
+    {
+      "id": "subtopic-12-032",
+      "text": "Skip connections"
+    },
+    {
+      "id": "subtopic-12-033",
+      "text": "Embedding layers"
+    },
+    {
+      "id": "subtopic-12-034",
+      "text": "GPU training"
+    },
+    {
+      "id": "subtopic-12-035",
+      "text": "Mixed-precision training"
+    },
+    {
+      "id": "subtopic-12-036",
+      "text": "PyTorch fundamentals"
+    },
+    {
+      "id": "subtopic-12-037",
+      "text": "TensorFlow and Keras fundamentals"
+    },
+    {
+      "id": "subtopic-12-038",
+      "text": "Training loops"
+    },
+    {
+      "id": "subtopic-12-039",
+      "text": "Checkpointing"
+    },
+    {
+      "id": "subtopic-12-040",
+      "text": "Debugging neural network training"
+    },
+    {
+      "id": "subtopic-13-001",
+      "text": "Fully connected networks"
+    },
+    {
+      "id": "subtopic-13-002",
+      "text": "Convolutional Neural Networks (CNNs)"
+    },
+    {
+      "id": "subtopic-13-003",
+      "text": "Convolutions and filters"
+    },
+    {
+      "id": "subtopic-13-004",
+      "text": "Pooling layers"
+    },
+    {
+      "id": "subtopic-13-005",
+      "text": "ResNet"
+    },
+    {
+      "id": "subtopic-13-006",
+      "text": "VGG"
+    },
+    {
+      "id": "subtopic-13-007",
+      "text": "EfficientNet"
+    },
+    {
+      "id": "subtopic-13-008",
+      "text": "Recurrent Neural Networks (RNNs)"
+    },
+    {
+      "id": "subtopic-13-009",
+      "text": "Long Short-Term Memory (LSTM)"
+    },
+    {
+      "id": "subtopic-13-010",
+      "text": "Gated Recurrent Units (GRUs)"
+    },
+    {
+      "id": "subtopic-13-011",
+      "text": "Sequence-to-sequence architectures"
+    },
+    {
+      "id": "subtopic-13-012",
+      "text": "Encoder-decoder models"
+    },
+    {
+      "id": "subtopic-13-013",
+      "text": "Attention mechanisms"
+    },
+    {
+      "id": "subtopic-13-014",
+      "text": "Self-attention"
+    },
+    {
+      "id": "subtopic-13-015",
+      "text": "Transformers"
+    },
+    {
+      "id": "subtopic-13-016",
+      "text": "Encoder-only Transformers"
+    },
+    {
+      "id": "subtopic-13-017",
+      "text": "Decoder-only Transformers"
+    },
+    {
+      "id": "subtopic-13-018",
+      "text": "Encoder-decoder Transformers"
+    },
+    {
+      "id": "subtopic-13-019",
+      "text": "Autoencoders"
+    },
+    {
+      "id": "subtopic-13-020",
+      "text": "Variational Autoencoders (VAEs)"
+    },
+    {
+      "id": "subtopic-13-021",
+      "text": "Siamese networks"
+    },
+    {
+      "id": "subtopic-13-022",
+      "text": "Graph Neural Networks (GNNs)"
+    },
+    {
+      "id": "subtopic-13-023",
+      "text": "Neural Ordinary Differential Equations"
+    },
+    {
+      "id": "subtopic-13-024",
+      "text": "Mixture-of-Experts architectures"
+    },
+    {
+      "id": "subtopic-13-025",
+      "text": "State Space Models (SSMs)"
+    },
+    {
+      "id": "subtopic-14-001",
+      "text": "Introduction to NLP"
+    },
+    {
+      "id": "subtopic-14-002",
+      "text": "Linguistics fundamentals"
+    },
+    {
+      "id": "subtopic-14-003",
+      "text": "Syntax, semantics, and pragmatics"
+    },
+    {
+      "id": "subtopic-14-004",
+      "text": "Text normalization"
+    },
+    {
+      "id": "subtopic-14-005",
+      "text": "Tokenization"
+    },
+    {
+      "id": "subtopic-14-006",
+      "text": "Stemming"
+    },
+    {
+      "id": "subtopic-14-007",
+      "text": "Lemmatization"
+    },
+    {
+      "id": "subtopic-14-008",
+      "text": "Stop-word removal"
+    },
+    {
+      "id": "subtopic-14-009",
+      "text": "Part-of-speech tagging"
+    },
+    {
+      "id": "subtopic-14-010",
+      "text": "Named Entity Recognition (NER)"
+    },
+    {
+      "id": "subtopic-14-011",
+      "text": "Dependency parsing"
+    },
+    {
+      "id": "subtopic-14-012",
+      "text": "Constituency parsing"
+    },
+    {
+      "id": "subtopic-14-013",
+      "text": "Bag-of-Words"
+    },
+    {
+      "id": "subtopic-14-014",
+      "text": "TF-IDF"
+    },
+    {
+      "id": "subtopic-14-015",
+      "text": "N-gram language models"
+    },
+    {
+      "id": "subtopic-14-016",
+      "text": "Word2Vec"
+    },
+    {
+      "id": "subtopic-14-017",
+      "text": "GloVe"
+    },
+    {
+      "id": "subtopic-14-018",
+      "text": "FastText"
+    },
+    {
+      "id": "subtopic-14-019",
+      "text": "Contextual embeddings"
+    },
+    {
+      "id": "subtopic-14-020",
+      "text": "Language modeling"
+    },
+    {
+      "id": "subtopic-14-021",
+      "text": "Sequence labeling"
+    },
+    {
+      "id": "subtopic-14-022",
+      "text": "Text classification"
+    },
+    {
+      "id": "subtopic-14-023",
+      "text": "Sentiment analysis"
+    },
+    {
+      "id": "subtopic-14-024",
+      "text": "Topic modeling"
+    },
+    {
+      "id": "subtopic-14-025",
+      "text": "Semantic similarity"
+    },
+    {
+      "id": "subtopic-14-026",
+      "text": "Information retrieval"
+    },
+    {
+      "id": "subtopic-14-027",
+      "text": "Machine translation"
+    },
+    {
+      "id": "subtopic-14-028",
+      "text": "Text summarization"
+    },
+    {
+      "id": "subtopic-14-029",
+      "text": "Question answering"
+    },
+    {
+      "id": "subtopic-14-030",
+      "text": "Natural Language Inference (NLI)"
+    },
+    {
+      "id": "subtopic-14-031",
+      "text": "Coreference resolution"
+    },
+    {
+      "id": "subtopic-14-032",
+      "text": "Text generation"
+    },
+    {
+      "id": "subtopic-14-033",
+      "text": "Multilingual NLP"
+    },
+    {
+      "id": "subtopic-14-034",
+      "text": "NLP evaluation metrics"
+    },
+    {
+      "id": "subtopic-15-001",
+      "text": "Limitations of recurrent architectures"
+    },
+    {
+      "id": "subtopic-15-002",
+      "text": "Attention fundamentals"
+    },
+    {
+      "id": "subtopic-15-003",
+      "text": "Query, key, and value vectors"
+    },
+    {
+      "id": "subtopic-15-004",
+      "text": "Scaled dot-product attention"
+    },
+    {
+      "id": "subtopic-15-005",
+      "text": "Multi-head attention"
+    },
+    {
+      "id": "subtopic-15-006",
+      "text": "Self-attention"
+    },
+    {
+      "id": "subtopic-15-007",
+      "text": "Cross-attention"
+    },
+    {
+      "id": "subtopic-15-008",
+      "text": "Positional encoding"
+    },
+    {
+      "id": "subtopic-15-009",
+      "text": "Rotary Position Embeddings (RoPE)"
+    },
+    {
+      "id": "subtopic-15-010",
+      "text": "Relative positional embeddings"
+    },
+    {
+      "id": "subtopic-15-011",
+      "text": "Transformer encoders"
+    },
+    {
+      "id": "subtopic-15-012",
+      "text": "Transformer decoders"
+    },
+    {
+      "id": "subtopic-15-013",
+      "text": "Encoder-decoder Transformers"
+    },
+    {
+      "id": "subtopic-15-014",
+      "text": "Causal attention masks"
+    },
+    {
+      "id": "subtopic-15-015",
+      "text": "Bidirectional attention"
+    },
+    {
+      "id": "subtopic-15-016",
+      "text": "Feedforward network blocks"
+    },
+    {
+      "id": "subtopic-15-017",
+      "text": "Residual connections"
+    },
+    {
+      "id": "subtopic-15-018",
+      "text": "Layer normalization"
+    },
+    {
+      "id": "subtopic-15-019",
+      "text": "Token embeddings"
+    },
+    {
+      "id": "subtopic-15-020",
+      "text": "Context length"
+    },
+    {
+      "id": "subtopic-15-021",
+      "text": "Attention complexity"
+    },
+    {
+      "id": "subtopic-15-022",
+      "text": "FlashAttention"
+    },
+    {
+      "id": "subtopic-15-023",
+      "text": "Grouped-Query Attention (GQA)"
+    },
+    {
+      "id": "subtopic-15-024",
+      "text": "Multi-Query Attention (MQA)"
+    },
+    {
+      "id": "subtopic-15-025",
+      "text": "Key-value caching"
+    },
+    {
+      "id": "subtopic-15-026",
+      "text": "Sparse attention"
+    },
+    {
+      "id": "subtopic-15-027",
+      "text": "Sliding-window attention"
+    },
+    {
+      "id": "subtopic-15-028",
+      "text": "Long-context architectures"
+    },
+    {
+      "id": "subtopic-15-029",
+      "text": "Mixture-of-Experts Transformers"
+    },
+    {
+      "id": "subtopic-15-030",
+      "text": "Transformer training and inference"
+    },
+    {
+      "id": "subtopic-16-001",
+      "text": "What is an LLM?"
+    },
+    {
+      "id": "subtopic-16-002",
+      "text": "Evolution of language models"
+    },
+    {
+      "id": "subtopic-16-003",
+      "text": "GPT-style architectures"
+    },
+    {
+      "id": "subtopic-16-004",
+      "text": "BERT-style architectures"
+    },
+    {
+      "id": "subtopic-16-005",
+      "text": "T5-style architectures"
+    },
+    {
+      "id": "subtopic-16-006",
+      "text": "Autoregressive language modeling"
+    },
+    {
+      "id": "subtopic-16-007",
+      "text": "Masked language modeling"
+    },
+    {
+      "id": "subtopic-16-008",
+      "text": "Tokenization algorithms"
+    },
+    {
+      "id": "subtopic-16-009",
+      "text": "Byte Pair Encoding (BPE)"
+    },
+    {
+      "id": "subtopic-16-010",
+      "text": "WordPiece and SentencePiece"
+    },
+    {
+      "id": "subtopic-16-011",
+      "text": "Tokens and vocabulary size"
+    },
+    {
+      "id": "subtopic-16-012",
+      "text": "Context windows"
+    },
+    {
+      "id": "subtopic-16-013",
+      "text": "Pretraining objectives"
+    },
+    {
+      "id": "subtopic-16-014",
+      "text": "Pretraining datasets"
+    },
+    {
+      "id": "subtopic-16-015",
+      "text": "Scaling laws"
+    },
+    {
+      "id": "subtopic-16-016",
+      "text": "Model parameters"
+    },
+    {
+      "id": "subtopic-16-017",
+      "text": "Dense vs Mixture-of-Experts models"
+    },
+    {
+      "id": "subtopic-16-018",
+      "text": "Base models vs instruction-tuned models"
+    },
+    {
+      "id": "subtopic-16-019",
+      "text": "Instruction tuning"
+    },
+    {
+      "id": "subtopic-16-020",
+      "text": "Supervised Fine-Tuning (SFT)"
+    },
+    {
+      "id": "subtopic-16-021",
+      "text": "Preference optimization"
+    },
+    {
+      "id": "subtopic-16-022",
+      "text": "Reinforcement Learning from Human Feedback (RLHF)"
+    },
+    {
+      "id": "subtopic-16-023",
+      "text": "Direct Preference Optimization (DPO)"
+    },
+    {
+      "id": "subtopic-16-024",
+      "text": "Reasoning-oriented models"
+    },
+    {
+      "id": "subtopic-16-025",
+      "text": "Test-time compute"
+    },
+    {
+      "id": "subtopic-16-026",
+      "text": "Chain-of-thought reasoning concepts"
+    },
+    {
+      "id": "subtopic-16-027",
+      "text": "In-context learning"
+    },
+    {
+      "id": "subtopic-16-028",
+      "text": "Few-shot learning"
+    },
+    {
+      "id": "subtopic-16-029",
+      "text": "Zero-shot learning"
+    },
+    {
+      "id": "subtopic-16-030",
+      "text": "Emergent capabilities and their evaluation"
+    },
+    {
+      "id": "subtopic-16-031",
+      "text": "Hallucinations"
+    },
+    {
+      "id": "subtopic-16-032",
+      "text": "Knowledge limitations"
+    },
+    {
+      "id": "subtopic-16-033",
+      "text": "Model benchmarking"
+    },
+    {
+      "id": "subtopic-16-034",
+      "text": "Open-weight vs proprietary models"
+    },
+    {
+      "id": "subtopic-16-035",
+      "text": "LLM inference lifecycle"
+    },
+    {
+      "id": "subtopic-17-001",
+      "text": "What is a prompt?"
+    },
+    {
+      "id": "subtopic-17-002",
+      "text": "Prompt structure"
+    },
+    {
+      "id": "subtopic-17-003",
+      "text": "System, developer, and user instructions"
+    },
+    {
+      "id": "subtopic-17-004",
+      "text": "Zero-shot prompting"
+    },
+    {
+      "id": "subtopic-17-005",
+      "text": "One-shot prompting"
+    },
+    {
+      "id": "subtopic-17-006",
+      "text": "Few-shot prompting"
+    },
+    {
+      "id": "subtopic-17-007",
+      "text": "Instruction design"
+    },
+    {
+      "id": "subtopic-17-008",
+      "text": "Role and persona prompting"
+    },
+    {
+      "id": "subtopic-17-009",
+      "text": "Context management"
+    },
+    {
+      "id": "subtopic-17-010",
+      "text": "Task decomposition"
+    },
+    {
+      "id": "subtopic-17-011",
+      "text": "Structured prompting"
+    },
+    {
+      "id": "subtopic-17-012",
+      "text": "JSON output prompting"
+    },
+    {
+      "id": "subtopic-17-013",
+      "text": "Schema-constrained outputs"
+    },
+    {
+      "id": "subtopic-17-014",
+      "text": "Reasoning prompts"
+    },
+    {
+      "id": "subtopic-17-015",
+      "text": "Prompt chaining"
+    },
+    {
+      "id": "subtopic-17-016",
+      "text": "Self-consistency techniques"
+    },
+    {
+      "id": "subtopic-17-017",
+      "text": "Reflection and critique workflows"
+    },
+    {
+      "id": "subtopic-17-018",
+      "text": "Retrieval-grounded prompting"
+    },
+    {
+      "id": "subtopic-17-019",
+      "text": "Tool-use prompting"
+    },
+    {
+      "id": "subtopic-17-020",
+      "text": "Multi-turn conversation design"
+    },
+    {
+      "id": "subtopic-17-021",
+      "text": "Prompt templates"
+    },
+    {
+      "id": "subtopic-17-022",
+      "text": "Prompt versioning"
+    },
+    {
+      "id": "subtopic-17-023",
+      "text": "Prompt evaluation"
+    },
+    {
+      "id": "subtopic-17-024",
+      "text": "Prompt injection"
+    },
+    {
+      "id": "subtopic-17-025",
+      "text": "Jailbreak resistance"
+    },
+    {
+      "id": "subtopic-17-026",
+      "text": "Prompt caching"
+    },
+    {
+      "id": "subtopic-17-027",
+      "text": "Context compression"
+    },
+    {
+      "id": "subtopic-17-028",
+      "text": "Long-context management"
+    },
+    {
+      "id": "subtopic-17-029",
+      "text": "Token budgeting"
+    },
+    {
+      "id": "subtopic-17-030",
+      "text": "Production prompt optimization"
+    },
+    {
+      "id": "subtopic-18-001",
+      "text": "What are embeddings?"
+    },
+    {
+      "id": "subtopic-18-002",
+      "text": "Semantic representation"
+    },
+    {
+      "id": "subtopic-18-003",
+      "text": "Dense embeddings"
+    },
+    {
+      "id": "subtopic-18-004",
+      "text": "Sparse embeddings"
+    },
+    {
+      "id": "subtopic-18-005",
+      "text": "Text embedding models"
+    },
+    {
+      "id": "subtopic-18-006",
+      "text": "Sentence embeddings"
+    },
+    {
+      "id": "subtopic-18-007",
+      "text": "Document embeddings"
+    },
+    {
+      "id": "subtopic-18-008",
+      "text": "Multimodal embeddings"
+    },
+    {
+      "id": "subtopic-18-009",
+      "text": "Embedding dimensionality"
+    },
+    {
+      "id": "subtopic-18-010",
+      "text": "Cosine similarity"
+    },
+    {
+      "id": "subtopic-18-011",
+      "text": "Dot-product similarity"
+    },
+    {
+      "id": "subtopic-18-012",
+      "text": "Euclidean distance"
+    },
+    {
+      "id": "subtopic-18-013",
+      "text": "Nearest-neighbor search"
+    },
+    {
+      "id": "subtopic-18-014",
+      "text": "Approximate Nearest Neighbor (ANN) algorithms"
+    },
+    {
+      "id": "subtopic-18-015",
+      "text": "Hierarchical Navigable Small World (HNSW)"
+    },
+    {
+      "id": "subtopic-18-016",
+      "text": "FAISS"
+    },
+    {
+      "id": "subtopic-18-017",
+      "text": "Vector databases"
+    },
+    {
+      "id": "subtopic-18-018",
+      "text": "Vector indexing"
+    },
+    {
+      "id": "subtopic-18-019",
+      "text": "Metadata filtering"
+    },
+    {
+      "id": "subtopic-18-020",
+      "text": "Semantic search"
+    },
+    {
+      "id": "subtopic-18-021",
+      "text": "Keyword search"
+    },
+    {
+      "id": "subtopic-18-022",
+      "text": "Hybrid search"
+    },
+    {
+      "id": "subtopic-18-023",
+      "text": "BM25"
+    },
+    {
+      "id": "subtopic-18-024",
+      "text": "Query expansion"
+    },
+    {
+      "id": "subtopic-18-025",
+      "text": "Re-ranking"
+    },
+    {
+      "id": "subtopic-18-026",
+      "text": "Cross-encoders"
+    },
+    {
+      "id": "subtopic-18-027",
+      "text": "Retrieval evaluation"
+    },
+    {
+      "id": "subtopic-18-028",
+      "text": "Embedding model evaluation"
+    },
+    {
+      "id": "subtopic-18-029",
+      "text": "Vector index maintenance"
+    },
+    {
+      "id": "subtopic-18-030",
+      "text": "Semantic caching"
+    },
+    {
+      "id": "subtopic-19-001",
+      "text": "What is RAG?"
+    },
+    {
+      "id": "subtopic-19-002",
+      "text": "Why RAG is needed"
+    },
+    {
+      "id": "subtopic-19-003",
+      "text": "RAG architecture"
+    },
+    {
+      "id": "subtopic-19-004",
+      "text": "Document ingestion"
+    },
+    {
+      "id": "subtopic-19-005",
+      "text": "Document parsing"
+    },
+    {
+      "id": "subtopic-19-006",
+      "text": "OCR fundamentals"
+    },
+    {
+      "id": "subtopic-19-007",
+      "text": "Text extraction"
+    },
+    {
+      "id": "subtopic-19-008",
+      "text": "Document chunking"
+    },
+    {
+      "id": "subtopic-19-009",
+      "text": "Fixed-size chunking"
+    },
+    {
+      "id": "subtopic-19-010",
+      "text": "Semantic chunking"
+    },
+    {
+      "id": "subtopic-19-011",
+      "text": "Recursive chunking"
+    },
+    {
+      "id": "subtopic-19-012",
+      "text": "Chunk overlap"
+    },
+    {
+      "id": "subtopic-19-013",
+      "text": "Metadata enrichment"
+    },
+    {
+      "id": "subtopic-19-014",
+      "text": "Embedding generation"
+    },
+    {
+      "id": "subtopic-19-015",
+      "text": "Document indexing"
+    },
+    {
+      "id": "subtopic-19-016",
+      "text": "Query processing"
+    },
+    {
+      "id": "subtopic-19-017",
+      "text": "Query rewriting"
+    },
+    {
+      "id": "subtopic-19-018",
+      "text": "Query decomposition"
+    },
+    {
+      "id": "subtopic-19-019",
+      "text": "Retrieval strategies"
+    },
+    {
+      "id": "subtopic-19-020",
+      "text": "Hybrid retrieval"
+    },
+    {
+      "id": "subtopic-19-021",
+      "text": "Re-ranking"
+    },
+    {
+      "id": "subtopic-19-022",
+      "text": "Context assembly"
+    },
+    {
+      "id": "subtopic-19-023",
+      "text": "Citation generation"
+    },
+    {
+      "id": "subtopic-19-024",
+      "text": "Grounded answer generation"
+    },
+    {
+      "id": "subtopic-19-025",
+      "text": "Conversational RAG"
+    },
+    {
+      "id": "subtopic-19-026",
+      "text": "Multi-query RAG"
+    },
+    {
+      "id": "subtopic-19-027",
+      "text": "Parent-child retrieval"
+    },
+    {
+      "id": "subtopic-19-028",
+      "text": "Hierarchical RAG"
+    },
+    {
+      "id": "subtopic-19-029",
+      "text": "Graph RAG"
+    },
+    {
+      "id": "subtopic-19-030",
+      "text": "Agentic RAG"
+    },
+    {
+      "id": "subtopic-19-031",
+      "text": "Multimodal RAG"
+    },
+    {
+      "id": "subtopic-19-032",
+      "text": "Long-context RAG"
+    },
+    {
+      "id": "subtopic-19-033",
+      "text": "RAG hallucination mitigation"
+    },
+    {
+      "id": "subtopic-19-034",
+      "text": "Retrieval precision and recall"
+    },
+    {
+      "id": "subtopic-19-035",
+      "text": "Faithfulness evaluation"
+    },
+    {
+      "id": "subtopic-19-036",
+      "text": "Answer relevance evaluation"
+    },
+    {
+      "id": "subtopic-19-037",
+      "text": "RAG observability"
+    },
+    {
+      "id": "subtopic-19-038",
+      "text": "Access-controlled RAG"
+    },
+    {
+      "id": "subtopic-19-039",
+      "text": "RAG security"
+    },
+    {
+      "id": "subtopic-19-040",
+      "text": "Production RAG architecture"
+    },
+    {
+      "id": "subtopic-20-001",
+      "text": "Pretraining vs fine-tuning"
+    },
+    {
+      "id": "subtopic-20-002",
+      "text": "Transfer learning"
+    },
+    {
+      "id": "subtopic-20-003",
+      "text": "Domain adaptation"
+    },
+    {
+      "id": "subtopic-20-004",
+      "text": "Continued pretraining"
+    },
+    {
+      "id": "subtopic-20-005",
+      "text": "Supervised Fine-Tuning (SFT)"
+    },
+    {
+      "id": "subtopic-20-006",
+      "text": "Instruction dataset preparation"
+    },
+    {
+      "id": "subtopic-20-007",
+      "text": "Data formatting"
+    },
+    {
+      "id": "subtopic-20-008",
+      "text": "Data quality filtering"
+    },
+    {
+      "id": "subtopic-20-009",
+      "text": "Full-parameter fine-tuning"
+    },
+    {
+      "id": "subtopic-20-010",
+      "text": "Parameter-Efficient Fine-Tuning (PEFT)"
+    },
+    {
+      "id": "subtopic-20-011",
+      "text": "Low-Rank Adaptation (LoRA)"
+    },
+    {
+      "id": "subtopic-20-012",
+      "text": "Quantized LoRA (QLoRA)"
+    },
+    {
+      "id": "subtopic-20-013",
+      "text": "Adapters"
+    },
+    {
+      "id": "subtopic-20-014",
+      "text": "Prefix tuning"
+    },
+    {
+      "id": "subtopic-20-015",
+      "text": "Prompt tuning"
+    },
+    {
+      "id": "subtopic-20-016",
+      "text": "Knowledge distillation"
+    },
+    {
+      "id": "subtopic-20-017",
+      "text": "Preference datasets"
+    },
+    {
+      "id": "subtopic-20-018",
+      "text": "Reward modeling"
+    },
+    {
+      "id": "subtopic-20-019",
+      "text": "RLHF"
+    },
+    {
+      "id": "subtopic-20-020",
+      "text": "DPO"
+    },
+    {
+      "id": "subtopic-20-021",
+      "text": "Other preference optimization methods"
+    },
+    {
+      "id": "subtopic-20-022",
+      "text": "Synthetic training data"
+    },
+    {
+      "id": "subtopic-20-023",
+      "text": "Data augmentation for fine-tuning"
+    },
+    {
+      "id": "subtopic-20-024",
+      "text": "Catastrophic forgetting"
+    },
+    {
+      "id": "subtopic-20-025",
+      "text": "Fine-tuning evaluation"
+    },
+    {
+      "id": "subtopic-20-026",
+      "text": "Safety alignment"
+    },
+    {
+      "id": "subtopic-20-027",
+      "text": "Model merging"
+    },
+    {
+      "id": "subtopic-20-028",
+      "text": "Fine-tuning cost optimization"
+    },
+    {
+      "id": "subtopic-20-029",
+      "text": "Checkpoint management"
+    },
+    {
+      "id": "subtopic-20-030",
+      "text": "Deployment of fine-tuned models"
+    },
+    {
+      "id": "subtopic-21-001",
+      "text": "Introduction to Generative AI"
+    },
+    {
+      "id": "subtopic-21-002",
+      "text": "Generative vs discriminative modeling"
+    },
+    {
+      "id": "subtopic-21-003",
+      "text": "Probability density estimation"
+    },
+    {
+      "id": "subtopic-21-004",
+      "text": "Autoregressive generation"
+    },
+    {
+      "id": "subtopic-21-005",
+      "text": "Variational Autoencoders (VAEs)"
+    },
+    {
+      "id": "subtopic-21-006",
+      "text": "Generative Adversarial Networks (GANs)"
+    },
+    {
+      "id": "subtopic-21-007",
+      "text": "Diffusion models"
+    },
+    {
+      "id": "subtopic-21-008",
+      "text": "Denoising diffusion"
+    },
+    {
+      "id": "subtopic-21-009",
+      "text": "Latent diffusion"
+    },
+    {
+      "id": "subtopic-21-010",
+      "text": "Flow-based generative models"
+    },
+    {
+      "id": "subtopic-21-011",
+      "text": "Flow matching"
+    },
+    {
+      "id": "subtopic-21-012",
+      "text": "Normalizing flows"
+    },
+    {
+      "id": "subtopic-21-013",
+      "text": "Text generation"
+    },
+    {
+      "id": "subtopic-21-014",
+      "text": "Image generation"
+    },
+    {
+      "id": "subtopic-21-015",
+      "text": "Audio generation"
+    },
+    {
+      "id": "subtopic-21-016",
+      "text": "Music generation"
+    },
+    {
+      "id": "subtopic-21-017",
+      "text": "Video generation"
+    },
+    {
+      "id": "subtopic-21-018",
+      "text": "Code generation"
+    },
+    {
+      "id": "subtopic-21-019",
+      "text": "3D asset generation"
+    },
+    {
+      "id": "subtopic-21-020",
+      "text": "Multimodal content generation"
+    },
+    {
+      "id": "subtopic-21-021",
+      "text": "Conditional generation"
+    },
+    {
+      "id": "subtopic-21-022",
+      "text": "Text-to-image systems"
+    },
+    {
+      "id": "subtopic-21-023",
+      "text": "Image-to-image systems"
+    },
+    {
+      "id": "subtopic-21-024",
+      "text": "Text-to-video systems"
+    },
+    {
+      "id": "subtopic-21-025",
+      "text": "Text-to-speech systems"
+    },
+    {
+      "id": "subtopic-21-026",
+      "text": "Generative model evaluation"
+    },
+    {
+      "id": "subtopic-21-027",
+      "text": "Controllability and consistency"
+    },
+    {
+      "id": "subtopic-21-028",
+      "text": "Content authenticity and provenance"
+    },
+    {
+      "id": "subtopic-21-029",
+      "text": "Watermarking"
+    },
+    {
+      "id": "subtopic-21-030",
+      "text": "Generative AI safety"
+    },
+    {
+      "id": "subtopic-22-001",
+      "text": "Introduction to Computer Vision"
+    },
+    {
+      "id": "subtopic-22-002",
+      "text": "Digital image fundamentals"
+    },
+    {
+      "id": "subtopic-22-003",
+      "text": "Pixels and color spaces"
+    },
+    {
+      "id": "subtopic-22-004",
+      "text": "Image preprocessing"
+    },
+    {
+      "id": "subtopic-22-005",
+      "text": "Image filtering"
+    },
+    {
+      "id": "subtopic-22-006",
+      "text": "Edge detection"
+    },
+    {
+      "id": "subtopic-22-007",
+      "text": "Feature extraction"
+    },
+    {
+      "id": "subtopic-22-008",
+      "text": "Image augmentation"
+    },
+    {
+      "id": "subtopic-22-009",
+      "text": "Image classification"
+    },
+    {
+      "id": "subtopic-22-010",
+      "text": "Object detection"
+    },
+    {
+      "id": "subtopic-22-011",
+      "text": "Object localization"
+    },
+    {
+      "id": "subtopic-22-012",
+      "text": "Semantic segmentation"
+    },
+    {
+      "id": "subtopic-22-013",
+      "text": "Instance segmentation"
+    },
+    {
+      "id": "subtopic-22-014",
+      "text": "Panoptic segmentation"
+    },
+    {
+      "id": "subtopic-22-015",
+      "text": "CNN-based vision"
+    },
+    {
+      "id": "subtopic-22-016",
+      "text": "Transfer learning for vision"
+    },
+    {
+      "id": "subtopic-22-017",
+      "text": "Vision Transformers (ViT)"
+    },
+    {
+      "id": "subtopic-22-018",
+      "text": "YOLO architectures"
+    },
+    {
+      "id": "subtopic-22-019",
+      "text": "Region-based CNNs"
+    },
+    {
+      "id": "subtopic-22-020",
+      "text": "DETR architectures"
+    },
+    {
+      "id": "subtopic-22-021",
+      "text": "Image embeddings"
+    },
+    {
+      "id": "subtopic-22-022",
+      "text": "Optical Character Recognition (OCR)"
+    },
+    {
+      "id": "subtopic-22-023",
+      "text": "Face detection"
+    },
+    {
+      "id": "subtopic-22-024",
+      "text": "Face recognition concepts"
+    },
+    {
+      "id": "subtopic-22-025",
+      "text": "Pose estimation"
+    },
+    {
+      "id": "subtopic-22-026",
+      "text": "Human activity recognition"
+    },
+    {
+      "id": "subtopic-22-027",
+      "text": "Object tracking"
+    },
+    {
+      "id": "subtopic-22-028",
+      "text": "Optical flow"
+    },
+    {
+      "id": "subtopic-22-029",
+      "text": "Depth estimation"
+    },
+    {
+      "id": "subtopic-22-030",
+      "text": "Stereo vision"
+    },
+    {
+      "id": "subtopic-22-031",
+      "text": "3D reconstruction"
+    },
+    {
+      "id": "subtopic-22-032",
+      "text": "Image captioning"
+    },
+    {
+      "id": "subtopic-22-033",
+      "text": "Visual Question Answering (VQA)"
+    },
+    {
+      "id": "subtopic-22-034",
+      "text": "Medical image analysis"
+    },
+    {
+      "id": "subtopic-22-035",
+      "text": "Video understanding"
+    },
+    {
+      "id": "subtopic-22-036",
+      "text": "Vision-language models"
+    },
+    {
+      "id": "subtopic-22-037",
+      "text": "Open-vocabulary detection"
+    },
+    {
+      "id": "subtopic-22-038",
+      "text": "Image segmentation foundation models"
+    },
+    {
+      "id": "subtopic-22-039",
+      "text": "Computer vision evaluation metrics"
+    },
+    {
+      "id": "subtopic-22-040",
+      "text": "Real-time vision applications"
+    },
+    {
+      "id": "subtopic-23-001",
+      "text": "Digital audio fundamentals"
+    },
+    {
+      "id": "subtopic-23-002",
+      "text": "Sound waves and sampling"
+    },
+    {
+      "id": "subtopic-23-003",
+      "text": "Audio preprocessing"
+    },
+    {
+      "id": "subtopic-23-004",
+      "text": "Spectrograms"
+    },
+    {
+      "id": "subtopic-23-005",
+      "text": "Mel-frequency features"
+    },
+    {
+      "id": "subtopic-23-006",
+      "text": "Speech recognition"
+    },
+    {
+      "id": "subtopic-23-007",
+      "text": "Automatic Speech Recognition (ASR)"
+    },
+    {
+      "id": "subtopic-23-008",
+      "text": "Speech-to-text models"
+    },
+    {
+      "id": "subtopic-23-009",
+      "text": "Text-to-speech (TTS)"
+    },
+    {
+      "id": "subtopic-23-010",
+      "text": "Neural speech synthesis"
+    },
+    {
+      "id": "subtopic-23-011",
+      "text": "Speech enhancement"
+    },
+    {
+      "id": "subtopic-23-012",
+      "text": "Noise suppression"
+    },
+    {
+      "id": "subtopic-23-013",
+      "text": "Speaker identification"
+    },
+    {
+      "id": "subtopic-23-014",
+      "text": "Speaker verification"
+    },
+    {
+      "id": "subtopic-23-015",
+      "text": "Speaker diarization"
+    },
+    {
+      "id": "subtopic-23-016",
+      "text": "Voice activity detection"
+    },
+    {
+      "id": "subtopic-23-017",
+      "text": "Speech emotion recognition"
+    },
+    {
+      "id": "subtopic-23-018",
+      "text": "Speech translation"
+    },
+    {
+      "id": "subtopic-23-019",
+      "text": "Multilingual speech models"
+    },
+    {
+      "id": "subtopic-23-020",
+      "text": "Audio classification"
+    },
+    {
+      "id": "subtopic-23-021",
+      "text": "Sound event detection"
+    },
+    {
+      "id": "subtopic-23-022",
+      "text": "Music information retrieval"
+    },
+    {
+      "id": "subtopic-23-023",
+      "text": "Music generation"
+    },
+    {
+      "id": "subtopic-23-024",
+      "text": "Audio language models"
+    },
+    {
+      "id": "subtopic-23-025",
+      "text": "Real-time speech AI"
+    },
+    {
+      "id": "subtopic-23-026",
+      "text": "Streaming transcription"
+    },
+    {
+      "id": "subtopic-23-027",
+      "text": "Voice assistants"
+    },
+    {
+      "id": "subtopic-23-028",
+      "text": "Speech latency optimization"
+    },
+    {
+      "id": "subtopic-23-029",
+      "text": "Audio evaluation metrics"
+    },
+    {
+      "id": "subtopic-23-030",
+      "text": "Voice privacy and security"
+    },
+    {
+      "id": "subtopic-24-001",
+      "text": "What is multimodal AI?"
+    },
+    {
+      "id": "subtopic-24-002",
+      "text": "Text, image, audio, and video modalities"
+    },
+    {
+      "id": "subtopic-24-003",
+      "text": "Multimodal embeddings"
+    },
+    {
+      "id": "subtopic-24-004",
+      "text": "Cross-modal representation learning"
+    },
+    {
+      "id": "subtopic-24-005",
+      "text": "Contrastive learning"
+    },
+    {
+      "id": "subtopic-24-006",
+      "text": "CLIP"
+    },
+    {
+      "id": "subtopic-24-007",
+      "text": "Vision-language models (VLMs)"
+    },
+    {
+      "id": "subtopic-24-008",
+      "text": "Image-text alignment"
+    },
+    {
+      "id": "subtopic-24-009",
+      "text": "Multimodal Transformers"
+    },
+    {
+      "id": "subtopic-24-010",
+      "text": "Early fusion"
+    },
+    {
+      "id": "subtopic-24-011",
+      "text": "Late fusion"
+    },
+    {
+      "id": "subtopic-24-012",
+      "text": "Cross-attention fusion"
+    },
+    {
+      "id": "subtopic-24-013",
+      "text": "Multimodal tokenization"
+    },
+    {
+      "id": "subtopic-24-014",
+      "text": "Vision-language instruction tuning"
+    },
+    {
+      "id": "subtopic-24-015",
+      "text": "Visual grounding"
+    },
+    {
+      "id": "subtopic-24-016",
+      "text": "Image question answering"
+    },
+    {
+      "id": "subtopic-24-017",
+      "text": "Video question answering"
+    },
+    {
+      "id": "subtopic-24-018",
+      "text": "Document understanding"
+    },
+    {
+      "id": "subtopic-24-019",
+      "text": "Multimodal RAG"
+    },
+    {
+      "id": "subtopic-24-020",
+      "text": "Audio-language models"
+    },
+    {
+      "id": "subtopic-24-021",
+      "text": "Speech-to-speech systems"
+    },
+    {
+      "id": "subtopic-24-022",
+      "text": "Video-language models"
+    },
+    {
+      "id": "subtopic-24-023",
+      "text": "Real-time multimodal AI"
+    },
+    {
+      "id": "subtopic-24-024",
+      "text": "Multimodal agents"
+    },
+    {
+      "id": "subtopic-24-025",
+      "text": "Embodied multimodal intelligence"
+    },
+    {
+      "id": "subtopic-24-026",
+      "text": "Multimodal dataset preparation"
+    },
+    {
+      "id": "subtopic-24-027",
+      "text": "Multimodal evaluation"
+    },
+    {
+      "id": "subtopic-24-028",
+      "text": "Cross-modal retrieval"
+    },
+    {
+      "id": "subtopic-24-029",
+      "text": "Multimodal hallucinations"
+    },
+    {
+      "id": "subtopic-24-030",
+      "text": "Multimodal safety"
+    },
+    {
+      "id": "subtopic-25-001",
+      "text": "Introduction to Reinforcement Learning"
+    },
+    {
+      "id": "subtopic-25-002",
+      "text": "Agents and environments"
+    },
+    {
+      "id": "subtopic-25-003",
+      "text": "States, actions, and rewards"
+    },
+    {
+      "id": "subtopic-25-004",
+      "text": "Policies"
+    },
+    {
+      "id": "subtopic-25-005",
+      "text": "Value functions"
+    },
+    {
+      "id": "subtopic-25-006",
+      "text": "Reward functions"
+    },
+    {
+      "id": "subtopic-25-007",
+      "text": "Markov Decision Processes"
+    },
+    {
+      "id": "subtopic-25-008",
+      "text": "Bellman equations"
+    },
+    {
+      "id": "subtopic-25-009",
+      "text": "Exploration vs exploitation"
+    },
+    {
+      "id": "subtopic-25-010",
+      "text": "Multi-armed bandits"
+    },
+    {
+      "id": "subtopic-25-011",
+      "text": "Dynamic programming"
+    },
+    {
+      "id": "subtopic-25-012",
+      "text": "Monte Carlo learning"
+    },
+    {
+      "id": "subtopic-25-013",
+      "text": "Temporal Difference (TD) learning"
+    },
+    {
+      "id": "subtopic-25-014",
+      "text": "Q-Learning"
+    },
+    {
+      "id": "subtopic-25-015",
+      "text": "SARSA"
+    },
+    {
+      "id": "subtopic-25-016",
+      "text": "Deep Q-Networks (DQN)"
+    },
+    {
+      "id": "subtopic-25-017",
+      "text": "Experience replay"
+    },
+    {
+      "id": "subtopic-25-018",
+      "text": "Target networks"
+    },
+    {
+      "id": "subtopic-25-019",
+      "text": "Policy gradient methods"
+    },
+    {
+      "id": "subtopic-25-020",
+      "text": "REINFORCE"
+    },
+    {
+      "id": "subtopic-25-021",
+      "text": "Actor-Critic methods"
+    },
+    {
+      "id": "subtopic-25-022",
+      "text": "Advantage Actor-Critic (A2C/A3C)"
+    },
+    {
+      "id": "subtopic-25-023",
+      "text": "Proximal Policy Optimization (PPO)"
+    },
+    {
+      "id": "subtopic-25-024",
+      "text": "Trust Region Policy Optimization (TRPO)"
+    },
+    {
+      "id": "subtopic-25-025",
+      "text": "Deep Deterministic Policy Gradient (DDPG)"
+    },
+    {
+      "id": "subtopic-25-026",
+      "text": "Soft Actor-Critic (SAC)"
+    },
+    {
+      "id": "subtopic-25-027",
+      "text": "Model-based RL"
+    },
+    {
+      "id": "subtopic-25-028",
+      "text": "Model-free RL"
+    },
+    {
+      "id": "subtopic-25-029",
+      "text": "Offline RL"
+    },
+    {
+      "id": "subtopic-25-030",
+      "text": "Imitation learning"
+    },
+    {
+      "id": "subtopic-25-031",
+      "text": "Inverse Reinforcement Learning"
+    },
+    {
+      "id": "subtopic-25-032",
+      "text": "Reward shaping"
+    },
+    {
+      "id": "subtopic-25-033",
+      "text": "Hierarchical RL"
+    },
+    {
+      "id": "subtopic-25-034",
+      "text": "Multi-agent RL"
+    },
+    {
+      "id": "subtopic-25-035",
+      "text": "RL for language models"
+    },
+    {
+      "id": "subtopic-25-036",
+      "text": "RL in robotics"
+    },
+    {
+      "id": "subtopic-25-037",
+      "text": "Safe Reinforcement Learning"
+    },
+    {
+      "id": "subtopic-25-038",
+      "text": "RL evaluation and simulation"
+    },
+    {
+      "id": "subtopic-26-001",
+      "text": "AI application architecture"
+    },
+    {
+      "id": "subtopic-26-002",
+      "text": "Client-server architecture"
+    },
+    {
+      "id": "subtopic-26-003",
+      "text": "RESTful APIs"
+    },
+    {
+      "id": "subtopic-26-004",
+      "text": "FastAPI"
+    },
+    {
+      "id": "subtopic-26-005",
+      "text": "HTTP clients and API integration"
+    },
+    {
+      "id": "subtopic-26-006",
+      "text": "Authentication and authorization"
+    },
+    {
+      "id": "subtopic-26-007",
+      "text": "API keys and secret management"
+    },
+    {
+      "id": "subtopic-26-008",
+      "text": "Environment configuration"
+    },
+    {
+      "id": "subtopic-26-009",
+      "text": "Working with hosted model APIs"
+    },
+    {
+      "id": "subtopic-26-010",
+      "text": "Working with local models"
+    },
+    {
+      "id": "subtopic-26-011",
+      "text": "Model selection and routing"
+    },
+    {
+      "id": "subtopic-26-012",
+      "text": "Chat completion interfaces"
+    },
+    {
+      "id": "subtopic-26-013",
+      "text": "Structured outputs"
+    },
+    {
+      "id": "subtopic-26-014",
+      "text": "Function calling"
+    },
+    {
+      "id": "subtopic-26-015",
+      "text": "Tool calling"
+    },
+    {
+      "id": "subtopic-26-016",
+      "text": "Streaming responses"
+    },
+    {
+      "id": "subtopic-26-017",
+      "text": "Asynchronous AI applications"
+    },
+    {
+      "id": "subtopic-26-018",
+      "text": "Conversation history management"
+    },
+    {
+      "id": "subtopic-26-019",
+      "text": "Session management"
+    },
+    {
+      "id": "subtopic-26-020",
+      "text": "Stateful vs stateless applications"
+    },
+    {
+      "id": "subtopic-26-021",
+      "text": "Token counting"
+    },
+    {
+      "id": "subtopic-26-022",
+      "text": "Context-window management"
+    },
+    {
+      "id": "subtopic-26-023",
+      "text": "Response caching"
+    },
+    {
+      "id": "subtopic-26-024",
+      "text": "Rate limiting"
+    },
+    {
+      "id": "subtopic-26-025",
+      "text": "Retry strategies"
+    },
+    {
+      "id": "subtopic-26-026",
+      "text": "Timeouts and circuit breakers"
+    },
+    {
+      "id": "subtopic-26-027",
+      "text": "Error handling"
+    },
+    {
+      "id": "subtopic-26-028",
+      "text": "File uploads and processing"
+    },
+    {
+      "id": "subtopic-26-029",
+      "text": "AI backend design"
+    },
+    {
+      "id": "subtopic-26-030",
+      "text": "AI frontend integration"
+    },
+    {
+      "id": "subtopic-26-031",
+      "text": "WebSocket-based AI applications"
+    },
+    {
+      "id": "subtopic-26-032",
+      "text": "Real-time AI systems"
+    },
+    {
+      "id": "subtopic-26-033",
+      "text": "API versioning"
+    },
+    {
+      "id": "subtopic-26-034",
+      "text": "Integration testing"
+    },
+    {
+      "id": "subtopic-26-035",
+      "text": "Application observability"
+    },
+    {
+      "id": "subtopic-27-001",
+      "text": "What are AI agents?"
+    },
+    {
+      "id": "subtopic-27-002",
+      "text": "AI agents vs chatbots"
+    },
+    {
+      "id": "subtopic-27-003",
+      "text": "Agents vs deterministic workflows"
+    },
+    {
+      "id": "subtopic-27-004",
+      "text": "Agent architecture"
+    },
+    {
+      "id": "subtopic-27-005",
+      "text": "Agent goals and instructions"
+    },
+    {
+      "id": "subtopic-27-006",
+      "text": "Agent perception"
+    },
+    {
+      "id": "subtopic-27-007",
+      "text": "Agent state"
+    },
+    {
+      "id": "subtopic-27-008",
+      "text": "Agent memory"
+    },
+    {
+      "id": "subtopic-27-009",
+      "text": "Short-term and long-term memory"
+    },
+    {
+      "id": "subtopic-27-010",
+      "text": "Tool-use agents"
+    },
+    {
+      "id": "subtopic-27-011",
+      "text": "Function calling"
+    },
+    {
+      "id": "subtopic-27-012",
+      "text": "Planning and task decomposition"
+    },
+    {
+      "id": "subtopic-27-013",
+      "text": "Reasoning-and-acting loops"
+    },
+    {
+      "id": "subtopic-27-014",
+      "text": "ReAct pattern"
+    },
+    {
+      "id": "subtopic-27-015",
+      "text": "Reflection and critique patterns"
+    },
+    {
+      "id": "subtopic-27-016",
+      "text": "Planner-executor architecture"
+    },
+    {
+      "id": "subtopic-27-017",
+      "text": "Workflow orchestration"
+    },
+    {
+      "id": "subtopic-27-018",
+      "text": "Sequential workflows"
+    },
+    {
+      "id": "subtopic-27-019",
+      "text": "Parallel workflows"
+    },
+    {
+      "id": "subtopic-27-020",
+      "text": "Conditional workflows"
+    },
+    {
+      "id": "subtopic-27-021",
+      "text": "Human-in-the-loop agents"
+    },
+    {
+      "id": "subtopic-27-022",
+      "text": "Approval workflows"
+    },
+    {
+      "id": "subtopic-27-023",
+      "text": "Agent handoffs"
+    },
+    {
+      "id": "subtopic-27-024",
+      "text": "Agent delegation"
+    },
+    {
+      "id": "subtopic-27-025",
+      "text": "Multi-agent architectures"
+    },
+    {
+      "id": "subtopic-27-026",
+      "text": "Agent communication protocols"
+    },
+    {
+      "id": "subtopic-27-027",
+      "text": "Model Context Protocol (MCP)"
+    },
+    {
+      "id": "subtopic-27-028",
+      "text": "Agent-to-Agent (A2A) communication concepts"
+    },
+    {
+      "id": "subtopic-27-029",
+      "text": "Browser-use agents"
+    },
+    {
+      "id": "subtopic-27-030",
+      "text": "Computer-use agents"
+    },
+    {
+      "id": "subtopic-27-031",
+      "text": "Coding agents"
+    },
+    {
+      "id": "subtopic-27-032",
+      "text": "Research agents"
+    },
+    {
+      "id": "subtopic-27-033",
+      "text": "Data analysis agents"
+    },
+    {
+      "id": "subtopic-27-034",
+      "text": "Autonomous task execution"
+    },
+    {
+      "id": "subtopic-27-035",
+      "text": "Agent checkpoints"
+    },
+    {
+      "id": "subtopic-27-036",
+      "text": "Durable execution"
+    },
+    {
+      "id": "subtopic-27-037",
+      "text": "Agent error recovery"
+    },
+    {
+      "id": "subtopic-27-038",
+      "text": "Agent evaluation"
+    },
+    {
+      "id": "subtopic-27-039",
+      "text": "Agent observability"
+    },
+    {
+      "id": "subtopic-27-040",
+      "text": "Agent security and permissions"
+    },
+    {
+      "id": "subtopic-27-041",
+      "text": "Sandboxing"
+    },
+    {
+      "id": "subtopic-27-042",
+      "text": "Agent cost and latency optimization"
+    },
+    {
+      "id": "subtopic-27-043",
+      "text": "Production agent deployment"
+    },
+    {
+      "id": "subtopic-28-001",
+      "text": "NumPy"
+    },
+    {
+      "id": "subtopic-28-002",
+      "text": "Pandas"
+    },
+    {
+      "id": "subtopic-28-003",
+      "text": "Scikit-learn"
+    },
+    {
+      "id": "subtopic-28-004",
+      "text": "PyTorch"
+    },
+    {
+      "id": "subtopic-28-005",
+      "text": "TensorFlow"
+    },
+    {
+      "id": "subtopic-28-006",
+      "text": "Keras"
+    },
+    {
+      "id": "subtopic-28-007",
+      "text": "Hugging Face Transformers"
+    },
+    {
+      "id": "subtopic-28-008",
+      "text": "Hugging Face Datasets"
+    },
+    {
+      "id": "subtopic-28-009",
+      "text": "Hugging Face Tokenizers"
+    },
+    {
+      "id": "subtopic-28-010",
+      "text": "Hugging Face PEFT"
+    },
+    {
+      "id": "subtopic-28-011",
+      "text": "Hugging Face Accelerate"
+    },
+    {
+      "id": "subtopic-28-012",
+      "text": "Sentence Transformers"
+    },
+    {
+      "id": "subtopic-28-013",
+      "text": "OpenCV"
+    },
+    {
+      "id": "subtopic-28-014",
+      "text": "spaCy"
+    },
+    {
+      "id": "subtopic-28-015",
+      "text": "NLTK"
+    },
+    {
+      "id": "subtopic-28-016",
+      "text": "LangChain"
+    },
+    {
+      "id": "subtopic-28-017",
+      "text": "LangGraph"
+    },
+    {
+      "id": "subtopic-28-018",
+      "text": "LlamaIndex"
+    },
+    {
+      "id": "subtopic-28-019",
+      "text": "Microsoft AutoGen"
+    },
+    {
+      "id": "subtopic-28-020",
+      "text": "CrewAI"
+    },
+    {
+      "id": "subtopic-28-021",
+      "text": "Semantic Kernel"
+    },
+    {
+      "id": "subtopic-28-022",
+      "text": "DSPy"
+    },
+    {
+      "id": "subtopic-28-023",
+      "text": "OpenAI SDK"
+    },
+    {
+      "id": "subtopic-28-024",
+      "text": "Cloud provider AI SDKs"
+    },
+    {
+      "id": "subtopic-28-025",
+      "text": "FAISS"
+    },
+    {
+      "id": "subtopic-28-026",
+      "text": "Chroma"
+    },
+    {
+      "id": "subtopic-28-027",
+      "text": "Qdrant"
+    },
+    {
+      "id": "subtopic-28-028",
+      "text": "Milvus"
+    },
+    {
+      "id": "subtopic-28-029",
+      "text": "Weaviate"
+    },
+    {
+      "id": "subtopic-28-030",
+      "text": "pgvector"
+    },
+    {
+      "id": "subtopic-28-031",
+      "text": "Ollama"
+    },
+    {
+      "id": "subtopic-28-032",
+      "text": "llama.cpp"
+    },
+    {
+      "id": "subtopic-28-033",
+      "text": "vLLM"
+    },
+    {
+      "id": "subtopic-28-034",
+      "text": "Hugging Face Text Generation Inference"
+    },
+    {
+      "id": "subtopic-28-035",
+      "text": "ONNX Runtime"
+    },
+    {
+      "id": "subtopic-28-036",
+      "text": "MLflow"
+    },
+    {
+      "id": "subtopic-28-037",
+      "text": "Weights & Biases"
+    },
+    {
+      "id": "subtopic-28-038",
+      "text": "Ray"
+    },
+    {
+      "id": "subtopic-28-039",
+      "text": "DeepSpeed"
+    },
+    {
+      "id": "subtopic-28-040",
+      "text": "NVIDIA TensorRT"
+    },
+    {
+      "id": "subtopic-28-041",
+      "text": "Gradio"
+    },
+    {
+      "id": "subtopic-28-042",
+      "text": "Streamlit"
+    },
+    {
+      "id": "subtopic-29-001",
+      "text": "What is MLOps?"
+    },
+    {
+      "id": "subtopic-29-002",
+      "text": "What is LLMOps?"
+    },
+    {
+      "id": "subtopic-29-003",
+      "text": "ML lifecycle management"
+    },
+    {
+      "id": "subtopic-29-004",
+      "text": "Experiment tracking"
+    },
+    {
+      "id": "subtopic-29-005",
+      "text": "Model versioning"
+    },
+    {
+      "id": "subtopic-29-006",
+      "text": "Dataset versioning"
+    },
+    {
+      "id": "subtopic-29-007",
+      "text": "Feature stores"
+    },
+    {
+      "id": "subtopic-29-008",
+      "text": "Model registries"
+    },
+    {
+      "id": "subtopic-29-009",
+      "text": "Pipeline orchestration"
+    },
+    {
+      "id": "subtopic-29-010",
+      "text": "MLflow"
+    },
+    {
+      "id": "subtopic-29-011",
+      "text": "Data validation"
+    },
+    {
+      "id": "subtopic-29-012",
+      "text": "Continuous Integration (CI)"
+    },
+    {
+      "id": "subtopic-29-013",
+      "text": "Continuous Delivery (CD)"
+    },
+    {
+      "id": "subtopic-29-014",
+      "text": "Continuous Training (CT)"
+    },
+    {
+      "id": "subtopic-29-015",
+      "text": "ML testing strategies"
+    },
+    {
+      "id": "subtopic-29-016",
+      "text": "Model packaging"
+    },
+    {
+      "id": "subtopic-29-017",
+      "text": "Model serving"
+    },
+    {
+      "id": "subtopic-29-018",
+      "text": "Batch inference"
+    },
+    {
+      "id": "subtopic-29-019",
+      "text": "Online inference"
+    },
+    {
+      "id": "subtopic-29-020",
+      "text": "Streaming inference"
+    },
+    {
+      "id": "subtopic-29-021",
+      "text": "Model monitoring"
+    },
+    {
+      "id": "subtopic-29-022",
+      "text": "Data drift detection"
+    },
+    {
+      "id": "subtopic-29-023",
+      "text": "Concept drift detection"
+    },
+    {
+      "id": "subtopic-29-024",
+      "text": "Performance degradation detection"
+    },
+    {
+      "id": "subtopic-29-025",
+      "text": "Automated retraining"
+    },
+    {
+      "id": "subtopic-29-026",
+      "text": "Model rollback"
+    },
+    {
+      "id": "subtopic-29-027",
+      "text": "Canary deployments"
+    },
+    {
+      "id": "subtopic-29-028",
+      "text": "Shadow deployments"
+    },
+    {
+      "id": "subtopic-29-029",
+      "text": "A/B testing"
+    },
+    {
+      "id": "subtopic-29-030",
+      "text": "Prompt versioning"
+    },
+    {
+      "id": "subtopic-29-031",
+      "text": "LLM tracing"
+    },
+    {
+      "id": "subtopic-29-032",
+      "text": "LLM evaluation pipelines"
+    },
+    {
+      "id": "subtopic-29-033",
+      "text": "Human feedback collection"
+    },
+    {
+      "id": "subtopic-29-034",
+      "text": "Production incident response"
+    },
+    {
+      "id": "subtopic-29-035",
+      "text": "Model governance"
+    },
+    {
+      "id": "subtopic-29-036",
+      "text": "Cost monitoring"
+    },
+    {
+      "id": "subtopic-29-037",
+      "text": "Observability dashboards"
+    },
+    {
+      "id": "subtopic-29-038",
+      "text": "Service Level Objectives (SLOs)"
+    },
+    {
+      "id": "subtopic-29-039",
+      "text": "Reproducibility"
+    },
+    {
+      "id": "subtopic-29-040",
+      "text": "AI system lifecycle governance"
+    },
+    {
+      "id": "subtopic-30-001",
+      "text": "Cloud computing fundamentals"
+    },
+    {
+      "id": "subtopic-30-002",
+      "text": "AWS fundamentals"
+    },
+    {
+      "id": "subtopic-30-003",
+      "text": "Microsoft Azure fundamentals"
+    },
+    {
+      "id": "subtopic-30-004",
+      "text": "Google Cloud fundamentals"
+    },
+    {
+      "id": "subtopic-30-005",
+      "text": "Cloud AI services"
+    },
+    {
+      "id": "subtopic-30-006",
+      "text": "Virtual machines"
+    },
+    {
+      "id": "subtopic-30-007",
+      "text": "Containers"
+    },
+    {
+      "id": "subtopic-30-008",
+      "text": "Docker"
+    },
+    {
+      "id": "subtopic-30-009",
+      "text": "Kubernetes"
+    },
+    {
+      "id": "subtopic-30-010",
+      "text": "Serverless computing"
+    },
+    {
+      "id": "subtopic-30-011",
+      "text": "GPU instances"
+    },
+    {
+      "id": "subtopic-30-012",
+      "text": "GPU scheduling"
+    },
+    {
+      "id": "subtopic-30-013",
+      "text": "Storage systems"
+    },
+    {
+      "id": "subtopic-30-014",
+      "text": "Object storage"
+    },
+    {
+      "id": "subtopic-30-015",
+      "text": "Cloud databases"
+    },
+    {
+      "id": "subtopic-30-016",
+      "text": "Networking and load balancing"
+    },
+    {
+      "id": "subtopic-30-017",
+      "text": "API gateways"
+    },
+    {
+      "id": "subtopic-30-018",
+      "text": "Infrastructure as Code"
+    },
+    {
+      "id": "subtopic-30-019",
+      "text": "Terraform"
+    },
+    {
+      "id": "subtopic-30-020",
+      "text": "CI/CD pipelines"
+    },
+    {
+      "id": "subtopic-30-021",
+      "text": "Secrets management"
+    },
+    {
+      "id": "subtopic-30-022",
+      "text": "Identity and Access Management (IAM)"
+    },
+    {
+      "id": "subtopic-30-023",
+      "text": "Cloud security"
+    },
+    {
+      "id": "subtopic-30-024",
+      "text": "Model serving endpoints"
+    },
+    {
+      "id": "subtopic-30-025",
+      "text": "Autoscaling"
+    },
+    {
+      "id": "subtopic-30-026",
+      "text": "Load testing"
+    },
+    {
+      "id": "subtopic-30-027",
+      "text": "High availability"
+    },
+    {
+      "id": "subtopic-30-028",
+      "text": "Disaster recovery"
+    },
+    {
+      "id": "subtopic-30-029",
+      "text": "Distributed tracing"
+    },
+    {
+      "id": "subtopic-30-030",
+      "text": "Infrastructure monitoring"
+    },
+    {
+      "id": "subtopic-30-031",
+      "text": "Cloud cost optimization"
+    },
+    {
+      "id": "subtopic-30-032",
+      "text": "Hybrid cloud AI"
+    },
+    {
+      "id": "subtopic-30-033",
+      "text": "On-premises AI infrastructure"
+    },
+    {
+      "id": "subtopic-30-034",
+      "text": "Edge deployment"
+    },
+    {
+      "id": "subtopic-30-035",
+      "text": "Production architecture patterns"
+    },
+    {
+      "id": "subtopic-31-001",
+      "text": "Training vs inference optimization"
+    },
+    {
+      "id": "subtopic-31-002",
+      "text": "Model profiling"
+    },
+    {
+      "id": "subtopic-31-003",
+      "text": "Latency measurement"
+    },
+    {
+      "id": "subtopic-31-004",
+      "text": "Throughput measurement"
+    },
+    {
+      "id": "subtopic-31-005",
+      "text": "Memory profiling"
+    },
+    {
+      "id": "subtopic-31-006",
+      "text": "GPU memory management"
+    },
+    {
+      "id": "subtopic-31-007",
+      "text": "Batching"
+    },
+    {
+      "id": "subtopic-31-008",
+      "text": "Continuous batching"
+    },
+    {
+      "id": "subtopic-31-009",
+      "text": "Dynamic batching"
+    },
+    {
+      "id": "subtopic-31-010",
+      "text": "Quantization"
+    },
+    {
+      "id": "subtopic-31-011",
+      "text": "INT8 and lower-precision inference"
+    },
+    {
+      "id": "subtopic-31-012",
+      "text": "FP16 and BF16"
+    },
+    {
+      "id": "subtopic-31-013",
+      "text": "FP8 concepts"
+    },
+    {
+      "id": "subtopic-31-014",
+      "text": "Post-training quantization"
+    },
+    {
+      "id": "subtopic-31-015",
+      "text": "Quantization-Aware Training (QAT)"
+    },
+    {
+      "id": "subtopic-31-016",
+      "text": "Model pruning"
+    },
+    {
+      "id": "subtopic-31-017",
+      "text": "Knowledge distillation"
+    },
+    {
+      "id": "subtopic-31-018",
+      "text": "Model compilation"
+    },
+    {
+      "id": "subtopic-31-019",
+      "text": "Kernel optimization"
+    },
+    {
+      "id": "subtopic-31-020",
+      "text": "Operator fusion"
+    },
+    {
+      "id": "subtopic-31-021",
+      "text": "CUDA fundamentals"
+    },
+    {
+      "id": "subtopic-31-022",
+      "text": "GPU compute kernels"
+    },
+    {
+      "id": "subtopic-31-023",
+      "text": "TensorRT"
+    },
+    {
+      "id": "subtopic-31-024",
+      "text": "ONNX"
+    },
+    {
+      "id": "subtopic-31-025",
+      "text": "ONNX Runtime"
+    },
+    {
+      "id": "subtopic-31-026",
+      "text": "KV-cache optimization"
+    },
+    {
+      "id": "subtopic-31-027",
+      "text": "Prefix caching"
+    },
+    {
+      "id": "subtopic-31-028",
+      "text": "Speculative decoding"
+    },
+    {
+      "id": "subtopic-31-029",
+      "text": "Efficient attention kernels"
+    },
+    {
+      "id": "subtopic-31-030",
+      "text": "Memory-efficient attention"
+    },
+    {
+      "id": "subtopic-31-031",
+      "text": "Model parallelism for inference"
+    },
+    {
+      "id": "subtopic-31-032",
+      "text": "Multi-GPU inference"
+    },
+    {
+      "id": "subtopic-31-033",
+      "text": "Distributed serving"
+    },
+    {
+      "id": "subtopic-31-034",
+      "text": "Cold-start optimization"
+    },
+    {
+      "id": "subtopic-31-035",
+      "text": "Model routing"
+    },
+    {
+      "id": "subtopic-31-036",
+      "text": "Small Language Models (SLMs)"
+    },
+    {
+      "id": "subtopic-31-037",
+      "text": "Edge AI optimization"
+    },
+    {
+      "id": "subtopic-31-038",
+      "text": "Energy-efficient inference"
+    },
+    {
+      "id": "subtopic-31-039",
+      "text": "Inference benchmarking"
+    },
+    {
+      "id": "subtopic-31-040",
+      "text": "Cost-performance trade-offs"
+    },
+    {
+      "id": "subtopic-32-001",
+      "text": "Distributed computing fundamentals"
+    },
+    {
+      "id": "subtopic-32-002",
+      "text": "CPU vs GPU vs TPU computation"
+    },
+    {
+      "id": "subtopic-32-003",
+      "text": "Parallel computing"
+    },
+    {
+      "id": "subtopic-32-004",
+      "text": "Data parallelism"
+    },
+    {
+      "id": "subtopic-32-005",
+      "text": "Model parallelism"
+    },
+    {
+      "id": "subtopic-32-006",
+      "text": "Tensor parallelism"
+    },
+    {
+      "id": "subtopic-32-007",
+      "text": "Pipeline parallelism"
+    },
+    {
+      "id": "subtopic-32-008",
+      "text": "Sequence parallelism"
+    },
+    {
+      "id": "subtopic-32-009",
+      "text": "Fully Sharded Data Parallel (FSDP)"
+    },
+    {
+      "id": "subtopic-32-010",
+      "text": "Distributed Data Parallel (DDP)"
+    },
+    {
+      "id": "subtopic-32-011",
+      "text": "ZeRO optimization"
+    },
+    {
+      "id": "subtopic-32-012",
+      "text": "Gradient accumulation"
+    },
+    {
+      "id": "subtopic-32-013",
+      "text": "Gradient checkpointing"
+    },
+    {
+      "id": "subtopic-32-014",
+      "text": "Mixed-precision training"
+    },
+    {
+      "id": "subtopic-32-015",
+      "text": "Optimizer state management"
+    },
+    {
+      "id": "subtopic-32-016",
+      "text": "Distributed optimizers"
+    },
+    {
+      "id": "subtopic-32-017",
+      "text": "Collective communication"
+    },
+    {
+      "id": "subtopic-32-018",
+      "text": "All-reduce operations"
+    },
+    {
+      "id": "subtopic-32-019",
+      "text": "NCCL"
+    },
+    {
+      "id": "subtopic-32-020",
+      "text": "Network interconnects"
+    },
+    {
+      "id": "subtopic-32-021",
+      "text": "High-performance computing clusters"
+    },
+    {
+      "id": "subtopic-32-022",
+      "text": "Training data sharding"
+    },
+    {
+      "id": "subtopic-32-023",
+      "text": "Dataset streaming"
+    },
+    {
+      "id": "subtopic-32-024",
+      "text": "Distributed checkpointing"
+    },
+    {
+      "id": "subtopic-32-025",
+      "text": "Fault-tolerant training"
+    },
+    {
+      "id": "subtopic-32-026",
+      "text": "Pretraining infrastructure"
+    },
+    {
+      "id": "subtopic-32-027",
+      "text": "Large-scale data pipelines"
+    },
+    {
+      "id": "subtopic-32-028",
+      "text": "Training throughput optimization"
+    },
+    {
+      "id": "subtopic-32-029",
+      "text": "Training stability"
+    },
+    {
+      "id": "subtopic-32-030",
+      "text": "Resource scheduling"
+    },
+    {
+      "id": "subtopic-32-031",
+      "text": "Cluster monitoring"
+    },
+    {
+      "id": "subtopic-32-032",
+      "text": "Distributed hyperparameter tuning"
+    },
+    {
+      "id": "subtopic-32-033",
+      "text": "Multi-node training"
+    },
+    {
+      "id": "subtopic-32-034",
+      "text": "Efficient foundation model training"
+    },
+    {
+      "id": "subtopic-32-035",
+      "text": "Training cost estimation"
+    },
+    {
+      "id": "subtopic-32-036",
+      "text": "Energy and compute efficiency"
+    },
+    {
+      "id": "subtopic-33-001",
+      "text": "AI evaluation fundamentals"
+    },
+    {
+      "id": "subtopic-33-002",
+      "text": "Offline evaluation"
+    },
+    {
+      "id": "subtopic-33-003",
+      "text": "Online evaluation"
+    },
+    {
+      "id": "subtopic-33-004",
+      "text": "Benchmark datasets"
+    },
+    {
+      "id": "subtopic-33-005",
+      "text": "Task-specific metrics"
+    },
+    {
+      "id": "subtopic-33-006",
+      "text": "Golden test datasets"
+    },
+    {
+      "id": "subtopic-33-007",
+      "text": "Regression testing for AI"
+    },
+    {
+      "id": "subtopic-33-008",
+      "text": "Deterministic vs stochastic outputs"
+    },
+    {
+      "id": "subtopic-33-009",
+      "text": "Human evaluation"
+    },
+    {
+      "id": "subtopic-33-010",
+      "text": "Pairwise model comparison"
+    },
+    {
+      "id": "subtopic-33-011",
+      "text": "LLM-as-a-judge"
+    },
+    {
+      "id": "subtopic-33-012",
+      "text": "Evaluator reliability"
+    },
+    {
+      "id": "subtopic-33-013",
+      "text": "Hallucination evaluation"
+    },
+    {
+      "id": "subtopic-33-014",
+      "text": "Factuality evaluation"
+    },
+    {
+      "id": "subtopic-33-015",
+      "text": "Groundedness evaluation"
+    },
+    {
+      "id": "subtopic-33-016",
+      "text": "Retrieval evaluation"
+    },
+    {
+      "id": "subtopic-33-017",
+      "text": "RAG evaluation"
+    },
+    {
+      "id": "subtopic-33-018",
+      "text": "Agent trajectory evaluation"
+    },
+    {
+      "id": "subtopic-33-019",
+      "text": "Tool-call correctness"
+    },
+    {
+      "id": "subtopic-33-020",
+      "text": "End-to-end task completion testing"
+    },
+    {
+      "id": "subtopic-33-021",
+      "text": "Safety evaluation"
+    },
+    {
+      "id": "subtopic-33-022",
+      "text": "Adversarial evaluation"
+    },
+    {
+      "id": "subtopic-33-023",
+      "text": "Red teaming"
+    },
+    {
+      "id": "subtopic-33-024",
+      "text": "Robustness testing"
+    },
+    {
+      "id": "subtopic-33-025",
+      "text": "Distribution-shift testing"
+    },
+    {
+      "id": "subtopic-33-026",
+      "text": "Bias and fairness testing"
+    },
+    {
+      "id": "subtopic-33-027",
+      "text": "Multilingual evaluation"
+    },
+    {
+      "id": "subtopic-33-028",
+      "text": "Performance benchmarking"
+    },
+    {
+      "id": "subtopic-33-029",
+      "text": "Latency and throughput testing"
+    },
+    {
+      "id": "subtopic-33-030",
+      "text": "Cost evaluation"
+    },
+    {
+      "id": "subtopic-33-031",
+      "text": "Production telemetry"
+    },
+    {
+      "id": "subtopic-33-032",
+      "text": "Failure analysis"
+    },
+    {
+      "id": "subtopic-33-033",
+      "text": "Incident investigation"
+    },
+    {
+      "id": "subtopic-33-034",
+      "text": "Reliability engineering"
+    },
+    {
+      "id": "subtopic-33-035",
+      "text": "Continuous evaluation"
+    },
+    {
+      "id": "subtopic-34-001",
+      "text": "Responsible AI principles"
+    },
+    {
+      "id": "subtopic-34-002",
+      "text": "AI ethics"
+    },
+    {
+      "id": "subtopic-34-003",
+      "text": "Fairness and discrimination"
+    },
+    {
+      "id": "subtopic-34-004",
+      "text": "Algorithmic bias"
+    },
+    {
+      "id": "subtopic-34-005",
+      "text": "Transparency and explainability"
+    },
+    {
+      "id": "subtopic-34-006",
+      "text": "Accountability"
+    },
+    {
+      "id": "subtopic-34-007",
+      "text": "Human oversight"
+    },
+    {
+      "id": "subtopic-34-008",
+      "text": "Privacy fundamentals"
+    },
+    {
+      "id": "subtopic-34-009",
+      "text": "Personal data protection"
+    },
+    {
+      "id": "subtopic-34-010",
+      "text": "Data anonymization"
+    },
+    {
+      "id": "subtopic-34-011",
+      "text": "Differential privacy"
+    },
+    {
+      "id": "subtopic-34-012",
+      "text": "Federated learning"
+    },
+    {
+      "id": "subtopic-34-013",
+      "text": "Privacy-preserving machine learning"
+    },
+    {
+      "id": "subtopic-34-014",
+      "text": "Secure model development"
+    },
+    {
+      "id": "subtopic-34-015",
+      "text": "Threat modeling"
+    },
+    {
+      "id": "subtopic-34-016",
+      "text": "Training-data poisoning"
+    },
+    {
+      "id": "subtopic-34-017",
+      "text": "Data contamination"
+    },
+    {
+      "id": "subtopic-34-018",
+      "text": "Prompt injection attacks"
+    },
+    {
+      "id": "subtopic-34-019",
+      "text": "Indirect prompt injection"
+    },
+    {
+      "id": "subtopic-34-020",
+      "text": "Jailbreak attacks"
+    },
+    {
+      "id": "subtopic-34-021",
+      "text": "Adversarial examples"
+    },
+    {
+      "id": "subtopic-34-022",
+      "text": "Model extraction attacks"
+    },
+    {
+      "id": "subtopic-34-023",
+      "text": "Membership inference attacks"
+    },
+    {
+      "id": "subtopic-34-024",
+      "text": "Model inversion attacks"
+    },
+    {
+      "id": "subtopic-34-025",
+      "text": "Sensitive information leakage"
+    },
+    {
+      "id": "subtopic-34-026",
+      "text": "Insecure tool execution"
+    },
+    {
+      "id": "subtopic-34-027",
+      "text": "Excessive agency"
+    },
+    {
+      "id": "subtopic-34-028",
+      "text": "Access control"
+    },
+    {
+      "id": "subtopic-34-029",
+      "text": "Least-privilege design"
+    },
+    {
+      "id": "subtopic-34-030",
+      "text": "Sandboxing and isolation"
+    },
+    {
+      "id": "subtopic-34-031",
+      "text": "Supply-chain security"
+    },
+    {
+      "id": "subtopic-34-032",
+      "text": "Model and dataset provenance"
+    },
+    {
+      "id": "subtopic-34-033",
+      "text": "Content moderation"
+    },
+    {
+      "id": "subtopic-34-034",
+      "text": "Safety guardrails"
+    },
+    {
+      "id": "subtopic-34-035",
+      "text": "Human approval for high-impact actions"
+    },
+    {
+      "id": "subtopic-34-036",
+      "text": "Audit logging"
+    },
+    {
+      "id": "subtopic-34-037",
+      "text": "Risk assessment"
+    },
+    {
+      "id": "subtopic-34-038",
+      "text": "AI incident response"
+    },
+    {
+      "id": "subtopic-34-039",
+      "text": "AI governance"
+    },
+    {
+      "id": "subtopic-34-040",
+      "text": "EU AI Act"
+    },
+    {
+      "id": "subtopic-34-041",
+      "text": "GDPR and AI data protection"
+    },
+    {
+      "id": "subtopic-34-042",
+      "text": "NIST AI Risk Management Framework"
+    },
+    {
+      "id": "subtopic-34-043",
+      "text": "ISO/IEC AI management standards"
+    },
+    {
+      "id": "subtopic-34-044",
+      "text": "Model cards and system cards"
+    },
+    {
+      "id": "subtopic-34-045",
+      "text": "AI safety evaluations"
+    },
+    {
+      "id": "subtopic-34-046",
+      "text": "Misuse prevention"
+    },
+    {
+      "id": "subtopic-34-047",
+      "text": "Security testing and red teaming"
+    },
+    {
+      "id": "subtopic-35-001",
+      "text": "Data engineering architecture"
+    },
+    {
+      "id": "subtopic-35-002",
+      "text": "ETL vs ELT"
+    },
+    {
+      "id": "subtopic-35-003",
+      "text": "Batch processing"
+    },
+    {
+      "id": "subtopic-35-004",
+      "text": "Stream processing"
+    },
+    {
+      "id": "subtopic-35-005",
+      "text": "Data ingestion"
+    },
+    {
+      "id": "subtopic-35-006",
+      "text": "Data extraction"
+    },
+    {
+      "id": "subtopic-35-007",
+      "text": "Apache Spark"
+    },
+    {
+      "id": "subtopic-35-008",
+      "text": "Apache Kafka"
+    },
+    {
+      "id": "subtopic-35-009",
+      "text": "Apache Flink"
+    },
+    {
+      "id": "subtopic-35-010",
+      "text": "Workflow orchestration"
+    },
+    {
+      "id": "subtopic-35-011",
+      "text": "Apache Airflow"
+    },
+    {
+      "id": "subtopic-35-012",
+      "text": "Data lakes"
+    },
+    {
+      "id": "subtopic-35-013",
+      "text": "Data warehouses"
+    },
+    {
+      "id": "subtopic-35-014",
+      "text": "Lakehouse architecture"
+    },
+    {
+      "id": "subtopic-35-015",
+      "text": "Distributed file systems"
+    },
+    {
+      "id": "subtopic-35-016",
+      "text": "Parquet and Arrow"
+    },
+    {
+      "id": "subtopic-35-017",
+      "text": "Data partitioning"
+    },
+    {
+      "id": "subtopic-35-018",
+      "text": "Data indexing"
+    },
+    {
+      "id": "subtopic-35-019",
+      "text": "Dataset deduplication"
+    },
+    {
+      "id": "subtopic-35-020",
+      "text": "Data quality validation"
+    },
+    {
+      "id": "subtopic-35-021",
+      "text": "Data contracts"
+    },
+    {
+      "id": "subtopic-35-022",
+      "text": "Data lineage"
+    },
+    {
+      "id": "subtopic-35-023",
+      "text": "Data governance"
+    },
+    {
+      "id": "subtopic-35-024",
+      "text": "Data catalogs"
+    },
+    {
+      "id": "subtopic-35-025",
+      "text": "Data observability"
+    },
+    {
+      "id": "subtopic-35-026",
+      "text": "Large-scale text processing"
+    },
+    {
+      "id": "subtopic-35-027",
+      "text": "Web-scale data preparation"
+    },
+    {
+      "id": "subtopic-35-028",
+      "text": "Synthetic data pipelines"
+    },
+    {
+      "id": "subtopic-35-029",
+      "text": "Vector data pipelines"
+    },
+    {
+      "id": "subtopic-35-030",
+      "text": "Real-time feature pipelines"
+    },
+    {
+      "id": "subtopic-35-031",
+      "text": "Streaming inference pipelines"
+    },
+    {
+      "id": "subtopic-35-032",
+      "text": "Data access control"
+    },
+    {
+      "id": "subtopic-35-033",
+      "text": "Dataset licensing"
+    },
+    {
+      "id": "subtopic-35-034",
+      "text": "Data retention policies"
+    },
+    {
+      "id": "subtopic-35-035",
+      "text": "Production data architecture"
+    },
+    {
+      "id": "subtopic-36-001",
+      "text": "Graph theory for AI"
+    },
+    {
+      "id": "subtopic-36-002",
+      "text": "Graph representation"
+    },
+    {
+      "id": "subtopic-36-003",
+      "text": "Knowledge graphs"
+    },
+    {
+      "id": "subtopic-36-004",
+      "text": "Ontologies"
+    },
+    {
+      "id": "subtopic-36-005",
+      "text": "Entity relationships"
+    },
+    {
+      "id": "subtopic-36-006",
+      "text": "Entity resolution"
+    },
+    {
+      "id": "subtopic-36-007",
+      "text": "Entity linking"
+    },
+    {
+      "id": "subtopic-36-008",
+      "text": "Graph databases"
+    },
+    {
+      "id": "subtopic-36-009",
+      "text": "Neo4j"
+    },
+    {
+      "id": "subtopic-36-010",
+      "text": "Graph query languages"
+    },
+    {
+      "id": "subtopic-36-011",
+      "text": "Graph embeddings"
+    },
+    {
+      "id": "subtopic-36-012",
+      "text": "Node classification"
+    },
+    {
+      "id": "subtopic-36-013",
+      "text": "Link prediction"
+    },
+    {
+      "id": "subtopic-36-014",
+      "text": "Graph clustering"
+    },
+    {
+      "id": "subtopic-36-015",
+      "text": "Graph Neural Networks (GNNs)"
+    },
+    {
+      "id": "subtopic-36-016",
+      "text": "Graph Convolutional Networks (GCNs)"
+    },
+    {
+      "id": "subtopic-36-017",
+      "text": "Graph Attention Networks (GATs)"
+    },
+    {
+      "id": "subtopic-36-018",
+      "text": "GraphSAGE"
+    },
+    {
+      "id": "subtopic-36-019",
+      "text": "Heterogeneous graphs"
+    },
+    {
+      "id": "subtopic-36-020",
+      "text": "Temporal graph networks"
+    },
+    {
+      "id": "subtopic-36-021",
+      "text": "Knowledge graph completion"
+    },
+    {
+      "id": "subtopic-36-022",
+      "text": "Knowledge graph reasoning"
+    },
+    {
+      "id": "subtopic-36-023",
+      "text": "Neuro-symbolic integration"
+    },
+    {
+      "id": "subtopic-36-024",
+      "text": "Knowledge graph question answering"
+    },
+    {
+      "id": "subtopic-36-025",
+      "text": "Graph RAG"
+    },
+    {
+      "id": "subtopic-36-026",
+      "text": "Fraud detection with graphs"
+    },
+    {
+      "id": "subtopic-36-027",
+      "text": "Recommendation systems with graphs"
+    },
+    {
+      "id": "subtopic-36-028",
+      "text": "Graph foundation models"
+    },
+    {
+      "id": "subtopic-37-001",
+      "text": "Time-series fundamentals"
+    },
+    {
+      "id": "subtopic-37-002",
+      "text": "Trend and seasonality"
+    },
+    {
+      "id": "subtopic-37-003",
+      "text": "Stationarity"
+    },
+    {
+      "id": "subtopic-37-004",
+      "text": "Autocorrelation"
+    },
+    {
+      "id": "subtopic-37-005",
+      "text": "Moving averages"
+    },
+    {
+      "id": "subtopic-37-006",
+      "text": "Exponential smoothing"
+    },
+    {
+      "id": "subtopic-37-007",
+      "text": "ARIMA"
+    },
+    {
+      "id": "subtopic-37-008",
+      "text": "SARIMA"
+    },
+    {
+      "id": "subtopic-37-009",
+      "text": "State-space models"
+    },
+    {
+      "id": "subtopic-37-010",
+      "text": "Kalman filters"
+    },
+    {
+      "id": "subtopic-37-011",
+      "text": "Time-series decomposition"
+    },
+    {
+      "id": "subtopic-37-012",
+      "text": "Forecasting evaluation"
+    },
+    {
+      "id": "subtopic-37-013",
+      "text": "Temporal feature engineering"
+    },
+    {
+      "id": "subtopic-37-014",
+      "text": "LSTM forecasting"
+    },
+    {
+      "id": "subtopic-37-015",
+      "text": "Transformer-based forecasting"
+    },
+    {
+      "id": "subtopic-37-016",
+      "text": "Temporal Fusion Transformers"
+    },
+    {
+      "id": "subtopic-37-017",
+      "text": "Multivariate forecasting"
+    },
+    {
+      "id": "subtopic-37-018",
+      "text": "Probabilistic forecasting"
+    },
+    {
+      "id": "subtopic-37-019",
+      "text": "Forecast uncertainty"
+    },
+    {
+      "id": "subtopic-37-020",
+      "text": "Anomaly detection"
+    },
+    {
+      "id": "subtopic-37-021",
+      "text": "Change-point detection"
+    },
+    {
+      "id": "subtopic-37-022",
+      "text": "Online forecasting"
+    },
+    {
+      "id": "subtopic-37-023",
+      "text": "Time-series foundation models"
+    },
+    {
+      "id": "subtopic-37-024",
+      "text": "Predictive maintenance"
+    },
+    {
+      "id": "subtopic-37-025",
+      "text": "Financial time-series analysis"
+    },
+    {
+      "id": "subtopic-37-026",
+      "text": "Demand and energy forecasting"
+    },
+    {
+      "id": "subtopic-38-001",
+      "text": "Recommender system fundamentals"
+    },
+    {
+      "id": "subtopic-38-002",
+      "text": "Content-based filtering"
+    },
+    {
+      "id": "subtopic-38-003",
+      "text": "Collaborative filtering"
+    },
+    {
+      "id": "subtopic-38-004",
+      "text": "User-item interaction matrices"
+    },
+    {
+      "id": "subtopic-38-005",
+      "text": "Matrix factorization"
+    },
+    {
+      "id": "subtopic-38-006",
+      "text": "Implicit feedback"
+    },
+    {
+      "id": "subtopic-38-007",
+      "text": "Explicit feedback"
+    },
+    {
+      "id": "subtopic-38-008",
+      "text": "Popularity-based recommendation"
+    },
+    {
+      "id": "subtopic-38-009",
+      "text": "Nearest-neighbor recommenders"
+    },
+    {
+      "id": "subtopic-38-010",
+      "text": "Deep learning recommenders"
+    },
+    {
+      "id": "subtopic-38-011",
+      "text": "Two-tower retrieval models"
+    },
+    {
+      "id": "subtopic-38-012",
+      "text": "Candidate generation"
+    },
+    {
+      "id": "subtopic-38-013",
+      "text": "Learning to rank"
+    },
+    {
+      "id": "subtopic-38-014",
+      "text": "Pointwise ranking"
+    },
+    {
+      "id": "subtopic-38-015",
+      "text": "Pairwise ranking"
+    },
+    {
+      "id": "subtopic-38-016",
+      "text": "Listwise ranking"
+    },
+    {
+      "id": "subtopic-38-017",
+      "text": "Personalized ranking"
+    },
+    {
+      "id": "subtopic-38-018",
+      "text": "Session-based recommendation"
+    },
+    {
+      "id": "subtopic-38-019",
+      "text": "Sequential recommendation"
+    },
+    {
+      "id": "subtopic-38-020",
+      "text": "Context-aware recommendation"
+    },
+    {
+      "id": "subtopic-38-021",
+      "text": "Cold-start problems"
+    },
+    {
+      "id": "subtopic-38-022",
+      "text": "Diversity and novelty"
+    },
+    {
+      "id": "subtopic-38-023",
+      "text": "Recommendation exploration"
+    },
+    {
+      "id": "subtopic-38-024",
+      "text": "Search relevance"
+    },
+    {
+      "id": "subtopic-38-025",
+      "text": "Neural information retrieval"
+    },
+    {
+      "id": "subtopic-38-026",
+      "text": "Re-ranking systems"
+    },
+    {
+      "id": "subtopic-38-027",
+      "text": "Recommendation evaluation"
+    },
+    {
+      "id": "subtopic-38-028",
+      "text": "Large-scale recommendation architecture"
+    },
+    {
+      "id": "subtopic-39-001",
+      "text": "Correlation vs causation"
+    },
+    {
+      "id": "subtopic-39-002",
+      "text": "Causal inference fundamentals"
+    },
+    {
+      "id": "subtopic-39-003",
+      "text": "Potential outcomes framework"
+    },
+    {
+      "id": "subtopic-39-004",
+      "text": "Confounding variables"
+    },
+    {
+      "id": "subtopic-39-005",
+      "text": "Causal graphs"
+    },
+    {
+      "id": "subtopic-39-006",
+      "text": "Directed Acyclic Graphs (DAGs)"
+    },
+    {
+      "id": "subtopic-39-007",
+      "text": "Structural Causal Models"
+    },
+    {
+      "id": "subtopic-39-008",
+      "text": "Interventions"
+    },
+    {
+      "id": "subtopic-39-009",
+      "text": "Counterfactual reasoning"
+    },
+    {
+      "id": "subtopic-39-010",
+      "text": "Randomized controlled experiments"
+    },
+    {
+      "id": "subtopic-39-011",
+      "text": "A/B testing"
+    },
+    {
+      "id": "subtopic-39-012",
+      "text": "Propensity score matching"
+    },
+    {
+      "id": "subtopic-39-013",
+      "text": "Instrumental variables"
+    },
+    {
+      "id": "subtopic-39-014",
+      "text": "Difference-in-differences"
+    },
+    {
+      "id": "subtopic-39-015",
+      "text": "Regression discontinuity"
+    },
+    {
+      "id": "subtopic-39-016",
+      "text": "Causal effect estimation"
+    },
+    {
+      "id": "subtopic-39-017",
+      "text": "Heterogeneous treatment effects"
+    },
+    {
+      "id": "subtopic-39-018",
+      "text": "Uplift modeling"
+    },
+    {
+      "id": "subtopic-39-019",
+      "text": "Causal representation learning"
+    },
+    {
+      "id": "subtopic-39-020",
+      "text": "Causal discovery"
+    },
+    {
+      "id": "subtopic-39-021",
+      "text": "Bayesian decision theory"
+    },
+    {
+      "id": "subtopic-39-022",
+      "text": "Decision-making under uncertainty"
+    },
+    {
+      "id": "subtopic-39-023",
+      "text": "Optimization-based decision systems"
+    },
+    {
+      "id": "subtopic-39-024",
+      "text": "AI-assisted experimentation"
+    },
+    {
+      "id": "subtopic-39-025",
+      "text": "Causal ML applications"
+    },
+    {
+      "id": "subtopic-40-001",
+      "text": "Robotics fundamentals"
+    },
+    {
+      "id": "subtopic-40-002",
+      "text": "Robot hardware"
+    },
+    {
+      "id": "subtopic-40-003",
+      "text": "Sensors and actuators"
+    },
+    {
+      "id": "subtopic-40-004",
+      "text": "Kinematics"
+    },
+    {
+      "id": "subtopic-40-005",
+      "text": "Forward kinematics"
+    },
+    {
+      "id": "subtopic-40-006",
+      "text": "Inverse kinematics"
+    },
+    {
+      "id": "subtopic-40-007",
+      "text": "Robot dynamics"
+    },
+    {
+      "id": "subtopic-40-008",
+      "text": "Coordinate transformations"
+    },
+    {
+      "id": "subtopic-40-009",
+      "text": "Robot perception"
+    },
+    {
+      "id": "subtopic-40-010",
+      "text": "Sensor fusion"
+    },
+    {
+      "id": "subtopic-40-011",
+      "text": "Localization"
+    },
+    {
+      "id": "subtopic-40-012",
+      "text": "Mapping"
+    },
+    {
+      "id": "subtopic-40-013",
+      "text": "Simultaneous Localization and Mapping (SLAM)"
+    },
+    {
+      "id": "subtopic-40-014",
+      "text": "Path planning"
+    },
+    {
+      "id": "subtopic-40-015",
+      "text": "Motion planning"
+    },
+    {
+      "id": "subtopic-40-016",
+      "text": "Trajectory optimization"
+    },
+    {
+      "id": "subtopic-40-017",
+      "text": "Robot control systems"
+    },
+    {
+      "id": "subtopic-40-018",
+      "text": "PID control"
+    },
+    {
+      "id": "subtopic-40-019",
+      "text": "Model Predictive Control (MPC)"
+    },
+    {
+      "id": "subtopic-40-020",
+      "text": "Autonomous navigation"
+    },
+    {
+      "id": "subtopic-40-021",
+      "text": "Obstacle avoidance"
+    },
+    {
+      "id": "subtopic-40-022",
+      "text": "Object manipulation"
+    },
+    {
+      "id": "subtopic-40-023",
+      "text": "Robotic grasping"
+    },
+    {
+      "id": "subtopic-40-024",
+      "text": "Imitation learning for robotics"
+    },
+    {
+      "id": "subtopic-40-025",
+      "text": "Reinforcement learning for robotics"
+    },
+    {
+      "id": "subtopic-40-026",
+      "text": "Simulation environments"
+    },
+    {
+      "id": "subtopic-40-027",
+      "text": "Sim-to-real transfer"
+    },
+    {
+      "id": "subtopic-40-028",
+      "text": "ROS 2 fundamentals"
+    },
+    {
+      "id": "subtopic-40-029",
+      "text": "Human-robot interaction"
+    },
+    {
+      "id": "subtopic-40-030",
+      "text": "Vision-language-action models"
+    },
+    {
+      "id": "subtopic-40-031",
+      "text": "Embodied foundation models"
+    },
+    {
+      "id": "subtopic-40-032",
+      "text": "Humanoid robotics"
+    },
+    {
+      "id": "subtopic-40-033",
+      "text": "Multi-robot systems"
+    },
+    {
+      "id": "subtopic-40-034",
+      "text": "Robot safety and verification"
+    },
+    {
+      "id": "subtopic-40-035",
+      "text": "Physical AI applications"
+    },
+    {
+      "id": "subtopic-41-001",
+      "text": "Autonomous driving fundamentals"
+    },
+    {
+      "id": "subtopic-41-002",
+      "text": "Vehicle sensor systems"
+    },
+    {
+      "id": "subtopic-41-003",
+      "text": "Camera perception"
+    },
+    {
+      "id": "subtopic-41-004",
+      "text": "Radar perception"
+    },
+    {
+      "id": "subtopic-41-005",
+      "text": "LiDAR perception"
+    },
+    {
+      "id": "subtopic-41-006",
+      "text": "Sensor calibration"
+    },
+    {
+      "id": "subtopic-41-007",
+      "text": "Sensor fusion"
+    },
+    {
+      "id": "subtopic-41-008",
+      "text": "Object detection"
+    },
+    {
+      "id": "subtopic-41-009",
+      "text": "Object tracking"
+    },
+    {
+      "id": "subtopic-41-010",
+      "text": "Lane detection"
+    },
+    {
+      "id": "subtopic-41-011",
+      "text": "Road scene understanding"
+    },
+    {
+      "id": "subtopic-41-012",
+      "text": "Traffic sign recognition"
+    },
+    {
+      "id": "subtopic-41-013",
+      "text": "Localization and mapping"
+    },
+    {
+      "id": "subtopic-41-014",
+      "text": "SLAM for vehicles"
+    },
+    {
+      "id": "subtopic-41-015",
+      "text": "High-definition maps"
+    },
+    {
+      "id": "subtopic-41-016",
+      "text": "Trajectory prediction"
+    },
+    {
+      "id": "subtopic-41-017",
+      "text": "Behavior prediction"
+    },
+    {
+      "id": "subtopic-41-018",
+      "text": "Motion planning"
+    },
+    {
+      "id": "subtopic-41-019",
+      "text": "Path planning"
+    },
+    {
+      "id": "subtopic-41-020",
+      "text": "Vehicle dynamics"
+    },
+    {
+      "id": "subtopic-41-021",
+      "text": "Vehicle control"
+    },
+    {
+      "id": "subtopic-41-022",
+      "text": "Advanced Driver Assistance Systems (ADAS)"
+    },
+    {
+      "id": "subtopic-41-023",
+      "text": "Driver monitoring"
+    },
+    {
+      "id": "subtopic-41-024",
+      "text": "Autonomous vehicle simulation"
+    },
+    {
+      "id": "subtopic-41-025",
+      "text": "Scenario generation"
+    },
+    {
+      "id": "subtopic-41-026",
+      "text": "Edge AI for vehicles"
+    },
+    {
+      "id": "subtopic-41-027",
+      "text": "Real-time inference"
+    },
+    {
+      "id": "subtopic-41-028",
+      "text": "Functional safety"
+    },
+    {
+      "id": "subtopic-41-029",
+      "text": "ISO 26262 fundamentals"
+    },
+    {
+      "id": "subtopic-41-030",
+      "text": "ISO 21448 / SOTIF fundamentals"
+    },
+    {
+      "id": "subtopic-41-031",
+      "text": "Automotive cybersecurity"
+    },
+    {
+      "id": "subtopic-41-032",
+      "text": "Safety validation"
+    },
+    {
+      "id": "subtopic-41-033",
+      "text": "Fleet data analytics"
+    },
+    {
+      "id": "subtopic-41-034",
+      "text": "Predictive maintenance"
+    },
+    {
+      "id": "subtopic-41-035",
+      "text": "Intelligent transportation systems"
+    },
+    {
+      "id": "subtopic-42-001",
+      "text": "Symbolic vs neural reasoning"
+    },
+    {
+      "id": "subtopic-42-002",
+      "text": "Logic-based AI"
+    },
+    {
+      "id": "subtopic-42-003",
+      "text": "Rule-based systems"
+    },
+    {
+      "id": "subtopic-42-004",
+      "text": "Knowledge representation"
+    },
+    {
+      "id": "subtopic-42-005",
+      "text": "Automated theorem proving"
+    },
+    {
+      "id": "subtopic-42-006",
+      "text": "Constraint solving"
+    },
+    {
+      "id": "subtopic-42-007",
+      "text": "SAT solving"
+    },
+    {
+      "id": "subtopic-42-008",
+      "text": "SMT solving"
+    },
+    {
+      "id": "subtopic-42-009",
+      "text": "Inductive logic programming"
+    },
+    {
+      "id": "subtopic-42-010",
+      "text": "Differentiable reasoning"
+    },
+    {
+      "id": "subtopic-42-011",
+      "text": "Neural theorem proving"
+    },
+    {
+      "id": "subtopic-42-012",
+      "text": "Neuro-symbolic architectures"
+    },
+    {
+      "id": "subtopic-42-013",
+      "text": "Program synthesis"
+    },
+    {
+      "id": "subtopic-42-014",
+      "text": "Program induction"
+    },
+    {
+      "id": "subtopic-42-015",
+      "text": "Reasoning with knowledge graphs"
+    },
+    {
+      "id": "subtopic-42-016",
+      "text": "Multi-step reasoning"
+    },
+    {
+      "id": "subtopic-42-017",
+      "text": "Compositional generalization"
+    },
+    {
+      "id": "subtopic-42-018",
+      "text": "Commonsense reasoning"
+    },
+    {
+      "id": "subtopic-42-019",
+      "text": "Mathematical reasoning"
+    },
+    {
+      "id": "subtopic-42-020",
+      "text": "Formal reasoning"
+    },
+    {
+      "id": "subtopic-42-021",
+      "text": "Verifiable reasoning"
+    },
+    {
+      "id": "subtopic-42-022",
+      "text": "Reasoning with external tools"
+    },
+    {
+      "id": "subtopic-42-023",
+      "text": "Planning and reasoning integration"
+    },
+    {
+      "id": "subtopic-42-024",
+      "text": "Reasoning benchmark design"
+    },
+    {
+      "id": "subtopic-42-025",
+      "text": "Hybrid AI architectures"
+    },
+    {
+      "id": "subtopic-43-001",
+      "text": "Representation learning"
+    },
+    {
+      "id": "subtopic-43-002",
+      "text": "Self-supervised learning"
+    },
+    {
+      "id": "subtopic-43-003",
+      "text": "Contrastive learning"
+    },
+    {
+      "id": "subtopic-43-004",
+      "text": "Metric learning"
+    },
+    {
+      "id": "subtopic-43-005",
+      "text": "Semi-supervised learning"
+    },
+    {
+      "id": "subtopic-43-006",
+      "text": "Weakly supervised learning"
+    },
+    {
+      "id": "subtopic-43-007",
+      "text": "Active learning"
+    },
+    {
+      "id": "subtopic-43-008",
+      "text": "Curriculum learning"
+    },
+    {
+      "id": "subtopic-43-009",
+      "text": "Transfer learning"
+    },
+    {
+      "id": "subtopic-43-010",
+      "text": "Multi-task learning"
+    },
+    {
+      "id": "subtopic-43-011",
+      "text": "Meta-learning"
+    },
+    {
+      "id": "subtopic-43-012",
+      "text": "Few-shot learning"
+    },
+    {
+      "id": "subtopic-43-013",
+      "text": "Zero-shot learning"
+    },
+    {
+      "id": "subtopic-43-014",
+      "text": "Continual learning"
+    },
+    {
+      "id": "subtopic-43-015",
+      "text": "Lifelong learning"
+    },
+    {
+      "id": "subtopic-43-016",
+      "text": "Catastrophic forgetting"
+    },
+    {
+      "id": "subtopic-43-017",
+      "text": "Domain adaptation"
+    },
+    {
+      "id": "subtopic-43-018",
+      "text": "Domain generalization"
+    },
+    {
+      "id": "subtopic-43-019",
+      "text": "Out-of-distribution generalization"
+    },
+    {
+      "id": "subtopic-43-020",
+      "text": "Federated learning"
+    },
+    {
+      "id": "subtopic-43-021",
+      "text": "Decentralized learning"
+    },
+    {
+      "id": "subtopic-43-022",
+      "text": "Multi-agent learning"
+    },
+    {
+      "id": "subtopic-43-023",
+      "text": "Online learning"
+    },
+    {
+      "id": "subtopic-43-024",
+      "text": "Streaming learning"
+    },
+    {
+      "id": "subtopic-43-025",
+      "text": "Test-time adaptation"
+    },
+    {
+      "id": "subtopic-43-026",
+      "text": "Learning with noisy labels"
+    },
+    {
+      "id": "subtopic-43-027",
+      "text": "Learning from limited data"
+    },
+    {
+      "id": "subtopic-43-028",
+      "text": "Synthetic data training"
+    },
+    {
+      "id": "subtopic-43-029",
+      "text": "Efficient learning algorithms"
+    },
+    {
+      "id": "subtopic-43-030",
+      "text": "World models"
+    },
+    {
+      "id": "subtopic-44-001",
+      "text": "AI for scientific discovery"
+    },
+    {
+      "id": "subtopic-44-002",
+      "text": "Scientific machine learning"
+    },
+    {
+      "id": "subtopic-44-003",
+      "text": "Physics-Informed Neural Networks (PINNs)"
+    },
+    {
+      "id": "subtopic-44-004",
+      "text": "Neural operators"
+    },
+    {
+      "id": "subtopic-44-005",
+      "text": "Neural differential equations"
+    },
+    {
+      "id": "subtopic-44-006",
+      "text": "Differentiable simulation"
+    },
+    {
+      "id": "subtopic-44-007",
+      "text": "Surrogate modeling"
+    },
+    {
+      "id": "subtopic-44-008",
+      "text": "Bayesian optimization for science"
+    },
+    {
+      "id": "subtopic-44-009",
+      "text": "Molecular representation learning"
+    },
+    {
+      "id": "subtopic-44-010",
+      "text": "Molecular property prediction"
+    },
+    {
+      "id": "subtopic-44-011",
+      "text": "Protein structure prediction"
+    },
+    {
+      "id": "subtopic-44-012",
+      "text": "Protein language models"
+    },
+    {
+      "id": "subtopic-44-013",
+      "text": "Drug discovery AI"
+    },
+    {
+      "id": "subtopic-44-014",
+      "text": "Molecular generation"
+    },
+    {
+      "id": "subtopic-44-015",
+      "text": "Materials discovery"
+    },
+    {
+      "id": "subtopic-44-016",
+      "text": "Computational chemistry AI"
+    },
+    {
+      "id": "subtopic-44-017",
+      "text": "Computational biology AI"
+    },
+    {
+      "id": "subtopic-44-018",
+      "text": "Medical AI fundamentals"
+    },
+    {
+      "id": "subtopic-44-019",
+      "text": "Genomics AI"
+    },
+    {
+      "id": "subtopic-44-020",
+      "text": "Climate modeling AI"
+    },
+    {
+      "id": "subtopic-44-021",
+      "text": "Weather forecasting AI"
+    },
+    {
+      "id": "subtopic-44-022",
+      "text": "Energy optimization AI"
+    },
+    {
+      "id": "subtopic-44-023",
+      "text": "Digital twins"
+    },
+    {
+      "id": "subtopic-44-024",
+      "text": "Engineering simulation with AI"
+    },
+    {
+      "id": "subtopic-44-025",
+      "text": "Uncertainty quantification"
+    },
+    {
+      "id": "subtopic-44-026",
+      "text": "Scientific foundation models"
+    },
+    {
+      "id": "subtopic-44-027",
+      "text": "Autonomous scientific experimentation"
+    },
+    {
+      "id": "subtopic-44-028",
+      "text": "Scientific model validation"
+    },
+    {
+      "id": "subtopic-45-001",
+      "text": "Foundation model scaling"
+    },
+    {
+      "id": "subtopic-45-002",
+      "text": "Advanced scaling laws"
+    },
+    {
+      "id": "subtopic-45-003",
+      "text": "Compute-optimal training"
+    },
+    {
+      "id": "subtopic-45-004",
+      "text": "Data-efficient pretraining"
+    },
+    {
+      "id": "subtopic-45-005",
+      "text": "Synthetic data scaling"
+    },
+    {
+      "id": "subtopic-45-006",
+      "text": "Reasoning model training"
+    },
+    {
+      "id": "subtopic-45-007",
+      "text": "Test-time scaling"
+    },
+    {
+      "id": "subtopic-45-008",
+      "text": "Search-based inference"
+    },
+    {
+      "id": "subtopic-45-009",
+      "text": "Process reward models"
+    },
+    {
+      "id": "subtopic-45-010",
+      "text": "Verifiable reward training"
+    },
+    {
+      "id": "subtopic-45-011",
+      "text": "Advanced post-training methods"
+    },
+    {
+      "id": "subtopic-45-012",
+      "text": "Self-improving AI systems"
+    },
+    {
+      "id": "subtopic-45-013",
+      "text": "Continual pretraining"
+    },
+    {
+      "id": "subtopic-45-014",
+      "text": "Long-context language models"
+    },
+    {
+      "id": "subtopic-45-015",
+      "text": "Memory-augmented architectures"
+    },
+    {
+      "id": "subtopic-45-016",
+      "text": "Retrieval-enhanced architectures"
+    },
+    {
+      "id": "subtopic-45-017",
+      "text": "Mixture-of-Experts research"
+    },
+    {
+      "id": "subtopic-45-018",
+      "text": "State-space sequence models"
+    },
+    {
+      "id": "subtopic-45-019",
+      "text": "Alternative sequence architectures"
+    },
+    {
+      "id": "subtopic-45-020",
+      "text": "Multimodal foundation models"
+    },
+    {
+      "id": "subtopic-45-021",
+      "text": "Video understanding and generation"
+    },
+    {
+      "id": "subtopic-45-022",
+      "text": "World models"
+    },
+    {
+      "id": "subtopic-45-023",
+      "text": "Learned simulators"
+    },
+    {
+      "id": "subtopic-45-024",
+      "text": "Foundation models for robotics"
+    },
+    {
+      "id": "subtopic-45-025",
+      "text": "Autonomous research agents"
+    },
+    {
+      "id": "subtopic-45-026",
+      "text": "General-purpose agent systems"
+    },
+    {
+      "id": "subtopic-45-027",
+      "text": "Multi-agent coordination research"
+    },
+    {
+      "id": "subtopic-45-028",
+      "text": "Mechanistic interpretability"
+    },
+    {
+      "id": "subtopic-45-029",
+      "text": "Sparse autoencoders for interpretability"
+    },
+    {
+      "id": "subtopic-45-030",
+      "text": "Model editing"
+    },
+    {
+      "id": "subtopic-45-031",
+      "text": "Model unlearning"
+    },
+    {
+      "id": "subtopic-45-032",
+      "text": "Model robustness"
+    },
+    {
+      "id": "subtopic-45-033",
+      "text": "Advanced AI alignment"
+    },
+    {
+      "id": "subtopic-45-034",
+      "text": "Scalable oversight"
+    },
+    {
+      "id": "subtopic-45-035",
+      "text": "AI control and monitoring"
+    },
+    {
+      "id": "subtopic-45-036",
+      "text": "Frontier model evaluations"
+    },
+    {
+      "id": "subtopic-45-037",
+      "text": "Artificial General Intelligence (AGI) research"
+    },
+    {
+      "id": "subtopic-45-038",
+      "text": "AI governance research"
+    },
+    {
+      "id": "subtopic-45-039",
+      "text": "Open research problems in AI"
+    },
+    {
+      "id": "subtopic-45-040",
+      "text": "Emerging AI architectures"
+    },
+    {
+      "id": "subtopic-46-001",
+      "text": "Reading academic papers"
+    },
+    {
+      "id": "subtopic-46-002",
+      "text": "Understanding research abstracts"
+    },
+    {
+      "id": "subtopic-46-003",
+      "text": "Literature reviews"
+    },
+    {
+      "id": "subtopic-46-004",
+      "text": "Research problem identification"
+    },
+    {
+      "id": "subtopic-46-005",
+      "text": "Research hypothesis development"
+    },
+    {
+      "id": "subtopic-46-006",
+      "text": "Mathematical model formulation"
+    },
+    {
+      "id": "subtopic-46-007",
+      "text": "Experimental methodology"
+    },
+    {
+      "id": "subtopic-46-008",
+      "text": "Dataset selection"
+    },
+    {
+      "id": "subtopic-46-009",
+      "text": "Benchmark selection"
+    },
+    {
+      "id": "subtopic-46-010",
+      "text": "Baseline implementation"
+    },
+    {
+      "id": "subtopic-46-011",
+      "text": "Reproducing research papers"
+    },
+    {
+      "id": "subtopic-46-012",
+      "text": "Ablation experiments"
+    },
+    {
+      "id": "subtopic-46-013",
+      "text": "Hyperparameter sensitivity analysis"
+    },
+    {
+      "id": "subtopic-46-014",
+      "text": "Statistical significance testing"
+    },
+    {
+      "id": "subtopic-46-015",
+      "text": "Confidence intervals"
+    },
+    {
+      "id": "subtopic-46-016",
+      "text": "Experimental reproducibility"
+    },
+    {
+      "id": "subtopic-46-017",
+      "text": "Research code organization"
+    },
+    {
+      "id": "subtopic-46-018",
+      "text": "Experiment tracking"
+    },
+    {
+      "id": "subtopic-46-019",
+      "text": "Result interpretation"
+    },
+    {
+      "id": "subtopic-46-020",
+      "text": "Failure analysis"
+    },
+    {
+      "id": "subtopic-46-021",
+      "text": "Scientific writing"
+    },
+    {
+      "id": "subtopic-46-022",
+      "text": "Research paper structure"
+    },
+    {
+      "id": "subtopic-46-023",
+      "text": "LaTeX fundamentals"
+    },
+    {
+      "id": "subtopic-46-024",
+      "text": "Technical presentation"
+    },
+    {
+      "id": "subtopic-46-025",
+      "text": "Peer review"
+    },
+    {
+      "id": "subtopic-46-026",
+      "text": "Open-source research contributions"
+    },
+    {
+      "id": "subtopic-46-027",
+      "text": "Research ethics"
+    },
+    {
+      "id": "subtopic-46-028",
+      "text": "Publication and conference processes"
+    },
+    {
+      "id": "subtopic-46-029",
+      "text": "Research collaboration"
+    },
+    {
+      "id": "subtopic-46-030",
+      "text": "Identifying promising future research directions"
+    },
+    {
+      "id": "subtopic-47-001",
+      "text": "Rule-based chatbot"
+    },
+    {
+      "id": "subtopic-47-002",
+      "text": "Simple search algorithm visualizer"
+    },
+    {
+      "id": "subtopic-47-003",
+      "text": "Tic-Tac-Toe AI"
+    },
+    {
+      "id": "subtopic-47-004",
+      "text": "Chess move recommendation using classical search"
+    },
+    {
+      "id": "subtopic-47-005",
+      "text": "House price prediction"
+    },
+    {
+      "id": "subtopic-47-006",
+      "text": "Spam email classification"
+    },
+    {
+      "id": "subtopic-47-007",
+      "text": "Iris flower classification"
+    },
+    {
+      "id": "subtopic-47-008",
+      "text": "Customer segmentation"
+    },
+    {
+      "id": "subtopic-47-009",
+      "text": "Sentiment analysis"
+    },
+    {
+      "id": "subtopic-47-010",
+      "text": "Movie recommendation system"
+    },
+    {
+      "id": "subtopic-47-011",
+      "text": "Sales forecasting"
+    },
+    {
+      "id": "subtopic-47-012",
+      "text": "Customer churn prediction"
+    },
+    {
+      "id": "subtopic-47-013",
+      "text": "Basic anomaly detection"
+    },
+    {
+      "id": "subtopic-47-014",
+      "text": "Handwritten digit recognition"
+    },
+    {
+      "id": "subtopic-47-015",
+      "text": "Simple image classification"
+    },
+    {
+      "id": "subtopic-48-001",
+      "text": "Neural network from scratch"
+    },
+    {
+      "id": "subtopic-48-002",
+      "text": "Image classification using CNNs"
+    },
+    {
+      "id": "subtopic-48-003",
+      "text": "Object detection application"
+    },
+    {
+      "id": "subtopic-48-004",
+      "text": "Resume classification system"
+    },
+    {
+      "id": "subtopic-48-005",
+      "text": "Speech-to-text application"
+    },
+    {
+      "id": "subtopic-48-006",
+      "text": "Text summarization application"
+    },
+    {
+      "id": "subtopic-48-007",
+      "text": "Semantic search engine"
+    },
+    {
+      "id": "subtopic-48-008",
+      "text": "Document similarity system"
+    },
+    {
+      "id": "subtopic-48-009",
+      "text": "Time-series forecasting model"
+    },
+    {
+      "id": "subtopic-48-010",
+      "text": "Recommendation engine"
+    },
+    {
+      "id": "subtopic-48-011",
+      "text": "Fake review detection"
+    },
+    {
+      "id": "subtopic-48-012",
+      "text": "Multilingual text classification"
+    },
+    {
+      "id": "subtopic-48-013",
+      "text": "Transformer implementation"
+    },
+    {
+      "id": "subtopic-48-014",
+      "text": "Fine-tune a small language model"
+    },
+    {
+      "id": "subtopic-48-015",
+      "text": "Build a custom embedding-based search application"
+    },
+    {
+      "id": "subtopic-49-001",
+      "text": "Chatbot using an LLM API"
+    },
+    {
+      "id": "subtopic-49-002",
+      "text": "Local LLM chatbot"
+    },
+    {
+      "id": "subtopic-49-003",
+      "text": "Prompt engineering playground"
+    },
+    {
+      "id": "subtopic-49-004",
+      "text": "Structured data extraction system"
+    },
+    {
+      "id": "subtopic-49-005",
+      "text": "PDF question-answering assistant"
+    },
+    {
+      "id": "subtopic-49-006",
+      "text": "Website question-answering assistant"
+    },
+    {
+      "id": "subtopic-49-007",
+      "text": "Document summarization system"
+    },
+    {
+      "id": "subtopic-49-008",
+      "text": "Semantic enterprise search"
+    },
+    {
+      "id": "subtopic-49-009",
+      "text": "RAG chatbot with citations"
+    },
+    {
+      "id": "subtopic-49-010",
+      "text": "Hybrid-search RAG system"
+    },
+    {
+      "id": "subtopic-49-011",
+      "text": "Conversational RAG with memory"
+    },
+    {
+      "id": "subtopic-49-012",
+      "text": "Multi-document RAG"
+    },
+    {
+      "id": "subtopic-49-013",
+      "text": "Knowledge graph RAG"
+    },
+    {
+      "id": "subtopic-49-014",
+      "text": "Multimodal RAG"
+    },
+    {
+      "id": "subtopic-49-015",
+      "text": "Fine-tuned domain-specific chatbot"
+    },
+    {
+      "id": "subtopic-49-016",
+      "text": "AI code assistant"
+    },
+    {
+      "id": "subtopic-49-017",
+      "text": "AI document processing system"
+    },
+    {
+      "id": "subtopic-49-018",
+      "text": "AI-powered customer support assistant"
+    },
+    {
+      "id": "subtopic-49-019",
+      "text": "Voice-enabled AI assistant"
+    },
+    {
+      "id": "subtopic-49-020",
+      "text": "AI application with automated evaluation"
+    },
+    {
+      "id": "subtopic-50-001",
+      "text": "Calculator tool-calling agent"
+    },
+    {
+      "id": "subtopic-50-002",
+      "text": "Weather information agent"
+    },
+    {
+      "id": "subtopic-50-003",
+      "text": "Web research agent"
+    },
+    {
+      "id": "subtopic-50-004",
+      "text": "File management agent"
+    },
+    {
+      "id": "subtopic-50-005",
+      "text": "Calendar assistant"
+    },
+    {
+      "id": "subtopic-50-006",
+      "text": "Email assistant"
+    },
+    {
+      "id": "subtopic-50-007",
+      "text": "Document analysis agent"
+    },
+    {
+      "id": "subtopic-50-008",
+      "text": "SQL database agent"
+    },
+    {
+      "id": "subtopic-50-009",
+      "text": "Code analysis agent"
+    },
+    {
+      "id": "subtopic-50-010",
+      "text": "Automated testing agent"
+    },
+    {
+      "id": "subtopic-50-011",
+      "text": "Browser automation agent"
+    },
+    {
+      "id": "subtopic-50-012",
+      "text": "MCP-based tool integration"
+    },
+    {
+      "id": "subtopic-50-013",
+      "text": "Multi-tool assistant"
+    },
+    {
+      "id": "subtopic-50-014",
+      "text": "Planner-executor agent"
+    },
+    {
+      "id": "subtopic-50-015",
+      "text": "Human-approved action agent"
+    },
+    {
+      "id": "subtopic-50-016",
+      "text": "Multi-agent research system"
+    },
+    {
+      "id": "subtopic-50-017",
+      "text": "Multi-agent software development workflow"
+    },
+    {
+      "id": "subtopic-50-018",
+      "text": "Self-checking agent workflow"
+    },
+    {
+      "id": "subtopic-50-019",
+      "text": "Durable long-running workflow"
+    },
+    {
+      "id": "subtopic-50-020",
+      "text": "Production AI agent with monitoring and security"
+    },
+    {
+      "id": "subtopic-51-001",
+      "text": "Deploy an ML model behind an API"
+    },
+    {
+      "id": "subtopic-51-002",
+      "text": "Containerize an AI application"
+    },
+    {
+      "id": "subtopic-51-003",
+      "text": "Build an AI application with authentication"
+    },
+    {
+      "id": "subtopic-51-004",
+      "text": "Deploy a RAG service"
+    },
+    {
+      "id": "subtopic-51-005",
+      "text": "Build a scalable inference service"
+    },
+    {
+      "id": "subtopic-51-006",
+      "text": "Implement model evaluation pipelines"
+    },
+    {
+      "id": "subtopic-51-007",
+      "text": "Implement prompt versioning"
+    },
+    {
+      "id": "subtopic-51-008",
+      "text": "Add tracing and observability"
+    },
+    {
+      "id": "subtopic-51-009",
+      "text": "Add caching and rate limiting"
+    },
+    {
+      "id": "subtopic-51-010",
+      "text": "Build cost-monitoring dashboards"
+    },
+    {
+      "id": "subtopic-51-011",
+      "text": "Add role-based access control"
+    },
+    {
+      "id": "subtopic-51-012",
+      "text": "Implement AI security tests"
+    },
+    {
+      "id": "subtopic-51-013",
+      "text": "Develop a model monitoring pipeline"
+    },
+    {
+      "id": "subtopic-51-014",
+      "text": "Automate ML model deployment"
+    },
+    {
+      "id": "subtopic-51-015",
+      "text": "Implement CI/CD for AI services"
+    },
+    {
+      "id": "subtopic-51-016",
+      "text": "Benchmark AI inference performance"
+    },
+    {
+      "id": "subtopic-51-017",
+      "text": "Deploy a locally hosted LLM"
+    },
+    {
+      "id": "subtopic-51-018",
+      "text": "Build an enterprise knowledge assistant"
+    },
+    {
+      "id": "subtopic-51-019",
+      "text": "Build a secure, production-ready AI agent"
+    },
+    {
+      "id": "subtopic-51-020",
+      "text": "Design and operate an end-to-end AI platform"
+    }
+  ],
+  "progress_ids": [
+    "unit-01-01-practice",
+    "unit-01-01-transfer",
+    "unit-01-02-practice",
+    "unit-01-02-transfer",
+    "unit-02-01-practice",
+    "unit-02-01-transfer",
+    "unit-02-02-practice",
+    "unit-02-02-transfer",
+    "unit-02-03-practice",
+    "unit-02-03-transfer",
+    "unit-02-04-practice",
+    "unit-02-04-transfer",
+    "unit-03-01-practice",
+    "unit-03-01-transfer",
+    "unit-03-02-practice",
+    "unit-03-02-transfer",
+    "unit-03-03-practice",
+    "unit-03-03-transfer",
+    "unit-03-04-practice",
+    "unit-03-04-transfer",
+    "unit-03-05-practice",
+    "unit-03-05-transfer",
+    "unit-04-01-practice",
+    "unit-04-01-transfer",
+    "unit-04-02-practice",
+    "unit-04-02-transfer",
+    "unit-04-03-practice",
+    "unit-04-03-transfer",
+    "unit-04-04-practice",
+    "unit-04-04-transfer",
+    "unit-04-05-practice",
+    "unit-04-05-transfer",
+    "unit-05-01-practice",
+    "unit-05-01-transfer",
+    "unit-05-02-practice",
+    "unit-05-02-transfer",
+    "unit-05-03-practice",
+    "unit-05-03-transfer",
+    "unit-05-04-practice",
+    "unit-05-04-transfer",
+    "unit-06-01-practice",
+    "unit-06-01-transfer",
+    "unit-06-02-practice",
+    "unit-06-02-transfer",
+    "unit-06-03-practice",
+    "unit-06-03-transfer",
+    "unit-06-04-practice",
+    "unit-06-04-transfer",
+    "unit-06-05-practice",
+    "unit-06-05-transfer",
+    "unit-07-01-practice",
+    "unit-07-01-transfer",
+    "unit-07-02-practice",
+    "unit-07-02-transfer",
+    "unit-07-03-practice",
+    "unit-07-03-transfer",
+    "unit-07-04-practice",
+    "unit-07-04-transfer",
+    "unit-08-01-practice",
+    "unit-08-01-transfer",
+    "unit-08-02-practice",
+    "unit-08-02-transfer",
+    "unit-08-03-practice",
+    "unit-08-03-transfer",
+    "unit-08-04-practice",
+    "unit-08-04-transfer",
+    "unit-09-01-practice",
+    "unit-09-01-transfer",
+    "unit-09-02-practice",
+    "unit-09-02-transfer",
+    "unit-09-03-practice",
+    "unit-09-03-transfer",
+    "unit-10-01-practice",
+    "unit-10-01-transfer",
+    "unit-10-02-practice",
+    "unit-10-02-transfer",
+    "unit-10-03-practice",
+    "unit-10-03-transfer",
+    "unit-10-04-practice",
+    "unit-10-04-transfer",
+    "unit-11-01-practice",
+    "unit-11-01-transfer",
+    "unit-11-02-practice",
+    "unit-11-02-transfer",
+    "unit-11-03-practice",
+    "unit-11-03-transfer",
+    "unit-11-04-practice",
+    "unit-11-04-transfer",
+    "unit-12-01-practice",
+    "unit-12-01-transfer",
+    "unit-12-02-practice",
+    "unit-12-02-transfer",
+    "unit-12-03-practice",
+    "unit-12-03-transfer",
+    "unit-12-04-practice",
+    "unit-12-04-transfer",
+    "unit-12-05-practice",
+    "unit-12-05-transfer",
+    "unit-13-01-practice",
+    "unit-13-01-transfer",
+    "unit-13-02-practice",
+    "unit-13-02-transfer",
+    "unit-13-03-practice",
+    "unit-13-03-transfer",
+    "unit-13-04-practice",
+    "unit-13-04-transfer",
+    "unit-14-01-practice",
+    "unit-14-01-transfer",
+    "unit-14-02-practice",
+    "unit-14-02-transfer",
+    "unit-14-03-practice",
+    "unit-14-03-transfer",
+    "unit-14-04-practice",
+    "unit-14-04-transfer",
+    "unit-14-05-practice",
+    "unit-14-05-transfer",
+    "unit-15-01-practice",
+    "unit-15-01-transfer",
+    "unit-15-02-practice",
+    "unit-15-02-transfer",
+    "unit-15-03-practice",
+    "unit-15-03-transfer",
+    "unit-15-04-practice",
+    "unit-15-04-transfer",
+    "unit-16-01-practice",
+    "unit-16-01-transfer",
+    "unit-16-02-practice",
+    "unit-16-02-transfer",
+    "unit-16-03-practice",
+    "unit-16-03-transfer",
+    "unit-16-04-practice",
+    "unit-16-04-transfer",
+    "unit-16-05-practice",
+    "unit-16-05-transfer",
+    "unit-17-01-practice",
+    "unit-17-01-transfer",
+    "unit-17-02-practice",
+    "unit-17-02-transfer",
+    "unit-17-03-practice",
+    "unit-17-03-transfer",
+    "unit-17-04-practice",
+    "unit-17-04-transfer",
+    "unit-18-01-practice",
+    "unit-18-01-transfer",
+    "unit-18-02-practice",
+    "unit-18-02-transfer",
+    "unit-18-03-practice",
+    "unit-18-03-transfer",
+    "unit-18-04-practice",
+    "unit-18-04-transfer",
+    "unit-19-01-practice",
+    "unit-19-01-transfer",
+    "unit-19-02-practice",
+    "unit-19-02-transfer",
+    "unit-19-03-practice",
+    "unit-19-03-transfer",
+    "unit-19-04-practice",
+    "unit-19-04-transfer",
+    "unit-19-05-practice",
+    "unit-19-05-transfer",
+    "unit-20-01-practice",
+    "unit-20-01-transfer",
+    "unit-20-02-practice",
+    "unit-20-02-transfer",
+    "unit-20-03-practice",
+    "unit-20-03-transfer",
+    "unit-20-04-practice",
+    "unit-20-04-transfer",
+    "unit-21-01-practice",
+    "unit-21-01-transfer",
+    "unit-21-02-practice",
+    "unit-21-02-transfer",
+    "unit-21-03-practice",
+    "unit-21-03-transfer",
+    "unit-21-04-practice",
+    "unit-21-04-transfer",
+    "unit-22-01-practice",
+    "unit-22-01-transfer",
+    "unit-22-02-practice",
+    "unit-22-02-transfer",
+    "unit-22-03-practice",
+    "unit-22-03-transfer",
+    "unit-22-04-practice",
+    "unit-22-04-transfer",
+    "unit-22-05-practice",
+    "unit-22-05-transfer",
+    "unit-23-01-practice",
+    "unit-23-01-transfer",
+    "unit-23-02-practice",
+    "unit-23-02-transfer",
+    "unit-23-03-practice",
+    "unit-23-03-transfer",
+    "unit-23-04-practice",
+    "unit-23-04-transfer",
+    "unit-24-01-practice",
+    "unit-24-01-transfer",
+    "unit-24-02-practice",
+    "unit-24-02-transfer",
+    "unit-24-03-practice",
+    "unit-24-03-transfer",
+    "unit-24-04-practice",
+    "unit-24-04-transfer",
+    "unit-25-01-practice",
+    "unit-25-01-transfer",
+    "unit-25-02-practice",
+    "unit-25-02-transfer",
+    "unit-25-03-practice",
+    "unit-25-03-transfer",
+    "unit-25-04-practice",
+    "unit-25-04-transfer",
+    "unit-25-05-practice",
+    "unit-25-05-transfer",
+    "unit-26-01-practice",
+    "unit-26-01-transfer",
+    "unit-26-02-practice",
+    "unit-26-02-transfer",
+    "unit-26-03-practice",
+    "unit-26-03-transfer",
+    "unit-26-04-practice",
+    "unit-26-04-transfer",
+    "unit-26-05-practice",
+    "unit-26-05-transfer",
+    "unit-27-01-practice",
+    "unit-27-01-transfer",
+    "unit-27-02-practice",
+    "unit-27-02-transfer",
+    "unit-27-03-practice",
+    "unit-27-03-transfer",
+    "unit-27-04-practice",
+    "unit-27-04-transfer",
+    "unit-27-05-practice",
+    "unit-27-05-transfer",
+    "unit-27-06-practice",
+    "unit-27-06-transfer",
+    "unit-28-01-practice",
+    "unit-28-01-transfer",
+    "unit-28-02-practice",
+    "unit-28-02-transfer",
+    "unit-28-03-practice",
+    "unit-28-03-transfer",
+    "unit-28-04-practice",
+    "unit-28-04-transfer",
+    "unit-28-05-practice",
+    "unit-28-05-transfer",
+    "unit-28-06-practice",
+    "unit-28-06-transfer",
+    "unit-29-01-practice",
+    "unit-29-01-transfer",
+    "unit-29-02-practice",
+    "unit-29-02-transfer",
+    "unit-29-03-practice",
+    "unit-29-03-transfer",
+    "unit-29-04-practice",
+    "unit-29-04-transfer",
+    "unit-29-05-practice",
+    "unit-29-05-transfer",
+    "unit-30-01-practice",
+    "unit-30-01-transfer",
+    "unit-30-02-practice",
+    "unit-30-02-transfer",
+    "unit-30-03-practice",
+    "unit-30-03-transfer",
+    "unit-30-04-practice",
+    "unit-30-04-transfer",
+    "unit-30-05-practice",
+    "unit-30-05-transfer",
+    "unit-31-01-practice",
+    "unit-31-01-transfer",
+    "unit-31-02-practice",
+    "unit-31-02-transfer",
+    "unit-31-03-practice",
+    "unit-31-03-transfer",
+    "unit-31-04-practice",
+    "unit-31-04-transfer",
+    "unit-31-05-practice",
+    "unit-31-05-transfer",
+    "unit-32-01-practice",
+    "unit-32-01-transfer",
+    "unit-32-02-practice",
+    "unit-32-02-transfer",
+    "unit-32-03-practice",
+    "unit-32-03-transfer",
+    "unit-32-04-practice",
+    "unit-32-04-transfer",
+    "unit-32-05-practice",
+    "unit-32-05-transfer",
+    "unit-33-01-practice",
+    "unit-33-01-transfer",
+    "unit-33-02-practice",
+    "unit-33-02-transfer",
+    "unit-33-03-practice",
+    "unit-33-03-transfer",
+    "unit-33-04-practice",
+    "unit-33-04-transfer",
+    "unit-33-05-practice",
+    "unit-33-05-transfer",
+    "unit-34-01-practice",
+    "unit-34-01-transfer",
+    "unit-34-02-practice",
+    "unit-34-02-transfer",
+    "unit-34-03-practice",
+    "unit-34-03-transfer",
+    "unit-34-04-practice",
+    "unit-34-04-transfer",
+    "unit-34-05-practice",
+    "unit-34-05-transfer",
+    "unit-34-06-practice",
+    "unit-34-06-transfer",
+    "unit-35-01-practice",
+    "unit-35-01-transfer",
+    "unit-35-02-practice",
+    "unit-35-02-transfer",
+    "unit-35-03-practice",
+    "unit-35-03-transfer",
+    "unit-35-04-practice",
+    "unit-35-04-transfer",
+    "unit-35-05-practice",
+    "unit-35-05-transfer",
+    "unit-36-01-practice",
+    "unit-36-01-transfer",
+    "unit-36-02-practice",
+    "unit-36-02-transfer",
+    "unit-36-03-practice",
+    "unit-36-03-transfer",
+    "unit-36-04-practice",
+    "unit-36-04-transfer",
+    "unit-37-01-practice",
+    "unit-37-01-transfer",
+    "unit-37-02-practice",
+    "unit-37-02-transfer",
+    "unit-37-03-practice",
+    "unit-37-03-transfer",
+    "unit-37-04-practice",
+    "unit-37-04-transfer",
+    "unit-38-01-practice",
+    "unit-38-01-transfer",
+    "unit-38-02-practice",
+    "unit-38-02-transfer",
+    "unit-38-03-practice",
+    "unit-38-03-transfer",
+    "unit-38-04-practice",
+    "unit-38-04-transfer",
+    "unit-39-01-practice",
+    "unit-39-01-transfer",
+    "unit-39-02-practice",
+    "unit-39-02-transfer",
+    "unit-39-03-practice",
+    "unit-39-03-transfer",
+    "unit-39-04-practice",
+    "unit-39-04-transfer",
+    "unit-40-01-practice",
+    "unit-40-01-transfer",
+    "unit-40-02-practice",
+    "unit-40-02-transfer",
+    "unit-40-03-practice",
+    "unit-40-03-transfer",
+    "unit-40-04-practice",
+    "unit-40-04-transfer",
+    "unit-40-05-practice",
+    "unit-40-05-transfer",
+    "unit-41-01-practice",
+    "unit-41-01-transfer",
+    "unit-41-02-practice",
+    "unit-41-02-transfer",
+    "unit-41-03-practice",
+    "unit-41-03-transfer",
+    "unit-41-04-practice",
+    "unit-41-04-transfer",
+    "unit-41-05-practice",
+    "unit-41-05-transfer",
+    "unit-42-01-practice",
+    "unit-42-01-transfer",
+    "unit-42-02-practice",
+    "unit-42-02-transfer",
+    "unit-42-03-practice",
+    "unit-42-03-transfer",
+    "unit-42-04-practice",
+    "unit-42-04-transfer",
+    "unit-43-01-practice",
+    "unit-43-01-transfer",
+    "unit-43-02-practice",
+    "unit-43-02-transfer",
+    "unit-43-03-practice",
+    "unit-43-03-transfer",
+    "unit-43-04-practice",
+    "unit-43-04-transfer",
+    "unit-44-01-practice",
+    "unit-44-01-transfer",
+    "unit-44-02-practice",
+    "unit-44-02-transfer",
+    "unit-44-03-practice",
+    "unit-44-03-transfer",
+    "unit-44-04-practice",
+    "unit-44-04-transfer",
+    "unit-45-01-practice",
+    "unit-45-01-transfer",
+    "unit-45-02-practice",
+    "unit-45-02-transfer",
+    "unit-45-03-practice",
+    "unit-45-03-transfer",
+    "unit-45-04-practice",
+    "unit-45-04-transfer",
+    "unit-45-05-practice",
+    "unit-45-05-transfer",
+    "unit-46-01-practice",
+    "unit-46-01-transfer",
+    "unit-46-02-practice",
+    "unit-46-02-transfer",
+    "unit-46-03-practice",
+    "unit-46-03-transfer",
+    "unit-46-04-practice",
+    "unit-46-04-transfer",
+    "unit-47-01-practice",
+    "unit-47-01-transfer",
+    "unit-47-02-practice",
+    "unit-47-02-transfer",
+    "unit-48-01-practice",
+    "unit-48-01-transfer",
+    "unit-48-02-practice",
+    "unit-48-02-transfer",
+    "unit-49-01-practice",
+    "unit-49-01-transfer",
+    "unit-49-02-practice",
+    "unit-49-02-transfer",
+    "unit-49-03-practice",
+    "unit-49-03-transfer",
+    "unit-50-01-practice",
+    "unit-50-01-transfer",
+    "unit-50-02-practice",
+    "unit-50-02-transfer",
+    "unit-50-03-practice",
+    "unit-50-03-transfer",
+    "unit-51-01-practice",
+    "unit-51-01-transfer",
+    "unit-51-02-practice",
+    "unit-51-02-transfer",
+    "unit-51-03-practice",
+    "unit-51-03-transfer",
+    "lesson-setup-practice",
+    "lesson-setup-transfer",
+    "lesson-function-practice",
+    "lesson-function-transfer",
+    "lesson-data-practice",
+    "lesson-data-transfer",
+    "lesson-baseline-practice",
+    "lesson-baseline-transfer",
+    "lesson-endpoint-practice",
+    "lesson-endpoint-transfer",
+    "lesson-permissions-practice",
+    "lesson-permissions-transfer",
+    "lesson-evaluation-practice",
+    "lesson-evaluation-transfer",
+    "lesson-capstone-practice",
+    "lesson-capstone-transfer",
+    "milestone-1",
+    "milestone-2",
+    "milestone-3",
+    "milestone-4",
+    "milestone-5",
+    "milestone-6",
+    "milestone-7",
+    "milestone-8",
+    "milestone-9",
+    "complete-topic-01",
+    "complete-topic-02",
+    "complete-topic-03",
+    "complete-topic-04",
+    "complete-topic-05",
+    "complete-topic-06",
+    "complete-topic-07",
+    "complete-topic-08",
+    "complete-topic-09",
+    "complete-topic-10",
+    "complete-topic-11",
+    "complete-topic-12",
+    "complete-topic-13",
+    "complete-topic-14",
+    "complete-topic-15",
+    "complete-topic-16",
+    "complete-topic-17",
+    "complete-topic-18",
+    "complete-topic-19",
+    "complete-topic-20",
+    "complete-topic-21",
+    "complete-topic-22",
+    "complete-topic-23",
+    "complete-topic-24",
+    "complete-topic-25",
+    "complete-topic-26",
+    "complete-topic-27",
+    "complete-topic-28",
+    "complete-topic-29",
+    "complete-topic-30",
+    "complete-topic-31",
+    "complete-topic-32",
+    "complete-topic-33",
+    "complete-topic-34",
+    "complete-topic-35",
+    "complete-topic-36",
+    "complete-topic-37",
+    "complete-topic-38",
+    "complete-topic-39",
+    "complete-topic-40",
+    "complete-topic-41",
+    "complete-topic-42",
+    "complete-topic-43",
+    "complete-topic-44",
+    "complete-topic-45",
+    "complete-topic-46",
+    "complete-topic-47",
+    "complete-topic-48",
+    "complete-topic-49",
+    "complete-topic-50",
+    "complete-topic-51"
+  ],
+  "initial_dom_nodes": 16082
+}

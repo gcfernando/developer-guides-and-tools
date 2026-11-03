@@ -1,0 +1,71 @@
+PASS 51 original topic IDs, titles and order: 51 topic cards
+PASS original subtopic IDs, text and order: 1607 actual; 1607 baseline; claimed 1,607
+PASS true subtopic count matches page claims: Baseline confirms the published 1,607 count
+PASS all IDs unique including inert templates: 2583 IDs
+PASS every internal fragment resolves including templates: No unresolved fragment links
+PASS search covers every topic: 51 required; missing []
+PASS search covers every subtopic: 1607 required; missing []
+PASS search covers every profession: 14 required; missing []
+PASS search covers every lesson: 9 required; missing []
+PASS search covers every glossary: 20 required; missing []
+PASS every search href resolves: 1701 records; broken []
+PASS atlas-data priorities equal canonical source
+PASS role prerequisites, priority badges and capstone source topics: 14 roles; all consistent
+PASS difficulty is not below an applied prerequisite: All 51 checked
+PASS phases, optional checkpoints, session plans and derived hours: Every role checked; all long paths split
+PASS difficulty labels agree across cards and matrix
+PASS no duplicate study-unit practice paragraphs: 219 units; 0 duplicate paragraphs
+PASS completed units have all teaching fields and hidden answers: 219 complete units
+PASS every original subtopic maps to exactly one unit: 1607 assignments; missing 0; multiple []; unknown []
+INFO remaining labeled briefs: none
+PASS every original progress ID preserved: 514 original; 514 current; missing []
+PASS new progress IDs use backup version 3: 0 added progress IDs
+PASS all original localStorage keys retained
+PASS one document H1
+PASS heading outline has no skipped levels
+PASS external links labeled online including deferred bodies: 34 anchors
+PASS workshop downloads need no adjacent exercise files
+PASS no external runtime assets: []
+PASS download reference files have exact, consistent inline text: 14 files;
+PASS extracted Python reference files compile: 13 Python files;
+--- Extracted unittest output ---
+test_deleted_document_is_unavailable (test_assistant.AnswerTests.test_deleted_document_is_unavailable) ... ok
+test_instruction_is_treated_as_data (test_assistant.AnswerTests.test_instruction_is_treated_as_data) ... ok
+test_invalid_input (test_assistant.AnswerTests.test_invalid_input) ... ok
+test_public_answer_and_normalization (test_assistant.AnswerTests.test_public_answer_and_normalization) ... ok
+test_unknown_question_abstains (test_assistant.AnswerTests.test_unknown_question_abstains) ... ok
+test_users_are_isolated (test_assistant.AnswerTests.test_users_are_isolated) ... ok
+test_http_contract (test_assistant.EndpointTests.test_http_contract) ... ok
+test_invalid_request_gets_400 (test_assistant.EndpointTests.test_invalid_request_gets_400) ... ok
+test_request_cannot_choose_identity (test_assistant.EndpointTests.test_request_cannot_choose_identity) ... ok
+test_unavailable_service (test_assistant.EndpointTests.test_unavailable_service) ... ok
+test_conflicting_identifier_quarantines_both_versions (test_clean_data.CleaningTests.test_conflicting_identifier_quarantines_both_versions) ... ok
+test_exact_duplicate_and_missing_value (test_clean_data.CleaningTests.test_exact_duplicate_and_missing_value) ... ok
+test_missing_identifier_is_rejected (test_clean_data.CleaningTests.test_missing_identifier_is_rejected) ... ok
+test_changed_fixture_is_measured (test_data.DataTests.test_changed_fixture_is_measured) ... ok
+test_known_fixture (test_data.DataTests.test_known_fixture) ... ok
+test_allowlisted_action_needs_separate_approval (test_injection_lab.InjectionTests.test_allowlisted_action_needs_separate_approval) ... ok
+test_prohibited_tool_blocked_even_with_approval (test_injection_lab.InjectionTests.test_prohibited_tool_blocked_even_with_approval) ... ok
+test_retrieved_text_is_returned_as_inert_data (test_injection_lab.InjectionTests.test_retrieved_text_is_returned_as_inert_data) ... ok
+test_calibration_bins (test_ml_core.MLCoreTests.test_calibration_bins) ... ok
+test_clustering_update (test_ml_core.MLCoreTests.test_clustering_update) ... ok
+test_confusion_denominators (test_ml_core.MLCoreTests.test_confusion_denominators) ... ok
+test_cv_has_baseline_and_sample_sd (test_ml_core.MLCoreTests.test_cv_has_baseline_and_sample_sd) ... ok
+test_gradient_and_overshoot (test_ml_core.MLCoreTests.test_gradient_and_overshoot) ... ok
+test_leakage_changes_validation_predictions (test_ml_core.MLCoreTests.test_leakage_changes_validation_predictions) ... ok
+test_overfitting_measured_trend (test_ml_core.MLCoreTests.test_overfitting_measured_trend) ... ok
+test_wilson_independent_reference_values (test_ml_core.MLCoreTests.test_wilson_independent_reference_values) ... ok
+test_malformed_response_is_rejected (test_model_adapter.ModelAdapterTests.test_malformed_response_is_rejected) ... ok
+test_mock_three_observations (test_model_adapter.ModelAdapterTests.test_mock_three_observations) ... ok
+test_real_model_is_explicitly_unimplemented (test_model_adapter.ModelAdapterTests.test_real_model_is_explicitly_unimplemented) ... ok
+test_schema_contract_requires_fields_types_and_no_extras (test_model_adapter.ModelAdapterTests.test_schema_contract_requires_fields_types_and_no_extras) ... ok
+test_symbolic_cost_arithmetic_not_actual_provider_pricing (test_model_adapter.ModelAdapterTests.test_symbolic_cost_arithmetic_not_actual_provider_pricing) ... ok
+
+----------------------------------------------------------------------
+Ran 31 tests in 2.161s
+
+OK
+PASS extracted supplied unittest suites pass: exit 0
+PASS standalone HTML matches canonical sources
+INFO parsed elements 22373; initial live elements excluding template contents 7309
+RESULT 31 passed; 0 failed; 0 warnings; stage=final

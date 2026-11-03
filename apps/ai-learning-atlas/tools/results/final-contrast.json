@@ -1,0 +1,5537 @@
+{
+  "page_sha256": "d0645bf9509bfbf7293d2e7722daefa78e7633e3e7005b70dbd5eb4e06a5aa3b",
+  "css_sha256": "21f1f55dea636788dbc1542609af09681df8df468ec8f747b2ac48099a15f19a",
+  "staged": false,
+  "viewport": 1280,
+  "exclusions": [
+    "Decorative text within aria-hidden=true (including the brand emoji and search magnifier) is excluded from text contrast sampling."
+  ],
+  "themes": {
+    "light": {
+      "uiPairs": [
+        {
+          "kind": "control boundary",
+          "selector": "#theme-btn",
+          "foreground": [
+            119,
+            135,
+            163
+          ],
+          "background": [
+            244,
+            246,
+            251.082
+          ],
+          "ratio": 3.361,
+          "threshold": 3
+        },
+        {
+          "kind": "placeholder",
+          "selector": "#site-search",
+          "foreground": [
+            90,
+            104,
+            131
+          ],
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 5.611,
+          "threshold": 4.5
+        },
+        {
+          "kind": "control boundary",
+          "selector": "#copy-study-note",
+          "foreground": [
+            119,
+            135,
+            163
+          ],
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 3.634,
+          "threshold": 3
+        },
+        {
+          "kind": "control boundary",
+          "selector": "button.iconbtn",
+          "foreground": [
+            119,
+            135,
+            163
+          ],
+          "background": [
+            247,
+            249,
+            254
+          ],
+          "ratio": 3.45,
+          "threshold": 3
+        },
+        {
+          "kind": "placeholder",
+          "selector": "#study-note",
+          "foreground": [
+            90,
+            104,
+            131
+          ],
+          "background": [
+            247,
+            249,
+            254
+          ],
+          "ratio": 5.327,
+          "threshold": 4.5
+        },
+        {
+          "kind": "pressed topic boundary",
+          "selector": "button.topic-done-btn.no-print.is-complete",
+          "foreground": [
+            38,
+            143,
+            112
+          ],
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 4.004,
+          "threshold": 3
+        },
+        {
+          "kind": "keyboard focus outline",
+          "selector": "#site-search",
+          "foreground": [
+            192,
+            121,
+            0
+          ],
+          "background": [
+            244,
+            246,
+            251.082
+          ],
+          "ratio": 3.25,
+          "threshold": 3
+        },
+        {
+          "kind": "keyboard focus outline",
+          "selector": "a.chip",
+          "foreground": [
+            192,
+            121,
+            0
+          ],
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 3.514,
+          "threshold": 3
+        },
+        {
+          "kind": "keyboard focus outline",
+          "selector": "summary.",
+          "foreground": [
+            192,
+            121,
+            0
+          ],
+          "background": [
+            247,
+            249,
+            254
+          ],
+          "ratio": 3.336,
+          "threshold": 3
+        },
+        {
+          "kind": "progress fill versus track (resolved declared colors)",
+          "selector": "#home-role-meter",
+          "foreground": [
+            8,
+            118,
+            109
+          ],
+          "background": [
+            221,
+            228,
+            240
+          ],
+          "ratio": 4.298,
+          "threshold": 3
+        },
+        {
+          "kind": "native checkbox accent versus surrounding surface",
+          "selector": "#lesson-setup-practice",
+          "foreground": [
+            9,
+            140,
+            130
+          ],
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 4.13,
+          "threshold": 3
+        }
+      ],
+      "lowUI": [],
+      "sampledPairs": [
+        {
+          "selector": "a.skip-link",
+          "foreground": "rgb(16, 39, 82)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "size": 16,
+          "weight": 800,
+          "ratio": 14.644,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "b",
+          "foreground": "rgb(231, 238, 252)",
+          "background": [
+            11,
+            23,
+            49
+          ],
+          "size": 16.32,
+          "weight": 700,
+          "ratio": 15.268,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "small",
+          "foreground": "rgb(189, 205, 236)",
+          "background": [
+            11,
+            23,
+            49
+          ],
+          "size": 11.68,
+          "weight": 400,
+          "ratio": 11.097,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "a.navlink",
+          "foreground": "rgb(221, 232, 255)",
+          "background": [
+            11,
+            23,
+            49
+          ],
+          "size": 14.24,
+          "weight": 400,
+          "ratio": 14.445,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "summary",
+          "foreground": "rgb(210, 225, 253)",
+          "background": [
+            11,
+            23,
+            49
+          ],
+          "size": 14.08,
+          "weight": 400,
+          "ratio": 13.486,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "p.sidebar-footer",
+          "foreground": "rgb(157, 177, 212)",
+          "background": [
+            11,
+            23,
+            49
+          ],
+          "size": 12,
+          "weight": 400,
+          "ratio": 8.19,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "span.topbar-title",
+          "foreground": "rgb(26, 39, 65)",
+          "background": [
+            244,
+            246,
+            251
+          ],
+          "size": 14.08,
+          "weight": 800,
+          "ratio": 13.771,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "label.sr-only",
+          "foreground": "rgb(26, 39, 65)",
+          "background": [
+            244,
+            246,
+            251
+          ],
+          "size": 16,
+          "weight": 400,
+          "ratio": 13.771,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "#theme-btn",
+          "foreground": "rgb(26, 39, 65)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "size": 14.08,
+          "weight": 400,
+          "ratio": 14.889,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "p.onboarding-title",
+          "foreground": "rgb(26, 39, 65)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "size": 17.6,
+          "weight": 800,
+          "ratio": 14.889,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "a.chip",
+          "foreground": "rgb(38, 84, 164)",
+          "background": [
+            234,
+            241,
+            255
+          ],
+          "size": 12.64,
+          "weight": 750,
+          "ratio": 6.417,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "p.muted",
+          "foreground": "rgb(90, 104, 131)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "size": 16,
+          "weight": 400,
+          "ratio": 5.611,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "a",
+          "foreground": "rgb(36, 86, 197)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "size": 16,
+          "weight": 400,
+          "ratio": 6.537,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "div.eyebrow",
+          "foreground": "rgb(191, 207, 255)",
+          "background": [
+            24,
+            58,
+            131
+          ],
+          "size": 12.48,
+          "weight": 800,
+          "ratio": 6.889,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "h1",
+          "foreground": "rgb(255, 255, 255)",
+          "background": [
+            24,
+            58,
+            131
+          ],
+          "size": 44.8,
+          "weight": 700,
+          "ratio": 10.65,
+          "threshold": 3,
+          "gradient": false
+        },
+        {
+          "selector": "p",
+          "foreground": "rgb(225, 235, 255)",
+          "background": [
+            24,
+            58,
+            131
+          ],
+          "size": 17.92,
+          "weight": 400,
+          "ratio": 8.89,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "a.action",
+          "foreground": "rgb(20, 44, 87)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "size": 14.24,
+          "weight": 750,
+          "ratio": 13.747,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "a.action.action-outline",
+          "foreground": "rgb(255, 255, 255)",
+          "background": [
+            42,
+            74,
+            141
+          ],
+          "size": 14.24,
+          "weight": 750,
+          "ratio": 8.544,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "b",
+          "foreground": "rgb(255, 255, 255)",
+          "background": [
+            39,
+            71,
+            139
+          ],
+          "size": 21.76,
+          "weight": 700,
+          "ratio": 8.864,
+          "threshold": 3,
+          "gradient": false
+        },
+        {
+          "selector": "span",
+          "foreground": "rgb(218, 232, 255)",
+          "background": [
+            39,
+            71,
+            139
+          ],
+          "size": 12,
+          "weight": 400,
+          "ratio": 7.162,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "h2",
+          "foreground": "rgb(26, 39, 65)",
+          "background": [
+            244,
+            246,
+            252
+          ],
+          "size": 29.44,
+          "weight": 700,
+          "ratio": 13.779,
+          "threshold": 3,
+          "gradient": false
+        },
+        {
+          "selector": "p",
+          "foreground": "rgb(90, 104, 131)",
+          "background": [
+            244,
+            246,
+            252
+          ],
+          "size": 16,
+          "weight": 400,
+          "ratio": 5.193,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "h3",
+          "foreground": "rgb(26, 39, 65)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "size": 17.92,
+          "weight": 700,
+          "ratio": 14.889,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "p",
+          "foreground": "rgb(90, 104, 131)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "size": 14.08,
+          "weight": 400,
+          "ratio": 5.611,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "a",
+          "foreground": "rgb(36, 86, 197)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "size": 14.08,
+          "weight": 400,
+          "ratio": 6.537,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "a.action-blue",
+          "foreground": "rgb(255, 255, 255)",
+          "background": [
+            32,
+            89,
+            200
+          ],
+          "size": 13.44,
+          "weight": 800,
+          "ratio": 6.317,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "p",
+          "foreground": "rgb(26, 39, 65)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "size": 16,
+          "weight": 400,
+          "ratio": 14.889,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "strong",
+          "foreground": "rgb(26, 39, 65)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "size": 16,
+          "weight": 700,
+          "ratio": 14.889,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "code",
+          "foreground": "rgb(236, 245, 255)",
+          "background": [
+            18,
+            30,
+            56
+          ],
+          "size": 13.28,
+          "weight": 400,
+          "ratio": 15.034,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "div.callout.warning",
+          "foreground": "rgb(115, 80, 26)",
+          "background": [
+            255,
+            246,
+            232
+          ],
+          "size": 16,
+          "weight": 400,
+          "ratio": 6.779,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "strong",
+          "foreground": "rgb(115, 80, 26)",
+          "background": [
+            255,
+            246,
+            232
+          ],
+          "size": 16,
+          "weight": 700,
+          "ratio": 6.779,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "summary",
+          "foreground": "rgb(26, 39, 65)",
+          "background": [
+            247,
+            249,
+            254
+          ],
+          "size": 16,
+          "weight": 750,
+          "ratio": 14.135,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "li",
+          "foreground": "rgb(26, 39, 65)",
+          "background": [
+            247,
+            249,
+            254
+          ],
+          "size": 16,
+          "weight": 400,
+          "ratio": 14.135,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "p.eyebrow-small",
+          "foreground": "rgb(54, 95, 193)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "size": 11.84,
+          "weight": 850,
+          "ratio": 5.893,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "h3",
+          "foreground": "rgb(26, 39, 65)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "size": 20.48,
+          "weight": 700,
+          "ratio": 14.889,
+          "threshold": 3,
+          "gradient": false
+        },
+        {
+          "selector": "p.muted",
+          "foreground": "rgb(90, 104, 131)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "size": 14.4,
+          "weight": 400,
+          "ratio": 5.611,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "label.dashboard-select",
+          "foreground": "rgb(26, 39, 65)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "size": 13.6,
+          "weight": 750,
+          "ratio": 14.889,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "#role-dashboard-empty",
+          "foreground": "rgb(26, 39, 65)",
+          "background": [
+            247,
+            249,
+            254
+          ],
+          "size": 15.04,
+          "weight": 400,
+          "ratio": 14.135,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "h3",
+          "foreground": "rgb(26, 39, 65)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "size": 15.68,
+          "weight": 700,
+          "ratio": 14.889,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "small",
+          "foreground": "rgb(90, 104, 131)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "size": 14,
+          "weight": 400,
+          "ratio": 5.611,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "span.go",
+          "foreground": "rgb(38, 93, 206)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "size": 13.12,
+          "weight": 850,
+          "ratio": 5.933,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "strong",
+          "foreground": "rgb(26, 39, 65)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "size": 16.96,
+          "weight": 700,
+          "ratio": 14.889,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "small",
+          "foreground": "rgb(90, 104, 131)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "size": 13.3333,
+          "weight": 400,
+          "ratio": 5.611,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "strong",
+          "foreground": "rgb(90, 104, 131)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "size": 14,
+          "weight": 700,
+          "ratio": 5.611,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "b",
+          "foreground": "rgb(26, 39, 65)",
+          "background": [
+            247,
+            249,
+            254
+          ],
+          "size": 13.76,
+          "weight": 700,
+          "ratio": 14.135,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "p",
+          "foreground": "rgb(90, 104, 131)",
+          "background": [
+            247,
+            249,
+            254
+          ],
+          "size": 13.76,
+          "weight": 400,
+          "ratio": 5.327,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "a",
+          "foreground": "rgb(36, 86, 197)",
+          "background": [
+            247,
+            249,
+            254
+          ],
+          "size": 13.76,
+          "weight": 400,
+          "ratio": 6.206,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "div.callout",
+          "foreground": "rgb(36, 67, 109)",
+          "background": [
+            238,
+            245,
+            255
+          ],
+          "size": 16,
+          "weight": 400,
+          "ratio": 9.12,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "a",
+          "foreground": "rgb(36, 86, 197)",
+          "background": [
+            238,
+            245,
+            255
+          ],
+          "size": 16,
+          "weight": 400,
+          "ratio": 5.958,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "h4",
+          "foreground": "rgb(26, 39, 65)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "size": 16.64,
+          "weight": 700,
+          "ratio": 14.889,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "a",
+          "foreground": "rgb(36, 86, 197)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "size": 14.72,
+          "weight": 700,
+          "ratio": 6.537,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "span.status.status-essential",
+          "foreground": "rgb(19, 104, 66)",
+          "background": [
+            216,
+            245,
+            230
+          ],
+          "size": 11.68,
+          "weight": 850,
+          "ratio": 5.872,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "strong",
+          "foreground": "rgb(26, 39, 65)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "size": 14,
+          "weight": 700,
+          "ratio": 14.889,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "a",
+          "foreground": "rgb(36, 86, 197)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "size": 14,
+          "weight": 400,
+          "ratio": 6.537,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "span.status.status-recommended",
+          "foreground": "rgb(115, 81, 14)",
+          "background": [
+            255,
+            242,
+            198
+          ],
+          "size": 11.68,
+          "weight": 850,
+          "ratio": 6.445,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "div.role-final",
+          "foreground": "rgb(26, 39, 65)",
+          "background": [
+            239,
+            248,
+            246
+          ],
+          "size": 16,
+          "weight": 400,
+          "ratio": 13.774,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "h4",
+          "foreground": "rgb(26, 39, 65)",
+          "background": [
+            239,
+            248,
+            246
+          ],
+          "size": 16,
+          "weight": 700,
+          "ratio": 13.774,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "p",
+          "foreground": "rgb(26, 39, 65)",
+          "background": [
+            239,
+            248,
+            246
+          ],
+          "size": 13.92,
+          "weight": 400,
+          "ratio": 13.774,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "a",
+          "foreground": "rgb(36, 86, 197)",
+          "background": [
+            239,
+            248,
+            246
+          ],
+          "size": 16,
+          "weight": 400,
+          "ratio": 6.048,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "strong",
+          "foreground": "rgb(90, 104, 131)",
+          "background": [
+            244,
+            246,
+            252
+          ],
+          "size": 16,
+          "weight": 700,
+          "ratio": 5.193,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "summary",
+          "foreground": "rgb(26, 39, 65)",
+          "background": [
+            247,
+            249,
+            254
+          ],
+          "size": 13.76,
+          "weight": 750,
+          "ratio": 14.135,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "li",
+          "foreground": "rgb(90, 104, 131)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "size": 13.28,
+          "weight": 400,
+          "ratio": 5.611,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "strong",
+          "foreground": "rgb(36, 67, 109)",
+          "background": [
+            238,
+            245,
+            255
+          ],
+          "size": 16,
+          "weight": 700,
+          "ratio": 9.12,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "h3",
+          "foreground": "rgb(26, 39, 65)",
+          "background": [
+            247,
+            249,
+            254
+          ],
+          "size": 17.92,
+          "weight": 700,
+          "ratio": 14.135,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "p.muted",
+          "foreground": "rgb(90, 104, 131)",
+          "background": [
+            247,
+            249,
+            254
+          ],
+          "size": 14.08,
+          "weight": 400,
+          "ratio": 5.327,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "strong",
+          "foreground": "rgb(90, 104, 131)",
+          "background": [
+            247,
+            249,
+            254
+          ],
+          "size": 14.08,
+          "weight": 700,
+          "ratio": 5.327,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "label.show-all-checks",
+          "foreground": "rgb(26, 39, 65)",
+          "background": [
+            247,
+            249,
+            254
+          ],
+          "size": 13.6,
+          "weight": 700,
+          "ratio": 14.135,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "#check-counter",
+          "foreground": "rgb(17, 107, 89)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "size": 17.92,
+          "weight": 850,
+          "ratio": 6.42,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "span",
+          "foreground": "rgb(26, 39, 65)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "size": 13.12,
+          "weight": 400,
+          "ratio": 14.889,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "label",
+          "foreground": "rgb(26, 39, 65)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "size": 16,
+          "weight": 650,
+          "ratio": 14.889,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "label.checkrow.library-all",
+          "foreground": "rgb(26, 39, 65)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "size": 14.08,
+          "weight": 650,
+          "ratio": 14.889,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "strong",
+          "foreground": "rgb(90, 104, 131)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "size": 16,
+          "weight": 700,
+          "ratio": 5.611,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "span.topic-number",
+          "foreground": "rgb(67, 73, 165)",
+          "background": [
+            238,
+            240,
+            252
+          ],
+          "size": 13.76,
+          "weight": 900,
+          "ratio": 6.766,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "h3",
+          "foreground": "rgb(26, 39, 65)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "size": 16.8,
+          "weight": 700,
+          "ratio": 14.889,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "span",
+          "foreground": "rgb(90, 104, 131)",
+          "background": [
+            247,
+            249,
+            254
+          ],
+          "size": 11.36,
+          "weight": 400,
+          "ratio": 5.327,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "p.topic-lab-line",
+          "foreground": "rgb(26, 39, 65)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "size": 13.76,
+          "weight": 400,
+          "ratio": 14.889,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "strong",
+          "foreground": "rgb(26, 39, 65)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "size": 13.76,
+          "weight": 700,
+          "ratio": 14.889,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "button.topic-done-btn.no-print",
+          "foreground": "rgb(26, 39, 65)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "size": 12.16,
+          "weight": 800,
+          "ratio": 14.889,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "summary",
+          "foreground": "rgb(26, 39, 65)",
+          "background": [
+            247,
+            249,
+            254
+          ],
+          "size": 13.6,
+          "weight": 850,
+          "ratio": 14.135,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "div",
+          "foreground": "rgb(26, 39, 65)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "size": 14,
+          "weight": 400,
+          "ratio": 14.889,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "h4",
+          "foreground": "rgb(26, 39, 65)",
+          "background": [
+            247,
+            249,
+            254
+          ],
+          "size": 15.52,
+          "weight": 700,
+          "ratio": 14.135,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "p",
+          "foreground": "rgb(90, 104, 131)",
+          "background": [
+            247,
+            249,
+            254
+          ],
+          "size": 16,
+          "weight": 400,
+          "ratio": 5.327,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "strong",
+          "foreground": "rgb(90, 104, 131)",
+          "background": [
+            247,
+            249,
+            254
+          ],
+          "size": 16,
+          "weight": 700,
+          "ratio": 5.327,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "a",
+          "foreground": "rgb(36, 86, 197)",
+          "background": [
+            247,
+            249,
+            254
+          ],
+          "size": 16,
+          "weight": 400,
+          "ratio": 6.206,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "strong",
+          "foreground": "rgb(26, 39, 65)",
+          "background": [
+            247,
+            249,
+            254
+          ],
+          "size": 16,
+          "weight": 700,
+          "ratio": 14.135,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "label.checkrow",
+          "foreground": "rgb(26, 39, 65)",
+          "background": [
+            247,
+            249,
+            254
+          ],
+          "size": 14.08,
+          "weight": 400,
+          "ratio": 14.135,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "#subtopic-01-001",
+          "foreground": "rgb(26, 39, 65)",
+          "background": [
+            247,
+            249,
+            254
+          ],
+          "size": 14.56,
+          "weight": 400,
+          "ratio": 14.135,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "small.online-label",
+          "foreground": "rgb(36, 86, 197)",
+          "background": [
+            247,
+            249,
+            254
+          ],
+          "size": 12,
+          "weight": 650,
+          "ratio": 6.206,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "pre",
+          "foreground": "rgb(26, 39, 65)",
+          "background": [
+            247,
+            249,
+            254
+          ],
+          "size": 13,
+          "weight": 400,
+          "ratio": 14.135,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "h5",
+          "foreground": "rgb(26, 39, 65)",
+          "background": [
+            247,
+            249,
+            254
+          ],
+          "size": 13.28,
+          "weight": 700,
+          "ratio": 14.135,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "small.online-label",
+          "foreground": "rgb(36, 86, 197)",
+          "background": [
+            238,
+            245,
+            255
+          ],
+          "size": 12,
+          "weight": 650,
+          "ratio": 5.958,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "summary",
+          "foreground": "rgb(26, 39, 65)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "size": 16,
+          "weight": 750,
+          "ratio": 14.889,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "label",
+          "foreground": "rgb(26, 39, 65)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "size": 14.08,
+          "weight": 750,
+          "ratio": 14.889,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "th",
+          "foreground": "rgb(40, 68, 105)",
+          "background": [
+            238,
+            243,
+            252
+          ],
+          "size": 12.64,
+          "weight": 700,
+          "ratio": 8.892,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "a",
+          "foreground": "rgb(36, 86, 197)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "size": 13.44,
+          "weight": 400,
+          "ratio": 6.537,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "td",
+          "foreground": "rgb(26, 39, 65)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "size": 13.44,
+          "weight": 400,
+          "ratio": 14.889,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "span.status.status-unlisted",
+          "foreground": "rgb(98, 107, 128)",
+          "background": [
+            240,
+            243,
+            247
+          ],
+          "size": 11.68,
+          "weight": 850,
+          "ratio": 4.796,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "dt",
+          "foreground": "rgb(26, 39, 65)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "size": 16,
+          "weight": 800,
+          "ratio": 14.889,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "caption",
+          "foreground": "rgb(26, 39, 65)",
+          "background": [
+            247,
+            249,
+            254
+          ],
+          "size": 13.44,
+          "weight": 750,
+          "ratio": 14.135,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "h3",
+          "foreground": "rgb(26, 39, 65)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "size": 18.4,
+          "weight": 700,
+          "ratio": 14.889,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "p",
+          "foreground": "rgb(26, 39, 65)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "size": 14.56,
+          "weight": 400,
+          "ratio": 14.889,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "strong",
+          "foreground": "rgb(26, 39, 65)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "size": 14.56,
+          "weight": 700,
+          "ratio": 14.889,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "a",
+          "foreground": "rgb(36, 86, 197)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "size": 14.56,
+          "weight": 400,
+          "ratio": 6.537,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "code",
+          "foreground": "rgb(36, 60, 121)",
+          "background": [
+            237,
+            241,
+            255
+          ],
+          "size": 14.56,
+          "weight": 400,
+          "ratio": 9.325,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "b",
+          "foreground": "rgb(26, 39, 65)",
+          "background": [
+            234,
+            241,
+            252
+          ],
+          "size": 16,
+          "weight": 700,
+          "ratio": 13.107,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "button.copy-button",
+          "foreground": "rgb(255, 255, 255)",
+          "background": [
+            36,
+            86,
+            203
+          ],
+          "size": 13.28,
+          "weight": 800,
+          "ratio": 6.425,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "p",
+          "foreground": "rgb(26, 39, 65)",
+          "background": [
+            238,
+            244,
+            255
+          ],
+          "size": 14.56,
+          "weight": 400,
+          "ratio": 13.485,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "strong",
+          "foreground": "rgb(26, 39, 65)",
+          "background": [
+            238,
+            244,
+            255
+          ],
+          "size": 14.56,
+          "weight": 700,
+          "ratio": 13.485,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "code",
+          "foreground": "rgb(36, 60, 121)",
+          "background": [
+            237,
+            241,
+            255
+          ],
+          "size": 14.56,
+          "weight": 700,
+          "ratio": 9.325,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "code",
+          "foreground": "rgb(36, 60, 121)",
+          "background": [
+            237,
+            241,
+            255
+          ],
+          "size": 13.44,
+          "weight": 400,
+          "ratio": 9.325,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "span.resource-category",
+          "foreground": "rgb(53, 102, 188)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "size": 12,
+          "weight": 850,
+          "ratio": 5.558,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "a",
+          "foreground": "rgb(36, 86, 197)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "size": 15.52,
+          "weight": 800,
+          "ratio": 6.537,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "small.online-label",
+          "foreground": "rgb(36, 86, 197)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "size": 11.64,
+          "weight": 650,
+          "ratio": 6.537,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "a",
+          "foreground": "rgb(36, 86, 197)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "size": 13.28,
+          "weight": 400,
+          "ratio": 6.537,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "p",
+          "foreground": "rgb(26, 39, 65)",
+          "background": [
+            244,
+            246,
+            252
+          ],
+          "size": 16,
+          "weight": 400,
+          "ratio": 13.779,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "strong",
+          "foreground": "rgb(26, 39, 65)",
+          "background": [
+            244,
+            246,
+            252
+          ],
+          "size": 16,
+          "weight": 700,
+          "ratio": 13.779,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "a",
+          "foreground": "rgb(36, 86, 197)",
+          "background": [
+            244,
+            246,
+            252
+          ],
+          "size": 16,
+          "weight": 400,
+          "ratio": 6.05,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "small.online-label",
+          "foreground": "rgb(36, 86, 197)",
+          "background": [
+            244,
+            246,
+            252
+          ],
+          "size": 12,
+          "weight": 650,
+          "ratio": 6.05,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "p.muted.resource-note",
+          "foreground": "rgb(90, 104, 131)",
+          "background": [
+            244,
+            246,
+            252
+          ],
+          "size": 13.12,
+          "weight": 400,
+          "ratio": 5.193,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "span.pill",
+          "foreground": "rgb(63, 78, 132)",
+          "background": [
+            233,
+            237,
+            250
+          ],
+          "size": 11.84,
+          "weight": 800,
+          "ratio": 6.817,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "span",
+          "foreground": "rgb(26, 39, 65)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "size": 12.32,
+          "weight": 750,
+          "ratio": 14.889,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "span.index-num",
+          "foreground": "rgb(67, 82, 177)",
+          "background": [
+            238,
+            241,
+            255
+          ],
+          "size": 12.96,
+          "weight": 850,
+          "ratio": 6.058,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "b",
+          "foreground": "rgb(26, 39, 65)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "size": 13.6,
+          "weight": 700,
+          "ratio": 14.889,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "small",
+          "foreground": "rgb(90, 104, 131)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "size": 13.12,
+          "weight": 400,
+          "ratio": 5.611,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "h2",
+          "foreground": "rgb(26, 39, 65)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "size": 24,
+          "weight": 700,
+          "ratio": 14.889,
+          "threshold": 3,
+          "gradient": false
+        },
+        {
+          "selector": "small.online-label",
+          "foreground": "rgb(36, 86, 197)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "size": 12,
+          "weight": 650,
+          "ratio": 6.537,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "a",
+          "foreground": "rgb(36, 86, 197)",
+          "background": [
+            244,
+            246,
+            252
+          ],
+          "size": 13.12,
+          "weight": 400,
+          "ratio": 6.05,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "small.online-label",
+          "foreground": "rgb(36, 86, 197)",
+          "background": [
+            244,
+            246,
+            252
+          ],
+          "size": 9.84,
+          "weight": 650,
+          "ratio": 6.05,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "a.up",
+          "foreground": "rgb(255, 255, 255)",
+          "background": [
+            24,
+            53,
+            103
+          ],
+          "size": 12.8,
+          "weight": 400,
+          "ratio": 12.042,
+          "threshold": 4.5,
+          "gradient": false
+        }
+      ],
+      "lowPairs": [],
+      "gradientPairs": [],
+      "gradientLimit": "Gradient pairs require a pixel-level check; they are listed separately and are not counted as verified AA by this sampler.",
+      "axe": [],
+      "axeIncomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 52,
+          "details": [
+            {
+              "target": [
+                ".magnify"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#model-adapter-model_adapter-py > code"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element",
+              "related": [
+                {
+                  "message": "Element's background color could not be determined because it's partially obscured by another element",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "12.0pt (16px)",
+                    "fontWeight": "normal",
+                    "messageKey": "elmPartiallyObscured",
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                ".card[open=\"\"]:nth-child(12) > pre > code"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element",
+              "related": [
+                {
+                  "message": "Element's background color could not be determined because it's partially obscured by another element",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "12.0pt (16px)",
+                    "fontWeight": "normal",
+                    "messageKey": "elmPartiallyObscured",
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                ".dashboard-head > div > .eyebrow-small"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element",
+              "related": [
+                {
+                  "message": "Element's background color could not be determined due to a pseudo element",
+                  "data": {
+                    "fontSize": "8.9pt (11.84px)",
+                    "fontWeight": "bold",
+                    "messageKey": "pseudoContent",
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                ".dashboard-head > div > h3"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element",
+              "related": [
+                {
+                  "message": "Element's background color could not be determined due to a pseudo element",
+                  "data": {
+                    "fontSize": "15.4pt (20.48px)",
+                    "fontWeight": "bold",
+                    "messageKey": "pseudoContent",
+                    "expectedContrastRatio": "3:1"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#role-home"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element",
+              "related": [
+                {
+                  "message": "Element's background color could not be determined due to a pseudo element",
+                  "data": {
+                    "fontSize": "10.2pt (13.6px)",
+                    "fontWeight": "bold",
+                    "messageKey": "pseudoContent",
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#role-backend-software-engineer > .role-body > .phase:nth-child(5) > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#phase-backend-software-engineer-1 > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#phase-backend-software-engineer-2 > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#phase-backend-software-engineer-3 > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#role-frontend-software-engineer > .role-body > .phase:nth-child(5) > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#phase-frontend-software-engineer-1 > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#role-full-stack-software-engineer > .role-body > .phase:nth-child(5) > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#phase-full-stack-software-engineer-1 > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#phase-full-stack-software-engineer-2 > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#phase-full-stack-software-engineer-3 > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#role-mobile-application-developer > .role-body > .phase:nth-child(5) > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#phase-mobile-application-developer-1 > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#role-cloud-engineer > .role-body > .phase:nth-child(5) > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#phase-cloud-engineer-1 > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#role-devops-engineer > .role-body > .phase:nth-child(5) > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#phase-devops-engineer-1 > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#role-site-reliability-engineer > .role-body > .phase:nth-child(5) > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#phase-site-reliability-engineer-1 > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#role-qa-and-test-automation-engineer > .role-body > .phase:nth-child(5) > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#phase-qa-and-test-automation-engineer-1 > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#phase-qa-and-test-automation-engineer-2 > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#phase-qa-and-test-automation-engineer-3 > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#role-cybersecurity-and-application-security-engineer > .role-body > .phase:nth-child(5) > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#phase-cybersecurity-and-application-security-engineer-1 > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#phase-cybersecurity-and-application-security-engineer-2 > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#phase-cybersecurity-and-application-security-engineer-3 > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#role-data-engineer > .role-body > .phase:nth-child(5) > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#phase-data-engineer-1 > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#phase-data-engineer-2 > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#phase-data-engineer-3 > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#role-ai-and-machine-learning-engineer > .role-body > .phase:nth-child(5) > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#phase-ai-and-machine-learning-engineer-1 > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#phase-ai-and-machine-learning-engineer-2 > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#phase-ai-and-machine-learning-engineer-3 > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#role-software-and-solutions-architect > .role-body > .phase:nth-child(5) > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#phase-software-and-solutions-architect-1 > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#phase-software-and-solutions-architect-2 > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#phase-software-and-solutions-architect-3 > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#role-technical-lead-and-engineering-manager > .role-body > .phase:nth-child(5) > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#phase-technical-lead-and-engineering-manager-1 > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#phase-technical-lead-and-engineering-manager-2 > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#phase-technical-lead-and-engineering-manager-3 > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#role-junior-developer-and-engineering-beginner > .role-body > .phase:nth-child(5) > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#phase-junior-developer-and-engineering-beginner-1 > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#ml-source-ml_core-py > code"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element",
+              "related": [
+                {
+                  "message": "Element's background color could not be determined because it's partially obscured by another element",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "12.0pt (16px)",
+                    "fontWeight": "normal",
+                    "messageKey": "elmPartiallyObscured",
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#ml-source-test_ml_core-py > code"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element",
+              "related": [
+                {
+                  "message": "Element's background color could not be determined because it's partially obscured by another element",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "12.0pt (16px)",
+                    "fontWeight": "normal",
+                    "messageKey": "elmPartiallyObscured",
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "dark": {
+      "uiPairs": [
+        {
+          "kind": "control boundary",
+          "selector": "#theme-btn",
+          "foreground": [
+            120,
+            148,
+            191
+          ],
+          "background": [
+            15.76,
+            27.44,
+            47.28
+          ],
+          "ratio": 5.545,
+          "threshold": 3
+        },
+        {
+          "kind": "placeholder",
+          "selector": "#site-search",
+          "foreground": [
+            183,
+            199,
+            226
+          ],
+          "background": [
+            24,
+            40,
+            64
+          ],
+          "ratio": 8.671,
+          "threshold": 4.5
+        },
+        {
+          "kind": "control boundary",
+          "selector": "#copy-study-note",
+          "foreground": [
+            120,
+            148,
+            191
+          ],
+          "background": [
+            21,
+            34,
+            58
+          ],
+          "ratio": 5.135,
+          "threshold": 3
+        },
+        {
+          "kind": "control boundary",
+          "selector": "button.iconbtn",
+          "foreground": [
+            120,
+            148,
+            191
+          ],
+          "background": [
+            25,
+            42,
+            70
+          ],
+          "ratio": 4.646,
+          "threshold": 3
+        },
+        {
+          "kind": "placeholder",
+          "selector": "#study-note",
+          "foreground": [
+            183,
+            199,
+            226
+          ],
+          "background": [
+            25,
+            42,
+            70
+          ],
+          "ratio": 8.406,
+          "threshold": 4.5
+        },
+        {
+          "kind": "pressed topic boundary",
+          "selector": "button.topic-done-btn.no-print.is-complete",
+          "foreground": [
+            55,
+            178,
+            146
+          ],
+          "background": [
+            21,
+            34,
+            58
+          ],
+          "ratio": 6.011,
+          "threshold": 3
+        },
+        {
+          "kind": "keyboard focus outline",
+          "selector": "#site-search",
+          "foreground": [
+            255,
+            191,
+            82
+          ],
+          "background": [
+            15.76,
+            27.44,
+            47.28
+          ],
+          "ratio": 10.479,
+          "threshold": 3
+        },
+        {
+          "kind": "keyboard focus outline",
+          "selector": "a.chip",
+          "foreground": [
+            255,
+            191,
+            82
+          ],
+          "background": [
+            21,
+            34,
+            58
+          ],
+          "ratio": 9.704,
+          "threshold": 3
+        },
+        {
+          "kind": "keyboard focus outline",
+          "selector": "summary.",
+          "foreground": [
+            255,
+            191,
+            82
+          ],
+          "background": [
+            25,
+            42,
+            70
+          ],
+          "ratio": 8.779,
+          "threshold": 3
+        },
+        {
+          "kind": "progress fill versus track (resolved declared colors)",
+          "selector": "#home-role-meter",
+          "foreground": [
+            84,
+            208,
+            179
+          ],
+          "background": [
+            48,
+            66,
+            96
+          ],
+          "ratio": 5.328,
+          "threshold": 3
+        },
+        {
+          "kind": "native checkbox accent versus surrounding surface",
+          "selector": "#lesson-setup-practice",
+          "foreground": [
+            9,
+            140,
+            130
+          ],
+          "background": [
+            21,
+            34,
+            58
+          ],
+          "ratio": 3.847,
+          "threshold": 3
+        }
+      ],
+      "lowUI": [],
+      "sampledPairs": [
+        {
+          "selector": "a.skip-link",
+          "foreground": "rgb(16, 39, 82)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "size": 16,
+          "weight": 800,
+          "ratio": 14.644,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "b",
+          "foreground": "rgb(231, 238, 252)",
+          "background": [
+            7,
+            16,
+            32
+          ],
+          "size": 16.32,
+          "weight": 700,
+          "ratio": 16.334,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "small",
+          "foreground": "rgb(189, 205, 236)",
+          "background": [
+            7,
+            16,
+            32
+          ],
+          "size": 11.68,
+          "weight": 400,
+          "ratio": 11.873,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "a.navlink",
+          "foreground": "rgb(178, 197, 255)",
+          "background": [
+            7,
+            16,
+            32
+          ],
+          "size": 14.24,
+          "weight": 400,
+          "ratio": 11.163,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "summary",
+          "foreground": "rgb(210, 225, 253)",
+          "background": [
+            7,
+            16,
+            32
+          ],
+          "size": 14.08,
+          "weight": 400,
+          "ratio": 14.428,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "p.sidebar-footer",
+          "foreground": "rgb(157, 177, 212)",
+          "background": [
+            7,
+            16,
+            32
+          ],
+          "size": 12,
+          "weight": 400,
+          "ratio": 8.762,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "span.topbar-title",
+          "foreground": "rgb(240, 245, 255)",
+          "background": [
+            16,
+            27,
+            47
+          ],
+          "size": 14.08,
+          "weight": 800,
+          "ratio": 15.695,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "label.sr-only",
+          "foreground": "rgb(240, 245, 255)",
+          "background": [
+            16,
+            27,
+            47
+          ],
+          "size": 16,
+          "weight": 400,
+          "ratio": 15.695,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "#theme-btn",
+          "foreground": "rgb(240, 245, 255)",
+          "background": [
+            21,
+            34,
+            58
+          ],
+          "size": 14.08,
+          "weight": 400,
+          "ratio": 14.533,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "p.onboarding-title",
+          "foreground": "rgb(240, 245, 255)",
+          "background": [
+            21,
+            34,
+            58
+          ],
+          "size": 17.6,
+          "weight": 800,
+          "ratio": 14.533,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "a.chip",
+          "foreground": "rgb(185, 208, 255)",
+          "background": [
+            37,
+            60,
+            97
+          ],
+          "size": 12.64,
+          "weight": 750,
+          "ratio": 7.13,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "p.muted",
+          "foreground": "rgb(183, 199, 226)",
+          "background": [
+            21,
+            34,
+            58
+          ],
+          "size": 16,
+          "weight": 400,
+          "ratio": 9.291,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "a",
+          "foreground": "rgb(178, 197, 255)",
+          "background": [
+            21,
+            34,
+            58
+          ],
+          "size": 16,
+          "weight": 400,
+          "ratio": 9.323,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "div.eyebrow",
+          "foreground": "rgb(191, 207, 255)",
+          "background": [
+            24,
+            58,
+            131
+          ],
+          "size": 12.48,
+          "weight": 800,
+          "ratio": 6.889,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "h1",
+          "foreground": "rgb(255, 255, 255)",
+          "background": [
+            24,
+            58,
+            131
+          ],
+          "size": 44.8,
+          "weight": 700,
+          "ratio": 10.65,
+          "threshold": 3,
+          "gradient": false
+        },
+        {
+          "selector": "p",
+          "foreground": "rgb(225, 235, 255)",
+          "background": [
+            24,
+            58,
+            131
+          ],
+          "size": 17.92,
+          "weight": 400,
+          "ratio": 8.89,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "a.action",
+          "foreground": "rgb(16, 44, 92)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "size": 14.24,
+          "weight": 750,
+          "ratio": 13.664,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "a.action.action-outline",
+          "foreground": "rgb(255, 255, 255)",
+          "background": [
+            42,
+            74,
+            141
+          ],
+          "size": 14.24,
+          "weight": 750,
+          "ratio": 8.544,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "b",
+          "foreground": "rgb(255, 255, 255)",
+          "background": [
+            39,
+            71,
+            139
+          ],
+          "size": 21.76,
+          "weight": 700,
+          "ratio": 8.864,
+          "threshold": 3,
+          "gradient": false
+        },
+        {
+          "selector": "span",
+          "foreground": "rgb(218, 232, 255)",
+          "background": [
+            39,
+            71,
+            139
+          ],
+          "size": 12,
+          "weight": 400,
+          "ratio": 7.162,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "h2",
+          "foreground": "rgb(240, 245, 255)",
+          "background": [
+            13,
+            21,
+            39
+          ],
+          "size": 29.44,
+          "weight": 700,
+          "ratio": 16.651,
+          "threshold": 3,
+          "gradient": false
+        },
+        {
+          "selector": "p",
+          "foreground": "rgb(183, 199, 226)",
+          "background": [
+            13,
+            21,
+            39
+          ],
+          "size": 16,
+          "weight": 400,
+          "ratio": 10.645,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "h3",
+          "foreground": "rgb(240, 245, 255)",
+          "background": [
+            21,
+            34,
+            58
+          ],
+          "size": 17.92,
+          "weight": 700,
+          "ratio": 14.533,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "p",
+          "foreground": "rgb(183, 199, 226)",
+          "background": [
+            21,
+            34,
+            58
+          ],
+          "size": 14.08,
+          "weight": 400,
+          "ratio": 9.291,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "a",
+          "foreground": "rgb(178, 197, 255)",
+          "background": [
+            21,
+            34,
+            58
+          ],
+          "size": 14.08,
+          "weight": 400,
+          "ratio": 9.323,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "a.action-blue",
+          "foreground": "rgb(255, 255, 255)",
+          "background": [
+            32,
+            89,
+            200
+          ],
+          "size": 13.44,
+          "weight": 800,
+          "ratio": 6.317,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "p",
+          "foreground": "rgb(240, 245, 255)",
+          "background": [
+            21,
+            34,
+            58
+          ],
+          "size": 16,
+          "weight": 400,
+          "ratio": 14.533,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "strong",
+          "foreground": "rgb(240, 245, 255)",
+          "background": [
+            21,
+            34,
+            58
+          ],
+          "size": 16,
+          "weight": 700,
+          "ratio": 14.533,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "code",
+          "foreground": "rgb(236, 245, 255)",
+          "background": [
+            18,
+            30,
+            56
+          ],
+          "size": 13.28,
+          "weight": 400,
+          "ratio": 15.034,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "div.callout.warning",
+          "foreground": "rgb(248, 228, 184)",
+          "background": [
+            71,
+            54,
+            27
+          ],
+          "size": 16,
+          "weight": 400,
+          "ratio": 9.264,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "strong",
+          "foreground": "rgb(248, 228, 184)",
+          "background": [
+            71,
+            54,
+            27
+          ],
+          "size": 16,
+          "weight": 700,
+          "ratio": 9.264,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "summary",
+          "foreground": "rgb(240, 245, 255)",
+          "background": [
+            25,
+            42,
+            70
+          ],
+          "size": 16,
+          "weight": 750,
+          "ratio": 13.149,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "li",
+          "foreground": "rgb(240, 245, 255)",
+          "background": [
+            25,
+            42,
+            70
+          ],
+          "size": 16,
+          "weight": 400,
+          "ratio": 13.149,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "p.eyebrow-small",
+          "foreground": "rgb(172, 199, 255)",
+          "background": [
+            21,
+            34,
+            58
+          ],
+          "size": 11.84,
+          "weight": 850,
+          "ratio": 9.357,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "h3",
+          "foreground": "rgb(240, 245, 255)",
+          "background": [
+            21,
+            34,
+            58
+          ],
+          "size": 20.48,
+          "weight": 700,
+          "ratio": 14.533,
+          "threshold": 3,
+          "gradient": false
+        },
+        {
+          "selector": "p.muted",
+          "foreground": "rgb(183, 199, 226)",
+          "background": [
+            21,
+            34,
+            58
+          ],
+          "size": 14.4,
+          "weight": 400,
+          "ratio": 9.291,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "label.dashboard-select",
+          "foreground": "rgb(240, 245, 255)",
+          "background": [
+            21,
+            34,
+            58
+          ],
+          "size": 13.6,
+          "weight": 750,
+          "ratio": 14.533,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "#role-dashboard-empty",
+          "foreground": "rgb(240, 245, 255)",
+          "background": [
+            25,
+            42,
+            70
+          ],
+          "size": 15.04,
+          "weight": 400,
+          "ratio": 13.149,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "h3",
+          "foreground": "rgb(178, 197, 255)",
+          "background": [
+            21,
+            34,
+            58
+          ],
+          "size": 15.68,
+          "weight": 700,
+          "ratio": 9.323,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "small",
+          "foreground": "rgb(183, 199, 226)",
+          "background": [
+            21,
+            34,
+            58
+          ],
+          "size": 14,
+          "weight": 400,
+          "ratio": 9.291,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "span.go",
+          "foreground": "rgb(166, 194, 255)",
+          "background": [
+            21,
+            34,
+            58
+          ],
+          "size": 13.12,
+          "weight": 850,
+          "ratio": 8.914,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "strong",
+          "foreground": "rgb(240, 245, 255)",
+          "background": [
+            21,
+            34,
+            58
+          ],
+          "size": 16.96,
+          "weight": 700,
+          "ratio": 14.533,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "small",
+          "foreground": "rgb(183, 199, 226)",
+          "background": [
+            21,
+            34,
+            58
+          ],
+          "size": 13.3333,
+          "weight": 400,
+          "ratio": 9.291,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "strong",
+          "foreground": "rgb(183, 199, 226)",
+          "background": [
+            21,
+            34,
+            58
+          ],
+          "size": 14,
+          "weight": 700,
+          "ratio": 9.291,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "b",
+          "foreground": "rgb(240, 245, 255)",
+          "background": [
+            25,
+            42,
+            70
+          ],
+          "size": 13.76,
+          "weight": 700,
+          "ratio": 13.149,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "p",
+          "foreground": "rgb(183, 199, 226)",
+          "background": [
+            25,
+            42,
+            70
+          ],
+          "size": 13.76,
+          "weight": 400,
+          "ratio": 8.406,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "a",
+          "foreground": "rgb(178, 197, 255)",
+          "background": [
+            25,
+            42,
+            70
+          ],
+          "size": 13.76,
+          "weight": 400,
+          "ratio": 8.435,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "div.callout",
+          "foreground": "rgb(209, 230, 255)",
+          "background": [
+            30,
+            52,
+            83
+          ],
+          "size": 16,
+          "weight": 400,
+          "ratio": 9.857,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "a",
+          "foreground": "rgb(178, 197, 255)",
+          "background": [
+            30,
+            52,
+            83
+          ],
+          "size": 16,
+          "weight": 400,
+          "ratio": 7.374,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "h4",
+          "foreground": "rgb(240, 245, 255)",
+          "background": [
+            21,
+            34,
+            58
+          ],
+          "size": 16.64,
+          "weight": 700,
+          "ratio": 14.533,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "a",
+          "foreground": "rgb(178, 197, 255)",
+          "background": [
+            21,
+            34,
+            58
+          ],
+          "size": 14.72,
+          "weight": 700,
+          "ratio": 9.323,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "span.status.status-essential",
+          "foreground": "rgb(181, 246, 205)",
+          "background": [
+            20,
+            73,
+            47
+          ],
+          "size": 11.68,
+          "weight": 850,
+          "ratio": 8.414,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "strong",
+          "foreground": "rgb(240, 245, 255)",
+          "background": [
+            21,
+            34,
+            58
+          ],
+          "size": 14,
+          "weight": 700,
+          "ratio": 14.533,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "a",
+          "foreground": "rgb(178, 197, 255)",
+          "background": [
+            21,
+            34,
+            58
+          ],
+          "size": 14,
+          "weight": 400,
+          "ratio": 9.323,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "span.status.status-recommended",
+          "foreground": "rgb(255, 224, 156)",
+          "background": [
+            81,
+            64,
+            28
+          ],
+          "size": 11.68,
+          "weight": 850,
+          "ratio": 7.807,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "div.role-final",
+          "foreground": "rgb(240, 245, 255)",
+          "background": [
+            24,
+            57,
+            47
+          ],
+          "size": 16,
+          "weight": 400,
+          "ratio": 11.537,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "h4",
+          "foreground": "rgb(240, 245, 255)",
+          "background": [
+            24,
+            57,
+            47
+          ],
+          "size": 16,
+          "weight": 700,
+          "ratio": 11.537,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "p",
+          "foreground": "rgb(240, 245, 255)",
+          "background": [
+            24,
+            57,
+            47
+          ],
+          "size": 13.92,
+          "weight": 400,
+          "ratio": 11.537,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "a",
+          "foreground": "rgb(178, 197, 255)",
+          "background": [
+            24,
+            57,
+            47
+          ],
+          "size": 16,
+          "weight": 400,
+          "ratio": 7.401,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "strong",
+          "foreground": "rgb(183, 199, 226)",
+          "background": [
+            13,
+            21,
+            39
+          ],
+          "size": 16,
+          "weight": 700,
+          "ratio": 10.645,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "summary",
+          "foreground": "rgb(240, 245, 255)",
+          "background": [
+            25,
+            42,
+            70
+          ],
+          "size": 13.76,
+          "weight": 750,
+          "ratio": 13.149,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "li",
+          "foreground": "rgb(183, 199, 226)",
+          "background": [
+            21,
+            34,
+            58
+          ],
+          "size": 13.28,
+          "weight": 400,
+          "ratio": 9.291,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "strong",
+          "foreground": "rgb(209, 230, 255)",
+          "background": [
+            30,
+            52,
+            83
+          ],
+          "size": 16,
+          "weight": 700,
+          "ratio": 9.857,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "h3",
+          "foreground": "rgb(240, 245, 255)",
+          "background": [
+            25,
+            42,
+            70
+          ],
+          "size": 17.92,
+          "weight": 700,
+          "ratio": 13.149,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "p.muted",
+          "foreground": "rgb(183, 199, 226)",
+          "background": [
+            25,
+            42,
+            70
+          ],
+          "size": 14.08,
+          "weight": 400,
+          "ratio": 8.406,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "strong",
+          "foreground": "rgb(183, 199, 226)",
+          "background": [
+            25,
+            42,
+            70
+          ],
+          "size": 14.08,
+          "weight": 700,
+          "ratio": 8.406,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "label.show-all-checks",
+          "foreground": "rgb(240, 245, 255)",
+          "background": [
+            25,
+            42,
+            70
+          ],
+          "size": 13.6,
+          "weight": 700,
+          "ratio": 13.149,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "#check-counter",
+          "foreground": "rgb(147, 235, 208)",
+          "background": [
+            21,
+            34,
+            58
+          ],
+          "size": 17.92,
+          "weight": 850,
+          "ratio": 11.375,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "span",
+          "foreground": "rgb(240, 245, 255)",
+          "background": [
+            21,
+            34,
+            58
+          ],
+          "size": 13.12,
+          "weight": 400,
+          "ratio": 14.533,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "label",
+          "foreground": "rgb(240, 245, 255)",
+          "background": [
+            21,
+            34,
+            58
+          ],
+          "size": 16,
+          "weight": 650,
+          "ratio": 14.533,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "label.checkrow.library-all",
+          "foreground": "rgb(240, 245, 255)",
+          "background": [
+            21,
+            34,
+            58
+          ],
+          "size": 14.08,
+          "weight": 650,
+          "ratio": 14.533,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "strong",
+          "foreground": "rgb(183, 199, 226)",
+          "background": [
+            21,
+            34,
+            58
+          ],
+          "size": 16,
+          "weight": 700,
+          "ratio": 9.291,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "span.topic-number",
+          "foreground": "rgb(214, 216, 255)",
+          "background": [
+            43,
+            53,
+            101
+          ],
+          "size": 13.76,
+          "weight": 900,
+          "ratio": 8.404,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "h3",
+          "foreground": "rgb(240, 245, 255)",
+          "background": [
+            21,
+            34,
+            58
+          ],
+          "size": 16.8,
+          "weight": 700,
+          "ratio": 14.533,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "span",
+          "foreground": "rgb(189, 205, 233)",
+          "background": [
+            25,
+            42,
+            70
+          ],
+          "size": 11.36,
+          "weight": 400,
+          "ratio": 8.948,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "p.topic-lab-line",
+          "foreground": "rgb(240, 245, 255)",
+          "background": [
+            21,
+            34,
+            58
+          ],
+          "size": 13.76,
+          "weight": 400,
+          "ratio": 14.533,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "strong",
+          "foreground": "rgb(240, 245, 255)",
+          "background": [
+            21,
+            34,
+            58
+          ],
+          "size": 13.76,
+          "weight": 700,
+          "ratio": 14.533,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "button.topic-done-btn.no-print",
+          "foreground": "rgb(240, 245, 255)",
+          "background": [
+            21,
+            34,
+            58
+          ],
+          "size": 12.16,
+          "weight": 800,
+          "ratio": 14.533,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "summary",
+          "foreground": "rgb(240, 245, 255)",
+          "background": [
+            25,
+            42,
+            70
+          ],
+          "size": 13.6,
+          "weight": 850,
+          "ratio": 13.149,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "div",
+          "foreground": "rgb(240, 245, 255)",
+          "background": [
+            21,
+            34,
+            58
+          ],
+          "size": 14,
+          "weight": 400,
+          "ratio": 14.533,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "h4",
+          "foreground": "rgb(240, 245, 255)",
+          "background": [
+            25,
+            42,
+            70
+          ],
+          "size": 15.52,
+          "weight": 700,
+          "ratio": 13.149,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "p",
+          "foreground": "rgb(183, 199, 226)",
+          "background": [
+            25,
+            42,
+            70
+          ],
+          "size": 16,
+          "weight": 400,
+          "ratio": 8.406,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "strong",
+          "foreground": "rgb(183, 199, 226)",
+          "background": [
+            25,
+            42,
+            70
+          ],
+          "size": 16,
+          "weight": 700,
+          "ratio": 8.406,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "a",
+          "foreground": "rgb(178, 197, 255)",
+          "background": [
+            25,
+            42,
+            70
+          ],
+          "size": 16,
+          "weight": 400,
+          "ratio": 8.435,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "strong",
+          "foreground": "rgb(240, 245, 255)",
+          "background": [
+            25,
+            42,
+            70
+          ],
+          "size": 16,
+          "weight": 700,
+          "ratio": 13.149,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "label.checkrow",
+          "foreground": "rgb(240, 245, 255)",
+          "background": [
+            25,
+            42,
+            70
+          ],
+          "size": 14.08,
+          "weight": 400,
+          "ratio": 13.149,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "#subtopic-01-001",
+          "foreground": "rgb(240, 245, 255)",
+          "background": [
+            25,
+            42,
+            70
+          ],
+          "size": 14.56,
+          "weight": 400,
+          "ratio": 13.149,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "small.online-label",
+          "foreground": "rgb(178, 197, 255)",
+          "background": [
+            25,
+            42,
+            70
+          ],
+          "size": 12,
+          "weight": 650,
+          "ratio": 8.435,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "pre",
+          "foreground": "rgb(240, 245, 255)",
+          "background": [
+            25,
+            42,
+            70
+          ],
+          "size": 13,
+          "weight": 400,
+          "ratio": 13.149,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "h5",
+          "foreground": "rgb(240, 245, 255)",
+          "background": [
+            25,
+            42,
+            70
+          ],
+          "size": 13.28,
+          "weight": 700,
+          "ratio": 13.149,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "small.online-label",
+          "foreground": "rgb(178, 197, 255)",
+          "background": [
+            30,
+            52,
+            83
+          ],
+          "size": 12,
+          "weight": 650,
+          "ratio": 7.374,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "summary",
+          "foreground": "rgb(240, 245, 255)",
+          "background": [
+            21,
+            34,
+            58
+          ],
+          "size": 16,
+          "weight": 750,
+          "ratio": 14.533,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "label",
+          "foreground": "rgb(240, 245, 255)",
+          "background": [
+            21,
+            34,
+            58
+          ],
+          "size": 14.08,
+          "weight": 750,
+          "ratio": 14.533,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "th",
+          "foreground": "rgb(215, 231, 255)",
+          "background": [
+            34,
+            54,
+            85
+          ],
+          "size": 12.64,
+          "weight": 700,
+          "ratio": 9.708,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "a",
+          "foreground": "rgb(178, 197, 255)",
+          "background": [
+            21,
+            34,
+            58
+          ],
+          "size": 13.44,
+          "weight": 400,
+          "ratio": 9.323,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "td",
+          "foreground": "rgb(240, 245, 255)",
+          "background": [
+            21,
+            34,
+            58
+          ],
+          "size": 13.44,
+          "weight": 400,
+          "ratio": 14.533,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "span.status.status-unlisted",
+          "foreground": "rgb(197, 205, 224)",
+          "background": [
+            43,
+            52,
+            71
+          ],
+          "size": 11.68,
+          "weight": 850,
+          "ratio": 7.824,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "dt",
+          "foreground": "rgb(240, 245, 255)",
+          "background": [
+            21,
+            34,
+            58
+          ],
+          "size": 16,
+          "weight": 800,
+          "ratio": 14.533,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "caption",
+          "foreground": "rgb(240, 245, 255)",
+          "background": [
+            25,
+            42,
+            70
+          ],
+          "size": 13.44,
+          "weight": 750,
+          "ratio": 13.149,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "h3",
+          "foreground": "rgb(240, 245, 255)",
+          "background": [
+            21,
+            34,
+            58
+          ],
+          "size": 18.4,
+          "weight": 700,
+          "ratio": 14.533,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "p",
+          "foreground": "rgb(240, 245, 255)",
+          "background": [
+            21,
+            34,
+            58
+          ],
+          "size": 14.56,
+          "weight": 400,
+          "ratio": 14.533,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "strong",
+          "foreground": "rgb(240, 245, 255)",
+          "background": [
+            21,
+            34,
+            58
+          ],
+          "size": 14.56,
+          "weight": 700,
+          "ratio": 14.533,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "a",
+          "foreground": "rgb(178, 197, 255)",
+          "background": [
+            21,
+            34,
+            58
+          ],
+          "size": 14.56,
+          "weight": 400,
+          "ratio": 9.323,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "code",
+          "foreground": "rgb(219, 227, 255)",
+          "background": [
+            47,
+            54,
+            89
+          ],
+          "size": 14.56,
+          "weight": 400,
+          "ratio": 9.172,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "b",
+          "foreground": "rgb(240, 245, 255)",
+          "background": [
+            34,
+            54,
+            83
+          ],
+          "size": 16,
+          "weight": 700,
+          "ratio": 11.165,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "button.copy-button",
+          "foreground": "rgb(255, 255, 255)",
+          "background": [
+            36,
+            86,
+            203
+          ],
+          "size": 13.28,
+          "weight": 800,
+          "ratio": 6.425,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "p",
+          "foreground": "rgb(225, 237, 255)",
+          "background": [
+            32,
+            52,
+            82
+          ],
+          "size": 14.56,
+          "weight": 400,
+          "ratio": 10.606,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "strong",
+          "foreground": "rgb(225, 237, 255)",
+          "background": [
+            32,
+            52,
+            82
+          ],
+          "size": 14.56,
+          "weight": 700,
+          "ratio": 10.606,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "code",
+          "foreground": "rgb(219, 227, 255)",
+          "background": [
+            47,
+            54,
+            89
+          ],
+          "size": 14.56,
+          "weight": 700,
+          "ratio": 9.172,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "th",
+          "foreground": "rgb(40, 68, 105)",
+          "background": [
+            238,
+            243,
+            252
+          ],
+          "size": 12.64,
+          "weight": 700,
+          "ratio": 8.892,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "code",
+          "foreground": "rgb(219, 227, 255)",
+          "background": [
+            47,
+            54,
+            89
+          ],
+          "size": 13.44,
+          "weight": 400,
+          "ratio": 9.172,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "span.resource-category",
+          "foreground": "rgb(172, 199, 255)",
+          "background": [
+            21,
+            34,
+            58
+          ],
+          "size": 12,
+          "weight": 850,
+          "ratio": 9.357,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "a",
+          "foreground": "rgb(178, 197, 255)",
+          "background": [
+            21,
+            34,
+            58
+          ],
+          "size": 15.52,
+          "weight": 800,
+          "ratio": 9.323,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "small.online-label",
+          "foreground": "rgb(178, 197, 255)",
+          "background": [
+            21,
+            34,
+            58
+          ],
+          "size": 11.64,
+          "weight": 650,
+          "ratio": 9.323,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "a",
+          "foreground": "rgb(178, 197, 255)",
+          "background": [
+            21,
+            34,
+            58
+          ],
+          "size": 13.28,
+          "weight": 400,
+          "ratio": 9.323,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "p",
+          "foreground": "rgb(240, 245, 255)",
+          "background": [
+            13,
+            21,
+            39
+          ],
+          "size": 16,
+          "weight": 400,
+          "ratio": 16.651,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "strong",
+          "foreground": "rgb(240, 245, 255)",
+          "background": [
+            13,
+            21,
+            39
+          ],
+          "size": 16,
+          "weight": 700,
+          "ratio": 16.651,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "a",
+          "foreground": "rgb(178, 197, 255)",
+          "background": [
+            13,
+            21,
+            39
+          ],
+          "size": 16,
+          "weight": 400,
+          "ratio": 10.682,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "small.online-label",
+          "foreground": "rgb(178, 197, 255)",
+          "background": [
+            13,
+            21,
+            39
+          ],
+          "size": 12,
+          "weight": 650,
+          "ratio": 10.682,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "p.muted.resource-note",
+          "foreground": "rgb(183, 199, 226)",
+          "background": [
+            13,
+            21,
+            39
+          ],
+          "size": 13.12,
+          "weight": 400,
+          "ratio": 10.645,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "span.pill",
+          "foreground": "rgb(63, 78, 132)",
+          "background": [
+            233,
+            237,
+            250
+          ],
+          "size": 11.84,
+          "weight": 800,
+          "ratio": 6.817,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "span",
+          "foreground": "rgb(240, 245, 255)",
+          "background": [
+            21,
+            34,
+            58
+          ],
+          "size": 12.32,
+          "weight": 750,
+          "ratio": 14.533,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "span.index-num",
+          "foreground": "rgb(214, 216, 255)",
+          "background": [
+            43,
+            53,
+            101
+          ],
+          "size": 12.96,
+          "weight": 850,
+          "ratio": 8.404,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "b",
+          "foreground": "rgb(178, 197, 255)",
+          "background": [
+            21,
+            34,
+            58
+          ],
+          "size": 13.6,
+          "weight": 700,
+          "ratio": 9.323,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "small",
+          "foreground": "rgb(183, 199, 226)",
+          "background": [
+            21,
+            34,
+            58
+          ],
+          "size": 13.12,
+          "weight": 400,
+          "ratio": 9.291,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "h2",
+          "foreground": "rgb(240, 245, 255)",
+          "background": [
+            21,
+            34,
+            58
+          ],
+          "size": 24,
+          "weight": 700,
+          "ratio": 14.533,
+          "threshold": 3,
+          "gradient": false
+        },
+        {
+          "selector": "small.online-label",
+          "foreground": "rgb(178, 197, 255)",
+          "background": [
+            21,
+            34,
+            58
+          ],
+          "size": 12,
+          "weight": 650,
+          "ratio": 9.323,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "a",
+          "foreground": "rgb(178, 197, 255)",
+          "background": [
+            13,
+            21,
+            39
+          ],
+          "size": 13.12,
+          "weight": 400,
+          "ratio": 10.682,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "small.online-label",
+          "foreground": "rgb(178, 197, 255)",
+          "background": [
+            13,
+            21,
+            39
+          ],
+          "size": 9.84,
+          "weight": 650,
+          "ratio": 10.682,
+          "threshold": 4.5,
+          "gradient": false
+        },
+        {
+          "selector": "a.up",
+          "foreground": "rgb(178, 197, 255)",
+          "background": [
+            24,
+            53,
+            103
+          ],
+          "size": 12.8,
+          "weight": 400,
+          "ratio": 7.066,
+          "threshold": 4.5,
+          "gradient": false
+        }
+      ],
+      "lowPairs": [],
+      "gradientPairs": [],
+      "gradientLimit": "Gradient pairs require a pixel-level check; they are listed separately and are not counted as verified AA by this sampler.",
+      "axe": [],
+      "axeIncomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 52,
+          "details": [
+            {
+              "target": [
+                ".magnify"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#model-adapter-model_adapter-py > code"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element",
+              "related": [
+                {
+                  "message": "Element's background color could not be determined because it's partially obscured by another element",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "12.0pt (16px)",
+                    "fontWeight": "normal",
+                    "messageKey": "elmPartiallyObscured",
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                ".card[open=\"\"]:nth-child(12) > pre > code"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element",
+              "related": [
+                {
+                  "message": "Element's background color could not be determined because it's partially obscured by another element",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "12.0pt (16px)",
+                    "fontWeight": "normal",
+                    "messageKey": "elmPartiallyObscured",
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                ".dashboard-head > div > .eyebrow-small"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element",
+              "related": [
+                {
+                  "message": "Element's background color could not be determined due to a pseudo element",
+                  "data": {
+                    "fontSize": "8.9pt (11.84px)",
+                    "fontWeight": "bold",
+                    "messageKey": "pseudoContent",
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                ".dashboard-head > div > h3"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element",
+              "related": [
+                {
+                  "message": "Element's background color could not be determined due to a pseudo element",
+                  "data": {
+                    "fontSize": "15.4pt (20.48px)",
+                    "fontWeight": "bold",
+                    "messageKey": "pseudoContent",
+                    "expectedContrastRatio": "3:1"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#role-home"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element",
+              "related": [
+                {
+                  "message": "Element's background color could not be determined due to a pseudo element",
+                  "data": {
+                    "fontSize": "10.2pt (13.6px)",
+                    "fontWeight": "bold",
+                    "messageKey": "pseudoContent",
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#role-backend-software-engineer > .role-body > .phase:nth-child(5) > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#phase-backend-software-engineer-1 > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#phase-backend-software-engineer-2 > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#phase-backend-software-engineer-3 > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#role-frontend-software-engineer > .role-body > .phase:nth-child(5) > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#phase-frontend-software-engineer-1 > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#role-full-stack-software-engineer > .role-body > .phase:nth-child(5) > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#phase-full-stack-software-engineer-1 > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#phase-full-stack-software-engineer-2 > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#phase-full-stack-software-engineer-3 > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#role-mobile-application-developer > .role-body > .phase:nth-child(5) > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#phase-mobile-application-developer-1 > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#role-cloud-engineer > .role-body > .phase:nth-child(5) > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#phase-cloud-engineer-1 > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#role-devops-engineer > .role-body > .phase:nth-child(5) > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#phase-devops-engineer-1 > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#role-site-reliability-engineer > .role-body > .phase:nth-child(5) > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#phase-site-reliability-engineer-1 > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#role-qa-and-test-automation-engineer > .role-body > .phase:nth-child(5) > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#phase-qa-and-test-automation-engineer-1 > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#phase-qa-and-test-automation-engineer-2 > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#phase-qa-and-test-automation-engineer-3 > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#role-cybersecurity-and-application-security-engineer > .role-body > .phase:nth-child(5) > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#phase-cybersecurity-and-application-security-engineer-1 > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#phase-cybersecurity-and-application-security-engineer-2 > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#phase-cybersecurity-and-application-security-engineer-3 > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#role-data-engineer > .role-body > .phase:nth-child(5) > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#phase-data-engineer-1 > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#phase-data-engineer-2 > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#phase-data-engineer-3 > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#role-ai-and-machine-learning-engineer > .role-body > .phase:nth-child(5) > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#phase-ai-and-machine-learning-engineer-1 > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#phase-ai-and-machine-learning-engineer-2 > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#phase-ai-and-machine-learning-engineer-3 > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#role-software-and-solutions-architect > .role-body > .phase:nth-child(5) > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#phase-software-and-solutions-architect-1 > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#phase-software-and-solutions-architect-2 > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#phase-software-and-solutions-architect-3 > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#role-technical-lead-and-engineering-manager > .role-body > .phase:nth-child(5) > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#phase-technical-lead-and-engineering-manager-1 > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#phase-technical-lead-and-engineering-manager-2 > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#phase-technical-lead-and-engineering-manager-3 > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#role-junior-developer-and-engineering-beginner > .role-body > .phase:nth-child(5) > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#phase-junior-developer-and-engineering-beginner-1 > .chips"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "related": [
+                {
+                  "message": "Element content contains only non-text characters",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#ml-source-ml_core-py > code"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element",
+              "related": [
+                {
+                  "message": "Element's background color could not be determined because it's partially obscured by another element",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "12.0pt (16px)",
+                    "fontWeight": "normal",
+                    "messageKey": "elmPartiallyObscured",
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "#ml-source-test_ml_core-py > code"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element",
+              "related": [
+                {
+                  "message": "Element's background color could not be determined because it's partially obscured by another element",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "12.0pt (16px)",
+                    "fontWeight": "normal",
+                    "messageKey": "elmPartiallyObscured",
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "deadSelectors": {
+    "dead": [],
+    "invalid": []
+  }
+}

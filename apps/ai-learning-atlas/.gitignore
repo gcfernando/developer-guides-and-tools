@@ -1,0 +1,5 @@
+# Local execution artifacts; retain compact JSON/text evidence.
+.runtime/
+tools/results/*.png
+tools/results/*.lighthouse.json
+tools/results/*-artifacts/

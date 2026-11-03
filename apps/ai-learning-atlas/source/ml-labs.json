@@ -1,0 +1,56 @@
+{
+  "4": {
+    "title": "Quantify sample uncertainty",
+    "explanation": "For independent Bernoulli trials, a two-sided 95% Wilson interval is approximately [0.375535, 0.963776] for 4/5 and [0.711171, 0.866633] for 80/100. Both sample rates equal 0.8, but the larger sample gives a narrower interval under these assumptions. The 95% refers to the long-run coverage of the interval procedure over repeated samples; it is not a 95% probability statement about a fixed population rate in this realized interval. These intervals do not correct selection bias, dependent observations or unrepresentative sampling.",
+    "code": "from ml_core import wilson\nfor successes, n in [(4, 5), (80, 100)]:\n    print(tuple(round(v, 6) for v in wilson(successes, n)))",
+    "expected": "(0.375535, 0.963776)\n(0.711171, 0.866633)",
+    "practice": "Compute intervals for 3/5 and 79/100; explain why increasing sample size cannot repair a biased sampling process."
+  },
+  "7": {
+    "title": "Split before learning preprocessing",
+    "explanation": "The fixture uses two training rows, two validation rows and two untouched test-feature rows. A nearest-neighbor classifier depends on feature distances. Fitting min–max scaling on training rows alone predicts [0, 1] on validation and gets 0/2 correct; deliberately fitting it on all feature rows predicts [1, 0] and gets 2/2. This synthetic improvement is contaminated evidence: validation and test information changed the distance metric before evaluation. Leakage need not improve every score, and this tiny example measures no population-level performance.",
+    "code": "from ml_core import leakage\nprint(leakage())",
+    "expected": "{'train_only': ([0, 1], 0.0), 'leaked_all': ([1, 0], 1.0)}",
+    "practice": "Keep the split fixed, change one validation feature, and explain which scaler fit is permissible. Never use the deliberately leaked score to select a model.",
+    "leakageChecks": [
+      "Target leakage: a feature is derived from the answer or is unavailable when the prediction would be made. Check its lineage and availability timestamp; remove post-outcome fields and compare held-out results.",
+      "Temporal leakage: future information influences a past prediction. Assert every feature timestamp is at or before that prediction cutoff, keep training before evaluation, and fit transformations inside each temporal training window.",
+      "Duplicate or near-duplicate rows: the same case appears across partitions. Compare normalized row hashes and entity/group identifiers across splits; inspect near matches and keep related records in one partition before fitting."
+    ]
+  },
+  "8": {
+    "title": "Observe polynomial overfitting",
+    "explanation": "Six synthetic training points follow x² with alternating noise; ten separate validation points follow the clean curve. The degree-5 polynomial interpolates the training points, while the quadratic has the lowest validation MSE among these three specified candidates. This trend is observed for this fixture, not a theorem that every increase in degree worsens validation error. The tiny pivoted normal-equation solver is for inspection; real ill-conditioned problems need a stable numerical implementation.",
+    "code": "from ml_core import overfitting\nfor degree, train, validation in overfitting():\n    print(degree, f'{train:.6f}', f'{validation:.6f}')",
+    "expected": "1 0.168432 0.103764\n2 0.009143 0.000606\n5 0.000000 0.017605",
+    "practice": "Change the noise amplitude, rerun all candidates, and explain the train/validation trade-off. For the larger applied lab, use an optional scikit-learn install, k-fold cross-validation with fold-local preprocessing, mean ± sample standard deviation, and the same folds for a simple baseline and three fitted models. Fold SD describes variation, not a confidence interval."
+  },
+  "9": {
+    "title": "Trace one k-means update",
+    "explanation": "The points are [0, 2, 8, 10] and the initial centers are [0, 8]. Each point chooses the nearest center, then each center becomes its assigned points' arithmetic mean. Assignments [0, 0, 1, 1] give new centers [1, 9]. Cluster IDs have no intrinsic semantic class meaning; the starting centers, distance measure and number of clusters affect the result.",
+    "code": "from ml_core import clustering\nprint(clustering())",
+    "expected": "([0, 0, 1, 1], [1.0, 9.0])",
+    "practice": "Start with centers [2, 10] and calculate the assignments and means by hand before modifying the code. Explain how you would handle an empty cluster rather than dividing by zero."
+  },
+  "10": {
+    "title": "Compute metrics and calibration with denominators",
+    "explanation": "For actual labels [1,1,1,0,0,0] and predicted labels [1,0,1,1,0,0], the confusion counts are TP=2, FP=1, FN=1 and TN=2. Precision=TP/(TP+FP)=2/3, recall=TP/(TP+FN)=2/3, and F1=2PR/(P+R)=2/3. In the separate calibration example, the 0.2 probability bin has observed frequency 0.5 and the 0.8 bin has frequency 1.0; a reliability curve plots these mean-probability/frequency pairs against the diagonal. Two observations per bin are highly uncertain. A probability is not a guarantee of correctness for one case.",
+    "code": "from ml_core import confusion, calibration, wilson\nprint(confusion())\nprint(calibration())\nprint(tuple(round(v, 6) for v in wilson(4, 6)))",
+    "expected": "{'TP': 2, 'FP': 1, 'FN': 1, 'TN': 2, 'precision': 0.6666666666666666, 'recall': 0.6666666666666666, 'F1': 0.6666666666666666}\n[(0.2, 0.5), (0.8, 1.0)]\n(0.299993, 0.903229)",
+    "practice": "Compare the classifier with an always-positive baseline on these same labels. Report every numerator and denominator, an uncertainty interval for the chosen accuracy estimate, and the sampling assumptions. Explain undefined precision when no positive predictions exist instead of silently dividing by zero."
+  },
+  "11": {
+    "title": "Keep transformations inside each fold",
+    "explanation": "Fit imputers, scalers and feature selection using only the training part of each fold. The three-fold code below compares a training-mean baseline with a linear model fitted through the origin on six noiseless synthetic pairs. In each fold the slope is learned only from its training rows using sum(x*y)/sum(x*x); the known zero intercept is an explicit modeling assumption. Baseline fold MAEs are all 3 and fitted-model MAEs are all 0, yielding sample SD 0 for each. Identical fold errors in this tiny constructed dataset do not imply certainty about future cases.",
+    "code": "from ml_core import cross_validation\nprint(cross_validation())",
+    "expected": "{'baseline_MAE': (3.0, 0.0), 'fitted_linear_MAE': (0.0, 0.0)}",
+    "practice": "Introduce noise into one pair and report each fold error, the mean and sample SD again. In a fitted pipeline, assert that held-out rows never reach fit(), and resample only training folds."
+  },
+  "12": {
+    "title": "Inspect a linear neuron's gradient loop",
+    "explanation": "For a single input x=1, target y=3 and model prediction wx, mean squared error is L=(w−3)². Its derivative is 2(w−3), so from w=0 a learning rate of 0.1 gives w=0.6 and loss 5.76, down from 9. The supplied loop records the weight and loss after every step. A rate of 2 overshoots to w=12 and loss 81, followed by losses 729 and 6561. This one-parameter example teaches the optimization loop; it does not demonstrate training a deep network.",
+    "code": "from ml_core import gradient_descent\nfor step, weight, loss in gradient_descent(0.1):\n    print(step, f'{weight:.6f}', f'{loss:.6f}')\nprint(gradient_descent(2, 3))",
+    "expected": "0 0.000000 9.000000\n1 0.600000 5.760000\n2 1.080000 3.686400\n3 1.464000 2.359296\n4 1.771200 1.509949\n5 2.016960 0.966368\n6 2.213568 0.618475\n[(0, 0.0, 9.0), (1, 12.0, 81.0), (2, -24.0, 729.0), (3, 84.0, 6561.0)]",
+    "practice": "Predict the first update for rate 0.5, then run it. Record loss at each step for rates 0.1 and 2, diagnose divergence, and distinguish a numerical failure from evidence that the model family is unsuitable."
+  }
+}

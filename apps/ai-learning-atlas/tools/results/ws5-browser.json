@@ -1,0 +1,359 @@
+{
+  "stage": "ws5",
+  "target": "C:\\Gehan\\Projects\\DeveloperResources\\apps\\ai-learning-atlas\\index.html",
+  "transport": "gzip when accepted",
+  "checks": [
+    {
+      "name": "file: console at initial load",
+      "pass": true,
+      "details": []
+    },
+    {
+      "name": "file: viewport 360 no horizontal overflow",
+      "pass": true,
+      "details": {
+        "width": 360,
+        "scrollWidth": 360
+      }
+    },
+    {
+      "name": "file: viewport 768 no horizontal overflow",
+      "pass": true,
+      "details": {
+        "width": 768,
+        "scrollWidth": 768
+      }
+    },
+    {
+      "name": "file: viewport 1280 no horizontal overflow",
+      "pass": true,
+      "details": {
+        "width": 1280,
+        "scrollWidth": 1280
+      }
+    },
+    {
+      "name": "file: viewport 1600 no horizontal overflow",
+      "pass": true,
+      "details": {
+        "width": 1600,
+        "scrollWidth": 1600
+      }
+    },
+    {
+      "name": "file: topic done toggles checkbox",
+      "pass": true
+    },
+    {
+      "name": "file: role and progress persist on reload",
+      "pass": true
+    },
+    {
+      "name": "file: export includes every original check",
+      "pass": true,
+      "details": {
+        "version": 2,
+        "fields": 514
+      }
+    },
+    {
+      "name": "file: clear progress",
+      "pass": true
+    },
+    {
+      "name": "file: exported backup restores",
+      "pass": true,
+      "details": "Backup restored. Review your role, note and evidence."
+    },
+    {
+      "name": "file: original v1 backup restores",
+      "pass": true,
+      "details": "Backup restored. Review your role, note and evidence."
+    },
+    {
+      "name": "file: original v2 backup restores",
+      "pass": true,
+      "details": "Backup restored. Review your role, note and evidence."
+    },
+    {
+      "name": "file: slash shortcut focuses search",
+      "pass": true
+    },
+    {
+      "name": "file: search keyboard selects a result",
+      "pass": true,
+      "details": {
+        "focus": "site-search",
+        "active": "search-option-0",
+        "expanded": "true",
+        "options": 35
+      }
+    },
+    {
+      "name": "file: search Enter navigates",
+      "pass": true
+    },
+    {
+      "name": "file: Escape closes search",
+      "pass": true
+    },
+    {
+      "name": "file: lazy subtopic deep link resolves visibly",
+      "pass": true
+    },
+    {
+      "name": "file: first tab is skip link",
+      "pass": true,
+      "details": {
+        "tag": "A",
+        "href": "#main-content"
+      }
+    },
+    {
+      "name": "file: skip link focuses main",
+      "pass": true
+    },
+    {
+      "name": "file: keyboard menu opens",
+      "pass": true
+    },
+    {
+      "name": "file: Escape closes menu and returns focus",
+      "pass": true
+    },
+    {
+      "name": "file: light axe no serious/critical violations",
+      "pass": true,
+      "details": []
+    },
+    {
+      "name": "file: dark axe no serious/critical violations",
+      "pass": true,
+      "details": []
+    },
+    {
+      "name": "file: print hides navigation and shows lessons",
+      "pass": true,
+      "details": {
+        "sidebar": "none",
+        "lesson": "block"
+      }
+    },
+    {
+      "name": "file: reduced motion disables smooth scrolling",
+      "pass": true,
+      "details": "auto"
+    },
+    {
+      "name": "file: console after interactions",
+      "pass": true,
+      "details": []
+    },
+    {
+      "name": "http: console at initial load",
+      "pass": true,
+      "details": []
+    },
+    {
+      "name": "http: viewport 360 no horizontal overflow",
+      "pass": true,
+      "details": {
+        "width": 360,
+        "scrollWidth": 360
+      }
+    },
+    {
+      "name": "http: viewport 768 no horizontal overflow",
+      "pass": true,
+      "details": {
+        "width": 768,
+        "scrollWidth": 768
+      }
+    },
+    {
+      "name": "http: viewport 1280 no horizontal overflow",
+      "pass": true,
+      "details": {
+        "width": 1280,
+        "scrollWidth": 1280
+      }
+    },
+    {
+      "name": "http: viewport 1600 no horizontal overflow",
+      "pass": true,
+      "details": {
+        "width": 1600,
+        "scrollWidth": 1600
+      }
+    },
+    {
+      "name": "http: topic done toggles checkbox",
+      "pass": true
+    },
+    {
+      "name": "http: role and progress persist on reload",
+      "pass": true
+    },
+    {
+      "name": "http: export includes every original check",
+      "pass": true,
+      "details": {
+        "version": 2,
+        "fields": 514
+      }
+    },
+    {
+      "name": "http: clear progress",
+      "pass": true
+    },
+    {
+      "name": "http: exported backup restores",
+      "pass": true,
+      "details": "Backup restored. Review your role, note and evidence."
+    },
+    {
+      "name": "http: original v1 backup restores",
+      "pass": true,
+      "details": "Backup restored. Review your role, note and evidence."
+    },
+    {
+      "name": "http: original v2 backup restores",
+      "pass": true,
+      "details": "Backup restored. Review your role, note and evidence."
+    },
+    {
+      "name": "http: slash shortcut focuses search",
+      "pass": true
+    },
+    {
+      "name": "http: search keyboard selects a result",
+      "pass": true,
+      "details": {
+        "focus": "site-search",
+        "active": "search-option-0",
+        "expanded": "true",
+        "options": 35
+      }
+    },
+    {
+      "name": "http: search Enter navigates",
+      "pass": true
+    },
+    {
+      "name": "http: Escape closes search",
+      "pass": true
+    },
+    {
+      "name": "http: lazy subtopic deep link resolves visibly",
+      "pass": true
+    },
+    {
+      "name": "http: first tab is skip link",
+      "pass": true,
+      "details": {
+        "tag": "A",
+        "href": "#main-content"
+      }
+    },
+    {
+      "name": "http: skip link focuses main",
+      "pass": true
+    },
+    {
+      "name": "http: keyboard menu opens",
+      "pass": true
+    },
+    {
+      "name": "http: Escape closes menu and returns focus",
+      "pass": true
+    },
+    {
+      "name": "http: light axe no serious/critical violations",
+      "pass": true,
+      "details": []
+    },
+    {
+      "name": "http: dark axe no serious/critical violations",
+      "pass": true,
+      "details": []
+    },
+    {
+      "name": "http: print hides navigation and shows lessons",
+      "pass": true,
+      "details": {
+        "sidebar": "none",
+        "lesson": "block"
+      }
+    },
+    {
+      "name": "http: reduced motion disables smooth scrolling",
+      "pass": true,
+      "details": "auto"
+    },
+    {
+      "name": "http: console after interactions",
+      "pass": true,
+      "details": []
+    }
+  ],
+  "errors": [],
+  "unverified": [
+    "No actual screen reader was driven; ARIA and keyboard observations are not a screen-reader test.",
+    "Automated screenshots and print layout probes are not a complete human visual review."
+  ],
+  "httpURL": "http://127.0.0.1:55735/index.html",
+  "fileInitial": {
+    "nodes": 7156,
+    "checks": 514,
+    "width": 360,
+    "scrollWidth": 360
+  },
+  "fileAxeCoverage": "Initially visible reader plus navigated states; closed disclosures excluded by axe",
+  "fileAxelight": {
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "nodes": 17
+      }
+    ],
+    "passes": 33
+  },
+  "fileAxedark": {
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "nodes": 17
+      }
+    ],
+    "passes": 33
+  },
+  "httpInitial": {
+    "nodes": 7156,
+    "checks": 514,
+    "width": 360,
+    "scrollWidth": 360
+  },
+  "httpAxeCoverage": "Initially visible reader plus navigated states; closed disclosures excluded by axe",
+  "httpAxelight": {
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "nodes": 17
+      }
+    ],
+    "passes": 33
+  },
+  "httpAxedark": {
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "nodes": 17
+      }
+    ],
+    "passes": 33
+  }
+}

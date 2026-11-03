@@ -1,0 +1,1864 @@
+{
+  "page_sha256": "d0645bf9509bfbf7293d2e7722daefa78e7633e3e7005b70dbd5eb4e06a5aa3b",
+  "target": "C:\\Gehan\\Projects\\DeveloperResources\\apps\\ai-learning-atlas\\index.html",
+  "checks": [
+    {
+      "name": "file: 360px expanded code and selected-role overflow",
+      "pass": true,
+      "details": {
+        "width": 360,
+        "scrollWidth": 360,
+        "code": [
+          {
+            "clientWidth": 240,
+            "scrollWidth": 240,
+            "documentRight": 302
+          },
+          {
+            "clientWidth": 240,
+            "scrollWidth": 240,
+            "documentRight": 302
+          },
+          {
+            "clientWidth": 240,
+            "scrollWidth": 240,
+            "documentRight": 302
+          },
+          {
+            "clientWidth": 240,
+            "scrollWidth": 240,
+            "documentRight": 302
+          },
+          {
+            "clientWidth": 274,
+            "scrollWidth": 274,
+            "documentRight": 319
+          },
+          {
+            "clientWidth": 274,
+            "scrollWidth": 415,
+            "documentRight": 319
+          },
+          {
+            "clientWidth": 248,
+            "scrollWidth": 1020,
+            "documentRight": 306
+          },
+          {
+            "clientWidth": 248,
+            "scrollWidth": 950,
+            "documentRight": 306
+          }
+        ],
+        "nextStepVisible": true
+      }
+    },
+    {
+      "name": "file: 360px rendered buttons, toggles, and checkbox-label targets are 44px",
+      "pass": true,
+      "details": {
+        "measured": 212,
+        "missingLabels": [],
+        "undersized": []
+      }
+    },
+    {
+      "name": "file: 360px sticky next-step bar does not obscure focused controls",
+      "pass": true,
+      "details": [
+        {
+          "selector": "theme-btn",
+          "focused": true,
+          "rect": {
+            "x": 302,
+            "y": 11.828125,
+            "width": 44,
+            "height": 44,
+            "bottom": 55.828125,
+            "right": 346
+          },
+          "viewport": {
+            "width": 360,
+            "height": 900
+          },
+          "topbarOverlap": 0,
+          "nextBarOverlap": 0,
+          "centerReceivesPointer": true,
+          "hit": "theme-btn"
+        },
+        {
+          "selector": "topic-done-btn no-print",
+          "focused": true,
+          "rect": {
+            "x": 228.53125,
+            "y": 387.265625,
+            "width": 106.46875,
+            "height": 44,
+            "bottom": 431.265625,
+            "right": 335
+          },
+          "viewport": {
+            "width": 360,
+            "height": 900
+          },
+          "topbarOverlap": 0,
+          "nextBarOverlap": 0,
+          "centerReceivesPointer": true,
+          "hit": "topic-done-btn no-print"
+        },
+        {
+          "selector": "unit-07-01-practice",
+          "focused": true,
+          "rect": {
+            "x": 66,
+            "y": 399.484375,
+            "width": 20,
+            "height": 20,
+            "bottom": 419.484375,
+            "right": 86
+          },
+          "viewport": {
+            "width": 360,
+            "height": 900
+          },
+          "topbarOverlap": 0,
+          "nextBarOverlap": 0,
+          "centerReceivesPointer": true,
+          "hit": "unit-07-01-practice"
+        },
+        {
+          "selector": "up",
+          "focused": true,
+          "rect": {
+            "x": 279.96875,
+            "y": 666,
+            "width": 56.03125,
+            "height": 44,
+            "bottom": 710,
+            "right": 336
+          },
+          "viewport": {
+            "width": 360,
+            "height": 900
+          },
+          "topbarOverlap": 0,
+          "nextBarOverlap": 0,
+          "centerReceivesPointer": true,
+          "hit": "up"
+        }
+      ]
+    },
+    {
+      "name": "file: 768px expanded code and selected-role overflow",
+      "pass": true,
+      "details": {
+        "width": 768,
+        "scrollWidth": 768,
+        "code": [
+          {
+            "clientWidth": 626,
+            "scrollWidth": 626,
+            "documentRight": 699
+          },
+          {
+            "clientWidth": 626,
+            "scrollWidth": 626,
+            "documentRight": 699
+          },
+          {
+            "clientWidth": 626,
+            "scrollWidth": 626,
+            "documentRight": 699
+          },
+          {
+            "clientWidth": 626,
+            "scrollWidth": 626,
+            "documentRight": 699
+          },
+          {
+            "clientWidth": 660,
+            "scrollWidth": 660,
+            "documentRight": 716
+          },
+          {
+            "clientWidth": 660,
+            "scrollWidth": 660,
+            "documentRight": 716
+          },
+          {
+            "clientWidth": 618,
+            "scrollWidth": 1020,
+            "documentRight": 695
+          },
+          {
+            "clientWidth": 618,
+            "scrollWidth": 950,
+            "documentRight": 695
+          }
+        ],
+        "nextStepVisible": true
+      }
+    },
+    {
+      "name": "file: 768px rendered buttons, toggles, and checkbox-label targets are 44px",
+      "pass": true,
+      "details": {
+        "measured": 212,
+        "missingLabels": [],
+        "undersized": []
+      }
+    },
+    {
+      "name": "file: 768px sticky next-step bar does not obscure focused controls",
+      "pass": true,
+      "details": [
+        {
+          "selector": "theme-btn",
+          "focused": true,
+          "rect": {
+            "x": 662.59375,
+            "y": 12.875,
+            "width": 91.40625,
+            "height": 44,
+            "bottom": 56.875,
+            "right": 754
+          },
+          "viewport": {
+            "width": 768,
+            "height": 900
+          },
+          "topbarOverlap": 0,
+          "nextBarOverlap": 0,
+          "centerReceivesPointer": true,
+          "hit": "theme-label"
+        },
+        {
+          "selector": "topic-done-btn no-print",
+          "focused": true,
+          "rect": {
+            "x": 626.53125,
+            "y": 387.78125,
+            "width": 106.46875,
+            "height": 44,
+            "bottom": 431.78125,
+            "right": 733
+          },
+          "viewport": {
+            "width": 768,
+            "height": 900
+          },
+          "topbarOverlap": 0,
+          "nextBarOverlap": 0,
+          "centerReceivesPointer": true,
+          "hit": "topic-done-btn no-print"
+        },
+        {
+          "selector": "unit-07-01-practice",
+          "focused": true,
+          "rect": {
+            "x": 77,
+            "y": 400.84375,
+            "width": 20,
+            "height": 20,
+            "bottom": 420.84375,
+            "right": 97
+          },
+          "viewport": {
+            "width": 768,
+            "height": 900
+          },
+          "topbarOverlap": 0,
+          "nextBarOverlap": 0,
+          "centerReceivesPointer": true,
+          "hit": "unit-07-01-practice"
+        },
+        {
+          "selector": "up",
+          "focused": true,
+          "rect": {
+            "x": 687.96875,
+            "y": 666,
+            "width": 56.03125,
+            "height": 44,
+            "bottom": 710,
+            "right": 744
+          },
+          "viewport": {
+            "width": 768,
+            "height": 900
+          },
+          "topbarOverlap": 0,
+          "nextBarOverlap": 0,
+          "centerReceivesPointer": true,
+          "hit": "up"
+        }
+      ]
+    },
+    {
+      "name": "file: 1280px expanded code and selected-role overflow",
+      "pass": true,
+      "details": {
+        "width": 1280,
+        "scrollWidth": 1280,
+        "code": [
+          {
+            "clientWidth": 817,
+            "scrollWidth": 817,
+            "documentRight": 1186.609375
+          },
+          {
+            "clientWidth": 817,
+            "scrollWidth": 817,
+            "documentRight": 1186.609375
+          },
+          {
+            "clientWidth": 817,
+            "scrollWidth": 817,
+            "documentRight": 1186.609375
+          },
+          {
+            "clientWidth": 817,
+            "scrollWidth": 817,
+            "documentRight": 1186.609375
+          },
+          {
+            "clientWidth": 851,
+            "scrollWidth": 851,
+            "documentRight": 1203.609375
+          },
+          {
+            "clientWidth": 851,
+            "scrollWidth": 851,
+            "documentRight": 1203.609375
+          },
+          {
+            "clientWidth": 809,
+            "scrollWidth": 1020,
+            "documentRight": 1182.609375
+          },
+          {
+            "clientWidth": 809,
+            "scrollWidth": 950,
+            "documentRight": 1182.609375
+          }
+        ],
+        "nextStepVisible": true
+      }
+    },
+    {
+      "name": "file: 1280px rendered buttons, toggles, and checkbox-label targets are 44px",
+      "pass": true,
+      "details": {
+        "measured": 213,
+        "missingLabels": [],
+        "undersized": []
+      }
+    },
+    {
+      "name": "file: 1280px sticky next-step bar does not obscure focused controls",
+      "pass": true,
+      "details": [
+        {
+          "selector": "theme-btn",
+          "focused": true,
+          "rect": {
+            "x": 1150.203125,
+            "y": 15.875,
+            "width": 91.40625,
+            "height": 44,
+            "bottom": 59.875,
+            "right": 1241.609375
+          },
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "topbarOverlap": 0,
+          "nextBarOverlap": 0,
+          "centerReceivesPointer": true,
+          "hit": "theme-label"
+        },
+        {
+          "selector": "topic-done-btn no-print",
+          "focused": true,
+          "rect": {
+            "x": 1114.140625,
+            "y": 509.671875,
+            "width": 106.46875,
+            "height": 44,
+            "bottom": 553.671875,
+            "right": 1220.609375
+          },
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "topbarOverlap": 0,
+          "nextBarOverlap": 0,
+          "centerReceivesPointer": true,
+          "hit": "topic-done-btn no-print"
+        },
+        {
+          "selector": "unit-07-01-practice",
+          "focused": true,
+          "rect": {
+            "x": 373.390625,
+            "y": 521.734375,
+            "width": 20,
+            "height": 20,
+            "bottom": 541.734375,
+            "right": 393.390625
+          },
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "topbarOverlap": 0,
+          "nextBarOverlap": 0,
+          "centerReceivesPointer": true,
+          "hit": "unit-07-01-practice"
+        },
+        {
+          "selector": "up",
+          "focused": true,
+          "rect": {
+            "x": 1199.96875,
+            "y": 836,
+            "width": 56.03125,
+            "height": 44,
+            "bottom": 880,
+            "right": 1256
+          },
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "topbarOverlap": 0,
+          "nextBarOverlap": 0,
+          "centerReceivesPointer": true,
+          "hit": "up"
+        }
+      ]
+    },
+    {
+      "name": "file: 1600px expanded code and selected-role overflow",
+      "pass": true,
+      "details": {
+        "width": 1600,
+        "scrollWidth": 1600,
+        "code": [
+          {
+            "clientWidth": 1124,
+            "scrollWidth": 1124,
+            "documentRight": 1500
+          },
+          {
+            "clientWidth": 1124,
+            "scrollWidth": 1124,
+            "documentRight": 1500
+          },
+          {
+            "clientWidth": 1124,
+            "scrollWidth": 1124,
+            "documentRight": 1500
+          },
+          {
+            "clientWidth": 1124,
+            "scrollWidth": 1124,
+            "documentRight": 1500
+          },
+          {
+            "clientWidth": 1158,
+            "scrollWidth": 1158,
+            "documentRight": 1517
+          },
+          {
+            "clientWidth": 1158,
+            "scrollWidth": 1158,
+            "documentRight": 1517
+          },
+          {
+            "clientWidth": 1116,
+            "scrollWidth": 1116,
+            "documentRight": 1496
+          },
+          {
+            "clientWidth": 1116,
+            "scrollWidth": 1116,
+            "documentRight": 1496
+          }
+        ],
+        "nextStepVisible": true
+      }
+    },
+    {
+      "name": "file: 1600px rendered buttons, toggles, and checkbox-label targets are 44px",
+      "pass": true,
+      "details": {
+        "measured": 213,
+        "missingLabels": [],
+        "undersized": []
+      }
+    },
+    {
+      "name": "file: 1600px sticky next-step bar does not obscure focused controls",
+      "pass": true,
+      "details": [
+        {
+          "selector": "theme-btn",
+          "focused": true,
+          "rect": {
+            "x": 1463.59375,
+            "y": 15.875,
+            "width": 91.40625,
+            "height": 44,
+            "bottom": 59.875,
+            "right": 1555
+          },
+          "viewport": {
+            "width": 1600,
+            "height": 900
+          },
+          "topbarOverlap": 0,
+          "nextBarOverlap": 0,
+          "centerReceivesPointer": true,
+          "hit": "theme-label"
+        },
+        {
+          "selector": "topic-done-btn no-print",
+          "focused": true,
+          "rect": {
+            "x": 1427.53125,
+            "y": 508.21875,
+            "width": 106.46875,
+            "height": 44,
+            "bottom": 552.21875,
+            "right": 1534
+          },
+          "viewport": {
+            "width": 1600,
+            "height": 900
+          },
+          "topbarOverlap": 0,
+          "nextBarOverlap": 0,
+          "centerReceivesPointer": true,
+          "hit": "topic-done-btn no-print"
+        },
+        {
+          "selector": "unit-07-01-practice",
+          "focused": true,
+          "rect": {
+            "x": 380,
+            "y": 520.921875,
+            "width": 20,
+            "height": 20,
+            "bottom": 540.921875,
+            "right": 400
+          },
+          "viewport": {
+            "width": 1600,
+            "height": 900
+          },
+          "topbarOverlap": 0,
+          "nextBarOverlap": 0,
+          "centerReceivesPointer": true,
+          "hit": "unit-07-01-practice"
+        },
+        {
+          "selector": "up",
+          "focused": true,
+          "rect": {
+            "x": 1519.96875,
+            "y": 836,
+            "width": 56.03125,
+            "height": 44,
+            "bottom": 880,
+            "right": 1576
+          },
+          "viewport": {
+            "width": 1600,
+            "height": 900
+          },
+          "topbarOverlap": 0,
+          "nextBarOverlap": 0,
+          "centerReceivesPointer": true,
+          "hit": "up"
+        }
+      ]
+    },
+    {
+      "name": "file: My path default and All topics preserve original topic order",
+      "pass": true,
+      "details": {
+        "text": "16 of 51 topics shown for your selected learning path. Topic order is unchanged.",
+        "count": 16,
+        "live": "polite",
+        "role": "status",
+        "visible": [
+          1,
+          2,
+          3,
+          5,
+          16,
+          17,
+          18,
+          19,
+          26,
+          27,
+          29,
+          30,
+          33,
+          34,
+          49,
+          51
+        ]
+      }
+    },
+    {
+      "name": "file: level filter narrows the library and announces the actual result count",
+      "pass": true,
+      "details": {
+        "text": "4 of 51 topics shown for your selected learning path. Topic order is unchanged.",
+        "count": 4,
+        "live": "polite",
+        "role": "status",
+        "visible": [
+          1,
+          2,
+          3,
+          5
+        ]
+      }
+    },
+    {
+      "name": "file: role-priority filter reveals a requested deferred priority",
+      "pass": true,
+      "details": {
+        "priority": "Advanced",
+        "text": "2 of 51 topics shown for your selected learning path. Topic order is unchanged.",
+        "count": 2,
+        "live": "polite",
+        "role": "status",
+        "visible": [
+          31,
+          50
+        ]
+      }
+    },
+    {
+      "name": "file: difficulty filter matches the displayed difficulty labels",
+      "pass": true,
+      "details": {
+        "text": "10 of 51 topics shown for your selected learning path. Topic order is unchanged.",
+        "count": 10,
+        "live": "polite",
+        "role": "status",
+        "visible": [
+          16,
+          17,
+          18,
+          19,
+          26,
+          27,
+          30,
+          33,
+          34,
+          49
+        ]
+      }
+    },
+    {
+      "name": "file: completion filter distinguishes topic scope from unit checks",
+      "pass": true,
+      "details": {
+        "text": "1 of 51 topics shown for your selected learning path. Topic order is unchanged.",
+        "count": 1,
+        "live": "polite",
+        "role": "status",
+        "visible": [
+          3
+        ]
+      }
+    },
+    {
+      "name": "file: primary and matrix role controls synchronize visibly",
+      "pass": true,
+      "details": {
+        "primary": "ai-and-machine-learning-engineer",
+        "matrix": "ai-and-machine-learning-engineer",
+        "label": "Showing priorities for: AI and Machine Learning Engineer (change)",
+        "topic07": "🟢 Essential"
+      }
+    },
+    {
+      "name": "file: onboarding choices are keyboard accessible and persist",
+      "pass": true,
+      "details": {
+        "threeChoices": true,
+        "choice": "beginner",
+        "dismissedFocus": "H1",
+        "persistedAfterReload": true
+      }
+    },
+    {
+      "name": "file: sidebar tracks the section actually in view",
+      "pass": true,
+      "details": [
+        {
+          "section": "entry-check",
+          "current": [
+            "#entry-check"
+          ]
+        },
+        {
+          "section": "glossary",
+          "current": [
+            "#glossary"
+          ]
+        },
+        {
+          "section": "assessment-guide",
+          "current": [
+            "#assessment-guide"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "file: 360px relevance table scrolls inside its labeled wrapper",
+      "pass": true,
+      "details": {
+        "clientWidth": 264,
+        "scrollWidth": 766,
+        "scrollLeft": 40,
+        "tabIndex": 0,
+        "pageWidth": 360,
+        "viewport": 360,
+        "hint": "block"
+      }
+    },
+    {
+      "name": "file: keyboard Copy original subtopics includes topic number and every exact subtopic",
+      "pass": true,
+      "details": {
+        "heading": "Topic 03 · Python Programming",
+        "subtopics": 34,
+        "clipboard": "mocked writeText or legacy-copy boundary; no system clipboard read"
+      }
+    },
+    {
+      "name": "file: every workshop Blob download exactly matches its inline text and filename",
+      "pass": true,
+      "details": {
+        "downloads": 12,
+        "files": [
+          {
+            "filename": "customers.csv",
+            "bytes": 69
+          },
+          {
+            "filename": "inspect_data.py",
+            "bytes": 731
+          },
+          {
+            "filename": "test_data.py",
+            "bytes": 715
+          },
+          {
+            "filename": "clean_data.py",
+            "bytes": 1082
+          },
+          {
+            "filename": "test_clean_data.py",
+            "bytes": 857
+          },
+          {
+            "filename": "assistant.py",
+            "bytes": 2683
+          },
+          {
+            "filename": "client.py",
+            "bytes": 584
+          },
+          {
+            "filename": "test_assistant.py",
+            "bytes": 3068
+          },
+          {
+            "filename": "injection_lab.py",
+            "bytes": 858
+          },
+          {
+            "filename": "test_injection_lab.py",
+            "bytes": 825
+          },
+          {
+            "filename": "model_adapter.py",
+            "bytes": 3037
+          },
+          {
+            "filename": "test_model_adapter.py",
+            "bytes": 1817
+          }
+        ]
+      }
+    },
+    {
+      "name": "file: actual PDF pages 1–2 hydrate content and restore disclosure states",
+      "pass": true,
+      "details": {
+        "pdfPath": "C:\\Gehan\\Projects\\DeveloperResources\\apps\\ai-learning-atlas\\tools\\results\\final-extra-artifacts\\file-print-pages-1-2.pdf",
+        "bytes": 187697,
+        "pageObjects": 2,
+        "events": [
+          {
+            "event": "beforeprint",
+            "remainingTopicTemplates": 0,
+            "remainingPathTemplates": 0,
+            "closedMainDetails": 0
+          },
+          {
+            "event": "afterprint"
+          }
+        ],
+        "changedExistingDetails": [],
+        "answerKeysLeftOpen": 0
+      }
+    },
+    {
+      "name": "file: workshop reading view resumes after reload",
+      "pass": true,
+      "details": {
+        "resumed": "lesson-function"
+      }
+    },
+    {
+      "name": "file: unit progress appears in the persistent next step",
+      "pass": true,
+      "details": {
+        "summary": "Backend Software Engineer · Topic 01 · Introduction to Artificial Intelligence · 6% of topic scopes · next topic unit checks 1/4"
+      }
+    },
+    {
+      "name": "file: dismissing next step preserves visible keyboard focus",
+      "pass": true,
+      "details": {
+        "tag": "P",
+        "id": "",
+        "top": 322.015625,
+        "bottom": 612.3125,
+        "height": 900
+      }
+    },
+    {
+      "name": "file: initial #unit-03-01 at 360px lands in the unobscured viewport",
+      "pass": true,
+      "details": {
+        "hash": "#unit-03-01",
+        "y": 95.1875,
+        "bottom": 155.96875,
+        "height": 900,
+        "visible": true,
+        "templateRemainingForTopic": false
+      }
+    },
+    {
+      "name": "file: initial #subtopic-51-020 at 360px lands in the unobscured viewport",
+      "pass": true,
+      "details": {
+        "hash": "#subtopic-51-020",
+        "y": 94.09375,
+        "bottom": 150.125,
+        "height": 900,
+        "visible": true,
+        "templateRemainingForTopic": false
+      }
+    },
+    {
+      "name": "file: initial #unit-03-01 at 1280px lands in the unobscured viewport",
+      "pass": true,
+      "details": {
+        "hash": "#unit-03-01",
+        "y": 94.953125,
+        "bottom": 138.953125,
+        "height": 900,
+        "visible": true,
+        "templateRemainingForTopic": false
+      }
+    },
+    {
+      "name": "file: initial #subtopic-51-020 at 1280px lands in the unobscured viewport",
+      "pass": true,
+      "details": {
+        "hash": "#subtopic-51-020",
+        "y": 94,
+        "bottom": 126.015625,
+        "height": 900,
+        "visible": true,
+        "templateRemainingForTopic": false
+      }
+    },
+    {
+      "name": "file: OS dark default, live OS changes, saved override, and theme-color track the theme",
+      "pass": true,
+      "details": {
+        "dark": {
+          "theme": "dark",
+          "meta": "#0d1527",
+          "saved": null,
+          "validMeta": true
+        },
+        "light": {
+          "theme": "light",
+          "meta": "#f4f6fc",
+          "saved": null,
+          "validMeta": true
+        },
+        "manual": {
+          "theme": "light",
+          "meta": "#f4f6fc",
+          "saved": "light",
+          "validMeta": true
+        },
+        "reloaded": {
+          "theme": "light",
+          "meta": "#f4f6fc",
+          "saved": "light",
+          "validMeta": true
+        }
+      }
+    },
+    {
+      "name": "http: 360px expanded code and selected-role overflow",
+      "pass": true,
+      "details": {
+        "width": 360,
+        "scrollWidth": 360,
+        "code": [
+          {
+            "clientWidth": 240,
+            "scrollWidth": 240,
+            "documentRight": 302
+          },
+          {
+            "clientWidth": 240,
+            "scrollWidth": 240,
+            "documentRight": 302
+          },
+          {
+            "clientWidth": 240,
+            "scrollWidth": 240,
+            "documentRight": 302
+          },
+          {
+            "clientWidth": 240,
+            "scrollWidth": 240,
+            "documentRight": 302
+          },
+          {
+            "clientWidth": 274,
+            "scrollWidth": 274,
+            "documentRight": 319
+          },
+          {
+            "clientWidth": 274,
+            "scrollWidth": 415,
+            "documentRight": 319
+          },
+          {
+            "clientWidth": 248,
+            "scrollWidth": 1020,
+            "documentRight": 306
+          },
+          {
+            "clientWidth": 248,
+            "scrollWidth": 950,
+            "documentRight": 306
+          }
+        ],
+        "nextStepVisible": true
+      }
+    },
+    {
+      "name": "http: 360px rendered buttons, toggles, and checkbox-label targets are 44px",
+      "pass": true,
+      "details": {
+        "measured": 212,
+        "missingLabels": [],
+        "undersized": []
+      }
+    },
+    {
+      "name": "http: 360px sticky next-step bar does not obscure focused controls",
+      "pass": true,
+      "details": [
+        {
+          "selector": "theme-btn",
+          "focused": true,
+          "rect": {
+            "x": 302,
+            "y": 11.828125,
+            "width": 44,
+            "height": 44,
+            "bottom": 55.828125,
+            "right": 346
+          },
+          "viewport": {
+            "width": 360,
+            "height": 900
+          },
+          "topbarOverlap": 0,
+          "nextBarOverlap": 0,
+          "centerReceivesPointer": true,
+          "hit": "theme-btn"
+        },
+        {
+          "selector": "topic-done-btn no-print",
+          "focused": true,
+          "rect": {
+            "x": 228.53125,
+            "y": 387.265625,
+            "width": 106.46875,
+            "height": 44,
+            "bottom": 431.265625,
+            "right": 335
+          },
+          "viewport": {
+            "width": 360,
+            "height": 900
+          },
+          "topbarOverlap": 0,
+          "nextBarOverlap": 0,
+          "centerReceivesPointer": true,
+          "hit": "topic-done-btn no-print"
+        },
+        {
+          "selector": "unit-07-01-practice",
+          "focused": true,
+          "rect": {
+            "x": 66,
+            "y": 399.484375,
+            "width": 20,
+            "height": 20,
+            "bottom": 419.484375,
+            "right": 86
+          },
+          "viewport": {
+            "width": 360,
+            "height": 900
+          },
+          "topbarOverlap": 0,
+          "nextBarOverlap": 0,
+          "centerReceivesPointer": true,
+          "hit": "unit-07-01-practice"
+        },
+        {
+          "selector": "up",
+          "focused": true,
+          "rect": {
+            "x": 279.96875,
+            "y": 666,
+            "width": 56.03125,
+            "height": 44,
+            "bottom": 710,
+            "right": 336
+          },
+          "viewport": {
+            "width": 360,
+            "height": 900
+          },
+          "topbarOverlap": 0,
+          "nextBarOverlap": 0,
+          "centerReceivesPointer": true,
+          "hit": "up"
+        }
+      ]
+    },
+    {
+      "name": "http: 768px expanded code and selected-role overflow",
+      "pass": true,
+      "details": {
+        "width": 768,
+        "scrollWidth": 768,
+        "code": [
+          {
+            "clientWidth": 626,
+            "scrollWidth": 626,
+            "documentRight": 699
+          },
+          {
+            "clientWidth": 626,
+            "scrollWidth": 626,
+            "documentRight": 699
+          },
+          {
+            "clientWidth": 626,
+            "scrollWidth": 626,
+            "documentRight": 699
+          },
+          {
+            "clientWidth": 626,
+            "scrollWidth": 626,
+            "documentRight": 699
+          },
+          {
+            "clientWidth": 660,
+            "scrollWidth": 660,
+            "documentRight": 716
+          },
+          {
+            "clientWidth": 660,
+            "scrollWidth": 660,
+            "documentRight": 716
+          },
+          {
+            "clientWidth": 618,
+            "scrollWidth": 1020,
+            "documentRight": 695
+          },
+          {
+            "clientWidth": 618,
+            "scrollWidth": 950,
+            "documentRight": 695
+          }
+        ],
+        "nextStepVisible": true
+      }
+    },
+    {
+      "name": "http: 768px rendered buttons, toggles, and checkbox-label targets are 44px",
+      "pass": true,
+      "details": {
+        "measured": 212,
+        "missingLabels": [],
+        "undersized": []
+      }
+    },
+    {
+      "name": "http: 768px sticky next-step bar does not obscure focused controls",
+      "pass": true,
+      "details": [
+        {
+          "selector": "theme-btn",
+          "focused": true,
+          "rect": {
+            "x": 662.59375,
+            "y": 12.875,
+            "width": 91.40625,
+            "height": 44,
+            "bottom": 56.875,
+            "right": 754
+          },
+          "viewport": {
+            "width": 768,
+            "height": 900
+          },
+          "topbarOverlap": 0,
+          "nextBarOverlap": 0,
+          "centerReceivesPointer": true,
+          "hit": "theme-label"
+        },
+        {
+          "selector": "topic-done-btn no-print",
+          "focused": true,
+          "rect": {
+            "x": 626.53125,
+            "y": 387.78125,
+            "width": 106.46875,
+            "height": 44,
+            "bottom": 431.78125,
+            "right": 733
+          },
+          "viewport": {
+            "width": 768,
+            "height": 900
+          },
+          "topbarOverlap": 0,
+          "nextBarOverlap": 0,
+          "centerReceivesPointer": true,
+          "hit": "topic-done-btn no-print"
+        },
+        {
+          "selector": "unit-07-01-practice",
+          "focused": true,
+          "rect": {
+            "x": 77,
+            "y": 400.84375,
+            "width": 20,
+            "height": 20,
+            "bottom": 420.84375,
+            "right": 97
+          },
+          "viewport": {
+            "width": 768,
+            "height": 900
+          },
+          "topbarOverlap": 0,
+          "nextBarOverlap": 0,
+          "centerReceivesPointer": true,
+          "hit": "unit-07-01-practice"
+        },
+        {
+          "selector": "up",
+          "focused": true,
+          "rect": {
+            "x": 687.96875,
+            "y": 666,
+            "width": 56.03125,
+            "height": 44,
+            "bottom": 710,
+            "right": 744
+          },
+          "viewport": {
+            "width": 768,
+            "height": 900
+          },
+          "topbarOverlap": 0,
+          "nextBarOverlap": 0,
+          "centerReceivesPointer": true,
+          "hit": "up"
+        }
+      ]
+    },
+    {
+      "name": "http: 1280px expanded code and selected-role overflow",
+      "pass": true,
+      "details": {
+        "width": 1280,
+        "scrollWidth": 1280,
+        "code": [
+          {
+            "clientWidth": 817,
+            "scrollWidth": 817,
+            "documentRight": 1186.609375
+          },
+          {
+            "clientWidth": 817,
+            "scrollWidth": 817,
+            "documentRight": 1186.609375
+          },
+          {
+            "clientWidth": 817,
+            "scrollWidth": 817,
+            "documentRight": 1186.609375
+          },
+          {
+            "clientWidth": 817,
+            "scrollWidth": 817,
+            "documentRight": 1186.609375
+          },
+          {
+            "clientWidth": 851,
+            "scrollWidth": 851,
+            "documentRight": 1203.609375
+          },
+          {
+            "clientWidth": 851,
+            "scrollWidth": 851,
+            "documentRight": 1203.609375
+          },
+          {
+            "clientWidth": 809,
+            "scrollWidth": 1020,
+            "documentRight": 1182.609375
+          },
+          {
+            "clientWidth": 809,
+            "scrollWidth": 950,
+            "documentRight": 1182.609375
+          }
+        ],
+        "nextStepVisible": true
+      }
+    },
+    {
+      "name": "http: 1280px rendered buttons, toggles, and checkbox-label targets are 44px",
+      "pass": true,
+      "details": {
+        "measured": 213,
+        "missingLabels": [],
+        "undersized": []
+      }
+    },
+    {
+      "name": "http: 1280px sticky next-step bar does not obscure focused controls",
+      "pass": true,
+      "details": [
+        {
+          "selector": "theme-btn",
+          "focused": true,
+          "rect": {
+            "x": 1150.203125,
+            "y": 15.875,
+            "width": 91.40625,
+            "height": 44,
+            "bottom": 59.875,
+            "right": 1241.609375
+          },
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "topbarOverlap": 0,
+          "nextBarOverlap": 0,
+          "centerReceivesPointer": true,
+          "hit": "theme-label"
+        },
+        {
+          "selector": "topic-done-btn no-print",
+          "focused": true,
+          "rect": {
+            "x": 1114.140625,
+            "y": 509.671875,
+            "width": 106.46875,
+            "height": 44,
+            "bottom": 553.671875,
+            "right": 1220.609375
+          },
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "topbarOverlap": 0,
+          "nextBarOverlap": 0,
+          "centerReceivesPointer": true,
+          "hit": "topic-done-btn no-print"
+        },
+        {
+          "selector": "unit-07-01-practice",
+          "focused": true,
+          "rect": {
+            "x": 373.390625,
+            "y": 521.734375,
+            "width": 20,
+            "height": 20,
+            "bottom": 541.734375,
+            "right": 393.390625
+          },
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "topbarOverlap": 0,
+          "nextBarOverlap": 0,
+          "centerReceivesPointer": true,
+          "hit": "unit-07-01-practice"
+        },
+        {
+          "selector": "up",
+          "focused": true,
+          "rect": {
+            "x": 1199.96875,
+            "y": 836,
+            "width": 56.03125,
+            "height": 44,
+            "bottom": 880,
+            "right": 1256
+          },
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "topbarOverlap": 0,
+          "nextBarOverlap": 0,
+          "centerReceivesPointer": true,
+          "hit": "up"
+        }
+      ]
+    },
+    {
+      "name": "http: 1600px expanded code and selected-role overflow",
+      "pass": true,
+      "details": {
+        "width": 1600,
+        "scrollWidth": 1600,
+        "code": [
+          {
+            "clientWidth": 1124,
+            "scrollWidth": 1124,
+            "documentRight": 1500
+          },
+          {
+            "clientWidth": 1124,
+            "scrollWidth": 1124,
+            "documentRight": 1500
+          },
+          {
+            "clientWidth": 1124,
+            "scrollWidth": 1124,
+            "documentRight": 1500
+          },
+          {
+            "clientWidth": 1124,
+            "scrollWidth": 1124,
+            "documentRight": 1500
+          },
+          {
+            "clientWidth": 1158,
+            "scrollWidth": 1158,
+            "documentRight": 1517
+          },
+          {
+            "clientWidth": 1158,
+            "scrollWidth": 1158,
+            "documentRight": 1517
+          },
+          {
+            "clientWidth": 1116,
+            "scrollWidth": 1116,
+            "documentRight": 1496
+          },
+          {
+            "clientWidth": 1116,
+            "scrollWidth": 1116,
+            "documentRight": 1496
+          }
+        ],
+        "nextStepVisible": true
+      }
+    },
+    {
+      "name": "http: 1600px rendered buttons, toggles, and checkbox-label targets are 44px",
+      "pass": true,
+      "details": {
+        "measured": 213,
+        "missingLabels": [],
+        "undersized": []
+      }
+    },
+    {
+      "name": "http: 1600px sticky next-step bar does not obscure focused controls",
+      "pass": true,
+      "details": [
+        {
+          "selector": "theme-btn",
+          "focused": true,
+          "rect": {
+            "x": 1463.59375,
+            "y": 15.875,
+            "width": 91.40625,
+            "height": 44,
+            "bottom": 59.875,
+            "right": 1555
+          },
+          "viewport": {
+            "width": 1600,
+            "height": 900
+          },
+          "topbarOverlap": 0,
+          "nextBarOverlap": 0,
+          "centerReceivesPointer": true,
+          "hit": "theme-label"
+        },
+        {
+          "selector": "topic-done-btn no-print",
+          "focused": true,
+          "rect": {
+            "x": 1427.53125,
+            "y": 508.21875,
+            "width": 106.46875,
+            "height": 44,
+            "bottom": 552.21875,
+            "right": 1534
+          },
+          "viewport": {
+            "width": 1600,
+            "height": 900
+          },
+          "topbarOverlap": 0,
+          "nextBarOverlap": 0,
+          "centerReceivesPointer": true,
+          "hit": "topic-done-btn no-print"
+        },
+        {
+          "selector": "unit-07-01-practice",
+          "focused": true,
+          "rect": {
+            "x": 380,
+            "y": 520.921875,
+            "width": 20,
+            "height": 20,
+            "bottom": 540.921875,
+            "right": 400
+          },
+          "viewport": {
+            "width": 1600,
+            "height": 900
+          },
+          "topbarOverlap": 0,
+          "nextBarOverlap": 0,
+          "centerReceivesPointer": true,
+          "hit": "unit-07-01-practice"
+        },
+        {
+          "selector": "up",
+          "focused": true,
+          "rect": {
+            "x": 1519.96875,
+            "y": 836,
+            "width": 56.03125,
+            "height": 44,
+            "bottom": 880,
+            "right": 1576
+          },
+          "viewport": {
+            "width": 1600,
+            "height": 900
+          },
+          "topbarOverlap": 0,
+          "nextBarOverlap": 0,
+          "centerReceivesPointer": true,
+          "hit": "up"
+        }
+      ]
+    },
+    {
+      "name": "http: My path default and All topics preserve original topic order",
+      "pass": true,
+      "details": {
+        "text": "16 of 51 topics shown for your selected learning path. Topic order is unchanged.",
+        "count": 16,
+        "live": "polite",
+        "role": "status",
+        "visible": [
+          1,
+          2,
+          3,
+          5,
+          16,
+          17,
+          18,
+          19,
+          26,
+          27,
+          29,
+          30,
+          33,
+          34,
+          49,
+          51
+        ]
+      }
+    },
+    {
+      "name": "http: level filter narrows the library and announces the actual result count",
+      "pass": true,
+      "details": {
+        "text": "4 of 51 topics shown for your selected learning path. Topic order is unchanged.",
+        "count": 4,
+        "live": "polite",
+        "role": "status",
+        "visible": [
+          1,
+          2,
+          3,
+          5
+        ]
+      }
+    },
+    {
+      "name": "http: role-priority filter reveals a requested deferred priority",
+      "pass": true,
+      "details": {
+        "priority": "Advanced",
+        "text": "2 of 51 topics shown for your selected learning path. Topic order is unchanged.",
+        "count": 2,
+        "live": "polite",
+        "role": "status",
+        "visible": [
+          31,
+          50
+        ]
+      }
+    },
+    {
+      "name": "http: difficulty filter matches the displayed difficulty labels",
+      "pass": true,
+      "details": {
+        "text": "10 of 51 topics shown for your selected learning path. Topic order is unchanged.",
+        "count": 10,
+        "live": "polite",
+        "role": "status",
+        "visible": [
+          16,
+          17,
+          18,
+          19,
+          26,
+          27,
+          30,
+          33,
+          34,
+          49
+        ]
+      }
+    },
+    {
+      "name": "http: completion filter distinguishes topic scope from unit checks",
+      "pass": true,
+      "details": {
+        "text": "1 of 51 topics shown for your selected learning path. Topic order is unchanged.",
+        "count": 1,
+        "live": "polite",
+        "role": "status",
+        "visible": [
+          3
+        ]
+      }
+    },
+    {
+      "name": "http: primary and matrix role controls synchronize visibly",
+      "pass": true,
+      "details": {
+        "primary": "ai-and-machine-learning-engineer",
+        "matrix": "ai-and-machine-learning-engineer",
+        "label": "Showing priorities for: AI and Machine Learning Engineer (change)",
+        "topic07": "🟢 Essential"
+      }
+    },
+    {
+      "name": "http: onboarding choices are keyboard accessible and persist",
+      "pass": true,
+      "details": {
+        "threeChoices": true,
+        "choice": "beginner",
+        "dismissedFocus": "H1",
+        "persistedAfterReload": true
+      }
+    },
+    {
+      "name": "http: sidebar tracks the section actually in view",
+      "pass": true,
+      "details": [
+        {
+          "section": "entry-check",
+          "current": [
+            "#entry-check"
+          ]
+        },
+        {
+          "section": "glossary",
+          "current": [
+            "#glossary"
+          ]
+        },
+        {
+          "section": "assessment-guide",
+          "current": [
+            "#assessment-guide"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "http: 360px relevance table scrolls inside its labeled wrapper",
+      "pass": true,
+      "details": {
+        "clientWidth": 264,
+        "scrollWidth": 766,
+        "scrollLeft": 40,
+        "tabIndex": 0,
+        "pageWidth": 360,
+        "viewport": 360,
+        "hint": "block"
+      }
+    },
+    {
+      "name": "http: keyboard Copy original subtopics includes topic number and every exact subtopic",
+      "pass": true,
+      "details": {
+        "heading": "Topic 03 · Python Programming",
+        "subtopics": 34,
+        "clipboard": "mocked writeText or legacy-copy boundary; no system clipboard read"
+      }
+    },
+    {
+      "name": "http: every workshop Blob download exactly matches its inline text and filename",
+      "pass": true,
+      "details": {
+        "downloads": 12,
+        "files": [
+          {
+            "filename": "customers.csv",
+            "bytes": 69
+          },
+          {
+            "filename": "inspect_data.py",
+            "bytes": 731
+          },
+          {
+            "filename": "test_data.py",
+            "bytes": 715
+          },
+          {
+            "filename": "clean_data.py",
+            "bytes": 1082
+          },
+          {
+            "filename": "test_clean_data.py",
+            "bytes": 857
+          },
+          {
+            "filename": "assistant.py",
+            "bytes": 2683
+          },
+          {
+            "filename": "client.py",
+            "bytes": 584
+          },
+          {
+            "filename": "test_assistant.py",
+            "bytes": 3068
+          },
+          {
+            "filename": "injection_lab.py",
+            "bytes": 858
+          },
+          {
+            "filename": "test_injection_lab.py",
+            "bytes": 825
+          },
+          {
+            "filename": "model_adapter.py",
+            "bytes": 3037
+          },
+          {
+            "filename": "test_model_adapter.py",
+            "bytes": 1817
+          }
+        ]
+      }
+    },
+    {
+      "name": "http: actual PDF pages 1–2 hydrate content and restore disclosure states",
+      "pass": true,
+      "details": {
+        "pdfPath": "C:\\Gehan\\Projects\\DeveloperResources\\apps\\ai-learning-atlas\\tools\\results\\final-extra-artifacts\\http-print-pages-1-2.pdf",
+        "bytes": 187697,
+        "pageObjects": 2,
+        "events": [
+          {
+            "event": "beforeprint",
+            "remainingTopicTemplates": 0,
+            "remainingPathTemplates": 0,
+            "closedMainDetails": 0
+          },
+          {
+            "event": "afterprint"
+          }
+        ],
+        "changedExistingDetails": [],
+        "answerKeysLeftOpen": 0
+      }
+    },
+    {
+      "name": "http: workshop reading view resumes after reload",
+      "pass": true,
+      "details": {
+        "resumed": "lesson-function"
+      }
+    },
+    {
+      "name": "http: unit progress appears in the persistent next step",
+      "pass": true,
+      "details": {
+        "summary": "Backend Software Engineer · Topic 01 · Introduction to Artificial Intelligence · 6% of topic scopes · next topic unit checks 1/4"
+      }
+    },
+    {
+      "name": "http: dismissing next step preserves visible keyboard focus",
+      "pass": true,
+      "details": {
+        "tag": "P",
+        "id": "",
+        "top": 321.140625,
+        "bottom": 611.4375,
+        "height": 900
+      }
+    },
+    {
+      "name": "http: initial #unit-03-01 at 360px lands in the unobscured viewport",
+      "pass": true,
+      "details": {
+        "hash": "#unit-03-01",
+        "y": 95.1875,
+        "bottom": 155.96875,
+        "height": 900,
+        "visible": true,
+        "templateRemainingForTopic": false
+      }
+    },
+    {
+      "name": "http: initial #subtopic-51-020 at 360px lands in the unobscured viewport",
+      "pass": true,
+      "details": {
+        "hash": "#subtopic-51-020",
+        "y": 94.09375,
+        "bottom": 150.125,
+        "height": 900,
+        "visible": true,
+        "templateRemainingForTopic": false
+      }
+    },
+    {
+      "name": "http: initial #unit-03-01 at 1280px lands in the unobscured viewport",
+      "pass": true,
+      "details": {
+        "hash": "#unit-03-01",
+        "y": 94.953125,
+        "bottom": 138.953125,
+        "height": 900,
+        "visible": true,
+        "templateRemainingForTopic": false
+      }
+    },
+    {
+      "name": "http: initial #subtopic-51-020 at 1280px lands in the unobscured viewport",
+      "pass": true,
+      "details": {
+        "hash": "#subtopic-51-020",
+        "y": 94,
+        "bottom": 126.015625,
+        "height": 900,
+        "visible": true,
+        "templateRemainingForTopic": false
+      }
+    },
+    {
+      "name": "http: OS dark default, live OS changes, saved override, and theme-color track the theme",
+      "pass": true,
+      "details": {
+        "dark": {
+          "theme": "dark",
+          "meta": "#0d1527",
+          "saved": null,
+          "validMeta": true
+        },
+        "light": {
+          "theme": "light",
+          "meta": "#f4f6fc",
+          "saved": null,
+          "validMeta": true
+        },
+        "manual": {
+          "theme": "light",
+          "meta": "#f4f6fc",
+          "saved": "light",
+          "validMeta": true
+        },
+        "reloaded": {
+          "theme": "light",
+          "meta": "#f4f6fc",
+          "saved": "light",
+          "validMeta": true
+        }
+      }
+    }
+  ],
+  "errors": [],
+  "unverified": [
+    "No actual screen reader or speech output was available. Keyboard, live-region attributes, and accessibility-tree observations do not constitute an actual screen-reader sanity check.",
+    "The generated two-page print PDFs are execution artifacts. This script checks PDF output and disclosure state, not human visual review of every printed page.",
+    "Tap-target and focus checks cover the rendered reader states named in each result; they do not establish behavior in every browser or assistive technology."
+  ]
+}

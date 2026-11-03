@@ -1,0 +1,17 @@
+{
+  "round": 1,
+  "scores": {
+    "Student": 96,
+    "Tutor": 94,
+    "AI Expert": 94,
+    "ML Expert": 96,
+    "Course Design": 91,
+    "UI/UX": 93,
+    "CSS & Style": 92,
+    "Validation": 96,
+    "End User": 94
+  },
+  "all_at_least_90": true,
+  "source_hash": "d0645bf9509bfbf7293d2e7722daefa78e7633e3e7005b70dbd5eb4e06a5aa3b",
+  "limits": "Scores are scoped independent reviews, not a guarantee of every technical statement or assistive-technology behavior."
+}
