@@ -29,7 +29,7 @@ permalink: /documentation/
 | Resource | Format | Level |
 |---|---|---|
 | [Data Science and Machine Learning Handbook with Python](docs/data-science/machine-learning-handbook.md) | Illustrated handbook | Beginner to advanced |
-| [Data Science and Machine Learning Handbook](examples/machine-learning/ml-handbook/README.md) | Datasets and desktop example | Beginner to advanced |
+| [Machine Learning for Complete Beginners](examples/machine-learning/ml-handbook/README.md) | Datasets and desktop example | Beginner to advanced |
 
 ## Databases
 
