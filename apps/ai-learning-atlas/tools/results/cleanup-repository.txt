@@ -1,0 +1,75 @@
+npm notice run developer-guides-and-tools@1.0.0 test
+npm notice run npm run check:generated && node apps/linux-command-reference/seo.test.cjs && node --check apps/linux-command-reference/app.js && node --test tests/*.test.cjs && node scripts/verify-migration.cjs && npm run check:links
+npm notice run developer-guides-and-tools@1.0.0 check:generated
+npm notice run node scripts/build-catalog.cjs --check && node scripts/build-ai-addons.cjs --check && node scripts/build-ml-handbook.cjs --check
+Verified catalog: 25 resources, 37 page routes.
+Verified standalone AI add-ons reader: 39 add-ons.
+Verified machine learning handbook from the preserved source bundle.
+PASS: generated table, counts, literal search and safe command markup.
+TAP version 13
+# Subtest: catalog generation is independent of filesystem enumeration order
+ok 1 - catalog generation is independent of filesystem enumeration order
+  ---
+  duration_ms: 969.2289
+  type: 'test'
+  ...
+# Subtest: all catalog resources and stable page routes resolve
+ok 2 - all catalog resources and stable page routes resolve
+  ---
+  duration_ms: 49.4227
+  type: 'test'
+  ...
+# Subtest: catalog HTML tools open their published pages from GitHub and permalink guides
+ok 3 - catalog HTML tools open their published pages from GitHub and permalink guides
+  ---
+  duration_ms: 27.0528
+  type: 'test'
+  ...
+# Subtest: AI add-ons reader contains all source sections and registration clarification
+ok 4 - AI add-ons reader contains all source sections and registration clarification
+  ---
+  duration_ms: 54.7324
+  type: 'test'
+  ...
+# Subtest: Atlas search, progress controls and role priorities remain aligned
+ok 5 - Atlas search, progress controls and role priorities remain aligned
+  ---
+  duration_ms: 13706.7163
+  type: 'test'
+  ...
+# Subtest: application JavaScript parses and embedded JSON is valid
+ok 6 - application JavaScript parses and embedded JSON is valid
+  ---
+  duration_ms: 262.4752
+  type: 'test'
+  ...
+# Subtest: Compose passwords are explicit inputs and published ports use loopback
+ok 7 - Compose passwords are explicit inputs and published ports use loopback
+  ---
+  duration_ms: 42.605
+  type: 'test'
+  ...
+# Subtest: workflows and configuration documents parse
+ok 8 - workflows and configuration documents parse
+  ---
+  duration_ms: 20.6659
+  type: 'test'
+  ...
+1..8
+# tests 8
+# suites 0
+# pass 8
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 16226.6252
+Verified provenance: all 176 source dispositions have destinations.
+npm notice run developer-guides-and-tools@1.0.0 check:links
+npm notice run node scripts/check-links.cjs
+PASS: 456 relative file links across 55 documents and applications.
+npm notice
+npm notice New patch version of npm available! 12.2.0 -> 12.2.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+npm notice To update run: npm install -g npm@12.2.1
+npm notice

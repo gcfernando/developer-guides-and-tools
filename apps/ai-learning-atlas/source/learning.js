@@ -4,11 +4,13 @@
   const select = document.getElementById('lesson-focus');
   const lessons = Array.from(document.querySelectorAll('.lesson'));
   const note = document.getElementById('study-note');
-  const noteStatus = document.getElementById('study-note-status');
+  const noteStatus = document.getElementById('progress-notice');
   const noteKey = 'ai-atlas-study-note-v1';
+  const lessonViewKey = 'ai-atlas-lesson-view-v1';
   const showLesson = id => {
     select.value = lessons.some(x => x.id === id) ? id : '';
     lessons.forEach(lesson => { lesson.hidden = !!select.value && lesson.id !== select.value; });
+    try { localStorage.setItem(lessonViewKey, select.value); } catch { /* Reading works without storage. */ }
   };
   select.addEventListener('change', () => showLesson(select.value));
   // Reveal hidden lesson destinations before native navigation, including search results.
@@ -24,14 +26,16 @@
     if (link) reveal(link.getAttribute('href'));
   }, true);
   window.addEventListener('hashchange', () => reveal(location.hash));
-  showLesson('lesson-setup');
+  let savedLesson = null;
+  try { savedLesson = localStorage.getItem(lessonViewKey); } catch { /* Use the first lesson. */ }
+  showLesson(savedLesson === '' || lessons.some(lesson => lesson.id === savedLesson) ? savedLesson : 'lesson-setup');
   reveal(location.hash);
   const update = () => {
     const practice = lessons.filter(x => x.querySelector('[id$="-practice"]').checked).length;
     const transfer = lessons.filter(x => x.querySelector('[id$="-transfer"]').checked).length;
     document.getElementById('lesson-counter').textContent = `${practice} of ${lessons.length} guided exercises; ${transfer} of ${lessons.length} independent variations self-reported. These do not automatically complete topic scopes.`;
   };
-  document.querySelectorAll('.save-check').forEach(c => c.addEventListener('change', update));
+  document.addEventListener('change', event => { if (event.target.matches?.('.lesson .save-check')) update(); });
   document.addEventListener('atlas-progress-restored', update);
   document.getElementById('reset-progress').addEventListener('click', () => setTimeout(update, 0));
   try { note.value = localStorage.getItem(noteKey) || ''; }

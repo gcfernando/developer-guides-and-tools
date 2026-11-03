@@ -1,0 +1,76 @@
+TAP version 13
+# Subtest: legacy backups restore original checks and default new lesson/unit checks to false
+ok 1 - legacy backups restore original checks and default new lesson/unit checks to false
+  ---
+  duration_ms: 374.811
+  type: 'test'
+  ...
+# Subtest: v2 backup round trip preserves lesson checks, note and an intentionally empty role
+ok 2 - v2 backup round trip preserves lesson checks, note and an intentionally empty role
+  ---
+  duration_ms: 265.9584
+  type: 'test'
+  ...
+# Subtest: invalid backup fails before changing current checks or notes
+ok 3 - invalid backup fails before changing current checks or notes
+  ---
+  duration_ms: 179.3492
+  type: 'test'
+  ...
+# Subtest: blocked storage is reported as session-only after restoration
+ok 4 - blocked storage is reported as session-only after restoration
+  ---
+  duration_ms: 240.5369
+  type: 'test'
+  ...
+# Subtest: export refuses notes which cannot pass the restore size limits
+ok 5 - export refuses notes which cannot pass the restore size limits
+  ---
+  duration_ms: 207.5285
+  type: 'test'
+  ...
+# Subtest: lesson view can reveal a destination hidden by focus mode
+ok 6 - lesson view can reveal a destination hidden by focus mode
+  ---
+  duration_ms: 188.6904
+  type: 'test'
+  ...
+# Subtest: combobox arrows expose the selected option and Escape clears active state
+ok 7 - combobox arrows expose the selected option and Escape clears active state
+  ---
+  duration_ms: 169.5968
+  type: 'test'
+  ...
+# Subtest: topic toggle retains its accessible name across pressed states
+ok 8 - topic toggle retains its accessible name across pressed states
+  ---
+  duration_ms: 283.7743
+  type: 'test'
+  ...
+# Subtest: v2 restore preserves unopened unit checks through lazy hydration
+ok 9 - v2 restore preserves unopened unit checks through lazy hydration
+  ---
+  duration_ms: 228.5704
+  type: 'test'
+  ...
+# Subtest: lazy unit deep link reveals its topic and all ancestor disclosures
+ok 10 - lazy unit deep link reveals its topic and all ancestor disclosures
+  ---
+  duration_ms: 159.8246
+  type: 'test'
+  ...
+# Subtest: Blob downloads contain the exact inline reference text
+ok 11 - Blob downloads contain the exact inline reference text
+  ---
+  duration_ms: 147.0843
+  type: 'test'
+  ...
+1..11
+# tests 11
+# suites 0
+# pass 11
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 3408.2272

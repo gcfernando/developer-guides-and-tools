@@ -1,0 +1,59 @@
+{
+  "Student": {
+    "score": 94,
+    "evidence": "Onboarding, role-default library, authored units and derived path hours meet checklist.",
+    "gaps": [
+      "04-04 adding-success wording",
+      "08 repeated MSE example"
+    ]
+  },
+  "Tutor": {
+    "score": 89,
+    "evidence": "219 units/438 answered questions,30x60min plans,compact prompt,four-level rubric.",
+    "gaps": [
+      "Session demo/guided/independent mismatch",
+      "04-04 adding-success wording"
+    ]
+  },
+  "ML Expert": {
+    "score": 90,
+    "evidence": "145 arithmetic assertions,7 runnable snippets,8 ML tests pass; checklist met.",
+    "gaps": [
+      "08 no nonzero-SD three-model worked CV report",
+      "37 no numeric per-origin backtest example"
+    ]
+  },
+  "AI Expert": {
+    "score": 94,
+    "evidence": "Primary references independently opened; model adapter and injection tests passed; bounded real-model stub clearly labeled."
+  },
+  "Course Design": {
+    "score": 91,
+    "evidence": "Independent canonical audit:14 roles,219units,1607exact coverage,30phasegate/session/hour consistency."
+  },
+  "UI/UX": {
+    "score": 93,
+    "evidence": "Navigation/filter/lazy/offline checklist met, supplied browser evidence inspected."
+  },
+  "CSS & Style": {
+    "score": 86,
+    "gaps": [
+      "Responsive query cascade",
+      "Duplicate declarations/rules",
+      "Incomplete UI contrast evidence"
+    ]
+  },
+  "Validation": {
+    "score": 93,
+    "evidence": "Initial runtime11pass; final-hash browser proof then pending."
+  },
+  "End User": {
+    "score": 89,
+    "gaps": [
+      "Narrow nonwrapping unit examples",
+      "Topic-only sticky progress",
+      "Opaque subtopic IDs",
+      "No workshop view restore"
+    ]
+  }
+}

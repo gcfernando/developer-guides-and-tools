@@ -1,45 +1,13 @@
-# AI Learning Atlas validation
+# AI Learning Atlas validation record
 
-Review date: 2 November 2026.
+Updated **3 November 2026**. [VERIFICATION.md](VERIFICATION.md) is the current detailed evidence record, with raw reports, command output, screenshots and PDFs in [tools/results](tools/results/). It records all twelve workstreams, historical failures, final review scores and the exact snapshots tested; use those hashes when relating a result to a later revision.
 
-The reader preserves its existing colors, typography, cards, sidebar, buttons, dark mode and standalone delivery. New lessons and embedded reference files use those same components.
+The original 51 topic titles, 1,607 subtopic texts/IDs/order and 514 progress checks are preserved. The reader supplies 219 bounded authored units with answer keys and misconceptions, an eight-lesson supported workshop and an optional ninth model-integration lesson. Its “Related original subtopics (reference map)” lists related directory material without claiming that one small lesson completely teaches every advanced item.
 
-## Content and curriculum checks
+The recorded final-mode consistency script passes 31 checks. Embedded references compile 13 Python files and run 31 tests successfully; all 11 Node runtime tests pass with no skips. The latest numeric checker executes 195 assertions across 74 authored units, and seven runnable ML snippets were executed. These results verify the supplied fixtures and recorded artifacts, not learner work or production readiness. Progress remains self-reported; the reader does not execute uploaded results or certify competence.
 
-- Compared the source directory with the original Git version: all 1,607 original subtopic IDs, names and ordering are preserved.
-- `build.py --check` verifies that the standalone HTML matches its authoring sources.
-- `validate.py` checks 51 topics, 14 roles, one H1, unique IDs, internal links, local exercise links, 1,700 search targets, preserved subtopic digest, prerequisite order and capstone coverage.
-- Separate AI/ML, tutor/course-design and page-design review agents reviewed the source and generated artifact in two passes. Findings were corrected, including project-variant dependencies, deeper-study guidance, beginner scope, tool requirements, worked mathematics explanations, keyboard behavior and backup limits.
+The last inspected expanded main-browser run passed 54 assertions with no JavaScript errors or serious/critical axe violations; its mobile Lighthouse scores were Performance 93 and Accessibility 100, with 7,349 initial browser elements, a 54.303% reduction from the original 16,082. The additional run passed 64 assertions. Gzip/uncompressed measurements and earlier failed performance trials are distinguished in the detailed record. Final Nu output contains zero errors and 51 explained informational hidden-attribute notices. Contrast sampling reports its actual measured pairs and incomplete observations rather than claiming universal WCAG conformance.
 
-These are AI-assisted reviews of the supplied material. They do not constitute external professional certification, observed student outcomes, a full WCAG audit or independent verification of every named tool/resource.
+All nine independent reviewer scores meet 90 after one follow-up round where needed; see the evidence and before/after table in [VERIFICATION.md](VERIFICATION.md). Those AI-assisted reviews do not establish external certification, student outcomes or universal correctness of every original/changing claim.
 
-## Executed checks
-
-- Fifteen Python reference tests passed, covering pure answers, invalid inputs, user isolation, deletion, instruction-like data, HTTP responses, unavailable service, CSV profiling and conflicting-record cleaning.
-- Six Node runtime tests passed, covering legacy backup compatibility, version 2 round trips, invalid restore rejection before mutation, storage failure notices, export/restore size consistency and hidden-lesson revelation.
-- All three source JavaScript files passed Node syntax checks.
-- Generated-content and structural validation passed.
-- Repository `npm test` passed: generated artifacts, eight library tests, source provenance and 459 relative-file links. `git diff --check` passed.
-
-The Python test suite initially encountered a sandbox restriction writing a temporary CSV. The authorized rerun passed all fifteen tests. No assertion or test was weakened to obtain that result.
-
-## Browser checks
-
-Checked the local generated reader in Microsoft Edge:
-
-- Desktop rendering retains the original visual design.
-- Role selection updates the dashboard with dependency-ordered topic scopes and self-reported progress wording.
-- Search finds glossary entries and original subtopics; keyboard entry and Escape synchronize the expanded state.
-- Lesson reading focus initially shows Lesson 1; lesson practice checks update their separate counter.
-- The evidence note updates its visible character count.
-- At a 320-pixel viewport, document width equals viewport width, the reading selector remains inside its card, and closed mobile navigation is inert.
-- Escape from open mobile navigation returns focus to the menu button.
-- Dark-mode workshop rendering remains readable within the existing palette. The action button background was corrected to the original higher-contrast blue.
-
-The browser checks sample important views and interactions. They do not establish compatibility with every browser, assistive technology, device or print engine.
-
-## Teaching coverage and limits
-
-The eight-lesson beginner workshop supplies runnable local examples, troubleshooting, independent variations, staged cleaning hints and reference solutions. Five mathematics units supply worked calculations. Other topic groups contain explicitly labeled study briefs, original subtopics, applied/internals/research guidance, tools, lab goals and assessment criteria; they are not represented as fully authored courses for every subtopic.
-
-The local assistant is deterministic. It does not call an LLM, train a model or implement a real login system. Passing its regression tests does not establish general model reliability, prompt-injection resistance or production readiness. Progress records remain self-reported and assessment applies only to the learner's declared scope.
+The completed final static/browser/additional/contrast reports all match the current HTML fingerprint recorded in the detailed verification document. Actual screen-reader use, real operating-system clipboard readback, Python 3.10 execution, a real provider call and visual inspection of every printed page remain unverified. The lead inspected final 360/1280 screenshots and the first two print pages; that bounded review does not cover every device, page or assistive technology.

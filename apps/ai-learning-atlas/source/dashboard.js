@@ -36,10 +36,11 @@
   function updateDoneButtons() {
     document.querySelectorAll('[data-complete-topic]').forEach(btn=>{
       const completed=!!checkFor(btn.dataset.completeTopic)?.checked;
+      if(btn.getAttribute('aria-pressed')===String(completed)&&btn.getAttribute('aria-label')===`Topic ${btn.dataset.completeTopic} scope done`)return;
       btn.setAttribute('aria-pressed',String(completed));
       btn.classList.toggle('is-complete',completed);
-      btn.textContent=completed?'✓ Scope complete':'○ Mark scope done';
-      btn.setAttribute('aria-label',`${completed?'Mark as not completed':'Mark as completed'}: ${records.get(String(Number(btn.dataset.completeTopic)))?.title || 'topic'}`);
+      btn.textContent=completed?'✓ Scope done':'○ Scope done';
+      btn.setAttribute('aria-label',`Topic ${btn.dataset.completeTopic} scope done`);
     });
   }
   function renderDashboard(){
@@ -55,8 +56,12 @@
     });
     if(!valid){
       refreshVisibleChecks();updateDoneButtons();
+      window.AtlasExperience?.update(currentRole);
       return;
     }
+    const effort=DATA.effort?.[currentRole];
+    const effortNode=document.getElementById('dashboard-effort');
+    if(effortNode&&effort)effortNode.textContent=`First-pass planning estimate: ${effort.hours[0]}–${effort.hours[1]} hours for ${effort.unitCount} units. ${effort.basis}`;
     const entries=orderedCore(currentRole);
     const essentials=entries.filter(x=>x.priority==='Essential');
     const recommends=entries.filter(x=>x.priority==='Recommended');
@@ -85,6 +90,7 @@
       link.href=`#project-${currentRole}`;link.textContent='Open my capstone →';
     }
     refreshVisibleChecks();updateDoneButtons();
+    window.AtlasExperience?.update(currentRole);
   }
   function refreshVisibleChecks(){
     const showAll=document.getElementById('show-all-topic-checks').checked;
@@ -98,6 +104,7 @@
       if(!label.hidden)shown++;
     });
     const top=document.querySelector('#progress .topic-check-grid');
+    top.setAttribute('role','group');
     top.setAttribute('aria-label',currentRole&&!showAll?`${shown} essential and recommended topics for ${selectedLabel()}`:'All 51 AI topics');
   }
   function chooseRole(next,{persist=true}={}){
@@ -131,7 +138,7 @@
     }
   });
   // The existing checkboxes are the canonical state; all displays react to them.
-  document.querySelectorAll('.save-check').forEach(c=>c.addEventListener('change',renderDashboard));
+  document.addEventListener('change',event=>{if(event.target.matches?.('.save-check'))renderDashboard();});
   document.getElementById('reset-progress').addEventListener('click',()=>setTimeout(renderDashboard,0));
   document.getElementById('download-progress').addEventListener('click',()=>{
     const state={version:2,selectedRole:currentRole,savedAt:new Date().toISOString(),note:document.getElementById('study-note').value,checks:Object.fromEntries(
@@ -188,23 +195,8 @@
       status.textContent=txt;
     },250);
   });
-  field.addEventListener('keydown',e=>{
-    if(e.key==='ArrowDown'&&!results.hidden){
-      const first=results.querySelector('a');
-      if(first){e.preventDefault();first.focus();}
-    }
-  });
-  results.addEventListener('keydown',e=>{
-    if(!['ArrowDown','ArrowUp','Escape'].includes(e.key))return;
-    e.preventDefault();
-    if(e.key==='Escape'){results.hidden=true;field.setAttribute('aria-expanded','false');field.focus();return;}
-    const links=Array.from(results.querySelectorAll('a'));
-    const idx=links.indexOf(document.activeElement);
-    if(!links.length){field.focus();return;}
-    if(e.key==='ArrowDown')links[Math.min(links.length-1,idx+1)].focus();
-    else if(idx<=0)field.focus();
-    else links[idx-1].focus();
-  });
+  // reader.js keeps DOM focus on the combobox and exposes its selected option
+  // through aria-activedescendant; listbox options are outside the Tab order.
   // "/" shortcut only when not typing in editable fields.
   document.addEventListener('keydown',e=>{
     if(e.key==='/'&&!e.altKey&&!e.ctrlKey&&!e.metaKey&&
