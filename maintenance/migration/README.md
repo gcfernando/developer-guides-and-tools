@@ -13,11 +13,14 @@ The later MLHandbook import adds 125 byte-identical files at examples/machine-le
 ## Every original file is accounted for
 
 - source-map.csv records all 176 original files from the three supplied folders, original SHA-256 digests, sizes, destinations and dispositions.
-- legacy/ retains the original repository READMEs as README.original.md snapshots, alongside maintained README navigation pages, original documentation indexes, Jekyll configurations, AI add-ons HTML and the Linux workflow.
+- legacy/ retains the original repository READMEs as README.original.md.gz, documentation indexes as documentation.md.gz and AI add-ons HTML as ai-coding-addons.html.gz. Lossless compression keeps the exact imported bytes out of document indexes that also scan plain-text files. The provenance check decompresses each archive before comparing its original SHA-256 checksum.
+- The existing README.original.md, documentation.md and ai-coding-addons.html paths contain clearly labeled reading copies with repaired links. Maintained README navigation pages, original Jekyll configurations and the Linux workflow remain alongside them. The source map points to the unchanged archives, not the repaired copies.
 - Identical layouts, CSS and favicon assets were deduplicated.
 - Personal Copilot application state is excluded, with its checksum recorded and its role replaced by configuration guidance.
 
 Run node scripts/verify-migration.cjs --sources ../ to verify source coverage, unchanged original checksums and destination presence. This check is optional outside this local workspace.
+
+Use an archive tool to inspect or extract a snapshot into a separate directory; do not decompress over the repaired reading copy.
 
 <a id="guide-intentional-consolidation-changes"></a>
 
@@ -25,7 +28,7 @@ Run node scripts/verify-migration.cjs --sources ../ to verify source coverage, u
 
 Local and cross-repository links and published metadata were updated. Long-form course content and the utility implementations were retained.
 
-The AI add-ons browser reader is generated from the Markdown guide, including the newer SonarQube registration clarification. Its original HTML is preserved in legacy/ for comparison. The current local Atlas has 14 role paths; its application, storage keys and backup behavior were retained.
+The AI add-ons browser reader is generated from the Markdown guide, including the newer SonarQube registration clarification. Its [compressed original HTML](legacy/ai-coding-addons.html.gz) is preserved for comparison. The current local Atlas has 14 role paths; its application, storage keys and backup behavior were retained.
 
 The Compose example now reads passwords from environment variables and binds published ports to loopback. Its README explains .env setup. Imported image tags were retained and were not deployment-tested.
 

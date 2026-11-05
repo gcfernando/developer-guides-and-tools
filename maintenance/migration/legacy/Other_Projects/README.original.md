@@ -1,11 +1,13 @@
 # 🧰 Gehan's Project Lab — Developer Tools, Linux and AI Coding Guides
 
-**Read online:** [Documentation website](https://gcfernando.github.io/developer-tools-and-guides/) · [All guides](documentation.md)
+> Historical text, not current setup instructions. Links now open maintained resources; use the [current overview](README.md) for navigation. The [compressed original](README.original.md.gz) retains the exact imported bytes.
+
+**Read online:** [Documentation website](https://gcfernando.github.io/developer-guides-and-tools/) · [All guides](documentation.md)
 
 An offline Linux command reference, Windows PowerShell utilities, a Podman Compose development stack and practical developer guides.
 
-[![Reference: Linux](https://img.shields.io/badge/Reference-Linux-FCC624)](https://gcfernando.github.io/developer-tools-and-guides/Linux_Commands/guide/)
-[![Scripts: PowerShell](https://img.shields.io/badge/Scripts-PowerShell-5391FE)](https://gcfernando.github.io/developer-tools-and-guides/SystemMaintenance/)
+[![Reference: Linux](https://img.shields.io/badge/Reference-Linux-FCC624)](https://gcfernando.github.io/developer-guides-and-tools/apps/linux-command-reference/guide/)
+[![Scripts: PowerShell](https://img.shields.io/badge/Scripts-PowerShell-5391FE)](https://gcfernando.github.io/developer-guides-and-tools/utilities/windows-maintenance/)
 
 ## Open in your browser
 
@@ -13,9 +15,9 @@ An offline Linux command reference, Windows PowerShell utilities, a Podman Compo
 
 | HTML source | View page | Companion guide |
 |---|---|---|
-| [Files/AI-Learning-Atlas-Complete.html](https://github.com/gcfernando/developer-tools-and-guides/blob/main/Files/AI-Learning-Atlas-Complete.html) | [Open AI Learning Atlas](https://gcfernando.github.io/developer-tools-and-guides/Files/AI-Learning-Atlas-Complete.html) | [Offline use and saved progress](Files/ai-learning-atlas.md) |
-| [Files/ai_coding_plugins_beginners_guide.html](https://github.com/gcfernando/developer-tools-and-guides/blob/main/Files/ai_coding_plugins_beginners_guide.html) | [Open AI coding add-ons guide](https://gcfernando.github.io/developer-tools-and-guides/Files/ai_coding_plugins_beginners_guide.html) | [Markdown edition](Files/ai_coding_plugins_beginners_guide.md) |
-| [Linux_Commands/index.html](https://github.com/gcfernando/developer-tools-and-guides/blob/main/Linux_Commands/index.html) | [Open Linux command reference](https://gcfernando.github.io/developer-tools-and-guides/Linux_Commands/) | [Usage and maintenance](Linux_Commands/readme.md) |
+| [Files/AI-Learning-Atlas-Complete.html](https://github.com/gcfernando/developer-guides-and-tools/blob/main/apps/ai-learning-atlas/index.html) | [Open AI Learning Atlas](https://gcfernando.github.io/developer-guides-and-tools/apps/ai-learning-atlas/index.html) | [Offline use and saved progress](../../../../apps/ai-learning-atlas/README.md) |
+| [Files/ai_coding_plugins_beginners_guide.html](https://github.com/gcfernando/developer-guides-and-tools/blob/main/apps/ai-coding-addons/index.html) | [Open AI coding add-ons guide](https://gcfernando.github.io/developer-guides-and-tools/apps/ai-coding-addons/index.html) | [Markdown edition](../../../../docs/ai/coding-addons.md) |
+| [Linux_Commands/index.html](https://github.com/gcfernando/developer-guides-and-tools/blob/main/apps/linux-command-reference/index.html) | [Open Linux command reference](https://gcfernando.github.io/developer-guides-and-tools/apps/linux-command-reference/index.html) | [Usage and maintenance](../../../../apps/linux-command-reference/README.md) |
 
 <a id="-a-colorful-collection-of-practical-tools-guides-references-and-local-dev-environments-"></a>
 
@@ -46,16 +48,16 @@ This collection is for developers, system administration learners and readers ex
 
 | Resource | Purpose | Start here |
 |---|---|---|
-| Linux command reference | Search and filter 361 entries across 16 categories | [Usage and maintenance](Linux_Commands/readme.md) |
-| AI coding add-ons guide | Setup and verification examples for 39 add-ons | [Markdown guide](Files/ai_coding_plugins_beginners_guide.md) |
-| AI learning atlas | 51 topic groups, 1,607 subtopics and 14 suggested role paths | [Offline reader and progress guide](Files/ai-learning-atlas.md) |
-| Windows maintenance | SFC, DISM, updates, network reset and cleanup | [Behavior and limitations](SystemMaintenance/readme.md) |
-| Local services stack | Seven services: databases, broker and Kibana | [`Files/compose.yml`](https://github.com/gcfernando/developer-tools-and-guides/blob/main/Files/compose.yml) |
+| Linux command reference | Search and filter 361 entries across 16 categories | [Usage and maintenance](../../../../apps/linux-command-reference/README.md) |
+| AI coding add-ons guide | Setup and verification examples for 39 add-ons | [Markdown guide](../../../../docs/ai/coding-addons.md) |
+| AI learning atlas | 51 topic groups, 1,607 subtopics and 14 suggested role paths | [Offline reader and progress guide](../../../../apps/ai-learning-atlas/README.md) |
+| Windows maintenance | SFC, DISM, updates, network reset and cleanup | [Behavior and limitations](../../../../tools/powershell/system-maintenance/README.md) |
+| Local services stack | Seven services: databases, broker and Kibana | [`Files/compose.yml`](../../../../examples/containers/local-services/compose.yml) |
 | Line-ending converter | Convert supported UTF-8 files between LF and CRLF | [Examples](#line-endings) |
-| WSL2 configuration | CPU, RAM, swap and networking settings | [`Files/.wslconfig`](https://github.com/gcfernando/developer-tools-and-guides/blob/main/Files/.wslconfig) |
-| IPTV directory | Dated IPTV-org snapshot and VLC walkthrough | [Playlist guide](Files/iptv_world_explorer_2026.md) |
+| WSL2 configuration | CPU, RAM, swap and networking settings | [`Files/.wslconfig`](../../../../examples/wsl/.wslconfig.example) |
+| IPTV directory | Dated IPTV-org snapshot and VLC walkthrough | [Playlist guide](../../../../docs/media/iptv/playlists.md) |
 
-The IPTV guide includes [authentic VLC screenshots](Files/iptv_world_explorer_2026.md#how-to-play). Directory entries do not prove that each third-party stream currently plays.
+The IPTV guide includes [authentic VLC screenshots](../../../../docs/media/iptv/playlists.md#how-to-play). Directory entries do not prove that each third-party stream currently plays.
 
 ## 🚀 Quick start
 
@@ -64,9 +66,9 @@ git clone https://github.com/gcfernando/developer-tools-and-guides.git
 cd developer-tools-and-guides
 ```
 
-Open the [Linux command reference](https://gcfernando.github.io/developer-tools-and-guides/Linux_Commands/) in a browser. The table works without JavaScript; search and filtering require it. The downloaded reference works offline; Google Fonts are an optional online enhancement.
+Open the [Linux command reference](https://gcfernando.github.io/developer-guides-and-tools/apps/linux-command-reference/index.html) in a browser. The table works without JavaScript; search and filtering require it. The downloaded reference works offline; Google Fonts are an optional online enhancement.
 
-Use the [documentation index](documentation.md) for written guides. The AI add-ons [HTML edition](https://gcfernando.github.io/developer-tools-and-guides/Files/ai_coding_plugins_beginners_guide.html) and Markdown edition are maintained separately.
+Use the [documentation index](documentation.md) for written guides. The AI add-ons [HTML edition](https://gcfernando.github.io/developer-guides-and-tools/apps/ai-coding-addons/index.html) and Markdown edition are maintained separately.
 
 ## 📦 Prerequisites and installation
 
@@ -83,7 +85,7 @@ There is no repository-wide installer. Follow the selected guide rather than run
 
 ## ⚙️ Configuration
 
-Review `x-variables` in [`Files/compose.yml`](https://github.com/gcfernando/developer-tools-and-guides/blob/main/Files/compose.yml): image tags, example credentials and timezone. Confirm image availability and platform compatibility before pulling. Published ports omit a host IP, so they are not restricted to loopback ([Compose port syntax](https://docs.docker.com/reference/compose-file/services/#ports)). Choose appropriate bindings and credentials before startup; Elasticsearch security is disabled in this example.
+Review `x-variables` in [`Files/compose.yml`](../../../../examples/containers/local-services/compose.yml): image tags, example credentials and timezone. Confirm image availability and platform compatibility before pulling. Published ports omit a host IP, so they are not restricted to loopback ([Compose port syntax](https://docs.docker.com/reference/compose-file/services/#ports)). Choose appropriate bindings and credentials before startup; Elasticsearch security is disabled in this example.
 
 | Service | Checked-in image tag | Host port(s) |
 |---|---|---|
@@ -95,7 +97,7 @@ Review `x-variables` in [`Files/compose.yml`](https://github.com/gcfernando/deve
 | RabbitMQ | `4.3.5-management` | `5672`, `15672` |
 | MySQL | `8.4.11` | `3306` |
 
-Merge [`Files/.wslconfig`](https://github.com/gcfernando/developer-tools-and-guides/blob/main/Files/.wslconfig) into `%UserProfile%\.wslconfig`, choosing values for your machine. The sample uses up to 8 GB RAM, eight logical processors and 4 GB swap. Save WSL work before `wsl --shutdown`; it stops distributions so settings take effect on restart.
+Merge [`Files/.wslconfig`](../../../../examples/wsl/.wslconfig.example) into `%UserProfile%\.wslconfig`, choosing values for your machine. The sample uses up to 8 GB RAM, eight logical processors and 4 GB swap. Save WSL work before `wsl --shutdown`; it stops distributions so settings take effect on restart.
 
 ## 💡 Usage
 
@@ -124,7 +126,7 @@ Kibana's `depends_on` names Elasticsearch without a health condition. It orders 
 
 ### AI learning atlas
 
-Open the [AI Learning Atlas](https://gcfernando.github.io/developer-tools-and-guides/Files/AI-Learning-Atlas-Complete.html) directly in a browser. The handbook includes role paths, searchable subtopics, suggested labs, a reusable tutor prompt and local progress controls. It does not run a model or assess your work. See the [reader guide](Files/ai-learning-atlas.md) for storage, backup and completion limits.
+Open the [AI Learning Atlas](https://gcfernando.github.io/developer-guides-and-tools/apps/ai-learning-atlas/index.html) directly in a browser. The handbook includes role paths, searchable subtopics, suggested labs, a reusable tutor prompt and local progress controls. It does not run a model or assess your work. See the [reader guide](../../../../apps/ai-learning-atlas/README.md) for storage, backup and completion limits.
 
 <a id="line-endings"></a>
 <a id="-line-ending-converter"></a>
@@ -147,7 +149,7 @@ Folder mode includes hidden files, prunes `.git`, `bin`, `obj` and `node_modules
 
 ### Windows maintenance
 
-Read the [maintenance guide](SystemMaintenance/readme.md) and script first. From an elevated PowerShell at the repository root:
+Read the [maintenance guide](../../../../tools/powershell/system-maintenance/README.md) and script first. From an elevated PowerShell at the repository root:
 
 ```powershell
 .\SystemMaintenance\SystemMaintenance.ps1
@@ -177,7 +179,7 @@ node --check Linux_Commands/app.js
 node Linux_Commands/generate-static.cjs --check
 ```
 
-After editing `data.js`, run `node Linux_Commands/generate-static.cjs` and review the generated HTML. [CI](https://github.com/gcfernando/developer-tools-and-guides/blob/main/.github/workflows/seo.yml) runs the reference test and JavaScript syntax check. These do not validate Linux command execution, Windows repair outcomes or container startup.
+After editing `data.js`, run `node Linux_Commands/generate-static.cjs` and review the generated HTML. [CI](../../../../.github/workflows/validate.yml) runs the reference test and JavaScript syntax check. These do not validate Linux command execution, Windows repair outcomes or container startup.
 
 ## 🛠️ Troubleshooting and limitations
 
@@ -193,7 +195,7 @@ After editing `data.js`, run `node Linux_Commands/generate-static.cjs` and revie
 
 ## 🤝 Contributing
 
-Propose focused corrections through the [repository](https://github.com/gcfernando/developer-tools-and-guides), with the file, environment, expected behavior and verification. Keep Linux HTML synchronized with `data.js`, and update both guide editions when changing shared AI add-on content.
+Propose focused corrections through the [repository](https://github.com/gcfernando/developer-guides-and-tools), with the file, environment, expected behavior and verification. Keep Linux HTML synchronized with `data.js`, and update both guide editions when changing shared AI add-on content.
 
 ## 🔒 Security
 
@@ -201,6 +203,6 @@ Keep private data and credentials out of reports. Use private security reporting
 
 ## 📄 Support and license
 
-Report documentation problems in [repository issues](https://github.com/gcfernando/developer-tools-and-guides/issues). No license file is present in this checkout; public visibility alone does not specify reuse rights. Refer to upstream projects for their licensing and support.
+Report documentation problems in [repository issues](https://github.com/gcfernando/developer-guides-and-tools/issues). No license file is present in this checkout; public visibility alone does not specify reuse rights. Refer to upstream projects for their licensing and support.
 
-[Documentation index](documentation.md) · [Knowledge base](https://github.com/gcfernando/developer-guides-and-cheatsheets) · [Python examples](https://github.com/gcfernando/python-projects-and-examples) · [C# examples](https://github.com/gcfernando/csharp-dotnet-examples)
+[Documentation index](documentation.md) · [Knowledge base](../KnowledgeBase/README.md) · [Python examples](https://github.com/gcfernando/python-projects-and-examples) · [C# examples](https://github.com/gcfernando/csharp-dotnet-examples)

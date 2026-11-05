@@ -16,7 +16,9 @@ Use [compose.yml](compose.yml) to explore local database, messaging, search and 
 
 ## Configure
 
-Install Podman and a compatible Compose provider. Work in a separate local copy of this example. Create or review its `.env` file with values you choose for `SQL_PASSWORD`, `ORACLE_PASSWORD` and `DEFAULT_ROOT_PASSWORD`, and an optional `TZ`; use the requirements shown in `compose.yml`. The checkout currently tracks an `.env` file despite the ignore rule: do not commit personal credentials, and do not treat the tracked values as private. There is no supplied `.env.example`. Relative paths below assume the repository root of your practice copy.
+Install Podman and a compatible Compose provider. Work in a separate local copy of this example. Copy [.env.example](.env.example) to `.env` only if you do not already have a local `.env`. Replace all password placeholders with your own values for `SQL_PASSWORD`, `ORACLE_PASSWORD` and `DEFAULT_ROOT_PASSWORD`, and optionally change `TZ`; use the requirements shown in `compose.yml`. The example values are not usable credentials.
+
+Keep `.env` local and ignored. Earlier versions tracked this file: an ignore rule does not remove an existing Git index entry, and previously tracked values must not be treated as private. In an existing Git checkout, use `git rm --cached -- examples/containers/local-services/.env` to stop tracking it without deleting your local file. A downloaded ZIP has no Git index; keep only `.env.example` when importing the changes into Git. Relative paths below assume the repository root of your practice copy.
 
 Image tags are the imported snapshot. Check availability, architecture, licensing and resource requirements before pulling images. Starting every service can use substantial memory and disk.
 

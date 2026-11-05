@@ -32,4 +32,4 @@ Download the complete Linux reference folder for offline search. The Atlas and A
 
 ## Keep generated pages in sync
 
-The add-ons browser page is generated from the Markdown guide. The Linux command table is generated from its data source. Follow the [contribution guide](../CONTRIBUTING.md) before changing generated content.
+The add-ons browser page is generated from the Markdown guide, the Linux command table from its data source, and the Atlas reader from its authoring sources and exercises. Run `npm run build` from the repository root to rebuild all of them, or use `build:addons`, `build:linux` and `build:atlas` individually. Follow the [contribution guide](../CONTRIBUTING.md) before changing generated content.

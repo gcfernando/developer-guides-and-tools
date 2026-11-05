@@ -140,7 +140,7 @@ def run(args):
     page = args.page.resolve()
     content = page.read_text(encoding='utf-8')
     doc = Document(content)
-    baseline = json.loads((ROOT/'tools/baseline.json').read_text(encoding='utf-8'))
+    baseline = json.loads((ROOT/'tests/fixtures/baseline.json').read_text(encoding='utf-8'))
     curriculum = json.loads((ROOT/'source/curriculum.json').read_text(encoding='utf-8'))
     topics = {t['number']: t for t in curriculum['topics']}
     roles = curriculum['roles']

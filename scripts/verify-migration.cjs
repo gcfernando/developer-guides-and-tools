@@ -1,6 +1,7 @@
 const fs=require('node:fs');
 const path=require('node:path');
 const crypto=require('node:crypto');
+const {gunzipSync}=require('node:zlib');
 const {ROOT,read}=require('./lib.cjs');
 function csv(text) {
   return text.trim().split(/\r?\n/).map(line=>{
@@ -19,7 +20,9 @@ if(new Set(entries.map(e=>e.source_folder+'/'+e.source_path)).size!==entries.len
 for(const row of entries){
   if(!fs.existsSync(path.join(ROOT,row.destination)))throw new Error('Missing destination '+row.destination);
   if(['copied-byte-identical','archived-original','copied'].includes(row.disposition)){
-    const actual=crypto.createHash('sha256').update(fs.readFileSync(path.join(ROOT,row.destination))).digest('hex');
+    const stored=fs.readFileSync(path.join(ROOT,row.destination));
+    const original=row.disposition==='archived-original'&&row.destination.endsWith('.gz')?gunzipSync(stored):stored;
+    const actual=crypto.createHash('sha256').update(original).digest('hex');
     if(actual!==row.source_sha256)throw new Error('Preserved file changed: '+row.destination);
   }
 }

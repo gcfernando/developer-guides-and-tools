@@ -18,9 +18,13 @@ Keep database dialects and command destinations clear. Keep author attribution, 
 
 ## Maintenance boundaries
 
-The AI add-ons HTML is generated from one Markdown source. The Linux table is generated from data.js. The Atlas remains a standalone authored HTML application; preserve its topic IDs, checkbox IDs, local-storage keys and JSON backup schema.
+The AI add-ons HTML is generated from one Markdown source. The Linux table is generated from data.js. The Atlas standalone HTML is generated from its source folder and embedded exercises; preserve its topic IDs, checkbox IDs, local-storage keys and JSON backup schema. The complete source/output ownership table is in [CONTRIBUTING.md](../CONTRIBUTING.md).
 
 Do not split the large programming courses during the initial import. A later chapter split must preserve sequence, prerequisites, code continuations, exercise solutions and incoming anchors.
+
+SQL has generated part readers for smaller reading sessions. Edit the full-course source and regenerate them; do not maintain parallel course copies. Keep the original full-course route and anchors. An authoring split is a separate migration and must preserve the same contracts. The ML beginner course and reference handbook have different audiences and must not be deduplicated as though they were identical.
+
+Preserve imported images and dataset bytes where provenance requires it. Optimize newly authored assets before adding them, without sacrificing legibility. Existing asset compression requires checking source-map dispositions first.
 
 Changes to shared AI policy require reviewing each client's application notes. Configuration examples must not include account state or credentials.
 

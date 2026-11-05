@@ -41,7 +41,7 @@ New to the collection? The [getting-started guide](docs/getting-started.md) expl
 | --- | --- | --- |
 | Python | [Python learning path](docs/learning-paths/python.md) | [Object-oriented programming](docs/python/oop.md) and [special methods](docs/python/special-methods.md) |
 | C# and .NET | [C#/.NET learning path](docs/learning-paths/csharp-dotnet.md) | [Object-oriented design and testing](docs/csharp-dotnet/oop.md) |
-| SQL | [SQL learning path](docs/learning-paths/sql.md) | [SQL Server and MySQL course](docs/databases/sql-server-and-mysql.md) |
+| SQL | [SQL learning path](docs/learning-paths/sql.md) | [SQL Server and MySQL course](docs/databases/sql-server-and-mysql.md) or [ordered part readers](docs/databases/sql-server-and-mysql/index.md) |
 | Azure | [Azure learning path](docs/learning-paths/azure.md) | [Engineering cheat sheet](docs/cloud/azure/engineering-cheat-sheet.md) and [resource reference](docs/cloud/azure/resource-reference.md) |
 | Machine learning | [Machine learning path](docs/learning-paths/machine-learning.md) | [Illustrated handbook](docs/data-science/machine-learning-handbook.md) and [datasets, notebook setup and Tkinter example](examples/machine-learning/ml-handbook/README.md) |
 | Local AI | [Local AI learning path](docs/learning-paths/local-ai.md) | [Ollama and Streamlit chat application lab](docs/ai/local-ai-chat-lab.md) |
@@ -62,7 +62,7 @@ Keep the courses' exercise order, prerequisites and code context. SQL Server and
 | [AI Learning Atlas](apps/ai-learning-atlas/README.md) | Explore topics and role paths, then record and back up your own progress. |
 | [AI coding add-ons](docs/ai/coding-addons.md) | Read installation and configuration notes, or use the [filterable browser reader](https://gcfernando.github.io/developer-guides-and-tools/apps/ai-coding-addons/index.html). |
 
-For offline Linux search, keep the complete application folder together. The Atlas and add-ons readers are standalone HTML files; external documentation links still need internet access. Atlas completion is self-reported: export a JSON backup before switching browsers, profiles, hosting locations or local-file contexts.
+For offline Linux search, keep the complete application folder together. The repository's Atlas and add-ons readers are standalone HTML files; external documentation links still need internet access. The published Atlas uses a lighter hosted version and offers the complete offline file for download. Atlas completion is self-reported: export a JSON backup before switching browsers, profiles, hosting locations or local-file contexts.
 
 <a id="developer-utilities-examples-and-templates"></a>
 
@@ -93,14 +93,25 @@ Open the selected guide or browser application from the copy. Follow its compani
 
 <a id="repository-structure"></a>
 
-The content is grouped into `docs/` (guides), `apps/` (browser tools), `tools/` (utilities), `examples/` (practice environments) and `templates/` (reusable instructions). The [resource catalog](documentation.md) indexes them; `scripts/` and `tests/` maintain the documentation, and `maintenance/` records content conventions and provenance.
+The content is grouped into `docs/` (guides), `apps/` (browser tools), `tools/` (utilities), `examples/` (practice environments) and `templates/` (reusable instructions). Add new subjects inside the appropriate category, with one authoritative home per resource. The [resource catalog](documentation.md) connects related subjects and formats; `scripts/` and root `tests/` maintain shared behavior, app-specific tests live beside their app, and `maintenance/` records content conventions and provenance. See the [contribution guide](CONTRIBUTING.md) for placement rules and source/output ownership.
+
+### How future additions fit
+
+| New material | Recommended home |
+| --- | --- |
+| Written guide or cheat sheet | `docs/<subject>/` |
+| Interactive reader or application | `apps/<application>/` |
+| Runnable demonstration | `examples/<subject>/` |
+| Single-runtime utility | `tools/<runtime>/<utility>/` |
+| Multi-language utility | `tools/<utility>/` |
+| Reusable starter configuration | `templates/<subject>/` |
 
 <a id="build-and-validate"></a>
 <a id="guide-build-and-validate"></a>
 
 ## Development and validation
 
-Documentation contributors need Node.js 22 or newer. From the repository root:
+Documentation contributors need Node.js 22 or newer and Python 3.12 or newer for the full build and checks. From the repository root:
 
 ```sh
 npm ci
@@ -108,18 +119,18 @@ npm run build
 npm test
 ```
 
-The build generates the resource catalog, AI add-ons reader and published ML handbook. Tests check generated output, local links, application structure, provenance and Linux-reference behavior. Edit generated content through its source as described in [CONTRIBUTING.md](CONTRIBUTING.md). The [handbook validation guide](examples/machine-learning/ml-handbook/README.md#guide-validation) explains the optional Python model-service smoke check; it does not open the GUI or execute every notebook block.
+The build generates the catalog, AI add-ons and Atlas readers, Linux command table, published ML handbook and SQL part readers. Tests check generated output, links, provenance, Linux behavior, and Atlas content, runtime and embedded exercises. Edit generated content through its source as described in [CONTRIBUTING.md](CONTRIBUTING.md). The [handbook validation guide](examples/machine-learning/ml-handbook/README.md#guide-validation) explains the optional Python model-service smoke check; it does not open the GUI or execute every notebook block.
 
 To build and preview the Jekyll website, install Ruby with Bundler, then run from the repository root:
 
 ```sh
 bundle install
-bundle exec jekyll build
+npm run site:build
 npm run check:site
-bundle exec jekyll serve
+python scripts/serve-preview.py
 ```
 
-Open the address printed by Jekyll. The configured base path is `/developer-guides-and-tools/`. The Pages workflow builds and deploys the website when changes reach `main`.
+Open the address printed by the preview server. The configured base path is `/developer-guides-and-tools/`. Rebuild after edits; this preview serves the built files without watching sources. The Pages workflow uses the same build command and deploys the website when changes reach `main`.
 
 ## Troubleshooting
 

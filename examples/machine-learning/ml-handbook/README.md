@@ -8862,7 +8862,7 @@ Study the Boston dataset’s documented problem, then use a separately justified
 
 #### 3 · How to use it
 
-The PDF names Boston Housing. Its dataset design includes a problematic racial variable and the scikit-learn loader was removed. This historical topic remains here as an **ethics and dataset-selection exercise**, rather than instructions to restore a removed loader. Read the maintainers' [explanation](https://scikit-learn.org/1.2/modules/generated/sklearn.datasets.load_boston.html).
+The PDF names Boston Housing. Its dataset design includes a problematic racial variable and the scikit-learn loader was removed. This historical topic remains here as an **ethics and dataset-selection exercise**, rather than instructions to restore a removed loader. Read the maintainers' [historical deprecation explanation](https://scikit-learn.org/1.1/modules/generated/sklearn.datasets.load_boston.html).
 
 **Further inspection checklist (worked source requirements follow below):** identify why a historical feature definition can encode a harmful assumption. Removing one column does not erase the dataset's provenance or all proxies.
 

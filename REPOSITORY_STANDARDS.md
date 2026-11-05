@@ -18,6 +18,10 @@ This repository follows the shared administration and documentation baseline acr
 
 Keep the subject-based `docs/`, `apps/`, `tools/`, `examples/` and `templates/` layout. Preserve existing source and dataset paths, package boundaries, generated assets, imported snapshots and published routes. Do not add empty source or test directories for visual symmetry. Keep new written guides with the existing documentation; use lowercase hyphenated ordinary filenames and conventional names such as `README.md`.
 
+Organize by resource purpose first and subject second. New subjects normally belong below an existing category. Each resource has one authoritative home, with related resources connected through the catalog and relative links. Keep shared website assets in `assets/` and resource-specific assets with their owner. Keep app tests local and cross-resource tests in the root `tests/`.
+
+Use `tools/<runtime>/<name>/` for single-runtime scripts and `tools/<name>/` for multi-language utilities. Introduce a new top-level category only for a distinct purpose that existing categories cannot express clearly. Consider an independent repository when a project develops its own release, deployment or ownership lifecycle, not merely because its file count increases.
+
 ## Formatting and configuration
 
 Use UTF-8 without a byte order mark, LF line endings and a final newline for root documentation and repository administration. Use one level-one title in each primary guide, hierarchical headings and blank lines around headings and lists. Keep intentional two-space Markdown line breaks, code fences, attribution and stable anchors. Match link paths and filename case exactly.

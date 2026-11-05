@@ -8,7 +8,7 @@ const vm = require('node:vm');
 const {parseHTML} = require('linkedom');
 
 function reader() {
-  const {document, Event, CustomEvent} = parseHTML(fs.readFileSync(path.join(__dirname, 'index.html'), 'utf8'));
+  const {document, Event, CustomEvent} = parseHTML(fs.readFileSync(path.join(__dirname, '..', 'index.html'), 'utf8'));
   // linkedom does not implement browser select value/selectedIndex behavior.
   // Define the shim on the prototype to cover selects built by experience.js too.
   const selectPrototype = Object.getPrototypeOf(document.createElement('select'));
@@ -164,7 +164,7 @@ test('v2 restore preserves unopened unit checks through lazy hydration', async t
   assert.ok(r.window.AtlasExperience, 'Lazy reader is required');
   const card = r.document.querySelector('.topic-card');
   assert.ok(card.querySelector('template[data-topic-body]'));
-  const backup = JSON.parse(fs.readFileSync(path.join(__dirname,'tools/backup-v2.json'),'utf8'));
+  const backup = JSON.parse(fs.readFileSync(path.join(__dirname,'fixtures/backup-v2.json'),'utf8'));
   backup.checks['unit-01-01-practice'] = true;
   await r.restore(backup);
   const check = r.document.getElementById('unit-01-01-practice');

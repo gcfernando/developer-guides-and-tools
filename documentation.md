@@ -29,13 +29,14 @@ permalink: /documentation/
 | Resource | Format | Level |
 |---|---|---|
 | [Data Science and Machine Learning Handbook with Python](docs/data-science/machine-learning-handbook.md) | Illustrated handbook | Beginner to advanced |
-| [Machine Learning for Complete Beginners](examples/machine-learning/ml-handbook/README.md) | Datasets and desktop example | Beginner to advanced |
+| [Machine Learning for Complete Beginners](examples/machine-learning/ml-handbook/README.md) | Beginner course, datasets and desktop example | Beginner to advanced |
 
 ## Databases
 
 | Resource | Format | Level |
 |---|---|---|
 | [SQL Guide for Microsoft SQL Server and MySQL](docs/databases/sql-server-and-mysql.md) | Course | Beginner to advanced |
+| [SQL Course Part Index](docs/databases/sql-server-and-mysql/index.md) | Course part index | Beginner to advanced |
 
 ## Cloud and Azure
 

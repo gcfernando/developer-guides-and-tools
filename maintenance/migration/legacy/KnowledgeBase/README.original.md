@@ -1,10 +1,12 @@
 # 📚 Developer Knowledge Base — Python, C#/.NET, SQL and DevOps Guides
 
-**Read online:** [Documentation website](https://gcfernando.github.io/developer-guides-and-cheatsheets/) · [All guides](documentation.md)
+> Historical text, not current setup instructions. Links now open maintained resources; use the [current overview](README.md) for navigation. The [compressed original](README.original.md.gz) retains the exact imported bytes.
+
+**Read online:** [Documentation website](https://gcfernando.github.io/developer-guides-and-tools/) · [All guides](documentation.md)
 
 Practical Markdown learning paths and references for object-oriented programming, databases, Azure, containers, Git and a local AI chat application.
 
-[![Format: Markdown](https://img.shields.io/badge/Format-Markdown-7C3AED)](https://gcfernando.github.io/developer-guides-and-cheatsheets/documentation/)
+[![Format: Markdown](https://img.shields.io/badge/Format-Markdown-7C3AED)](https://gcfernando.github.io/developer-guides-and-tools/documentation/)
 
 <a id="build-real-skills-one-practical-guide-at-a-time"></a>
 
@@ -33,7 +35,7 @@ This repository collects authored guides for students, self-learners and develop
 - Azure service comparisons and a deeper resource reference.
 - Docker, Podman and Git command cheat sheets.
 - A Windows lab for an Ollama and Streamlit chat app.
-- Reusable AI coding instruction and configuration examples in [`ai-cli/`](https://github.com/gcfernando/developer-guides-and-cheatsheets/tree/main/ai-cli).
+- Reusable AI coding instruction and configuration examples in [`ai-cli/`](../../../../templates/ai-instructions/README.md).
 
 <a id="quick-start"></a>
 <a id="-choose-your-starting-path"></a>
@@ -53,13 +55,13 @@ Externally hosted images and links to official documentation still need an inter
 
 | Goal | Start here | Continue with |
 |---|---|---|
-| Learn Python object-oriented programming | [Python OOP](python_oop_guide.md) | [Python dunder methods](python_dunder.md), then SQL |
-| Learn C# and .NET design | [C#/.NET OOP](csharp_dotnet_oop_guide.md) | SQL, then Azure |
-| Learn relational databases | [SQL Server and MySQL](sql_complete_guide.md) | A small application using one engine |
-| Build a local browser chat app | [Local AI learning lab](local_ai_learning_lab.md) | The lab's verification checkpoint |
-| Choose and operate Azure services | [Azure engineering cheat sheet](azure_cheatsheet.md) | [Azure resources reference](azure_resources_cheatsheet.md) |
-| Learn container workflows | [Docker](docker_cheatsheet.md) or [Podman](podman_cheatsheet.md) | Images, persistent storage and networking |
-| Practise version control | [Git command cheat sheet](git_cheatsheet.md) | Branches and recovery in a disposable repository |
+| Learn Python object-oriented programming | [Python OOP](../../../../docs/python/oop.md) | [Python dunder methods](../../../../docs/python/special-methods.md), then SQL |
+| Learn C# and .NET design | [C#/.NET OOP](../../../../docs/csharp-dotnet/oop.md) | SQL, then Azure |
+| Learn relational databases | [SQL Server and MySQL](../../../../docs/databases/sql-server-and-mysql.md) | A small application using one engine |
+| Build a local browser chat app | [Local AI learning lab](../../../../docs/ai/local-ai-chat-lab.md) | The lab's verification checkpoint |
+| Choose and operate Azure services | [Azure engineering cheat sheet](../../../../docs/cloud/azure/engineering-cheat-sheet.md) | [Azure resources reference](../../../../docs/cloud/azure/resource-reference.md) |
+| Learn container workflows | [Docker](../../../../docs/containers/docker-cheat-sheet.md) or [Podman](../../../../docs/containers/podman-cheat-sheet.md) | Images, persistent storage and networking |
+| Practise version control | [Git command cheat sheet](../../../../docs/version-control/git-cheat-sheet.md) | Branches and recovery in a disposable repository |
 
 ## 📦 Prerequisites and installation
 
@@ -101,7 +103,7 @@ flowchart LR
     Index --> Lab[Local AI chat lab]
 ```
 
-The root contains ten subject guides. [`documentation.md`](documentation.md) is the source index; [`ai-cli/`](https://github.com/gcfernando/developer-guides-and-cheatsheets/tree/main/ai-cli) contains instruction templates and configuration samples. `_config.yml`, `_layouts/` and `assets/` provide the Jekyll site's presentation. No application source tree or repository-wide test suite is included.
+The root contains ten subject guides. [`documentation.md`](documentation.md) is the source index; [`ai-cli/`](../../../../templates/ai-instructions/README.md) contains instruction templates and configuration samples. `_config.yml`, `_layouts/` and `assets/` provide the Jekyll site's presentation. No application source tree or repository-wide test suite is included.
 
 ## 🧪 Development and testing
 
@@ -121,7 +123,7 @@ Examples may modify data, history, containers or cloud resources. Review each in
 
 ## 🤝 Contributing
 
-Suggest a focused correction through the [repository](https://github.com/gcfernando/developer-guides-and-cheatsheets). Include the guide and section, tool version, minimal example and expected result. Preserve existing section links and functional instruction-template syntax. Add official sources for version-dependent corrections.
+Suggest a focused correction through the [repository](https://github.com/gcfernando/developer-guides-and-tools). Include the guide and section, tool version, minimal example and expected result. Preserve existing section links and functional instruction-template syntax. Add official sources for version-dependent corrections.
 
 ## 🔒 Security
 
@@ -129,6 +131,6 @@ Keep credentials, private data and confidential source out of examples and issue
 
 ## 📄 Support and license
 
-Use [repository issues](https://github.com/gcfernando/developer-guides-and-cheatsheets/issues) for reproducible documentation problems. No license file is present in this checkout; do not assume a reuse license from public visibility. Third-party tools and services retain their own terms.
+Use [repository issues](https://github.com/gcfernando/developer-guides-and-tools/issues) for reproducible documentation problems. No license file is present in this checkout; do not assume a reuse license from public visibility. Third-party tools and services retain their own terms.
 
-[Read online](documentation.md) · [Related developer tools](https://github.com/gcfernando/developer-tools-and-guides) · [All developer projects](https://gcfernando.github.io/gcfernando/projects/)
+[Read online](documentation.md) · [Related developer tools](../../../../tools/README.md) · [All developer projects](https://gcfernando.github.io/gcfernando/projects/)

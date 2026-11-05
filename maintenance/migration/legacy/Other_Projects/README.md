@@ -20,7 +20,7 @@ Use this navigation page to find the maintained Linux reference, AI learning too
 
 ## Read the original snapshot
 
-The [original README snapshot](README.original.md) is preserved byte-for-byte for provenance. Its historical URLs, configuration references and claims describe the original repository at import time. Use the maintained links above for current navigation.
+The [compressed original README](README.original.md.gz) and [original documentation index](documentation.md.gz) retain the exact imported bytes for provenance. Their historical URLs, configuration references and claims describe the original repository at import time. Extract snapshots only into a separate directory, not over the repaired reading copies. The [link-repaired README](README.original.md) and [link-repaired index](documentation.md) keep the historical context while opening current resources. Use the maintained links above for current setup instructions.
 
 <a id="guide-trace-the-migration"></a>
 

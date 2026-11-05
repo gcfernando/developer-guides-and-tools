@@ -42,6 +42,14 @@ exclude:
   - apps/linux-command-reference/generate-static.cjs
   - apps/linux-command-reference/seo.test.cjs
   - apps/ai-learning-atlas/source
+  - apps/ai-learning-atlas/tools
+  - apps/ai-learning-atlas/tests
+  - apps/ai-learning-atlas/build.py
+  - apps/ai-learning-atlas/validate.py
+  - apps/ai-learning-atlas/CHANGELOG.md
+  - apps/ai-learning-atlas/VALIDATION.md
+  - apps/ai-learning-atlas/VERIFICATION.md
+  - examples/containers/local-services/.env
 defaults:
   - scope:
       path: ""

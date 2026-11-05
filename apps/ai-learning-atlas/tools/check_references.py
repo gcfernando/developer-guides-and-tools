@@ -1,5 +1,6 @@
 """Explicit online authoring check; the reader never calls this script."""
 from concurrent.futures import ThreadPoolExecutor
+from datetime import date
 from html.parser import HTMLParser
 import json
 from pathlib import Path
@@ -42,8 +43,10 @@ if __name__ == '__main__':
     links.urls = {n.attrs['href'] for n in document.nodes if n.tag == 'a' and n.attrs.get('href', '').startswith(('http://', 'https://'))}
     with ThreadPoolExecutor(max_workers=5) as pool:
         results = list(pool.map(check, sorted(links.urls)))
-    report = {'checked_on': '2026-11-03', 'method': 'GET with redirects, first 1024 bytes; reachability does not verify every statement', 'links': results}
-    (ROOT/'tools/reference-checks.json').write_text(json.dumps(report, indent=2)+'\n', encoding='utf-8')
+    report = {'checked_on': date.today().isoformat(), 'method': 'GET with redirects, first 1024 bytes; reachability does not verify every statement', 'links': results}
+    output = ROOT.parents[1]/'artifacts/ai-learning-atlas/reference-checks.json'
+    output.parent.mkdir(parents=True, exist_ok=True)
+    output.write_text(json.dumps(report, indent=2)+'\n', encoding='utf-8')
     for result in results:
         print(result['result'].upper(), result.get('status', ''), result['url'], '=>', result.get('final_url', result.get('error', '')))
     print('Resolved', sum(r['result'] == 'resolved' for r in results), 'of', len(results))

@@ -1774,7 +1774,7 @@ az apim api list --service-name "${APIM_NAME}" --resource-group "${RG}" --output
 - Channel delivery (SMS/push/email) is not guaranteed like a transaction.
 
 #### 📚 Official Microsoft docs
-https://learn.microsoft.com/azure/azure-signalr/overview
+https://learn.microsoft.com/en-us/azure/azure-signalr/signalr-overview
 
 https://learn.microsoft.com/azure/azure-web-pubsub/
 

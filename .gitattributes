@@ -8,6 +8,7 @@
 *.json text eol=lf
 *.ps1 text eol=crlf
 *.png binary
+*.gz binary
 
 # Preserve imported byte-exact snapshots across Windows and Linux checkouts.
 examples/machine-learning/ml-handbook/** -text

@@ -1,6 +1,6 @@
 # AI Learning Atlas validation record
 
-Updated **3 November 2026**. [VERIFICATION.md](VERIFICATION.md) is the current detailed evidence record, with raw reports, command output, screenshots and PDFs in [tools/results](tools/results/). It records all twelve workstreams, historical failures, final review scores and the exact snapshots tested; use those hashes when relating a result to a later revision.
+Historical review date: **3 November 2026**. [VERIFICATION.md](VERIFICATION.md) is the detailed evidence record, with retained reports and command output in [tools/results](tools/results/). Screenshots and PDFs were removed during the recorded cleanup. The record describes all twelve workstreams, historical failures, final review scores and the exact snapshots tested; use those hashes when relating a result to a later revision. Run `npm run check:atlas` from the repository root for fresh checks; historical reports are not rewritten.
 
 The original 51 topic titles, 1,607 subtopic texts/IDs/order and 514 progress checks are preserved. The reader supplies 219 bounded authored units with answer keys and misconceptions, an eight-lesson supported workshop and an optional ninth model-integration lesson. Its “Related original subtopics (reference map)” lists related directory material without claiming that one small lesson completely teaches every advanced item.
 

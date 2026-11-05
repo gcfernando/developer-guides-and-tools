@@ -139,7 +139,7 @@ Some catalog descriptions need qualification. The reference checks validate the 
 |---|---|
 | `wc` | GNU `wc -c` counts bytes and `-m` counts characters; `-b` is not its byte-count option. See the [GNU manual](https://www.gnu.org/s/coreutils/manual/html_node/wc-invocation.html). |
 | `sed` | The example without an in-place option prints transformed text; it does not change the named configuration file. See the [sed overview](https://www.gnu.org/software/sed/manual/html_node/Overview.html). |
-| `xargs` | Default whitespace splitting can misinterpret filenames with spaces or newlines. NUL-delimited input is needed when handling arbitrary filenames; see [GNU filename handling](https://www.gnu.org/software/findutils/manual/html_node/find_html/Safe-File-Name-Handling.html). |
+| `xargs` | Default whitespace splitting can misinterpret filenames with spaces or newlines. NUL-delimited input is needed when handling arbitrary filenames; see [GNU filename handling](https://www.gnu.org/software/findutils/manual/html_node/Safe-File-Name-Handling.html). |
 | `test` | `test -f` checks whether a path is a regular file, not whether its contents can be read. |
 | `strings` | `/proc/PID/exe` refers to the process's executable file; reading it does not inspect the process's live memory. |
 

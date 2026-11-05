@@ -11,6 +11,8 @@ permalink: /learning-paths/sql/
 3. Continue into indexing, execution plans, security and application integration.
 4. Complete the guide's exercises in a disposable database. Keep each engine's syntax separate.
 
+For smaller reading sessions, use the [ordered SQL part readers](../databases/sql-server-and-mysql/index.md). Start with their prerequisites page and follow the parts in order; the original full course remains available for reference and existing bookmarks.
+
 The optional [local service stack](../../examples/containers/local-services/README.md) is documented separately; review it before starting a database.
 
 [All learning paths](index.md)

@@ -4,7 +4,7 @@ Revision and review date: **3 November 2026**. All twelve workstreams have been 
 
 ## Baseline and preserved contracts
 
-The pre-edit `tools/baseline.json` records **51 original topic titles, 1,607 original subtopic IDs/text/order and 514 progress-check IDs**. Original-format restore fixtures are `tools/backup-v1.json` and `tools/backup-v2.json`. Original HTML SHA-256: `12a35942ed0fdc4bf92865f1f91669197483725c59d87df2a695e7a66f791346`. The original browser measured **16,082 initial DOM elements**.
+The pre-edit `tests/fixtures/baseline.json` records **51 original topic titles, 1,607 original subtopic IDs/text/order and 514 progress-check IDs**. Original-format restore fixtures are `tests/fixtures/backup-v1.json` and `tests/fixtures/backup-v2.json`. These fixtures were relocated from `tools/` without changing their bytes; paths in historical command output describe their original locations. Original HTML SHA-256: `12a35942ed0fdc4bf92865f1f91669197483725c59d87df2a695e7a66f791346`. The original browser measured **16,082 initial DOM elements**.
 
 The final-mode audit preserves all original titles, subtopic wording/order and stored progress identifiers; every original subtopic has exactly one unit reference-map assignment. The map is labeled **“Related original subtopics (reference map)”**. It is a navigation and study-scope relationship, not a claim that a small example fully teaches every advanced subject in the list. Progress remains self-reported and existing localStorage keys/v1/v2 backups are retained.
 

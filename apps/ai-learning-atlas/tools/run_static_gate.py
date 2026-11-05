@@ -15,12 +15,12 @@ def main():
     parser.add_argument('workstream')
     parser.add_argument('--final', action='store_true')
     args = parser.parse_args()
-    folder = ROOT/'tools/results'
-    folder.mkdir(exist_ok=True)
+    folder = REPO/'artifacts/ai-learning-atlas'
+    folder.mkdir(parents=True, exist_ok=True)
     stage = 'final' if args.final else 'ws1'
     commands = {
         'check': [sys.executable, '-B', 'tools/check_atlas.py', '--stage', stage],
-        'runtime': ['node', '--test', 'runtime.test.cjs'],
+        'runtime': ['node', '--test', 'tests/runtime.test.cjs'],
         'examples': [sys.executable, '-B', 'tools/check_unit_examples.py'],
         'diff': ['git', 'diff', '--check'],
     }

@@ -7,7 +7,7 @@
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const crypto = require('node:crypto');
-const http = require('node:http');
+const {createReaderServer, waitForReader} = require('./browser_support.cjs');
 const path = require('node:path');
 const {pathToFileURL} = require('node:url');
 const ROOT = path.resolve(__dirname, '..');
@@ -19,7 +19,7 @@ const target = path.resolve(arg('--page', path.join(ROOT, 'index.html')));
 const output = path.resolve(arg('--output', path.join(REPO, '.runtime/atlas-browser-extra.json')));
 const edge = arg('--browser', 'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe');
 const artifacts = output.replace(/\.json$/i, '') + '-artifacts';
-const baseline = JSON.parse(fs.readFileSync(path.join(__dirname, 'baseline.json'), 'utf8'));
+const baseline = JSON.parse(fs.readFileSync(path.join(ROOT, 'tests/fixtures/baseline.json'), 'utf8'));
 const initialHash=crypto.createHash('sha256').update(fs.readFileSync(target)).digest('hex');
 const result = {
   page_sha256:initialHash, target,
@@ -53,6 +53,7 @@ async function ready(page, url) {
   page.setDefaultTimeout(8000);
   page.setDefaultNavigationTimeout(15000);
   await page.goto(url, {waitUntil: 'load'});
+  await waitForReader(page);
   await page.waitForFunction(() => !!window.AtlasExperience && !!document.getElementById('library-level'));
 }
 
@@ -139,9 +140,9 @@ async function inspectWidths(page, protocol) {
       const dimensions = await page.evaluate(() => {
         const code = Array.from(document.querySelectorAll('.topic-card pre')).filter(node => node.getClientRects().length)
           .map(node => ({clientWidth: node.clientWidth, scrollWidth: node.scrollWidth, documentRight: node.getBoundingClientRect().right}));
-        return {width: innerWidth, scrollWidth: document.documentElement.scrollWidth, code, nextStepVisible: !document.getElementById('next-step-bar').hidden};
+        return {width: innerWidth, clientWidth: document.documentElement.clientWidth, scrollWidth: document.documentElement.scrollWidth, code, nextStepVisible: !document.getElementById('next-step-bar').hidden};
       });
-      same(dimensions.scrollWidth, dimensions.width, 'Expanded topic/code introduced horizontal page overflow.');
+      assert(dimensions.scrollWidth <= dimensions.clientWidth, 'Expanded topic/code introduced horizontal page overflow.');
       assert(dimensions.code.length > 0, 'No expanded code block was measured.');
       assert(dimensions.nextStepVisible, 'The next-step bar was not exercised.');
       await page.screenshot({path: path.join(artifacts, `${protocol}-${width}-expanded.png`), fullPage: false});
@@ -298,6 +299,7 @@ async function inspectOnboarding(page, url, protocol) {
     same(await page.evaluate(() => location.hash), '#beginner-workshop');
     same(await page.evaluate(() => localStorage.getItem('ai-atlas-onboarding-v1')), 'beginner');
     await page.reload({waitUntil: 'load'});
+    await waitForReader(page);
     assert(await page.locator('#atlas-onboarding').isHidden());
     assert(await page.locator('#role-home').isEnabled());
     await page.evaluate(() => localStorage.removeItem('ai-atlas-onboarding-v1'));
@@ -309,6 +311,7 @@ async function inspectOnboarding(page, url, protocol) {
     const focused = await page.evaluate(() => document.activeElement.tagName);
     same(focused, 'H1');
     await page.reload({waitUntil: 'load'});
+    await waitForReader(page);
     assert(await page.locator('#atlas-onboarding').isHidden());
     return {threeChoices: true, choice: 'beginner', dismissedFocus: focused, persistedAfterReload: true};
   });
@@ -482,6 +485,7 @@ async function inspectThemes(browser, url, protocol) {
       await page.emulateMedia({colorScheme: 'dark'});
       same((await themeState()).theme, 'light', 'A saved manual preference must override later OS changes.');
       await page.reload({waitUntil: 'load'});
+      await waitForReader(page);
       const reloaded = await themeState();
       same(reloaded.theme, 'light');
       same(reloaded.meta, light.meta);
@@ -494,6 +498,7 @@ async function inspectReviewFixes(page, url, protocol) {
   await check(`${protocol}: workshop reading view resumes after reload`, async () => {
     await page.locator('#lesson-focus').selectOption('lesson-function');
     await page.reload({waitUntil:'load'});
+    await waitForReader(page);
     same(await page.locator('#lesson-focus').inputValue(),'lesson-function');
     assert(await page.locator('#lesson-function').isVisible());
     return {resumed:'lesson-function'};
@@ -549,19 +554,14 @@ async function inspectProtocol(browser, url, protocol) {
 
 async function main() {
   fs.mkdirSync(artifacts, {recursive: true});
-  const server = http.createServer((req, res) => {
-    const requestPath = new URL(req.url, 'http://127.0.0.1').pathname;
-    if (requestPath === '/favicon.ico') { res.writeHead(204); res.end(); return; }
-    if (requestPath !== '/index.html' && requestPath !== '/') { res.writeHead(404); res.end(); return; }
-    res.setHeader('Content-Type', 'text/html; charset=utf-8');
-    res.end(fs.readFileSync(target));
-  });
+  const server = createReaderServer(target);
   await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
   const httpURL = `http://127.0.0.1:${server.address().port}/index.html`;
   let browser;
   try {
     browser = await chromium.launch({executablePath: edge, headless: true});
-    await inspectProtocol(browser, pathToFileURL(target).href, 'file');
+    result.browser = {name: 'Microsoft Edge', version: await browser.version(), executable: edge};
+    if (!argv.includes('--http-only')) await inspectProtocol(browser, pathToFileURL(target).href, 'file');
     await inspectProtocol(browser, httpURL, 'http');
   } finally {
     if (browser) await browser.close();

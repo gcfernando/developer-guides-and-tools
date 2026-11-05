@@ -2104,7 +2104,7 @@ CREATE TABLE products_clone LIKE products;
 ```
 
 > [!WARNING]
-> ⚠️ **Important limitation:** `SELECT INTO` and `CREATE TABLE AS SELECT` copy the **data and column types only**. They do **not** copy primary keys, foreign keys, indexes, defaults, or check constraints. The copy is a bag of rows, not a properly protected table. MySQL's [`CREATE TABLE ... LIKE`](https://dev.mysql.com/doc/refman/8.4/en/create-table-like.html) preserves columns and indexes but omits foreign keys; recreate and verify those separately.
+> ⚠️ **Important limitation:** `SELECT INTO` and `CREATE TABLE AS SELECT` copy the **data and column types only**. They do **not** copy primary keys, foreign keys, indexes, defaults, or check constraints. The copy is a bag of rows, not a properly protected table. MySQL's [`CREATE TABLE ... LIKE`](https://docs.oracle.com/cd/E17952_01/mysql-8.4-en/create-table-like.html) preserves columns and indexes but omits foreign keys; recreate and verify those separately.
 
 > [!TIP]
 > 💡 **Pro tip — the 30-second safety net.** Before any risky `UPDATE` or `DELETE` on production, take a copy first:
@@ -2405,7 +2405,7 @@ ORDER BY table_name, constraint_type;
 
 1. Try to insert a customer with a duplicate email. Read the error. Now try a `loyalty_tier` of `'Diamond'`. Read that error too.
 2. Try to delete customer #1 (who has orders). Which constraint stops you, and what exactly does the message say?
-3. 🟥 SQL Server: test a `CHECK` rejecting future `hire_date` values. 🟦 MySQL: first demonstrate that `CHECK (hire_date <= CURRENT_DATE)` is rejected because nondeterministic functions are forbidden. For a deterministic constraint exercise use an explicit fixed cutoff date; for a rolling “today” rule validate on each write in a trigger or application. A fixed cutoff is not the same business rule. See [MySQL CHECK restrictions](https://dev.mysql.com/doc/refman/8.4/en/create-table-check-constraints.html).
+3. 🟥 SQL Server: test a `CHECK` rejecting future `hire_date` values. 🟦 MySQL: first demonstrate that `CHECK (hire_date <= CURRENT_DATE)` is rejected because nondeterministic functions are forbidden. For a deterministic constraint exercise use an explicit fixed cutoff date; for a rolling “today” rule validate on each write in a trigger or application. A fixed cutoff is not the same business rule. See [MySQL CHECK restrictions](https://docs.oracle.com/cd/E17952_01/mysql-8.4-en/create-table-check-constraints.html).
 4. Delete order 1000 and observe what happens to its rows in `order_items` and `payments`. Explain why.
 
 > ### 🧭 In practice — constraints
@@ -4743,7 +4743,7 @@ FROM customers;
 >
 > **When _not_ to use it.** Do not apply a string function to a column inside a `WHERE` clause on a large table — `WHERE UPPER(email) = 'A@B.COM'` cannot use an index on `email`, so the engine reads every row. Fix it with a case-insensitive collation or a stored normalised column instead. And do not do heavy text formatting in SQL when the application layer is a better place for it; SQL is for finding data, not for laying it out.
 >
-> **Best practices.** Clean data **on the way in** rather than in every query that reads it. Beware the differences: `CONCAT` treats `NULL` as empty in SQL Server; [MySQL `CONCAT`](https://dev.mysql.com/doc/refman/8.4/en/string-functions.html#function_concat) returns `NULL` if any argument is `NULL`. Use explicit `COALESCE` arguments for matching behavior. SQL Server `+` propagates `NULL`. Remember that character length and byte length diverge for non-ASCII text, which matters for both truncation and column sizing ([Chapter 60](#60-collation-character-sets-and-unicode)).
+> **Best practices.** Clean data **on the way in** rather than in every query that reads it. Beware the differences: `CONCAT` treats `NULL` as empty in SQL Server; [MySQL `CONCAT`](https://docs.oracle.com/cd/E17952_01/mysql-8.4-en/string-functions.html#function_concat) returns `NULL` if any argument is `NULL`. Use explicit `COALESCE` arguments for matching behavior. SQL Server `+` propagates `NULL`. Remember that character length and byte length diverge for non-ASCII text, which matters for both truncation and column sizing ([Chapter 60](#60-collation-character-sets-and-unicode)).
 
 
 ---
@@ -4907,7 +4907,7 @@ FROM products;
 >
 > **Where to use it.** Reporting and billing. **Scenario:** an order total computed as `unit_price * quantity * (1 - discount)` produces long fractions. `ROUND(..., 2)` applied once, at a defined point, keeps the invoice, the payment, and the ledger agreeing — rounding at three different points is how a penny goes missing.
 >
-> **When _not_ to use it.** Do not do financial arithmetic on `FLOAT`/`DOUBLE` columns: the type cannot represent many decimal values exactly, so sums drift. Use `DECIMAL`. Also avoid integer division surprises — SQL Server `5 / 2` yields `2`, so cast one side when you want `2.5`. [MySQL `/`](https://dev.mysql.com/doc/refman/8.4/en/arithmetic-functions.html) yields a fractional result; MySQL `DIV` performs integer division.
+> **When _not_ to use it.** Do not do financial arithmetic on `FLOAT`/`DOUBLE` columns: the type cannot represent many decimal values exactly, so sums drift. Use `DECIMAL`. Also avoid integer division surprises — SQL Server `5 / 2` yields `2`, so cast one side when you want `2.5`. [MySQL `/`](https://docs.oracle.com/cd/E17952_01/mysql-8.4-en/arithmetic-functions.html) yields a fractional result; MySQL `DIV` performs integer division.
 >
 > **Best practices.** Decide **once** where rounding happens and document it; rounding at several stages of a calculation is a classic source of off-by-a-penny disputes. Be aware that `ROUND` uses half-away-from-zero in both engines here, which is not the banker's rounding some financial rules require — if your domain specifies a rounding mode, implement it explicitly rather than assuming.
 
@@ -9686,7 +9686,7 @@ DELIMITER ;
 | **Transaction scope** | An error inside a trigger rolls back the *whole* outer transaction |
 
 > [!WARNING]
-> ⚠️ **Check each ingestion path.** SQL Server `BULK INSERT` skips insert triggers unless `FIRE_TRIGGERS` is specified; MySQL `LOAD DATA INFILE` activates insert triggers. Neither engine fires delete triggers for `TRUNCATE`. Test the actual operation and permissions used by your loader. See the [MySQL trigger reference](https://dev.mysql.com/doc/refman/8.4/en/create-trigger.html) and [SQL Server BULK INSERT options](https://learn.microsoft.com/en-us/sql/t-sql/statements/bulk-insert-transact-sql).
+> ⚠️ **Check each ingestion path.** SQL Server `BULK INSERT` skips insert triggers unless `FIRE_TRIGGERS` is specified; MySQL `LOAD DATA INFILE` activates insert triggers. Neither engine fires delete triggers for `TRUNCATE`. Test the actual operation and permissions used by your loader. See the [MySQL trigger reference](https://docs.oracle.com/cd/E17952_01/mysql-8.4-en/create-trigger.html) and [SQL Server BULK INSERT options](https://learn.microsoft.com/en-us/sql/t-sql/statements/bulk-insert-transact-sql).
 
 > [!TIP]
 > 💡 **Modern alternatives to consider first:**
@@ -10123,7 +10123,7 @@ CREATE INDEX ix_customers_email_lower ON customers(email_lower);
 ```
 
 > [!TIP]
-> 💡 **This is the standard cure for the "a function on a column stops the index being used" problem** from [Chapter 48](#48-query-optimization-and-sargability). SQL Server uses a computed-column index for this shape. MySQL 8.4 also supports functional key parts, for example `CREATE INDEX ix_email_expression ON customers ((LOWER(email)))`; a named generated column is another option. Avoid creating redundant indexes and check collation/search semantics. See [MySQL functional indexes](https://dev.mysql.com/doc/refman/8.4/en/create-index.html#functional-key-parts).
+> 💡 **This is the standard cure for the "a function on a column stops the index being used" problem** from [Chapter 48](#48-query-optimization-and-sargability). SQL Server uses a computed-column index for this shape. MySQL 8.4 also supports functional key parts, for example `CREATE INDEX ix_email_expression ON customers ((LOWER(email)))`; a named generated column is another option. Avoid creating redundant indexes and check collation/search semantics. See [MySQL functional indexes](https://docs.oracle.com/cd/E17952_01/mysql-8.4-en/create-index.html#create-index-functional-key-parts).
 
 > [!WARNING]
 > ⚠️ **SQL Server permits nondeterministic nonpersisted computed expressions**, for example one using `GETDATE()`. Such a column cannot be `PERSISTED` or indexed. Indexable computed columns have determinism, precision, data-type, ownership and SET-option requirements; persistence alone does not make every expression indexable. MySQL generated expressions have their own restrictions. See [SQL Server computed columns](https://learn.microsoft.com/en-us/sql/relational-databases/tables/specify-computed-columns-in-a-table) and [index requirements](https://learn.microsoft.com/en-us/sql/relational-databases/indexes/indexes-on-computed-columns).
@@ -11503,7 +11503,7 @@ WHERE MATCH(product_name) AGAINST('Ultra* Vision*' IN BOOLEAN MODE);
 ```
 
 > [!TIP]
-> 💡 **Full-text search implements token/word search, not arbitrary substring matching.** The examples use explicit word prefixes so `Ultra*` can match a token such as `UltraBook`; searching for `Book` does not necessarily match inside that token. Tokenization, stopwords and minimum token lengths affect results. A leading-wildcard `LIKE` normally prevents a B-tree range seek, although a covering index can still be scanned. Choose the search semantics first; see [MySQL full-text documentation](https://dev.mysql.com/doc/refman/8.4/en/fulltext-search.html).
+> 💡 **Full-text search implements token/word search, not arbitrary substring matching.** The examples use explicit word prefixes so `Ultra*` can match a token such as `UltraBook`; searching for `Book` does not necessarily match inside that token. Tokenization, stopwords and minimum token lengths affect results. A leading-wildcard `LIKE` normally prevents a B-tree range seek, although a covering index can still be scanned. Choose the search semantics first; see [MySQL full-text documentation](https://docs.oracle.com/cd/E17952_01/mysql-8.4-en/fulltext-search.html).
 
 #### 46.8 🧭 What to index — the practical checklist
 
@@ -11608,7 +11608,7 @@ OPTIMIZE TABLE orders;        -- rebuild/reorganize; lock behavior depends on en
 ```
 
 > [!WARNING]
-> ⚠️ **InnoDB `OPTIMIZE TABLE` normally uses online DDL**, allowing concurrent DML during the main rebuild with brief exclusive metadata-lock phases. Some configurations/features require a table-copy path and block writes; a long-running transaction can also delay metadata locking. Plan storage, I/O and lock impact for the actual table rather than promising zero blocking. See [MySQL OPTIMIZE TABLE behavior](https://dev.mysql.com/doc/refman/8.4/en/optimize-table.html).
+> ⚠️ **InnoDB `OPTIMIZE TABLE` normally uses online DDL**, allowing concurrent DML during the main rebuild with brief exclusive metadata-lock phases. Some configurations/features require a table-copy path and block writes; a long-running transaction can also delay metadata locking. Plan storage, I/O and lock impact for the actual table rather than promising zero blocking. See [MySQL OPTIMIZE TABLE behavior](https://docs.oracle.com/cd/E17952_01/mysql-8.4-en/optimize-table.html).
 
 > [!TIP]
 > 💡 **Modern advice:** fragmentation matters far less on SSDs than it did on spinning disks. Chasing 5% fragmentation nightly is usually wasted effort — **updating statistics is more valuable than rebuilding indexes** in most systems today.
@@ -14221,7 +14221,7 @@ mysqlbinlog --start-position=RECORDED_POSITION \
 > [!WARNING]
 > ⚠️ **Without `log_bin` enabled, point-in-time recovery is impossible.** Your only option is restoring last night's dump and losing everything since. **Check that binary logging is on** with `SHOW VARIABLES LIKE 'log_bin';` — it is the MySQL equivalent of the transaction log. It has been on by default since MySQL 8.0, but it is often switched off to save disk space.
 
-**Recovery preconditions:** use the exact file and position recorded by `--source-data=2`, not an assumed backup start time. Archive the complete required log chain and test replay into an isolated restore instance. See [MySQL point-in-time recovery](https://dev.mysql.com/doc/refman/8.4/en/point-in-time-recovery-binlog.html). Physical `--copy-back` also requires a stopped server, an appropriate empty data directory, compatible tooling and restored ownership; the three XtraBackup commands above are an outline, not a complete restore runbook.
+**Recovery preconditions:** use the exact file and position recorded by `--source-data=2`, not an assumed backup start time. Archive the complete required log chain and test replay into an isolated restore instance. See [MySQL point-in-time recovery](https://docs.oracle.com/cd/E17952_01/mysql-8.4-en/point-in-time-recovery-binlog.html). Physical `--copy-back` also requires a stopped server, an appropriate empty data directory, compatible tooling and restored ownership; the three XtraBackup commands above are an outline, not a complete restore runbook.
 
 #### 56.4 🌐 High availability
 

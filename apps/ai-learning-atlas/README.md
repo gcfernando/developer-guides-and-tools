@@ -19,6 +19,8 @@ Open the [AI Learning Atlas](https://gcfernando.github.io/developer-guides-and-t
 
 A modern browser opens the generated `index.html` directly from a local file. Core reading needs no server or external fonts, scripts or assets. JavaScript renders the stored topic bodies and enables search, filters, role selection and progress. Every supplied reference file is embedded; Save buttons create downloads from the displayed text with Blob URLs, so the adjacent `exercises/` directory is not needed for reader downloads. Online reference links are labeled and require internet.
 
+The published URL uses a lighter hosted reader with the same content, anchors, controls and browser-storage keys. It loads versioned assets from the same site and yields between loading sections to keep the page responsive. Its **Download the complete offline HTML** link provides the original standalone file. A loading failure displays an error, Retry and a link to that complete file; it never silently presents a partial reader as ready.
+
 The eight-lesson workshop needs Python 3.10 or newer, a text editor and terminal. It uses the standard library, synthetic data and a local-only service. No cloud account, GPU, package installation, model or API key is required after Python is available. Installing Python and following online references need internet. The optional model-adapter lesson adds a fully offline deterministic mock and a provider-filled real-model stub. Real use needs the chosen provider account, current integration documentation and possibly paid usage. Other topic labs state their tool and resource assumptions separately.
 
 <a id="guide-quick-start"></a>
@@ -95,14 +97,19 @@ Edit the sources and rebuild; do not maintain `index.html` manually.
 | `source/template.html` | Existing reader layout, presentation and stable legacy sections |
 | `source/reader.js`, `dashboard.js`, `learning.js`, `experience.js` | Reader, persistence, lesson, filter, navigation and lazy-rendering behavior |
 | `source/atlas.css` | Consolidated reader stylesheet, semantic color tokens, themes, responsive and print rules |
+| `source/hosted.css`, root `scripts/templates/atlas-loader.js` | Hosted-only offscreen rendering and explicit incremental loading/error recovery |
 | `exercises/` | Runnable Python references, synthetic CSV and tests |
 | `build.py` | Dependency-free generation of one standalone reader |
-| `tools/check_atlas.py`, `tools/baseline.json`, `source/subtopics.sha256` | Preserved content/progress baseline, source freshness, IDs, links, search, units, curriculum and extracted exercise checks |
+| Root `scripts/build-atlas-hosted.cjs` | Derives hosted assets and a byte-identical offline download without changing the standalone source |
+| `tools/check_atlas.py`, `tests/fixtures/baseline.json`, `source/subtopics.sha256` | Preserved content/progress baseline, source freshness, IDs, links, search, units, curriculum and extracted exercise checks |
 | `tools/check_unit_examples.py`, `tools/check_ml_labs.py` | Recomputed teaching arithmetic and executed ML-snippet expectations |
-| `tools/results/` | Selected baseline comparisons, final verification reports and fresh cleanup checks (intermediate dumps removed) |
-| `runtime.test.cjs` | Backup compatibility, invalid restore, storage failures, size limits and lesson revelation |
+| `tools/results/` | Frozen historical reports; new routine output belongs in ignored root `artifacts/` or `.runtime/` |
+| `tests/fixtures/` | Immutable baseline and v1/v2 backup compatibility fixtures |
+| `tests/runtime.test.cjs` | Backup compatibility, invalid restore, storage failures, size limits and lesson revelation |
 
 Run from the repository root:
+
+Use `npm run build:atlas` to regenerate this reader and `npm run check:atlas` for the content, embedded-exercise, arithmetic and runtime checks. Both are included in the root build/test commands. The individual commands below remain available for focused work.
 
 ```text
 python apps/ai-learning-atlas/build.py
@@ -115,7 +122,7 @@ node --check apps/ai-learning-atlas/source/reader.js
 node --check apps/ai-learning-atlas/source/dashboard.js
 node --check apps/ai-learning-atlas/source/learning.js
 node --check apps/ai-learning-atlas/source/experience.js
-node --test apps/ai-learning-atlas/runtime.test.cjs
+node --test apps/ai-learning-atlas/tests/runtime.test.cjs
 ```
 
 The Node runtime tests use the repository's existing `linkedom` development dependency; run `npm ci` if dependencies are absent. Python build/content checks and reference exercises use the standard library only.

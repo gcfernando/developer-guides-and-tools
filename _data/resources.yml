@@ -26,13 +26,19 @@
   {
     "path": "examples/machine-learning/ml-handbook/README.md",
     "topic": "Data science and machine learning",
-    "type": "Datasets and desktop example",
+    "type": "Beginner course, datasets and desktop example",
     "level": "Beginner to advanced"
   },
   {
     "path": "docs/databases/sql-server-and-mysql.md",
     "topic": "Databases",
     "type": "Course",
+    "level": "Beginner to advanced"
+  },
+  {
+    "path": "docs/databases/sql-server-and-mysql/index.md",
+    "topic": "Databases",
+    "type": "Course part index",
     "level": "Beginner to advanced"
   },
   {

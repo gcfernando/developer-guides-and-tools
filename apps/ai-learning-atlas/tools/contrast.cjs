@@ -13,8 +13,9 @@ const axe = fs.readFileSync(path.join(repo, '.runtime/atlas-tools/node_modules/a
 const staged = process.argv.includes('--staged');
 const outIndex = process.argv.indexOf('--out');
 const out = outIndex >= 0 ? path.resolve(process.argv[outIndex+1]) : path.join(root, '.runtime/contrast.json');
+let browser;
 (async () => {
-  const browser = await chromium.launch({executablePath:'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe', headless:true});
+  browser = await chromium.launch({executablePath:'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe', headless:true});
   const page = await browser.newPage({viewport:{width:1280,height:900}});
   await page.goto(pathToFileURL(path.join(root, 'index.html')).href);
   if (staged) {
@@ -39,7 +40,7 @@ const out = outIndex >= 0 ? path.resolve(process.argv[outIndex+1]) : path.join(r
   await page.addScriptTag({content:axe});
   const fingerprint = file => crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
   await page.keyboard.press('Tab');
-  const result = {page_sha256:fingerprint(path.join(root,'index.html')),css_sha256:fingerprint(path.join(root,'source/atlas.css')),staged, viewport:1280, exclusions:['Decorative text within aria-hidden=true (including the brand emoji and search magnifier) is excluded from text contrast sampling.'], themes:{}};
+  const result = {browser:{name:'Microsoft Edge',version:await browser.version()},page_sha256:fingerprint(path.join(root,'index.html')),css_sha256:fingerprint(path.join(root,'source/atlas.css')),staged, viewport:1280, exclusions:['Decorative text within aria-hidden=true (including the brand emoji and search magnifier) is excluded from text contrast sampling.'], themes:{}};
   for (const theme of ['light','dark']) {
     await page.evaluate(t => document.documentElement.dataset.theme=t, theme);
     result.themes[theme] = await page.evaluate(() => {
@@ -112,5 +113,5 @@ const out = outIndex >= 0 ? path.resolve(process.argv[outIndex+1]) : path.join(r
   fs.mkdirSync(path.dirname(out),{recursive:true});fs.writeFileSync(out,JSON.stringify(result,null,2));
   for(const [theme,data] of Object.entries(result.themes)) console.log(theme,JSON.stringify({sampled:data.sampledPairs.length,belowThreshold:data.lowPairs.length,uiPairs:data.uiPairs.length,lowUI:data.lowUI,gradientPairs:data.gradientPairs.length,axeViolations:data.axe.length,axeIncomplete:data.axeIncomplete.map(item=>({id:item.id,nodes:item.nodes}))}));
   console.log('deadSelectors',JSON.stringify(result.deadSelectors));console.log('report',out);
-  await browser.close();
-})().catch(error=>{console.error(error);process.exitCode=1;});
+  if(Object.values(result.themes).some(theme=>theme.lowPairs.length||theme.lowUI.length||theme.axe.length))process.exitCode=1;
+})().catch(error=>{console.error(error);process.exitCode=1;}).finally(async()=>{if(browser)await browser.close();});

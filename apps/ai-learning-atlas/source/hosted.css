@@ -1,0 +1,13 @@
+@supports (content-visibility: auto) {
+  :where(main > .section:not(#start):not(#entry-check)) {
+    content-visibility: auto;
+    contain-intrinsic-block-size: auto 1800px;
+  }
+}
+
+@media print {
+  main > .section {
+    content-visibility: visible;
+    contain-intrinsic-block-size: none;
+  }
+}
