@@ -1,6 +1,7 @@
 {
   "README.md": "/repository/",
   "apps/README.md": "/interactive-tools/",
+  "apps/ai-agent-team-guides/README.md": "/ai-agent-team-guides/",
   "apps/ai-learning-atlas/README.md": "/apps/ai-learning-atlas/guide/",
   "apps/linux-command-reference/README.md": "/apps/linux-command-reference/guide/",
   "docs/ai/coding-addons.md": "/ai/coding-addons/guide/",

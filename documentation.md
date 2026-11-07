@@ -65,6 +65,9 @@ permalink: /documentation/
 | [Local AI Chat App with Ollama and Streamlit on Windows](docs/ai/local-ai-chat-lab.md) | Lab | Beginner |
 | [AI Coding Add-ons: Beginner’s Project Guide](docs/ai/coding-addons.md) | Guide | Beginner |
 | [AI Coding Add-ons Browser Guide](https://gcfernando.github.io/developer-guides-and-tools/apps/ai-coding-addons/index.html) | Interactive reader | Beginner |
+| [Claude Code Agent Team Guide](https://gcfernando.github.io/developer-guides-and-tools/apps/ai-agent-team-guides/claude-code-guide.html) | Interactive reader | Beginner |
+| [OpenAI Codex Agent Team Guide](https://gcfernando.github.io/developer-guides-and-tools/apps/ai-agent-team-guides/openai-codex-guide.html) | Interactive reader | Beginner |
+| [GitHub Copilot Agent Team Guide](https://gcfernando.github.io/developer-guides-and-tools/apps/ai-agent-team-guides/github-copilot-guide.html) | Interactive reader | Beginner |
 | [AI Learning Atlas](https://gcfernando.github.io/developer-guides-and-tools/apps/ai-learning-atlas/index.html) | Interactive reader | All levels |
 | [AI Learning Atlas — Study Paths and Progress Guide](apps/ai-learning-atlas/README.md) | Application guide | All levels |
 

@@ -92,6 +92,30 @@
     "description": "A searchable, standalone HTML edition generated from the Markdown guide."
   },
   {
+    "path": "apps/ai-agent-team-guides/claude-code-guide.html",
+    "topic": "AI",
+    "type": "Interactive reader",
+    "level": "Beginner",
+    "title": "Claude Code Agent Team Guide",
+    "description": "Browser guide to Claude Code sub-agents, skills, instructions, models and review teams."
+  },
+  {
+    "path": "apps/ai-agent-team-guides/openai-codex-guide.html",
+    "topic": "AI",
+    "type": "Interactive reader",
+    "level": "Beginner",
+    "title": "OpenAI Codex Agent Team Guide",
+    "description": "Browser guide to Codex custom sub-agents, skills, instructions, models and review teams."
+  },
+  {
+    "path": "apps/ai-agent-team-guides/github-copilot-guide.html",
+    "topic": "AI",
+    "type": "Interactive reader",
+    "level": "Beginner",
+    "title": "GitHub Copilot Agent Team Guide",
+    "description": "Browser guide to Copilot custom agents, skills, instructions, models and review teams."
+  },
+  {
     "path": "apps/ai-learning-atlas/index.html",
     "topic": "AI",
     "type": "Interactive reader",
