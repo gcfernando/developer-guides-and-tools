@@ -61,9 +61,7 @@ Keep the courses' exercise order, prerequisites and code context. SQL Server and
 | [Linux command reference](apps/linux-command-reference/README.md) | Search commands and usage examples in a browser; the guide explains offline use. |
 | [AI Learning Atlas](apps/ai-learning-atlas/README.md) | Explore topics and role paths, then record and back up your own progress. |
 | [AI coding add-ons](docs/ai/coding-addons.md) | Read installation and configuration notes, or use the [filterable browser reader](https://gcfernando.github.io/developer-guides-and-tools/apps/ai-coding-addons/index.html). |
-| [Claude Code agent team guide](https://gcfernando.github.io/developer-guides-and-tools/apps/ai-agent-team-guides/claude-code-guide.html) | Learn about sub-agents, skills, instructions and review teams in Claude Code. |
-| [OpenAI Codex agent team guide](https://gcfernando.github.io/developer-guides-and-tools/apps/ai-agent-team-guides/openai-codex-guide.html) | Learn about custom sub-agents, skills, instructions and review teams in Codex. |
-| [GitHub Copilot agent team guide](https://gcfernando.github.io/developer-guides-and-tools/apps/ai-agent-team-guides/github-copilot-guide.html) | Learn about custom agents, skills, instructions and review teams in Copilot. |
+| Agent Team Guide | [Claude Code](https://gcfernando.github.io/developer-guides-and-tools/apps/ai-agent-team-guides/claude-code-guide.html), [OpenAI Codex](https://gcfernando.github.io/developer-guides-and-tools/apps/ai-agent-team-guides/openai-codex-guide.html), [GitHub Copilot](https://gcfernando.github.io/developer-guides-and-tools/apps/ai-agent-team-guides/github-copilot-guide.html). |
 
 For offline Linux search, keep the complete application folder together. The repository's Atlas and add-ons readers are standalone HTML files; external documentation links still need internet access. The published Atlas uses a lighter hosted version and offers the complete offline file for download. Atlas completion is self-reported: export a JSON backup before switching browsers, profiles, hosting locations or local-file contexts.
 
