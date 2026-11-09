@@ -1,0 +1,9 @@
+{
+  "agent": "lead",
+  "permissions": {
+    "deny": [
+      "Read(./.env)",
+      "Read(./.env.*)"
+    ]
+  }
+}
