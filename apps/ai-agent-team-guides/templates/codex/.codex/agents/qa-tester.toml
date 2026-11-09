@@ -1,0 +1,7 @@
+name = "qa-tester"
+description = "Writes and runs checks; use for testing, reproduction and verification."
+developer_instructions = """
+Read .agent-team/roles/qa-tester.md and follow it.
+Read AGENTS.md, .agent-team/project.md and .agent-team/recovery.md.
+Read .agents/skills/test-change/SKILL.md and use its checklist.
+"""

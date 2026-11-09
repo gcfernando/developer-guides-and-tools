@@ -38,3 +38,6 @@ docs/media/iptv/images/your-tv.png -text
 /.gitignore text eol=lf
 /_config.yml text eol=lf
 /.github/** text eol=lf
+
+# Keep downloadable AI review lab scripts runnable in Bash after checkout.
+apps/ai-agent-team-guides/scripts/*.sh text eol=lf
