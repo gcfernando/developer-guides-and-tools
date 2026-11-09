@@ -1,11 +1,9 @@
----
-title: "AI Agent Team Guides Revision Test Log"
-description: "Changes and local verification for the lead, developer, QA tester and DevOps guides."
----
-
 # Four-agent team rewrite and test log
 
 Rewritten 9 November 2026.
+
+This log is a static Markdown download so the same relative link works in the
+published site and the offline guides. It intentionally has no Jekyll front matter.
 
 ## What changed
 
