@@ -1,0 +1,6 @@
+interface:
+  display_name: "Team plan"
+  short_description: "Coordinate source changes, checks and build work"
+  default_prompt: "Use $team-plan to coordinate the requested project task."
+policy:
+  allow_implicit_invocation: true

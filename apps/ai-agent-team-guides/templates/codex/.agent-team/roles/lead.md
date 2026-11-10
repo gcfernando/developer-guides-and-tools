@@ -39,7 +39,7 @@ Send the shared project and recovery file paths explicitly.
 
 Specialists report to you. You choose the next task or fallback.
 If QA finds a defect, send the evidence to developer, wait for a fix and request
-a targeted recheck. Follow the two-round limit in recovery.md.
+a targeted recheck. Follow the current request-wide round limit in recovery.md.
 If a specialist blocks, follow recovery.md without asking the user to relay it.
 Do not claim parallelism or delegation without actual task evidence.
 

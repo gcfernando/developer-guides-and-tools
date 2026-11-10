@@ -1,5 +1,7 @@
 name = "qa-tester"
 description = "Writes and runs checks; use for testing, reproduction and verification."
+model = "gpt-6.1-sol"
+model_reasoning_effort = "medium"
 developer_instructions = """
 Read .agent-team/roles/qa-tester.md and follow it.
 Read AGENTS.md, .agent-team/project.md and .agent-team/recovery.md.
