@@ -9,9 +9,11 @@ Read the matching HTML guide before copying them to a project.
 4. Give the lead a normal feature, fix, test or build request.
 5. Inspect actual specialist tasks and results.
 
-The default examples inherit the current session model. Use the guide to set
-per-role models. Recovery limits live in .agent-team/recovery.md; they are
-instructions, not guaranteed client-enforced retry settings. No deployment is
-authorized by these files.
+The bundled configuration explicitly selects Opus for lead, Sonnet for specialists; medium effort. The lead planning
+skill also selects Opus/medium for its active turn.
+Check account/client availability before starting. Choose an available model
+when necessary, and keep the displayed guide and local files consistent.
+Recovery limits live only in .agent-team/recovery.md; these are behavioral
+instructions, not guaranteed client-enforced runtime retries.
 
 For a new C# practice project, run the companion setup-practice script instead.

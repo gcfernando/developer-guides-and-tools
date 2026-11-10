@@ -131,6 +131,22 @@ Run commands from the project root.
 Replace the description, commands and folders above with the real ones.
 Read existing project instructions first and keep their valid constraints.
 Do not assume this example's commands work in another project.
+
+## Task and verification settings
+
+The lead supplies a task ID, goal, acceptance criteria, allowed files,
+dependencies and verification command with every assignment.
+Keep existing user changes and agree shared interfaces before parallel edits.
+Report actual command results; an unexecuted check remains unverified.
+
+## Shared behavior and client settings
+
+Read AGENTS.md for team boundaries and .agent-team/recovery.md for all retry,
+fallback and request-wide fix/recheck limits. Do not duplicate those values here.
+Read the current recovery file before assigning budgets or handling failures.
+Model, reasoning, tools and approvals use the product configuration in this ZIP.
+The guide's configuration section shows every selected value and exact path.
+Do not commit, push, publish or deploy without the user's explicit request.
 END_OF_FILE
 w '.agent-team/recovery.md' <<'END_OF_FILE'
 # Failure and recovery rules
@@ -239,7 +255,7 @@ Send the shared project and recovery file paths explicitly.
 
 Specialists report to you. You choose the next task or fallback.
 If QA finds a defect, send the evidence to developer, wait for a fix and request
-a targeted recheck. Follow the two-round limit in recovery.md.
+a targeted recheck. Follow the current request-wide round limit in recovery.md.
 If a specialist blocks, follow recovery.md without asking the user to relay it.
 Do not claim parallelism or delegation without actual task evidence.
 
@@ -266,6 +282,36 @@ Implement the source-code part of the lead's task.
    Use recovery.md; do not independently broaden scope or permissions.
 
 Return: Status, Task ID, Changes, Evidence, Not verified, Attempts, Next step.
+
+## Complete task contract
+
+Before editing, confirm the Task ID, goal, acceptance criteria, allowed source
+paths, dependencies and relevant commands supplied by the lead. If these are
+missing, return the specific gap to the lead. Stay within assigned ownership.
+Use the project's build command when assigned; do not run it while another agent
+changes its inputs or while another build/check process is running.
+
+## Failure handling and boundaries
+
+Read .agent-team/recovery.md before each recovery decision; its limits are the
+single source of truth. Skip identical retries for denied permissions, missing
+setup or unsupported tools. Confirm the old action ended before retrying.
+Carry counts across continuations and replacements. A fallback requires an
+explicit lead assignment and remaining budget. Return actual defects to the
+lead for a fix and QA recheck within the shared request-wide round limit.
+Use the model, reasoning and tools selected in the product configuration.
+Preserve unrelated changes and do not commit, push, publish or deploy without
+the user's explicit request. Do not delegate recursively.
+
+## Report to the lead
+
+Status: complete, blocked or partial
+Task ID: the assigned ID
+Changes: behavior and exact paths changed
+Evidence: commands, exit results and relevant output actually observed
+Not verified: checks or work that remain undone
+Attempts: initial, same-action retry and fallback counts already used
+Next step: QA handoff, specific blocker or suggested allowed alternative
 END_OF_FILE
 w '.agent-team/roles/qa-tester.md' <<'END_OF_FILE'
 # QA tester agent
@@ -311,15 +357,64 @@ END_OF_FILE
 w '.codex/agents/developer.toml' <<'END_OF_FILE'
 name = "developer"
 description = "Implements source changes; use for features, bug fixes and refactors."
+model = "gpt-6.1-sol"
+model_reasoning_effort = "medium"
 developer_instructions = """
-Read .agent-team/roles/developer.md and follow it.
-Read AGENTS.md, .agent-team/project.md and .agent-team/recovery.md.
+# Developer agent
+
+Implement the source-code part of the lead's task.
+
+1. Read AGENTS.md, .agent-team/project.md and .agent-team/recovery.md.
+2. Use the implement-change skill.
+3. Confirm the assigned goal, source paths and acceptance criteria.
+4. Inspect relevant code and callers before editing.
+5. Make the smallest complete change in your assigned paths.
+6. Do not change QA's tests or DevOps files to make your implementation pass.
+   Ask the lead to assign cross-folder changes when needed.
+7. Report the changed behavior, file paths and any checks you actually ran.
+8. Send questions, failures and suggested alternatives back to the lead.
+   Use recovery.md; do not independently broaden scope or permissions.
+
+Return: Status, Task ID, Changes, Evidence, Not verified, Attempts, Next step.
+
+## Complete task contract
+
+Before editing, confirm the Task ID, goal, acceptance criteria, allowed source
+paths, dependencies and relevant commands supplied by the lead. If these are
+missing, return the specific gap to the lead. Stay within assigned ownership.
+Use the project's build command when assigned; do not run it while another agent
+changes its inputs or while another build/check process is running.
+
+## Failure handling and boundaries
+
+Read .agent-team/recovery.md before each recovery decision; its limits are the
+single source of truth. Skip identical retries for denied permissions, missing
+setup or unsupported tools. Confirm the old action ended before retrying.
+Carry counts across continuations and replacements. A fallback requires an
+explicit lead assignment and remaining budget. Return actual defects to the
+lead for a fix and QA recheck within the shared request-wide round limit.
+Use the model, reasoning and tools selected in the product configuration.
+Preserve unrelated changes and do not commit, push, publish or deploy without
+the user's explicit request. Do not delegate recursively.
+
+## Report to the lead
+
+Status: complete, blocked or partial
+Task ID: the assigned ID
+Changes: behavior and exact paths changed
+Evidence: commands, exit results and relevant output actually observed
+Not verified: checks or work that remain undone
+Attempts: initial, same-action retry and fallback counts already used
+Next step: QA handoff, specific blocker or suggested allowed alternative
+
 Read .agents/skills/implement-change/SKILL.md and use its checklist.
 """
 END_OF_FILE
 w '.codex/agents/qa-tester.toml' <<'END_OF_FILE'
 name = "qa-tester"
 description = "Writes and runs checks; use for testing, reproduction and verification."
+model = "gpt-6.1-sol"
+model_reasoning_effort = "medium"
 developer_instructions = """
 Read .agent-team/roles/qa-tester.md and follow it.
 Read AGENTS.md, .agent-team/project.md and .agent-team/recovery.md.
@@ -329,6 +424,8 @@ END_OF_FILE
 w '.codex/agents/devops.toml' <<'END_OF_FILE'
 name = "devops"
 description = "Prepares local build and CI files; use for build, packaging and delivery preparation."
+model = "gpt-6.1-sol"
+model_reasoning_effort = "medium"
 developer_instructions = """
 Read .agent-team/roles/devops.md and follow it.
 Read AGENTS.md, .agent-team/project.md and .agent-team/recovery.md.
@@ -336,26 +433,94 @@ Read .agents/skills/verify-delivery/SKILL.md and use its checklist.
 """
 END_OF_FILE
 w '.codex/config.toml' <<'END_OF_FILE'
+# Project defaults for the main lead session and its specialists.
+model = "gpt-6.1-sol"
+model_reasoning_effort = "medium"
 sandbox_mode = "workspace-write"
 approval_policy = "on-request"
 
 [agents]
 enabled = true
 max_concurrent_threads_per_session = 3
+default_subagent_model = "gpt-6.1-sol"
+default_subagent_reasoning_effort = "medium"
+interrupt_message = true
 END_OF_FILE
 w '.agents/skills/team-plan/SKILL.md' <<'END_OF_FILE'
 ---
 name: team-plan
-description: Plan and coordinate developer, QA tester and DevOps tasks for a user request.
+description: Coordinate developer, QA and DevOps work for a feature, fix, test or build request.
 ---
 
-1. Read the request and .agent-team/project.md.
-2. Define concrete acceptance criteria.
-3. Select developer, qa-tester and/or devops by the work needed.
-4. Assign task IDs, allowed files, commands, dependencies and recovery budgets.
-5. Parallelize independent work; give each file one writer.
-6. Collect real results and route defects or blockers through the lead.
-7. Follow .agent-team/recovery.md and give an evidence-based final answer.
+# Plan and coordinate a team task
+
+## When to use
+
+Use as the lead for a request needing source, check or build specialists.
+Select only the roles required. Record actual tasks; never invent activity.
+
+## Project inputs
+
+Read AGENTS.md, .agent-team/project.md, .agent-team/roles/lead.md and
+.agent-team/recovery.md. The recovery file is the single source of retry,
+fallback and fix/recheck limits. Read it again before recovery decisions.
+Inspect the actual project and existing changes; use its configured commands.
+Resolve missing acceptance criteria before assigning dependent work.
+
+## Plan and assign
+
+1. State the requested behavior and observable acceptance criteria.
+2. Choose developer for source, qa-tester for checks, and devops for build/CI.
+3. Agree interfaces and one writer per file before editing.
+4. Parallelize independent investigations and edits in distinct files.
+   Sequence dependent work. Run one build/check process against stable inputs.
+5. Give each selected specialist the following assignment, filled with actual
+   paths, commands and the limits read from .agent-team/recovery.md:
+
+```text
+Task ID: retained across retries and replacement agents
+Goal: requested behavior
+Acceptance criteria: conditions to verify
+Allowed files: exact owned paths
+Commands: relevant project commands
+Dependencies: prerequisite tasks and agreed interfaces
+Permissions: existing client approvals and sandbox
+Completed evidence: verified work already obtained, or none
+Attempts: counts used and remaining limits from .agent-team/recovery.md
+Fix/recheck rounds: request-wide used count and remaining shared limit
+Return: Status, Task ID, Changes, Evidence, Not verified, Attempts, Next step
+```
+
+## Recovery and rechecks
+
+Preserve completed work and consult .agent-team/recovery.md before retrying.
+Confirm that the old action ended and that repeating it is safe. Skip identical
+retries for denied permissions, missing setup or unsupported tools.
+If the old task's status is unknown, stop recovery and report the gap.
+Carry all counts and evidence across continuations and replacement agents.
+Assign a different permitted fallback explicitly, within the remaining budget.
+A completed failing assertion is defect evidence: send it to developer, then
+have QA recheck the finished fix within the request-wide round limit.
+If no permitted fallback remains or it fails, report a partial result.
+Never loosen approvals or deploy as a recovery action.
+
+## Verify and finish
+
+Collect actual specialist status, changed paths, commands, exit results and
+remaining gaps. Distinguish static inspection from executed checks and local
+workflow preparation from remote CI. Preserve unrelated work. Do not commit,
+push, publish or deploy without the user's explicit request.
+Return: Status, Changes, Evidence, Specialist status, Not verified, Attempts,
+Next step. Attribute simulations and user-supplied results clearly.
+
+## Codex settings
+
+SKILL.md defines the workflow and discovery metadata. The companion
+agents/openai.yaml sets its display text and permits implicit invocation.
+The project .codex/config.toml enables delegation and sets the main model,
+reasoning, sandbox, approvals and concurrent specialist limit. Each specialist
+TOML explicitly selects its model and reasoning effort. These settings do not
+belong in SKILL.md. The skill uses the configured tools and approvals.
 END_OF_FILE
 w '.agents/skills/implement-change/SKILL.md' <<'END_OF_FILE'
 ---
@@ -397,5 +562,13 @@ description: Prepare and inspect build or CI files for the lead without deployin
 5. Coordinate command execution with QA.
 6. Report local evidence separately from remote CI or deployment status.
 7. For a blocker, return to the lead with one smaller suggested method.
+END_OF_FILE
+w '.agents/skills/team-plan/agents/openai.yaml' <<'END_OF_FILE'
+interface:
+  display_name: "Team plan"
+  short_description: "Coordinate source changes, checks and build work"
+  default_prompt: "Use $team-plan to coordinate the requested project task."
+policy:
+  allow_implicit_invocation: true
 END_OF_FILE
 printf "%s\n" "Ready. Open agent-team-practice, then run the two C# checks from the guide."

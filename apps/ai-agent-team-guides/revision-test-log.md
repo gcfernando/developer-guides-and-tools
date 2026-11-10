@@ -1,5 +1,113 @@
 # Four-agent team rewrite and test log
 
+## Official configuration corrections — 10 November 2026
+
+The complete examples now include selected configuration values directly in
+their final files. The earlier review's inheritance defaults and repeated
+recovery summaries have been replaced as follows:
+
+- Codex: GPT-6.1 Sol/medium in the complete project config and all three agent
+  TOMLs; workspace-write/on-request; enabled delegation; three concurrently open
+  specialist threads excluding the lead; explicit specialist defaults and
+  interrupt-message behavior. Global controls stay in .codex/config.toml.
+- Claude: Opus/medium for the lead and planning skill, Sonnet/medium for the
+  specialists, explicit default permissions, and a documented 30-turn cap in
+  the representative developer definition. The lead includes TaskStop for
+  recovery. Project settings select the lead and its model.
+- Copilot: explicit GPT-6.1 Sol/medium in every agent, with preferred model
+  policy, automatic delegation eligibility, instruction opt-in and tool lists.
+  The guide explains model overrides, fallback and the Auto-session exception.
+- Product-specific skill examples: Claude model/effort and invocation/read-tool
+  controls; Copilot invocation/read-tool controls; Codex workflow metadata plus
+  the complete agents/openai.yaml display/invocation companion.
+- Recovery limits remain numeric only in recovery.md among the authoritative
+  instruction files. Expanded project, developer and planning instructions read
+  those current limits instead of repeating them. Walkthroughs illustrate the
+  bundled defaults and are labelled accordingly.
+- Added missing files to the Codex/Claude folder trees, removed Copilot-specific
+  installation text from other guides, corrected the Codex approvals/security
+  source link, and replaced isolated model snippets with links to complete files.
+- Updated all three ZIPs, template READMEs, six starter scripts and displayed
+  template blocks. The original CSS and JavaScript remain byte-for-byte equal
+  to the repository versions.
+
+Official references used for these corrections:
+
+- [Codex agents](https://learn.chatgpt.com/docs/agent-configuration/subagents),
+  [config basics](https://learn.chatgpt.com/docs/config-file/config-basic),
+  [config reference](https://learn.chatgpt.com/docs/config-file/config-reference),
+  [skills](https://learn.chatgpt.com/docs/build-skills), and
+  [approvals/security](https://learn.chatgpt.com/docs/agent-approvals-security).
+- [Claude agents](https://code.claude.com/docs/en/sub-agents),
+  [skills](https://code.claude.com/docs/en/skills),
+  [settings](https://code.claude.com/docs/en/settings), and
+  [model configuration](https://code.claude.com/docs/en/model-config).
+- [Copilot CLI field reference](https://docs.github.com/en/copilot/reference/copilot-cli-reference/cli-command-reference),
+  [custom agents](https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/create-custom-agents-for-cli), and
+  [skills](https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/add-skills).
+
+Verification completed:
+
+- Six regression tests in tests/test_agent_team_guides.py passed. They check
+  explicit model/reasoning/global settings, product-specific skill metadata,
+  recovery-source consistency, folder trees, and displayed/downloaded/embedded
+  file equality. These checks run with Python's standard library.
+- All six PowerShell/Bash starters executed in new isolated folders, generated
+  the corrected templates (including the Codex skill companion), and refused
+  reruns against existing folders while preserving a sentinel user file.
+- TOML and YAML syntax, archive integrity, local links and fragment IDs passed.
+- All 12 Edge combinations passed: three guides, 1440px/390px, HTTP/file URLs.
+  Checked actual HTTP ZIP downloads, full skill/developer copying, Codex project
+  configuration copying including the model and [agents] controls, themes,
+  absence of page overflow and JavaScript errors. Clipboard checks use a stub.
+- Inspected desktop/mobile screenshots; original style and script blocks match.
+- Repository standards and git diff whitespace checks passed.
+
+Validation covers documentation, local files and browser behavior. It does not
+claim an authenticated agent-team run, effective account model access, live
+recovery, remote CI, deployment or published-site verification.
+
+## Guide review updates — 10 November 2026
+
+- Removed the rewritten-date badge shown in the supplied screenshot from all
+  three HTML headers. The screenshot file itself is preserved.
+- Added a matching ZIP download button to each header and extraction guidance
+  in the existing downloads section.
+- Expanded one representative file in each file-authoring section: project.md
+  for shared settings, developer.md for role instructions, the product-specific
+  developer definition for registration, and team-plan/SKILL.md for skills.
+  Each is labelled as a complete example and retains the existing copy control.
+- The developer definition now includes its role body directly. Shared project
+  settings, recovery rules and the implementation skill remain separate inputs.
+  Other roles and skills retain their existing examples.
+- Updated the matching templates, all three ZIPs and the embedded contents in
+  all six starter scripts. Kept the existing CSS and page interactions.
+
+Validation performed for this update:
+
+| Check | Observed result |
+| --- | --- |
+| All three guides' IDs, fragment targets and relative file links | Passed; no duplicate IDs or broken local targets |
+| Displayed template blocks against their actual files | Passed for every matching template block |
+| ZIP integrity, file lists and bytes against template folders | Passed for all three archives, including hidden folders |
+| Codex TOML and Markdown YAML metadata | Parsed successfully |
+| All six PowerShell/Bash starters | Executed in isolated temporary folders; generated team files matched templates |
+| Starter reruns against existing folders | All six refused to overwrite; sentinel user files were preserved |
+| Headless Edge at 1440px and 390px, local HTTP and file URLs | All 12 page/transport/viewport combinations passed; no page overflow or JavaScript errors |
+| Header ZIP downloads over local HTTP | Actual downloads completed with matching filenames on desktop and mobile |
+| Complete team-plan file copy | Copied content matched the full displayed file in all 12 combinations; test clipboard stub used |
+| Theme control and screenshots | Checked all combinations; inspected desktop/mobile header and mobile skill captures |
+| Repository structure/metadata check and git diff whitespace check | Passed |
+
+The expanded skill retains the required name/description metadata and puts the
+workflow in its Markdown body, following the
+[official skill documentation](https://learn.chatgpt.com/docs/build-skills).
+This update does not claim authenticated agent delegation, live recovery,
+remote CI, deployment, or published-site verification. Existing C# application
+behavior is unchanged; this update verified starter generation, not a new C# run.
+
+## Previous rewrite
+
 Rewritten 9 November 2026.
 
 This log is a static Markdown download so the same relative link works in the

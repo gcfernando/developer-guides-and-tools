@@ -9,9 +9,15 @@ Read the matching HTML guide before copying them to a project.
 4. Give the lead a normal feature, fix, test or build request.
 5. Inspect actual specialist tasks and results.
 
-The default examples inherit the current session model. Use the guide to set
-per-role models. Recovery limits live in .agent-team/recovery.md; they are
-instructions, not guaranteed client-enforced retry settings. No deployment is
-authorized by these files.
+The bundled configuration explicitly selects GPT-6.1 Sol with medium reasoning for the lead and specialists.
+Check account/client availability before starting. Choose an available model
+when necessary, and keep the displayed guide and local files consistent.
+Recovery limits live only in .agent-team/recovery.md; these are behavioral
+instructions, not guaranteed client-enforced runtime retries.
 
 For a new C# practice project, run the companion setup-practice script instead.
+
+.codex/config.toml contains model/reasoning, workspace-write/on-request and
+[agents] enabled=true with three concurrent specialists (excluding the lead).
+Each .codex/agents/*.toml contains an explicit model and reasoning effort.
+The team-plan skill includes agents/openai.yaml for display/invocation policy.

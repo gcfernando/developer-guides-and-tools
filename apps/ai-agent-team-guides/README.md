@@ -23,7 +23,7 @@ skills, parallel tasks and failure recovery.
 1. Open your chosen HTML file locally or on the published site.
 2. Follow the numbered steps to create or merge the shared Markdown files.
 3. Register the four roles (Codex uses its main session as lead).
-4. Create the four skills; keep the account default model first.
+4. Create the four skills; check the explicit model and reasoning settings.
 5. Start the lead and give it a normal request.
 6. Inspect actual specialist tasks, check results and any gaps.
 
