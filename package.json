@@ -13,8 +13,8 @@
     "build:atlas": "python -B apps/ai-learning-atlas/build.py",
     "build:atlas:hosted": "node scripts/build-atlas-hosted.cjs",
     "build:sql": "node scripts/build-sql-course.cjs",
-    "build": "npm run build:addons && npm run build:handbook && npm run build:linux && npm run build:atlas && npm run build:sql && npm run build:catalog",
-    "check:generated": "node scripts/build-catalog.cjs --check && node scripts/build-ai-addons.cjs --check && node scripts/build-ml-handbook.cjs --check && node apps/linux-command-reference/generate-static.cjs --check && python -B apps/ai-learning-atlas/build.py --check && node scripts/build-sql-course.cjs --check",
+    "build": "npm run build:addons && npm run build:linux && npm run build:atlas && npm run build:sql && npm run build:catalog",
+    "check:generated": "node scripts/build-catalog.cjs --check && node scripts/build-ai-addons.cjs --check && node apps/linux-command-reference/generate-static.cjs --check && python -B apps/ai-learning-atlas/build.py --check && node scripts/build-sql-course.cjs --check",
     "check:links": "node scripts/check-links.cjs",
     "check:site": "node scripts/check-site.cjs",
     "check:linux": "node apps/linux-command-reference/seo.test.cjs && node --check apps/linux-command-reference/app.js",
@@ -25,9 +25,7 @@
     "check:performance": "npm run build:atlas:hosted && node apps/ai-learning-atlas/tools/browser_verify.cjs --page .runtime/atlas-hosted/index.html --stage final --gzip --lighthouse --lighthouse-only --output artifacts/edge-tests/hosted-performance.json",
     "test": "npm run check:generated && npm run check:linux && npm run check:atlas && node --test tests/*.test.cjs && python -B -m unittest discover -s tests -p test_external_links.py && node scripts/verify-migration.cjs && npm run check:links",
     "site:build": "bundle exec jekyll build && node scripts/build-atlas-hosted.cjs --site",
-    "site:serve": "npm run site:build && python scripts/serve-preview.py",
-    "build:handbook": "node scripts/build-ml-handbook.cjs",
-    "check:ml": "python scripts/validate-ml-handbook.py --smoke"
+    "site:serve": "npm run site:build && python scripts/serve-preview.py"
   },
   "devDependencies": {
     "github-slugger": "^2.0.0",

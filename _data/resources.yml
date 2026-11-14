@@ -18,16 +18,24 @@
     "level": "Beginner to advanced"
   },
   {
-    "path": "docs/data-science/machine-learning-handbook.md",
+    "path": "examples/machine-learning/ml-practical-lessons/README.md",
     "topic": "Data science and machine learning",
-    "type": "Illustrated handbook",
+    "type": "Practical course guide and lesson downloads",
     "level": "Beginner to advanced"
   },
   {
-    "path": "examples/machine-learning/ml-handbook/README.md",
+    "path": "examples/machine-learning/ml-practical-lessons/Data-Science-and-Machine-Learning.md",
     "topic": "Data science and machine learning",
-    "type": "Beginner course, datasets and desktop example",
+    "type": "Python workbook",
     "level": "Beginner to advanced"
+  },
+  {
+    "path": "examples/machine-learning/ml-practical-lessons/Data-Science-and-Machine-Learning.html",
+    "topic": "Data science and machine learning",
+    "type": "Browser workbook",
+    "level": "Beginner to advanced",
+    "title": "Machine Learning Practical Lessons — Browser Workbook",
+    "description": "Read worked lessons, search lesson downloads and follow a practical Python course with synthetic datasets."
   },
   {
     "path": "docs/databases/sql-server-and-mysql.md",

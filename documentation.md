@@ -28,8 +28,9 @@ permalink: /documentation/
 
 | Resource | Format | Level |
 |---|---|---|
-| [Data Science and Machine Learning Handbook with Python](docs/data-science/machine-learning-handbook.md) | Illustrated handbook | Beginner to advanced |
-| [Machine Learning for Complete Beginners](examples/machine-learning/ml-handbook/README.md) | Beginner course, datasets and desktop example | Beginner to advanced |
+| [Machine Learning Practical Lessons — Python Workbook](examples/machine-learning/ml-practical-lessons/README.md) | Practical course guide and lesson downloads | Beginner to advanced |
+| [Data Science and Machine Learning — Practical Python Workbook](examples/machine-learning/ml-practical-lessons/Data-Science-and-Machine-Learning.md) | Python workbook | Beginner to advanced |
+| [Machine Learning Practical Lessons — Browser Workbook](https://gcfernando.github.io/developer-guides-and-tools/examples/machine-learning/ml-practical-lessons/Data-Science-and-Machine-Learning.html) | Browser workbook | Beginner to advanced |
 
 ## Databases
 

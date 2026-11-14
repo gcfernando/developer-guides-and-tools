@@ -12,7 +12,7 @@ sitemap: false
 
 # Developer guides and tools
 
-Practical guides, command references and examples for learning Python, C#/.NET, SQL, Azure and machine learning.
+Practical guides, command references and examples for learning Python, machine learning, C#/.NET, SQL and Azure.
 
 [![Repository standards](https://github.com/gcfernando/developer-guides-and-tools/actions/workflows/repository-standards.yml/badge.svg)](https://github.com/gcfernando/developer-guides-and-tools/actions/workflows/repository-standards.yml) [![Read the documentation](https://img.shields.io/badge/Read-the_documentation-2563eb?style=flat-square)](https://gcfernando.github.io/developer-guides-and-tools/)
 
@@ -31,8 +31,6 @@ Use this library when you want a structured learning path, a command to look up,
 
 New to the collection? The [getting-started guide](docs/getting-started.md) explains how to choose a resource and organize a practice session. Reading needs only a browser or Markdown viewer. There is no shared installer for all examples.
 
-<a id="data-science-and-machine-learning"></a>
-<a id="guide-data-science-and-machine-learning"></a>
 <a id="programming-databases-and-cloud"></a>
 
 ## Learning guides
@@ -43,7 +41,7 @@ New to the collection? The [getting-started guide](docs/getting-started.md) expl
 | C# and .NET | [C#/.NET learning path](docs/learning-paths/csharp-dotnet.md) | [Object-oriented design and testing](docs/csharp-dotnet/oop.md) |
 | SQL | [SQL learning path](docs/learning-paths/sql.md) | [SQL Server and MySQL course](docs/databases/sql-server-and-mysql.md) or [ordered part readers](docs/databases/sql-server-and-mysql/index.md) |
 | Azure | [Azure learning path](docs/learning-paths/azure.md) | [Engineering cheat sheet](docs/cloud/azure/engineering-cheat-sheet.md) and [resource reference](docs/cloud/azure/resource-reference.md) |
-| Machine learning | [Machine learning path](docs/learning-paths/machine-learning.md) | [Illustrated handbook](docs/data-science/machine-learning-handbook.md) and [datasets, notebook setup and Tkinter example](examples/machine-learning/ml-handbook/README.md) |
+| Machine learning | [Practical learning path](docs/learning-paths/machine-learning.md) | [Python workbook, lesson downloads and setup](examples/machine-learning/ml-practical-lessons/README.md) |
 | Local AI | [Local AI learning path](docs/learning-paths/local-ai.md) | [Ollama and Streamlit chat application lab](docs/ai/local-ai-chat-lab.md) |
 
 Keep the courses' exercise order, prerequisites and code context. SQL Server and MySQL examples use different dialects. Figures and recorded outputs are teaching material; repository checks do not establish that every example runs with every library version. Version-dependent details should be checked against each guide's linked official sources.
@@ -92,7 +90,7 @@ git clone https://github.com/gcfernando/developer-guides-and-tools.git
 cd developer-guides-and-tools
 ```
 
-Open the selected guide or browser application from the copy. Follow its companion README to install dependencies and run examples. For notebooks and the house-price application, use the [handbook setup guide](examples/machine-learning/ml-handbook/README.md); it explains working directories, Tk support, optional dependencies and generated model files. Keep practice files, saved models and private configuration separate from reference material.
+Open the selected guide or browser application from the copy. Follow its companion README to install dependencies and run examples. For the [ML practical lessons](examples/machine-learning/ml-practical-lessons/README.md), keep the complete workbook folder together and extract each lesson ZIP before running its Python scripts. Keep practice files and private configuration separate from reference material.
 
 <a id="repository-structure"></a>
 
@@ -122,7 +120,7 @@ npm run build
 npm test
 ```
 
-The build generates the catalog, AI add-ons and Atlas readers, Linux command table, published ML handbook and SQL part readers. Tests check generated output, links, provenance, Linux behavior, and Atlas content, runtime and embedded exercises. Edit generated content through its source as described in [CONTRIBUTING.md](CONTRIBUTING.md). The [handbook validation guide](examples/machine-learning/ml-handbook/README.md#guide-validation) explains the optional Python model-service smoke check; it does not open the GUI or execute every notebook block.
+The build generates the catalog, AI add-ons and Atlas readers, Linux command table and SQL part readers. Tests check generated output, links, provenance, Linux behavior, and Atlas content, runtime and embedded exercises. Edit generated content through its source as described in [CONTRIBUTING.md](CONTRIBUTING.md).
 
 To build and preview the Jekyll website, install Ruby with Bundler, then run from the repository root:
 

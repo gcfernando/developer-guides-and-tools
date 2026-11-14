@@ -144,11 +144,10 @@ az group list --output table
 53. [Azure Stream Analytics](#r53)
 54. [Microsoft Fabric Context](#r54)
 
-### PART XII — 🤖 AI & Machine Learning
+### PART XII — 🤖 AI
 55. [Microsoft Foundry](#r55)
 56. [Azure OpenAI / Foundry Models](#r56)
 57. [Azure AI Search](#r57)
-58. [Azure Machine Learning](#r58)
 59. [Foundry Tools / AI Services](#r59)
 
 ### PART XIII — 🌍 IoT & Edge
@@ -3114,7 +3113,7 @@ az group delete --name "${RG}" --yes
 <a id="r50"></a>
 ### 50. 🧱 Azure Databricks
 
-> 🟦 **What it is:** Managed Azure integration of Databricks for Spark/lakehouse/data engineering/ML, with workspaces, compute, jobs and Unity Catalog governance.
+> 🟦 **What it is:** Managed Azure integration of Databricks for Spark/lakehouse/data engineering, with workspaces, compute, jobs and Unity Catalog governance.
 
 #### 🧩 Resource map
 
@@ -3395,7 +3394,7 @@ Nothing to clean up — all commands in this exercise only read information.
 
 ---
 
-## PART XII — 🤖 AI & MACHINE LEARNING
+## PART XII — 🤖 AI
 
 <a id="r55"></a>
 ### 55. 🤖 Microsoft Foundry
@@ -3563,66 +3562,6 @@ az search service show --name "${SEARCH_NAME}" --resource-group "${RG}" --query 
 **👀 Expected result:** The service `status` returns `running`.
 
 **✅ Checkpoint:** Run `az search admin-key show --service-name "$SEARCH_NAME" --resource-group "$RG"` and confirm an admin key is returned.
-
-**🧹 Clean up:**
-```bash
-az group delete --name "${RG}" --yes
-```
-
-[⬆️ Back to resource TOC](#resource-toc)
-
----
-
-<a id="r58"></a>
-### 58. 🧪 Azure Machine Learning
-
-> 🟦 **What it is:** Managed ML platform for workspaces, compute, environments, data/model assets, pipelines and online/batch endpoints.
-
-#### 🧩 Resource map
-
-| Resource / concept | What to remember |
-|---|---|
-| **Workspace** | ML collaboration/governance boundary. |
-| **Compute Instance** | Interactive development. |
-| **Compute Cluster** | Elastic training/batch compute. |
-| **Environment** | Reproducible runtime. |
-| **Data Asset** | Versioned data reference. |
-| **Model** | Registered model artifact. |
-| **Endpoint** | Inference entry. |
-| **Deployment** | Model version/runtime behind endpoint. |
-| **Pipeline** | Repeatable ML workflow. |
-
-#### ✅ Use when
-- Train/deploy custom ML models.
-- MLOps/experiment/asset governance.
-
-#### ⚠️ Engineering watch-outs
-- Stop idle compute.
-- Make environments reproducible.
-- Private dependencies/networking matter.
-- Model quality/drift monitoring is part of production.
-
-#### 📚 Official Microsoft docs
-https://learn.microsoft.com/azure/machine-learning/
-
-#### 🧪 Try it yourself
-
-**Before running:** This lab creates an isolated test resource group and possibly chargeable services. Check regional availability and access permissions first. Run the setup lines and resource commands together in **Bash**; use the saved `$RG` variable for cleanup. Review the returned details before deletion.
-
-**Goal:** Deploy a minimal Azure Machine Learning workspace (no compute started yet).
-
-```bash
-# Example names for this exercise; retain them in this Bash terminal
-RG="rg-learn-r58-${RANDOM}"
-
-az group create --name "${RG}" --location eastus
-az ml workspace create --name demo-mlw --resource-group "${RG}" --location eastus
-az ml workspace show --name demo-mlw --resource-group "${RG}" -o table
-```
-
-**👀 Expected result:** The workspace is created with `provisioning_state: Succeeded`; no compute instance/cluster exists yet.
-
-**✅ Checkpoint:** Confirm `az ml compute list --workspace-name demo-mlw --resource-group "$RG"` returns an empty list (no idle compute billing).
 
 **🧹 Clean up:**
 ```bash

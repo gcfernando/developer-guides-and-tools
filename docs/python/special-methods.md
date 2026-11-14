@@ -4278,7 +4278,7 @@ print(triple(10))   # 30
 ```
 
 #### 🔍 When to use it
-When you need a function-like thing that also remembers state — counters, configurable tools, machine learning models.
+When you need a function-like thing that also remembers state — counters and configurable tools.
 
 ---
 
@@ -5641,7 +5641,7 @@ This is a counter that "waits 0.1 seconds" between each number — imitating a r
 
 **Pickling** is Python's word for **serialising an object to bytes so you can store it and load it back later**, keeping its data and structure intact. Think of it as photographing an object's current state so you can restore it exactly — days or months later.
 
-Real-world uses: caching expensive computations, `multiprocessing` passing objects between processes, and some machine-learning model files.
+Real-world uses: caching expensive computations and `multiprocessing` passing objects between processes.
 
 ### 🔒 Read this before you use `pickle` for anything real
 
@@ -7615,7 +7615,7 @@ print(Stack.__type_params__)   # (T,)
 Imagine two machines sharing the **same storage room** instead of each keeping their own copy. That's what the buffer protocol does — it lets objects share raw memory efficiently, without copying. This is how NumPy arrays can hand raw data to image libraries or C code without duplication.
 
 #### 🔍 When to use it
-Almost never in application code. Only when building low-level libraries that need direct memory access (like NumPy, Pillow, or PyTorch internals).
+Almost never in application code. Only when building low-level libraries that need direct memory access (like NumPy or Pillow internals).
 
 #### 💻 How to use it
 

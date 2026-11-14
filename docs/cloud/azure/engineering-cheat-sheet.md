@@ -83,7 +83,7 @@ az group list --output table
 13. [💰 Cost Management & FinOps](#s13)
 14. [🚀 Developer Tooling, IaC & CI/CD](#s14)
 15. [📈 Data & Analytics — Quick Map](#s15)
-16. [🤖 AI & Machine Learning — Quick Map](#s16)
+16. [🤖 AI — Quick Map](#s16)
 17. [🔀 Hybrid, Multicloud, Edge, IoT & Migration](#s17)
 18. [⚡ Technology Decision Tables](#s18)
 19. [🧩 Architecture Patterns & Reference Topologies](#s19)
@@ -1055,7 +1055,7 @@ az kusto cluster list -o table
 ---
 
 <a id="s16"></a>
-## 16. 🤖 AI & Machine Learning — Quick Map
+## 16. 🤖 AI — Quick Map
 
 > [!IMPORTANT]
 > Current Microsoft platform naming is **Microsoft Foundry**. Older material may say Azure AI Studio / Azure AI Foundry.
@@ -1065,7 +1065,6 @@ az kusto cluster list -o table
 | Models + agents + tools | Microsoft Foundry |
 | OpenAI model deployment | Azure OpenAI / Foundry Models |
 | RAG / vector + hybrid search | Azure AI Search |
-| Traditional/custom ML lifecycle | Azure Machine Learning |
 | Document field extraction | Document Intelligence |
 | Speech/language/vision tools | Foundry Tools / Azure AI services |
 

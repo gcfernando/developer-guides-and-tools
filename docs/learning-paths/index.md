@@ -1,6 +1,6 @@
 ---
 title: "Developer Learning Paths"
-description: "Suggested routes through Python, C#/.NET, SQL, Azure and local AI guides."
+description: "Suggested routes through Python, machine learning, C#/.NET, SQL, Azure and local AI guides."
 permalink: /learning-paths/
 ---
 
@@ -12,7 +12,7 @@ Choose a route that matches your immediate goal. These are suggested study seque
 |---|---|
 | Learn Python design | [Python](python.md) |
 | Learn C# and .NET design | [C#/.NET](csharp-dotnet.md) |
-| Learn data science and machine learning | [Machine learning](machine-learning.md) |
+| Practice data science and machine learning | [Machine learning](machine-learning.md) |
 | Build database skills | [SQL](sql.md) |
 | Understand Azure decisions and resources | [Azure](azure.md) |
 | Build a local browser chat app | [Local AI](local-ai.md) |

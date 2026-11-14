@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {% seo %}
-  {% if page.sitemap == false %}<meta name="robots" content="noindex,follow">{% endif %}
+  {% if page.robots %}<meta name="robots" content="{{ page.robots | escape }}">{% elsif page.sitemap == false %}<meta name="robots" content="noindex,follow">{% endif %}
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/documentation.css' | relative_url }}?v={{ site.github.build_revision }}">
   <link rel="icon" href="{{ '/assets/images/mark.svg' | relative_url }}" type="image/svg+xml">

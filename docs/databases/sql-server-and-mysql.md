@@ -27,7 +27,7 @@ description: "Learn SQL with Microsoft SQL Server and MySQL examples covering ta
 
 ---
 
-> ### 📖 What this guide is
+> ## 📖 What this guide is
 >
 > A **complete, self-contained course in SQL**, written twice for every single topic:
 > once for **Microsoft SQL Server** (its version of SQL is called **T-SQL**) and once for **MySQL**.

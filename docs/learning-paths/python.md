@@ -1,6 +1,6 @@
 ---
 title: "Python Learning Path"
-description: "A practical route through Python OOP, special methods, testing and a local AI project."
+description: "A practical route through Python OOP, special methods, testing, machine learning and a local AI project."
 permalink: /learning-paths/python/
 ---
 
@@ -9,6 +9,6 @@ permalink: /learning-paths/python/
 1. Read [Python OOP](../python/oop.md), starting with setup, classes and object relationships.
 2. Complete its testing and design exercises and capstone.
 3. Use [Python special methods](../python/special-methods.md) when building your own types.
-4. Continue with [SQL](../databases/sql-server-and-mysql.md) or the [local AI lab](../ai/local-ai-chat-lab.md).
+4. Continue with [SQL](../databases/sql-server-and-mysql.md), [machine learning practical lessons](machine-learning.md) or the [local AI lab](../ai/local-ai-chat-lab.md).
 
 [All learning paths](index.md)

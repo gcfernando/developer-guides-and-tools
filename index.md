@@ -12,7 +12,7 @@ Learn a subject, look up a command, or build something practical. This library b
 ## Start with your goal
 
 - **Learn programming:** [Python OOP](docs/python/oop.md), [Python special methods](docs/python/special-methods.md), [C# and .NET](docs/csharp-dotnet/oop.md).
-- **Learn data science and machine learning:** [Python ML handbook](docs/data-science/machine-learning-handbook.md) with [datasets and a desktop example](examples/machine-learning/ml-handbook/README.md).
+- **Practice machine learning:** [Python workbook and lesson downloads](examples/machine-learning/ml-practical-lessons/README.md), with a [guided Core learning path](docs/learning-paths/machine-learning.md).
 - **Work with data:** [SQL Server and MySQL](docs/databases/sql-server-and-mysql.md).
 - **Choose cloud services:** [Azure engineering](docs/cloud/azure/engineering-cheat-sheet.md) and [Azure resources](docs/cloud/azure/resource-reference.md).
 - **Find commands:** [Git](docs/version-control/git-cheat-sheet.md), [Docker](docs/containers/docker-cheat-sheet.md), [Podman](docs/containers/podman-cheat-sheet.md), [Linux reference](https://gcfernando.github.io/developer-guides-and-tools/apps/linux-command-reference/index.html).

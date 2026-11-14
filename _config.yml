@@ -2,7 +2,7 @@ url: "https://gcfernando.github.io"
 baseurl: "/developer-guides-and-tools"
 repository: gcfernando/developer-guides-and-tools
 title: "Developer Guides, Cheat Sheets & Tools"
-description: "Practical developer guides, cheat sheets and tools for Python, data science, machine learning, C#/.NET, SQL, Azure, Linux, containers, Git and AI-assisted development."
+description: "Practical developer guides, cheat sheets and tools for Python, machine learning, C#/.NET, SQL, Azure, Linux, containers, Git and AI-assisted development."
 author: "Gehan Fernando"
 lang: en
 theme: jekyll-theme-primer
