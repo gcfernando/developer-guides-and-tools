@@ -7,7 +7,7 @@ permalink: /examples/machine-learning/ml-practical-lessons/guide/
 
 # Machine learning practical lessons
 
-[Developer guides and tools](../../../README.md) · [All examples](../../README.md) · [Machine learning path](../../../docs/learning-paths/machine-learning.md)
+[Developer guides and tools](https://gcfernando.github.io/developer-guides-and-tools/repository/) · [All examples](https://gcfernando.github.io/developer-guides-and-tools/examples/) · [Machine learning path](https://gcfernando.github.io/developer-guides-and-tools/learning-paths/machine-learning/)
 
 Predict delivery times, investigate data problems, evaluate models and build a local prediction service. Start with small synthetic CSV datasets, change one input and compare the result with the workbook's explanation.
 
