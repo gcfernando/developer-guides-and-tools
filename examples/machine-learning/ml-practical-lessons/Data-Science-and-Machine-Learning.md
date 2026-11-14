@@ -8,7 +8,7 @@ sitemap: false
 robots: index,follow
 ---
 
-[Course guide](README.md) · [Machine learning path](../../../docs/learning-paths/machine-learning.md) · [All resources](../../../documentation.md)
+[Course guide](README.md) · [Machine learning path](https://gcfernando.github.io/developer-guides-and-tools/learning-paths/machine-learning/) · [All resources](https://gcfernando.github.io/developer-guides-and-tools/documentation/)
 
 # 🌈 Data Science & ML · Python Workbook
 
