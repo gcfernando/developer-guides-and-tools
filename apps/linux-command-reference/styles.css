@@ -224,7 +224,7 @@ input[type="text"] {
   caret-color: var(--green);
 }
 
-input[type="text"]::placeholder { color: #2a3540; }
+input[type="text"]::placeholder { color: var(--text2); }
 
 input[type="text"]:focus {
   border-color: var(--green3);
@@ -398,7 +398,7 @@ footer {
   padding: 2rem 0 0;
   font-family: var(--mono);
   font-size: 11px;
-  color: var(--border2);
+  color: var(--text2);
   letter-spacing: 1px;
 }
 

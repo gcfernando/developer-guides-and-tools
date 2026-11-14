@@ -1,6 +1,6 @@
 ---
 title: "Developer Configuration and Environment Examples"
-description: "Choose a machine learning bundle, a local service stack, WSL settings or AI client configuration examples, with setup instructions and limits."
+description: "Choose practical machine learning lessons, a local service stack, WSL settings or AI client configuration examples, with setup instructions and limits."
 permalink: /examples/
 ---
 
@@ -18,7 +18,7 @@ Set up a focused practice environment for machine learning, local services, WSL 
 
 | What you want to explore | Start here | What to expect |
 | --- | --- | --- |
-| Data science and machine learning | [Handbook bundle](machine-learning/ml-handbook/README.md) | A complete handbook, datasets, figures and a Tkinter example |
+| Data science and machine learning | [Practical Python workbook](machine-learning/ml-practical-lessons/README.md) | Nine Core lessons, additional practice, synthetic datasets and a local model-service capstone |
 | Local databases and infrastructure | [Podman Compose services](containers/local-services/README.md) | An example stack with 11 services |
 | Windows Subsystem for Linux | [WSL2 configuration](wsl/README.md) | Memory, CPU, swap and networking settings |
 | AI developer clients | [AI client examples](ai-clients/README.md) | Codex and Claude snapshots plus Copilot guidance |

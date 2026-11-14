@@ -11,7 +11,6 @@
 *.gz binary
 
 # Preserve imported byte-exact snapshots across Windows and Linux checkouts.
-examples/machine-learning/ml-handbook/** -text
 maintenance/migration/legacy/** -text
 maintenance/migration/legacy/**/README.original.md -text whitespace=cr-at-eol
 templates/ai-instructions/chatgpt/custom-instructions.txt -text

@@ -15,7 +15,7 @@ Choose one goal and follow one resource. Reading a guide does not require instal
 
 ## Prerequisites belong to each resource
 
-Programming examples require their stated language/tool version. Database exercises require a disposable database. Containers require a runtime and Compose provider. The local AI lab explains its Windows, Python and Ollama setup. Windows maintenance requires an elevated session and a deliberate maintenance window.
+Programming examples require their stated language/tool version. Database exercises require a disposable database. The [ML practical workbook](../examples/machine-learning/ml-practical-lessons/README.md) provides Python setup, synthetic CSVs and lesson ZIPs; extract a lesson before running it. Containers require a runtime and Compose provider. The local AI lab explains its Windows, Python and Ollama setup. Windows maintenance requires an elevated session and a deliberate maintenance window.
 
 ## A useful study session
 
@@ -23,6 +23,6 @@ Read one concept, type the example in a separate practice folder, run it, observ
 
 ## Reading offline
 
-Download a complete guide or app folder. Linux search requires data.js and app.js beside index.html. The Atlas and AI add-ons reader embed their content and behavior in one HTML file. External reference links need internet access.
+Download a complete guide or app folder. Linux search requires data.js and app.js beside index.html. The Atlas and AI add-ons reader embed their content and behavior in one HTML file. Keep the complete ML workbook folder for its HTML reader, diagrams and lesson ZIPs; the HTML file alone does not contain those downloads. External reference links need internet access.
 
 Before moving or changing the Atlas's hosting location, export its progress backup. A new origin or local-file context may use different browser storage.

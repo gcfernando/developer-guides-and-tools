@@ -6,13 +6,11 @@
 
 Trace the imported guides and tools through their source map, preserved snapshots and URL mappings. The initial local consolidation on 28 October 2026 combined the sibling KnowledgeBase and Other_Projects folders; both originals remained intact and had no .git history to import.
 
-The later MLHandbook import adds 125 byte-identical files at examples/machine-learning/ml-handbook/. A published handbook page is generated from that preserved source.
-
 <a id="guide-every-original-file-is-accounted-for"></a>
 
 ## Every original file is accounted for
 
-- source-map.csv records all 176 original files from the three supplied folders, original SHA-256 digests, sizes, destinations and dispositions.
+- source-map.csv records the 51 retained original files from the two supplied folders, original SHA-256 digests, sizes, destinations and dispositions.
 - legacy/ retains the original repository READMEs as README.original.md.gz, documentation indexes as documentation.md.gz and AI add-ons HTML as ai-coding-addons.html.gz. Lossless compression keeps the exact imported bytes out of document indexes that also scan plain-text files. The provenance check decompresses each archive before comparing its original SHA-256 checksum.
 - The existing README.original.md, documentation.md and ai-coding-addons.html paths contain clearly labeled reading copies with repaired links. Maintained README navigation pages, original Jekyll configurations and the Linux workflow remain alongside them. The source map points to the unchanged archives, not the repaired copies.
 - Identical layouts, CSS and favicon assets were deduplicated.

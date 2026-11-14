@@ -10,7 +10,7 @@ permalink: /interactive-tools/
 
 # Interactive Developer Tools and Offline References
 
-Use these browser tools to find Linux commands, plan AI study or compare coding add-ons. Choose a tool below; its companion guide covers setup, offline use and maintenance.
+Use these browser tools to find Linux commands, plan AI study, practice machine learning or compare coding add-ons. Choose a tool below; its companion guide covers setup, offline use and maintenance.
 
 <a id="guide-choose-a-tool"></a>
 
@@ -20,6 +20,7 @@ Use these browser tools to find Linux commands, plan AI study or compare coding 
 | --- | --- | --- |
 | Find Linux commands and examples | [Linux command reference](https://gcfernando.github.io/developer-guides-and-tools/apps/linux-command-reference/index.html) | [Search, offline use and maintenance](linux-command-reference/README.md) |
 | Follow an AI study path and track progress | [AI Learning Atlas](https://gcfernando.github.io/developer-guides-and-tools/apps/ai-learning-atlas/index.html) | [Learning paths and progress backups](ai-learning-atlas/README.md) |
+| Practice machine learning with Python | [Practical workbook reader](https://gcfernando.github.io/developer-guides-and-tools/examples/machine-learning/ml-practical-lessons/Data-Science-and-Machine-Learning.html) | [Setup, lesson downloads and offline use](../examples/machine-learning/ml-practical-lessons/README.md) |
 | Understand AI coding add-ons | [AI coding add-ons reader](https://gcfernando.github.io/developer-guides-and-tools/apps/ai-coding-addons/index.html) | [Source guide and setup notes](../docs/ai/coding-addons.md) |
 | Build an AI agent review team | [Claude Code](https://gcfernando.github.io/developer-guides-and-tools/apps/ai-agent-team-guides/claude-code-guide.html), [OpenAI Codex](https://gcfernando.github.io/developer-guides-and-tools/apps/ai-agent-team-guides/openai-codex-guide.html), [GitHub Copilot](https://gcfernando.github.io/developer-guides-and-tools/apps/ai-agent-team-guides/github-copilot-guide.html) | [Offline use and practice scripts](ai-agent-team-guides/README.md) |
 
@@ -27,7 +28,7 @@ Use these browser tools to find Linux commands, plan AI study or compare coding 
 
 ## Read offline
 
-Download the complete Linux reference folder for offline search. The Atlas and AI add-ons readers are standalone HTML files. External publisher and reference links require an internet connection.
+Download the complete Linux reference folder for offline search. The Atlas and AI add-ons readers are standalone HTML files. The practical ML workbook lives under `examples/`; keep its HTML reader, `workbook-figures/` and `sample_code_folder/` together for offline use. External publisher and reference links require an internet connection.
 
 <a id="guide-keep-generated-pages-in-sync"></a>
 

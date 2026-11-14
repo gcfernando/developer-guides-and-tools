@@ -1,10 +1,10 @@
 {
   "checked_on": "2026-10-28",
   "summary": {
-    "reachable": 676,
+    "reachable": 668,
     "restricted-or-transient": 3
   },
-  "limits": "HTTP availability only; fragments and documentation accuracy are not verified. 403/429, network failures and server errors require manual review. Planned destination repository/site URLs are excluded. Preconnect and DNS-prefetch origins are not content URLs and are excluded. The three GNU timeouts also failed through the independent web reader.",
+  "limits": "HTTP availability only; fragments and documentation accuracy are not verified. 403/429, network failures and server errors require manual review. Planned destination repository/site URLs are excluded. Preconnect and DNS-prefetch origins are not content URLs and are excluded. The three GNU timeouts also failed through the independent web reader. Inventory filtered to retained source files; recorded HTTP results were not rerun.",
   "links": [
     {
       "url": "http://CLAUDE.md",
@@ -524,16 +524,6 @@
       "status": "reachable",
       "http_status": 200,
       "final_url": "https://docs.python.org/3/tutorial/",
-      "error": null
-    },
-    {
-      "url": "https://docs.pytorch.org/tutorials/",
-      "sources": [
-        "apps/ai-learning-atlas/index.html"
-      ],
-      "status": "reachable",
-      "http_status": 206,
-      "final_url": "https://docs.pytorch.org/tutorials/",
       "error": null
     },
     {
@@ -1340,28 +1330,6 @@
       "error": null
     },
     {
-      "url": "https://img.shields.io/badge/Every%20example-runs%20%26%20shows%20output-F5A623?style=for-the-badge",
-      "sources": [
-        "docs/data-science/machine-learning-handbook.md",
-        "examples/machine-learning/ml-handbook/Data_Science_Handbook.md"
-      ],
-      "status": "reachable",
-      "http_status": 200,
-      "final_url": "https://img.shields.io/badge/Every%20example-runs%20%26%20shows%20output-F5A623?style=for-the-badge",
-      "error": null
-    },
-    {
-      "url": "https://img.shields.io/badge/Finish-Expert-8A2BE2?style=for-the-badge",
-      "sources": [
-        "docs/data-science/machine-learning-handbook.md",
-        "examples/machine-learning/ml-handbook/Data_Science_Handbook.md"
-      ],
-      "status": "reachable",
-      "http_status": 200,
-      "final_url": "https://img.shields.io/badge/Finish-Expert-8A2BE2?style=for-the-badge",
-      "error": null
-    },
-    {
       "url": "https://img.shields.io/badge/Format-CLI%20%7C%20Bicep%20%7C%20C%23-0EA5E9?style=for-the-badge",
       "sources": [
         "docs/cloud/azure/resource-reference.md"
@@ -1552,17 +1520,6 @@
       "error": null
     },
     {
-      "url": "https://img.shields.io/badge/Python-3.10%2B-3776AB?style=flat-square&logo=python&logoColor=white",
-      "sources": [
-        "docs/data-science/machine-learning-handbook.md",
-        "examples/machine-learning/ml-handbook/Data_Science_Handbook.md"
-      ],
-      "status": "reachable",
-      "http_status": 200,
-      "final_url": "https://img.shields.io/badge/Python-3.10%2B-3776AB?style=flat-square&logo=python&logoColor=white",
-      "error": null
-    },
-    {
       "url": "https://img.shields.io/badge/Python-Object%20model-3776AB?style=for-the-badge&logo=python&logoColor=white",
       "sources": [
         "docs/python/special-methods.md"
@@ -1625,17 +1582,6 @@
       "error": null
     },
     {
-      "url": "https://img.shields.io/badge/Start-Zero%20knowledge-2EA44F?style=for-the-badge",
-      "sources": [
-        "docs/data-science/machine-learning-handbook.md",
-        "examples/machine-learning/ml-handbook/Data_Science_Handbook.md"
-      ],
-      "status": "reachable",
-      "http_status": 200,
-      "final_url": "https://img.shields.io/badge/Start-Zero%20knowledge-2EA44F?style=for-the-badge",
-      "error": null
-    },
-    {
       "url": "https://img.shields.io/badge/Themes-31-d946ef?style=for-the-badge",
       "sources": [
         "docs/media/iptv/playlists.md"
@@ -1653,28 +1599,6 @@
       "status": "reachable",
       "http_status": 200,
       "final_url": "https://img.shields.io/badge/Written%20for-SQL%20Server%202019%2B%20%26%20MySQL%208.4-brightgreen?style=for-the-badge",
-      "error": null
-    },
-    {
-      "url": "https://img.shields.io/badge/pandas-2.x%20%7C%203.x-150458?style=flat-square&logo=pandas&logoColor=white",
-      "sources": [
-        "docs/data-science/machine-learning-handbook.md",
-        "examples/machine-learning/ml-handbook/Data_Science_Handbook.md"
-      ],
-      "status": "reachable",
-      "http_status": 200,
-      "final_url": "https://img.shields.io/badge/pandas-2.x%20%7C%203.x-150458?style=flat-square&logo=pandas&logoColor=white",
-      "error": null
-    },
-    {
-      "url": "https://img.shields.io/badge/scikit--learn-1.5%2B-F7931E?style=flat-square&logo=scikitlearn&logoColor=white",
-      "sources": [
-        "docs/data-science/machine-learning-handbook.md",
-        "examples/machine-learning/ml-handbook/Data_Science_Handbook.md"
-      ],
-      "status": "reachable",
-      "http_status": 200,
-      "final_url": "https://img.shields.io/badge/scikit--learn-1.5%2B-F7931E?style=flat-square&logo=scikitlearn&logoColor=white",
       "error": null
     },
     {
@@ -6739,16 +6663,6 @@
       "status": "reachable",
       "http_status": 206,
       "final_url": "https://portal.azure.com/Error/UE_404?aspxerrorpath=/",
-      "error": null
-    },
-    {
-      "url": "https://scikit-learn.org/stable/user_guide.html",
-      "sources": [
-        "apps/ai-learning-atlas/index.html"
-      ],
-      "status": "reachable",
-      "http_status": 200,
-      "final_url": "https://scikit-learn.org/stable/user_guide.html",
       "error": null
     },
     {

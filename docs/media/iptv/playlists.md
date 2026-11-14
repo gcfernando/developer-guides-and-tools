@@ -53,7 +53,7 @@ The recorded upstream revision could not be verified during this review. Use the
 
 ## 🌍 All country & territory playlists
 
-Each **country/territory** links to its own official `.m3u`. Country assignments below are editorial navigation groupings; IPTV-org is the authority for which playlist URL belongs to each entry. **International** and **Undefined** are catalog groups, not countries.
+Available **country/territory** playlists link to their official `.m3u`; unavailable entries link to the current directory. Country assignments below are editorial navigation groupings; IPTV-org is the authority for which playlist URL belongs to each entry. **International** and **Undefined** are catalog groups, not countries.
 
 <a id="europe"></a>
 ### 🇪🇺 Europe
@@ -188,10 +188,12 @@ Each **country/territory** links to its own official `.m3u`. Country assignments
 <a id="africa"></a>
 ### 🌍 Africa
 
-![Playlists: 42](https://img.shields.io/badge/Playlists-42-059669?style=for-the-badge)  **🦁 Browse 42 country/territory entries.**
+![Entries: 42](https://img.shields.io/badge/Entries-42-059669?style=for-the-badge)  **🦁 Browse 42 country/territory entries.**
 
 <details open>
-<summary>📂 <strong>Show Africa playlists</strong> — 42 links</summary>
+<summary>📂 <strong>Show Africa playlists</strong> — 42 entries</summary>
+
+Comoros and Madagascar have no country playlist listed in the current official directory (checked 14 November 2026). Their entries link to the directory so you can check for future availability.
 
 | 🏳️ Country / territory | 🎬 Playlist link | 🧾 File name |
 |:--|:--:|:--|
@@ -202,7 +204,7 @@ Each **country/territory** links to its own official `.m3u`. Country assignments
 | 🇨🇲 **Cameroon** | [▶️ Open .m3u](https://iptv-org.github.io/iptv/countries/cm.m3u) | `cm.m3u` |
 | 🇨🇻 **Cape Verde** | [▶️ Open .m3u](https://iptv-org.github.io/iptv/countries/cv.m3u) | `cv.m3u` |
 | 🇹🇩 **Chad** | [▶️ Open .m3u](https://iptv-org.github.io/iptv/countries/td.m3u) | `td.m3u` |
-| 🇰🇲 **Comoros** | [▶️ Open .m3u](https://iptv-org.github.io/iptv/countries/km.m3u) | `km.m3u` |
+| 🇰🇲 **Comoros** | Unavailable — [check official directory](https://github.com/iptv-org/iptv/blob/master/PLAYLISTS.md#countries) | — |
 | 🇨🇩 **Democratic Republic of the Congo** | [▶️ Open .m3u](https://iptv-org.github.io/iptv/countries/cd.m3u) | `cd.m3u` |
 | 🇪🇬 **Egypt** | [▶️ Open .m3u](https://iptv-org.github.io/iptv/countries/eg.m3u) | `eg.m3u` |
 | 🇬🇶 **Equatorial Guinea** | [▶️ Open .m3u](https://iptv-org.github.io/iptv/countries/gq.m3u) | `gq.m3u` |
@@ -214,7 +216,7 @@ Each **country/territory** links to its own official `.m3u`. Country assignments
 | 🇨🇮 **Ivory Coast** | [▶️ Open .m3u](https://iptv-org.github.io/iptv/countries/ci.m3u) | `ci.m3u` |
 | 🇰🇪 **Kenya** | [▶️ Open .m3u](https://iptv-org.github.io/iptv/countries/ke.m3u) | `ke.m3u` |
 | 🇱🇾 **Libya** | [▶️ Open .m3u](https://iptv-org.github.io/iptv/countries/ly.m3u) | `ly.m3u` |
-| 🇲🇬 **Madagascar** | [▶️ Open .m3u](https://iptv-org.github.io/iptv/countries/mg.m3u) | `mg.m3u` |
+| 🇲🇬 **Madagascar** | Unavailable — [check official directory](https://github.com/iptv-org/iptv/blob/master/PLAYLISTS.md#countries) | — |
 | 🇲🇱 **Mali** | [▶️ Open .m3u](https://iptv-org.github.io/iptv/countries/ml.m3u) | `ml.m3u` |
 | 🇲🇷 **Mauritania** | [▶️ Open .m3u](https://iptv-org.github.io/iptv/countries/mr.m3u) | `mr.m3u` |
 | 🇲🇺 **Mauritius** | [▶️ Open .m3u](https://iptv-org.github.io/iptv/countries/mu.m3u) | `mu.m3u` |

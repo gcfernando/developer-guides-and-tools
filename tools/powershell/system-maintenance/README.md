@@ -17,7 +17,6 @@ Review [SystemMaintenance.ps1](SystemMaintenance.ps1) before deciding whether to
 <a id="windows-system-maintenance-powershell-script--sfc-dism-chkdsk-windows-update-and-cleanup"></a>
 <a id="what-the-script-does"></a>
 <a id="requirements"></a>
-<a id="usage"></a>
 <a id="logs"></a>
 <a id="things-to-know-before-running"></a>
 <a id="related-tools"></a>

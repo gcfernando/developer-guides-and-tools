@@ -14,10 +14,11 @@ Add a subject within an existing category before introducing a new top-level cat
 | `docs/ai/coding-addons.md`, `scripts/templates/ai-addons.*` | `apps/ai-coding-addons/index.html` | `npm run build:addons` |
 | `apps/linux-command-reference/data.js` and generator | Embedded table in that app's `index.html` | `npm run build:linux` |
 | `apps/ai-learning-atlas/source/`, `exercises/` and `build.py` | Atlas standalone `index.html` | `npm run build:atlas` |
-| `examples/machine-learning/ml-handbook/Data_Science_Handbook.md` | `docs/data-science/machine-learning-handbook.md` | `npm run build:handbook` |
 | `docs/databases/sql-server-and-mysql.md` | SQL part readers and their index in the adjacent `sql-server-and-mysql/` folder | `npm run build:sql` |
 
-Do not hand-edit generated output. `npm run build` runs all generators in dependency order, with the catalog last. The SQL full-course document remains authoritative; part readers are generated views, not independently maintained copies. The ML bundle README is a separate beginner course, not the source of the generated reference handbook.
+Do not hand-edit generated output. `npm run build` runs all generators in dependency order, with the catalog last. The SQL full-course document remains authoritative; part readers are generated views, not independently maintained copies.
+
+The practical ML course lives in `examples/machine-learning/ml-practical-lessons/`. Its Markdown and HTML workbooks are supplied companion editions; the root build does not regenerate them. Keep lesson explanations, links and expected outputs aligned when editing either edition. Preserve lesson IDs, ZIP names and bundle-relative asset paths. Derive counts and tracks from `coverage.csv`; do not describe the entries as independent exercises when they share code. Update the course README and learning path when its Core route changes.
 
 Register resources in `_data/resources.yml`. Keep one authoritative home and cross-link related guides, apps and examples instead of copying them. Add a topic or resource type only when used; tags or relationship fields should be added with a consumer and validation, not as unused metadata.
 
@@ -39,7 +40,7 @@ Node.js 22+, Python 3.12+ and the declared npm dependencies are required for the
 
 `npm run site:build` first builds the real Jekyll site, then prepares the lightweight hosted Atlas at its existing public URL and publishes a byte-identical `offline.html` download. The repository's standalone `apps/ai-learning-atlas/index.html` is not overwritten by hosted generation. `npm run site:serve` builds and serves that output with the configured base path; rebuild after edits, since this preview is not a watcher. Ruby/Bundler must be available on the current shell's PATH, and gem installation must use organization-approved network access.
 
-Review changed output. Execute other changed examples only in an appropriate disposable environment, and report exactly what was tested. Root checks do not run SQL examples, start Compose services, open the Tkinter GUI or perform browser accessibility/performance audits.
+Review changed output. Execute other changed examples only in an appropriate disposable environment, and report exactly what was tested. Root checks do not run SQL examples or practical ML lesson scripts, start Compose services or perform browser accessibility/performance audits.
 
 `npm run check:links` checks case-sensitive source paths, Markdown and plain-text links and fragments, HTML anchors, embedded Atlas links, local assets, navigation and current-site URLs against the route map, including the historical reading copies in `maintenance/migration/legacy/`. Unrendered template URLs in `.md`, `.markdown` or `.txt` files fail the check. Original migration documents are preserved in lossless `.gz` archives; the provenance check verifies their decompressed bytes against the original checksums. Do not keep duplicate originals as `.txt` files: document libraries can index their obsolete links and HTML anchors. `npm run check:site` checks the actual Jekyll output, including rendered anchors, CSS/SVG references and sitemap destinations; source checks do not substitute for this step. Authored templates are checked through their generated output.
 
@@ -67,7 +68,7 @@ For the local services example, copy `.env.example` to `.env` and supply your ow
 
 ## Pull requests
 
-Describe the user-visible correction, relevant resource versions and actual validation. For ML changes, install the Tkinter example requirements and run python scripts/validate-ml-handbook.py --smoke. The graphical window and every notebook block require separate manual checks.
+Describe the user-visible correction, relevant resource versions and actual validation.
 
 The source-folder checksum audit is a local migration check; normal contributions do not need the original sibling folders.
 

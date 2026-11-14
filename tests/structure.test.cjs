@@ -78,7 +78,7 @@ test('Atlas fixtures retain the compatibility baseline and both backup formats',
 
 test('CI configures Python before the aggregate checks and root commands cover all generators', () => {
   const {scripts} = JSON.parse(read('package.json'));
-  for (const name of ['addons', 'handbook', 'linux', 'atlas', 'sql', 'catalog']) {
+  for (const name of ['addons', 'linux', 'atlas', 'sql', 'catalog']) {
     assert.ok(scripts.build.includes(`npm run build:${name}`), name);
   }
   assert.ok(scripts.build.endsWith('npm run build:catalog'));

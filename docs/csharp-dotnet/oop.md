@@ -25,7 +25,7 @@ description: "Learn C# and .NET object-oriented programming through classes, inh
 
 ---
 
-> ### 📖 What this guide is
+> ## 📖 What this guide is
 >
 > A **complete, self-contained course** in object-oriented programming using C# and .NET.
 > Every concept is explained twice: once in **plain English** (as if to someone who has never

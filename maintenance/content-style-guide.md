@@ -6,7 +6,7 @@ Use lowercase, hyphenated ordinary filenames. Preserve recognized filenames such
 
 ## Public pages
 
-Use front matter with a descriptive title, description and explicit trailing-slash permalink. Keep the permalink stable when reorganizing the source file. Keep links relative in Markdown so GitHub remains usable; Jekyll's relative-links plugin converts published Markdown targets.
+Use front matter with a descriptive title, description and explicit trailing-slash permalink. Keep the permalink stable when reorganizing the source file. When two published formats reproduce the same content, point `canonical_url` at the preferred reader and omit the secondary page from the sitemap with `sitemap: false`. Set `robots: index,follow` on that secondary page so its canonical can be considered; the layout otherwise marks sitemap-excluded pages as noindex. Do not use duplicate descriptions across different resources. Keep links relative in Markdown so GitHub remains usable; Jekyll's relative-links plugin converts published Markdown targets.
 
 Register discoverable resources in _data/resources.yml. npm run build:catalog derives the catalog and route data from those records and page front matter. Add no empty categories.
 
@@ -22,7 +22,7 @@ The AI add-ons HTML is generated from one Markdown source. The Linux table is ge
 
 Do not split the large programming courses during the initial import. A later chapter split must preserve sequence, prerequisites, code continuations, exercise solutions and incoming anchors.
 
-SQL has generated part readers for smaller reading sessions. Edit the full-course source and regenerate them; do not maintain parallel course copies. Keep the original full-course route and anchors. An authoring split is a separate migration and must preserve the same contracts. The ML beginner course and reference handbook have different audiences and must not be deduplicated as though they were identical.
+SQL has generated part readers for smaller reading sessions. Edit the full-course source and regenerate them; do not maintain parallel course copies. Keep the original full-course route and anchors. An authoring split is a separate migration and must preserve the same contracts.
 
 Preserve imported images and dataset bytes where provenance requires it. Optimize newly authored assets before adding them, without sacrificing legibility. Existing asset compression requires checking source-map dispositions first.
 
