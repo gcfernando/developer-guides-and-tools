@@ -16,7 +16,9 @@ Practical guides, command references and examples for learning Python, machine l
 
 [![Repository standards](https://github.com/gcfernando/developer-guides-and-tools/actions/workflows/repository-standards.yml/badge.svg)](https://github.com/gcfernando/developer-guides-and-tools/actions/workflows/repository-standards.yml) [![Read the documentation](https://img.shields.io/badge/Read-the_documentation-2563eb?style=flat-square)](https://gcfernando.github.io/developer-guides-and-tools/)
 
-Use this library when you want a structured learning path, a command to look up, or a documented example to adapt. Read in your browser on GitHub or the [documentation website](https://gcfernando.github.io/developer-guides-and-tools/); each runnable resource has its own requirements.
+Choose a resource below to start reading. **Open in browser** links launch the published reader; guide and setup links open readable Markdown on GitHub. Reading requires no installation. Each runnable example has its own requirements.
+
+[Browser workbooks and tools](#open-a-workbook-or-tool-in-your-browser) · [Learning guides](#learning-guides) · [Command references](#command-and-browser-references) · [Utilities and examples](#utilities-environments-and-templates) · [Repository map](#repository-map) · [Complete catalog](documentation.md)
 
 <a id="choose-a-learning-path"></a>
 <a id="guide-choose-a-learning-path"></a>
@@ -25,11 +27,29 @@ Use this library when you want a structured learning path, a command to look up,
 
 | Your goal | First step |
 | --- | --- |
+| Read the Data Science and Machine Learning workbook | **[Open the browser workbook](https://gcfernando.github.io/developer-guides-and-tools/examples/machine-learning/ml-practical-lessons/Data-Science-and-Machine-Learning.html)** or [read the Markdown edition](examples/machine-learning/ml-practical-lessons/Data-Science-and-Machine-Learning.md). |
 | Learn a subject from the beginning | Choose a [learning path](docs/learning-paths/index.md), then follow its guides in order. |
+| Search Linux commands or explore AI learning tools | Choose a [browser tool below](#open-a-workbook-or-tool-in-your-browser). |
 | Find a specific command or concept | Use the [reference index below](#command-and-browser-references) or [complete resource catalog](documentation.md). |
 | Run an example or utility | Choose a [practice environment](examples/README.md) or [PowerShell utility](tools/README.md), and read its setup and side effects first. |
 
 New to the collection? The [getting-started guide](docs/getting-started.md) explains how to choose a resource and organize a practice session. Reading needs only a browser or Markdown viewer. There is no shared installer for all examples.
+
+## Open a workbook or tool in your browser
+
+Click **Open in browser** to use the resource immediately. Opening an `.html` file in GitHub's file list shows its source; these links open the published page instead.
+
+| Resource | Open in browser | Setup, downloads or source guide |
+| --- | --- | --- |
+| **Data Science and Machine Learning workbook** | **[Open in browser](https://gcfernando.github.io/developer-guides-and-tools/examples/machine-learning/ml-practical-lessons/Data-Science-and-Machine-Learning.html)** | [Course and lesson downloads](examples/machine-learning/ml-practical-lessons/README.md) · [Python setup](examples/machine-learning/ml-practical-lessons/SETUP.md) · [Glossary](examples/machine-learning/ml-practical-lessons/GLOSSARY.md) |
+| Linux command reference | [Open in browser](https://gcfernando.github.io/developer-guides-and-tools/apps/linux-command-reference/index.html) | [Search and offline-use guide](apps/linux-command-reference/README.md) |
+| AI Learning Atlas | [Open in browser](https://gcfernando.github.io/developer-guides-and-tools/apps/ai-learning-atlas/index.html) | [Study paths and progress backups](apps/ai-learning-atlas/README.md) |
+| AI coding add-ons | [Open in browser](https://gcfernando.github.io/developer-guides-and-tools/apps/ai-coding-addons/index.html) | [Installation and configuration guide](docs/ai/coding-addons.md) |
+| Claude Code agent teams | [Open in browser](https://gcfernando.github.io/developer-guides-and-tools/apps/ai-agent-team-guides/claude-code-guide.html) | [Team files, downloads and practice scripts](apps/ai-agent-team-guides/README.md) |
+| OpenAI Codex agent teams | [Open in browser](https://gcfernando.github.io/developer-guides-and-tools/apps/ai-agent-team-guides/openai-codex-guide.html) | [Team files, downloads and practice scripts](apps/ai-agent-team-guides/README.md) |
+| GitHub Copilot agent teams | [Open in browser](https://gcfernando.github.io/developer-guides-and-tools/apps/ai-agent-team-guides/github-copilot-guide.html) | [Team files, downloads and practice scripts](apps/ai-agent-team-guides/README.md) |
+
+To find the ML workbook in GitHub's file list, follow **examples → machine-learning → ml-practical-lessons → Data-Science-and-Machine-Learning.html** ([view the file on GitHub](https://github.com/gcfernando/developer-guides-and-tools/blob/main/examples/machine-learning/ml-practical-lessons/Data-Science-and-Machine-Learning.html)). For offline use, download the repository and keep the workbook folder together so its diagrams and lesson downloads remain available.
 
 <a id="programming-databases-and-cloud"></a>
 
@@ -41,7 +61,7 @@ New to the collection? The [getting-started guide](docs/getting-started.md) expl
 | C# and .NET | [C#/.NET learning path](docs/learning-paths/csharp-dotnet.md) | [Object-oriented design and testing](docs/csharp-dotnet/oop.md) |
 | SQL | [SQL learning path](docs/learning-paths/sql.md) | [SQL Server and MySQL course](docs/databases/sql-server-and-mysql.md) or [ordered part readers](docs/databases/sql-server-and-mysql/index.md) |
 | Azure | [Azure learning path](docs/learning-paths/azure.md) | [Engineering cheat sheet](docs/cloud/azure/engineering-cheat-sheet.md) and [resource reference](docs/cloud/azure/resource-reference.md) |
-| Machine learning | [Practical learning path](docs/learning-paths/machine-learning.md) | [Python workbook, lesson downloads and setup](examples/machine-learning/ml-practical-lessons/README.md) |
+| Data science and machine learning | [Practical learning path](docs/learning-paths/machine-learning.md) | [Read the workbook](examples/machine-learning/ml-practical-lessons/Data-Science-and-Machine-Learning.md) · [Lesson downloads and setup](examples/machine-learning/ml-practical-lessons/README.md) |
 | Local AI | [Local AI learning path](docs/learning-paths/local-ai.md) | [Ollama and Streamlit chat application lab](docs/ai/local-ai-chat-lab.md) |
 
 Keep the courses' exercise order, prerequisites and code context. SQL Server and MySQL examples use different dialects. Figures and recorded outputs are teaching material; repository checks do not establish that every example runs with every library version. Version-dependent details should be checked against each guide's linked official sources.
@@ -94,7 +114,24 @@ Open the selected guide or browser application from the copy. Follow its compani
 
 <a id="repository-structure"></a>
 
-The content is grouped into `docs/` (guides), `apps/` (browser tools), `tools/` (utilities), `examples/` (practice environments) and `templates/` (reusable instructions). Add new subjects inside the appropriate category, with one authoritative home per resource. The [resource catalog](documentation.md) connects related subjects and formats; `scripts/` and root `tests/` maintain shared behavior, app-specific tests live beside their app, and `maintenance/` records content conventions and provenance. See the [contribution guide](CONTRIBUTING.md) for placement rules and source/output ownership.
+## Repository map
+
+Use these entry points to browse each part of the collection. The [complete resource catalog](documentation.md) lists the reading formats by subject.
+
+| Area | What you will find | Start here |
+| --- | --- | --- |
+| Learning paths | Suggested study order for Python, C#/.NET, SQL, Azure, machine learning and local AI | [Choose a path](docs/learning-paths/index.md) |
+| `docs/` | Courses, cheat sheets, AI guides and the IPTV/VLC reference | [Browse guides by subject](documentation.md) |
+| `apps/` | Linux search, AI Learning Atlas, coding add-ons and agent team browser guides | [Browse browser tools](apps/README.md) |
+| `examples/` | ML lessons, local Compose services, WSL2 settings and AI client configuration | [Browse practice examples](examples/README.md) |
+| `tools/` | PowerShell line-ending conversion and Windows maintenance | [Browse utilities](tools/README.md) |
+| `templates/` | Reusable Codex, Claude, Copilot and ChatGPT instructions | [Choose an instruction template](templates/ai-instructions/README.md) |
+| `maintenance/` | Content conventions, migration history and source provenance | [Content style](maintenance/content-style-guide.md) · [Migration record](maintenance/migration/README.md) · [Validation record](maintenance/validation-report.md) |
+| Website | Published homepage, navigation, layout, styling and source-link conversion | [Homepage source](index.md) · [Navigation](_data/navigation.yml) · [Configuration](_config.yml) · [Layout source](https://github.com/gcfernando/developer-guides-and-tools/blob/main/_layouts/default.html) · [Styles](assets/css/documentation.css) · [Link plugin](_plugins/source_links.rb) |
+| Resource catalog | Resource registrations and generated public routes | [Resource list](_data/resources.yml) · [Route map](_data/routes.json) |
+| Build, tests and CI | Shared generators, link checks, app checks and publishing | [Development commands](#development-and-validation) · [Scripts](https://github.com/gcfernando/developer-guides-and-tools/tree/main/scripts) · [Tests](https://github.com/gcfernando/developer-guides-and-tools/tree/main/tests) · [Workflows](https://github.com/gcfernando/developer-guides-and-tools/tree/main/.github/workflows) |
+
+App-specific sources and tests live beside their application. See [CONTRIBUTING.md](CONTRIBUTING.md) for source/output ownership and where to add material.
 
 ### How future additions fit
 
