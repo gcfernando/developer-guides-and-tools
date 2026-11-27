@@ -199,7 +199,7 @@
       "status": "complete",
       "objective": "Implement a repeatable Python setup with one importable module.",
       "idea": "Python executes statements from a saved file, and indentation groups suites such as function bodies. Modules provide names that other files can import. A virtual environment isolates installed Python packages but is not an operating-system security sandbox.",
-      "example": "Save greet.py with def greet(name): return \"Hello, \" + name. A second file importing greet and printing greet(\"Ada\") should display Hello, Ada.",
+      "example": "Save greet.py containing:\ndef greet(name):\n    return \"Hello, \" + name\n\nSave caller.py in the same folder containing:\nfrom greet import greet\nprint(greet(\"Ada\"))\n\nRun python caller.py; the reference output is Hello, Ada. Alternatively, import greet imports the module, so call greet.greet(\"Ada\") in that form.",
       "practice": "Create greet.py and a caller, run the caller from the project folder, and record python --version plus the command used to create a virtual environment.",
       "questions": [
         {
@@ -359,7 +359,7 @@
       "title": "Vectors and similarity",
       "status": "complete",
       "objective": "Compute dot product, norms and cosine similarity for two vectors.",
-      "idea": "The dot product sums coordinate products. A Euclidean norm is the square root of the sum of squared coordinates, and cosine divides the dot product by both norms. Scaling a nonzero vector by a positive constant preserves its direction and cosine, while a zero vector requires explicit handling.",
+      "idea": "The dot product sums coordinate products. A Euclidean norm is the square root of the sum of squared coordinates, and cosine divides the dot product by both norms. Scaling a nonzero vector by a positive constant preserves its direction and cosine, while a zero vector requires explicit handling. Taught here: vector dot products, Euclidean norms and cosine similarity. Matrix multiplication, inverses, rank, eigenvalues, SVD, positive definiteness and factorization are mapped for further study; this example does not teach or assess those mechanisms.",
       "example": "For a=(1,0), b=(1,1): dot=1, ||a||=1, ||b||=sqrt(2), cosine=1/sqrt(2)≈0.707. For 2b, both numerator and the b norm double, so cosine is unchanged.",
       "practice": "Calculate dot product, norms and cosine for a=(0,1), b=(1,1), then for a and 2b; explain why matrix shape and coordinate order must agree.",
       "questions": [
@@ -436,7 +436,7 @@
       "title": "Conditional probability",
       "status": "complete",
       "objective": "Compute precision and recall using their different conditioning events.",
-      "idea": "Conditional probability changes the population being considered. Precision conditions on a positive prediction, while recall conditions on a true positive class. Joint distributions, independence assumptions and sampling models determine which probability calculations are justified; one high rate cannot substitute for another.",
+      "idea": "Conditional probability changes the population being considered. Precision conditions on a positive prediction, while recall conditions on a true positive class. Joint distributions, independence assumptions and sampling models determine which probability calculations are justified; one high rate cannot substitute for another. Taught here: conditioning events and precision/recall denominators. Bayes' theorem, distribution families, likelihood, limit theorems, Markov chains and Monte Carlo methods require separate explanations and exercises beyond this example.",
       "example": "Of 100 examples, 10 have a condition. Flagging 8 of those and 9 of the other 90 gives TP=8,FP=9,FN=2; precision=8/17≈47% and recall=8/10=80%.",
       "practice": "Keep TP=8 and FN=2 but reduce FP from 9 to 4; recompute precision and recall and explain which changed.",
       "questions": [
@@ -2381,7 +2381,7 @@
       "title": "Nearest neighbors, indexes and filters",
       "status": "complete",
       "objective": "Diagnose a nearest-neighbor result that violates a metadata permission filter.",
-      "idea": "Exact search compares every candidate, while approximate indexes trade some recall for efficiency. Index structures and vector databases manage retrieval, but authorization still requires explicit enforcement. Metadata filters must apply to the authorized candidate set, including any cached or reranked results.",
+      "idea": "Brute-force exact search compares every candidate. Other exact methods, such as KD-trees or ball trees with suitable metrics and settings, can prune candidates while preserving exact nearest-neighbor results. Approximate indexes can trade recall for efficiency. Index structures and vector databases manage retrieval, but authorization still requires explicit enforcement. Metadata filters must apply to the authorized candidate set, including any cached or reranked results.",
       "example": "A private document has similarity 0.99 and an allowed public document 0.8. The private item must remain unavailable; a higher score cannot override access policy.",
       "practice": "Trace nearest-neighbor selection for four scored records with two owners; list allowed candidates before choosing the top result.",
       "questions": [
@@ -2708,7 +2708,7 @@
       "title": "Preferences, distillation and data risks",
       "status": "complete",
       "objective": "Diagnose a preference pair with inconsistent labeling.",
-      "idea": "Distillation transfers selected behavior from a teacher signal, which may contain errors. Preference datasets encode ranking criteria and need consistent annotation. Synthetic data and augmentation can expand coverage but also repeat defects, contaminate evaluation or reduce diversity.",
+      "idea": "Distillation transfers selected behavior from a teacher signal, which may contain errors. Preference datasets encode ranking criteria and need consistent annotation. Synthetic data and augmentation can expand coverage but also repeat defects, contaminate evaluation or reduce diversity. In a common RLHF pipeline, a reward model is fitted to preferences and a policy is optimized against that reward. DPO instead optimizes a preference objective directly without a separate reward-model fitting and reinforcement-learning loop. Taught here: diagnosing preference labels and data risks; implementing RLHF, DPO, distillation or forgetting mitigation requires further study.",
       "example": "Two answers contain the same factual error, yet one is preferred only because it is longer. A preference learner can acquire verbosity rather than correctness from this pair.",
       "practice": "Create three preference pairs with a support-first rubric; identify one teacher error and one train/evaluation contamination risk.",
       "questions": [
@@ -3138,7 +3138,7 @@
       "title": "Speakers and audio events",
       "status": "complete",
       "objective": "Compare speaker diarization with speaker verification.",
-      "idea": "Diarization separates who-spoke-when segments without necessarily knowing real identities. Verification tests a claimed identity under a system contract, while identification selects among enrolled candidates. Audio events and emotion-related labels have different evidence and ethical limitations.",
+      "idea": "Diarization separates who-spoke-when segments without necessarily knowing real identities. Verification tests a claimed identity under a system contract, while identification selects among enrolled candidates. Audio events and emotion-related labels have different evidence and ethical limitations. Taught here: speaker segmentation versus identity claims. Voice activity detection, audio event classification, music analysis, music generation and audio language models remain further-study subjects; this timeline exercise does not assess their implementations.",
       "example": "Segments labeled Speaker A and Speaker B show two estimated voices. Those labels do not establish that A is Alice or that the speaker emotion is known.",
       "practice": "Annotate a synthetic two-speaker timeline with overlap and an unknown speaker; distinguish segment labels from identity claims.",
       "questions": [
@@ -6234,7 +6234,7 @@
       "title": "Transfer, meta-learning and few-shot tasks",
       "status": "complete",
       "objective": "Compare adapting weights with conditioning on examples.",
-      "idea": "Transfer learning reuses learned information across tasks or domains. Meta-learning trains across tasks under a selected adaptation procedure. Few-shot and zero-shot describe an evaluation setting or method context and need precise definitions, not an automatic claim of broad generalization.",
+      "idea": "Transfer learning reuses learned information across tasks or domains. Meta-learning trains across tasks under a selected adaptation procedure. Few-shot and zero-shot describe an evaluation setting or method context and need precise definitions, not an automatic claim of broad generalization. Taught here: comparing in-context examples with parameter adaptation and stating task boundaries. Curriculum learning, multi-task learning and implementations of meta-learning remain further-study subjects; the two-example trace does not teach or assess those mechanisms.",
       "example": "A fixed model receives two examples in its prompt without weight updates. An adapter trained on two examples changes parameters; both use few examples but are different processes.",
       "practice": "Specify a two-task evaluation distinguishing in-context examples, parameter adaptation and a held-out task; record what each process may inspect.",
       "questions": [

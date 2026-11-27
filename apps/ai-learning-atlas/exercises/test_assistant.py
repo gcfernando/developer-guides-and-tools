@@ -1,8 +1,13 @@
 """Examples of behavior-based checks for the local beginner workshop."""
 import json
+import io
+import runpy
 import threading
 import unittest
+from contextlib import redirect_stdout
 from http.server import HTTPServer
+from pathlib import Path
+from unittest.mock import patch
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
@@ -73,6 +78,33 @@ class EndpointTests(unittest.TestCase):
         stopped.server_close()
         with self.assertRaises(URLError):
             urlopen(Request(url, b'{}', {"Content-Type": "application/json"}), timeout=2)
+
+
+class ClientTests(unittest.TestCase):
+    def run_failed_request(self, error):
+        output = io.StringIO()
+        with patch("urllib.request.urlopen", side_effect=error) as request, redirect_stdout(output):
+            runpy.run_path(str(Path(__file__).with_name("client.py")), run_name="__main__")
+        request.assert_called_once()
+        return output.getvalue()
+
+    def test_response_timeout_has_recovery_message(self):
+        output = self.run_failed_request(TimeoutError("timed out"))
+        self.assertIn("Request timed out.", output)
+        self.assertNotIn("Service unavailable.", output)
+
+    def test_connection_timeout_has_recovery_message(self):
+        output = self.run_failed_request(URLError(TimeoutError("timed out")))
+        self.assertIn("Request timed out.", output)
+
+    def test_connection_failure_has_distinct_recovery_message(self):
+        output = self.run_failed_request(URLError(ConnectionRefusedError("refused")))
+        self.assertIn("Service unavailable.", output)
+        self.assertNotIn("Request timed out.", output)
+
+    def test_http_rejection_is_not_retried_or_called_unavailable(self):
+        output = self.run_failed_request(HTTPError("http://127.0.0.1/ask", 400, "Bad Request", {}, None))
+        self.assertEqual(output.strip(), "Request rejected: 400")
 
 
 if __name__ == "__main__":

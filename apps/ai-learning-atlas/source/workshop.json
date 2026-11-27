@@ -104,7 +104,7 @@
       "topic": 26,
       "time": "45–75 minutes",
       "objective": "Send JSON to a local service and handle rejected requests and service failure.",
-      "concept": "HTTP carries a request and response. JSON is a data format. A service must validate the request; syntactically valid JSON does not establish valid business input. Keep reusable logic separate from transport.",
+      "concept": "HTTP carries a request and response. JSON is a data format. A service must validate the request; syntactically valid JSON does not establish valid business input. Keep reusable logic separate from transport. A timeout means an operation exceeded its waiting limit; the server may still have received the request. It is different from an HTTP rejection or a refused connection.",
       "actions": [
         "Copy assistant.py, client.py and test_assistant.py from the reference files below. Read answer() before examining the HTTP handler.",
         "In terminal A, run python assistant.py. In terminal B, from atlas-practice, run python client.py.",
@@ -116,9 +116,9 @@
         "client.py",
         "test_assistant.py"
       ],
-      "expected": "The hours request returns source public-hours. The guest project request returns no source. With the server stopped, the client prints the service-unavailable recovery message.",
-      "verify": "Run python -m unittest test_assistant.EndpointTests -v. The tests start their own temporary local server; the manual server need not be running.",
-      "troubleshoot": "If port 8765 is busy, stop your previous workshop process. If you choose another port, change both the server and client. A 400 response is a rejected input; a connection error means there was no usable service response.",
+      "expected": "The hours request returns source public-hours. The guest project request returns no source. With the server stopped, the client prints the service-unavailable recovery message. A timed-out operation prints a distinct request-timed-out message; the client does not retry automatically.",
+      "verify": "Run python -m unittest test_assistant.EndpointTests -v. The tests start their own temporary local server; the manual server need not be running. Run python -m unittest test_assistant.ClientTests -v for controlled response-timeout, connection-timeout, refused-connection and HTTP-rejection cases. These injected failures check recovery behavior, not live-provider reliability.",
+      "troubleshoot": "If port 8765 is busy, stop your previous workshop process. If you choose another port, change both the server and client. A 400 response is a rejected input; a connection error means there was no usable service response. A timeout can propagate directly as TimeoutError or be wrapped in URLError.reason, depending on the failing operation. Check service health before deliberately retrying; do not infer that the server performed no work.",
       "challenge": "Add a request example containing a JSON list rather than an object and confirm a 400 response. Explain why the client must not retry every 400 indefinitely.",
       "recall": "Which Lesson 2 function boundary lets you test answers without starting a server?",
       "pass": "Valid request, invalid request and unavailable-service behavior are reproduced and explained."

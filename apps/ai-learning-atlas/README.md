@@ -127,7 +127,7 @@ node --test apps/ai-learning-atlas/tests/runtime.test.cjs
 
 The Node runtime tests use the repository's existing `linkedom` development dependency; run `npm ci` if dependencies are absent. Python build/content checks and reference exercises use the standard library only.
 
-Content review date: 3 November 2026. See [verification](VERIFICATION.md), [change log](CHANGELOG.md) and the actual files in `tools/results/` for current checks and limits. The [validation notes](VALIDATION.md) point to the current verification record. Report corrections through the repository issue tracker with a topic/lesson ID and a minimal synthetic example.
+Targeted content corrections: 27 November 2026 (nearest-neighbor search, Python imports, timeout recovery, coverage scope and references). Earlier full review: 3 November 2026. See [verification](VERIFICATION.md), [change log](CHANGELOG.md) and the actual files in `tools/results/` for current checks and limits. The [validation notes](VALIDATION.md) point to the current verification record. Report corrections through the repository issue tracker with a topic/lesson ID and a minimal synthetic example.
 
 ## Related documentation
 

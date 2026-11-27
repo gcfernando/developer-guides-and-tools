@@ -1,5 +1,5 @@
 {
-  "reviewed": "2026-11-03",
+  "reviewed": "2026-11-27",
   "topics": [
     {
       "number": 1,
@@ -664,7 +664,7 @@
       "internalPrerequisites": [
         3
       ],
-      "resource": "#official-resources",
+      "resource": "https://numpy.org/doc/stable/reference/routines.linalg.html",
       "practiceScope": "Practice a declared subset of this topic and record the evidence; see evidence levels in the assessment guide.",
       "requirements": "Text editor, paper or calculator; use small synthetic tables or a legally accessible saved research paper. No account or GPU for the initial worked analysis. Executed paper replication needs a separate paper-specific tool/data/compute plan. Five supplied mathematics units require only arithmetic and a calculator."
     },
@@ -1491,7 +1491,7 @@
       "internalPrerequisites": [
         7
       ],
-      "resource": "#official-resources",
+      "resource": "https://scikit-learn.org/stable/modules/model_evaluation.html",
       "practiceScope": "Practice a declared subset of this topic and record the evidence; see evidence levels in the assessment guide.",
       "requirements": "The supplied worked examples use Python 3.10+ standard library and synthetic inputs. For the broader applied lab, choose a small synthetic or licensed dataset and an appropriate optional ML library; record installation and versions. A hand-calculated analysis does not demonstrate executed training code."
     },
@@ -2248,7 +2248,7 @@
         12,
         14
       ],
-      "resource": "#official-resources",
+      "resource": "https://arxiv.org/abs/1706.03762",
       "practiceScope": "Practice a declared subset of this topic and record the evidence; see evidence levels in the assessment guide.",
       "requirements": "Tiny matrices, paper and a calculator; Python/NumPy is optional. No GPU or account. Hand-calculate attention before using a framework; full implementation setup is outside the supplied worked examples."
     },
@@ -2707,7 +2707,7 @@
         5,
         16
       ],
-      "resource": "#official-resources",
+      "resource": "https://scikit-learn.org/stable/modules/neighbors.html",
       "practiceScope": "Practice a declared subset of this topic and record the evidence; see evidence levels in the assessment guide. Five labeled queries are an introductory smoke check. Use broader representative held-out queries and error slices before making quality claims.",
       "requirements": "A small synthetic document/entity dataset, Python and a chosen local index, graph or batch tool. Embedding models and libraries may need downloads. Use manual ranking/lineage traces as the no-install alternative; these do not establish an implemented pipeline. Full tool setup is outside the supplied worked examples. Use five labeled queries only as an introductory smoke check."
     },
@@ -3042,7 +3042,7 @@
         12,
         16
       ],
-      "resource": "#official-resources",
+      "resource": "https://arxiv.org/abs/2106.09685",
       "practiceScope": "Practice a declared subset of this topic and record the evidence; see evidence levels in the assessment guide.",
       "requirements": "Python, a selected ML framework and a tiny licensed or synthetic dataset/model. Check model memory and license before downloading; choose CPU-sized examples where possible. Training/fine-tuning may need a GPU. Saved training/prediction traces support analysis only. Full framework, model and dataset setup is outside the supplied worked examples. A protocol-only alternative must not be reported as completed fine-tuning."
     },
@@ -3849,7 +3849,7 @@
         6,
         7
       ],
-      "resource": "#official-resources",
+      "resource": "https://web.stanford.edu/class/cs234/",
       "practiceScope": "Practice a declared subset of this topic and record the evidence; see evidence levels in the assessment guide.",
       "requirements": "Python and a tiny grid, rule set or mock plan; CPU is sufficient, no robot or account required. Handwritten search, Q-value or constraint traces are the no-install route. Algorithm/environment/solver setup is outside the supplied worked examples."
     },
@@ -6225,7 +6225,7 @@
         5,
         10
       ],
-      "resource": "#official-resources",
+      "resource": "https://miguelhernan.org/whatifbook",
       "practiceScope": "Practice a declared subset of this topic and record the evidence; see evidence levels in the assessment guide.",
       "requirements": "Text editor, paper or calculator; use small synthetic tables or a legally accessible saved research paper. No account or GPU for the initial worked analysis. Executed paper replication needs a separate paper-specific tool/data/compute plan."
     },
@@ -9652,7 +9652,7 @@
       "title": "AI and Machine Learning Engineer",
       "summary": "Build a trained and evaluated model served behind an API with drift checks.",
       "responsibility": "Develop, evaluate, adapt, serve, and maintain learning-based models.",
-      "background": "Python, mathematics, statistics and testing. Use Topics 02 and 03 for programming gaps, Topic 04 for mathematics/statistics, and the entry diagnostic before skipping.",
+      "background": "Python, mathematics, statistics and testing. Use Topics 02 and 03 for programming gaps, Topic 04 for mathematics/statistics, and the entry diagnostic before skipping. Choose a specialization after the shared foundation: Topics 08?11 for classical/tabular ML; 16?19, 26 and 33 for LLM applications; 12?13 and 22 for vision; or 04, 10 and 46 for research methods. These are scope suggestions, not automatic changes to the displayed priorities; follow prerequisites and the selected project requirements.",
       "project": "<article class=\"project-card\" id=\"project-ai-and-machine-learning-engineer\"><h3>🤖 AI and Machine Learning Engineer</h3><p><strong>🎯 Build:</strong> Train and evaluate an ML model; deploy with drift and quality monitoring, then document limits.</p><p><strong>📦 Deliver: </strong>A baseline and improved model with reproducible evaluation, bias/error analysis, model card and monitored endpoint.</p><p><strong>✅ Role-specific pass test:</strong> Report held-out performance, a failure analysis, inference endpoint and drift signal.</p><p><strong>🧰 Suggested local stack:</strong> Scikit-learn or PyTorch, locally available open datasets, and MLflow or simple experiment logs.</p><details class=\"project-blueprint\"><summary>🛠️ Open the 4-step build plan and acceptance checks</summary><div class=\"project-blueprint-inner\"><h4>Build in four stages</h4><ol><li>Create transparent train/validation/test splits and a reproducible baseline.</li><li>Run feature/model experiments and evaluate generalization with appropriate metrics.</li><li>Inspect failure slices, data leakage risks and calibration where applicable.</li><li>Deploy a small inference endpoint; simulate drift alerts and document retraining triggers.</li></ol><h4>Pass only when…</h4><ul><li>A held-out test set is not used for model selection</li><li>Results include baseline, seed, dataset version and metrics</li><li>Monitoring exposes failure or drift rather than silently degrading</li></ul></div></details><p><strong>📚 Source topics:</strong></p><div class=\"chips\"><a class=\"chip\" href=\"#topic-08-supervised-learning-algorithms\">08 · Supervised Learning Algorithms</a><a class=\"chip\" href=\"#topic-10-model-evaluation-and-experimentation\">10 · Model Evaluation and Experimentation</a><a class=\"chip\" href=\"#topic-12-deep-learning-fundamentals\">12 · Deep Learning Fundamentals</a><a class=\"chip\" href=\"#topic-09-unsupervised-learning\">09 · Unsupervised Learning</a><a class=\"chip\" href=\"#topic-11-feature-engineering-and-applied-ml\">11 · Feature Engineering and Applied ML</a></div></article>",
       "priorities": {
         "1": "Essential",
@@ -10174,7 +10174,7 @@
       "title": "Technical Lead and Engineering Manager",
       "summary": "Build a measurable AI feature delivery plan with risk assessment and quality gates.",
       "responsibility": "Guide technical choices, manage delivery risk, and evaluate team readiness and value.",
-      "background": "System design literacy, project delivery, and people leadership. If you lack it, first work through the relevant parts of Topics 02 and 03.",
+      "background": "System design literacy, project delivery, and people leadership. If you lack it, first work through the relevant parts of Topics 02 and 03. For an evidence-review scope, emphasize interpreting experiments, error rates and uncertainty. For an implementation or research leadership goal, add the relevant coding and mathematical exercises and record that deeper scope. The required depth depends on the decisions you must make.",
       "project": "<article class=\"project-card\" id=\"project-technical-lead-and-engineering-manager\"><h3>🧑‍💼 Technical Lead and Engineering Manager</h3><p><strong>🎯 Build:</strong> Lead an AI feature review with acceptance criteria, evaluation evidence, and launch risks.</p><p><strong>📦 Deliver: </strong>A team-ready AI delivery brief with user outcomes, release gates, owners and a staged rollout decision.</p><p><strong>✅ Role-specific pass test:</strong> Provide acceptance gates, ownership, evaluation evidence and a go/no-go decision record.</p><p><strong>🧰 Suggested local stack:</strong> Markdown acceptance criteria, issue tracker and synthetic evaluation examples.</p><details class=\"project-blueprint\"><summary>🛠️ Open the 4-step build plan and acceptance checks</summary><div class=\"project-blueprint-inner\"><h4>Build in four stages</h4><ol><li>Define the business user journey and identify where AI adds measurable value.</li><li>Translate risk and quality expectations into testable acceptance criteria.</li><li>Review evaluation examples, operational ownership and safety boundaries with engineers.</li><li>Run a mock go/no-go meeting and record decisions, risks and follow-up owners.</li></ol><h4>Pass only when…</h4><ul><li>Acceptance criteria include measurable success and failure conditions</li><li>Launch decision uses evidence rather than demo impressions</li><li>Every high-impact risk has an assigned owner</li></ul></div></details><p><strong>📚 Source topics:</strong></p><div class=\"chips\"><a class=\"chip\" href=\"#topic-26-ai-application-development\">26 · AI Application Development</a><a class=\"chip\" href=\"#topic-33-ai-evaluation-testing-and-reliability\">33 · AI Evaluation, Testing, and Reliability</a><a class=\"chip\" href=\"#topic-34-ai-security-privacy-and-responsible-ai\">34 · AI Security, Privacy, and Responsible AI</a><a class=\"chip\" href=\"#topic-17-prompt-engineering-and-context-engineering\">17 · Prompt Engineering and Context Engineering</a><a class=\"chip\" href=\"#topic-19-retrieval-augmented-generation-rag\">19 · Retrieval-Augmented Generation (RAG)</a></div></article>",
       "priorities": {
         "1": "Essential",
@@ -10430,7 +10430,7 @@
       "title": "Junior Developer and Engineering Beginner",
       "summary": "Build a small AI-enabled application with readable code, tests, and a clear explanation.",
       "responsibility": "Gain enough core skills to implement, test, and explain small AI-enabled features.",
-      "background": "Basic computer use; start with programming and Git in Topic 2. If you lack it, first work through the relevant parts of Topics 02 and 03.",
+      "background": "Basic computer use; start with programming and Git in Topic 2. If you lack it, first work through the relevant parts of Topics 02 and 03. This path begins with application and engineering foundations. Its Advanced label for Topic 07 describes this route, not the importance of ML fundamentals to an aspiring ML engineer; use the AI and Machine Learning Engineer path when model development is your goal.",
       "project": "<article class=\"project-card\" id=\"project-junior-developer-and-engineering-beginner\"><h3>🌱 Junior Developer and Engineering Beginner</h3><p><strong>🎯 Build:</strong> Build a simple tested chatbot/API feature, explain each component, and document limitations.</p><p><strong>📦 Deliver: </strong>A tiny documented chatbot/API demo with unit tests, readable source code and a short retrospective.</p><p><strong>✅ Role-specific pass test:</strong> Run a local API, show a passing test and explain at least one model limitation.</p><p><strong>🧰 Suggested local stack:</strong> Python standard library with an optional mock AI endpoint; no paid account needed.</p><details class=\"project-blueprint\"><summary>🛠️ Open the 4-step build plan and acceptance checks</summary><div class=\"project-blueprint-inner\"><h4>Build in four stages</h4><ol><li>Write a simple input/output contract and manually test three cases.</li><li>Build a small chat or Q&amp;A endpoint with clearly separated logic.</li><li>Add tests for valid input, invalid input and one network failure.</li><li>Explain the program’s modules and limitations in your own words.</li></ol><h4>Pass only when…</h4><ul><li>Can run setup from a clean folder</li><li>Three test scenarios demonstrate expected behavior</li><li>Can explain each function without reading an AI-generated answer</li></ul></div></details><p><strong>📚 Source topics:</strong></p><div class=\"chips\"><a class=\"chip\" href=\"#topic-05-data-fundamentals\">05 · Data Fundamentals</a><a class=\"chip\" href=\"#topic-07-machine-learning-fundamentals\">07 · Machine Learning Fundamentals</a><a class=\"chip\" href=\"#topic-17-prompt-engineering-and-context-engineering\">17 · Prompt Engineering and Context Engineering</a><a class=\"chip\" href=\"#topic-10-model-evaluation-and-experimentation\">10 · Model Evaluation and Experimentation</a><a class=\"chip\" href=\"#topic-16-large-language-models-llms\">16 · Large Language Models (LLMs)</a></div></article>",
       "priorities": {
         "1": "Essential",

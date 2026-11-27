@@ -13,5 +13,10 @@ try:
         print(json.load(response))
 except HTTPError as error:
     print("Request rejected:", error.code)
-except URLError:
-    print("Service unavailable. Start assistant.py and retry; do not invent an answer.")
+except TimeoutError:
+    print("Request timed out. Check the service and retry deliberately; do not invent an answer.")
+except URLError as error:
+    if isinstance(error.reason, TimeoutError):
+        print("Request timed out. Check the service and retry deliberately; do not invent an answer.")
+    else:
+        print("Service unavailable. Start assistant.py and retry; do not invent an answer.")

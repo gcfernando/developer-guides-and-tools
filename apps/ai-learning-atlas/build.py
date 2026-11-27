@@ -68,7 +68,7 @@ def render_authored_units(topic):
 <p class="unit-practice"><strong>Practice:</strong> {esc(unit['practice'])}</p>
 <p><strong>Check questions:</strong></p><ol>{questions}</ol>
 <details class="answer-key"><summary>Answer key — attempt the questions first</summary><ol>{answers}</ol><p><strong>Common mistake:</strong> {esc(unit['mistake'])}</p></details>
-<p><strong>Related original subtopics (reference map):</strong> {coverage}</p>
+<p><strong>Related original subtopics (reference map):</strong> {coverage}. Taught here: the objective, worked example and practice above. The other linked mechanisms require further study; completing this unit does not demonstrate every linked subtopic.</p>
 <p><a href="#tutor-brief">Recovery and recall guidance</a> · <a href="#assessment-guide">Evidence levels and earlier saved scopes</a>.</p>
 {check_label(key+'-practice', 'I completed this unit’s practice within my declared scope')}
 {check_label(key+'-transfer', 'I explained and independently adapted this unit’s example')}
@@ -256,7 +256,7 @@ def render_role(role, topics):
     return f'''<details class="role-detail" id="role-{role['slug']}"><summary><span class="role-summary-text"><strong>{esc(role['title'])}</strong><small>{esc(role['summary'])}</small></span></summary>
 <div class="role-body"><h3>{esc(role['title'])}</h3>{effort}<div class="role-overview"><div class="mini"><b>Main responsibility</b><p>{esc(role['responsibility'])}</p></div>
 <div class="mini"><b>Starting knowledge</b><p>{esc(role['background'])}</p><a href="#entry-check">Check skills before skipping</a></div></div>
-<div class="callout">Priority describes relevance; the sequence below follows dependencies. A Recommended prerequisite may come before an Essential topic. Added bridges and capstone support: {bridge}.</div>
+<div class="callout">Priority describes relevance to this path's stated goal, not a universal requirement for everyone with this job title; the sequence below follows dependencies. A Recommended prerequisite may come before an Essential topic. Added bridges and capstone support: {bridge}.</div>
 <div class="phase"><h4>Your dependency-ordered sequence</h4><div class="chips">{chips}</div></div>{''.join(phases)}
 <div class="phase"><h4>Core lessons and evidence</h4><div class="path-list">{''.join(items)}</div></div>
 <details class="phase"><summary>Later specializations and topics to defer</summary>{''.join(later)}</details>
