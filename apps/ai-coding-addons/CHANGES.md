@@ -62,6 +62,12 @@ or package installed on the user's behalf.
 - No live add-on authentication, account entitlement, provider traffic or
   macOS/Linux/WSL integration test is claimed.
 
+The complete root `npm test` also passed in an isolated tracked-file copy after
+applying the prepared CI integration: all generator checks, Atlas checks,
+40 root/reader Node tests, five external-link Python tests, migration verification,
+and the local-link audit passed. The parent browser-check selectors were updated
+in the patch; the full parent browser suite was not executed in that copy.
+
 The parent repository's old generated-content checks will continue to expect its
 old generator until the handoff patch is applied. Run this folder's build/check
 commands to preserve this edition in the meantime.

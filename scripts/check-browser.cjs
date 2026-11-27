@@ -70,22 +70,24 @@ async function inspect(app, protocol, base) {
       });
       await check(`${label}: search, no-results and client filters`, async () => {
         await page.locator('#query').fill('sonarqube');
-        const visible = await page.locator('.tool-card:not(.none)').count();
+        const visible = await page.locator('.tool-card:not([hidden])').count();
         assert.ok(visible > 0 && visible < 39);
         await page.locator('#query').fill('__no_such_addon_742__');
-        assert.equal(await page.locator('.tool-card:not(.none)').count(), 0);
+        assert.equal(await page.locator('.tool-card:not([hidden])').count(), 0);
         assert.equal(await page.locator('#count').textContent(), '0 add-ons shown');
         await page.locator('#query').fill('');
-        await page.locator('#clientFilter').selectOption('Codex CLI');
-        assert.ok(await page.locator('.tool-card h3').filter({hasText: 'Claude Code CLI'}).first().isHidden());
-        assert.ok(await page.locator('.tool-card h3').filter({hasText: 'Codex CLI'}).first().isVisible());
+        await page.locator('#clientFilter').selectOption('codex');
+        assert.equal(await page.locator('.tool-card:visible:not([data-clients~="codex"])').count(),0);
+        assert.equal(await page.locator('.client-section[data-client="claude"]:visible').count(),0);
+        assert.ok(await page.locator('.client-section[data-client="codex"]:visible').count()>0);
         await page.locator('#clientFilter').selectOption('all');
       });
       await check(`${label}: theme control`, async () => {
+        const before=await page.locator('body').evaluate(node=>node.classList.contains('dark'));
         await page.locator('#theme').click();
-        assert.ok(await page.locator('body').evaluate(node => node.classList.contains('dark')));
+        assert.equal(await page.locator('body').evaluate(node=>node.classList.contains('dark')),!before);
         await page.locator('#theme').click();
-        assert.ok(!await page.locator('body').evaluate(node => node.classList.contains('dark')));
+        assert.equal(await page.locator('body').evaluate(node=>node.classList.contains('dark')),before);
       });
       await check(`${label}: sibling Linux navigation`, async () => {
         const current = page.url();

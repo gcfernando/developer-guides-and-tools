@@ -71,8 +71,12 @@ The parent repository still has an older generator at
 root, so they have not been changed. **The old root build can overwrite this
 edition.** Rebuild in this folder afterward until the root build is redirected.
 
-`repository-build-integration.patch` contains the proposed root generator change
-and a source-document notice. It is prepared for review, not applied. From the
+`repository-build-integration.patch` contains the complete CI integration:
+the parent generator delegates to `build.cjs`, root `npm test` includes the
+reader tests, repository assertions/browser selectors use the new structure,
+and the Markdown index retains original fragments. A full root `npm test`
+passed with this patch in an isolated repository copy. The patch has not been
+applied to the parent files in this checkout. From the
 repository root, a maintainer with write access can check and apply it:
 
 ```sh
@@ -80,13 +84,14 @@ git apply --check apps/ai-coding-addons/repository-build-integration.patch
 git apply apps/ai-coding-addons/repository-build-integration.patch
 npm run build:addons
 node apps/ai-coding-addons/build.cjs --check
+npm test
 ```
 
 The new generator resolves its own installed dependencies or the compatible
 dependencies already declared in the parent package. For browser tests, install
-this folder's locked dev dependencies. After applying the patch, run the parent
-repository's required generated-content/link/site checks and inspect any tests
-that assumed the old Markdown file was the full standalone source.
+this folder's locked dev dependencies. Commit the applied parent changes along
+with this folder's current source/generated changes before pushing. A local
+reader test alone does not validate the parent `check:generated` entry point.
 
 Original upstream locations:
 

@@ -46,14 +46,19 @@ test('catalog HTML tools open their published pages from GitHub and permalink gu
 });
 
 test('AI add-ons reader contains all source sections and registration clarification',()=>{
-  const source=frontMatter(read('docs/ai/coding-addons.md')).body;
-  const sections=[...source.matchAll(/^## (\d{2})\. (.+)$/gm)];
+  const sections=JSON.parse(read('apps/ai-coding-addons/guide.json')).cards;
   const {document}=parseHTML(read('apps/ai-coding-addons/index.html'));
   const cards=[...document.querySelectorAll('.tool-card')];
   assert.equal(cards.length,sections.length);
   assert.equal(cards.length,39);
-  for(let i=0;i<cards.length;i++)assert.equal(cards[i].querySelector('h2').textContent,sections[i][1]+'. '+sections[i][2]);
-  assert.ok(document.body.textContent.includes('Registration comes before connection checks.'));
+  for(let i=0;i<cards.length;i++){
+    assert.equal(cards[i].querySelector('h2').textContent,sections[i].title);
+    assert.equal(cards[i].id,'card-'+sections[i].id);
+  }
+  const sonar=document.getElementById('card-sonarqube-mcp-server');
+  assert.ok(sonar.textContent.includes('Register before checking connection'));
+  assert.ok(sonar.textContent.includes('SONARQUBE_TOKEN'));
+  assert.ok(sonar.querySelectorAll('.client-section').length===4);
   const ids=[...document.querySelectorAll('[id]')].map(n=>n.id);
   assert.equal(new Set(ids).size,ids.length,'Reader has duplicate IDs');
   for(const a of document.querySelectorAll('a[href^="#"]'))assert.ok(document.getElementById(a.getAttribute('href').slice(1)),a.getAttribute('href'));
