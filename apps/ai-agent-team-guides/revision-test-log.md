@@ -1,5 +1,60 @@
 # Four-agent team rewrite and test log
 
+## Targeted audit corrections — 27 November 2026
+
+This entry supersedes earlier unconditional statements about planning-skill
+model overrides and current model-list completeness. Earlier test results below
+remain historical observations and are not reruns for this revision.
+
+- Corrected Claude's manual versus automatic skill-model behavior, agent
+  precedence and hot reload; clarified that this is a main lead with subagents,
+  rather than the separate experimental Agent Teams feature.
+- Distinguished reading/preloading skill content from actual invocation and
+  invocation metadata. The planning checklist can be followed through a file
+  read without claiming metadata activation.
+- Refreshed Copilot's 34-entry product-wide catalog snapshot. Added current
+  GPT-6.2 guidance to Codex and explicitly labelled its older examples historical.
+  Existing working model settings were retained; account availability is not
+  inferred from a vendor's product-wide catalog.
+- Made implementation-skill descriptions language-neutral and added adaptation
+  guidance covering role examples, workflows and dependencies, not just commands.
+- Synchronized displayed examples, templates, six starter scripts and three ZIPs.
+  This revision normalizes UTF-8/LF files before packaging so archive entries can
+  be checked byte for byte. Earlier Codex ZIP differences were newline-only.
+- Added real signed-in verification procedures to all three guides. Inspected
+  local help/version clients: Claude Code 2.1.331, Codex CLI 0.172.0 and Copilot
+  CLI 1.0.115-2. These are observations, not minimum supported versions.
+- Authenticated role loading, actual model dispatch, live overlap, continuation,
+  cancellation and real fault recovery are NOT RUN for this revision. No live
+  transcripts or successful end-to-end results are claimed.
+
+Primary references rechecked for the targeted corrections:
+[Claude skills](https://code.claude.com/docs/en/skills),
+[Claude subagents](https://code.claude.com/docs/en/sub-agents),
+[Claude Agent Teams](https://code.claude.com/docs/en/agent-teams),
+[Copilot models](https://docs.github.com/en/copilot/reference/ai-models/supported-models),
+[Copilot skill reference](https://docs.github.com/en/copilot/reference/copilot-cli-reference/cli-command-reference#skills-reference),
+[Codex models](https://learn.chatgpt.com/docs/models?surface=cli).
+
+Local validation completed for this prepared revision:
+
+- 94 checks passed, including original-target preservation, section/ID and
+  CSS/JavaScript preservation, local links, 48 displayed template blocks, six
+  starter payload sets and byte-for-byte ZIP/template comparisons.
+- Parsed 24 YAML documents, JSON/TOML configuration and the three PowerShell
+  scripts. PowerShell execution was not rerun; execution policy was not changed.
+- DOM simulation checked all 117 copy controls plus search and theme behavior
+  across all three readers. This is not a new visual or accessibility audit.
+- Executed all three Bash starter scripts under Git Bash and checked their
+  existing-folder guards. Generated template files matched byte for byte.
+- With .NET SDK 10.0.404, each generated project passed its two starter checks
+  and all five final walkthrough cases: 21 successful case executions total.
+- No authenticated AI calls, remote CI, commits, pushes or deployment ran.
+
+See validation-results.json for the machine-readable current results. Earlier
+browser or authenticated results are not silently reused as current passes.
+
+
 ## Official configuration corrections — 10 November 2026
 
 The complete examples now include selected configuration values directly in

@@ -72,3 +72,11 @@ The project .codex/config.toml enables delegation and sets the main model,
 reasoning, sandbox, approvals and concurrent specialist limit. Each specialist
 TOML explicitly selects its model and reasoning effort. These settings do not
 belong in SKILL.md. The skill uses the configured tools and approvals.
+
+## Reading versus invoking this skill
+
+A role can read this file and follow its checklist without invoking the
+registered skill. A file read alone does not apply invocation metadata or
+prove that the client activated the skill. Use client invocation evidence
+before claiming skill metadata was applied; existing agent tools and
+permissions remain the baseline.

@@ -5,15 +5,27 @@ Read the matching HTML guide before copying them to a project.
 
 1. Copy hidden folders too. Merge existing files; do not replace customizations.
 2. Edit .agent-team/project.md for your actual commands and folder ownership.
+   Review language-specific skill/role examples, build files and dependencies too.
 3. Open a terminal at the project root and run: claude --agent lead --permission-mode default
 4. Give the lead a normal feature, fix, test or build request.
 5. Inspect actual specialist tasks and results.
 
 The bundled configuration explicitly selects Opus for lead, Sonnet for specialists; medium effort. The lead planning
-skill also selects Opus/medium for its active turn.
+skill declares invocation overrides. Its model override applies when the user
+runs /team-plan; automatic invocation keeps the session model. Preloading skill
+content is different from invoking the skill.
 Check account/client availability before starting. Choose an available model
 when necessary, and keep the displayed guide and local files consistent.
 Recovery limits live only in .agent-team/recovery.md; these are behavioral
 instructions, not guaranteed client-enforced runtime retries.
 
 For a new C# practice project, run the companion setup-practice script instead.
+
+This is a lead with custom subagents, not the separate experimental Claude
+Agent Teams feature. Normal project/personal agent edits are hot-reloaded.
+For same-name agents: managed > --agents > project > personal > plugin.
+
+Verification status (27 November 2026): local content and example checks are
+separate from authenticated operation. A signed-in team run, actual
+specialist models, concurrency and live recovery remain NOT RUN here.
+Follow the guide's real-run checklist and keep actual task evidence.

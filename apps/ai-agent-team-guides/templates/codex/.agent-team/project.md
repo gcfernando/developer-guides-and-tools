@@ -21,6 +21,8 @@ Run commands from the project root.
 ## For a different project
 
 Replace the description, commands and folders above with the real ones.
+Review skill descriptions, role examples, build files and dependencies for the
+actual language and framework too; changing commands alone is not a full port.
 Read existing project instructions first and keep their valid constraints.
 Do not assume this example's commands work in another project.
 

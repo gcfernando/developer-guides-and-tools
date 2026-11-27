@@ -23,7 +23,8 @@ skills, parallel tasks and failure recovery.
 1. Open your chosen HTML file locally or on the published site.
 2. Follow the numbered steps to create or merge the shared Markdown files.
 3. Register the four roles (Codex uses its main session as lead).
-4. Create the four skills; check the explicit model and reasoning settings.
+4. Create the four skills; distinguish file reads/preloads from actual skill invocation.
+   Check the explicit model and reasoning settings.
 5. Start the lead and give it a normal request.
 6. Inspect actual specialist tasks, check results and any gaps.
 
@@ -52,3 +53,22 @@ The HTML files are maintained directly.
 [The change and test log](revision-test-log.md) separates local file/script/C#
 checks from authenticated delegation, permission behavior and live recovery.
 The latter remain documented but unverified in this environment.
+
+## Targeted corrections — 27 November 2026
+
+The guides retain their section links and presentation. Corrections distinguish
+Claude skill invocation from preloading, document Claude agent precedence and
+hot reload, and separate custom subagents from the native Agent Teams feature.
+Copilot's model table is a dated product-wide 34-entry snapshot, not a CLI access
+promise. Codex's table separates current GPT-6.2 guidance from older examples;
+the working GPT-6.1 Sol configuration is retained.
+
+All templates, displayed file blocks, starter-script payloads and ZIP entries
+are synchronized with UTF-8/LF text. The implementation skill is language-neutral;
+review project/role examples and build dependencies when adapting another stack.
+
+Observed help/version environments: Claude Code 2.1.331, Codex CLI 0.172.0 and
+Copilot CLI 1.0.115-2 on native Windows. These are not established minimum versions
+or evidence of authenticated compatibility. Each guide includes a real-run
+checklist for discovery, task IDs, models, skill activation, overlap, follow-ups,
+cancellation, checks and recovery. Signed-in team execution remains NOT RUN here.

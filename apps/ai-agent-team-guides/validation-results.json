@@ -1,0 +1,483 @@
+{
+  "date": "2026-11-27",
+  "scope": "prepared copy only; original target unchanged",
+  "checks": [
+    {
+      "check": "original target files were not modified",
+      "passed": true,
+      "detail": "65 original files"
+    },
+    {
+      "check": "claude IDs and section order preserved",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "claude CSS and browser scripts preserved",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "claude fragment and local links resolve",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "claude displayed AGENTS.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "claude displayed .agent-team/project.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "claude displayed .agent-team/recovery.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "claude displayed .agent-team/roles/lead.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "claude displayed .agent-team/roles/developer.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "claude displayed .agent-team/roles/qa-tester.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "claude displayed .agent-team/roles/devops.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "claude displayed .claude/agents/lead.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "claude displayed .claude/agents/developer.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "claude displayed .claude/agents/qa-tester.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "claude displayed .claude/agents/devops.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "claude displayed CLAUDE.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "claude displayed .claude/settings.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "claude displayed .claude/skills/team-plan/SKILL.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "claude displayed .claude/skills/implement-change/SKILL.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "claude displayed .claude/skills/test-change/SKILL.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "claude displayed .claude/skills/verify-delivery/SKILL.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "claude all displayed team files matched",
+      "passed": true,
+      "detail": "17"
+    },
+    {
+      "check": "claude explicit real-run verification status",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "claude.ps1 starter payloads match templates",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "claude.sh starter payloads match templates",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "claude ZIP names and bytes match templates",
+      "passed": true,
+      "detail": "18 files"
+    },
+    {
+      "check": "claude JSON/TOML parsed",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "copilot IDs and section order preserved",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "copilot CSS and browser scripts preserved",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "copilot fragment and local links resolve",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "copilot displayed AGENTS.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "copilot displayed .agent-team/project.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "copilot displayed .agent-team/recovery.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "copilot displayed .agent-team/roles/lead.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "copilot displayed .agent-team/roles/developer.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "copilot displayed .agent-team/roles/qa-tester.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "copilot displayed .agent-team/roles/devops.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "copilot displayed .github/agents/lead.agent.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "copilot displayed .github/agents/developer.agent.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "copilot displayed .github/agents/qa-tester.agent.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "copilot displayed .github/agents/devops.agent.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "copilot displayed .github/skills/team-plan/SKILL.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "copilot displayed .github/skills/implement-change/SKILL.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "copilot displayed .github/skills/test-change/SKILL.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "copilot displayed .github/skills/verify-delivery/SKILL.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "copilot all displayed team files matched",
+      "passed": true,
+      "detail": "15"
+    },
+    {
+      "check": "copilot explicit real-run verification status",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "copilot.ps1 starter payloads match templates",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "copilot.sh starter payloads match templates",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "copilot ZIP names and bytes match templates",
+      "passed": true,
+      "detail": "16 files"
+    },
+    {
+      "check": "copilot JSON/TOML parsed",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "codex IDs and section order preserved",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "codex CSS and browser scripts preserved",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "codex fragment and local links resolve",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "codex displayed AGENTS.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "codex displayed .agent-team/project.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "codex displayed .agent-team/recovery.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "codex displayed .agent-team/roles/lead.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "codex displayed .agent-team/roles/developer.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "codex displayed .agent-team/roles/qa-tester.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "codex displayed .agent-team/roles/devops.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "codex displayed .codex/agents/developer.toml",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "codex displayed .codex/agents/qa-tester.toml",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "codex displayed .codex/agents/devops.toml",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "codex displayed .codex/config.toml",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "codex displayed .agents/skills/team-plan/SKILL.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "codex displayed .agents/skills/team-plan/agents/openai.yaml",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "codex displayed .agents/skills/implement-change/SKILL.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "codex displayed .agents/skills/test-change/SKILL.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "codex displayed .agents/skills/verify-delivery/SKILL.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "codex all displayed team files matched",
+      "passed": true,
+      "detail": "16"
+    },
+    {
+      "check": "codex explicit real-run verification status",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "codex.ps1 starter payloads match templates",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "codex.sh starter payloads match templates",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "codex ZIP names and bytes match templates",
+      "passed": true,
+      "detail": "17 files"
+    },
+    {
+      "check": "codex JSON/TOML parsed",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Copilot model snapshot has 34 entries",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Copilot stale model entries removed",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Codex current and historical model scopes separated",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "language-neutral implementation skill descriptions",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "YAML, JavaScript and interactive reader checks",
+      "passed": true,
+      "detail": "24 YAML documents parsed; 3 executable scripts checked; 117 copy controls plus theme and search passed across 3 readers (DOM simulation, not a visual browser audit)."
+    },
+    {
+      "check": "PowerShell scripts parse without policy changes",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "claude Bash starter executed with exact payloads",
+      "passed": true,
+      "detail": "Ready. Open agent-team-practice, then run the two C# checks from the guide."
+    },
+    {
+      "check": "claude existing-folder guard preserves files",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "claude initial C# checks pass",
+      "passed": true,
+      "detail": "2 cases"
+    },
+    {
+      "check": "claude final C# checks pass",
+      "passed": true,
+      "detail": "5 cases"
+    },
+    {
+      "check": "copilot Bash starter executed with exact payloads",
+      "passed": true,
+      "detail": "Ready. Open agent-team-practice, then run the two C# checks from the guide."
+    },
+    {
+      "check": "copilot existing-folder guard preserves files",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "copilot initial C# checks pass",
+      "passed": true,
+      "detail": "2 cases"
+    },
+    {
+      "check": "copilot final C# checks pass",
+      "passed": true,
+      "detail": "5 cases"
+    },
+    {
+      "check": "codex Bash starter executed with exact payloads",
+      "passed": true,
+      "detail": "Ready. Open agent-team-practice, then run the two C# checks from the guide."
+    },
+    {
+      "check": "codex existing-folder guard preserves files",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "codex initial C# checks pass",
+      "passed": true,
+      "detail": "2 cases"
+    },
+    {
+      "check": "codex final C# checks pass",
+      "passed": true,
+      "detail": "5 cases"
+    }
+  ],
+  "authenticated_team_execution": "NOT RUN",
+  "live_recovery": "NOT RUN",
+  "browser_visual_and_accessibility_audit": "NOT RUN",
+  "powershell_execution": "not rerun; syntax and payloads checked",
+  "bash_execution": "three Git Bash starter runs plus collision checks",
+  "dotnet_sdk": "10.0.404",
+  "notes": "No AI provider calls, remote CI, commits, pushes or deployments were performed."
+}

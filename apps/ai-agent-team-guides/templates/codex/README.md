@@ -5,6 +5,7 @@ Read the matching HTML guide before copying them to a project.
 
 1. Copy hidden folders too. Merge existing files; do not replace customizations.
 2. Edit .agent-team/project.md for your actual commands and folder ownership.
+   Review language-specific skill/role examples, build files and dependencies too.
 3. Open a terminal at the project root and run: codex -s workspace-write -a on-request
 4. Give the lead a normal feature, fix, test or build request.
 5. Inspect actual specialist tasks and results.
@@ -21,3 +22,8 @@ For a new C# practice project, run the companion setup-practice script instead.
 [agents] enabled=true with three concurrent specialists (excluding the lead).
 Each .codex/agents/*.toml contains an explicit model and reasoning effort.
 The team-plan skill includes agents/openai.yaml for display/invocation policy.
+
+Verification status (27 November 2026): local content and example checks are
+separate from authenticated operation. A signed-in team run, actual
+specialist models, concurrency and live recovery remain NOT RUN here.
+Follow the guide's real-run checklist and keep actual task evidence.

@@ -75,3 +75,11 @@ read/search operations. It does not pre-approve editing or terminal commands.
 The lead and specialist agent definitions set their model and reasoning effort.
 Copilot's documented skill fields do not include model or reasoningEffort.
 Agent tool availability, client approvals and organization policy still apply.
+
+## Reading versus invoking this skill
+
+A role can read this file and follow its checklist without invoking the
+registered skill. A file read alone does not apply invocation metadata or
+prove that the client activated the skill. Use client invocation evidence
+before claiming skill metadata was applied; existing agent tools and
+permissions remain the baseline.

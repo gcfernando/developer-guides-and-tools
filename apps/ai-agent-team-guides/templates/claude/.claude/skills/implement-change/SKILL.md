@@ -1,6 +1,6 @@
 ---
 name: implement-change
-description: Implement a C# feature or fix in the source paths assigned by the lead.
+description: Implement a feature or fix in the project language and source paths assigned by the lead.
 ---
 
 1. Read the assigned task, project settings and shared recovery rules.

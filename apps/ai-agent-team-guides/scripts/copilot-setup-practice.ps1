@@ -134,6 +134,8 @@ Run commands from the project root.
 ## For a different project
 
 Replace the description, commands and folders above with the real ones.
+Review skill descriptions, role examples, build files and dependencies for the
+actual language and framework too; changing commands alone is not a full port.
 Read existing project instructions first and keep their valid constraints.
 Do not assume this example's commands work in another project.
 
@@ -547,11 +549,19 @@ read/search operations. It does not pre-approve editing or terminal commands.
 The lead and specialist agent definitions set their model and reasoning effort.
 Copilot's documented skill fields do not include model or reasoningEffort.
 Agent tool availability, client approvals and organization policy still apply.
+
+## Reading versus invoking this skill
+
+A role can read this file and follow its checklist without invoking the
+registered skill. A file read alone does not apply invocation metadata or
+prove that the client activated the skill. Use client invocation evidence
+before claiming skill metadata was applied; existing agent tools and
+permissions remain the baseline.
 '@
 W '.github/skills/implement-change/SKILL.md' @'
 ---
 name: implement-change
-description: Implement a C# feature or fix in the source paths assigned by the lead.
+description: Implement a feature or fix in the project language and source paths assigned by the lead.
 ---
 
 1. Read the assigned task, project settings and shared recovery rules.

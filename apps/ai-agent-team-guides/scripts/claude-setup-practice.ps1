@@ -134,6 +134,8 @@ Run commands from the project root.
 ## For a different project
 
 Replace the description, commands and folders above with the real ones.
+Review skill descriptions, role examples, build files and dependencies for the
+actual language and framework too; changing commands alone is not a full port.
 Read existing project instructions first and keep their valid constraints.
 Do not assume this example's commands work in another project.
 
@@ -560,10 +562,15 @@ Next step. Attribute simulations and user-supplied results clearly.
 
 ## Claude Code settings
 
-The metadata selects Opus and medium effort for the skill's active turn.
-It allows manual invocation and automatic selection, including preloading by
-the lead definition. Read, Grep and Glob are pre-approved while active.
-Other tool requests retain the client's approval controls and agent tool limits.
+The lead agent definition selects Opus/medium as its baseline. The skill's
+model field is a turn override when the user runs /team-plan directly. When
+Claude invokes this skill automatically in the current context, the session
+keeps its model. Effort applies on invocation subject to higher-priority
+settings, including CLAUDE_CODE_EFFORT_LEVEL.
+The agent's skills list preloads content; preloading is not proof that
+invocation-time model, effort or tool grants were applied. Read, Grep and Glob
+are pre-approved during an actual skill invocation, subject to permission
+rules. Other calls retain the client's approvals and agent tool limits.
 Run in the lead's current context; context: fork and agent are intentionally
 omitted because this skill coordinates specialists from the main session.
 Shell, editing, MCP, hooks and persistent memory are not enabled by this skill.
@@ -571,7 +578,7 @@ Shell, editing, MCP, hooks and persistent memory are not enabled by this skill.
 W '.claude/skills/implement-change/SKILL.md' @'
 ---
 name: implement-change
-description: Implement a C# feature or fix in the source paths assigned by the lead.
+description: Implement a feature or fix in the project language and source paths assigned by the lead.
 ---
 
 1. Read the assigned task, project settings and shared recovery rules.
