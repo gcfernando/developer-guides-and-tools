@@ -1,0 +1,379 @@
+{
+  "checked": "2026-11-27",
+  "meaning": "HTTP reachability only; raw fallback checks the same public repository file. Not integration execution or semantic validation.",
+  "sources": [
+    {
+      "url": "https://claude.com/marketplace/plugins/semgrep",
+      "status": 200,
+      "resolved": "https://claude.com/marketplace/plugins/semgrep"
+    },
+    {
+      "url": "https://code.visualstudio.com/docs/agent-customization/agent-plugins",
+      "status": 200,
+      "resolved": "https://code.visualstudio.com/docs/agent-customization/agent-plugins"
+    },
+    {
+      "url": "https://developers.openai.com/learn/developers-codex-plugin",
+      "status": 200,
+      "resolved": "https://developers.openai.com/learn/developers-codex-plugin"
+    },
+    {
+      "url": "https://docs.coderabbit.ai/cli",
+      "status": 200,
+      "resolved": "https://docs.coderabbit.ai/cli"
+    },
+    {
+      "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+      "status": 200,
+      "resolved": "https://github.com/ChromeDevTools/chrome-devtools-mcp"
+    },
+    {
+      "url": "https://github.com/DietrichGebert/ponytail",
+      "status": 200,
+      "resolved": "https://github.com/DietrichGebert/ponytail"
+    },
+    {
+      "url": "https://github.com/Graphify-Labs/graphify",
+      "status": 200,
+      "resolved": "https://github.com/Graphify-Labs/graphify"
+    },
+    {
+      "url": "https://github.com/SonarSource/sonarqube-mcp-server",
+      "status": 200,
+      "resolved": "https://github.com/SonarSource/sonarqube-mcp-server"
+    },
+    {
+      "url": "https://github.com/addyosmani/agent-skills",
+      "status": 200,
+      "resolved": "https://github.com/addyosmani/agent-skills"
+    },
+    {
+      "url": "https://github.com/anthropics/claude-plugins-official/blob/main/plugins/claude-code-setup/README.md",
+      "status": 200,
+      "resolved": "https://github.com/anthropics/claude-plugins-official/blob/main/plugins/claude-code-setup/README.md"
+    },
+    {
+      "url": "https://github.com/anthropics/claude-plugins-official/blob/main/plugins/claude-md-management/README.md",
+      "page_error": "HTTP Error 503: Service Unavailable",
+      "raw_fallback": "https://raw.githubusercontent.com/anthropics/claude-plugins-official/main/plugins/claude-md-management/README.md",
+      "status": 200,
+      "resolved": "https://raw.githubusercontent.com/anthropics/claude-plugins-official/main/plugins/claude-md-management/README.md"
+    },
+    {
+      "url": "https://github.com/anthropics/claude-plugins-official/blob/main/plugins/claude-security/README.md",
+      "status": 200,
+      "resolved": "https://github.com/anthropics/claude-plugins-official/blob/main/plugins/claude-security/README.md"
+    },
+    {
+      "url": "https://github.com/anthropics/claude-plugins-official/blob/main/plugins/code-simplifier/agents/code-simplifier.md",
+      "raw_fallback": "https://raw.githubusercontent.com/anthropics/claude-plugins-official/main/plugins/code-simplifier/agents/code-simplifier.md",
+      "status": 200,
+      "resolved": "https://raw.githubusercontent.com/anthropics/claude-plugins-official/main/plugins/code-simplifier/agents/code-simplifier.md"
+    },
+    {
+      "url": "https://github.com/anthropics/claude-plugins-official/blob/main/plugins/feature-dev/README.md",
+      "status": 200,
+      "resolved": "https://github.com/anthropics/claude-plugins-official/blob/main/plugins/feature-dev/README.md"
+    },
+    {
+      "url": "https://github.com/anthropics/claude-plugins-official/blob/main/plugins/pr-review-toolkit/README.md",
+      "status": 200,
+      "resolved": "https://github.com/anthropics/claude-plugins-official/blob/main/plugins/pr-review-toolkit/README.md"
+    },
+    {
+      "url": "https://github.com/anthropics/claude-plugins-official/blob/main/plugins/security-guidance/README.md",
+      "status": 200,
+      "resolved": "https://github.com/anthropics/claude-plugins-official/blob/main/plugins/security-guidance/README.md"
+    },
+    {
+      "url": "https://github.com/anthropics/claude-plugins-official/blob/main/plugins/typescript-lsp/README.md",
+      "page_error": "HTTP Error 503: Service Unavailable",
+      "raw_fallback": "https://raw.githubusercontent.com/anthropics/claude-plugins-official/main/plugins/typescript-lsp/README.md",
+      "status": 200,
+      "resolved": "https://raw.githubusercontent.com/anthropics/claude-plugins-official/main/plugins/typescript-lsp/README.md"
+    },
+    {
+      "url": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/claude-code-setup",
+      "status": 200,
+      "resolved": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/claude-code-setup"
+    },
+    {
+      "url": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/claude-md-management",
+      "status": 200,
+      "resolved": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/claude-md-management"
+    },
+    {
+      "url": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/claude-security",
+      "status": 200,
+      "resolved": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/claude-security"
+    },
+    {
+      "url": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/code-simplifier",
+      "status": 200,
+      "resolved": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/code-simplifier"
+    },
+    {
+      "url": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/feature-dev",
+      "status": 200,
+      "resolved": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/feature-dev"
+    },
+    {
+      "url": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/pr-review-toolkit",
+      "status": 200,
+      "resolved": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/pr-review-toolkit"
+    },
+    {
+      "url": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/security-guidance",
+      "status": 200,
+      "resolved": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/security-guidance"
+    },
+    {
+      "url": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/typescript-lsp",
+      "status": 200,
+      "resolved": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/typescript-lsp"
+    },
+    {
+      "url": "https://github.com/diegosouzapw/OmniRoute",
+      "status": 200,
+      "resolved": "https://github.com/cheaper-inference/OmniRoute"
+    },
+    {
+      "url": "https://github.com/diegosouzapw/OmniRoute/wiki/CLI-Integrations",
+      "status": 200,
+      "resolved": "https://github.com/cheaper-inference/OmniRoute/wiki/CLI-Integrations"
+    },
+    {
+      "url": "https://github.com/github/awesome-copilot/blob/main/plugins/chronicle-stats/README.md",
+      "status": 200,
+      "resolved": "https://github.com/github/awesome-copilot/blob/main/plugins/chronicle-stats/README.md"
+    },
+    {
+      "url": "https://github.com/github/awesome-copilot/blob/main/plugins/context-engineering/README.md",
+      "status": 200,
+      "resolved": "https://github.com/github/awesome-copilot/blob/main/plugins/context-engineering/README.md"
+    },
+    {
+      "url": "https://github.com/github/awesome-copilot/blob/main/plugins/csharp-dotnet-development/README.md",
+      "status": 200,
+      "resolved": "https://github.com/github/awesome-copilot/blob/main/plugins/csharp-dotnet-development/README.md"
+    },
+    {
+      "url": "https://github.com/github/awesome-copilot/blob/main/plugins/frontend-web-dev/README.md",
+      "page_error": "HTTP Error 503: Service Unavailable",
+      "raw_fallback": "https://raw.githubusercontent.com/github/awesome-copilot/main/plugins/frontend-web-dev/README.md",
+      "status": 200,
+      "resolved": "https://raw.githubusercontent.com/github/awesome-copilot/main/plugins/frontend-web-dev/README.md"
+    },
+    {
+      "url": "https://github.com/github/awesome-copilot/blob/main/plugins/java-development/README.md",
+      "status": 200,
+      "resolved": "https://github.com/github/awesome-copilot/blob/main/plugins/java-development/README.md"
+    },
+    {
+      "url": "https://github.com/github/awesome-copilot/blob/main/plugins/pr-review/README.md",
+      "page_error": "HTTP Error 503: Service Unavailable",
+      "raw_fallback": "https://raw.githubusercontent.com/github/awesome-copilot/main/plugins/pr-review/README.md",
+      "status": 200,
+      "resolved": "https://raw.githubusercontent.com/github/awesome-copilot/main/plugins/pr-review/README.md"
+    },
+    {
+      "url": "https://github.com/github/awesome-copilot/blob/main/plugins/project-planning/README.md",
+      "page_error": "HTTP Error 503: Service Unavailable",
+      "raw_fallback": "https://raw.githubusercontent.com/github/awesome-copilot/main/plugins/project-planning/README.md",
+      "status": 200,
+      "resolved": "https://raw.githubusercontent.com/github/awesome-copilot/main/plugins/project-planning/README.md"
+    },
+    {
+      "url": "https://github.com/github/awesome-copilot/blob/main/plugins/security-best-practices/README.md",
+      "status": 200,
+      "resolved": "https://github.com/github/awesome-copilot/blob/main/plugins/security-best-practices/README.md"
+    },
+    {
+      "url": "https://github.com/github/awesome-copilot/blob/main/plugins/testing-automation/README.md",
+      "page_error": "HTTP Error 503: Service Unavailable",
+      "raw_fallback": "https://raw.githubusercontent.com/github/awesome-copilot/main/plugins/testing-automation/README.md",
+      "status": 200,
+      "resolved": "https://raw.githubusercontent.com/github/awesome-copilot/main/plugins/testing-automation/README.md"
+    },
+    {
+      "url": "https://github.com/github/awesome-copilot/blob/main/plugins/where-was-i/README.md",
+      "status": 200,
+      "resolved": "https://github.com/github/awesome-copilot/blob/main/plugins/where-was-i/README.md"
+    },
+    {
+      "url": "https://github.com/github/awesome-copilot/blob/main/plugins/where-was-i/plugin.json",
+      "page_error": "HTTP Error 503: Service Unavailable",
+      "raw_fallback": "https://raw.githubusercontent.com/github/awesome-copilot/main/plugins/where-was-i/plugin.json",
+      "status": 200,
+      "resolved": "https://raw.githubusercontent.com/github/awesome-copilot/main/plugins/where-was-i/plugin.json"
+    },
+    {
+      "url": "https://github.com/github/awesome-copilot/tree/main/plugins/chronicle-stats",
+      "status": 200,
+      "resolved": "https://github.com/github/awesome-copilot/tree/main/plugins/chronicle-stats"
+    },
+    {
+      "url": "https://github.com/github/awesome-copilot/tree/main/plugins/context-engineering",
+      "status": 200,
+      "resolved": "https://github.com/github/awesome-copilot/tree/main/plugins/context-engineering"
+    },
+    {
+      "url": "https://github.com/github/awesome-copilot/tree/main/plugins/csharp-dotnet-development",
+      "status": 200,
+      "resolved": "https://github.com/github/awesome-copilot/tree/main/plugins/csharp-dotnet-development"
+    },
+    {
+      "url": "https://github.com/github/awesome-copilot/tree/main/plugins/frontend-web-dev",
+      "status": 200,
+      "resolved": "https://github.com/github/awesome-copilot/tree/main/plugins/frontend-web-dev"
+    },
+    {
+      "url": "https://github.com/github/awesome-copilot/tree/main/plugins/java-development",
+      "status": 200,
+      "resolved": "https://github.com/github/awesome-copilot/tree/main/plugins/java-development"
+    },
+    {
+      "url": "https://github.com/github/awesome-copilot/tree/main/plugins/pr-review",
+      "status": 200,
+      "resolved": "https://github.com/github/awesome-copilot/tree/main/plugins/pr-review"
+    },
+    {
+      "url": "https://github.com/github/awesome-copilot/tree/main/plugins/project-planning",
+      "status": 200,
+      "resolved": "https://github.com/github/awesome-copilot/tree/main/plugins/project-planning"
+    },
+    {
+      "url": "https://github.com/github/awesome-copilot/tree/main/plugins/security-best-practices",
+      "status": 200,
+      "resolved": "https://github.com/github/awesome-copilot/tree/main/plugins/security-best-practices"
+    },
+    {
+      "url": "https://github.com/github/awesome-copilot/tree/main/plugins/testing-automation",
+      "status": 200,
+      "resolved": "https://github.com/github/awesome-copilot/tree/main/plugins/testing-automation"
+    },
+    {
+      "url": "https://github.com/github/awesome-copilot/tree/main/plugins/where-was-i",
+      "status": 200,
+      "resolved": "https://github.com/github/awesome-copilot/tree/main/plugins/where-was-i"
+    },
+    {
+      "url": "https://github.com/github/github-mcp-server",
+      "status": 200,
+      "resolved": "https://github.com/github/github-mcp-server"
+    },
+    {
+      "url": "https://github.com/github/github-mcp-server/blob/main/docs/remote-server.md",
+      "page_error": "HTTP Error 503: Service Unavailable",
+      "raw_fallback": "https://raw.githubusercontent.com/github/github-mcp-server/main/docs/remote-server.md",
+      "status": 200,
+      "resolved": "https://raw.githubusercontent.com/github/github-mcp-server/main/docs/remote-server.md"
+    },
+    {
+      "url": "https://github.com/headroomlabs-ai/headroom",
+      "status": 200,
+      "resolved": "https://github.com/headroomlabs-ai/headroom"
+    },
+    {
+      "url": "https://github.com/headroomlabs-ai/headroom/blob/main/wiki/quickstart.md",
+      "page_error": "HTTP Error 503: Service Unavailable",
+      "raw_fallback": "https://raw.githubusercontent.com/headroomlabs-ai/headroom/main/wiki/quickstart.md",
+      "status": 200,
+      "resolved": "https://raw.githubusercontent.com/headroomlabs-ai/headroom/main/wiki/quickstart.md"
+    },
+    {
+      "url": "https://github.com/microsoft/playwright-mcp",
+      "status": 200,
+      "resolved": "https://github.com/microsoft/playwright-mcp"
+    },
+    {
+      "url": "https://github.com/obra/superpowers",
+      "status": 200,
+      "resolved": "https://github.com/obra/superpowers"
+    },
+    {
+      "url": "https://github.com/openai/plugins/blob/main/plugins/build-web-apps/README.md",
+      "status": 200,
+      "resolved": "https://github.com/openai/plugins/blob/main/plugins/build-web-apps/README.md"
+    },
+    {
+      "url": "https://github.com/openai/plugins/blob/main/plugins/coderabbit/skills/coderabbit-review/SKILL.md",
+      "status": 200,
+      "resolved": "https://github.com/openai/plugins/blob/main/plugins/coderabbit/skills/coderabbit-review/SKILL.md"
+    },
+    {
+      "url": "https://github.com/openai/plugins/blob/main/plugins/codex-security/.codex-plugin/plugin.json",
+      "status": 200,
+      "resolved": "https://github.com/openai/plugins/blob/main/plugins/codex-security/.codex-plugin/plugin.json"
+    },
+    {
+      "url": "https://github.com/openai/plugins/blob/main/plugins/figma/README.md",
+      "status": 200,
+      "resolved": "https://github.com/openai/plugins/blob/main/plugins/figma/README.md"
+    },
+    {
+      "url": "https://github.com/openai/plugins/tree/main/plugins/build-web-apps",
+      "status": 200,
+      "resolved": "https://github.com/openai/plugins/tree/main/plugins/build-web-apps"
+    },
+    {
+      "url": "https://github.com/openai/plugins/tree/main/plugins/figma",
+      "status": 200,
+      "resolved": "https://github.com/openai/plugins/tree/main/plugins/figma"
+    },
+    {
+      "url": "https://github.com/oraios/serena",
+      "status": 200,
+      "resolved": "https://github.com/oraios/serena"
+    },
+    {
+      "url": "https://github.com/oraios/serena/blob/main/docs/02-usage/010_installation.md",
+      "page_error": "HTTP Error 503: Service Unavailable",
+      "raw_fallback": "https://raw.githubusercontent.com/oraios/serena/main/docs/02-usage/010_installation.md",
+      "status": 200,
+      "resolved": "https://raw.githubusercontent.com/oraios/serena/main/docs/02-usage/010_installation.md"
+    },
+    {
+      "url": "https://github.com/oraios/serena/blob/main/docs/02-usage/030_clients.md",
+      "page_error": "HTTP Error 503: Service Unavailable",
+      "raw_fallback": "https://raw.githubusercontent.com/oraios/serena/main/docs/02-usage/030_clients.md",
+      "status": 200,
+      "resolved": "https://raw.githubusercontent.com/oraios/serena/main/docs/02-usage/030_clients.md"
+    },
+    {
+      "url": "https://github.com/rebelytics/one-skill-to-rule-them-all",
+      "status": 200,
+      "resolved": "https://github.com/rebelytics/one-skill-to-rule-them-all"
+    },
+    {
+      "url": "https://github.com/rebelytics/one-skill-to-rule-them-all/blob/main/skills/task-observer/references/environments.md",
+      "status": 200,
+      "resolved": "https://github.com/rebelytics/one-skill-to-rule-them-all/blob/main/skills/task-observer/references/environments.md"
+    },
+    {
+      "url": "https://github.com/rtk-ai/rtk",
+      "status": 200,
+      "resolved": "https://github.com/rtk-ai/rtk"
+    },
+    {
+      "url": "https://github.com/thedotmack/claude-mem",
+      "status": 200,
+      "resolved": "https://github.com/thedotmack/claude-mem"
+    },
+    {
+      "url": "https://github.com/upstash/context7",
+      "status": 200,
+      "resolved": "https://github.com/upstash/context7"
+    },
+    {
+      "url": "https://mcp.sonarqube.com/config-generator.html",
+      "status": 200,
+      "resolved": "https://mcp.sonarqube.com/config-generator.html"
+    },
+    {
+      "url": "https://www.rtk-ai.app/docs/getting-started/supported-agents/",
+      "status": 200,
+      "resolved": "https://www.rtk-ai.app/docs/getting-started/supported-agents/"
+    }
+  ]
+}

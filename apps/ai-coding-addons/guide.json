@@ -1,0 +1,2007 @@
+{
+  "reviewed": "2026-11-27",
+  "cards": [
+    {
+      "number": "01",
+      "id": "rtk-rust-token-killer",
+      "title": "RTK / Rust Token Killer",
+      "type": "Terminal output filter",
+      "description": "Like a filter that removes noisy terminal lines before AI reads them. Directly reduces noisy output from common Git, test, lint and build commands.",
+      "difficulty": "Beginner",
+      "time": "5–15 min",
+      "cost": "Assistant usage; inspect selected RTK edition/license",
+      "processing": "Local output filter; filtered output goes to the assistant",
+      "account": "No RTK account required for basic CLI",
+      "version": "Publisher minimum not established; record installed release before testing.",
+      "os": "Windows / macOS / Linux paths depend on host and runtime; no live OS matrix executed.",
+      "shared": "**Runtime:** Install the RTK executable separately in each OS environment. Windows PowerShell:\n\n```powershell\nwinget install rtk-ai.rtk\n```\n\nmacOS/Linux with Homebrew:\n\n```bash\nbrew install rtk\n```\n\nConfirm the correct package and capture a baseline:\n\n```terminal\nrtk --version\nrtk gain\n```\n\n**Scope:** The following recipes use user-wide hook setup (`-g`), not project-only setup. Read the dry-run output to identify files and preserve existing hooks. A rules-file fallback asks the model to prefer RTK; it is not the same as automatic command rewriting.",
+      "warning": "Never replace full logs when details are essential. There is another unrelated `rtk` project: check `rtk gain`.",
+      "sources": [
+        {
+          "url": "https://github.com/rtk-ai/rtk",
+          "label": "Publisher setup / source"
+        },
+        {
+          "url": "https://www.rtk-ai.app/docs/getting-started/supported-agents/",
+          "label": "Per-agent hook support and fallback"
+        }
+      ],
+      "clients": {
+        "claude": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Configure\n\nPreview the user-wide setup:\n\n```terminal\nrtk init -g --dry-run\n```\n\nReview the named files, then apply:\n\n```terminal\nrtk init -g\n```\n\nRestart this assistant; inspect its hook manager and complete trust prompts. On Windows confirm your exact RTK release and host support this hook; use the publisher’s WSL or rules fallback if documented for that release.\n\n#### Prove rewriting\n\nCapture `rtk gain`, run one supported repository command through the assistant and inspect the actual command in its tool trace:\n\n```chat\nRun git status in this practice repository without editing files. Show the executed command.\n```\n\nRun `rtk gain` again. Require both RTK-wrapped command activity and a corresponding new usage entry. If the command was not rewritten, inspect the hook instead of claiming savings."
+        },
+        "codex": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Configure\n\nPreview the user-wide setup:\n\n```terminal\nrtk init -g --codex --dry-run\n```\n\nReview the named files, then apply:\n\n```terminal\nrtk init -g --codex\n```\n\nRestart this assistant; inspect its hook manager and complete trust prompts. On Windows confirm your exact RTK release and host support this hook; use the publisher’s WSL or rules fallback if documented for that release.\n\n#### Prove rewriting\n\nCapture `rtk gain`, run one supported repository command through the assistant and inspect the actual command in its tool trace:\n\n```chat\nRun git status in this practice repository without editing files. Show the executed command.\n```\n\nRun `rtk gain` again. Require both RTK-wrapped command activity and a corresponding new usage entry. If the command was not rewritten, inspect the hook instead of claiming savings."
+        },
+        "copilot": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Configure\n\nPreview the user-wide setup:\n\n```terminal\nrtk init -g --copilot --dry-run\n```\n\nReview the named files, then apply:\n\n```terminal\nrtk init -g --copilot\n```\n\nRestart this assistant; inspect its hook manager and complete trust prompts. On Windows confirm your exact RTK release and host support this hook; use the publisher’s WSL or rules fallback if documented for that release.\n\n#### Prove rewriting\n\nCapture `rtk gain`, run one supported repository command through the assistant and inspect the actual command in its tool trace:\n\n```chat\nRun git status in this practice repository without editing files. Show the executed command.\n```\n\nRun `rtk gain` again. Require both RTK-wrapped command activity and a corresponding new usage entry. If the command was not rewritten, inspect the hook instead of claiming savings."
+        },
+        "vscode": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Configure\n\nPreview the user-wide setup:\n\n```terminal\nrtk init -g --copilot --dry-run\n```\n\nReview the named files, then apply:\n\n```terminal\nrtk init -g --copilot\n```\n\nRestart this assistant; inspect its hook manager and complete trust prompts. On Windows confirm your exact RTK release and host support this hook; use the publisher’s WSL or rules fallback if documented for that release.\n\n#### Prove rewriting\n\nCapture `rtk gain`, run one supported repository command through the assistant and inspect the actual command in its tool trace:\n\n```chat\nRun git status in this practice repository without editing files. Show the executed command.\n```\n\nRun `rtk gain` again. Require both RTK-wrapped command activity and a corresponding new usage entry. If the command was not rewritten, inspect the hook instead of claiming savings."
+        },
+        "canvas": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        }
+      },
+      "cleanup": "Record the hook files shown by the dry run. Disable/remove the RTK hook in each configured host, restore only its changes, and confirm ordinary commands work. Consult the publisher’s OS uninstall instructions to remove the executable; retain or erase usage history deliberately."
+    },
+    {
+      "number": "02",
+      "id": "headroom",
+      "title": "Headroom",
+      "type": "Advanced AI traffic proxy",
+      "description": "Like packing a large suitcase more tightly—less context to send. May keep long sessions usable with fewer input tokens.",
+      "difficulty": "Advanced",
+      "time": "20–45 min",
+      "cost": "Upstream model charges; compression is not guaranteed billing savings",
+      "processing": "Local proxy; approved upstream receives compressed requests",
+      "account": "Existing upstream credentials; provider-specific authorization",
+      "version": "Publisher minimum not established; record installed release before testing.",
+      "os": "Windows / macOS / Linux paths depend on host and runtime; no live OS matrix executed.",
+      "shared": "**Runtime and scope:** Install uv, then the wrapper in this OS environment. The publisher quickstart shows the all-extras Python 3.13 path on macOS Apple Silicon/Linux; on native Windows use its current platform guide and supported wheels/extras rather than treating that path as a tested universal install.\n\n```terminal\nuv tool install --python 3.13 \"headroom-ai[all]\"\nheadroom --version\nheadroom wrap --help\n```\n\nRecord all endpoint/settings changes and the restore action printed by the wrapper. Confirm approved upstream authentication before wrapping traffic.",
+      "warning": "Proxying can affect provider policies, caching and output fidelity. Benchmark with and without it.",
+      "sources": [
+        {
+          "url": "https://github.com/headroomlabs-ai/headroom",
+          "label": "Publisher setup / source"
+        },
+        {
+          "url": "https://github.com/headroomlabs-ai/headroom/blob/main/wiki/quickstart.md",
+          "label": "Wrapper quickstart and platform qualifications"
+        }
+      ],
+      "clients": {
+        "claude": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Configure and start\n\nConfirm `headroom wrap --help` lists `claude`. \n\n```terminal\nheadroom wrap claude\n```\n\nKeep the wrapper terminal running. Use the assistant/VS Code launched or configured by that wrapper; confirm the printed proxy route and upstream destination.\n\n#### Verify\n\nRun the same small test task with and without the wrapper. Require a matching request in the proxy log/dashboard, the expected upstream/model, and correct results. Record latency, retries, cache behavior and actual cost; no model answer alone proves routing."
+        },
+        "codex": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Configure and start\n\nConfirm `headroom wrap --help` lists `codex`. \n\n```terminal\nheadroom wrap codex\n```\n\nKeep the wrapper terminal running. Use the assistant/VS Code launched or configured by that wrapper; confirm the printed proxy route and upstream destination.\n\n#### Verify\n\nRun the same small test task with and without the wrapper. Require a matching request in the proxy log/dashboard, the expected upstream/model, and correct results. Record latency, retries, cache behavior and actual cost; no model answer alone proves routing."
+        },
+        "copilot": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Configure and start\n\nConfirm `headroom wrap --help` lists `copilot`. For Copilot, complete the supported device login when existing credentials cannot be reused. \n\n```terminal\nheadroom copilot-auth login\n```\n\n\n\n```terminal\nheadroom wrap copilot\n```\n\nKeep the wrapper terminal running. Use the assistant/VS Code launched or configured by that wrapper; confirm the printed proxy route and upstream destination.\n\n#### Verify\n\nRun the same small test task with and without the wrapper. Require a matching request in the proxy log/dashboard, the expected upstream/model, and correct results. Record latency, retries, cache behavior and actual cost; no model answer alone proves routing."
+        },
+        "vscode": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Configure and start\n\nConfirm `headroom wrap --help` lists `vscode`. For Copilot, complete the supported device login when existing credentials cannot be reused. \n\n```terminal\nheadroom copilot-auth login\n```\n\n\n\n```terminal\nheadroom wrap vscode\n```\n\nKeep the wrapper terminal running. Use the assistant/VS Code launched or configured by that wrapper; confirm the printed proxy route and upstream destination.\n\n#### Verify\n\nRun the same small test task with and without the wrapper. Require a matching request in the proxy log/dashboard, the expected upstream/model, and correct results. Record latency, retries, cache behavior and actual cost; no model answer alone proves routing."
+        },
+        "canvas": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        }
+      },
+      "cleanup": "Stop the wrapper with Ctrl+C. Use the installed release’s `headroom unwrap --help` and its documented restore command for the selected host; restore the recorded prior endpoint/settings. Confirm a new ordinary session sends no requests to the stopped proxy. Revoke credentials only if they are no longer needed."
+    },
+    {
+      "number": "03",
+      "id": "claude-mem",
+      "title": "Claude-Mem",
+      "type": "Session memory",
+      "description": "Like project notes that are available when you open a new AI session. Less re-explanation when you return to a project after a break.",
+      "difficulty": "Intermediate",
+      "time": "10–25 min",
+      "cost": "Observer/model charges; hosted plans may apply",
+      "processing": "Local ~/.claude-mem; observer/provider may process context remotely",
+      "account": "Selected observer provider; optional cloud account",
+      "version": "Publisher minimum not established; record installed release before testing.",
+      "os": "Windows / macOS / Linux paths depend on host and runtime; no live OS matrix executed.",
+      "shared": "**Runtime / scope:** Install Node supported by the selected release. The installer registers each chosen assistant separately; installing the runtime does not enable every client.\n\n```terminal\nnpx claude-mem install\nnpx claude-mem doctor\nnpx claude-mem status\n```\n\nSelect the intended assistant and observer/provider explicitly. Current documentation places memory in `~/.claude-mem`; cloud sync is opt-in. Anonymous usage analytics are enabled by default and can be disabled:\n\n```terminal\nnpx claude-mem telemetry disable\n```\n\nReview the exact captured content, provider destination, retention, private/excluded content controls and deletion instructions before using real project data.",
+      "warning": "Never assume perfect memory. Avoid placing company secrets, tokens or private data into unapproved storage.",
+      "sources": [
+        {
+          "url": "https://github.com/thedotmack/claude-mem",
+          "label": "Publisher setup / source"
+        }
+      ],
+      "clients": {
+        "claude": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Configure\n\nSelect **Claude Code CLI** in the installer. If this release does not list it, classify this path as unverified and do not copy another client’s hooks. Restart the selected assistant and confirm its memory capture/retrieval integration.\n\n#### Verify capture and recall\n\nUse a unique harmless value such as `practice-memory-20261127-7f2`. Ask the installed memory tool to record it, then inspect the corresponding observation in the service/viewer. End the session and start a fresh thread rather than resuming it. Ask for the value without including it in the prompt. Require a retrieval tool trace and the matching stored observation. Check that the value was not placed in repository instructions or native assistant memory. A correct answer by itself is insufficient."
+        },
+        "codex": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Configure\n\nSelect **Codex CLI** in the installer. If this release does not list it, classify this path as unverified and do not copy another client’s hooks. Restart the selected assistant and confirm its memory capture/retrieval integration.\n\n#### Verify capture and recall\n\nUse a unique harmless value such as `practice-memory-20261127-7f2`. Ask the installed memory tool to record it, then inspect the corresponding observation in the service/viewer. End the session and start a fresh thread rather than resuming it. Ask for the value without including it in the prompt. Require a retrieval tool trace and the matching stored observation. Check that the value was not placed in repository instructions or native assistant memory. A correct answer by itself is insufficient."
+        },
+        "copilot": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Configure\n\nSelect **GitHub Copilot CLI** in the installer. If this release does not list it, classify this path as unverified and do not copy another client’s hooks. Restart the selected assistant and confirm its memory capture/retrieval integration.\n\n#### Verify capture and recall\n\nUse a unique harmless value such as `practice-memory-20261127-7f2`. Ask the installed memory tool to record it, then inspect the corresponding observation in the service/viewer. End the session and start a fresh thread rather than resuming it. Ask for the value without including it in the prompt. Require a retrieval tool trace and the matching stored observation. Check that the value was not placed in repository instructions or native assistant memory. A correct answer by itself is insufficient."
+        },
+        "vscode": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        },
+        "canvas": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        }
+      },
+      "cleanup": "Disable capture hooks in each registered assistant and stop the worker using the installed release’s documented service controls. Use its documented memory deletion/export UI to remove the practice observation; decide separately about local backups and optional cloud copies. Removing a plugin alone does not erase `~/.claude-mem` or revoke provider credentials."
+    },
+    {
+      "number": "04",
+      "id": "omniroute",
+      "title": "OmniRoute",
+      "type": "Advanced model router",
+      "description": "Like a traffic controller that sends AI requests to selected providers. Can help control model spend, provider outages and routing policies.",
+      "difficulty": "Advanced",
+      "time": "20–45 min",
+      "cost": "Provider pricing, quotas and router edition terms",
+      "processing": "Local routing gateway; chosen provider receives requests",
+      "account": "Approved upstream provider accounts / keys",
+      "version": "Publisher minimum not established; record installed release before testing.",
+      "os": "Windows / macOS / Linux paths depend on host and runtime; no live OS matrix executed.",
+      "shared": "**Install and scope:** This is a local service, not a portable client plugin. Install into the intended OS environment:\n\n```terminal\nnpm install -g omniroute\nomniroute\n```\n\nOpen only the loopback dashboard address printed by the process. Add an approved provider, choose a model/endpoint, set applicable quotas/budgets, and record any client settings changed. A dashboard alone does not establish client routing.",
+      "warning": "Not unlimited free usage: provider quotas, terms and expenses still apply. Treat credentials and outbound code exposure as a security review item.",
+      "sources": [
+        {
+          "url": "https://github.com/diegosouzapw/OmniRoute",
+          "label": "Publisher setup / source"
+        },
+        {
+          "url": "https://github.com/diegosouzapw/OmniRoute/wiki/CLI-Integrations",
+          "label": "Client endpoint and launcher instructions"
+        }
+      ],
+      "clients": {
+        "claude": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Launch and verify\n\nCheck the installed command’s help and the publisher integration guide, then launch from the practice repository:\n\n```terminal\nomniroute launch\n```\n\nSend one harmless request. Require a corresponding router request record showing the actual destination and model, and compare the answer with a normal session. Confirm the provider is authorized for the project. If the launch command is unavailable in this release, use the documented client endpoint setup instead of guessing flags."
+        },
+        "codex": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Launch and verify\n\nCheck the installed command’s help and the publisher integration guide, then launch from the practice repository:\n\n```terminal\nomniroute launch-codex\n```\n\nSend one harmless request. Require a corresponding router request record showing the actual destination and model, and compare the answer with a normal session. Confirm the provider is authorized for the project. If the launch command is unavailable in this release, use the documented client endpoint setup instead of guessing flags."
+        },
+        "copilot": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        },
+        "vscode": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        },
+        "canvas": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        }
+      },
+      "cleanup": "Stop the local service, restore the recorded client endpoint/model/authentication settings and start a normal session. Remove provider credentials from the router and revoke unused provider tokens. Keep or erase router request logs according to retention rules."
+    },
+    {
+      "number": "05",
+      "id": "chronicle-stats-my-ai-usage",
+      "title": "Chronicle Stats / My AI Usage",
+      "type": "Copilot canvas extension",
+      "description": "Like a dashboard that shows where Copilot spends tokens. Measures token/credit patterns before optimizing.",
+      "difficulty": "Intermediate",
+      "time": "10–20 min",
+      "cost": "Assistant usage; check publisher terms",
+      "processing": "Local app/session data plus configured Copilot model processing",
+      "account": "Working assistant account",
+      "version": "My AI Usage: Node 22.13+; canvas-capable Copilot app required.",
+      "os": "Windows / macOS / Linux paths depend on host and runtime; no live OS matrix executed.",
+      "shared": "**Required host:** GitHub Copilot app with canvas support. The CLI command below installs a package; it does not give terminal chat or VS Code the app’s canvas renderer. My AI Usage needs Node 22.13+ because it uses `node:sqlite`.",
+      "warning": "The My AI Usage and PR Review experiences may require a Copilot app canvas and are not plain VS Code slash commands.",
+      "sources": [
+        {
+          "url": "https://github.com/github/awesome-copilot/tree/main/plugins/chronicle-stats",
+          "label": "Publisher setup / source"
+        },
+        {
+          "url": "https://github.com/github/awesome-copilot/blob/main/plugins/chronicle-stats/README.md",
+          "label": "Canvas requirements and installation"
+        }
+      ],
+      "clients": {
+        "claude": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        },
+        "codex": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        },
+        "copilot": {
+          "status": "unavailable",
+          "note": "The package can be installed using the CLI, but this canvas experience requires the Copilot app host."
+        },
+        "vscode": {
+          "status": "unverified",
+          "note": "This edition has no publisher-confirmed VS Code canvas rendering path for this extension."
+        },
+        "canvas": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Install and open\n\nCheck the app has canvas support and the package runtime requirement above. Install through its supported plugin flow or the documented CLI installer:\n\n```terminal\ncopilot plugin marketplace list\ncopilot plugin install chronicle-stats@awesome-copilot\ncopilot plugin list\n```\n\nRestart the Copilot app and open the installed extension from the app’s available plugin/canvas entry. If the app exposes no extension entry, inspect its version and entitlement; ordinary chat is not a substitute.\n\n#### Verify\n\nOpen My AI Usage and require the actual dashboard with day/model/session breakdown from existing local Copilot activity. Compare one session with its underlying usage record; distinguish token estimates from invoices. No data is a legitimate empty state."
+        }
+      },
+      "cleanup": "Disable the plugin or remove its MCP registration in the same client and scope used for installation. See the shared removal guide below. Review the diff before restoring project instructions; revoke unused account connections separately."
+    },
+    {
+      "number": "06",
+      "id": "serena",
+      "title": "Serena",
+      "type": "Code navigation server",
+      "description": "Like GPS for functions and classes: it can find the exact place to edit. Great for understanding unfamiliar projects, targeted edits and large repositories. May avoid reading whole files.",
+      "difficulty": "Intermediate",
+      "time": "10–25 min",
+      "cost": "Assistant usage; check publisher terms",
+      "processing": "Assistant provider receives task context",
+      "account": "Working assistant account",
+      "version": "Publisher install selects Python 3.13; record installed Serena and assistant releases.",
+      "os": "Windows / macOS / Linux paths depend on host and runtime; no live OS matrix executed.",
+      "shared": "**Runtime:** Install uv and the supported Serena package, then initialize per its installed help:\n\n```terminal\nuv tool install -p 3.13 serena-agent\nserena --help\nserena init\n```\n\nReview initialization output and project configuration before indexing. Use the project’s language/runtime dependencies. Unsupported languages and ignored files will limit symbol coverage.",
+      "warning": "Indexing and language support vary by project. Do not confuse symbol search with a guaranteed reduction in billed tokens.",
+      "sources": [
+        {
+          "url": "https://github.com/oraios/serena",
+          "label": "Publisher setup / source"
+        },
+        {
+          "url": "https://github.com/oraios/serena/blob/main/docs/02-usage/030_clients.md",
+          "label": "Client contexts and project resolution"
+        },
+        {
+          "url": "https://github.com/oraios/serena/blob/main/docs/02-usage/010_installation.md",
+          "label": "Python version, initialization and uninstall"
+        }
+      ],
+      "clients": {
+        "claude": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Register and activate\n\n\n\n```terminal\nclaude mcp add serena --scope project -- serena start-mcp-server --context claude-code --project-from-cwd\n```\n\nReview `.mcp.json`; start Claude and check `/mcp`.\n\n#### Invoke and verify\n\n\n```chat\nUse Serena to find references to a symbol that exists in this repository. Do not edit files.\n```\n\nRequire a Serena symbol/reference tool call, the correct activated project path, and file/line references matching the code. If onboarding is requested, review the generated project notes."
+        },
+        "codex": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Register and activate\n\n\n\n```terminal\nserena setup codex\n```\n\nInspect the resulting user Codex configuration and project-resolution arguments. Start Codex in the repository and check `/mcp`.\n\n#### Invoke and verify\n\n\n```chat\nUse Serena to find references to a symbol that exists in this repository. Do not edit files.\n```\n\nRequire a Serena symbol/reference tool call, the correct activated project path, and file/line references matching the code. If onboarding is requested, review the generated project notes."
+        },
+        "copilot": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Register and activate\n\nIn `/mcp add`, select **STDIO**, name `serena`, command `serena`, and enter arguments:\n\n```text\nstart-mcp-server --context=copilot-cli --project-from-cwd\n```\n\n\n\n#### Invoke and verify\n\n\n```chat\nUse Serena to find references to a symbol that exists in this repository. Do not edit files.\n```\n\nRequire a Serena symbol/reference tool call, the correct activated project path, and file/line references matching the code. If onboarding is requested, review the generated project notes."
+        },
+        "vscode": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Register and activate\n\nUse **MCP: Add Server → Command (stdio)**. Set executable `serena`, workspace scope, and arguments:\n\n```text\nstart-mcp-server --context=ide --project-from-cwd\n```\n\nConfirm the installed release supports the `ide` context and resolves the workspace directory; check **MCP: List Servers**.\n\n#### Invoke and verify\n\n\n```chat\nUse Serena to find references to a symbol that exists in this repository. Do not edit files.\n```\n\nRequire a Serena symbol/reference tool call, the correct activated project path, and file/line references matching the code. If onboarding is requested, review the generated project notes."
+        },
+        "canvas": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        }
+      },
+      "cleanup": "Disable the plugin or remove its MCP registration in the same client and scope used for installation. See the shared removal guide below. Review the diff before restoring project instructions; revoke unused account connections separately."
+    },
+    {
+      "number": "07",
+      "id": "context7",
+      "title": "Context7",
+      "type": "Current documentation",
+      "description": "Like a freshly updated instruction manual for the libraries your app uses. Reduces answers based on outdated SDK syntax and repeated rework.",
+      "difficulty": "Beginner",
+      "time": "5–15 min",
+      "cost": "Context7 plan/rate limits plus assistant usage",
+      "processing": "Remote Context7 docs service; model receives retrieved excerpts",
+      "account": "Context7 authorization if requested",
+      "version": "Publisher minimum not established; record installed release before testing.",
+      "os": "Windows / macOS / Linux paths depend on host and runtime; no live OS matrix executed.",
+      "shared": "**Integration choice:** The remote HTTP MCP path needs no local Node runtime. The optional CLI/skill setup uses Node and `npx ctx7 setup`; choose one path initially. Match docs to the exact dependency version from the project lockfile. Retrieval can add context rather than save tokens.",
+      "warning": "More retrieved docs can consume more context; ask targeted questions.",
+      "sources": [
+        {
+          "url": "https://github.com/upstash/context7",
+          "label": "Publisher setup / source"
+        },
+        {
+          "url": "https://github.com/upstash/context7#installation",
+          "label": "Remote MCP and optional CLI installation"
+        }
+      ],
+      "clients": {
+        "claude": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Register\n\n\n\n```terminal\nclaude mcp add context7 --scope project --transport http https://mcp.context7.com/mcp\n```\n\nOpen `/mcp` in Claude and complete the supported authorization prompt.\n\n#### Invoke and verify\n\n\n```chat\nUse Context7 to identify the documentation for the exact version of a dependency in this repository. Show the library identifier, version, lookup source and relevant API signature. Do not edit files.\n```\n\nRequire a Context7 library-resolution/documentation tool trace, then compare the signature with the dependency version. If authentication is denied, use the publisher’s current key/OAuth method rather than placing a key in tracked configuration."
+        },
+        "codex": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Register\n\n\n\n```terminal\ncodex mcp add context7 --url https://mcp.context7.com/mcp/\n```\n\nCheck `/mcp`; use the host’s supported OAuth login if required by this endpoint/account.\n\n#### Invoke and verify\n\n\n```chat\nUse Context7 to identify the documentation for the exact version of a dependency in this repository. Show the library identifier, version, lookup source and relevant API signature. Do not edit files.\n```\n\nRequire a Context7 library-resolution/documentation tool trace, then compare the signature with the dependency version. If authentication is denied, use the publisher’s current key/OAuth method rather than placing a key in tracked configuration."
+        },
+        "copilot": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Register\n\nUse `/mcp add` in Copilot CLI; name `context7`, URL `https://mcp.context7.com/mcp`. Complete supported authorization and inspect the MCP tools list.\n\n#### Invoke and verify\n\n\n```chat\nUse Context7 to identify the documentation for the exact version of a dependency in this repository. Show the library identifier, version, lookup source and relevant API signature. Do not edit files.\n```\n\nRequire a Context7 library-resolution/documentation tool trace, then compare the signature with the dependency version. If authentication is denied, use the publisher’s current key/OAuth method rather than placing a key in tracked configuration."
+        },
+        "vscode": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Register\n\nUse **MCP: Add Server → HTTP** and choose workspace scope; name `context7`, URL `https://mcp.context7.com/mcp`. Complete supported authorization and inspect the MCP tools list.\n\n#### Invoke and verify\n\n\n```chat\nUse Context7 to identify the documentation for the exact version of a dependency in this repository. Show the library identifier, version, lookup source and relevant API signature. Do not edit files.\n```\n\nRequire a Context7 library-resolution/documentation tool trace, then compare the signature with the dependency version. If authentication is denied, use the publisher’s current key/OAuth method rather than placing a key in tracked configuration."
+        },
+        "canvas": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        }
+      },
+      "cleanup": "Disable the plugin or remove its MCP registration in the same client and scope used for installation. See the shared removal guide below. Review the diff before restoring project instructions; revoke unused account connections separately."
+    },
+    {
+      "number": "08",
+      "id": "graphify",
+      "title": "Graphify",
+      "type": "Codebase map",
+      "description": "Like a map of how files, functions, and modules connect. Helpful when you need an architecture map or must track how changes flow through many modules.",
+      "difficulty": "Intermediate",
+      "time": "10–25 min",
+      "cost": "Assistant usage; check publisher terms",
+      "processing": "Assistant provider receives task context",
+      "account": "Working assistant account",
+      "version": "Publisher minimum not established; record installed release before testing.",
+      "os": "Windows / macOS / Linux paths depend on host and runtime; no live OS matrix executed.",
+      "shared": "**Runtime:** Install uv and the publisher package (`graphifyy`, double y):\n\n```terminal\nuv tool install graphifyy\ngraphify --help\n```\n\n**Scope:** Use project-scoped skills where supported and review the printed file paths. Record a release/commit: this project’s default-branch documentation can differ from older `main`/`v1` pages. Graph output can become stale after code changes.",
+      "warning": "Graph generation adds up-front time and needs refreshing as the code changes.",
+      "sources": [
+        {
+          "url": "https://github.com/Graphify-Labs/graphify",
+          "label": "Publisher setup / source"
+        }
+      ],
+      "clients": {
+        "claude": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Install the host integration\n\n\n```terminal\ngraphify claude install --project\n```\n\nInspect the created skill, sidecar references and instructions. For VS Code, inspect whether this release writes project or user files. Start a fresh assistant session and select the installed Graphify skill through host completion.\n\n#### Build and verify\n\n\n```chat\nUse the installed Graphify skill to build a map of this practice repository. Explain one real API-to-storage relationship and show the graph output location. Do not edit source code.\n```\n\nRequire the Graphify command/tool trace, `graphify-out/GRAPH_REPORT.md` (or the printed report path), and graph edges supported by real code. Generated reports are expected files even when source-code edits are forbidden. Refresh the graph after changes."
+        },
+        "codex": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Install the host integration\n\n\n```terminal\ngraphify codex install --project\n```\n\nInspect the created skill, sidecar references and instructions. For VS Code, inspect whether this release writes project or user files. Start a fresh assistant session and select the installed Graphify skill through host completion.\n\n#### Build and verify\n\n\n```chat\nUse the installed Graphify skill to build a map of this practice repository. Explain one real API-to-storage relationship and show the graph output location. Do not edit source code.\n```\n\nRequire the Graphify command/tool trace, `graphify-out/GRAPH_REPORT.md` (or the printed report path), and graph edges supported by real code. Generated reports are expected files even when source-code edits are forbidden. Refresh the graph after changes."
+        },
+        "copilot": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Install the host integration\n\n\n```terminal\ngraphify install --platform copilot --project\n```\n\nInspect the created skill, sidecar references and instructions. For VS Code, inspect whether this release writes project or user files. Start a fresh assistant session and select the installed Graphify skill through host completion.\n\n#### Build and verify\n\n\n```chat\nUse the installed Graphify skill to build a map of this practice repository. Explain one real API-to-storage relationship and show the graph output location. Do not edit source code.\n```\n\nRequire the Graphify command/tool trace, `graphify-out/GRAPH_REPORT.md` (or the printed report path), and graph edges supported by real code. Generated reports are expected files even when source-code edits are forbidden. Refresh the graph after changes."
+        },
+        "vscode": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Install the host integration\n\n\n```terminal\ngraphify vscode install\n```\n\nInspect the created skill, sidecar references and instructions. For VS Code, inspect whether this release writes project or user files. Start a fresh assistant session and select the installed Graphify skill through host completion.\n\n#### Build and verify\n\n\n```chat\nUse the installed Graphify skill to build a map of this practice repository. Explain one real API-to-storage relationship and show the graph output location. Do not edit source code.\n```\n\nRequire the Graphify command/tool trace, `graphify-out/GRAPH_REPORT.md` (or the printed report path), and graph edges supported by real code. Generated reports are expected files even when source-code edits are forbidden. Refresh the graph after changes."
+        },
+        "canvas": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        }
+      },
+      "cleanup": "Remove the installed host skill/instruction changes at their recorded scope; inspect any commit hook separately. Delete only the practice project’s generated `graphify-out` if no longer needed. Removing the executable does not remove installed project guidance."
+    },
+    {
+      "number": "09",
+      "id": "language-server-plugins",
+      "title": "Language Server Plugins",
+      "type": "Language-aware diagnostics",
+      "description": "Like giving Claude a language-aware dictionary for your code. Higher precision for typed languages.",
+      "difficulty": "Beginner",
+      "time": "5–15 min",
+      "cost": "Assistant usage; check publisher terms",
+      "processing": "Assistant provider receives task context",
+      "account": "Working assistant account",
+      "version": "Publisher minimum not established; record installed release before testing.",
+      "os": "Windows / macOS / Linux paths depend on host and runtime; no live OS matrix executed.",
+      "shared": "**Scope:** Choose user or project scope in Claude’s plugin manager and record the selection. The official marketplace is normally available. If missing, add it in Claude chat:\n\n```chat\n/plugin marketplace add anthropics/claude-plugins-official\n```\n\n\n\n**TypeScript worked example:** Use a TypeScript project with its dependencies installed and an existing `tsconfig.json`. Install the actual language server in this OS environment:\n\n```terminal\nnpm install -g typescript-language-server typescript\ntypescript-language-server --version\n```\n\nInstall `typescript-lsp` below and open an existing `.ts` file. A diagnostic test should use an intentional type mismatch in a disposable fixture; confirm the installed host exposes diagnostics before expecting them. For Python choose `pyright-lsp` and its own prerequisites; one server is not universal.",
+      "warning": "Review the selected scope, tool permissions and changed files before use.",
+      "sources": [
+        {
+          "url": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/typescript-lsp",
+          "label": "Publisher setup / source"
+        },
+        {
+          "url": "https://github.com/anthropics/claude-plugins-official/blob/main/plugins/typescript-lsp/README.md",
+          "label": "TypeScript server prerequisites"
+        }
+      ],
+      "clients": {
+        "claude": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Install and activate\n\nOpen Claude in the practice repository. Install in Claude chat:\n\n```chat\n/plugin install typescript-lsp@claude-plugins-official\n```\n\nUse `/plugin` to confirm it is enabled and start a new session. Review any hook trust prompts.\n\n#### Invoke and verify\n\n\n```chat\nUse LSP to go to definition and find references for an existing TypeScript symbol. Do not edit files.\n```\n\n**Evidence required:** An LSP tool invocation with real symbol locations, plus successful language-server startup. Do not count a generic AI response as activation evidence."
+        },
+        "codex": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        },
+        "copilot": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        },
+        "vscode": {
+          "status": "unverified",
+          "note": "Use native VS Code language extensions for equivalent functionality; the Claude plugin is a different host package."
+        },
+        "canvas": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        }
+      },
+      "cleanup": "Disable the plugin or remove its MCP registration in the same client and scope used for installation. See the shared removal guide below. Review the diff before restoring project instructions; revoke unused account connections separately."
+    },
+    {
+      "number": "10",
+      "id": "context-engineering",
+      "title": "Context Engineering",
+      "type": "Planning skill",
+      "description": "Like handing Copilot only the pages it actually needs. Keeps AI focused on the right files.",
+      "difficulty": "Intermediate",
+      "time": "10–25 min",
+      "cost": "Assistant usage; check publisher terms",
+      "processing": "Assistant provider receives task context",
+      "account": "Working assistant account",
+      "version": "Publisher minimum not established; record installed release before testing.",
+      "os": "Windows / macOS / Linux paths depend on host and runtime; no live OS matrix executed.",
+      "shared": "**Scope and prerequisites:** Copilot CLI installs this plugin for that client. VS Code requires its own installation. A working Copilot account is required. \n\nIf discovery fails, inspect registered marketplaces first:\n\n```terminal\ncopilot plugin marketplace list\n```\n\n`awesome-copilot` is included by default in current Copilot CLI. Only if it is absent, register the reviewed source:\n\n```terminal\ncopilot plugin marketplace add github/awesome-copilot\n```\n\n",
+      "warning": "Review the selected scope, tool permissions and changed files before use.",
+      "sources": [
+        {
+          "url": "https://github.com/github/awesome-copilot/tree/main/plugins/context-engineering",
+          "label": "Publisher setup / source"
+        },
+        {
+          "url": "https://github.com/github/awesome-copilot/blob/main/plugins/context-engineering/README.md",
+          "label": "Plugin requirements and named commands"
+        },
+        {
+          "url": "https://code.visualstudio.com/docs/agent-customization/agent-plugins#_discover-and-install-plugins",
+          "label": "VS Code installation and harness selection"
+        }
+      ],
+      "clients": {
+        "claude": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        },
+        "codex": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        },
+        "copilot": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Install and activate\n\n\n```terminal\ncopilot plugin install context-engineering@awesome-copilot\ncopilot plugin list\n```\n\nRestart Copilot in the project. Check the installed components and command completion.\n\n#### Invoke and verify\n\n\n```chat\n/context-engineering:context-map Identify context for a profile-endpoint change; stop before editing.\n```\n\n**Evidence required:** The context-map skill is loaded and returns a task-specific file map; compare file paths with the repository."
+        },
+        "vscode": {
+          "status": "documented",
+          "note": "Platform plugin loading documented; this specific package/release pairing has not been executed. Component exposure varies by VS Code release.",
+          "body": "#### Install and activate\n\nRun **Chat: Open Customizations**, select the **Copilot harness**, then **Plugins → Browse**. Configure `github/awesome-copilot` as a trusted marketplace if it is missing. Select **context-engineering**, review its skills/agents and install at **Workspace** scope for the practice project. If that marketplace format is rejected by your VS Code release, mark this path unverified; do not copy CLI registration files.\n\n#### Invoke and verify\n\nStart a new Copilot chat, select the installed component through skill/command completion. Where this release exposes namespaced commands, use:\n\n```chat\n/context-engineering:context-map Identify context for a profile-endpoint change; stop before editing.\n```\n\n**Evidence required:** The context-map skill is loaded and returns a task-specific file map; compare file paths with the repository. Confirm the skill/component was loaded in Chat diagnostics or agent activity, not only that the answer sounds relevant."
+        },
+        "canvas": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        }
+      },
+      "cleanup": "Copilot CLI: disable, then uninstall `context-engineering` with its plugin manager. VS Code: Customizations → Plugins → Disable/Uninstall at the recorded scope. Restore only plugin-created project files after reviewing the diff. Removing the package does not revoke external account access."
+    },
+    {
+      "number": "11",
+      "id": "superpowers",
+      "title": "Superpowers",
+      "type": "Testing and planning workflow",
+      "description": "Like a careful coding coach: plan first, test, then build. Helps prevent rushed implementations and untested assumptions.",
+      "difficulty": "Intermediate",
+      "time": "10–25 min",
+      "cost": "Assistant usage; check publisher terms",
+      "processing": "Assistant provider receives task context",
+      "account": "Working assistant account",
+      "version": "Publisher minimum not established; record installed release before testing.",
+      "os": "Windows / macOS / Linux paths depend on host and runtime; no live OS matrix executed.",
+      "shared": "**Scope:** Install separately in each host; inspect which skills/hooks are enabled before adding another planning framework. Use the publisher’s native host path, not another assistant’s slash commands. Planning and review can increase model usage.",
+      "warning": "Extra planning, agents and review can increase token cost.",
+      "sources": [
+        {
+          "url": "https://github.com/obra/superpowers",
+          "label": "Publisher setup / source"
+        }
+      ],
+      "clients": {
+        "claude": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Install\n\n\n```chat\n/plugin install superpowers@claude-plugins-official\n```\n\nRestart Claude and inspect `/plugin`.\n\n#### Verify\n\nSelect the installed **brainstorming** or **writing-plans** skill through command completion, ask for a plan only, and require a skill-load trace naming that component before accepting the plan as evidence."
+        },
+        "codex": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Install and activate\n\nStart Codex in the practice repository and open its plugin browser:\n\n```chat\n/plugins\n```\n\nSearch **Superpowers**, inspect the publisher and components, and install the official entry. If the listing is missing, inspect configured marketplaces and account policy before changing configuration. Start a new thread. \n\n#### Invoke and verify\n\n\n```chat\nUse the installed Superpowers brainstorming skill to plan one small bug fix. Stop before editing.\n```\n\n**Evidence required:** The installed Superpowers skill is explicitly loaded; the plan contains repository-specific scope and verification steps."
+        },
+        "copilot": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Install\n\n\n```terminal\ncopilot plugin marketplace add obra/superpowers-marketplace\ncopilot plugin install superpowers@superpowers-marketplace\ncopilot plugin list\n```\n\nStart a new Copilot session. Select the installed brainstorming skill via completion and request a small plan.\n\n**Evidence required:** skill-load activity naming Superpowers and the selected component. Do not infer activation from the plan alone."
+        },
+        "vscode": {
+          "status": "unverified",
+          "note": "A compatible marketplace entry must be established for your VS Code release; the guide does not assume the CLI marketplace works identically."
+        },
+        "canvas": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        }
+      },
+      "cleanup": "Disable the plugin or remove its MCP registration in the same client and scope used for installation. See the shared removal guide below. Review the diff before restoring project instructions; revoke unused account connections separately."
+    },
+    {
+      "number": "12",
+      "id": "ponytail",
+      "title": "Ponytail",
+      "type": "Simpler code workflow",
+      "description": "Like a coach that asks: “Can we solve this with less code?” Encourages less duplication, fewer dependencies and smaller, maintainable changes.",
+      "difficulty": "Intermediate",
+      "time": "10–25 min",
+      "cost": "Assistant usage; check publisher terms",
+      "processing": "Assistant provider receives task context",
+      "account": "Working assistant account",
+      "version": "Publisher minimum not established; record installed release before testing.",
+      "os": "Windows / macOS / Linux paths depend on host and runtime; no live OS matrix executed.",
+      "shared": "**Scope:** This workflow adds instructions and may register lifecycle hooks. Inspect and back up the affected files before installation. Retain validation, security and error handling when simplifying code.",
+      "warning": "Less code” must never mean omitting validation, security or error handling.",
+      "sources": [
+        {
+          "url": "https://github.com/DietrichGebert/ponytail",
+          "label": "Publisher setup / source"
+        }
+      ],
+      "clients": {
+        "claude": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Install\n\n\n```chat\n/plugin marketplace add DietrichGebert/ponytail\n/plugin install ponytail@ponytail\n```\n\nRestart Claude and inspect installed components.\n\n#### Verify\n\nSelect the installed Ponytail review skill/command through completion and inspect the skill-load trace. Request a small review before implementation; compare the patch and existing test results if edits are later approved."
+        },
+        "codex": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Install\n\n\n```terminal\ncodex plugin marketplace add DietrichGebert/ponytail\ncodex plugin add ponytail@ponytail\n```\n\nOpen `/hooks` in Codex, inspect and trust the two publisher lifecycle hooks if appropriate, then start a new thread.\n\n#### Invoke and verify\n\n\n```chat\n$ponytail:ponytail-review Review this practice diff without editing.\n```\n\nRequire the named skill load and lifecycle-hook activity. If hooks are blocked by policy, record that limitation instead of claiming full activation."
+        },
+        "copilot": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Install\n\n\n```terminal\ncopilot plugin marketplace add DietrichGebert/ponytail\ncopilot plugin install ponytail@ponytail\ncopilot plugin list\n```\n\nStart a fresh session and select the installed Ponytail component from completion. Require its skill-load trace and a focused review; inspect whether this host loads the publisher’s hooks before expecting lifecycle behavior."
+        },
+        "vscode": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        },
+        "canvas": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        }
+      },
+      "cleanup": "Disable the plugin and its lifecycle hooks in the host, uninstall it, and restore only recorded instruction changes. Verify a fresh thread no longer loads Ponytail. Keep unrelated hook configuration intact."
+    },
+    {
+      "number": "13",
+      "id": "agent-skills-addy-osmani",
+      "title": "Agent Skills (Addy Osmani)",
+      "type": "Reusable coding skills",
+      "description": "Like a toolbox full of small, reusable engineering checklists. Makes your quality process consistent across assistants.",
+      "difficulty": "Intermediate",
+      "time": "10–25 min",
+      "cost": "Assistant usage; check publisher terms",
+      "processing": "Assistant provider receives task context",
+      "account": "Working assistant account",
+      "version": "Codex native plugin: CLI v0.122+; record other installed host/package versions.",
+      "os": "Windows / macOS / Linux paths depend on host and runtime; no live OS matrix executed.",
+      "shared": "**Scope:** Install the native plugin per host, or use the skills installer to select the intended agent and project/user scope. These are alternatives; avoid duplicate installations. Minimum documented native Codex CLI: v0.122+. Choose the smallest relevant skill set.\n\n```terminal\nnpx skills add addyosmani/agent-skills --list\n```\n\nIndividual skill installation can omit shared repository references; prefer the native/full repository integration when the selected workflow needs those sidecars.",
+      "warning": "The short `/spec` or `/review` aliases are Claude-specific; not automatically present in VS Code or Copilot.",
+      "sources": [
+        {
+          "url": "https://github.com/addyosmani/agent-skills",
+          "label": "Publisher setup / source"
+        }
+      ],
+      "clients": {
+        "claude": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Install\n\n\n```chat\n/plugin marketplace add addyosmani/agent-skills\n/plugin install agent-skills@addy-agent-skills\n```\n\nStart a new session. Invoke the installed namespaced command, for example `/agent-skills:review`, or select test-driven-development from completion. Require the named skill load and its specified test/quality evidence. Bare `/review` may resolve to a built-in command."
+        },
+        "codex": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Install\n\n\n```terminal\ncodex plugin marketplace add addyosmani/agent-skills\ncodex plugin add agent-skills@agent-skills\n```\n\nStart a new thread and select the installed test-driven-development skill through completion. Require the skill-load trace; if a fix is authorized, retain before/after test output. The plugin does not make Claude aliases universal."
+        },
+        "copilot": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Install\n\n\n```terminal\nnpx skills add addyosmani/agent-skills\n```\n\nChoose **GitHub Copilot CLI**, choose project scope for this exercise, and inspect all installed skills and sidecar paths. Start a fresh chat.\n\n#### Verify\n\nSelect test-driven-development from the host’s installed skills. Require an explicit skill load and, when changes are authorized, a real failing test followed by a passing result. A general promise to use TDD is not evidence."
+        },
+        "vscode": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Install\n\n\n```terminal\nnpx skills add addyosmani/agent-skills\n```\n\nChoose **VS Code Copilot Chat**, choose project scope for this exercise, and inspect all installed skills and sidecar paths. Start a fresh chat.\n\n#### Verify\n\nSelect test-driven-development from the host’s installed skills. Require an explicit skill load and, when changes are authorized, a real failing test followed by a passing result. A general promise to use TDD is not evidence."
+        },
+        "canvas": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        }
+      },
+      "cleanup": "Disable the plugin or remove its MCP registration in the same client and scope used for installation. See the shared removal guide below. Review the diff before restoring project instructions; revoke unused account connections separately."
+    },
+    {
+      "number": "14",
+      "id": "claude-code-setup",
+      "title": "Claude Code Setup",
+      "type": "Claude helper plugin",
+      "description": "Like a setup wizard that suggests tools for your project. Personalized Claude setup, less guesswork.",
+      "difficulty": "Beginner",
+      "time": "5–15 min",
+      "cost": "Assistant usage; check publisher terms",
+      "processing": "Assistant provider receives task context",
+      "account": "Working assistant account",
+      "version": "Publisher minimum not established; record installed release before testing.",
+      "os": "Windows / macOS / Linux paths depend on host and runtime; no live OS matrix executed.",
+      "shared": "**Scope:** Choose user or project scope in Claude’s plugin manager and record the selection. The official marketplace is normally available. If missing, add it in Claude chat:\n\n```chat\n/plugin marketplace add anthropics/claude-plugins-official\n```\n\n",
+      "warning": "Review the selected scope, tool permissions and changed files before use.",
+      "sources": [
+        {
+          "url": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/claude-code-setup",
+          "label": "Publisher setup / source"
+        },
+        {
+          "url": "https://github.com/anthropics/claude-plugins-official/blob/main/plugins/claude-code-setup/README.md",
+          "label": "Package README and requirements"
+        }
+      ],
+      "clients": {
+        "claude": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Install and activate\n\nOpen Claude in the practice repository. Install in Claude chat:\n\n```chat\n/plugin install claude-code-setup@claude-plugins-official\n```\n\nUse `/plugin` to confirm it is enabled and start a new session. Review any hook trust prompts.\n\n#### Invoke and verify\n\n\n```chat\nUse the installed Claude Code Setup recommendation skill to recommend automations for this project. Do not change files.\n```\n\n**Evidence required:** The installed setup recommendation skill load (use the exact name shown in the plugin component list) and project-specific recommendations, with no installation implied by the recommendation. Do not count a generic AI response as activation evidence."
+        },
+        "codex": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        },
+        "copilot": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        },
+        "vscode": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        },
+        "canvas": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        }
+      },
+      "cleanup": "Disable the plugin or remove its MCP registration in the same client and scope used for installation. See the shared removal guide below. Review the diff before restoring project instructions; revoke unused account connections separately."
+    },
+    {
+      "number": "15",
+      "id": "code-simplifier",
+      "title": "Code Simplifier",
+      "type": "Code cleanup plugin",
+      "description": "Like a tidy-up pass that makes changed code easier to read. Readable, maintainable patches.",
+      "difficulty": "Beginner",
+      "time": "5–15 min",
+      "cost": "Assistant usage; check publisher terms",
+      "processing": "Assistant provider receives task context",
+      "account": "Working assistant account",
+      "version": "Publisher minimum not established; record installed release before testing.",
+      "os": "Windows / macOS / Linux paths depend on host and runtime; no live OS matrix executed.",
+      "shared": "**Scope:** Choose user or project scope in Claude’s plugin manager and record the selection. The official marketplace is normally available. If missing, add it in Claude chat:\n\n```chat\n/plugin marketplace add anthropics/claude-plugins-official\n```\n\n",
+      "warning": "Review the selected scope, tool permissions and changed files before use.",
+      "sources": [
+        {
+          "url": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/code-simplifier",
+          "label": "Publisher setup / source"
+        },
+        {
+          "url": "https://github.com/anthropics/claude-plugins-official/blob/main/plugins/code-simplifier/agents/code-simplifier.md",
+          "label": "Code Simplifier agent behavior and scope"
+        }
+      ],
+      "clients": {
+        "claude": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Install and activate\n\nOpen Claude in the practice repository. Install in Claude chat:\n\n```chat\n/plugin install code-simplifier@claude-plugins-official\n```\n\nUse `/plugin` to confirm it is enabled and start a new session. Review any hook trust prompts.\n\n#### Invoke and verify\n\n\n```chat\nUse the installed code-simplifier agent to review this practice diff. Propose changes only.\n```\n\n**Evidence required:** An agent invocation naming code-simplifier and findings tied to the diff; run unchanged behavior tests before accepting later edits. Do not count a generic AI response as activation evidence."
+        },
+        "codex": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        },
+        "copilot": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        },
+        "vscode": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        },
+        "canvas": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        }
+      },
+      "cleanup": "Disable the plugin or remove its MCP registration in the same client and scope used for installation. See the shared removal guide below. Review the diff before restoring project instructions; revoke unused account connections separately."
+    },
+    {
+      "number": "16",
+      "id": "feature-dev",
+      "title": "Feature Dev",
+      "type": "Feature-building workflow",
+      "description": "Like a step-by-step recipe for building a complete feature. Better planning for nontrivial features.",
+      "difficulty": "Beginner",
+      "time": "5–15 min",
+      "cost": "Assistant usage; check publisher terms",
+      "processing": "Assistant provider receives task context",
+      "account": "Working assistant account",
+      "version": "Publisher minimum not established; record installed release before testing.",
+      "os": "Windows / macOS / Linux paths depend on host and runtime; no live OS matrix executed.",
+      "shared": "**Scope:** Choose user or project scope in Claude’s plugin manager and record the selection. The official marketplace is normally available. If missing, add it in Claude chat:\n\n```chat\n/plugin marketplace add anthropics/claude-plugins-official\n```\n\n",
+      "warning": "Review the selected scope, tool permissions and changed files before use.",
+      "sources": [
+        {
+          "url": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/feature-dev",
+          "label": "Publisher setup / source"
+        },
+        {
+          "url": "https://github.com/anthropics/claude-plugins-official/blob/main/plugins/feature-dev/README.md",
+          "label": "Package README and requirements"
+        }
+      ],
+      "clients": {
+        "claude": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Install and activate\n\nOpen Claude in the practice repository. Install in Claude chat:\n\n```chat\n/plugin install feature-dev@claude-plugins-official\n```\n\nUse `/plugin` to confirm it is enabled and start a new session. Review any hook trust prompts.\n\n#### Invoke and verify\n\n\n```chat\n/feature-dev Plan a small settings-page change; stop before implementation.\n```\n\n**Evidence required:** The feature-dev command and its discovery/exploration phases, including real repository paths. Later phases can edit files, so stop after the agreed planning scope. Do not count a generic AI response as activation evidence."
+        },
+        "codex": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        },
+        "copilot": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        },
+        "vscode": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        },
+        "canvas": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        }
+      },
+      "cleanup": "Disable the plugin or remove its MCP registration in the same client and scope used for installation. See the shared removal guide below. Review the diff before restoring project instructions; revoke unused account connections separately."
+    },
+    {
+      "number": "17",
+      "id": "claudemd-management",
+      "title": "CLAUDE.md Management",
+      "type": "Project instructions",
+      "description": "Like a cleaner for the notes that tell Claude how your project works. Cleaner, reusable repo guidance.",
+      "difficulty": "Beginner",
+      "time": "5–15 min",
+      "cost": "Assistant usage; check publisher terms",
+      "processing": "Assistant provider receives task context",
+      "account": "Working assistant account",
+      "version": "Publisher minimum not established; record installed release before testing.",
+      "os": "Windows / macOS / Linux paths depend on host and runtime; no live OS matrix executed.",
+      "shared": "**Scope:** Choose user or project scope in Claude’s plugin manager and record the selection. The official marketplace is normally available. If missing, add it in Claude chat:\n\n```chat\n/plugin marketplace add anthropics/claude-plugins-official\n```\n\n",
+      "warning": "Review the selected scope, tool permissions and changed files before use.",
+      "sources": [
+        {
+          "url": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/claude-md-management",
+          "label": "Publisher setup / source"
+        },
+        {
+          "url": "https://github.com/anthropics/claude-plugins-official/blob/main/plugins/claude-md-management/README.md",
+          "label": "Package README and requirements"
+        }
+      ],
+      "clients": {
+        "claude": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Install and activate\n\nOpen Claude in the practice repository. Install in Claude chat:\n\n```chat\n/plugin install claude-md-management@claude-plugins-official\n```\n\nUse `/plugin` to confirm it is enabled and start a new session. Review any hook trust prompts.\n\n#### Invoke and verify\n\n\n```chat\nUse the claude-md-improver skill to audit this project’s CLAUDE.md. Report recommendations without edits.\n```\n\n**Evidence required:** The named skill load and references to current repository instructions. `/revise-claude-md` is a separate command that captures learnings and can update files. Do not count a generic AI response as activation evidence."
+        },
+        "codex": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        },
+        "copilot": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        },
+        "vscode": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        },
+        "canvas": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        }
+      },
+      "cleanup": "Disable the plugin or remove its MCP registration in the same client and scope used for installation. See the shared removal guide below. Review the diff before restoring project instructions; revoke unused account connections separately."
+    },
+    {
+      "number": "18",
+      "id": "project-planning",
+      "title": "Project Planning",
+      "type": "Planning plugin",
+      "description": "Like turning a huge feature into small, manageable tasks. Clearer scope before implementation.",
+      "difficulty": "Intermediate",
+      "time": "10–25 min",
+      "cost": "Assistant usage; check publisher terms",
+      "processing": "Assistant provider receives task context",
+      "account": "Working assistant account",
+      "version": "Publisher minimum not established; record installed release before testing.",
+      "os": "Windows / macOS / Linux paths depend on host and runtime; no live OS matrix executed.",
+      "shared": "**Scope and prerequisites:** Copilot CLI installs this plugin for that client. VS Code requires its own installation. A working Copilot account is required. \n\nIf discovery fails, inspect registered marketplaces first:\n\n```terminal\ncopilot plugin marketplace list\n```\n\n`awesome-copilot` is included by default in current Copilot CLI. Only if it is absent, register the reviewed source:\n\n```terminal\ncopilot plugin marketplace add github/awesome-copilot\n```\n\n",
+      "warning": "Review the selected scope, tool permissions and changed files before use.",
+      "sources": [
+        {
+          "url": "https://github.com/github/awesome-copilot/tree/main/plugins/project-planning",
+          "label": "Publisher setup / source"
+        },
+        {
+          "url": "https://github.com/github/awesome-copilot/blob/main/plugins/project-planning/README.md",
+          "label": "Plugin requirements and named commands"
+        },
+        {
+          "url": "https://code.visualstudio.com/docs/agent-customization/agent-plugins#_discover-and-install-plugins",
+          "label": "VS Code installation and harness selection"
+        }
+      ],
+      "clients": {
+        "claude": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        },
+        "codex": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        },
+        "copilot": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Install and activate\n\n\n```terminal\ncopilot plugin install project-planning@awesome-copilot\ncopilot plugin list\n```\n\nRestart Copilot in the project. Check the installed components and command completion.\n\n#### Invoke and verify\n\n\n```chat\n/project-planning:create-implementation-plan Plan one small feature using this repository’s structure. Stop before creating GitHub issues.\n```\n\n**Evidence required:** The named planning skill activates and produces an implementation plan at the displayed path. Inspect that artifact; external issue creation is a separate action."
+        },
+        "vscode": {
+          "status": "documented",
+          "note": "Platform plugin loading documented; this specific package/release pairing has not been executed. Component exposure varies by VS Code release.",
+          "body": "#### Install and activate\n\nRun **Chat: Open Customizations**, select the **Copilot harness**, then **Plugins → Browse**. Configure `github/awesome-copilot` as a trusted marketplace if it is missing. Select **project-planning**, review its skills/agents and install at **Workspace** scope for the practice project. If that marketplace format is rejected by your VS Code release, mark this path unverified; do not copy CLI registration files.\n\n#### Invoke and verify\n\nStart a new Copilot chat, select the installed component through skill/command completion. Where this release exposes namespaced commands, use:\n\n```chat\n/project-planning:create-implementation-plan Plan one small feature using this repository’s structure. Stop before creating GitHub issues.\n```\n\n**Evidence required:** The named planning skill activates and produces an implementation plan at the displayed path. Inspect that artifact; external issue creation is a separate action. Confirm the skill/component was loaded in Chat diagnostics or agent activity, not only that the answer sounds relevant."
+        },
+        "canvas": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        }
+      },
+      "cleanup": "Copilot CLI: disable, then uninstall `project-planning` with its plugin manager. VS Code: Customizations → Plugins → Disable/Uninstall at the recorded scope. Restore only plugin-created project files after reviewing the diff. Removing the package does not revoke external account access."
+    },
+    {
+      "number": "19",
+      "id": "java-development",
+      "title": "Java Development",
+      "type": "Java workflow plugin",
+      "description": "Like an experienced Java teammate’s coding checklist. Strong defaults for Java projects.",
+      "difficulty": "Intermediate",
+      "time": "10–25 min",
+      "cost": "Assistant usage; check publisher terms",
+      "processing": "Assistant provider receives task context",
+      "account": "Working assistant account",
+      "version": "Publisher minimum not established; record installed release before testing.",
+      "os": "Windows / macOS / Linux paths depend on host and runtime; no live OS matrix executed.",
+      "shared": "**Scope and prerequisites:** Copilot CLI installs this plugin for that client. VS Code requires its own installation. A working Copilot account is required. Install the JDK required by the project (check `java -version`) and use its Maven or Gradle wrapper. Confirm the existing tests pass first. On Windows use `mvnw.cmd test` or `gradlew.bat test`; on macOS/Linux use `./mvnw test` or `./gradlew test` only when that wrapper exists. JUnit 5 guidance must match the project dependency, not replace it blindly.\n\nIf discovery fails, inspect registered marketplaces first:\n\n```terminal\ncopilot plugin marketplace list\n```\n\n`awesome-copilot` is included by default in current Copilot CLI. Only if it is absent, register the reviewed source:\n\n```terminal\ncopilot plugin marketplace add github/awesome-copilot\n```\n\n",
+      "warning": "Review the selected scope, tool permissions and changed files before use.",
+      "sources": [
+        {
+          "url": "https://github.com/github/awesome-copilot/tree/main/plugins/java-development",
+          "label": "Publisher setup / source"
+        },
+        {
+          "url": "https://github.com/github/awesome-copilot/blob/main/plugins/java-development/README.md",
+          "label": "Plugin requirements and named commands"
+        },
+        {
+          "url": "https://code.visualstudio.com/docs/agent-customization/agent-plugins#_discover-and-install-plugins",
+          "label": "VS Code installation and harness selection"
+        }
+      ],
+      "clients": {
+        "claude": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        },
+        "codex": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        },
+        "copilot": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Install and activate\n\n\n```terminal\ncopilot plugin install java-development@awesome-copilot\ncopilot plugin list\n```\n\nRestart Copilot in the project. Check the installed components and command completion.\n\n#### Invoke and verify\n\n\n```chat\n/java-development:java-junit Propose one regression test using the project’s current JUnit conventions; do not change production code.\n```\n\n**Evidence required:** The java-junit skill loads and identifies a real test class and matching dependencies. If a test is created, run the existing wrapper test command."
+        },
+        "vscode": {
+          "status": "documented",
+          "note": "Platform plugin loading documented; this specific package/release pairing has not been executed. Component exposure varies by VS Code release.",
+          "body": "#### Install and activate\n\nRun **Chat: Open Customizations**, select the **Copilot harness**, then **Plugins → Browse**. Configure `github/awesome-copilot` as a trusted marketplace if it is missing. Select **java-development**, review its skills/agents and install at **Workspace** scope for the practice project. If that marketplace format is rejected by your VS Code release, mark this path unverified; do not copy CLI registration files.\n\n#### Invoke and verify\n\nStart a new Copilot chat, select the installed component through skill/command completion. Where this release exposes namespaced commands, use:\n\n```chat\n/java-development:java-junit Propose one regression test using the project’s current JUnit conventions; do not change production code.\n```\n\n**Evidence required:** The java-junit skill loads and identifies a real test class and matching dependencies. If a test is created, run the existing wrapper test command. Confirm the skill/component was loaded in Chat diagnostics or agent activity, not only that the answer sounds relevant."
+        },
+        "canvas": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        }
+      },
+      "cleanup": "Copilot CLI: disable, then uninstall `java-development` with its plugin manager. VS Code: Customizations → Plugins → Disable/Uninstall at the recorded scope. Restore only plugin-created project files after reviewing the diff. Removing the package does not revoke external account access."
+    },
+    {
+      "number": "20",
+      "id": "c-net-development",
+      "title": "C# / .NET Development",
+      "type": ".NET workflow plugin",
+      "description": "Like a C#/.NET teammate’s checklist for code and tests. Helps .NET teams stay consistent.",
+      "difficulty": "Intermediate",
+      "time": "10–25 min",
+      "cost": "Assistant usage; check publisher terms",
+      "processing": "Assistant provider receives task context",
+      "account": "Working assistant account",
+      "version": "Publisher minimum not established; record installed release before testing.",
+      "os": "Windows / macOS / Linux paths depend on host and runtime; no live OS matrix executed.",
+      "shared": "**Scope and prerequisites:** Copilot CLI installs this plugin for that client. VS Code requires its own installation. A working Copilot account is required. Install the SDK selected by `global.json` or the project README. Check `dotnet --info`, restore the existing solution, and run its existing `dotnet test` command. Choose the xUnit, NUnit, MSTest or TUnit skill matching installed dependencies; do not add a different test framework just for this exercise.\n\nIf discovery fails, inspect registered marketplaces first:\n\n```terminal\ncopilot plugin marketplace list\n```\n\n`awesome-copilot` is included by default in current Copilot CLI. Only if it is absent, register the reviewed source:\n\n```terminal\ncopilot plugin marketplace add github/awesome-copilot\n```\n\n",
+      "warning": "Review the selected scope, tool permissions and changed files before use.",
+      "sources": [
+        {
+          "url": "https://github.com/github/awesome-copilot/tree/main/plugins/csharp-dotnet-development",
+          "label": "Publisher setup / source"
+        },
+        {
+          "url": "https://github.com/github/awesome-copilot/blob/main/plugins/csharp-dotnet-development/README.md",
+          "label": "Plugin requirements and named commands"
+        },
+        {
+          "url": "https://code.visualstudio.com/docs/agent-customization/agent-plugins#_discover-and-install-plugins",
+          "label": "VS Code installation and harness selection"
+        }
+      ],
+      "clients": {
+        "claude": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        },
+        "codex": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        },
+        "copilot": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Install and activate\n\n\n```terminal\ncopilot plugin install csharp-dotnet-development@awesome-copilot\ncopilot plugin list\n```\n\nRestart Copilot in the project. Check the installed components and command completion.\n\n#### Invoke and verify\n\n\n```chat\n/csharp-dotnet-development:csharp-xunit Propose a regression test for this service using the existing test project.\n```\n\n**Evidence required:** The csharp-xunit skill loads; identify the actual .csproj, test framework and test result."
+        },
+        "vscode": {
+          "status": "documented",
+          "note": "Platform plugin loading documented; this specific package/release pairing has not been executed. Component exposure varies by VS Code release.",
+          "body": "#### Install and activate\n\nRun **Chat: Open Customizations**, select the **Copilot harness**, then **Plugins → Browse**. Configure `github/awesome-copilot` as a trusted marketplace if it is missing. Select **csharp-dotnet-development**, review its skills/agents and install at **Workspace** scope for the practice project. If that marketplace format is rejected by your VS Code release, mark this path unverified; do not copy CLI registration files.\n\n#### Invoke and verify\n\nStart a new Copilot chat, select the installed component through skill/command completion. Where this release exposes namespaced commands, use:\n\n```chat\n/csharp-dotnet-development:csharp-xunit Propose a regression test for this service using the existing test project.\n```\n\n**Evidence required:** The csharp-xunit skill loads; identify the actual .csproj, test framework and test result. Confirm the skill/component was loaded in Chat diagnostics or agent activity, not only that the answer sounds relevant."
+        },
+        "canvas": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        }
+      },
+      "cleanup": "Copilot CLI: disable, then uninstall `csharp-dotnet-development` with its plugin manager. VS Code: Customizations → Plugins → Disable/Uninstall at the recorded scope. Restore only plugin-created project files after reviewing the diff. Removing the package does not revoke external account access."
+    },
+    {
+      "number": "21",
+      "id": "frontend-web-dev",
+      "title": "Frontend Web Dev",
+      "type": "Frontend workflow plugin",
+      "description": "Like a helpful guide to polished, accessible web interfaces. Better frontend conventions and accessibility checks.",
+      "difficulty": "Intermediate",
+      "time": "10–25 min",
+      "cost": "Assistant usage; check publisher terms",
+      "processing": "Assistant provider receives task context",
+      "account": "Working assistant account",
+      "version": "Publisher minimum not established; record installed release before testing.",
+      "os": "Windows / macOS / Linux paths depend on host and runtime; no live OS matrix executed.",
+      "shared": "**Scope and prerequisites:** Copilot CLI installs this plugin for that client. VS Code requires its own installation. A working Copilot account is required. Use the repository’s Node/package-manager version and lockfile. Start its documented development server and confirm the printed URL manually. The Playwright exploration command also requires a working Playwright MCP connection (entry 24); this plugin does not install that service for every client.\n\nIf discovery fails, inspect registered marketplaces first:\n\n```terminal\ncopilot plugin marketplace list\n```\n\n`awesome-copilot` is included by default in current Copilot CLI. Only if it is absent, register the reviewed source:\n\n```terminal\ncopilot plugin marketplace add github/awesome-copilot\n```\n\n",
+      "warning": "Review the selected scope, tool permissions and changed files before use.",
+      "sources": [
+        {
+          "url": "https://github.com/github/awesome-copilot/tree/main/plugins/frontend-web-dev",
+          "label": "Publisher setup / source"
+        },
+        {
+          "url": "https://github.com/github/awesome-copilot/blob/main/plugins/frontend-web-dev/README.md",
+          "label": "Plugin requirements and named commands"
+        },
+        {
+          "url": "https://code.visualstudio.com/docs/agent-customization/agent-plugins#_discover-and-install-plugins",
+          "label": "VS Code installation and harness selection"
+        }
+      ],
+      "clients": {
+        "claude": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        },
+        "codex": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        },
+        "copilot": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Install and activate\n\n\n```terminal\ncopilot plugin install frontend-web-dev@awesome-copilot\ncopilot plugin list\n```\n\nRestart Copilot in the project. Check the installed components and command completion.\n\n#### Invoke and verify\n\n\n```chat\n/frontend-web-dev:playwright-explore-website Inspect the local URL printed by this running app. Do not submit forms or edit code.\n```\n\n**Evidence required:** The named skill loads and an actual browser tool navigates to the app. Require a snapshot/screenshot and observations tied to the loaded page."
+        },
+        "vscode": {
+          "status": "documented",
+          "note": "Platform plugin loading documented; this specific package/release pairing has not been executed. Component exposure varies by VS Code release.",
+          "body": "#### Install and activate\n\nRun **Chat: Open Customizations**, select the **Copilot harness**, then **Plugins → Browse**. Configure `github/awesome-copilot` as a trusted marketplace if it is missing. Select **frontend-web-dev**, review its skills/agents and install at **Workspace** scope for the practice project. If that marketplace format is rejected by your VS Code release, mark this path unverified; do not copy CLI registration files.\n\n#### Invoke and verify\n\nStart a new Copilot chat, select the installed component through skill/command completion. Where this release exposes namespaced commands, use:\n\n```chat\n/frontend-web-dev:playwright-explore-website Inspect the local URL printed by this running app. Do not submit forms or edit code.\n```\n\n**Evidence required:** The named skill loads and an actual browser tool navigates to the app. Require a snapshot/screenshot and observations tied to the loaded page. Confirm the skill/component was loaded in Chat diagnostics or agent activity, not only that the answer sounds relevant."
+        },
+        "canvas": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        }
+      },
+      "cleanup": "Copilot CLI: disable, then uninstall `frontend-web-dev` with its plugin manager. VS Code: Customizations → Plugins → Disable/Uninstall at the recorded scope. Restore only plugin-created project files after reviewing the diff. Removing the package does not revoke external account access."
+    },
+    {
+      "number": "22",
+      "id": "where-was-i",
+      "title": "Where Was I",
+      "type": "Resume-work plugin",
+      "description": "Like a bookmark that reminds you what you were doing yesterday. Easy resumption after interruptions.",
+      "difficulty": "Intermediate",
+      "time": "10–25 min",
+      "cost": "Assistant usage; check publisher terms",
+      "processing": "Assistant provider receives task context",
+      "account": "Working assistant account",
+      "version": "Publisher minimum not established; record installed release before testing.",
+      "os": "Windows / macOS / Linux paths depend on host and runtime; no live OS matrix executed.",
+      "shared": "**Package format:** The current manifest declares a Copilot app extension rather than the reusable skill payload used by many neighboring entries. Installability through Copilot CLI does not establish which UI hosts render it. Check the linked extension contents for your app release before adoption.",
+      "warning": "Review the selected scope, tool permissions and changed files before use.",
+      "sources": [
+        {
+          "url": "https://github.com/github/awesome-copilot/tree/main/plugins/where-was-i",
+          "label": "Publisher setup / source"
+        },
+        {
+          "url": "https://github.com/github/awesome-copilot/blob/main/plugins/where-was-i/plugin.json",
+          "label": "Extension manifest and package version"
+        },
+        {
+          "url": "https://github.com/github/awesome-copilot/blob/main/plugins/where-was-i/README.md",
+          "label": "Package README and requirements"
+        }
+      ],
+      "clients": {
+        "claude": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        },
+        "codex": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        },
+        "copilot": {
+          "status": "unverified",
+          "note": "Manifest declares an app extension; terminal-chat behavior has not been established here."
+        },
+        "vscode": {
+          "status": "unverified",
+          "note": "No confirmed VS Code extension-rendering path for this package in the inspected materials."
+        },
+        "canvas": {
+          "status": "documented",
+          "note": "Publisher manifest supplies a Copilot app extension; exact app release/entry availability must be confirmed locally.",
+          "body": "#### Install and activate\n\nIn a compatible Copilot app, inspect the extension’s required capabilities. Register `github/awesome-copilot` if missing and install:\n\n```terminal\ncopilot plugin install where-was-i@awesome-copilot\ncopilot plugin list\n```\n\nRestart the app, open its Where Was I extension entry and select a practice repository. If that entry is not exposed by this app version, mark the integration unverified.\n\n#### Verify\n\nRequire extension activity identifying the real branch, commits and unfinished changes. Compare with `git status` and `git log`; a generic reconstruction in ordinary chat does not prove the extension executed."
+        }
+      },
+      "cleanup": "Disable the plugin or remove its MCP registration in the same client and scope used for installation. See the shared removal guide below. Review the diff before restoring project instructions; revoke unused account connections separately."
+    },
+    {
+      "number": "23",
+      "id": "task-observer",
+      "title": "Task Observer",
+      "type": "Skills observer",
+      "description": "Like a notebook of repeated mistakes you can convert into better skills. Gradually improves a growing collection of personal skills.",
+      "difficulty": "Intermediate",
+      "time": "10–25 min",
+      "cost": "Assistant usage; check publisher terms",
+      "processing": "Assistant provider receives task context",
+      "account": "Working assistant account",
+      "version": "Publisher minimum not established; record installed release before testing.",
+      "os": "Windows / macOS / Linux paths depend on host and runtime; no live OS matrix executed.",
+      "shared": "**Installation scope:** This is a skill, not a system service. Select the intended client and project/user scope:\n\n```terminal\nnpx skills add rebelytics/one-skill-to-rule-them-all --skill task-observer\n```\n\nReview the installed SKILL.md and its referenced setup files. It requires an observation workspace outside ephemeral checkouts and outside skill-discovery directories. Configure its activation using the publisher’s environment guide; skill installation alone does not create a verified observation workflow. Review broad activation rules before enabling them.",
+      "warning": "This is not automatic self-editing; review proposed skill changes. Logs may contain sensitive context.",
+      "sources": [
+        {
+          "url": "https://github.com/rebelytics/one-skill-to-rule-them-all",
+          "label": "Publisher setup / source"
+        },
+        {
+          "url": "https://github.com/rebelytics/one-skill-to-rule-them-all/blob/main/skills/task-observer/references/environments.md",
+          "label": "Host activation and persistent workspace"
+        }
+      ],
+      "clients": {
+        "claude": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Configure and verify\n\nSelect **Claude Code CLI** in the installer. Explicitly load the installed task-observer skill and follow its first-run setup to choose a stable observation directory and activation method for this host. Preserve existing instructions/hooks.\n\nUse a harmless practice correction, then require a created observation under the configured `skill-observations/observation-log/` and a corresponding session-start/checkpoint trace. Review its evidence and proposed skill change. A conversational summary alone is insufficient; do not auto-approve modifications to installed skills."
+        },
+        "codex": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Configure and verify\n\nSelect **Codex CLI** in the installer. Explicitly load the installed task-observer skill and follow its first-run setup to choose a stable observation directory and activation method for this host. Preserve existing instructions/hooks.\n\nUse a harmless practice correction, then require a created observation under the configured `skill-observations/observation-log/` and a corresponding session-start/checkpoint trace. Review its evidence and proposed skill change. A conversational summary alone is insufficient; do not auto-approve modifications to installed skills."
+        },
+        "copilot": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Configure and verify\n\nSelect **GitHub Copilot CLI** in the installer. Explicitly load the installed task-observer skill and follow its first-run setup to choose a stable observation directory and activation method for this host. Preserve existing instructions/hooks.\n\nUse a harmless practice correction, then require a created observation under the configured `skill-observations/observation-log/` and a corresponding session-start/checkpoint trace. Review its evidence and proposed skill change. A conversational summary alone is insufficient; do not auto-approve modifications to installed skills."
+        },
+        "vscode": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Configure and verify\n\nSelect **VS Code Copilot Chat** in the installer. Explicitly load the installed task-observer skill and follow its first-run setup to choose a stable observation directory and activation method for this host. Preserve existing instructions/hooks.\n\nUse a harmless practice correction, then require a created observation under the configured `skill-observations/observation-log/` and a corresponding session-start/checkpoint trace. Review its evidence and proposed skill change. A conversational summary alone is insufficient; do not auto-approve modifications to installed skills."
+        },
+        "canvas": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        }
+      },
+      "cleanup": "Disable its activation instruction/hook and remove only the installed task-observer skill at the recorded scope. Export/archive or delete the separately configured observation workspace according to retention needs; uninstalling the skill does not delete those notes."
+    },
+    {
+      "number": "24",
+      "id": "playwright-mcp",
+      "title": "Playwright MCP",
+      "type": "Browser test server",
+      "description": "Like letting your agent click through your website like a tester. Reproduces UI bugs and checks real browser behavior.",
+      "difficulty": "Intermediate",
+      "time": "10–25 min",
+      "cost": "Assistant usage; local browser runtime",
+      "processing": "Local browser and MCP process; page output sent to assistant",
+      "account": "No browser-server account for local tests",
+      "version": "Node.js ≥ 20; supported browser installation required.",
+      "os": "Windows / macOS / Linux paths depend on host and runtime; no live OS matrix executed.",
+      "shared": "**Requirements:** Node.js ≥ 20; supported browser installation required. Start the app using its existing README and open the exact printed local URL manually. Use an isolated test profile and test account. If the browser is missing, use the publisher’s browser-install instructions or its browser-install tool when exposed. CLI + skills is a documented alternative to MCP for coding agents; pick one path initially.\n\n**Package versions:** `@latest` tracks a moving release. After a successful practice run, record and pin the package version if reproducibility is required. Review updates before adopting them.",
+      "warning": "Browser tools can expose cookies/pages. Use test accounts, not personal sessions.",
+      "sources": [
+        {
+          "url": "https://github.com/microsoft/playwright-mcp",
+          "label": "Publisher setup / source"
+        }
+      ],
+      "clients": {
+        "claude": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Register\n\n\n\n```terminal\nclaude mcp add playwright --scope project -- npx -y @playwright/mcp@latest\n```\n\nReview `.mcp.json` and inspect `/mcp` in Claude. On Windows, use `npx.cmd` if the host cannot resolve the wrapper.\n\n#### Invoke and verify\n\n\n```chat\nUse the playwright browser tools to navigate to the local URL I provide. Capture visible page evidence and console errors. Do not submit forms or use personal sessions.\n```\n\nRequire actual navigation and snapshot/screenshot or console-tool activity. If the goal is repeatable testing, generate a project-native test and run its actual test runner separately. Exploratory navigation alone is not an E2E test."
+        },
+        "codex": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Register\n\n\n\n```terminal\ncodex mcp add playwright -- npx -y @playwright/mcp@latest\n```\n\nInspect the user registration, restart Codex and check `/mcp`. On Windows, use `npx.cmd` if the host cannot resolve the wrapper.\n\n#### Invoke and verify\n\n\n```chat\nUse the playwright browser tools to navigate to the local URL I provide. Capture visible page evidence and console errors. Do not submit forms or use personal sessions.\n```\n\nRequire actual navigation and snapshot/screenshot or console-tool activity. If the goal is repeatable testing, generate a project-native test and run its actual test runner separately. Exploratory navigation alone is not an E2E test."
+        },
+        "copilot": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Register\n\nOpen `/mcp add` and select **STDIO**. Set name `playwright`, command `npx`, arguments:\n\n```text\n-y @playwright/mcp@latest\n```\n\nApprove the reviewed package/server and inspect the connected tools. On Windows, use `npx.cmd` if the host cannot resolve the wrapper.\n\n#### Invoke and verify\n\n\n```chat\nUse the playwright browser tools to navigate to the local URL I provide. Capture visible page evidence and console errors. Do not submit forms or use personal sessions.\n```\n\nRequire actual navigation and snapshot/screenshot or console-tool activity. If the goal is repeatable testing, generate a project-native test and run its actual test runner separately. Exploratory navigation alone is not an E2E test."
+        },
+        "vscode": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Register\n\nUse **MCP: Add Server → Command (stdio)** at workspace scope. Set name `playwright`, command `npx`, arguments:\n\n```text\n-y @playwright/mcp@latest\n```\n\nApprove the reviewed package/server and inspect the connected tools. On Windows, use `npx.cmd` if the host cannot resolve the wrapper.\n\n#### Invoke and verify\n\n\n```chat\nUse the playwright browser tools to navigate to the local URL I provide. Capture visible page evidence and console errors. Do not submit forms or use personal sessions.\n```\n\nRequire actual navigation and snapshot/screenshot or console-tool activity. If the goal is repeatable testing, generate a project-native test and run its actual test runner separately. Exploratory navigation alone is not an E2E test."
+        },
+        "canvas": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        }
+      },
+      "cleanup": "Stop and remove `playwright` from the selected host/scope. Close the test browser and remove only the disposable profile if no longer needed. Do not expose a remote-debugging port to the network or attach to personal browser sessions."
+    },
+    {
+      "number": "25",
+      "id": "chrome-devtools-mcp",
+      "title": "Chrome DevTools MCP",
+      "type": "Chrome debugging server",
+      "description": "Like giving your agent the browser’s error console and network tab. Excellent for frontend performance issues and JavaScript errors.",
+      "difficulty": "Intermediate",
+      "time": "10–25 min",
+      "cost": "Assistant usage; local browser runtime",
+      "processing": "Local browser and MCP process; page output sent to assistant",
+      "account": "No browser-server account for local tests",
+      "version": "Node.js LTS plus current stable Chrome (or Chrome for Testing).",
+      "os": "Windows / macOS / Linux paths depend on host and runtime; no live OS matrix executed.",
+      "shared": "**Requirements:** Node.js LTS plus current stable Chrome (or Chrome for Testing). Start the app using its existing README and open the exact printed local URL manually. Use an isolated test profile and test account. Install supported Chrome; other Chromium variants are not guaranteed. Usage statistics are enabled by default by the server; examples below opt out. CrUX performance requests can send trace URLs; examples opt out of those too.\n\n**Package versions:** `@latest` tracks a moving release. After a successful practice run, record and pin the package version if reproducibility is required. Review updates before adopting them.",
+      "warning": "A live debugging port can grant broad browser control. Avoid it on sensitive sessions.",
+      "sources": [
+        {
+          "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+          "label": "Publisher setup / source"
+        },
+        {
+          "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp#disclaimers",
+          "label": "Telemetry, CrUX and supported Chrome"
+        }
+      ],
+      "clients": {
+        "claude": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Register\n\n\n\n```terminal\nclaude mcp add chrome-devtools --scope project -- npx -y chrome-devtools-mcp@latest --no-usage-statistics --no-performance-crux\n```\n\nReview `.mcp.json` and inspect `/mcp` in Claude. On Windows, use `npx.cmd` if the host cannot resolve the wrapper.\n\n#### Invoke and verify\n\n\n```chat\nUse the chrome-devtools browser tools to navigate to the local URL I provide. Capture visible page evidence and console errors. Do not submit forms or use personal sessions.\n```\n\nRequire actual navigation and snapshot/screenshot or console-tool activity. For performance work, record a trace and its measured findings."
+        },
+        "codex": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Register\n\n\n\n```terminal\ncodex mcp add chrome-devtools -- npx -y chrome-devtools-mcp@latest --no-usage-statistics --no-performance-crux\n```\n\nInspect the user registration, restart Codex and check `/mcp`. On Windows, use `npx.cmd` if the host cannot resolve the wrapper.\n\n#### Invoke and verify\n\n\n```chat\nUse the chrome-devtools browser tools to navigate to the local URL I provide. Capture visible page evidence and console errors. Do not submit forms or use personal sessions.\n```\n\nRequire actual navigation and snapshot/screenshot or console-tool activity. For performance work, record a trace and its measured findings."
+        },
+        "copilot": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Register\n\nOpen `/mcp add` and select **STDIO**. Set name `chrome-devtools`, command `npx`, arguments:\n\n```text\n-y chrome-devtools-mcp@latest --no-usage-statistics --no-performance-crux\n```\n\nApprove the reviewed package/server and inspect the connected tools. On Windows, use `npx.cmd` if the host cannot resolve the wrapper.\n\n#### Invoke and verify\n\n\n```chat\nUse the chrome-devtools browser tools to navigate to the local URL I provide. Capture visible page evidence and console errors. Do not submit forms or use personal sessions.\n```\n\nRequire actual navigation and snapshot/screenshot or console-tool activity. For performance work, record a trace and its measured findings."
+        },
+        "vscode": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Register\n\nUse **MCP: Add Server → Command (stdio)** at workspace scope. Set name `chrome-devtools`, command `npx`, arguments:\n\n```text\n-y chrome-devtools-mcp@latest --no-usage-statistics --no-performance-crux\n```\n\nApprove the reviewed package/server and inspect the connected tools. On Windows, use `npx.cmd` if the host cannot resolve the wrapper.\n\n#### Invoke and verify\n\n\n```chat\nUse the chrome-devtools browser tools to navigate to the local URL I provide. Capture visible page evidence and console errors. Do not submit forms or use personal sessions.\n```\n\nRequire actual navigation and snapshot/screenshot or console-tool activity. For performance work, record a trace and its measured findings."
+        },
+        "canvas": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        }
+      },
+      "cleanup": "Stop and remove `chrome-devtools` from the selected host/scope. Close the test browser and remove only the disposable profile if no longer needed. Do not expose a remote-debugging port to the network or attach to personal browser sessions."
+    },
+    {
+      "number": "26",
+      "id": "testing-automation",
+      "title": "Testing Automation",
+      "type": "Testing plugin",
+      "description": "Like a recipe book for writing and running better tests. More reliable unit, integration and E2E tests.",
+      "difficulty": "Intermediate",
+      "time": "10–25 min",
+      "cost": "Assistant usage; check publisher terms",
+      "processing": "Assistant provider receives task context",
+      "account": "Working assistant account",
+      "version": "Publisher minimum not established; record installed release before testing.",
+      "os": "Windows / macOS / Linux paths depend on host and runtime; no live OS matrix executed.",
+      "shared": "**Scope and prerequisites:** Copilot CLI installs this plugin for that client. VS Code requires its own installation. A working Copilot account is required. Pick the installed skill matching the project: java-junit, csharp-nunit or a Playwright workflow. Browser-generation skills need a connected Playwright MCP server. Keep the project’s existing runner, SDK and dependency versions.\n\nIf discovery fails, inspect registered marketplaces first:\n\n```terminal\ncopilot plugin marketplace list\n```\n\n`awesome-copilot` is included by default in current Copilot CLI. Only if it is absent, register the reviewed source:\n\n```terminal\ncopilot plugin marketplace add github/awesome-copilot\n```\n\n",
+      "warning": "Review the selected scope, tool permissions and changed files before use.",
+      "sources": [
+        {
+          "url": "https://github.com/github/awesome-copilot/tree/main/plugins/testing-automation",
+          "label": "Publisher setup / source"
+        },
+        {
+          "url": "https://github.com/github/awesome-copilot/blob/main/plugins/testing-automation/README.md",
+          "label": "Plugin requirements and named commands"
+        },
+        {
+          "url": "https://code.visualstudio.com/docs/agent-customization/agent-plugins#_discover-and-install-plugins",
+          "label": "VS Code installation and harness selection"
+        }
+      ],
+      "clients": {
+        "claude": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        },
+        "codex": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        },
+        "copilot": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Install and activate\n\n\n```terminal\ncopilot plugin install testing-automation@awesome-copilot\ncopilot plugin list\n```\n\nRestart Copilot in the project. Check the installed components and command completion.\n\n#### Invoke and verify\n\n\n```chat\n/testing-automation:java-junit Propose a test using the existing Java/JUnit setup. Stop before editing.\n```\n\n**Evidence required:** The chosen testing skill loads. When edits are authorized, require a reproducible failing case before the fix and a passing run afterward."
+        },
+        "vscode": {
+          "status": "documented",
+          "note": "Platform plugin loading documented; this specific package/release pairing has not been executed. Component exposure varies by VS Code release.",
+          "body": "#### Install and activate\n\nRun **Chat: Open Customizations**, select the **Copilot harness**, then **Plugins → Browse**. Configure `github/awesome-copilot` as a trusted marketplace if it is missing. Select **testing-automation**, review its skills/agents and install at **Workspace** scope for the practice project. If that marketplace format is rejected by your VS Code release, mark this path unverified; do not copy CLI registration files.\n\n#### Invoke and verify\n\nStart a new Copilot chat, select the installed component through skill/command completion. Where this release exposes namespaced commands, use:\n\n```chat\n/testing-automation:java-junit Propose a test using the existing Java/JUnit setup. Stop before editing.\n```\n\n**Evidence required:** The chosen testing skill loads. When edits are authorized, require a reproducible failing case before the fix and a passing run afterward. Confirm the skill/component was loaded in Chat diagnostics or agent activity, not only that the answer sounds relevant."
+        },
+        "canvas": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        }
+      },
+      "cleanup": "Copilot CLI: disable, then uninstall `testing-automation` with its plugin manager. VS Code: Customizations → Plugins → Disable/Uninstall at the recorded scope. Restore only plugin-created project files after reviewing the diff. Removing the package does not revoke external account access."
+    },
+    {
+      "number": "27",
+      "id": "pr-review-toolkit",
+      "title": "PR Review Toolkit",
+      "type": "Code review plugin",
+      "description": "Like a team of reviewers checking different mistakes in a PR. Thorough review of important PRs.",
+      "difficulty": "Beginner",
+      "time": "5–15 min",
+      "cost": "Assistant usage; check publisher terms",
+      "processing": "Assistant provider receives task context",
+      "account": "Working assistant account",
+      "version": "Publisher minimum not established; record installed release before testing.",
+      "os": "Windows / macOS / Linux paths depend on host and runtime; no live OS matrix executed.",
+      "shared": "**Scope:** Choose user or project scope in Claude’s plugin manager and record the selection. The official marketplace is normally available. If missing, add it in Claude chat:\n\n```chat\n/plugin marketplace add anthropics/claude-plugins-official\n```\n\n",
+      "warning": "Review the selected scope, tool permissions and changed files before use.",
+      "sources": [
+        {
+          "url": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/pr-review-toolkit",
+          "label": "Publisher setup / source"
+        },
+        {
+          "url": "https://github.com/anthropics/claude-plugins-official/blob/main/plugins/pr-review-toolkit/README.md",
+          "label": "Package README and requirements"
+        }
+      ],
+      "clients": {
+        "claude": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Install and activate\n\nOpen Claude in the practice repository. Install in Claude chat:\n\n```chat\n/plugin install pr-review-toolkit@claude-plugins-official\n```\n\nUse `/plugin` to confirm it is enabled and start a new session. Review any hook trust prompts.\n\n#### Invoke and verify\n\n\n```chat\nUse the pr-review-toolkit code-reviewer and silent-failure-hunter agents to review my uncommitted practice diff. Do not edit files.\n```\n\n**Evidence required:** Agent activity naming the selected reviewers, the exact reviewed diff scope, and file/line findings or an explicit no-findings result. Do not count a generic AI response as activation evidence."
+        },
+        "codex": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        },
+        "copilot": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        },
+        "vscode": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        },
+        "canvas": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        }
+      },
+      "cleanup": "Disable the plugin or remove its MCP registration in the same client and scope used for installation. See the shared removal guide below. Review the diff before restoring project instructions; revoke unused account connections separately."
+    },
+    {
+      "number": "28",
+      "id": "pr-review",
+      "title": "PR Review",
+      "type": "Copilot canvas extension",
+      "description": "Like an easier, grouped view of a GitHub pull request. Makes complex PRs easier to inspect.",
+      "difficulty": "Intermediate",
+      "time": "10–20 min",
+      "cost": "Assistant usage; check publisher terms",
+      "processing": "Local app/session data plus configured Copilot model processing",
+      "account": "Working assistant account",
+      "version": "Canvas-capable Copilot app required; package minimum not specified in the inspected README.",
+      "os": "Windows / macOS / Linux paths depend on host and runtime; no live OS matrix executed.",
+      "shared": "**Required host:** GitHub Copilot app with canvas support. The CLI command below installs a package; it does not give terminal chat or VS Code the app’s canvas renderer. PR Review is an interactive read-only canvas with grouped files and expandable diffs.",
+      "warning": "The My AI Usage and PR Review experiences may require a Copilot app canvas and are not plain VS Code slash commands.",
+      "sources": [
+        {
+          "url": "https://github.com/github/awesome-copilot/tree/main/plugins/pr-review",
+          "label": "Publisher setup / source"
+        },
+        {
+          "url": "https://github.com/github/awesome-copilot/blob/main/plugins/pr-review/README.md",
+          "label": "Canvas requirements and installation"
+        }
+      ],
+      "clients": {
+        "claude": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        },
+        "codex": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        },
+        "copilot": {
+          "status": "unavailable",
+          "note": "The package can be installed using the CLI, but this canvas experience requires the Copilot app host."
+        },
+        "vscode": {
+          "status": "unverified",
+          "note": "This edition has no publisher-confirmed VS Code canvas rendering path for this extension."
+        },
+        "canvas": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Install and open\n\nCheck the app has canvas support and the package runtime requirement above. Install through its supported plugin flow or the documented CLI installer:\n\n```terminal\ncopilot plugin marketplace list\ncopilot plugin install pr-review@awesome-copilot\ncopilot plugin list\n```\n\nRestart the Copilot app and open the installed extension from the app’s available plugin/canvas entry. If the app exposes no extension entry, inspect its version and entitlement; ordinary chat is not a substitute.\n\n#### Verify\n\nOpen an authorized PR URL in the PR Review canvas. Require the real PR identifier, grouped changed files, expandable diffs and answers scoped to a selected file/hunk. Compare the snapshot against GitHub; do not publish comments."
+        }
+      },
+      "cleanup": "Disable the plugin or remove its MCP registration in the same client and scope used for installation. See the shared removal guide below. Review the diff before restoring project instructions; revoke unused account connections separately."
+    },
+    {
+      "number": "29",
+      "id": "coderabbit",
+      "title": "CodeRabbit",
+      "type": "Code review service",
+      "description": "Like a second reviewer that checks your changes before you share them. Extra feedback on risks, complexity and review issues before a PR.",
+      "difficulty": "Intermediate",
+      "time": "10–25 min",
+      "cost": "CodeRabbit plan/rate limits plus assistant usage",
+      "processing": "CodeRabbit service processes the selected diff/context",
+      "account": "CodeRabbit account and authorized repository access",
+      "version": "Publisher minimum not established; record installed release before testing.",
+      "os": "Windows / macOS / Linux paths depend on host and runtime; no live OS matrix executed.",
+      "shared": "**Prerequisites:** Open a Git repository and define the review scope/base branch. Install the CLI using the publisher’s OS-specific instructions: [CodeRabbit CLI](https://docs.coderabbit.ai/cli). Use its native Windows path on Windows; do not paste a POSIX installer into PowerShell. Check installation and agent-mode authentication:\n\n```terminal\ngit status\ncoderabbit --version\ncoderabbit auth status --agent\n```\n\nIf authentication is missing, initiate the supported browser login and recheck:\n\n```terminal\ncoderabbit auth login --agent\ncoderabbit auth status --agent\n```\n\nThe plugin is a workflow wrapper; it does not replace these prerequisites.",
+      "warning": "Code review may be processed by an external vendor.",
+      "sources": [
+        {
+          "url": "https://github.com/openai/plugins/blob/main/plugins/coderabbit/skills/coderabbit-review/SKILL.md",
+          "label": "Publisher setup / source"
+        },
+        {
+          "url": "https://docs.coderabbit.ai/cli",
+          "label": "OS install and account prerequisites"
+        }
+      ],
+      "clients": {
+        "claude": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        },
+        "codex": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Install and activate\n\nStart Codex in the practice repository and open its plugin browser:\n\n```chat\n/plugins\n```\n\nSearch **CodeRabbit**, inspect the publisher and components, and install the official entry. If the listing is missing, inspect configured marketplaces and account policy before changing configuration. Start a new thread. \n\n#### Invoke and verify\n\n\n```chat\nUse the installed CodeRabbit code-review skill to review my current practice diff without applying fixes. First state the reviewed base and scope.\n```\n\n**Evidence required:** The CodeRabbit CLI review invocation, successful authentication, selected diff scope, and service-specific findings/output. A built-in Codex review is not CodeRabbit."
+        },
+        "copilot": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        },
+        "vscode": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        },
+        "canvas": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        }
+      },
+      "cleanup": "Disable/uninstall the Codex plugin, use the CLI’s documented logout command if ending account access, and revoke unused account connections in the service. Remove generated reports only after deciding retention. Service-side processing/history follows CodeRabbit’s account policy."
+    },
+    {
+      "number": "30",
+      "id": "sonarqube-mcp-server",
+      "title": "SonarQube MCP Server",
+      "type": "SonarQube connection",
+      "description": "Like bringing a real code-quality report into the AI conversation. Grounds the agent in actual static-analysis results instead of guesses.",
+      "difficulty": "Advanced",
+      "time": "20–40 min",
+      "cost": "SonarQube subscription/deployment plus assistant usage",
+      "processing": "Local MCP container communicates with SonarQube Cloud/Server",
+      "account": "SonarQube user token and permitted existing project",
+      "version": "Image example pinned to publisher-documented 1.19.0.2785; validate compatibility with your Server release.",
+      "os": "Windows / macOS / Linux paths depend on host and runtime; no live OS matrix executed.",
+      "shared": "**Prerequisites:** A responding Docker daemon, an existing analyzed SonarQube project and a user token with only the required project access. Cloud EU uses `SONARQUBE_ORG`; Server uses `SONARQUBE_URL`. For Cloud US also set `SONARQUBE_URL=https://sonarqube.us`. Obtain secrets from an approved manager into the environment before launching the assistant; never put their literal values in registration files.\n\nExamples pin the image for reproducibility. Review that release’s server compatibility and update the tag deliberately. The publisher configuration generator is an alternative, but inspect its secret handling before saving.",
+      "warning": "Requires an existing SonarQube deployment; may not support older self-hosted server versions.",
+      "sources": [
+        {
+          "url": "https://github.com/SonarSource/sonarqube-mcp-server",
+          "label": "Publisher setup / source"
+        },
+        {
+          "url": "https://github.com/SonarSource/sonarqube-mcp-server#manual-setup",
+          "label": "Container arguments, credentials and versions"
+        },
+        {
+          "url": "https://mcp.sonarqube.com/config-generator.html",
+          "label": "Publisher configuration generator"
+        }
+      ],
+      "clients": {
+        "claude": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Register before checking connection\n\nFor **Cloud EU**, launch the assistant from the terminal that already contains `SONARQUBE_TOKEN` and `SONARQUBE_ORG`, then register:\n\n```terminal\nclaude mcp add sonarqube --scope project -- docker run --init -i --rm -e SONARQUBE_TOKEN -e SONARQUBE_ORG sonarsource/sonarqube-mcp:1.19.0.2785\n```\n\nThe `-e NAME` arguments forward inherited variables into Docker without serializing the token. For **Server**, replace `-e SONARQUBE_ORG` with `-e SONARQUBE_URL` and provide that non-secret URL in the environment. For **Cloud US**, keep the organization and add `-e SONARQUBE_URL`. Inspect the registration and check the host’s MCP tools.\n\n#### Verify\n\nChoose a permitted existing project key and request three issues without changing status or code. Require a SonarQube issue-search tool call, project key, real rule/issue IDs and file locations matching the SonarQube UI. If empty, check the selected project/branch and its last analysis rather than assuming there are no defects. Limit enabled tools and token permissions to the read operations needed."
+        },
+        "codex": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Register before checking connection\n\nFor **Cloud EU**, launch the assistant from the terminal that already contains `SONARQUBE_TOKEN` and `SONARQUBE_ORG`, then register:\n\n```terminal\ncodex mcp add sonarqube -- docker run --init -i --rm -e SONARQUBE_TOKEN -e SONARQUBE_ORG sonarsource/sonarqube-mcp:1.19.0.2785\n```\n\nThe `-e NAME` arguments forward inherited variables into Docker without serializing the token. For **Server**, replace `-e SONARQUBE_ORG` with `-e SONARQUBE_URL` and provide that non-secret URL in the environment. For **Cloud US**, keep the organization and add `-e SONARQUBE_URL`. Inspect the registration and check the host’s MCP tools.\n\n#### Verify\n\nChoose a permitted existing project key and request three issues without changing status or code. Require a SonarQube issue-search tool call, project key, real rule/issue IDs and file locations matching the SonarQube UI. If empty, check the selected project/branch and its last analysis rather than assuming there are no defects. Limit enabled tools and token permissions to the read operations needed."
+        },
+        "copilot": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Register before checking connection\n\nStart Copilot from the credential-bearing terminal. In `/mcp add`, choose **STDIO**, name `sonarqube`, command `docker`. Cloud EU arguments:\n\n```text\nrun --init -i --rm -e SONARQUBE_TOKEN -e SONARQUBE_ORG sonarsource/sonarqube-mcp:1.19.0.2785\n```\n\nLeave literal token values out of the form. For Server replace the organization argument with `-e SONARQUBE_URL`; Cloud US needs both. If your client filters inherited environment variables, use its supported secret-input mechanism or the publisher generator before connecting.\n\n#### Verify\n\nChoose a permitted existing project key and request three issues without changing status or code. Require a SonarQube issue-search tool call, project key, real rule/issue IDs and file locations matching the SonarQube UI. If empty, check the selected project/branch and its last analysis rather than assuming there are no defects. Limit enabled tools and token permissions to the read operations needed."
+        },
+        "vscode": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Register before checking connection\n\nMerge this **Cloud EU** example into `.vscode/mcp.json` without replacing other servers. Replace the organization key (not a secret); VS Code prompts for the token privately:\n\n```json\n{\n  \"inputs\": [\n    {\n      \"id\": \"sonarqube-token\",\n      \"type\": \"promptString\",\n      \"description\": \"SonarQube user token\",\n      \"password\": true\n    }\n  ],\n  \"servers\": {\n    \"sonarqube\": {\n      \"type\": \"stdio\",\n      \"command\": \"docker\",\n      \"args\": [\n        \"run\",\n        \"--init\",\n        \"-i\",\n        \"--rm\",\n        \"-e\",\n        \"SONARQUBE_TOKEN\",\n        \"-e\",\n        \"SONARQUBE_ORG\",\n        \"sonarsource/sonarqube-mcp:1.19.0.2785\"\n      ],\n      \"env\": {\n        \"SONARQUBE_TOKEN\": \"${input:sonarqube-token}\",\n        \"SONARQUBE_ORG\": \"REPLACE_WITH_CLOUD_ORG_KEY\"\n      }\n    }\n  }\n}\n```\n\nFor Server replace the organization env entry and Docker argument with `SONARQUBE_URL` and your Server URL. For Cloud US add the URL env entry and matching `-e` argument. Use **MCP: List Servers** to start and inspect the server.\n\n#### Verify\n\nChoose a permitted existing project key and request three issues without changing status or code. Require a SonarQube issue-search tool call, project key, real rule/issue IDs and file locations matching the SonarQube UI. If empty, check the selected project/branch and its last analysis rather than assuming there are no defects. Limit enabled tools and token permissions to the read operations needed."
+        },
+        "canvas": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        }
+      },
+      "cleanup": "Stop/remove the `sonarqube` MCP entry at its recorded scope. Docker `--rm` removes the stopped transient container, not the remote project. Revoke the practice token when finished; remove cached secret input through the client’s supported credential controls. Do not delete the SonarQube project."
+    },
+    {
+      "number": "31",
+      "id": "codex-security",
+      "title": "Codex Security",
+      "type": "Codex security plugin",
+      "description": "Like a security inspector that investigates suspicious changes. Structured security review and targeted remediation.",
+      "difficulty": "Intermediate",
+      "time": "10–25 min",
+      "cost": "Assistant usage; check publisher terms",
+      "processing": "Assistant provider receives task context",
+      "account": "Working assistant account",
+      "version": "Inspected plugin manifest 0.1.33; host/backend minimum depends on selected workflow.",
+      "os": "Windows / macOS / Linux paths depend on host and runtime; no live OS matrix executed.",
+      "shared": "**Scope:** This plugin bundles security workflows; account/backend features can vary. Installing it does not grant access to Codex Security Cloud. Start with a narrow local diff review and inspect the installed skill list.",
+      "warning": "Availability and backend access can depend on your account/organization.",
+      "sources": [
+        {
+          "url": "https://github.com/openai/plugins/blob/main/plugins/codex-security/.codex-plugin/plugin.json",
+          "label": "Publisher setup / source"
+        }
+      ],
+      "clients": {
+        "claude": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        },
+        "codex": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Install and activate\n\nStart Codex in the practice repository and open its plugin browser:\n\n```chat\n/plugins\n```\n\nSearch **Codex Security**, inspect the publisher and components, and install the official entry. If the listing is missing, inspect configured marketplaces and account policy before changing configuration. Start a new thread. \n\n#### Invoke and verify\n\n\n```chat\nUse the installed security-diff-scan skill to review this practice branch diff. Do not fix or publish findings. State the base and scope.\n```\n\n**Evidence required:** The security-diff-scan skill load and its scoped report with evidence, revision and limitations. Distinguish local workflow output from any separately connected cloud scan."
+        },
+        "copilot": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        },
+        "vscode": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        },
+        "canvas": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        }
+      },
+      "cleanup": "Disable the plugin or remove its MCP registration in the same client and scope used for installation. See the shared removal guide below. Review the diff before restoring project instructions; revoke unused account connections separately."
+    },
+    {
+      "number": "32",
+      "id": "security-guidance",
+      "title": "Security Guidance",
+      "type": "Security guidance plugin",
+      "description": "Like guardrails that warn when new code looks risky. Catches risky patterns early.",
+      "difficulty": "Beginner",
+      "time": "5–15 min",
+      "cost": "Assistant usage; check publisher terms",
+      "processing": "Assistant provider receives task context",
+      "account": "Working assistant account",
+      "version": "Claude Code ≥ 2.1.144; Python ≥ 3.8; gateway credential path may require ≥ 2.1.195.",
+      "os": "Windows / macOS / Linux paths depend on host and runtime; no live OS matrix executed.",
+      "shared": "**Scope:** Choose user or project scope in Claude’s plugin manager and record the selection. The official marketplace is normally available. If missing, add it in Claude chat:\n\n```chat\n/plugin marketplace add anthropics/claude-plugins-official\n```\n\n**Minimum documented prerequisites:** Claude Code ≥ 2.1.144, Python 3.8+ on PATH and supported review credentials. Some Claude apps gateway authentication paths require Claude Code ≥ 2.1.195. The plugin can run pattern checks on writes, LLM diff review when a turn finishes, and agentic review at commit time. Review model/provider configuration and resulting usage before enabling automatic reviews.",
+      "warning": "Availability and command names can vary across marketplace revisions; check `/plugin` before trying a suggested command.",
+      "sources": [
+        {
+          "url": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/security-guidance",
+          "label": "Publisher setup / source"
+        },
+        {
+          "url": "https://github.com/anthropics/claude-plugins-official/blob/main/plugins/security-guidance/README.md",
+          "label": "Package README and requirements"
+        }
+      ],
+      "clients": {
+        "claude": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Install and activate\n\nOpen Claude in the practice repository. Install in Claude chat:\n\n```chat\n/plugin install security-guidance@claude-plugins-official\n```\n\nUse `/plugin` to confirm it is enabled and start a new session. Review any hook trust prompts.\n\n#### Invoke and verify\n\n\n```chat\nConfirm the installed security-guidance hooks are active. Show their status without changing source files.\n```\n\n**Evidence required:** Enabled hook registration and a hook log. To test edit-triggered checks, separately authorize a disposable fixture change and inspect the warning/review output; a general security answer is not proof. Do not count a generic AI response as activation evidence."
+        },
+        "codex": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        },
+        "copilot": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        },
+        "vscode": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        },
+        "canvas": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        }
+      },
+      "cleanup": "Disable the plugin or remove its MCP registration in the same client and scope used for installation. See the shared removal guide below. Review the diff before restoring project instructions; revoke unused account connections separately."
+    },
+    {
+      "number": "33",
+      "id": "claude-security",
+      "title": "Claude Security",
+      "type": "Security review plugin",
+      "description": "Like a deeper security investigation team for authorized repositories. Useful for targeted AppSec reviews.",
+      "difficulty": "Beginner",
+      "time": "5–15 min",
+      "cost": "Assistant usage; check publisher terms",
+      "processing": "Assistant provider receives task context",
+      "account": "Working assistant account",
+      "version": "Publisher minimum not established; record installed release before testing.",
+      "os": "Windows / macOS / Linux paths depend on host and runtime; no live OS matrix executed.",
+      "shared": "**Scope:** Choose user or project scope in Claude’s plugin manager and record the selection. The official marketplace is normally available. If missing, add it in Claude chat:\n\n```chat\n/plugin marketplace add anthropics/claude-plugins-official\n```\n\n**Scope and trust:** Scan only code you are authorized to inspect. This in-session plugin uses the session’s permissions and does not add isolation by itself. Prefer a narrow practice scope initially; inspect its current model/runtime and account requirements. Reports can include sensitive context and need review before sharing.",
+      "warning": "Availability and command names can vary across marketplace revisions; check `/plugin` before trying a suggested command.",
+      "sources": [
+        {
+          "url": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/claude-security",
+          "label": "Publisher setup / source"
+        },
+        {
+          "url": "https://github.com/anthropics/claude-plugins-official/blob/main/plugins/claude-security/README.md",
+          "label": "Package README and requirements"
+        }
+      ],
+      "clients": {
+        "claude": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Install and activate\n\nOpen Claude in the practice repository. Install in Claude chat:\n\n```chat\n/plugin install claude-security@claude-plugins-official\n```\n\nUse `/plugin` to confirm it is enabled and start a new session. Review any hook trust prompts.\n\n#### Invoke and verify\n\n\n```chat\n/claude-security scan this practice repository; report findings and do not suggest or apply patches.\n```\n\n**Evidence required:** The named scan workflow and a timestamped CLAUDE-SECURITY output directory with scope, findings and revision metadata. A scan writes report artifacts even when source edits are forbidden. Do not count a generic AI response as activation evidence."
+        },
+        "codex": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        },
+        "copilot": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        },
+        "vscode": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        },
+        "canvas": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        }
+      },
+      "cleanup": "Disable the plugin or remove its MCP registration in the same client and scope used for installation. See the shared removal guide below. Review the diff before restoring project instructions; revoke unused account connections separately."
+    },
+    {
+      "number": "34",
+      "id": "semgrep",
+      "title": "Semgrep",
+      "type": "Code security scanner",
+      "description": "Like a security scanner that follows explicit matching rules. Deterministic findings that complement AI judgement.",
+      "difficulty": "Intermediate",
+      "time": "10–25 min",
+      "cost": "Assistant usage; check publisher terms",
+      "processing": "Assistant provider receives task context",
+      "account": "Working assistant account",
+      "version": "Publisher minimum not established; record installed release before testing.",
+      "os": "Windows / macOS / Linux paths depend on host and runtime; no live OS matrix executed.",
+      "shared": "**Scope and prerequisites:** This is Semgrep’s Claude plugin, including automatic post-edit scans and a connected analysis service. It is not the unrelated public documentation MCP endpoint. Inspect the marketplace publisher/source and its current runtime/account requirements.",
+      "warning": "Availability and command names can vary across marketplace revisions; check `/plugin` before trying a suggested command.",
+      "sources": [
+        {
+          "url": "https://claude.com/marketplace/plugins/semgrep",
+          "label": "Publisher setup / source"
+        }
+      ],
+      "clients": {
+        "claude": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Install and configure\n\nOpen `/plugin` → Discover and select the Semgrep entry linked by the publisher below. Review its source and install at the selected user/project scope. In Claude chat run:\n\n```chat\n/semgrep-plugin:setup_semgrep_plugin\n```\n\nFollow the documented runtime installation and authentication flow; review the connected service and enabled hooks. Start a fresh session.\n\n#### Verify\n\nUse an authorized disposable fixture to trigger one post-edit scan, or request the installed Semgrep scan tool explicitly. Require the Semgrep tool/hook activity, selected rules, scanned file scope and rule IDs/locations or a real clean result. The setup and scan can create local tool state; no source fix is implied."
+        },
+        "codex": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        },
+        "copilot": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        },
+        "vscode": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        },
+        "canvas": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        }
+      },
+      "cleanup": "Disable the plugin or remove its MCP registration in the same client and scope used for installation. See the shared removal guide below. Review the diff before restoring project instructions; revoke unused account connections separately."
+    },
+    {
+      "number": "35",
+      "id": "security-best-practices",
+      "title": "Security Best Practices",
+      "type": "Security checklist plugin",
+      "description": "Like a checklist for avoiding common coding security mistakes. Adds structured review criteria.",
+      "difficulty": "Intermediate",
+      "time": "10–25 min",
+      "cost": "Assistant usage; check publisher terms",
+      "processing": "Assistant provider receives task context",
+      "account": "Working assistant account",
+      "version": "Publisher minimum not established; record installed release before testing.",
+      "os": "Windows / macOS / Linux paths depend on host and runtime; no live OS matrix executed.",
+      "shared": "**Scope and prerequisites:** Copilot CLI installs this plugin for that client. VS Code requires its own installation. A working Copilot account is required. \n\nIf discovery fails, inspect registered marketplaces first:\n\n```terminal\ncopilot plugin marketplace list\n```\n\n`awesome-copilot` is included by default in current Copilot CLI. Only if it is absent, register the reviewed source:\n\n```terminal\ncopilot plugin marketplace add github/awesome-copilot\n```\n\n",
+      "warning": "Review the selected scope, tool permissions and changed files before use.",
+      "sources": [
+        {
+          "url": "https://github.com/github/awesome-copilot/tree/main/plugins/security-best-practices",
+          "label": "Publisher setup / source"
+        },
+        {
+          "url": "https://github.com/github/awesome-copilot/blob/main/plugins/security-best-practices/README.md",
+          "label": "Plugin requirements and named commands"
+        },
+        {
+          "url": "https://code.visualstudio.com/docs/agent-customization/agent-plugins#_discover-and-install-plugins",
+          "label": "VS Code installation and harness selection"
+        }
+      ],
+      "clients": {
+        "claude": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        },
+        "codex": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        },
+        "copilot": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Install and activate\n\n\n```terminal\ncopilot plugin install security-best-practices@awesome-copilot\ncopilot plugin list\n```\n\nRestart Copilot in the project. Check the installed components and command completion.\n\n#### Invoke and verify\n\n\n```chat\n/security-best-practices:ai-prompt-engineering-safety-review Review this practice application’s prompt handling, with code evidence. Do not edit files.\n```\n\n**Evidence required:** The specifically named prompt-safety skill loads and produces evidence-backed observations. This command is not a universal application vulnerability scanner."
+        },
+        "vscode": {
+          "status": "documented",
+          "note": "Platform plugin loading documented; this specific package/release pairing has not been executed. Component exposure varies by VS Code release.",
+          "body": "#### Install and activate\n\nRun **Chat: Open Customizations**, select the **Copilot harness**, then **Plugins → Browse**. Configure `github/awesome-copilot` as a trusted marketplace if it is missing. Select **security-best-practices**, review its skills/agents and install at **Workspace** scope for the practice project. If that marketplace format is rejected by your VS Code release, mark this path unverified; do not copy CLI registration files.\n\n#### Invoke and verify\n\nStart a new Copilot chat, select the installed component through skill/command completion. Where this release exposes namespaced commands, use:\n\n```chat\n/security-best-practices:ai-prompt-engineering-safety-review Review this practice application’s prompt handling, with code evidence. Do not edit files.\n```\n\n**Evidence required:** The specifically named prompt-safety skill loads and produces evidence-backed observations. This command is not a universal application vulnerability scanner. Confirm the skill/component was loaded in Chat diagnostics or agent activity, not only that the answer sounds relevant."
+        },
+        "canvas": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        }
+      },
+      "cleanup": "Copilot CLI: disable, then uninstall `security-best-practices` with its plugin manager. VS Code: Customizations → Plugins → Disable/Uninstall at the recorded scope. Restore only plugin-created project files after reviewing the diff. Removing the package does not revoke external account access."
+    },
+    {
+      "number": "36",
+      "id": "github-mcp-server",
+      "title": "GitHub MCP Server",
+      "type": "GitHub connection",
+      "description": "Like a bridge from your coding assistant to GitHub issues and PRs. Cuts tab switching; enables repo-aware reviews and issue-to-PR workflows.",
+      "difficulty": "Intermediate",
+      "time": "10–20 min",
+      "cost": "Account/host entitlement plus assistant usage",
+      "processing": "GitHub service; selected repository content reaches assistant",
+      "account": "Authorized GitHub identity; restricted repositories and permissions",
+      "version": "Publisher minimum not established; record installed release before testing.",
+      "os": "Windows / macOS / Linux paths depend on host and runtime; no live OS matrix executed.",
+      "shared": "**Credentials and permissions:** Prefer the host’s supported browser OAuth path. A PAT belongs to the intended user or an approved service identity; do not borrow an administrator’s token. For a read-only exercise restrict repository access, permissions, expiry and organization SSO authorization. A prompt saying “read only” does not remove write capabilities. GitHub’s remote read-only endpoint is used below; verify the resulting tool list.",
+      "warning": "Approval is needed before merge/write operations. Never put a PAT inside a tracked configuration file.",
+      "sources": [
+        {
+          "url": "https://github.com/github/github-mcp-server",
+          "label": "Publisher setup / source"
+        },
+        {
+          "url": "https://github.com/github/github-mcp-server/blob/main/docs/remote-server.md",
+          "label": "Remote read-only path modifiers and toolsets"
+        }
+      ],
+      "clients": {
+        "claude": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Register\n\n\n```terminal\nclaude mcp add github --scope project --transport http https://api.githubcopilot.com/mcp/readonly\n```\n\nOpen `/mcp`, authenticate through the supported browser flow and confirm only intended read tools are exposed.\n\n#### Verify\n\nRequest five open issues from an explicitly named authorized repository. Require the GitHub issue tool call and matching issue numbers/URLs. Do not create comments or modify issues."
+        },
+        "codex": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Register\n\nIf using a PAT, obtain `GITHUB_PAT_TOKEN` through your approved credential manager into this terminal environment, then start Codex from the same environment. Register its variable name, never its value:\n\n```terminal\ncodex mcp add github --url https://api.githubcopilot.com/mcp/readonly --bearer-token-env-var GITHUB_PAT_TOKEN\ncodex mcp list\n```\n\nInspect `/mcp` in Codex. Use browser OAuth instead only if supported by this client/server combination.\n\n#### Verify\n\nRequest five open issues in an explicitly named authorized repository and require a GitHub tool trace plus real issue IDs/URLs. Confirm the tools exposed by the read-only endpoint match the intended permission boundary."
+        },
+        "copilot": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Inspect existing tools first\n\nGitHub tools may already be built in. Check their identity, repository access and enabled toolset before adding a duplicate server. If a separate remote server is needed, use `/mcp add` → HTTP with name `github` and URL `https://api.githubcopilot.com/mcp/readonly`. Complete supported browser authorization and inspect read-only capabilities.\n\n#### Verify\n\nList five open issues from an explicitly named authorized repository. Require a GitHub tool call and issue numbers/titles matching the service. Account permissions and tool restrictions, not the wording of the prompt, define what can be changed."
+        },
+        "vscode": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Inspect existing tools first\n\nGitHub tools may already be built in. Check their identity, repository access and enabled toolset before adding a duplicate server. If a separate remote server is needed, use **MCP: Add Server → HTTP** at workspace scope with name `github` and URL `https://api.githubcopilot.com/mcp/readonly`. Complete supported browser authorization and inspect read-only capabilities.\n\n#### Verify\n\nList five open issues from an explicitly named authorized repository. Require a GitHub tool call and issue numbers/titles matching the service. Account permissions and tool restrictions, not the wording of the prompt, define what can be changed."
+        },
+        "canvas": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        }
+      },
+      "cleanup": "Remove the separate GitHub MCP registration if added; leave working built-in tools intact. Revoke the app authorization/PAT in GitHub when no longer needed and clear cached credentials through the client. Removing a local entry alone does not revoke the credential."
+    },
+    {
+      "number": "37",
+      "id": "openai-developers",
+      "title": "OpenAI Developers",
+      "type": "OpenAI documentation plugin",
+      "description": "Like a guide for building and debugging apps using OpenAI APIs. Safer development with current API behavior and code examples.",
+      "difficulty": "Beginner",
+      "time": "5–15 min",
+      "cost": "Assistant usage; optional Platform services have their own billing",
+      "processing": "Public OpenAI docs; optional authenticated Platform connection",
+      "account": "Docs path may be public; Platform features need authorization",
+      "version": "Publisher minimum not established; record installed release before testing.",
+      "os": "Windows / macOS / Linux paths depend on host and runtime; no live OS matrix executed.",
+      "shared": "**Choose the right connection:** Public documentation lookup and authenticated Platform operations are separate capabilities. Use public docs first; do not connect a production Platform organization just to read SDK documentation.",
+      "warning": "API-related examples should be checked against current model and project settings.",
+      "sources": [
+        {
+          "url": "https://developers.openai.com/learn/developers-codex-plugin",
+          "label": "Publisher setup / source"
+        }
+      ],
+      "clients": {
+        "claude": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Install\n\n\n```chat\n/plugin marketplace add openai/openai-developers-for-claude\n/plugin install openai-developers@openai-developers\n```\n\nStart a new session and inspect the installed documentation skills/tools. The Claude variant does not imply the Codex-specific Platform connection.\n\n#### Verify\n\nAsk for the current official documentation for a specific SDK call already present in the practice project. Require the OpenAI documentation tool trace, source URL and compatibility with the installed SDK version."
+        },
+        "codex": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Install and activate\n\nStart Codex in the practice repository and open its plugin browser:\n\n```chat\n/plugins\n```\n\nSearch **OpenAI Developers**, inspect the publisher and components, and install the official entry. If the listing is missing, inspect configured marketplaces and account policy before changing configuration. Start a new thread. \n\n#### Invoke and verify\n\n\n```chat\nUse the installed OpenAI Developers documentation tools to verify one SDK call in this repository against official documentation. Do not edit files or invoke Platform write operations.\n```\n\n**Evidence required:** An actual documentation lookup and official source URL tied to the installed SDK version. Connect an optional Platform account only for a task that needs it."
+        },
+        "copilot": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        },
+        "vscode": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        },
+        "canvas": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        }
+      },
+      "cleanup": "Disable the plugin or remove its MCP registration in the same client and scope used for installation. See the shared removal guide below. Review the diff before restoring project instructions; revoke unused account connections separately."
+    },
+    {
+      "number": "38",
+      "id": "figma-codex-plugin",
+      "title": "Figma (Codex plugin)",
+      "type": "Design connection",
+      "description": "Like letting the coding assistant read your actual design reference. Less guesswork about visual details and reusable component conventions.",
+      "difficulty": "Intermediate",
+      "time": "10–20 min",
+      "cost": "Figma entitlement/rate limits plus assistant usage",
+      "processing": "Connected Figma service; selected design data reaches assistant",
+      "account": "Figma account with access to the selected file/node",
+      "version": "Publisher minimum not established; record installed release before testing.",
+      "os": "Windows / macOS / Linux paths depend on host and runtime; no live OS matrix executed.",
+      "shared": "**Input and access:** Copy a permitted Figma frame/component URL with its node ID. Confirm it opens under the same account used by the connection. This plugin has an app dependency; an independent MCP registration is an alternative transport and does not automatically satisfy that app dependency.",
+      "warning": "Generated UI still needs responsive and accessibility verification.",
+      "sources": [
+        {
+          "url": "https://github.com/openai/plugins/tree/main/plugins/figma",
+          "label": "Publisher setup / source"
+        },
+        {
+          "url": "https://github.com/openai/plugins/blob/main/plugins/figma/README.md",
+          "label": "App dependency, skills and Figma node URLs"
+        }
+      ],
+      "clients": {
+        "claude": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        },
+        "codex": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Install and activate\n\nStart Codex in the practice repository and open its plugin browser:\n\n```chat\n/plugins\n```\n\nSearch **Figma**, inspect the publisher and components, and install the official entry. If the listing is missing, inspect configured marketplaces and account policy before changing configuration. Start a new thread. Complete the Figma connection prompted by the plugin with the permitted account. Check connected tools are actually available. If the host offers only standalone MCP, use the publisher’s supported MCP setup rather than claiming the full app-backed plugin is active.\n\n#### Invoke and verify\n\n\n```chat\nUse the installed Figma design-inspection workflow for the file/node URL I provide. Read its metadata and screenshot; do not edit the design or source code.\n```\n\n**Evidence required:** Connected Figma retrieval tools returning the requested file/node ID, matching design metadata and a screenshot. Compare with the selected frame in Figma. A guessed UI description is not proof."
+        },
+        "copilot": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        },
+        "vscode": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        },
+        "canvas": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        }
+      },
+      "cleanup": "Disable/uninstall the plugin and separately disconnect/revoke the Figma account integration if no longer needed. Remove any separately added MCP entry too. Keep source code and Figma files intact; generated local artifacts need a separate retention decision."
+    },
+    {
+      "number": "39",
+      "id": "build-web-apps-codex",
+      "title": "Build Web Apps (Codex)",
+      "type": "Web application workflow",
+      "description": "Like a starter toolkit for building and testing web applications. Convenient scaffold/workflow for web app development.",
+      "difficulty": "Intermediate",
+      "time": "10–25 min",
+      "cost": "Assistant usage; check publisher terms",
+      "processing": "Assistant provider receives task context",
+      "account": "Working assistant account",
+      "version": "Publisher minimum not established; record installed release before testing.",
+      "os": "Windows / macOS / Linux paths depend on host and runtime; no live OS matrix executed.",
+      "shared": "**Prerequisites:** Start from a small repository with a documented framework/package-manager setup. Inspect the plugin’s skills before choosing one: frontend-app-builder, frontend-testing-debugging and focused React/shadcn/Stripe/Supabase guidance serve different purposes. A payment/database service is not required for a simple static page.",
+      "warning": "Treat service deployment/payment actions as separate approvals.",
+      "sources": [
+        {
+          "url": "https://github.com/openai/plugins/tree/main/plugins/build-web-apps",
+          "label": "Publisher setup / source"
+        },
+        {
+          "url": "https://github.com/openai/plugins/blob/main/plugins/build-web-apps/README.md",
+          "label": "Builder and frontend-testing skill inventory"
+        }
+      ],
+      "clients": {
+        "claude": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        },
+        "codex": {
+          "status": "documented",
+          "note": "Publisher documents the integration; installation and live use not executed in this review.",
+          "body": "#### Install and activate\n\nStart Codex in the practice repository and open its plugin browser:\n\n```chat\n/plugins\n```\n\nSearch **Build Web Apps**, inspect the publisher and components, and install the official entry. If the listing is missing, inspect configured marketplaces and account policy before changing configuration. Start a new thread. \n\n#### Invoke and verify\n\n\n```chat\nUse the installed frontend-app-builder skill to propose one small local page in this repository. Stop after the plan and state the run/test commands.\n```\n\n**Evidence required:** The named builder skill loads. When implementation is authorized, require a successful build, printed local URL and real browser/test evidence through frontend-testing-debugging. A plan alone does not prove a runnable app."
+        },
+        "copilot": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        },
+        "vscode": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        },
+        "canvas": {
+          "status": "unverified",
+          "note": "This edition has no confirmed setup recipe for this host."
+        }
+      },
+      "cleanup": "Disable the plugin or remove its MCP registration in the same client and scope used for installation. See the shared removal guide below. Review the diff before restoring project instructions; revoke unused account connections separately."
+    }
+  ]
+}
