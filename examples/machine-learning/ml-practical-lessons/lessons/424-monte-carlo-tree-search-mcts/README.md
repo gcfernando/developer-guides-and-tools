@@ -70,7 +70,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** A wrong simulator yields misleading plans. Search budget, horizon and reward affect the result.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 No. It may need exploration; interpret visits with returns and the available simulation budget.

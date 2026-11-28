@@ -71,7 +71,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** A wrong seed or unsuitable scale can spread mistakes. Holdout answers must not enter the fitting graph.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 No. It may strengthen wrong links; compare with a labeled-only baseline and inspect confirmed mistakes.

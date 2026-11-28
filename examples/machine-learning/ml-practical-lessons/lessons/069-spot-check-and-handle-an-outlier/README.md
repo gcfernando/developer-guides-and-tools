@@ -80,7 +80,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** The flag does not establish an error, and improvement on one held-back trip does not establish general improvement. Do not use the test answer to invent a correction.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 Keep 90 kg. Evidence about the measurement decides correction. Model suitability is a separate question requiring more suitable check examples.

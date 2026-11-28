@@ -71,7 +71,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** Input change alone does not prove worse predictions. An alert does not automatically authorize retraining or replacement. Delayed labels limit what is currently measurable.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 Verify units/schema and labels, inspect affected cases and counts, and check changes in routes or population. Use the agreed fallback if needed; compare any candidate fairly before promotion.

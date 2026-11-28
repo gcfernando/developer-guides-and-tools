@@ -74,7 +74,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** Lowering a cutoff can overwhelm reviewers. A validation recall target is not guaranteed on a new population.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 No. Check validation workload and costs against agreed capacity and decide a practical policy or fallback.

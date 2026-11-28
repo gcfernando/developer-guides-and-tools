@@ -73,7 +73,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** A tone classifier does not recognize speech. Compression and sample rate can change values. Extra FFmpeg/media dependencies must be available before running the audio tasks.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 No. Decode and prepare a consistent sample rate, channels and frame procedure, then check feature shape and validation behavior. The same column position must retain the same meaning.

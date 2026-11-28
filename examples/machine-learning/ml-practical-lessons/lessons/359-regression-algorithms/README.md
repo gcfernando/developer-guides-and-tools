@@ -75,7 +75,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** Inputs may overlap, important factors may be absent, and a line can extrapolate implausibly. Good training fit is insufficient.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 No. It describes the fitted association under this data and model. State the inputs, units, supported range and independent-check errors.

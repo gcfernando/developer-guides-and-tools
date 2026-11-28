@@ -71,7 +71,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** Filling gaps does not establish fairness or recover unknown outcomes. In real data the missing true times may be unavailable.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 No. Compare missing counts by route and time, inspect the recorder/source, and report what is unknown. A fill alone cannot establish the absent outcomes.

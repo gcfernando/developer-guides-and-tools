@@ -76,7 +76,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** One rewarded move does not establish a reliable policy. A designed reward may miss the real goal.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 Yes. Review reward meaning and evaluate behavior across suitable trials.

@@ -23,15 +23,17 @@ Choose a starting point by what you can explain, not by how many files you have 
 
 Learn machine learning one small step at a time. Start with a table and a prediction you can calculate on paper. Later, use Python to learn from old deliveries, check mistakes, and try a local prediction service.
 
-[Start here](START-HERE.md) · [Follow the learning path](LEARNING-PATH.md) · [Read the workbook](Data-Science-and-Machine-Learning.md) · [Set up Python](SETUP.md) · [Word list](GLOSSARY.md)
+For a reading view with course navigation, open the [browser course overview](https://gcfernando.github.io/developer-guides-and-tools/examples/machine-learning/ml-practical-lessons/README.html). It links to the readable learning path and exercises. The [Markdown source](https://github.com/gcfernando/developer-guides-and-tools/blob/main/examples/machine-learning/ml-practical-lessons/README.md) remains available for readers who prefer GitHub or want to edit the text. Use Library home or All resources in the browser reader to return to the wider collection.
+
+[Start here](START-HERE.md) · [Follow the learning path](https://gcfernando.github.io/developer-guides-and-tools/examples/machine-learning/ml-practical-lessons/LEARNING-PATH.html) · [Read the workbook](Data-Science-and-Machine-Learning.md) · [Set up Python](SETUP.md) · [Word list](GLOSSARY.md)
 
 ## Start here
 
 1. Open [Start here](START-HERE.md). It explains rows, columns, a prediction, and basic computer words.
 2. Choose the ideas route or the Python route. The ideas route needs no installation.
-3. For Python, follow [Setup](SETUP.md), then [Python basics](PYTHON-BASICS.md). Use the same active environment for every command.
-4. Follow [Your learning path](LEARNING-PATH.md). Tick a box only when you can explain its check.
-5. Finish the guided delivery project. Then try the [independent project](INDEPENDENT-PROJECT.md) with a real, separately sourced table.
+3. For Python, follow [Setup](SETUP.md), then [Python basics](https://gcfernando.github.io/developer-guides-and-tools/examples/machine-learning/ml-practical-lessons/PYTHON-BASICS.html). Use the same active environment for every command.
+4. Follow [Your learning path](https://gcfernando.github.io/developer-guides-and-tools/examples/machine-learning/ml-practical-lessons/LEARNING-PATH.html). Tick a box only when you can explain its check.
+5. Finish the guided delivery project. Then try the [independent project](https://gcfernando.github.io/developer-guides-and-tools/examples/machine-learning/ml-practical-lessons/INDEPENDENT-PROJECT.html) with a real, separately sourced table.
 
 For offline reading, open `START-HERE.html`. Keep the complete course folder together. All main guides have readable HTML copies. Each lesson ZIP also includes `README.html`.
 
@@ -46,7 +48,7 @@ For offline reading, open `START-HERE.html`. Keep the complete course folder tog
 | `workbook-figures/` | Diagrams and charts with readable mobile variants, text explanations and source-backed value tables |
 | `lessons/` | Editable source files used to build the lesson ZIPs. Learners can use the ZIPs instead. |
 | `projects/wine/` | A real-data independent project with a starter script, separate final answers and source credit. |
-| [Practice](PRACTICE.md), [Project choices](PROJECT-CHOICES.md), and [Extra topics](ELECTIVES.md) | Questions with explained answers, project worksheets and help for harder topics. |
+| [Practice](https://gcfernando.github.io/developer-guides-and-tools/examples/machine-learning/ml-practical-lessons/PRACTICE.html), [Project choices](https://gcfernando.github.io/developer-guides-and-tools/examples/machine-learning/ml-practical-lessons/PROJECT-CHOICES.html), and [Extra topics](https://gcfernando.github.io/developer-guides-and-tools/examples/machine-learning/ml-practical-lessons/ELECTIVES.html) | Questions with explained answers, project worksheets and help for harder topics. |
 | [Lesson coverage](coverage.csv) | Lesson IDs, tracks, sample files, expected results and shared-exercise mappings |
 | [Core requirements](requirements-core-tested.txt) and [recorded versions](tested-package-versions.csv) | The supplied dependency recipe and environment record |
 
@@ -66,4 +68,4 @@ No lesson scripts are executed by the repository's standard documentation build.
 
 ## For the course author
 
-Use [Teaching](TEACHING.md) for the lesson template, learner study and release checks. Run `python course_tools/build_course.py` to rebuild pages and ZIPs, then `python course_tools/check_course.py` to check the result. [The original review](https://gcfernando.github.io/developer-guides-and-tools/examples/machine-learning/ml-practical-lessons/course-review/report.html) describes the earlier course. [The response log](course-review/implementation-status.csv) records changes and any human checks still needed.
+Use [Teaching](https://gcfernando.github.io/developer-guides-and-tools/examples/machine-learning/ml-practical-lessons/TEACHING.html) for the lesson template, learner study and release checks. Run `python course_tools/build_course.py` to rebuild pages and ZIPs, then `python course_tools/check_course.py` to check the result. [The original review](https://gcfernando.github.io/developer-guides-and-tools/examples/machine-learning/ml-practical-lessons/course-review/report.html) describes the earlier course. [The response log](course-review/implementation-status.csv) records changes and any human checks still needed.

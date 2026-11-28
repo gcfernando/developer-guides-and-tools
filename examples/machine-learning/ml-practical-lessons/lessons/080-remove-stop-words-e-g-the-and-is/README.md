@@ -76,7 +76,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** A general stop list may remove negation or words useful for your language and task. Shorter text is not automatically a better representation.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 Not without evidence. Those phrases could become identical. Compare token lists and validation mistakes before deciding.

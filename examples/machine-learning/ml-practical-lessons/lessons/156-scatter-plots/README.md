@@ -73,7 +73,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** Correlation does not establish cause. Axis scales, missing rows and small counts can change a story. Use training data when exploration guides model choices.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 Use a distance-versus-time scatterplot for the relationship and a weight histogram for frequency. Name units and counts; do not infer causation from a sloping cloud.

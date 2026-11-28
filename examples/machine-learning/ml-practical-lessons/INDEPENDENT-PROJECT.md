@@ -1,6 +1,6 @@
 # Build a model for a new table
 
-[Learning path](LEARNING-PATH.md) · [Project choices](PROJECT-CHOICES.md)
+[Learning path](https://gcfernando.github.io/developer-guides-and-tools/examples/machine-learning/ml-practical-lessons/LEARNING-PATH.html) · [Project choices](https://gcfernando.github.io/developer-guides-and-tools/examples/machine-learning/ml-practical-lessons/PROJECT-CHOICES.html)
 
 Finish the guided delivery project first. This task checks whether you can use the ideas on a different table. There is no complete model script to copy.
 
@@ -14,7 +14,7 @@ The source is [UCI Wine](https://archive.ics.uci.edu/dataset/109/wine), by Stefa
 
 ## 1. Open the files
 
-Open `projects/wine`. Its README explains the files. With the active course environment, run:
+Open the [wine project instructions](https://gcfernando.github.io/developer-guides-and-tools/examples/machine-learning/ml-practical-lessons/projects/wine/README.html). They link to the supplied tables, code and data source. Download the complete course or open `projects/wine` in your local copy before running code; viewing a CSV in a browser does not put it in your project folder. With the active course environment, run:
 
 ```bash
 python starter.py
@@ -45,7 +45,7 @@ Before writing the whole procedure, complete these smaller decisions. They give 
 3. Sketch a two-row result table: baseline and candidate, with the same validation metric and counts.
 4. Write one reason to keep the baseline even if a candidate has an impressive training score.
 
-<details>
+<details markdown="1">
 <summary>Check the decisions, then close this hint</summary>
 
 The most common training type defines the constant baseline; it does not come from test answers. Preparation fits on training inputs. Both procedures receive the same validation cases and metric. Training performance alone can reward memorization; a usable candidate needs separate evidence and practical justification. The supplied starter intentionally stops before model fitting: this part is your independent exercise, not a complete implementation to copy.
@@ -82,7 +82,7 @@ The checker reads the separate answer file and prints the final counts and score
 
 Write a small model card. Include the data source, choice, baseline, validation comparison, final count table, mistakes and limits. Give your script and notes to another learner. They should be able to run it and explain why the model might fail elsewhere.
 
-Use the five-area rubric in [Teaching](TEACHING.md#score-an-independent-project). The goal is a reasoned, repeatable result. A high score alone is not a pass if the model used the final answers while choosing.
+Use the five-area rubric in [Teaching](https://gcfernando.github.io/developer-guides-and-tools/examples/machine-learning/ml-practical-lessons/TEACHING.html#score-an-independent-project). The goal is a reasoned, repeatable result. A high score alone is not a pass if the model used the final answers while choosing.
 
 ## Ideas route
 

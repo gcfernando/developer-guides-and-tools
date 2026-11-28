@@ -71,7 +71,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** This complete tiny replay batch does not establish robust control, safe exploration or image understanding.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 The episode ended, so no later action rewards follow within that return.

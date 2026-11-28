@@ -74,7 +74,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** Rare urgent orders can be missed while overall accuracy remains high.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 No. It misses the only urgent order. Report the confusion counts, recall and the decision costs.

@@ -76,7 +76,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** The script uses local fixtures, not a live public API or web scraper. Real APIs may paginate, fail or change their schema. An HTML page can change its tags.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 Every complete copy should contain the extra order once. Trace its ID from the original CSV through each result. Investigate filtering, paging or parsing rather than silently accepting fewer rows.

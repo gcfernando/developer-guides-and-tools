@@ -88,6 +88,8 @@ python course_tools/audit_teaching.py
 
 The build makes downloadable ZIPs and readable HTML pages. The checks inspect links, Python syntax and the documented practice changes. Run `python course_tools/check_course.py --run` to also run distinct lesson scripts. Its new evidence is written to `course-review/execution-checks.json`; older review records remain historical evidence. Optional packages may be absent; the report must say which lessons did not run. Build tools are for the author. A learner does not need them.
 
+The course checks also run `node course_tools/check_readers.cjs`. It compares source and browser anchors and progress-control order against `reader-compatibility.json`, captured before the navigation fixes. Keep old anchors as explicit aliases when changing a heading. Do not replace that baseline merely to make a failing compatibility check pass. The workbook's repeated teaching labels are bold text rather than headings, so they do not break the topic outline; their earlier anchor names still work.
+
 Before publishing, also run the full repository checks. From the repository root (`DeveloperResources`), run:
 
 ```bash
@@ -163,6 +165,6 @@ Require evidence in every area. A high total cannot excuse leakage or using test
 
 ## Release evidence
 
-Read the [implementation and verification report](course-review/IMPLEMENTATION.md) for the current changes, executed checks and open observation tasks. Keep the generated coverage CSV separate from claims about learner success.
+Read the [implementation and verification report on GitHub](https://github.com/gcfernando/developer-guides-and-tools/blob/main/examples/machine-learning/ml-practical-lessons/course-review/IMPLEMENTATION.md) for the current changes, executed checks and open observation tasks. Keep the generated coverage CSV separate from claims about learner success.
 
 Keep a dated check report. Separate code changes, automated checks, manual browser checks, clean setup checks and observed learner results. The original audit remains in `course-review/`; it describes the old state. `course-review/implementation-status.csv` records the response and any checks that still require a person or another computer.

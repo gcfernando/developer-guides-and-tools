@@ -1,6 +1,8 @@
 ---
 layout: default
 title: "Start learning machine learning"
+description: "Choose a paper or Python route, learn the first machine learning words, and open a small guided example."
+permalink: /examples/machine-learning/ml-practical-lessons/start-here/
 ---
 
 # Start here
@@ -20,7 +22,7 @@ You can learn the ideas without running code. You can also learn to build a smal
 | Understand the ideas | Read this page. Do the paper tasks. Read the worked answers. | Paper or a spreadsheet. No Python. |
 | Build with Python | Do the same tasks. Then run the lesson files. | A computer and the [setup steps](SETUP.md). |
 
-Both routes start below. Later, use the [learning path](LEARNING-PATH.md). The large workbook is a library. You do not need to read all its lessons in order.
+Both routes start below. Later, use the [learning path](https://gcfernando.github.io/developer-guides-and-tools/examples/machine-learning/ml-practical-lessons/LEARNING-PATH.html). The large workbook is a library. You do not need to read all its lessons in order.
 
 ## 1. Meet one small table
 
@@ -46,7 +48,7 @@ Each extra kilometre adds two minutes in this made-up table.
 
 **Your turn:** What time would you guess for 4 km? Write your answer before opening the box.
 
-<details>
+<details markdown="1">
 <summary>See the answer</summary>
 
 18 minutes. The table follows this rule:
@@ -97,7 +99,7 @@ Now add another 3 km delivery. It took 19 minutes, rather than 16 minutes.
 
 **Your turn:** Does that prove the computer is broken?
 
-<details>
+<details markdown="1">
 <summary>See the answer</summary>
 
 No. Traffic, waiting, and other facts can change a delivery time. Distance alone does not tell us everything. A recording can also contain a mistake. We need to check the source before changing it.
@@ -117,7 +119,7 @@ The first table was made simple to show one idea. Real data does not usually fol
 
 **Your turn:** Which kind of task is “guess tomorrow's number of orders”? Which is “sort a message into billing or delivery”?
 
-<details>
+<details markdown="1">
 <summary>See the answers</summary>
 
 The first asks for a number, so it is regression. The second chooses between known names, so it is classification. A familiar word such as “regression” is a name to learn, not an extra step to perform.
@@ -204,4 +206,4 @@ Before the next module, explain these ideas in your own words:
 - Why do we keep some answers away from training?
 - Why might two trips with the same distance take different times?
 
-If these are still hard, repeat steps 1 to 6 with a friend. If they make sense, open the [learning path](LEARNING-PATH.md). For the code route, complete [SETUP](SETUP.md) next.
+If these are still hard, repeat steps 1 to 6 with a friend. If they make sense, open the [learning path](https://gcfernando.github.io/developer-guides-and-tools/examples/machine-learning/ml-practical-lessons/LEARNING-PATH.html). For the code route, complete [SETUP](SETUP.md) next.

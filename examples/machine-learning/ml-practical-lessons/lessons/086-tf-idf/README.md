@@ -73,7 +73,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** A TF-IDF weight is not a probability or a semantic meaning. Fit vocabulary and IDF on training only; a new message must not relearn them.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 No. Its representation can contain no known-word evidence. Inspect it, record the limitation and use an appropriate fallback or better training coverage.

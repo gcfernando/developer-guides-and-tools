@@ -75,7 +75,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** A class label alone is not a calibrated probability. Kernel/settings and sample size affect practicality and generalization.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 No. Inspect scope and distance from training coverage, and use a stated fallback or new suitable evidence.

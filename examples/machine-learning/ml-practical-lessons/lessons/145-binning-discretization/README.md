@@ -76,7 +76,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** An edge convention determines which interval owns a boundary value. Relearning edges on each request changes what a column means.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 No. It sees the same representation. Compare this loss with using the original signal, and keep training edges fixed for later rows.

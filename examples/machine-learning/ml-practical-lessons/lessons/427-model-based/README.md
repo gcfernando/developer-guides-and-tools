@@ -75,7 +75,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** One observation per pair suffices only for this deterministic toy. It does not establish probabilities for an uncertain task.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 No. Gather observations and represent transition uncertainty, then evaluate the planner under those outcomes.

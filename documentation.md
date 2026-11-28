@@ -11,6 +11,28 @@ permalink: /documentation/
 
 [Start here](docs/getting-started.md) · [Learning paths](docs/learning-paths/index.md) · [Interactive tools](apps/README.md) · [Utilities](tools/README.md)
 
+Choose a topic below. On the website, **Search library** also finds guides and tools by title, description or filename. Each resource keeps its own contents, exercises and prerequisites.
+
+<nav aria-label="Catalog topics">
+<ul class="catalog-topics">
+<li><a href="#catalog-topic-python">Python</a></li>
+<li><a href="#catalog-topic-c-and-net">C# and .NET</a></li>
+<li><a href="#catalog-topic-data-science-and-machine-learning">Data science and machine learning</a></li>
+<li><a href="#catalog-topic-databases">Databases</a></li>
+<li><a href="#catalog-topic-cloud-and-azure">Cloud and Azure</a></li>
+<li><a href="#catalog-topic-containers">Containers</a></li>
+<li><a href="#catalog-topic-version-control">Version control</a></li>
+<li><a href="#catalog-topic-ai">AI</a></li>
+<li><a href="#catalog-topic-linux">Linux</a></li>
+<li><a href="#catalog-topic-utilities">Utilities</a></li>
+<li><a href="#catalog-topic-examples">Examples</a></li>
+<li><a href="#catalog-topic-templates">Templates</a></li>
+<li><a href="#catalog-topic-media">Media</a></li>
+</ul>
+</nav>
+
+<a id="catalog-topic-python"></a>
+
 ## Python
 
 | Resource | Format | Level |
@@ -18,11 +40,15 @@ permalink: /documentation/
 | [Object-Oriented Programming with Python: Classes, Design and Testing](docs/python/oop.md) | Course | Beginner to advanced |
 | [Python Dunder Methods Reference: Special Methods and Attributes](docs/python/special-methods.md) | Reference | Intermediate |
 
+<a id="catalog-topic-c-and-net"></a>
+
 ## C# and .NET
 
 | Resource | Format | Level |
 |---|---|---|
 | [Object-Oriented Programming with C# and .NET](docs/csharp-dotnet/oop.md) | Course | Beginner to advanced |
+
+<a id="catalog-topic-data-science-and-machine-learning"></a>
 
 ## Data science and machine learning
 
@@ -32,12 +58,16 @@ permalink: /documentation/
 | [Data Science and Machine Learning — Practical Python Workbook](examples/machine-learning/ml-practical-lessons/Data-Science-and-Machine-Learning.md) | Python workbook | Beginner to advanced |
 | [Machine Learning Practical Lessons — Browser Workbook](https://gcfernando.github.io/developer-guides-and-tools/examples/machine-learning/ml-practical-lessons/Data-Science-and-Machine-Learning.html) | Browser workbook | Beginner to advanced |
 
+<a id="catalog-topic-databases"></a>
+
 ## Databases
 
 | Resource | Format | Level |
 |---|---|---|
 | [SQL Guide for Microsoft SQL Server and MySQL](docs/databases/sql-server-and-mysql.md) | Course | Beginner to advanced |
 | [SQL Course Part Index](docs/databases/sql-server-and-mysql/index.md) | Course part index | Beginner to advanced |
+
+<a id="catalog-topic-cloud-and-azure"></a>
 
 ## Cloud and Azure
 
@@ -46,6 +76,8 @@ permalink: /documentation/
 | [Azure Engineering Cheat Sheet: Services, CLI and Architecture](docs/cloud/azure/engineering-cheat-sheet.md) | Cheat sheet | Beginner to advanced |
 | [Azure Resources Reference: Compute, Networking, Storage and Data](docs/cloud/azure/resource-reference.md) | Reference | Intermediate |
 
+<a id="catalog-topic-containers"></a>
+
 ## Containers
 
 | Resource | Format | Level |
@@ -53,11 +85,15 @@ permalink: /documentation/
 | [Docker Command Cheat Sheet: Containers, Images and Compose](docs/containers/docker-cheat-sheet.md) | Cheat sheet | Beginner to advanced |
 | [Podman Command Cheat Sheet: Rootless Containers, Pods and Quadlet](docs/containers/podman-cheat-sheet.md) | Cheat sheet | Beginner to advanced |
 
+<a id="catalog-topic-version-control"></a>
+
 ## Version control
 
 | Resource | Format | Level |
 |---|---|---|
 | [Git Command Cheat Sheet: Branching, Collaboration and Recovery](docs/version-control/git-cheat-sheet.md) | Cheat sheet | Beginner to advanced |
+
+<a id="catalog-topic-ai"></a>
 
 ## AI
 
@@ -72,6 +108,8 @@ permalink: /documentation/
 | [AI Learning Atlas](https://gcfernando.github.io/developer-guides-and-tools/apps/ai-learning-atlas/index.html) | Interactive reader | All levels |
 | [AI Learning Atlas — Study Paths and Progress Guide](apps/ai-learning-atlas/README.md) | Application guide | All levels |
 
+<a id="catalog-topic-linux"></a>
+
 ## Linux
 
 | Resource | Format | Level |
@@ -79,12 +117,16 @@ permalink: /documentation/
 | [Linux Command Reference](https://gcfernando.github.io/developer-guides-and-tools/apps/linux-command-reference/index.html) | Interactive reference | All levels |
 | [Linux Command Reference — Search 361 Commands Offline](apps/linux-command-reference/README.md) | Application guide | All levels |
 
+<a id="catalog-topic-utilities"></a>
+
 ## Utilities
 
 | Resource | Format | Level |
 |---|---|---|
 | [Windows Maintenance with PowerShell — Script Guide](tools/powershell/system-maintenance/README.md) | Utility | Administrator |
 | [Convert LF and CRLF Line Endings with PowerShell](tools/powershell/convert-line-endings/README.md) | Utility | Intermediate |
+
+<a id="catalog-topic-examples"></a>
 
 ## Examples
 
@@ -94,11 +136,15 @@ permalink: /documentation/
 | [WSL2 Configuration — Memory, CPU and Swap Settings](examples/wsl/README.md) | Configuration example | Intermediate |
 | [AI Client Configuration Examples and Setup Notes](examples/ai-clients/README.md) | Configuration examples | Intermediate |
 
+<a id="catalog-topic-templates"></a>
+
 ## Templates
 
 | Resource | Format | Level |
 |---|---|---|
 | [Reusable AI Instruction Templates for Developers](templates/ai-instructions/README.md) | Instruction templates | All levels |
+
+<a id="catalog-topic-media"></a>
 
 ## Media
 

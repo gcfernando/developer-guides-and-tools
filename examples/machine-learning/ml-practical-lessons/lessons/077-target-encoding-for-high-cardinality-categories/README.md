@@ -80,7 +80,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** A supplier with one delayed order does not establish a true delay chance of 100%. Predicting wholly new suppliers needs a supplier-grouped evaluation.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 No. It can reveal the row’s own answer. Use a training procedure with cross-fitting and appropriate smoothing, and keep evaluation answers out of all preparation.

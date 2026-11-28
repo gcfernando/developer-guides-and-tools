@@ -74,7 +74,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** Large variance need not be useful signal. Scale matters; component signs can reverse without changing information.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 Not necessarily. Check the complete prediction pipeline on suitable validation rows.

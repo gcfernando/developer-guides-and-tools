@@ -1,7 +1,7 @@
 {
   "scope": "Every authored learner heading, code block, figure occurrence, lesson/project Python source and data field, and workbook figure",
   "source_documents": 473,
-  "units": 11784,
+  "units": 11337,
   "kinds": {
     "code:bash": 466,
     "code:bat": 1,
@@ -11,7 +11,7 @@
     "code:text": 1875,
     "data field": 2420,
     "figure occurrence": 105,
-    "heading": 6277,
+    "heading": 5830,
     "runnable source": 468,
     "visual asset": 146
   },
@@ -19,5 +19,5 @@
   "missing_sources_or_syntax_problems": [],
   "meaning_of_coverage": "Inventory is evidence of scope, not proof of teaching quality, accessibility or learner understanding.",
   "learner_study": "Not performed. Use TEACHING.md to record observed application and delayed checks.",
-  "source_inventory_sha256": "37d0047fc9d792725706ebf486e32f026e239e77e0a84c6b4e7363558ffc1f88"
+  "source_inventory_sha256": "c341874e1a0bb4b1e7fa1276712d4fe866d19f39b93b8f4f7326a716e0c00d5c"
 }

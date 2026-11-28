@@ -75,7 +75,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** Correlated inputs can violate its simplifying assumption. Useful classification does not establish well-calibrated probabilities.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 No. The repeated information can be counted too strongly under the independence assumption. Inspect redundancy and validate the result.

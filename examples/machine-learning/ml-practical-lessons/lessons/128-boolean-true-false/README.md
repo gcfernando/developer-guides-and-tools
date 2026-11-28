@@ -80,7 +80,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** Do not treat every nonempty string as true or every unknown as false. Verify source spellings; some fields have more than two real states.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 false is known 0 and 1 is known 1. undecided is unmapped/missing under this mapping. Review its meaning rather than inventing a confirmed answer.

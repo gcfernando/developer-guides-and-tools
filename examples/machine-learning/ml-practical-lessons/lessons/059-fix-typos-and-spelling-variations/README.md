@@ -74,7 +74,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** Do not infer sensitive identity or a category from an unfamiliar abbreviation. An unrecognized spelling should raise a review question.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 No. Ask what X means or leave it unresolved. A successful script is not evidence that a guessed mapping is correct.

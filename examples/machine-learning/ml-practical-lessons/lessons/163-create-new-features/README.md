@@ -79,7 +79,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** A keyword can miss negation or other languages. Age depends on the reference date; using a future reference or later field can introduce unavailable information.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 Subtract one when the birthday is still ahead. The keyword flag alone does not distinguish not urgent, so inspect and validate that failure rather than treating the flag as meaning.

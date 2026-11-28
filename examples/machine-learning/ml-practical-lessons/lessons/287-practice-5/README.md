@@ -80,7 +80,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** The tiny invented table illustrates mechanics. Two correct predictions, a cluster assignment or a familiar benchmark name does not establish real-world performance.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 Name age, hours and work/education categories; explain income_group in the appropriate unit or category; state a specific missing population, recording problem or representation limit. Use more suitable independent data before making a general claim.

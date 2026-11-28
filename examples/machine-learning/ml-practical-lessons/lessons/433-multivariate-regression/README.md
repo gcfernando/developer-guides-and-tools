@@ -75,7 +75,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** Fuel is a created teaching rule, not measured consumption. Do not combine litres and minutes into an unexplained score.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 No. Multioutput needs multiple target columns, each evaluated meaningfully.

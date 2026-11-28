@@ -71,7 +71,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** Removing all incomplete rows can remove a particular kind of delivery. Missing inputs can sometimes be filled; missing target values are not recovered by ordinary input imputation.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 It cannot teach that model without a confirmed answer. It can be a new prediction request. Keep it separate from completed training/check rows.

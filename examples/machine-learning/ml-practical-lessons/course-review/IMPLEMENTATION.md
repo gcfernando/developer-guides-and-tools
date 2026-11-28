@@ -16,6 +16,8 @@ The setup, glossary, learning path, practice, project guidance and teaching guid
 
 ## Team responsibilities and agreed decisions
 
+The following table records the earlier three-role curriculum work. The subsequent repository navigation audit and fixes used two roles: UI/UX engineer and document writer, as requested.
+
 | Role | Contribution and ownership |
 | --- | --- |
 | Lead ML expert | Reviewed the teaching profiles, learning order, source calculations, row roles, validation choices and example behaviour. Owns technical acceptance and the coverage/evidence tools. |
@@ -41,9 +43,23 @@ The three roles exchanged findings before integration. The agreed sequence was t
 | Saved-model workflow | Both training and prediction run in a temporary copy. A changed blank weight still gives an estimate; errors use measured answers only; prediction preserves the saved artifact. See `workflow-checks.json`. |
 | Learner-change checks | All 10 regression groups passed, including unfamiliar categories and an unavailable-at-prediction input. |
 | Course structure | Python syntax, local links, fragments, archive contents, visual source hashes, page controls and lesson manifest checks passed. Re-run after changing sources. |
+| Actual Jekyll build and rendered site | Production Jekyll 4.4.1 build passed using the frozen dependency lock. The rendered-site check passed for 80 built pages and 22,443 internal references, including anchors, assets, sitemap and exclusions. These are local build results; no site was published. |
+| Compatibility with existing public material | All 70 previously captured public URLs and 5,628 IDs were preserved. All 448 lesson ZIPs retained their old member paths, and 2,184 non-README payloads remained byte-identical to HEAD. |
 | Repository checks | `npm test` and `npm run check:repository` passed. |
 | Environment | Python 3.12.10 in a new local Windows virtual environment; exact installed versions are in `verification-environment.txt`. This is not a clean operating-system installation test. |
 | Real-browser reading checks | Unverified. Chrome failed during startup in this restricted environment, including GPU-process failures and a locked debugging-port file. See `browser-checks.json`. The simulated page-control checks pass separately. |
+
+## Reading and navigation update, 28 November 2026
+
+The Jekyll edition previously displayed Markdown literally inside teaching disclosures, despite the separate HTML reader passing its own checks. The source disclosures now enable Markdown processing. Seven guide links now open the existing HTML readers instead of raw Markdown. The raw source files and their old URLs remain available.
+
+All 447 teaching notes and their text remain. Their repeated headings became bold teaching labels, which restores the topic outline without skipped heading levels. Explicit aliases preserve every previously captured GitHub and HTML-reader heading target. This removes 447 heading records from the structural inventory; it does not remove 447 teaching notes or lessons. The refreshed inventory contains 11,337 units across the same 473 source documents.
+
+The course reader and downloaded lesson readers now link to the course overview, library home and resource catalog. Wine project instructions and source notes have generated reading pages, and the assignment links to the required project files. The browser reader keeps local course links usable with the complete offline folder; library links require internet access.
+
+`check_readers.cjs` verifies the earlier source/HTML anchors and progress controls, all 447 rendered notes, the heading outline, return navigation and project links. Course structure, all 448 archives and all 10 learner-change regressions passed after rebuilding. These focused checks do not replace the separate Jekyll website check or observed browser and learner tests.
+
+The actual Jekyll build and rendered-site checks subsequently passed. The built workbook retained all 447 teaching markers, had no literal `### Learn and apply` lines or detected disclosure-rendering failures, and contained 2,237 clickable links within disclosures. The IPTV page also had no detected disclosure-rendering failures and contained 394 links within disclosures. This verifies the built HTML structure; real-browser usability and screen-reader behaviour still require observation.
 
 ## Checks that remain open
 
@@ -51,4 +67,4 @@ No beginner study was conducted. The application tasks and delayed-transfer chec
 
 Real-browser checks, screen-reader use, actual phone use, 400% zoom and print review still need observation. Clean Mac and Linux setup and a clean Windows operating-system setup remain unverified. No cloud deployment or hosted site release was tested. The original source PDF and legacy drawing files were not supplied; the new visual sources document the recreated course figures.
 
-No unresolved technical disagreement was recorded by the three roles. The remaining uncertainty concerns observed learning, assistive-technology behaviour and platforms that have not been tested. Future findings should update the source material and this evidence rather than being marked passed without a check.
+No unresolved technical disagreement was recorded during the earlier curriculum review. The UI/UX engineer and document writer agreed on the subsequent navigation fixes. The remaining uncertainty concerns observed learning, assistive-technology behaviour and platforms that have not been tested. Future findings should update the source material and this evidence rather than being marked passed without a check.

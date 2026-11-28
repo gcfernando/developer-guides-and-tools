@@ -71,7 +71,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** Agreement does not establish a true answer. Never replace a test answer with the model’s own prediction.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 Report the worse error and keep the stronger baseline. More rows do not automatically mean better evidence.

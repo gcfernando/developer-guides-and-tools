@@ -11,7 +11,7 @@ Use this as a tool while doing a lesson, rather than a list to memorize. Read th
 
 **Try three distinctions.** In a new delivery, identify a feature, the target we eventually measure, and the prediction available now. Explain why a missing value is not zero and why validation is not the final test. Then use the table below to check your wording.
 
-<details>
+<details markdown="1">
 <summary>Reasoned answer</summary>
 
 Distance can be a feature known before departure. Actual minutes are the target measured after completion. Predicted minutes are the model's estimate. A blank means a fact is unavailable; zero is a recorded quantity. Validation influences choices, while the final test assesses the frozen procedure. These distinctions determine which values may be used and which conclusions may be reported.
@@ -114,4 +114,4 @@ Press **Ctrl+F** on Windows or Linux, or **Command+F** on a Mac. Search for the 
 | Local / cloud | Local runs on your computer. Cloud runs on another service's computers. A local test does not publish a service. |
 | Policy / return / exploration | A policy chooses an action. Return adds rewards over a route. Exploration tries actions to learn about them. |
 
-Read [Python basics](PYTHON-BASICS.md) for the symbols, and [Extra topics](ELECTIVES.md) for advanced names. You do not need to learn them all before the first lesson.
+Read [Python basics](https://gcfernando.github.io/developer-guides-and-tools/examples/machine-learning/ml-practical-lessons/PYTHON-BASICS.html) for the symbols, and [Extra topics](https://gcfernando.github.io/developer-guides-and-tools/examples/machine-learning/ml-practical-lessons/ELECTIVES.html) for advanced names. You do not need to learn them all before the first lesson.

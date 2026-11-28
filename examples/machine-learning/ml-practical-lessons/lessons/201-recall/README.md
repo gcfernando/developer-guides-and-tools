@@ -74,7 +74,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** Flagging every order can achieve full recall but overwhelm a team with false alarms.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 Recall is 60%. Full recall is only part of the decision; count false alarms and whether reviewers can act on them.

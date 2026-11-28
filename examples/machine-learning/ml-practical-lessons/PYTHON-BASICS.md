@@ -1,6 +1,6 @@
 # A small start with Python
 
-[Back to the learning path](LEARNING-PATH.md)
+[Back to the learning path](https://gcfernando.github.io/developer-guides-and-tools/examples/machine-learning/ml-practical-lessons/LEARNING-PATH.html)
 
 Read [Start here](START-HERE.md) and finish [Setup](SETUP.md) first. This page explains the Python you will see in the first lessons. You do not need to remember every symbol.
 
@@ -117,7 +117,7 @@ Try these before opening the answer. Explain the reason, not just the word.
 3. Why keep a preparation step with the model?
 4. In `[4, 8, 12]`, what value is at position zero?
 
-<details>
+<details markdown="1">
 <summary>Check the answers and reasons</summary>
 
 `fit` learns model or preparation values from training examples. Validation helps choose settings and test rows check the frozen choice. `predict` needs the new inputs, not their measured answer. Keeping preparation with the model reuses the same fitted rules. Position zero is the first item: 4 here.
@@ -167,7 +167,7 @@ An **object** groups a value or state with operations. A fitted model object kee
 
 Use a dictionary to store a distance of 8. Read that value into a variable. Use the written rule `10 + 2 * distance`, then check whether the distance is negative before printing an estimate. Write the expected output first.
 
-<details>
+<details markdown="1">
 <summary>One complete answer</summary>
 
 ```python
@@ -183,4 +183,4 @@ It prints 26. This is a written-rule exercise. A later ML script replaces that w
 
 </details>
 
-Next: follow the first module in [the learning path](LEARNING-PATH.md).
+Next: follow the first module in [the learning path](https://gcfernando.github.io/developer-guides-and-tools/examples/machine-learning/ml-practical-lessons/LEARNING-PATH.html).

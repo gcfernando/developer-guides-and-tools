@@ -75,7 +75,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** The lookup covers only listed forms. Context, language and ambiguous words can change the correct base form.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 Keep an unlisted token unchanged or apply a tested language tool. Reuse exactly the same tokenizer and vocabulary preparation for training and prediction.

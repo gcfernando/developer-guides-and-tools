@@ -80,7 +80,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** Scientific notation is only a display choice. A log actually changes the numeric feature. Check the domain; logging negative values can fail, and a target log needs its inverse before interpreting predictions.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 1e3 is still 1000. log10(0) is not finite, while log1p(0) is 0. Choose a justified valid transformation and reuse it consistently.

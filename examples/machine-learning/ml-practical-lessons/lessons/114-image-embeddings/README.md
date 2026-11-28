@@ -75,7 +75,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** These hand-built features do not prove that a neural image encoder was trained. Two different images can share the same summary and become indistinguishable.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 Not necessarily. Find distinct drawings with similar spreads and compare their feature vectors and held-back predictions. A summary must be assessed for the actual task.

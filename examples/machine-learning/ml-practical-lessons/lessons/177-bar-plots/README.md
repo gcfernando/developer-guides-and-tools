@@ -77,7 +77,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** Importance is not a cause or a universal property of a field. Correlated inputs can share or hide reliance. A final test is not a repeated feature-selection tool.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 No. It shows reliance by this fitted model under this check. Causal effects require a suitable design and assumptions, not a shuffled prediction score.

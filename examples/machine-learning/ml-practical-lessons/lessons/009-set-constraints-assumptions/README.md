@@ -73,7 +73,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** A convenient score is not automatically a useful business goal. State units, when fields arrive, and who acts on the result.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 Free delivery follows an agreed threshold, so no learned model is needed. Arrival time may need examples; compare it with a simple existing estimate and choose an acceptable error in minutes.

@@ -1,8 +1,8 @@
 # Disposition of the 40 review findings
 
 Reviewed and revised: 2026-11-27. Entries 1–39 are implemented in the standalone
-reader and its maintained local sources. Item 40 has a local build solution and
-a checked, unapplied patch for the parent files outside the writable boundary.
+reader and its maintained local sources. Item 40 is integrated with the parent
+generator and root tests. The original handoff patch remains as historical evidence.
 Integration instructions are documentation-based; no add-on account was connected
 or package installed on the user's behalf.
 
@@ -47,7 +47,7 @@ or package installed on the user's behalf.
 | 37 | Keyboard skip link, focus visibility, reduced motion, persistent theme and contrast checks are implemented; mobile overflow fixed. |
 | 38 | Duplicate full index removed; client sections, compatibility, cleanup and matrix are collapsible; unknown paths are not repeated as setup sections. |
 | 39 | Each card has publisher evidence, review date, version/OS qualifications and an explicit not-executed integration status. |
-| 40 | Local deterministic source/build added. Parent generator/source handoff prepared as `repository-build-integration.patch`; **not applied** because the parent paths are outside the permitted writable root. |
+| 40 | Local deterministic source/build added. The parent generator delegates to `build.cjs`, root tests include the reader checks, and original Markdown fragments remain. `repository-build-integration.patch` is retained as the historical handoff, not an instruction to reapply it. |
 
 ## Verification
 
@@ -68,6 +68,6 @@ applying the prepared CI integration: all generator checks, Atlas checks,
 and the local-link audit passed. The parent browser-check selectors were updated
 in the patch; the full parent browser suite was not executed in that copy.
 
-The parent repository's old generated-content checks will continue to expect its
-old generator until the handoff patch is applied. Run this folder's build/check
-commands to preserve this edition in the meantime.
+The parent repository now delegates to the maintained generator. Use the current
+root and scoped commands in [the reader build instructions](README.md); the handoff
+patch is not needed for this integrated checkout.

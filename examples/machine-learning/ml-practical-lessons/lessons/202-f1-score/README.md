@@ -74,7 +74,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** F1 ignores true negatives and does not encode every business cost. Zero-denominator handling needs a stated rule.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 No. Define the costs and capacity explicitly and choose a cutoff using validation. Report precision and recall beside F1.

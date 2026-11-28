@@ -74,7 +74,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** A working server test is not a tested browser layout. The practice app is local; it does not establish deployment security or production reliability.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 No. Validate at the service boundary and return a clear problem. Show an understandable message in the form as well.

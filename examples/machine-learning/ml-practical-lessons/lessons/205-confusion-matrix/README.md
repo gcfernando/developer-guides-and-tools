@@ -72,7 +72,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** Libraries or charts may swap axis conventions. Never infer a cell’s meaning from position or colour alone.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 In actual urgent / predicted regular. Count that cell as a false negative. Explain which class is considered positive.

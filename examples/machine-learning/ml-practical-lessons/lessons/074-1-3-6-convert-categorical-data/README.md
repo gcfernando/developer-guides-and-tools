@@ -78,7 +78,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** Purple becomes 0, 0, 0 here because handle_unknown is ignore. That is an allowed representation, not evidence about Purple-specific demand. Do not fit a separate encoder on new requests. Thousands of categories may need a different, validated approach.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 Blue is 0, 1, 0. Keep the saved schema; changing only the request columns breaks the model contract. This demonstration maps Yellow to all zeros. A real service must explicitly reject, review or use a tested fallback for unfamiliar names.

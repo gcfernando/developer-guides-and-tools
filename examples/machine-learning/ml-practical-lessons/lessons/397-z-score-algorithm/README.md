@@ -70,7 +70,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** Zero spread makes ordinary z-scoring undefined. Skew and extreme reference values affect the rule.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 No. Keep the fitted reference; updating it is an explicit monitored training change.

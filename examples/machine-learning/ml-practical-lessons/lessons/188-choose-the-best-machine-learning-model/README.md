@@ -73,7 +73,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** A larger model is not automatically better. A validation winner is not a final test estimate. Also compare practical requirements and failure types.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 No. Check uncertainty and the project constraints. Choose a usable procedure with documented trade-offs, then evaluate the frozen choice separately.

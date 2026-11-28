@@ -75,7 +75,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** A predicted probability is not a promise. Accuracy alone can hide a rare class, and the standard cutoff may not match review costs.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 No. It expresses a model probability whose reliability needs checking across suitable confirmed cases.

@@ -75,7 +75,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** Deep trees can memorize; small changes can alter splits. Ordinary trees do not extend a trend beyond their training target values.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 No. A standard leaf gives the same learned prediction to both. Check whether that coarse behavior suits the task.

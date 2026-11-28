@@ -72,7 +72,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** Ambiguous place names can resolve incorrectly. Latitude/longitude degrees do not directly give travel distance. Do not send personal addresses to an unapproved service.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 No. 0,0 is an actual location. Keep the match unresolved and request a source lookup or use a separately tested missing-location policy.

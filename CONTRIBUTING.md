@@ -10,7 +10,7 @@ Add a subject within an existing category before introducing a new top-level cat
 
 | Edit this source | Generated output | Build command |
 | --- | --- | --- |
-| `_data/resources.yml` and page front matter | `documentation.md`, `_data/routes.json` | `npm run build:catalog` |
+| `_data/resources.yml` and page front matter | `documentation.md`, `_data/routes.json`, `assets/data/library-search.json` | `npm run build:catalog` |
 | `docs/ai/coding-addons.md`, `scripts/templates/ai-addons.*` | `apps/ai-coding-addons/index.html` | `npm run build:addons` |
 | `apps/linux-command-reference/data.js` and generator | Embedded table in that app's `index.html` | `npm run build:linux` |
 | `apps/ai-learning-atlas/source/`, `exercises/` and `build.py` | Atlas standalone `index.html` | `npm run build:atlas` |
@@ -51,6 +51,10 @@ To check external destinations explicitly, run `node scripts/check-links.cjs --e
 Use `--strict` when all public URLs must be verified: unresolved requests also return a nonzero exit code. If Python rejects a certificate chain accepted by your organization's operating-system trust store, the optional `--native-tls` mode uses that store through the `truststore` package (`python -m pip install truststore`). It still verifies certificates and hostnames; it does not bypass certificate checks or network access restrictions.
 
 Atlas compatibility fixtures live in `apps/ai-learning-atlas/tests/fixtures/`. Existing `tools/results/` files are frozen historical evidence, not current test status. Write new local reports beneath ignored `artifacts/` or `.runtime/`; retain routine CI reports as workflow artifacts. Do not overwrite historical evidence to imply a new run.
+
+The rendered-site check also rejects duplicate HTML IDs and literal Markdown left inside expandable sections. It compares the build against `tests/fixtures/public-navigation.json`, a pre-change snapshot of 70 published pages and 5,628 anchors. Keep those destinations working when changing navigation; add aliases rather than replacing old anchors. Do not regenerate the compatibility baseline to hide a regression. The ML course has additional source/reader and saved-progress checks in `course_tools/check_readers.cjs`.
+
+The shared search uses generated public metadata, not full chapter text. Edit `_data/resources.yml` or page metadata and regenerate the catalog. Keep `assets/css/documentation.css` byte-identical for migration provenance; put additive navigation styles in `assets/css/library-navigation.css`.
 
 ### Microsoft Edge browser checks on Windows
 

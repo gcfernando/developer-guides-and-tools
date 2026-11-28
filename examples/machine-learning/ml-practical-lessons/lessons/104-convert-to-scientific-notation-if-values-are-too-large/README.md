@@ -72,7 +72,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** Rounding an ID or treating its magnitude as a useful measurement can destroy identity or invent a relationship.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 The count may be displayed as 1e6. Preserve 000123 exactly as text; its leading zeros can be part of its identity.

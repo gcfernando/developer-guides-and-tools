@@ -74,7 +74,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** Codes are conventions. Printing a transition does not establish a learned or reliably evaluated policy.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 No. Read each state/action transition. Codes 0 and 1 mean left and right here.

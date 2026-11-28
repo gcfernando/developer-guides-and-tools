@@ -78,7 +78,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** Components are model shapes, not established customer types. Membership probability is not probability of a business outcome.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 The assignment is weak under this model. Report the ambiguity rather than a certain identity.

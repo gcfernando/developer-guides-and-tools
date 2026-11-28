@@ -80,7 +80,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** Small-group scores are uncertain. Inspect actual cases before claiming a cause or repeatedly selecting from final-test subgroup results.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 Its count, error, underlying cases, missingness pattern and limitations; investigate source/pipeline behavior and check further suitable examples.

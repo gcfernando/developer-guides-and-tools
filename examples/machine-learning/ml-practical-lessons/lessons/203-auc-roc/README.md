@@ -74,7 +74,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** AUC is not probability calibration or a chosen operating cutoff. A good ranking can still yield an unusable number of alerts.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 No. It changes the decisions at one operating point; ranking scores stay the same. Choose that decision rule using validation and practical constraints.

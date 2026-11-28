@@ -71,7 +71,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** Training and prediction must use the same traversal order. Flattening removes explicit spatial arrangement from the input shape.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 Yes. Matching flatten and reshape orders recover the grid. Mixing the orders can rearrange pixels and corrupt the representation.

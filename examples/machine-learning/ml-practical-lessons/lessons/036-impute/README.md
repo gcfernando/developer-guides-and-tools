@@ -80,7 +80,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** A fill is not a recovered measurement. Nearest neighbours depend on scaling. Comparing methods on one case does not establish the best method for future deliveries.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 The median is 4 kg. Apply 4 to the blank and keep the saved rule unchanged for the 90 kg request. Only an explicit new training procedure learns a new median.

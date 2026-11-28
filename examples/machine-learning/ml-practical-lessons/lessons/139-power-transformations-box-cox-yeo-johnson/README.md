@@ -80,7 +80,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** A more symmetric-looking histogram is not proof of better predictions. Fit parameters within training, and do not shift inputs arbitrarily merely to make a command run.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 Yeo–Johnson. Box–Cox cannot directly accept its nonpositive entries. Suitability and validation still decide whether transforming is useful.

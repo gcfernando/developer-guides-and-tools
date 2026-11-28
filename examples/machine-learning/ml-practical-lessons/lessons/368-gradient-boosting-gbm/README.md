@@ -75,7 +75,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** Sequential fitting can overfit; model size, learning rate and tree complexity need care. Package availability and fast execution are not evidence of better learning.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 Not on that evidence. Keep the stronger validated procedure or investigate a justified simpler setting without using the final test for selection.

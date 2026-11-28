@@ -1,6 +1,6 @@
 # Your learning path
 
-[Start here](START-HERE.md) · [Setup](SETUP.md) · [Practice and answers](PRACTICE.md) · [Word list](GLOSSARY.md)
+[Start here](START-HERE.md) · [Setup](SETUP.md) · [Practice and answers](https://gcfernando.github.io/developer-guides-and-tools/examples/machine-learning/ml-practical-lessons/PRACTICE.html) · [Word list](GLOSSARY.md)
 
 Follow this order. The workbook is a library of examples. Old numbers stay the same so links still work. Several numbers use the same example. You do not need to run it for every heading.
 
@@ -12,21 +12,21 @@ Study one small part at a time. Time estimates have not been tested yet. Stop wh
 
 | Done | Module | Read or run | You can move on when you can… |
 | --- | --- | --- | --- |
-| [ ] | 0. Get ready | [Start here](START-HERE.md), [Setup](SETUP.md), [Python basics](PYTHON-BASICS.md) | Read a table, edit a CSV and explain a prediction by hand. |
+| [ ] | 0. Get ready | [Start here](START-HERE.md), [Setup](SETUP.md), [Python basics](https://gcfernando.github.io/developer-guides-and-tools/examples/machine-learning/ml-practical-lessons/PYTHON-BASICS.html) | Read a table, edit a CSV and explain a prediction by hand. |
 | [ ] | 1. Make a prediction | Lesson 002 | Name the input and answer. Explain training and prediction. |
-| [ ] | 2. Choose a useful question | Lessons 004 and 009; [Project choices](PROJECT-CHOICES.md) | Say what decision a result supports and whether a simple rule is enough. |
+| [ ] | 2. Choose a useful question | Lessons 004 and 009; [Project choices](https://gcfernando.github.io/developer-guides-and-tools/examples/machine-learning/ml-practical-lessons/PROJECT-CHOICES.html) | Say what decision a result supports and whether a simple rule is enough. |
 | [ ] | 3. Keep a fair check | Lessons 179 and 442 | Explain training, validation and test rows. Choose a split for later deliveries or new customers. |
 | [ ] | 4. Find data problems | Lessons 032, 048, 050, 055 and 069 | Find a blank, a repeated record, a unit problem and a value needing a source check. |
 | [ ] | 5. Prepare inputs | Lessons 035, 039, 044, 071 and 075 | Fill a blank from training values. Turn a zone into numbers. Reuse the same preparation. |
-| [ ] | 6. Compare with a simple guess | Baseline task in [Practice](PRACTICE.md); [train-and-test example](sample_code_folder/train-and-test.zip) | Compare a model with always guessing the middle training time. |
+| [ ] | 6. Compare with a simple guess | Baseline task in [Practice](https://gcfernando.github.io/developer-guides-and-tools/examples/machine-learning/ml-practical-lessons/PRACTICE.html); [train-and-test example](sample_code_folder/train-and-test.zip) | Compare a model with always guessing the middle training time. |
 | [ ] | 7. Spot memorizing | Lessons 443 and 194 | Explain why a low training error can hide worse results on other rows. |
 | [ ] | 8. Read number errors | Lessons 208 and 446 | Calculate an error in minutes. Check small groups and large mistakes. |
 | [ ] | 9. Count category mistakes | Lessons 205 and 444 | Count missed urgent orders and false alarms. Choose a cutoff using validation rows and team capacity. |
-| [ ] | 10. Explain what helped | Lesson 207; [Project choices](PROJECT-CHOICES.md) | Say what a model relied on without claiming it proves a cause. |
+| [ ] | 10. Explain what helped | Lesson 207; [Project choices](https://gcfernando.github.io/developer-guides-and-tools/examples/machine-learning/ml-practical-lessons/PROJECT-CHOICES.html) | Say what a model relied on without claiming it proves a cause. |
 | [ ] | 11. Save and use a model | Saved-model part of 071; lesson 232 | Explain a saved model, request and response. Send a valid and invalid request. |
-| [ ] | 12. Watch later results | Lesson 447 monitoring; [Project choices](PROJECT-CHOICES.md) | Compare later errors and write a next action for an alert. |
+| [ ] | 12. Watch later results | Lesson 447 monitoring; [Project choices](https://gcfernando.github.io/developer-guides-and-tools/examples/machine-learning/ml-practical-lessons/PROJECT-CHOICES.html) | Compare later errors and write a next action for an alert. |
 | [ ] | 13. Finish the guided project | Lesson 447 | Explain all five parts of its ten-point check without reading the answers. |
-| [ ] | 14. Try a new project | [Independent project](INDEPENDENT-PROJECT.md) | Choose, build, check and explain a model without a full solution script. |
+| [ ] | 14. Try a new project | [Independent project](https://gcfernando.github.io/developer-guides-and-tools/examples/machine-learning/ml-practical-lessons/INDEPENDENT-PROJECT.html) | Choose, build, check and explain a model without a full solution script. |
 
 ## Two small reading bridges for the early split lessons
 
@@ -57,11 +57,11 @@ A fixed unit conversion, such as pounds to kilograms, follows a known rule. A me
 
 ## Review what you learned
 
-After modules 4, 8 and 12, close the notes. Do the matching review in [Practice](PRACTICE.md). Return a few days later and explain an old example without running it. Remember the idea, not the exact number printed by a script.
+After modules 4, 8 and 12, close the notes. Do the matching review in [Practice](https://gcfernando.github.io/developer-guides-and-tools/examples/machine-learning/ml-practical-lessons/PRACTICE.html). Return a few days later and explain an old example without running it. Remember the idea, not the exact number printed by a script.
 
 ## Extra topics
 
-You do not need every algorithm for a first model. Read [Extra topics](ELECTIVES.md) after this path. Each names the ideas you need first. Tiny drawings and toy robots show how steps work. They do not prove usefulness outside an exercise.
+You do not need every algorithm for a first model. Read [Extra topics](https://gcfernando.github.io/developer-guides-and-tools/examples/machine-learning/ml-practical-lessons/ELECTIVES.html) after this path. Each names the ideas you need first. Tiny drawings and toy robots show how steps work. They do not prove usefulness outside an exercise.
 
 ## What finishing means
 

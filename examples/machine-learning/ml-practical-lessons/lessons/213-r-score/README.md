@@ -75,7 +75,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** Two rows teach arithmetic, not stable model performance. R squared’s mean benchmark uses the same check outcomes and is not the trained deployment baseline.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 The first has one very large miss. Examine tail errors, limits and how errors affect decisions, not just a matching average.

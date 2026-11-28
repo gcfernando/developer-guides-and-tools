@@ -71,7 +71,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** More chart bins change grouping, not the underlying Brier score. Small bins are uncertain and adjustment need not improve a particular test.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 No. Assess rates across suitable groups with counts and uncertainty, not promises for one small batch.

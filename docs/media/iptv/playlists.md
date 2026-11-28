@@ -60,7 +60,7 @@ Available **country/territory** playlists link to their official `.m3u`; unavail
 
 ![Playlists: 46](https://img.shields.io/badge/Playlists-46-4c1d95?style=for-the-badge)  **🏰 Browse 46 country/territory entries.**
 
-<details open>
+<details open markdown="1">
 <summary>📂 <strong>Show Europe playlists</strong> — 46 links</summary>
 
 | 🏳️ Country / territory | 🎬 Playlist link | 🧾 File name |
@@ -123,7 +123,7 @@ Available **country/territory** playlists link to their official `.m3u`; unavail
 
 ![Playlists: 50](https://img.shields.io/badge/Playlists-50-ca8a04?style=for-the-badge)  **🏯 Browse 50 country/territory entries.**
 
-<details open>
+<details open markdown="1">
 <summary>📂 <strong>Show Asia playlists</strong> — 50 links</summary>
 
 | 🏳️ Country / territory | 🎬 Playlist link | 🧾 File name |
@@ -133,7 +133,7 @@ Available **country/territory** playlists link to their official `.m3u`; unavail
 | 🇦🇿 **Azerbaijan** | [▶️ Open .m3u](https://iptv-org.github.io/iptv/countries/az.m3u) | `az.m3u` |
 | 🇧🇭 **Bahrain** | [▶️ Open .m3u](https://iptv-org.github.io/iptv/countries/bh.m3u) | `bh.m3u` |
 | 🇧🇩 **Bangladesh** | [▶️ Open .m3u](https://iptv-org.github.io/iptv/countries/bd.m3u) | `bd.m3u` |
-| 🇧🇹 **Bhutan** | [▶️ Open .m3u](https://iptv-org.github.io/iptv/countries/bt.m3u) | `bt.m3u` |
+| 🇧🇹 **Bhutan** | Country playlist unavailable; [browse the current upstream country directory](https://github.com/iptv-org/iptv/blob/master/PLAYLISTS.md#countries) | `bt.m3u` (historical filename) |
 | 🇧🇳 **Brunei** | [▶️ Open .m3u](https://iptv-org.github.io/iptv/countries/bn.m3u) | `bn.m3u` |
 | 🇰🇭 **Cambodia** | [▶️ Open .m3u](https://iptv-org.github.io/iptv/countries/kh.m3u) | `kh.m3u` |
 | 🇨🇳 **China** | [▶️ Open .m3u](https://iptv-org.github.io/iptv/countries/cn.m3u) | `cn.m3u` |
@@ -179,6 +179,8 @@ Available **country/territory** playlists link to their official `.m3u`; unavail
 | 🇻🇳 **Vietnam** | [▶️ Open .m3u](https://iptv-org.github.io/iptv/countries/vn.m3u) | `vn.m3u` |
 | 🇾🇪 **Yemen** | [▶️ Open .m3u](https://iptv-org.github.io/iptv/countries/ye.m3u) | `ye.m3u` |
 
+**Bhutan update (28 November 2026).** The recorded URL `https://iptv-org.github.io/iptv/countries/bt.m3u` returned 404. It is preserved here as part of the historical snapshot, rather than advertised as a working playlist. The upstream country directory does not currently list Bhutan. Use that directory to check future availability; a channel database entry does not establish that a playable stream exists.
+
 </details>
 
 [⬆️ Back to top](#top)
@@ -190,7 +192,7 @@ Available **country/territory** playlists link to their official `.m3u`; unavail
 
 ![Entries: 42](https://img.shields.io/badge/Entries-42-059669?style=for-the-badge)  **🦁 Browse 42 country/territory entries.**
 
-<details open>
+<details open markdown="1">
 <summary>📂 <strong>Show Africa playlists</strong> — 42 entries</summary>
 
 Comoros and Madagascar have no country playlist listed in the current official directory (checked 14 November 2026). Their entries link to the directory so you can check for future availability.
@@ -251,7 +253,7 @@ Comoros and Madagascar have no country playlist listed in the current official d
 
 ![Playlists: 29](https://img.shields.io/badge/Playlists-29-2563eb?style=for-the-badge)  **🏝️ Browse 29 country/territory entries.**
 
-<details open>
+<details open markdown="1">
 <summary>📂 <strong>Show North America & Caribbean playlists</strong> — 29 links</summary>
 
 | 🏳️ Country / territory | 🎬 Playlist link | 🧾 File name |
@@ -297,7 +299,7 @@ Comoros and Madagascar have no country playlist listed in the current official d
 
 ![Playlists: 13](https://img.shields.io/badge/Playlists-13-ea580c?style=for-the-badge)  **🦜 Browse 13 country/territory entries.**
 
-<details open>
+<details open markdown="1">
 <summary>📂 <strong>Show South America playlists</strong> — 13 links</summary>
 
 | 🏳️ Country / territory | 🎬 Playlist link | 🧾 File name |
@@ -327,7 +329,7 @@ Comoros and Madagascar have no country playlist listed in the current official d
 
 ![Playlists: 7](https://img.shields.io/badge/Playlists-7-0d9488?style=for-the-badge)  **🐚 Browse 7 country/territory entries.**
 
-<details open>
+<details open markdown="1">
 <summary>📂 <strong>Show Oceania playlists</strong> — 7 links</summary>
 
 | 🏳️ Country / territory | 🎬 Playlist link | 🧾 File name |

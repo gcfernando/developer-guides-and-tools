@@ -69,7 +69,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** One lucky reward is not evidence of the better action. Randomness and reward design matter.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 Check adaptation toward the more rewarding button across suitable trials, reporting reward and variability rather than one fixed action.

@@ -72,7 +72,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** Local test-client calls do not deploy a public server. Valid types do not establish in-scope ranges or reliable predictions. Load only model files you created or trust.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 Not necessarily. Record units, names, ranges, missing-value rules and unfamiliar-category policy, and test examples that violate them.

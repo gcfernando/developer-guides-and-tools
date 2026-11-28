@@ -75,7 +75,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** High powers can grow rapidly outside training and overfit. More columns are not automatically more evidence. Scaling and regularization may matter.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 They are 3, 9 and 27. No: large powers can make extrapolation unstable. Choose degree within validation and state the supported range.

@@ -1,6 +1,6 @@
 # Practice before looking at the answer
 
-[Learning path](LEARNING-PATH.md) · [Word list](GLOSSARY.md)
+[Learning path](https://gcfernando.github.io/developer-guides-and-tools/examples/machine-learning/ml-practical-lessons/LEARNING-PATH.html) · [Word list](GLOSSARY.md)
 
 Use paper first. Then use Python if you chose that route. Say why you chose an answer. If you guessed, read the short answer and try a similar question tomorrow.
 
@@ -193,14 +193,14 @@ Training has zone names North and South. The saved encoder uses columns `[North,
 | North | ? | ? | A known category |
 | East | ? | ? | An unfamiliar name |
 
-<details>
+<details markdown="1">
 <summary>Hint</summary>
 
 Each known name activates its own column. Do not invent a new input column only at prediction time. The unfamiliar-name behavior must be specified separately.
 
 </details>
 
-<details>
+<details markdown="1">
 <summary>Answer and reason</summary>
 
 South is `0, 1`; North is `1, 0`. Under the lesson's `handle_unknown="ignore"` policy, East is `0, 0`. Other policies can reject or explicitly represent unknowns. Zero indicators do not establish how the model should behave for East. Keep the fitted schema and evaluate the chosen service policy.
@@ -213,7 +213,7 @@ A library records book format as paperback, hardback or audio. Another field is 
 
 Write an input-preparation plan. Explain the representation for each category field, what to investigate about the long loan, which information is unavailable at prediction time, and a fair way to check later loans. Do not start by choosing a complex algorithm.
 
-<details>
+<details markdown="1">
 <summary>One reasoned plan</summary>
 
 Book format has no inherent numeric ranking; a fixed one-hot representation is a suitable candidate. Priority has a stated order, but integer gaps impose an additional assumption for some models. Investigate the 800-day source record and library rules before keeping, correcting or flagging it. The future return date is unavailable as an input for duration prediction. Learn preparation on earlier training loans, choose using validation and check separate later completed loans against a simple baseline. State who is missing from the records and which outcomes are still pending.

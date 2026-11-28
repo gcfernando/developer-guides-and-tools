@@ -72,7 +72,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** A high score is not causality. Selecting from the full dataset before cross-validation leaks check information. Respect assumptions and check whether selection improves actual validation behavior.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 No. Investigate how it was assigned and whether its apparent relationship will exist at prediction time. An accidental identifier association can fail on later records.

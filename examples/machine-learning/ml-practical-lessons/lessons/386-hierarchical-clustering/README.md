@@ -74,7 +74,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** Height depends on scaling and linkage. This example refits the whole table; it has no saved new-row predict method.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 The number of groups decreases as branches merge. Explain the cut from the joins, not colours alone.

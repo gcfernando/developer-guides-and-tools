@@ -70,7 +70,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** Confidence is not cause and may be high for a common consequent. Five baskets cannot establish a stable retail policy.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 No. They have different conditional denominators. Their pair support is the same.

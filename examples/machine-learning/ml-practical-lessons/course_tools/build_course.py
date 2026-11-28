@@ -13,6 +13,7 @@ from bs4 import BeautifulSoup
 
 ROOT = Path(__file__).resolve().parents[1]
 COURSE_URL = 'https://gcfernando.github.io/developer-guides-and-tools/examples/machine-learning/ml-practical-lessons/'
+LIBRARY_URL = 'https://gcfernando.github.io/developer-guides-and-tools/'
 PAGES = ['README', 'START-HERE', 'SETUP', 'PYTHON-BASICS', 'LEARNING-PATH', 'PRACTICE',
          'PROJECT-CHOICES', 'ELECTIVES', 'GLOSSARY', 'INDEPENDENT-PROJECT', 'TEACHING',
          'Data-Science-and-Machine-Learning']
@@ -29,6 +30,8 @@ PAGE_DESCRIPTIONS = {
     'INDEPENDENT-PROJECT': 'Use real wine measurements to plan, build and check a machine learning project independently.',
     'TEACHING': 'Build, check and teach the beginner machine learning course, and record evidence from learner practice.',
     'Data-Science-and-Machine-Learning': 'Browse practical machine learning lessons, sample data, downloadable code and simple explanations.',
+    'projects/wine/README': 'Open the wine project files, data dictionary, starter code, assignment and source notes.',
+    'projects/wine/SOURCE': 'Read the source, licence and limits of the wine measurements used in the independent project.',
 }
 
 STYLE = '''
@@ -160,7 +163,7 @@ def render(text, title, prefix='', workbook=False, canonical=None, description=N
     if description:
         metadata+='<meta name="description" content="'+html.escape(description,quote=True)+'">'
     dialog='<dialog id="visual-dialog" class="visual-dialog" aria-label="Enlarged teaching figure"><header><strong data-visual-title>Figure</strong><button type="button" data-close-visual>Close figure</button></header><p class="hint">Scroll within the image to inspect its labels. Press Escape or Close figure to return.</p><div class="image-scroll"><img alt=""></div></dialog>'
-    return '<!doctype html>\n<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'+metadata+'<title>'+html.escape(title)+'</title><style>'+STYLE+VISUAL_STYLE+'</style></head><body><a class="skip" href="#content">Skip to the lesson</a><div class="progress" aria-hidden="true"></div><header><nav aria-label="Course pages"><a href="'+prefix+'START-HERE.html">Start here</a><a href="'+prefix+'LEARNING-PATH.html">Learning path</a><a href="'+prefix+'SETUP.html">Setup</a><a href="'+prefix+'GLOSSARY.html">Word list</a><a href="'+prefix+'Data-Science-and-Machine-Learning.html#lesson-downloads">Lesson library</a><button id="theme" type="button">Change colour theme</button></nav></header><main id="content">'+str(soup)+'</main>'+dialog+'<script>'+SCRIPT+'</script></body></html>\n'
+    return '<!doctype html>\n<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'+metadata+'<title>'+html.escape(title)+'</title><style>'+STYLE+VISUAL_STYLE+'</style></head><body><a class="skip" href="#content">Skip to the lesson</a><div class="progress" aria-hidden="true"></div><header><nav aria-label="Library navigation"><a href="'+LIBRARY_URL+'">Library home</a><a href="'+LIBRARY_URL+'documentation/">All resources</a></nav><nav aria-label="Course pages"><a href="'+prefix+'README.html">Course overview</a><a href="'+prefix+'START-HERE.html">Start here</a><a href="'+prefix+'LEARNING-PATH.html">Learning path</a><a href="'+prefix+'SETUP.html">Setup</a><a href="'+prefix+'GLOSSARY.html">Word list</a><a href="'+prefix+'Data-Science-and-Machine-Learning.html">Workbook</a><a href="'+prefix+'Data-Science-and-Machine-Learning.html#lesson-downloads">Lesson library</a><button id="theme" type="button">Change colour theme</button></nav><p class="hint">Course links work with the complete downloaded course. Library home and All resources need an internet connection.</p></header><main id="content">'+str(soup)+'</main>'+dialog+'<script>'+SCRIPT+'</script></body></html>\n'
 
 
 def zip_folder(folder, output):
@@ -183,20 +186,23 @@ def zip_folder(folder, output):
 
 def main():
     hashes={}
-    for name in PAGES:
+    readable_pages = PAGES + ['projects/wine/README', 'projects/wine/SOURCE']
+    for name in readable_pages:
         source=ROOT/(name+'.md')
         if not source.is_file(): raise SystemExit(f'Missing source: {source.name}')
-        html_text=render(source.read_text(encoding='utf-8'),name.replace('-',' '),
-                         workbook=name=='Data-Science-and-Machine-Learning',
+        title = {'projects/wine/README':'Wine project files',
+                 'projects/wine/SOURCE':'Wine data source and licence'}.get(name,name.replace('-',' '))
+        html_text=render(source.read_text(encoding='utf-8'),title,
+                         prefix='../'*len(Path(name).parts[:-1]),workbook=name=='Data-Science-and-Machine-Learning',
                          canonical=COURSE_URL+name+'.html',description=PAGE_DESCRIPTIONS[name])
         output=ROOT/(name+'.html'); output.write_text(html_text,encoding='utf-8',newline='\n')
-        hashes[output.name]=hashlib.sha256(output.read_bytes()).hexdigest()
+        hashes[output.relative_to(ROOT).as_posix()]=hashlib.sha256(output.read_bytes()).hexdigest()
     for folder in sorted((ROOT/'lessons').iterdir()):
         if folder.is_dir():
             output=ROOT/'sample_code_folder'/(folder.name+'.zip'); zip_folder(folder,output)
             hashes[output.relative_to(ROOT).as_posix()]=hashlib.sha256(output.read_bytes()).hexdigest()
     (ROOT/'course_tools/build-manifest.json').write_text(json.dumps(hashes,indent=2,sort_keys=True)+'\n',encoding='utf-8',newline='\n')
-    print(f'Built {len(PAGES)} readable pages and {len(hashes)-len(PAGES)} lesson ZIPs.')
+    print(f'Built {len(readable_pages)} readable pages and {len(hashes)-len(readable_pages)} lesson ZIPs.')
 
 
 if __name__=='__main__': main()

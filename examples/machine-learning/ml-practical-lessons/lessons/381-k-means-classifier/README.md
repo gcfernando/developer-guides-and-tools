@@ -70,7 +70,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** Clusters need not correspond to classes. Do not use test labels to assign the cluster names or choose K.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 Not automatically. Cluster IDs may change between fits. Learn and save the mapping with each training procedure.

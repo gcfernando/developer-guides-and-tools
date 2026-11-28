@@ -75,7 +75,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** Deep leaves can contain very few cases. A readable rule is not automatically a reliable or causal rule.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 No. One case is weak evidence. Check independent rows, constrain complexity and report the available counts.

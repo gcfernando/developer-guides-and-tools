@@ -74,7 +74,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** Equal measurements alone do not prove duplicate events. Conflicting records with one ID need investigation rather than keeping the first arbitrarily.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 Keep distinct confirmed shipments. For one ID with conflicting times, review the source and correction history. Do not silently choose a time.

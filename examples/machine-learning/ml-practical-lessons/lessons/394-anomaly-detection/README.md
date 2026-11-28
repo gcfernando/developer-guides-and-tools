@@ -70,7 +70,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** A flag proves neither harm nor recording error. An incomplete or contaminated reference changes what looks unusual.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 Verify its source and scope, inspect counts and examples, then validate any reference or service-policy change.

@@ -75,7 +75,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** NOT LATE differs from LATE. Case and punctuation may matter for names, product codes or sentiment. Unknown words do not receive new columns at prediction time.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 Negation was lost. Retain it or change the representation and validate it. Languages and tasks need their own tested tokenization and cleanup rules.

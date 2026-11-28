@@ -78,7 +78,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** A live day-2 decision cannot use a day-3 reading. Long gaps, resets and rapidly changing measurements may make either fill unsuitable.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 Backward fill changes to 18; forward fill stays 10. Only the past value is available during day 2. Whether carrying it forward is useful still needs validation.

@@ -72,7 +72,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** Refit imputers/scalers inside each training fold. Random folds are unsuitable for some future-time or repeated-customer tasks. Fold variation is not automatically a confidence interval.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 Fit a preparation/model pipeline separately inside each training fold. Otherwise its check distribution can influence preparation before the check.

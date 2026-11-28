@@ -74,7 +74,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** High precision alone can hide many missed urgent cases. It changes with prevalence and the cutoff.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 Precision is 6 ÷ 8 = 75%. Recall also needs the total number of truly urgent orders, including missed ones.

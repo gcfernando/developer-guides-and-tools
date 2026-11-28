@@ -74,7 +74,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** Noise is not proof of a bad record. One global density rule can struggle with unequal group densities.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 No. Review the density rule and intended analysis; preserve confirmed facts.

@@ -80,7 +80,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** Synthetic results do not prove real-service quality. Valid inputs, accuracy, operational readiness and permission to deploy are separate questions.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 No. Inspect measured outcomes, counts and source changes. Apply the agreed fallback and compare any replacement fairly before promotion.

@@ -28,7 +28,7 @@ def structure():
     for path in sources:
         try: ast.parse(path.read_text(encoding='utf-8'))
         except SyntaxError as error: problems.append(f'{path}: {error}')
-    htmls=list(ROOT.glob('*.html'))+[ROOT/'course-review/report.html']
+    htmls=list(ROOT.glob('*.html'))+list((ROOT/'projects').rglob('*.html'))+[ROOT/'course-review/report.html']
     parsed={p:BeautifulSoup(p.read_text(encoding='utf-8'),'html.parser') for p in htmls}
     id_sets={p:{e['id'] for e in soup.select('[id]')} for p,soup in parsed.items()}
     for path,soup in parsed.items():
@@ -232,6 +232,7 @@ def main():
         node=shutil.which('node')
         if node:
             subprocess.run([node,str(ROOT/'course_tools/check_browser.cjs')],check=True)
+            subprocess.run([node,str(ROOT/'course_tools/check_readers.cjs')],check=True)
         else:
             print('Page control check not run: Node is not installed.')
     if args.run or args.refresh_outputs:

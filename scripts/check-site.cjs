@@ -1,7 +1,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const {ROOT, read, yaml} = require('./lib.cjs');
-const {cssLinks, parseDocument, decodedFragment} = require('./link-utils.cjs');
+const {cssLinks, parseDocument, decodedFragment, renderingProblems} = require('./link-utils.cjs');
 const {expandHosted} = require('./build-atlas-hosted.cjs');
 const site = path.join(ROOT, '_site');
 if (!fs.existsSync(site)) throw new Error('Build Jekyll before checking the site.');
@@ -76,6 +76,7 @@ for (const file of files) {
     const parsed = document(file);
     if (file.endsWith('.html')) {
       pages++;
+      for (const problem of renderingProblems(parsed.document)) errors.push(`${file}: ${problem}`);
       const canonical = parsed.document.querySelector('link[rel="canonical"]')?.getAttribute('href');
       if (!canonical || !canonical.startsWith(config.url + base + '/')) errors.push(`${file}: missing or incorrect canonical URL`);
       if (!parsed.document.querySelector('title')?.textContent?.trim()) errors.push(`${file}: missing title`);

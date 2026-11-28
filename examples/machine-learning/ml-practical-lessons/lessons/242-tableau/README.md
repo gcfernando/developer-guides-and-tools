@@ -74,7 +74,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** Show counts, units, period and refresh time. A green display or a small batch is not proof of reliability; do not calculate new accuracy without outcomes.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 No. Only the view refreshes. Clearly mark which batches have confirmed outcomes and the age of the latest measured result.

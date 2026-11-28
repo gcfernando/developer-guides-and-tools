@@ -72,7 +72,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** Views can share a bias. Agreement is not independent confirmation of truth.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 No. Inspect confirmed answers and coverage assumptions; report agreement separately from accuracy.

@@ -75,7 +75,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** Larger alpha can remove useful signal. Individual correlated-feature coefficients need not move monotonically. A zero coefficient does not prove a field never matters. Do not compare penalties across arbitrary input units without checking scaling.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 No. The penalty is a trade-off, not the goal. Choose a useful validation result with its limits; preserve the final test for the frozen choice.
@@ -154,7 +154,7 @@ Read coefficients and errors together. A stronger penalty can make a coefficient
 
 **Your task.** Which validation row wins? Why is the largest penalty not the best choice? Name the rows that must stay out of that choice.
 
-<details>
+<details markdown="1">
 <summary>Answer and reason</summary>
 
 Ridge with alpha 1 has the lowest supplied validation MAE, about 0.896 minutes. Large penalties remove useful signal here. Final test answers do not select the setting; the frozen choice's final test MAE is about 1.527 minutes. These small invented data do not establish real-service performance.

@@ -80,7 +80,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** Do not guess an ambiguous date format. A unit conversion is a fixed known rule, unlike a training median learned from data. Check unsupported names rather than silently treating them as a known zone.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 Ask the source about its date convention. The fixed conversion gives about 9.98 kg. Apply the same confirmed conversion rules to training and later requests.

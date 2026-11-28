@@ -75,7 +75,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** Unscaled units can dominate distance. Too many irrelevant inputs, few neighbours or a new population can make similarity misleading.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 It can make weight dominate a raw distance. Keep consistent units and fit scaling within training, then validate the neighbour rule.

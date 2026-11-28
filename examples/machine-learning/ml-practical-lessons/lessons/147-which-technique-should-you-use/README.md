@@ -77,7 +77,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** The best score on this tiny table may be unstable. Do not apply every transform or use repeated final test scores to choose among them.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 Raw inputs have better validation evidence in this comparison. State the counts and variation, freeze the choice, and assess it on a separate final check.

@@ -77,7 +77,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** IDs are arbitrary names. K-Means favours certain shapes and can impose groups where none are useful.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 No. Compare profiles, membership and stability rather than numeric IDs.

@@ -79,7 +79,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** Zero is a known quantity. Replacing every blank with zero can invent measurements. A question mark becomes missing only because the reader was told to interpret it that way.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 The count falls by one. A confirmed measurement recovers the fact; an invented fill does not. Keep that distinction in the project notes.

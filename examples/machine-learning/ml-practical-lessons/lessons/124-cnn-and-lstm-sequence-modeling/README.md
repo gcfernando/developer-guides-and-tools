@@ -71,7 +71,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** Keep frames from one source clip in the same evaluation group. Toy dot motion is not evidence for reliable recognition in real videos.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 The direction reverses although the set of frames is unchanged. Splitting related frames can leak clip information; split by independent source clip or recording session as needed.

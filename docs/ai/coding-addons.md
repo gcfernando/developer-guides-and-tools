@@ -12,7 +12,7 @@ description: Installation, configuration and verification guidance for 39 AI
 
 [Open the maintained reader](https://gcfernando.github.io/developer-guides-and-tools/apps/ai-coding-addons/).
 
-The reader now uses `apps/ai-coding-addons/guide.json`, `intro.md` and `closing.md` as its content sources. Run `npm run build:addons` from the repository root after editing them; `npm test` verifies the generated HTML and reader regression tests. See `apps/ai-coding-addons/README.md` for scoped build and browser checks.
+The reader now uses `apps/ai-coding-addons/guide.json`, `intro.md` and `closing.md` as its content sources. Run `npm run build:addons` from the repository root after editing them; `npm test` verifies the generated HTML and reader regression tests. See the [reader build and browser-check instructions](https://github.com/gcfernando/developer-guides-and-tools/blob/main/apps/ai-coding-addons/README.md) for the scoped commands.
 
 This index retains the original add-on fragments for existing documentation links. Installation, compatibility, activation evidence and removal instructions are in the maintained reader.
 
@@ -289,7 +289,6 @@ Like a starter toolkit for building and testing web applications. Convenient sca
 
 [Setup, compatibility and verification](https://gcfernando.github.io/developer-guides-and-tools/apps/ai-coding-addons/#card-build-web-apps-codex).
 
-<a id="documentation-and-verification-notes"></a>
 ## Documentation and verification notes
 
 Documented integration support is distinct from executed testing. Read the reader’s per-card evidence and execution qualifications.

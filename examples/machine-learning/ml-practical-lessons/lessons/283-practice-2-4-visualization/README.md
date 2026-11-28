@@ -75,7 +75,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** A clearer picture or a transformed target is not proof of improved validation. Reverse a target transform before interpreting predictions in original units.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 Name the actual field, units and transformation or axis. Identify the retained meaning and any discarded detail; compare a justified alternative using validation rather than appearance alone.

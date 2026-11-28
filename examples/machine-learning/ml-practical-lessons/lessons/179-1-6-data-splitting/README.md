@@ -80,7 +80,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** A percentage ratio does not establish independence. Keep repeated shipment identity together. Stratification preserves class shares; it does not fix time or customer leakage.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 The average of 0.8 and 0.9 is 0.85. Choose depth on validation or inside training cross-validation, then use the final test once for the chosen procedure.

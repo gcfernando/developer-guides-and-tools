@@ -72,7 +72,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** Confidence may be wrong or poorly calibrated. Repeating guesses can reinforce early errors.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 No. Added guesses are a mechanism. Prefer the better justified procedure and report actual evaluation.

@@ -78,7 +78,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** Keep the original measurement. Fit data-based limits inside training folds. Neither clipping nor logging proves an outlier was wrong.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 No. Apply the training limit and record that clipping happened. Relearning a limit is part of explicit retraining, followed by a new fair check.

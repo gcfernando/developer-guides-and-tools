@@ -70,7 +70,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** Distant gaps, group sizes and orientations can mislead. This example refits the sample rather than transforming separate new rows.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 No. Inspect original measurements and neighbors before interpreting the gap.

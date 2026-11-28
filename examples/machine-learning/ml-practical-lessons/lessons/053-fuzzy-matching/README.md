@@ -70,7 +70,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** A high name-match score is not permission to merge people or orders. Different people may share a name, and one person may place several orders.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 No. The score suggests a review candidate. Confirm what one row represents and use reliable identity evidence before merging.

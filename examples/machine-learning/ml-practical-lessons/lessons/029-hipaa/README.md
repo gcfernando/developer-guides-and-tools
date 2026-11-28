@@ -75,7 +75,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** A local folder is not a cloud upload. Removing one contact field does not establish legal compliance, consent, access control or a retention policy. The named legal topics illustrate only this small data-sharing step.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 Check that the file exists, can be decoded and has the expected content and dimensions. Share the needed table fields plus source, collection method, meanings, access permission and retention notes. Use the optional service walkthrough for actual cloud practice.

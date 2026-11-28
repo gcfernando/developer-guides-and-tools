@@ -16,7 +16,7 @@
     "build": "npm run build:addons && npm run build:linux && npm run build:atlas && npm run build:sql && npm run build:catalog",
     "check:generated": "node scripts/build-catalog.cjs --check && node scripts/build-ai-addons.cjs --check && node apps/linux-command-reference/generate-static.cjs --check && python -B apps/ai-learning-atlas/build.py --check && node scripts/build-sql-course.cjs --check",
     "check:links": "node scripts/check-links.cjs",
-    "check:site": "node scripts/check-site.cjs",
+    "check:site": "node scripts/check-site.cjs && node scripts/check-navigation-compatibility.cjs tests/fixtures/public-navigation.json",
     "check:linux": "node apps/linux-command-reference/seo.test.cjs && node --check apps/linux-command-reference/app.js",
     "check:atlas": "python -B apps/ai-learning-atlas/tools/check_atlas.py --stage final && python -B apps/ai-learning-atlas/tools/check_unit_examples.py && python -B apps/ai-learning-atlas/tools/check_ml_labs.py && node --test apps/ai-learning-atlas/tests/runtime.test.cjs",
     "check:repository": "python -B .github/scripts/check_repository.py",

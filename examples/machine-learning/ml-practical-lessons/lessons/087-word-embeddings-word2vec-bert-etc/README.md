@@ -74,7 +74,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** A returned array does not prove language understanding. The tiny corpus and random BERT weights do not justify claims about real message meaning.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 Use the same untouched validation examples, report suitable errors and inspect new words/languages and failures. Check representation provenance. Do not choose from a single convenient prediction.

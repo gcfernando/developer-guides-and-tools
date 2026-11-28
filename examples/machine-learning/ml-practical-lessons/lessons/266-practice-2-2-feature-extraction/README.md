@@ -80,7 +80,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** Confirm the source meaning of each count. Do not count the traveler twice or use relatives learned only after the decision.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 The value is 2. This fixed definition is applied consistently, not fitted anew. Any learned preparation and model remain trained on the training rows.

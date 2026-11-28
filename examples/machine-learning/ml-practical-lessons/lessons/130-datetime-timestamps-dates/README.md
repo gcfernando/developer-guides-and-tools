@@ -69,7 +69,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** Written hour numbers are not distances around a clock: 23:00 and 00:00 are one hour apart. A Unix timestamp needs a stated unit and time convention. Do not guess ambiguous formats.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 Confirm month/day versus day/month and the timezone. A later correction time may be unavailable at prediction time; use only fields actually known then.

@@ -80,7 +80,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** Numeric class IDs do not turn classification into regression. One product can combine tasks.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 No. Its components have different feedback, outputs and evaluation.

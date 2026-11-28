@@ -77,7 +77,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** A gap concerns these samples, not every future case. Repeated choices using test results consume that test.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 Depth 3 on that evidence. Freeze the procedure, then report separate test errors, counts and limitations.

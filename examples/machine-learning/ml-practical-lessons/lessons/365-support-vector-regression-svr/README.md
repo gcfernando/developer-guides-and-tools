@@ -75,7 +75,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** Scaling and settings matter, and extrapolation may be poor. A default setting is not an established best choice.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 No. Compare justified settings within validation or training cross-validation. Freeze the procedure before the final check.

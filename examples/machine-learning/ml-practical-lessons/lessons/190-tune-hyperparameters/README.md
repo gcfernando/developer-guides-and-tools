@@ -75,7 +75,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** More search can overfit the validation process. A winning validation score is optimistic as a final claim. Record the search budget and use separate final evaluation.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 A separate final assessment of the selected procedure, plus counts and limits. The many comparisons used validation information to make a choice.

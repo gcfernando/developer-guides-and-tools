@@ -76,7 +76,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** More pixels do not create new measured detail. Choose an interpolation rule suited to the task and reuse it for all splits.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 There are 100 pixels. Resizing changes the grid; flattening rearranges an existing grid into one row without changing its element count.

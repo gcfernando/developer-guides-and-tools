@@ -1,6 +1,6 @@
 # Extra topics, one small step at a time
 
-[Learning path](LEARNING-PATH.md) · [Word list](GLOSSARY.md)
+[Learning path](https://gcfernando.github.io/developer-guides-and-tools/examples/machine-learning/ml-practical-lessons/LEARNING-PATH.html) · [Word list](GLOSSARY.md)
 
 These topics are optional. Finish the main path first. A technical name is useful for looking things up. You do not need to remember every name now.
 
@@ -75,7 +75,7 @@ The script then calculates a **gradient** for each learned value: how the loss c
 
 **Apply it.** Before running, predict what changes if the measured answer is 4 instead of 3. Edit only `measured_minutes` in a copy of the bridge script. Which values should remain inputs, which values should change during learning, and what would a fair performance check still need?
 
-<details>
+<details markdown="1">
 <summary>Reasoned answer</summary>
 
 The input stays 2. The starting weight, bias and learning rate stay as written for this comparison. A different training error produces different gradients, then different updated weight/bias and prediction. To assess usefulness, reserve suitable separate examples with confirmed answers. One fitted row cannot establish generalization.
@@ -97,7 +97,7 @@ This complete Python-only example prints two rows, three columns, then `[0, 1, 0
 
 **Apply it.** Draw the grid. Flatten it on paper by columns instead. Do you obtain the same list? Why must training and prediction use the same order?
 
-<details>
+<details markdown="1">
 <summary>Answer</summary>
 
 Column-first gives `[0, 1, 1, 1, 0, 1]`. The list differs. A model attaches meaning to input positions, so changing only prediction order gives its learned weights different pixels.

@@ -75,7 +75,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** No shared shipment IDs is not sufficient for every job. Customer ID is deliberately included here to illustrate known versus unseen customers, not as a universal input recommendation.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 Keep customers unseen for the new-customer question, and consider later-time evaluation for future use. Design combined evaluation for the actual job.

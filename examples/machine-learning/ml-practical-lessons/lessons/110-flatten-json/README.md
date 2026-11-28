@@ -75,7 +75,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** A flattened table can still contain absent fields, repeated records or mixed units. Do not pass IDs, nested text or unavailable answers to a model by accident.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 No. One weight is unknown and the other is a recorded zero requiring a domain check. Preserve missingness and validate the expected schema and units.

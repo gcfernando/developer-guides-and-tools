@@ -1,0 +1,668 @@
+[
+  {
+    "title": "A new table to try yourself",
+    "description": "Open the wine project files, data dictionary, starter code, assignment and source notes.",
+    "topic": "Data science and machine learning",
+    "type": "Browser guide",
+    "level": "",
+    "source": "examples/machine-learning/ml-practical-lessons/projects/wine/README.md",
+    "url": "/developer-guides-and-tools/examples/machine-learning/ml-practical-lessons/projects/wine/README.html"
+  },
+  {
+    "title": "A small start with Python",
+    "description": "Learn the Python basics used in this course, including values, lists, tables, functions and predictions.",
+    "topic": "Data science and machine learning",
+    "type": "Browser guide",
+    "level": "",
+    "source": "examples/machine-learning/ml-practical-lessons/PYTHON-BASICS.md",
+    "url": "/developer-guides-and-tools/examples/machine-learning/ml-practical-lessons/PYTHON-BASICS.html"
+  },
+  {
+    "title": "AI Agent Team Guides",
+    "description": "Create lead, developer, QA tester and DevOps teams in Claude Code, OpenAI Codex and GitHub Copilot.",
+    "topic": "AI",
+    "type": "Guide",
+    "level": "",
+    "source": "apps/ai-agent-team-guides/README.md",
+    "url": "/developer-guides-and-tools/ai-agent-team-guides/"
+  },
+  {
+    "title": "AI Client Configuration Examples and Setup Notes",
+    "description": "Review opt-in Codex and Claude configuration snapshots and Copilot guidance. Keep client preferences separate from credentials and instruction templates.",
+    "topic": "Examples",
+    "type": "Configuration examples",
+    "level": "Intermediate",
+    "source": "examples/ai-clients/README.md",
+    "url": "/developer-guides-and-tools/examples/ai-clients/"
+  },
+  {
+    "title": "AI Coding Add-ons Browser Guide",
+    "description": "A searchable, standalone HTML edition generated from the Markdown guide.",
+    "topic": "AI",
+    "type": "Interactive reader",
+    "level": "Beginner",
+    "source": "apps/ai-coding-addons/index.html",
+    "url": "/developer-guides-and-tools/apps/ai-coding-addons/index.html"
+  },
+  {
+    "title": "AI Coding Add-ons: Beginner’s Project Guide",
+    "description": "Installation, configuration and verification guidance for 39 AI coding add-ons across four coding environments.",
+    "topic": "AI",
+    "type": "Guide",
+    "level": "Beginner",
+    "source": "docs/ai/coding-addons.md",
+    "url": "/developer-guides-and-tools/ai/coding-addons/guide/"
+  },
+  {
+    "title": "AI Learning Atlas",
+    "description": "Explore AI topic groups, role paths and suggested labs; export your progress.",
+    "topic": "AI",
+    "type": "Interactive reader",
+    "level": "All levels",
+    "source": "apps/ai-learning-atlas/index.html",
+    "url": "/developer-guides-and-tools/apps/ai-learning-atlas/index.html"
+  },
+  {
+    "title": "AI Learning Atlas — Study Paths and Progress Guide",
+    "description": "Follow dependency-ordered AI study paths, complete a supported local beginner workshop, and record learning evidence.",
+    "topic": "AI",
+    "type": "Application guide",
+    "level": "All levels",
+    "source": "apps/ai-learning-atlas/README.md",
+    "url": "/developer-guides-and-tools/apps/ai-learning-atlas/guide/"
+  },
+  {
+    "title": "Azure Engineering Cheat Sheet: Services, CLI and Architecture",
+    "description": "Compare Azure services and review identity, networking, storage, compute and operations with explanations, Azure CLI examples and practice exercises.",
+    "topic": "Cloud and Azure",
+    "type": "Cheat sheet",
+    "level": "Beginner to advanced",
+    "source": "docs/cloud/azure/engineering-cheat-sheet.md",
+    "url": "/developer-guides-and-tools/cloud/azure/engineering-cheat-sheet/"
+  },
+  {
+    "title": "Azure Learning Path",
+    "description": "Move from Azure service decisions to independent resource exercises.",
+    "topic": "Learning paths",
+    "type": "Learning path",
+    "level": "",
+    "source": "docs/learning-paths/azure.md",
+    "url": "/developer-guides-and-tools/learning-paths/azure/"
+  },
+  {
+    "title": "Azure Resources Reference: Compute, Networking, Storage and Data",
+    "description": "Explore Azure resource families, their responsibilities and dependencies, with CLI examples, operational considerations and links to official sources.",
+    "topic": "Cloud and Azure",
+    "type": "Reference",
+    "level": "Intermediate",
+    "source": "docs/cloud/azure/resource-reference.md",
+    "url": "/developer-guides-and-tools/cloud/azure/resource-reference/"
+  },
+  {
+    "title": "Build a model for a new table",
+    "description": "Use real wine measurements to plan, build and check a machine learning project independently.",
+    "topic": "Data science and machine learning",
+    "type": "Browser guide",
+    "level": "",
+    "source": "examples/machine-learning/ml-practical-lessons/INDEPENDENT-PROJECT.md",
+    "url": "/developer-guides-and-tools/examples/machine-learning/ml-practical-lessons/INDEPENDENT-PROJECT.html"
+  },
+  {
+    "title": "C# and .NET Learning Path",
+    "description": "A suggested progression from C# classes and interfaces to design, testing, SQL and Azure.",
+    "topic": "Learning paths",
+    "type": "Learning path",
+    "level": "",
+    "source": "docs/learning-paths/csharp-dotnet.md",
+    "url": "/developer-guides-and-tools/learning-paths/csharp-dotnet/"
+  },
+  {
+    "title": "Check and teach this course",
+    "description": "Build, check and teach the beginner machine learning course, and record evidence from learner practice.",
+    "topic": "Data science and machine learning",
+    "type": "Browser guide",
+    "level": "",
+    "source": "examples/machine-learning/ml-practical-lessons/TEACHING.md",
+    "url": "/developer-guides-and-tools/examples/machine-learning/ml-practical-lessons/TEACHING.html"
+  },
+  {
+    "title": "Claude Code Agent Team Guide",
+    "description": "Browser guide to Claude Code sub-agents, skills, instructions, models and review teams.",
+    "topic": "AI",
+    "type": "Interactive reader",
+    "level": "Beginner",
+    "source": "apps/ai-agent-team-guides/claude-code-guide.html",
+    "url": "/developer-guides-and-tools/apps/ai-agent-team-guides/claude-code-guide.html"
+  },
+  {
+    "title": "Convert LF and CRLF Line Endings with PowerShell",
+    "description": "Convert supported UTF-8 text files between LF and CRLF with a PowerShell utility, documented exclusions, usage examples and diff-based verification.",
+    "topic": "Utilities",
+    "type": "Utility",
+    "level": "Intermediate",
+    "source": "tools/powershell/convert-line-endings/README.md",
+    "url": "/developer-guides-and-tools/utilities/line-endings/"
+  },
+  {
+    "title": "Copilot Configuration and Instruction Guidance",
+    "description": "Separate reusable Copilot instructions from personal account state. Find the instruction template and guidance for configuring your own client.",
+    "topic": "Examples",
+    "type": "Guide",
+    "level": "",
+    "source": "examples/ai-clients/copilot/README.md",
+    "url": "/developer-guides-and-tools/examples/ai-clients/copilot/"
+  },
+  {
+    "title": "Data Science and Machine Learning — Practical Python Workbook",
+    "description": "Learn data preparation, evaluation and local model services with worked Python lessons, made-up data and downloadable exercises.",
+    "topic": "Data science and machine learning",
+    "type": "Python workbook",
+    "level": "Beginner to advanced",
+    "source": "examples/machine-learning/ml-practical-lessons/Data-Science-and-Machine-Learning.md",
+    "url": "/developer-guides-and-tools/examples/machine-learning/ml-practical-lessons/"
+  },
+  {
+    "title": "Data source and licence",
+    "description": "Read the source, licence and limits of the wine measurements used in the independent project.",
+    "topic": "Data science and machine learning",
+    "type": "Browser guide",
+    "level": "",
+    "source": "examples/machine-learning/ml-practical-lessons/projects/wine/SOURCE.md",
+    "url": "/developer-guides-and-tools/examples/machine-learning/ml-practical-lessons/projects/wine/SOURCE.html"
+  },
+  {
+    "title": "Developer Configuration and Environment Examples",
+    "description": "Choose practical machine learning lessons, a local service stack, WSL settings or AI client configuration examples, with setup instructions and limits.",
+    "topic": "Library",
+    "type": "Guide",
+    "level": "",
+    "source": "examples/README.md",
+    "url": "/developer-guides-and-tools/examples/"
+  },
+  {
+    "title": "Developer Documentation and Resource Catalog",
+    "description": "Browse programming courses, cloud and command references, AI and Linux browser tools, developer utilities and configuration examples.",
+    "topic": "Library",
+    "type": "Catalog",
+    "level": "",
+    "source": "documentation.md",
+    "url": "/developer-guides-and-tools/documentation/"
+  },
+  {
+    "title": "Developer Guides, Cheat Sheets & Tools",
+    "description": "Learn Python, machine learning, C#/.NET, SQL and Azure. Find Git and container cheat sheets, interactive Linux and AI references, scripts and examples.",
+    "topic": "Library",
+    "type": "Guide",
+    "level": "",
+    "source": "index.md",
+    "url": "/developer-guides-and-tools/"
+  },
+  {
+    "title": "Developer Guides, Cheat Sheets and Practical Tools",
+    "description": "Study Python, machine learning, C#/.NET, SQL and Azure. Find Linux, Git and container references, interactive learning tools and documented utilities.",
+    "topic": "Library",
+    "type": "Guide",
+    "level": "",
+    "source": "README.md",
+    "url": "/developer-guides-and-tools/repository/"
+  },
+  {
+    "title": "Developer Learning Paths",
+    "description": "Suggested routes through Python, machine learning, C#/.NET, SQL, Azure and local AI guides.",
+    "topic": "Learning paths",
+    "type": "Learning path",
+    "level": "",
+    "source": "docs/learning-paths/index.md",
+    "url": "/developer-guides-and-tools/learning-paths/"
+  },
+  {
+    "title": "Docker Command Cheat Sheet: Containers, Images and Compose",
+    "description": "Find Docker commands for images, containers, Dockerfiles, Compose, networking and troubleshooting, with explanations and practical examples.",
+    "topic": "Containers",
+    "type": "Cheat sheet",
+    "level": "Beginner to advanced",
+    "source": "docs/containers/docker-cheat-sheet.md",
+    "url": "/developer-guides-and-tools/containers/docker-cheat-sheet/"
+  },
+  {
+    "title": "Extra topics, one small step at a time",
+    "description": "Explore optional machine learning topics after learning the basic skills they need.",
+    "topic": "Data science and machine learning",
+    "type": "Browser guide",
+    "level": "",
+    "source": "examples/machine-learning/ml-practical-lessons/ELECTIVES.md",
+    "url": "/developer-guides-and-tools/examples/machine-learning/ml-practical-lessons/ELECTIVES.html"
+  },
+  {
+    "title": "Getting Started with the Developer Library",
+    "description": "Choose a course, command reference, browser tool or practical example and understand its prerequisites.",
+    "topic": "Library",
+    "type": "Guide",
+    "level": "",
+    "source": "docs/getting-started.md",
+    "url": "/developer-guides-and-tools/getting-started/"
+  },
+  {
+    "title": "Git Command Cheat Sheet: Branching, Collaboration and Recovery",
+    "description": "Practice Git setup, commits, branching, collaboration, releases and recovery with explained command examples and guidance on destructive operations.",
+    "topic": "Version control",
+    "type": "Cheat sheet",
+    "level": "Beginner to advanced",
+    "source": "docs/version-control/git-cheat-sheet.md",
+    "url": "/developer-guides-and-tools/version-control/git-cheat-sheet/"
+  },
+  {
+    "title": "GitHub Copilot Agent Team Guide",
+    "description": "Browser guide to Copilot custom agents, skills, instructions, models and review teams.",
+    "topic": "AI",
+    "type": "Interactive reader",
+    "level": "Beginner",
+    "source": "apps/ai-agent-team-guides/github-copilot-guide.html",
+    "url": "/developer-guides-and-tools/apps/ai-agent-team-guides/github-copilot-guide.html"
+  },
+  {
+    "title": "IPTV-org Playlist Directory: Countries, Languages and Categories",
+    "description": "A dated IPTV-org playlist reference with country, language, category and region navigation and a VLC walkthrough.",
+    "topic": "Media",
+    "type": "Reference",
+    "level": "Beginner",
+    "source": "docs/media/iptv/playlists.md",
+    "url": "/developer-guides-and-tools/media/iptv/"
+  },
+  {
+    "title": "Interactive Developer Tools and Offline References",
+    "description": "Choose a searchable Linux command reference, an AI learning atlas or an AI coding add-ons reader, with browser links and offline-use guidance.",
+    "topic": "Library",
+    "type": "Guide",
+    "level": "",
+    "source": "apps/README.md",
+    "url": "/developer-guides-and-tools/interactive-tools/"
+  },
+  {
+    "title": "Linux Command Reference",
+    "description": "Browse and search 361 commands across 16 categories, online or offline.",
+    "topic": "Linux",
+    "type": "Interactive reference",
+    "level": "All levels",
+    "source": "apps/linux-command-reference/index.html",
+    "url": "/developer-guides-and-tools/apps/linux-command-reference/index.html"
+  },
+  {
+    "title": "Linux Command Reference — Search 361 Commands Offline",
+    "description": "Search 361 Linux commands across 16 categories, read examples and use the reference offline. Review tool requirements and authorized-use boundaries.",
+    "topic": "Linux",
+    "type": "Application guide",
+    "level": "All levels",
+    "source": "apps/linux-command-reference/README.md",
+    "url": "/developer-guides-and-tools/apps/linux-command-reference/guide/"
+  },
+  {
+    "title": "Local AI Chat App with Ollama and Streamlit on Windows",
+    "description": "Build a local Python chat app on Windows with Ollama and Streamlit. Follow model setup, context configuration, verification and troubleshooting steps.",
+    "topic": "AI",
+    "type": "Lab",
+    "level": "Beginner",
+    "source": "docs/ai/local-ai-chat-lab.md",
+    "url": "/developer-guides-and-tools/ai/local-ai-chat-lab/"
+  },
+  {
+    "title": "Local AI Learning Path",
+    "description": "Build and verify a local Ollama and Streamlit browser chat application.",
+    "topic": "Learning paths",
+    "type": "Learning path",
+    "level": "",
+    "source": "docs/learning-paths/local-ai.md",
+    "url": "/developer-guides-and-tools/learning-paths/local-ai/"
+  },
+  {
+    "title": "Local Development Services with Podman Compose",
+    "description": "Configure an opt-in Podman Compose stack with 11 database, messaging, search and identity services. Review credentials, port bindings and resource needs.",
+    "topic": "Examples",
+    "type": "Development environment",
+    "level": "Intermediate",
+    "source": "examples/containers/local-services/README.md",
+    "url": "/developer-guides-and-tools/examples/local-services/"
+  },
+  {
+    "title": "Machine Learning Practical Learning Path",
+    "description": "Follow Python lessons from a first CSV prediction through data cleaning, evaluation and a local delivery-model service.",
+    "topic": "Learning paths",
+    "type": "Learning path",
+    "level": "",
+    "source": "docs/learning-paths/machine-learning.md",
+    "url": "/developer-guides-and-tools/learning-paths/machine-learning/"
+  },
+  {
+    "title": "Machine Learning Practical Lessons — Browser Workbook",
+    "description": "Read worked lessons, search lesson downloads and follow a practical Python course with synthetic datasets.",
+    "topic": "Data science and machine learning",
+    "type": "Browser workbook",
+    "level": "Beginner to advanced",
+    "source": "examples/machine-learning/ml-practical-lessons/Data-Science-and-Machine-Learning.html",
+    "url": "/developer-guides-and-tools/examples/machine-learning/ml-practical-lessons/Data-Science-and-Machine-Learning.html"
+  },
+  {
+    "title": "Machine Learning Practical Lessons — Glossary",
+    "description": "Look up data, model training, evaluation and service terms with links to worked Python exercises.",
+    "topic": "Data science and machine learning",
+    "type": "Guide",
+    "level": "",
+    "source": "examples/machine-learning/ml-practical-lessons/GLOSSARY.md",
+    "url": "/developer-guides-and-tools/examples/machine-learning/ml-practical-lessons/glossary/"
+  },
+  {
+    "title": "Machine Learning Practical Lessons — Python Workbook",
+    "description": "Learn data preparation, model evaluation and local prediction services with a guided Python workbook, synthetic datasets and downloadable lessons.",
+    "topic": "Data science and machine learning",
+    "type": "Practical course guide and lesson downloads",
+    "level": "Beginner to advanced",
+    "source": "examples/machine-learning/ml-practical-lessons/README.md",
+    "url": "/developer-guides-and-tools/examples/machine-learning/ml-practical-lessons/guide/"
+  },
+  {
+    "title": "Make useful project choices",
+    "description": "Choose a useful machine learning question, compare a simple baseline and plan a fair check.",
+    "topic": "Data science and machine learning",
+    "type": "Browser guide",
+    "level": "",
+    "source": "examples/machine-learning/ml-practical-lessons/PROJECT-CHOICES.md",
+    "url": "/developer-guides-and-tools/examples/machine-learning/ml-practical-lessons/PROJECT-CHOICES.html"
+  },
+  {
+    "title": "Object-Oriented Programming with C# and .NET",
+    "description": "Learn C# and .NET object-oriented programming through classes, inheritance, interfaces, design decisions, exercises and a structured study plan.",
+    "topic": "C# and .NET",
+    "type": "Course",
+    "level": "Beginner to advanced",
+    "source": "docs/csharp-dotnet/oop.md",
+    "url": "/developer-guides-and-tools/csharp-dotnet/oop/"
+  },
+  {
+    "title": "Object-Oriented Programming with Python: Classes, Design and Testing",
+    "description": "Learn Python object-oriented programming with classes, inheritance, composition, protocols, testing, design exercises and a structured study plan.",
+    "topic": "Python",
+    "type": "Course",
+    "level": "Beginner to advanced",
+    "source": "docs/python/oop.md",
+    "url": "/developer-guides-and-tools/python/oop/"
+  },
+  {
+    "title": "OpenAI Codex Agent Team Guide",
+    "description": "Browser guide to Codex custom sub-agents, skills, instructions, models and review teams.",
+    "topic": "AI",
+    "type": "Interactive reader",
+    "level": "Beginner",
+    "source": "apps/ai-agent-team-guides/openai-codex-guide.html",
+    "url": "/developer-guides-and-tools/apps/ai-agent-team-guides/openai-codex-guide.html"
+  },
+  {
+    "title": "Podman Command Cheat Sheet: Rootless Containers, Pods and Quadlet",
+    "description": "Review Podman commands for rootless containers, images, pods, virtual machines and Quadlet, with examples and troubleshooting guidance.",
+    "topic": "Containers",
+    "type": "Cheat sheet",
+    "level": "Beginner to advanced",
+    "source": "docs/containers/podman-cheat-sheet.md",
+    "url": "/developer-guides-and-tools/containers/podman-cheat-sheet/"
+  },
+  {
+    "title": "PowerShell Developer Utilities and Usage Guides",
+    "description": "Choose documented PowerShell utilities for line-ending conversion and Windows maintenance. Read prerequisites, file effects and verification limits first.",
+    "topic": "Library",
+    "type": "Guide",
+    "level": "",
+    "source": "tools/README.md",
+    "url": "/developer-guides-and-tools/utilities/"
+  },
+  {
+    "title": "Practice before looking at the answer",
+    "description": "Practise machine learning ideas with small questions, worked examples and explained answers.",
+    "topic": "Data science and machine learning",
+    "type": "Browser guide",
+    "level": "",
+    "source": "examples/machine-learning/ml-practical-lessons/PRACTICE.md",
+    "url": "/developer-guides-and-tools/examples/machine-learning/ml-practical-lessons/PRACTICE.html"
+  },
+  {
+    "title": "Python Dunder Methods Reference: Special Methods and Attributes",
+    "description": "Understand Python special methods and attributes for object creation, operators, containers, descriptors, async behavior and serialization.",
+    "topic": "Python",
+    "type": "Reference",
+    "level": "Intermediate",
+    "source": "docs/python/special-methods.md",
+    "url": "/developer-guides-and-tools/python/special-methods/"
+  },
+  {
+    "title": "Python Learning Path",
+    "description": "A practical route through Python OOP, special methods, testing, machine learning and a local AI project.",
+    "topic": "Learning paths",
+    "type": "Learning path",
+    "level": "",
+    "source": "docs/learning-paths/python.md",
+    "url": "/developer-guides-and-tools/learning-paths/python/"
+  },
+  {
+    "title": "Reusable AI Instruction Templates for Developers",
+    "description": "Inspect and deliberately install reusable instruction templates for Codex, Claude, Copilot and ChatGPT. Keep instructions separate from permissions.",
+    "topic": "Templates",
+    "type": "Instruction templates",
+    "level": "All levels",
+    "source": "templates/ai-instructions/README.md",
+    "url": "/developer-guides-and-tools/templates/ai-instructions/"
+  },
+  {
+    "title": "SQL Course Part Index",
+    "description": "Read the SQL Server and MySQL course in ordered parts, with prerequisites and links to the complete reference.",
+    "topic": "Databases",
+    "type": "Course part index",
+    "level": "Beginner to advanced",
+    "source": "docs/databases/sql-server-and-mysql/index.md",
+    "url": "/developer-guides-and-tools/databases/sql-server-and-mysql/parts/"
+  },
+  {
+    "title": "SQL Guide for Microsoft SQL Server and MySQL",
+    "description": "Learn SQL with Microsoft SQL Server and MySQL examples covering tables, queries, joins, transactions, indexing, database design and practice exercises.",
+    "topic": "Databases",
+    "type": "Course",
+    "level": "Beginner to advanced",
+    "source": "docs/databases/sql-server-and-mysql.md",
+    "url": "/developer-guides-and-tools/databases/sql-server-and-mysql/"
+  },
+  {
+    "title": "SQL Learning Path",
+    "description": "Learn SQL with engine-specific examples, disposable databases and practical exercises.",
+    "topic": "Learning paths",
+    "type": "Learning path",
+    "level": "",
+    "source": "docs/learning-paths/sql.md",
+    "url": "/developer-guides-and-tools/learning-paths/sql/"
+  },
+  {
+    "title": "SQL course - Part 10: PERFORMANCE",
+    "description": "SQL Server and MySQL course reading page: Part 10: PERFORMANCE. Follow the original examples and prerequisites.",
+    "topic": "Databases",
+    "type": "Guide",
+    "level": "",
+    "source": "docs/databases/sql-server-and-mysql/10-performance.md",
+    "url": "/developer-guides-and-tools/databases/sql-server-and-mysql/parts/10-performance/"
+  },
+  {
+    "title": "SQL course - Part 11: DESIGN",
+    "description": "SQL Server and MySQL course reading page: Part 11: DESIGN. Follow the original examples and prerequisites.",
+    "topic": "Databases",
+    "type": "Guide",
+    "level": "",
+    "source": "docs/databases/sql-server-and-mysql/11-design.md",
+    "url": "/developer-guides-and-tools/databases/sql-server-and-mysql/parts/11-design/"
+  },
+  {
+    "title": "SQL course - Part 12: ADMINISTRATION AND SECURITY",
+    "description": "SQL Server and MySQL course reading page: Part 12: ADMINISTRATION AND SECURITY. Follow the original examples and prerequisites.",
+    "topic": "Databases",
+    "type": "Guide",
+    "level": "",
+    "source": "docs/databases/sql-server-and-mysql/12-administration-and-security.md",
+    "url": "/developer-guides-and-tools/databases/sql-server-and-mysql/parts/12-administration-and-security/"
+  },
+  {
+    "title": "SQL course - Part 13: MODERN AND EXPERT TOPICS",
+    "description": "SQL Server and MySQL course reading page: Part 13: MODERN AND EXPERT TOPICS. Follow the original examples and prerequisites.",
+    "topic": "Databases",
+    "type": "Guide",
+    "level": "",
+    "source": "docs/databases/sql-server-and-mysql/13-modern-and-expert-topics.md",
+    "url": "/developer-guides-and-tools/databases/sql-server-and-mysql/parts/13-modern-and-expert-topics/"
+  },
+  {
+    "title": "SQL course - Part 14: ENGINEERING PRACTICE",
+    "description": "SQL Server and MySQL course reading page: Part 14: ENGINEERING PRACTICE. Follow the original examples and prerequisites.",
+    "topic": "Databases",
+    "type": "Guide",
+    "level": "",
+    "source": "docs/databases/sql-server-and-mysql/14-engineering-practice.md",
+    "url": "/developer-guides-and-tools/databases/sql-server-and-mysql/parts/14-engineering-practice/"
+  },
+  {
+    "title": "SQL course - Part 15: PUTTING IT ALL TOGETHER",
+    "description": "SQL Server and MySQL course reading page: Part 15: PUTTING IT ALL TOGETHER. Follow the original examples and prerequisites.",
+    "topic": "Databases",
+    "type": "Guide",
+    "level": "",
+    "source": "docs/databases/sql-server-and-mysql/15-putting-it-all-together.md",
+    "url": "/developer-guides-and-tools/databases/sql-server-and-mysql/parts/15-putting-it-all-together/"
+  },
+  {
+    "title": "SQL course - Part 1: FOUNDATIONS",
+    "description": "SQL Server and MySQL course reading page: Part 1: FOUNDATIONS. Follow the original examples and prerequisites.",
+    "topic": "Databases",
+    "type": "Guide",
+    "level": "",
+    "source": "docs/databases/sql-server-and-mysql/01-foundations.md",
+    "url": "/developer-guides-and-tools/databases/sql-server-and-mysql/parts/01-foundations/"
+  },
+  {
+    "title": "SQL course - Part 2: BUILDING BLOCKS",
+    "description": "SQL Server and MySQL course reading page: Part 2: BUILDING BLOCKS. Follow the original examples and prerequisites.",
+    "topic": "Databases",
+    "type": "Guide",
+    "level": "",
+    "source": "docs/databases/sql-server-and-mysql/02-building-blocks.md",
+    "url": "/developer-guides-and-tools/databases/sql-server-and-mysql/parts/02-building-blocks/"
+  },
+  {
+    "title": "SQL course - Part 3: WORKING WITH DATA (CRUD)",
+    "description": "SQL Server and MySQL course reading page: Part 3: WORKING WITH DATA (CRUD). Follow the original examples and prerequisites.",
+    "topic": "Databases",
+    "type": "Guide",
+    "level": "",
+    "source": "docs/databases/sql-server-and-mysql/03-working-with-data-crud.md",
+    "url": "/developer-guides-and-tools/databases/sql-server-and-mysql/parts/03-working-with-data-crud/"
+  },
+  {
+    "title": "SQL course - Part 4: FUNCTIONS",
+    "description": "SQL Server and MySQL course reading page: Part 4: FUNCTIONS. Follow the original examples and prerequisites.",
+    "topic": "Databases",
+    "type": "Guide",
+    "level": "",
+    "source": "docs/databases/sql-server-and-mysql/04-functions.md",
+    "url": "/developer-guides-and-tools/databases/sql-server-and-mysql/parts/04-functions/"
+  },
+  {
+    "title": "SQL course - Part 5: GROUPING AND AGGREGATION",
+    "description": "SQL Server and MySQL course reading page: Part 5: GROUPING AND AGGREGATION. Follow the original examples and prerequisites.",
+    "topic": "Databases",
+    "type": "Guide",
+    "level": "",
+    "source": "docs/databases/sql-server-and-mysql/05-grouping-and-aggregation.md",
+    "url": "/developer-guides-and-tools/databases/sql-server-and-mysql/parts/05-grouping-and-aggregation/"
+  },
+  {
+    "title": "SQL course - Part 6: COMBINING TABLES",
+    "description": "SQL Server and MySQL course reading page: Part 6: COMBINING TABLES. Follow the original examples and prerequisites.",
+    "topic": "Databases",
+    "type": "Guide",
+    "level": "",
+    "source": "docs/databases/sql-server-and-mysql/06-combining-tables.md",
+    "url": "/developer-guides-and-tools/databases/sql-server-and-mysql/parts/06-combining-tables/"
+  },
+  {
+    "title": "SQL course - Part 7: ANALYTICS",
+    "description": "SQL Server and MySQL course reading page: Part 7: ANALYTICS. Follow the original examples and prerequisites.",
+    "topic": "Databases",
+    "type": "Guide",
+    "level": "",
+    "source": "docs/databases/sql-server-and-mysql/07-analytics.md",
+    "url": "/developer-guides-and-tools/databases/sql-server-and-mysql/parts/07-analytics/"
+  },
+  {
+    "title": "SQL course - Part 8: DATABASE OBJECTS",
+    "description": "SQL Server and MySQL course reading page: Part 8: DATABASE OBJECTS. Follow the original examples and prerequisites.",
+    "topic": "Databases",
+    "type": "Guide",
+    "level": "",
+    "source": "docs/databases/sql-server-and-mysql/08-database-objects.md",
+    "url": "/developer-guides-and-tools/databases/sql-server-and-mysql/parts/08-database-objects/"
+  },
+  {
+    "title": "SQL course - Part 9: TRANSACTIONS AND INTEGRITY",
+    "description": "SQL Server and MySQL course reading page: Part 9: TRANSACTIONS AND INTEGRITY. Follow the original examples and prerequisites.",
+    "topic": "Databases",
+    "type": "Guide",
+    "level": "",
+    "source": "docs/databases/sql-server-and-mysql/09-transactions-and-integrity.md",
+    "url": "/developer-guides-and-tools/databases/sql-server-and-mysql/parts/09-transactions-and-integrity/"
+  },
+  {
+    "title": "SQL course - Start here",
+    "description": "SQL Server and MySQL course reading page: Start here. Follow the original examples and prerequisites.",
+    "topic": "Databases",
+    "type": "Guide",
+    "level": "",
+    "source": "docs/databases/sql-server-and-mysql/00-start-here.md",
+    "url": "/developer-guides-and-tools/databases/sql-server-and-mysql/parts/00-start-here/"
+  },
+  {
+    "title": "Set up Python for the course",
+    "description": "",
+    "topic": "Data science and machine learning",
+    "type": "Guide",
+    "level": "",
+    "source": "examples/machine-learning/ml-practical-lessons/SETUP.md",
+    "url": "/developer-guides-and-tools/examples/machine-learning/ml-practical-lessons/setup/"
+  },
+  {
+    "title": "Start learning machine learning",
+    "description": "Choose a paper or Python route, learn the first machine learning words, and open a small guided example.",
+    "topic": "Data science and machine learning",
+    "type": "Guide",
+    "level": "",
+    "source": "examples/machine-learning/ml-practical-lessons/START-HERE.md",
+    "url": "/developer-guides-and-tools/examples/machine-learning/ml-practical-lessons/start-here/"
+  },
+  {
+    "title": "WSL2 Configuration — Memory, CPU and Swap Settings",
+    "description": "Review a WSL2 configuration example for memory, CPU, swap and networking. Choose machine-appropriate values and apply changes after saving your work.",
+    "topic": "Examples",
+    "type": "Configuration example",
+    "level": "Intermediate",
+    "source": "examples/wsl/README.md",
+    "url": "/developer-guides-and-tools/examples/wsl/"
+  },
+  {
+    "title": "Windows Maintenance with PowerShell — Script Guide",
+    "description": "Review a PowerShell Windows maintenance script's repair, update, networking and cleanup sequence, its prerequisites, side effects and limitations.",
+    "topic": "Utilities",
+    "type": "Utility",
+    "level": "Administrator",
+    "source": "tools/powershell/system-maintenance/README.md",
+    "url": "/developer-guides-and-tools/utilities/windows-maintenance/"
+  },
+  {
+    "title": "Your learning path",
+    "description": "Follow the beginner learning path from reading a table to checking a model and finishing a project.",
+    "topic": "Data science and machine learning",
+    "type": "Browser guide",
+    "level": "",
+    "source": "examples/machine-learning/ml-practical-lessons/LEARNING-PATH.md",
+    "url": "/developer-guides-and-tools/examples/machine-learning/ml-practical-lessons/LEARNING-PATH.html"
+  }
+]

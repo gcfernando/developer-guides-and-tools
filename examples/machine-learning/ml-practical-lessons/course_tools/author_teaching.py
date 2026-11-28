@@ -1,16 +1,29 @@
 """Author the reviewed concept notes in lesson READMEs and the workbook.
 
-This tool owns only text between its teaching-note markers. Curated profiles
-describe the shared idea; every entry also keeps its own goal and example files.
+Curated profiles describe the shared idea; every entry also keeps its own goal
+and example files. The tool updates the primary lesson explanations and marked
+workbook notes, and keeps disclosure markup and browser-guide links consistent.
 Run after changing a profile, then build_course.py and check_course.py.
 """
 from pathlib import Path
 import csv
+import json
 import re
 
 ROOT = Path(__file__).resolve().parents[1]
 PROFILES = {}
 LESSON_PROFILES = {}
+COURSE_URL = 'https://gcfernando.github.io/developer-guides-and-tools/examples/machine-learning/ml-practical-lessons/'
+TEACHING_ALIASES = json.loads((ROOT/'course_tools/reader-compatibility.json').read_text(encoding='utf-8'))['teaching_note_aliases']
+BROWSER_GUIDES = ('LEARNING-PATH', 'PYTHON-BASICS', 'PRACTICE', 'PROJECT-CHOICES',
+                  'ELECTIVES', 'TEACHING', 'INDEPENDENT-PROJECT')
+
+
+def prepare_reader_markdown(text):
+    """Render disclosures in Jekyll and link readers without removing raw sources."""
+    text = re.sub(r'(?m)^<details>$', '<details markdown="1">', text)
+    pattern = r'\]\(('+'|'.join(BROWSER_GUIDES)+r')\.md(#[^)]*)?\)'
+    return re.sub(pattern, lambda match: ']('+COURSE_URL+match.group(1)+'.html'+(match.group(2) or '')+')', text)
 
 
 def concept(key, ids, ready, meaning, use, example, caution, task, answer):
@@ -959,7 +972,10 @@ def teaching_note(row, folder, workbook=False):
     result_link = f'lessons/{folder.name}/{expected.name}' if workbook else expected.name
     result_text = f'[full recorded output]({result_link})' if expected.exists() else 'the documented prediction result'
     # The table is an input record, not a claim about an invented new outcome.
-    text = f'''### Learn and apply: {row['Lesson name']}
+    aliases = '\n'.join('<a id="'+anchor+'"></a>' for anchor in TEACHING_ALIASES[str(number)])
+    text = f'''{aliases}
+
+**Learn and apply: {row['Lesson name']}**
 
 **Your decision.** {goal}
 
@@ -1001,7 +1017,7 @@ def teaching_note(row, folder, workbook=False):
 
 **A second check later.** Close the notes and explain the same decision using a different row from the supplied table. State one condition that would make this method unsuitable. If you cannot explain the reason, repeat the small worked example before adding more code.
 '''
-    return text
+    return prepare_reader_markdown(text)
 
 
 def code_flow(number):
@@ -1068,7 +1084,7 @@ def revise_readme(row, folder, text):
 After the guided file change above, close the notes and explain the same decision for a different supplied row. State one condition that makes this method unsuitable. If you cannot explain the reason, repeat the small worked example before adding more code.
 '''
     text=replace_section(text,'Explain the result',answer)
-    return text+extra_lab_notes(number,folder)+'\n\n'+BEGIN+'\n<!-- teaching-profile:'+key+' -->\n'+END+'\n'
+    return prepare_reader_markdown(text+extra_lab_notes(number,folder)+'\n\n'+BEGIN+'\n<!-- teaching-profile:'+key+' -->\n'+END+'\n')
 
 
 def extra_lab_notes(number, folder):
@@ -1158,7 +1174,14 @@ def main():
         supplement.append(f'<!-- workbook-teaching:{number}:start -->\n<details>\n<summary>{number:03}: '+next(r['Lesson name'] for r in ROWS if int(r['ID'])==number)+'</summary>\n\n'+notes[number]+f'\n</details>\n<!-- workbook-teaching:{number}:end -->')
     if supplement:
         text += '\n\n## Focused tasks for shared exercises\n\nThese entries share runnable files with related lessons. Each note asks a different teaching question where the goal differs. Open the named entry rather than rerunning every shared script.\n\n'+'\n\n'.join(supplement)+'\n'
-    workbook_path.write_text(text,encoding='utf-8',newline='\n')
+    workbook_path.write_text(prepare_reader_markdown(text),encoding='utf-8',newline='\n')
+    for guide in ROOT.glob('*.md'):
+        if guide.name == 'AGENTS.md':
+            continue
+        original = guide.read_text(encoding='utf-8')
+        prepared = prepare_reader_markdown(original)
+        if prepared != original:
+            guide.write_text(prepared,encoding='utf-8',newline='\n')
     print(f'Authored {len(ROWS)} self-contained lesson notes; {len(used)} section notes and {len(supplement)} shared-exercise notes. Profiles: {len(PROFILES)}.')
 
 

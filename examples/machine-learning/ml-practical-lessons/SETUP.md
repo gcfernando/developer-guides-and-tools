@@ -133,13 +133,13 @@ To undo edits, extract a fresh lesson into a new folder. Keep your changed copy 
 
 The original recorded environment is Python 3.12.14 on Linux. Its package list is in [tested-package-versions.csv](tested-package-versions.csv). Common versions are fixed in [requirements-core-tested.txt](requirements-core-tested.txt).
 
-The course review also ran examples on Windows with Python 3.12.10 and different installed packages. See [the review evidence](course-review/verification.json). That is not a clean installation test of this recipe. Clean Windows and Mac installs and a study with new learners still need to be completed. [Release checks](TEACHING.md) explain how to record them.
+The course review also ran examples on Windows with Python 3.12.10 and different installed packages. See [the review evidence](course-review/verification.json). That is not a clean installation test of this recipe. Clean Windows and Mac installs and a study with new learners still need to be completed. [Release checks](https://gcfernando.github.io/developer-guides-and-tools/examples/machine-learning/ml-practical-lessons/TEACHING.html) explain how to record them.
 
 ## Saved models
 
 A `.joblib` file can hold a trained model. Load only a file you made or trust. Loading it can run code. Keep the training data, script and package versions with it. See [model persistence](https://scikit-learn.org/stable/model_persistence.html).
 
-Next: read [A small start with Python](PYTHON-BASICS.md), then open [the learning path](LEARNING-PATH.md).
+Next: read [A small start with Python](https://gcfernando.github.io/developer-guides-and-tools/examples/machine-learning/ml-practical-lessons/PYTHON-BASICS.html), then open [the learning path](https://gcfernando.github.io/developer-guides-and-tools/examples/machine-learning/ml-practical-lessons/LEARNING-PATH.html).
 
 ## Understand the setup you just used
 
@@ -157,7 +157,7 @@ Next: read [A small start with Python](PYTHON-BASICS.md), then open [the learnin
 
 **Apply it.** A terminal prints a Python path outside `.venv` and reports a missing package. What comes first: change the lesson or check the interpreter?
 
-<details>
+<details markdown="1">
 <summary>Answer and reason</summary>
 
 Check the interpreter. Activate or explicitly call the course Python, then install the declared requirement using that same interpreter if needed. Editing correct data or code does not repair a different interpreter's missing package.

@@ -73,7 +73,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** Component order, sign and scale can be ambiguous. Convergence and source meaning need checks.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 Not necessarily. Compare patterns and reconstructions, accounting for sign/order ambiguity.

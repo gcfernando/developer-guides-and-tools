@@ -74,7 +74,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** Codes 0, 1, 2 do not prove that the gap between low and medium equals the gap between medium and high. Unordered colours need a different representation.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 No. Alphabetical or display order is not a real scale. Use separate columns or another justified categorical representation.

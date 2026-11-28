@@ -7,7 +7,9 @@
   {% if page.robots %}<meta name="robots" content="{{ page.robots | escape }}">{% elsif page.sitemap == false %}<meta name="robots" content="noindex,follow">{% endif %}
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/documentation.css' | relative_url }}?v={{ site.github.build_revision }}">
+  <link rel="stylesheet" href="{{ '/assets/css/library-navigation.css' | relative_url }}?v={{ site.github.build_revision }}">
   <link rel="icon" href="{{ '/assets/images/mark.svg' | relative_url }}" type="image/svg+xml">
+  <script src="{{ '/assets/js/library-search.js' | relative_url }}" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -15,13 +17,58 @@
     <div class="banner-inner">
       <a class="brand" href="{{ '/' | relative_url }}"><span class="brand-mark" aria-hidden="true">GF</span><span>{{ site.title }}</span></a>
       <nav class="primary-nav" aria-label="Primary navigation">
-        {% for item in site.data.navigation %}<a href="{{ item.url | relative_url }}">{{ item.title }}</a>{% endfor %}
+        {% for item in site.data.navigation %}<a href="{{ item.url | relative_url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.title }}</a>{% endfor %}
+        <a href="#library-search">Search library</a>
         <a class="github-link" href="https://github.com/{{ site.repository }}">GitHub <span aria-hidden="true">↗</span></a>
       </nav>
       <div class="banner-copy"><p class="eyebrow">{{ site.project_category }} · Developer documentation</p><p class="banner-title">Explore. Learn. Build.</p><p>{{ site.description }}</p></div>
     </div>
   </header>
   <main id="main-content" class="page-shell" tabindex="-1">
+    {% assign catalog_topic = nil %}{% for resource in site.data.resources %}{% if resource.path == page.path %}{% assign catalog_topic = resource.topic %}{% endif %}{% endfor %}
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        {% if page.url == '/' %}
+        <li><span aria-current="page">Home</span></li>
+        {% else %}
+        <li><a href="{{ '/' | relative_url }}">Home</a></li>
+        {% unless page.url == '/documentation/' %}<li><a href="{{ '/documentation/' | relative_url }}">All topics</a></li>{% endunless %}
+        {% if page.path contains 'docs/learning-paths/' and page.url != '/learning-paths/' %}
+        <li><a href="{{ '/learning-paths/' | relative_url }}">Learning paths</a></li>
+        {% elsif page.path contains 'examples/machine-learning/ml-practical-lessons/' and page.url != '/examples/machine-learning/ml-practical-lessons/guide/' %}
+        <li><a href="{{ '/examples/machine-learning/ml-practical-lessons/guide/' | relative_url }}">Machine learning course</a></li>
+        {% elsif page.path contains 'docs/databases/sql-server-and-mysql/' and page.url != '/databases/sql-server-and-mysql/parts/' %}
+        <li><a href="{{ '/databases/sql-server-and-mysql/parts/' | relative_url }}">SQL course parts</a></li>
+        {% elsif page.path contains 'apps/' and page.url != '/interactive-tools/' %}
+        <li><a href="{{ '/interactive-tools/' | relative_url }}">Interactive tools</a></li>
+        {% elsif page.path contains 'tools/' and page.url != '/utilities/' %}
+        <li><a href="{{ '/utilities/' | relative_url }}">Utilities</a></li>
+        {% elsif page.path contains 'examples/' and page.url != '/examples/' %}
+        <li><a href="{{ '/examples/' | relative_url }}">Examples</a></li>
+        {% elsif page.path contains 'templates/' and page.url != '/templates/ai-instructions/' %}
+        <li><a href="{{ '/templates/ai-instructions/' | relative_url }}">Instruction templates</a></li>
+        {% elsif catalog_topic and page.url != '/documentation/' %}
+        <li><a href="{{ '/documentation/' | relative_url }}#catalog-topic-{{ catalog_topic | slugify }}">{{ catalog_topic | escape }}</a></li>
+        {% endif %}
+        <li><span aria-current="page">{{ page.title | default: site.title | escape }}</span></li>
+        {% endif %}
+      </ol>
+    </nav>
+    <details class="library-search" id="library-search" data-library-search data-search-index="{{ '/assets/data/library-search.json' | relative_url }}">
+      <summary>Search this library</summary>
+      <p>Find a course, guide or tool by its title, description, topic or filename. This searches the library index; use each guide's contents or search to find a section inside it.</p>
+      <form data-search-form hidden role="search" aria-label="Search the developer library">
+        <div class="search-fields">
+          <label>Words or filename<input type="search" name="q" data-search-input placeholder="For example: Python, SQL, Wine, or LEARNING-PATH" autocomplete="off"></label>
+          <label>Topic<select data-search-topic name="topic"><option value="">All topics</option></select></label>
+          <button type="reset">Clear search</button>
+        </div>
+      </form>
+      <p class="search-status" data-search-status role="status" aria-live="polite">Use the topic catalog if search is unavailable.</p>
+      <ul class="library-results" data-search-results></ul>
+      <p><a href="{{ '/documentation/' | relative_url }}">Browse every topic</a> · <a href="{{ '/learning-paths/' | relative_url }}">Choose a learning path</a></p>
+      <noscript><p>Search needs JavaScript. The topic catalog and learning paths work without it.</p></noscript>
+    </details>
     <article class="content-card markdown-body">
       {% unless content contains '<h1' %}
       <div class="page-heading"><p class="eyebrow">{{ site.title }}</p><h1>{{ page.title | default: site.title }}</h1></div>

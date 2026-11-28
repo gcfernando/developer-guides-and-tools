@@ -75,7 +75,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** More trees do not fix leakage, unrepresentative data or an invalid target. Importance scores do not establish causes.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 No. Fix the prediction-time inputs and fair split first, then compare valid procedures.

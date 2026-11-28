@@ -1,6 +1,6 @@
 # Make useful project choices
 
-[Learning path](LEARNING-PATH.md)
+[Learning path](https://gcfernando.github.io/developer-guides-and-tools/examples/machine-learning/ml-practical-lessons/LEARNING-PATH.html)
 
 A working script is one part of a project. A useful project also needs a clear decision, suitable data and a person who will act on the result.
 
@@ -106,7 +106,7 @@ A library wants to estimate loan duration at checkout. The decision is when to s
 
 **Your task.** Draft the model-card fields for this case. Explain a privacy limit, an error measure, a fallback and the person who responds when later errors rise. Then propose a reason an ordinary due-date rule might be sufficient.
 
-<details>
+<details markdown="1">
 <summary>One reasoned answer</summary>
 
 Use only approved fields needed for the reminder decision; do not expose personal borrowing histories unnecessarily. Read absolute errors in days and inspect large misses and pending-loan coverage. Keep an ordinary due-date reminder as a possible fallback, with a named librarian reviewing data/label changes and results. If the decision is simply “send on the agreed date”, a fixed rule already expresses the policy and no learned estimate is needed. Each card field should connect to that decision rather than become paperwork without an action.

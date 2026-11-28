@@ -80,7 +80,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** Do not report a log-price as a price. Reversing a log fit does not automatically estimate the conditional mean price; compare the original-unit errors and the decision need.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 Use expm1, the inverse of log1p, then compare errors in the original price unit on validation. Keep final test answers out of choosing the transformation.

@@ -76,7 +76,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** Keep credentials out of code and avoid uploading private data. Platform instructions and costs change. Preserve the prediction route, dependencies and input contract when adapting the module.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 No. It is a local expected-contract result. Deployment evidence requires the actual approved service, a request to its endpoint and recorded response, with costs and cleanup checked.

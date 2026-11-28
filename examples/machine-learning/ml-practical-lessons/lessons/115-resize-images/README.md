@@ -71,7 +71,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** Grayscale can discard useful colour information. Resizing and flattening are different operations. A uniform-colour toy image is far simpler than an everyday photograph.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 It becomes 16 values. Apply the saved resizing/preparation rule first; the model expects the same input count and ordering.

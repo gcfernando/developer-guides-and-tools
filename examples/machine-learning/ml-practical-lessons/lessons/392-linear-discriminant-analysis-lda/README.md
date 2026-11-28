@@ -74,7 +74,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** This is supervised. A separated training picture does not establish held-back performance.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 No. Fit the supervised projection inside training; otherwise it leaks test answers.

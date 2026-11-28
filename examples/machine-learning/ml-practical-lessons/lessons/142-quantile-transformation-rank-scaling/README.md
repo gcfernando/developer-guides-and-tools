@@ -80,7 +80,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** The method does not recover a true normal-generating process. Ties and values beyond the training range need inspection; an inverse can only reflect the fitted mapping.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 Not necessarily. It changes spacing based on ranks. Keep original units available for interpretation and validate whether losing gap information helps the task.

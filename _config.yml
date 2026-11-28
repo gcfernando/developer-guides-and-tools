@@ -26,6 +26,7 @@ exclude:
   - scripts
   - tests
   - node_modules
+  - "**/node_modules"
   - vendor
   - .bundle
   - .runtime

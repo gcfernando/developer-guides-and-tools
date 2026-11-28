@@ -91,4 +91,25 @@ function decodedFragment(fragment) {
   return decodeURIComponent(fragment.split(':~:text=')[0]);
 }
 
-module.exports = {cssLinks, parseDocument, decodedFragment};
+// A successful URL check does not establish that Markdown became usable HTML.
+function renderingProblems(document) {
+  const problems = [];
+  const ids = new Map();
+  for (const element of document.querySelectorAll('[id]')) {
+    const id = element.getAttribute('id');
+    if (id) ids.set(id, (ids.get(id) || 0) + 1);
+  }
+  for (const [id, count] of ids) {
+    if (count > 1) problems.push(`duplicate id "${id}" (${count} elements)`);
+  }
+  let raw = 0;
+  for (const disclosure of document.querySelectorAll('details')) {
+    const copy = disclosure.cloneNode(true);
+    for (const code of copy.querySelectorAll('pre, code, script, style, textarea, samp')) code.remove();
+    if (/^[ \t]*(?:#{1,6}[ \t]+\S|`{3,}(?:\w|[ \t]*$))|\[[^\]\n]+\]\([^\s)]+\)/m.test(copy.textContent)) raw++;
+  }
+  if (raw) problems.push(`${raw} disclosure blocks contain unrendered Markdown headings, links or code fences`);
+  return problems;
+}
+
+module.exports = {cssLinks, parseDocument, decodedFragment, renderingProblems};

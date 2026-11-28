@@ -1,0 +1,4136 @@
+{
+  "purpose": "Pre-navigation-fix HEAD compatibility baseline. Keep every captured anchor and progress-control order; add aliases instead of removing old targets.",
+  "pages": {
+    "README": {
+      "source_sha256": "1430f524d96db992c1048702929102beedabc755f20841ce756c07e787e69ce4",
+      "reader_sha256": "c5aa0d9d860b920c7c8e0a0519a7ce8a44fefd5eadfde608d43baeaff657ef99",
+      "source_ids": [
+        "follow-the-practical-route",
+        "for-the-course-author",
+        "machine-learning-practical-lessons",
+        "requirements-and-verification-limits",
+        "start-here",
+        "what-is-included"
+      ],
+      "reader_ids": [
+        "content",
+        "follow-the-practical-route",
+        "for-the-course-author",
+        "machine-learning-practical-lessons",
+        "requirements-and-verification-limits",
+        "start-here",
+        "theme",
+        "visual-dialog",
+        "what-is-included"
+      ],
+      "progress_controls": []
+    },
+    "START-HERE": {
+      "source_sha256": "606212706547077032ffb1f0aa57d61839e3b7b52f9963239ba46930074346b1",
+      "reader_sha256": "55f28e4d7a7d4d317702806205458d69fa17fb9e618c1d3ae74e5162c325dd4e",
+      "source_ids": [
+        "1-meet-one-small-table",
+        "10-check-yourself",
+        "2-make-a-guess-before-using-a-computer",
+        "3-learn-what-the-computer-does",
+        "4-keep-some-answers-for-a-fair-check",
+        "5-expect-real-examples-to-be-messy",
+        "6-know-what-kind-of-answer-you-need",
+        "7-learn-the-computer-words-you-will-need",
+        "8-get-the-whole-course-folder",
+        "9-open-and-edit-one-lesson",
+        "choose-your-route",
+        "start-here"
+      ],
+      "reader_ids": [
+        "1-meet-one-small-table",
+        "10-check-yourself",
+        "2-make-a-guess-before-using-a-computer",
+        "3-learn-what-the-computer-does",
+        "4-keep-some-answers-for-a-fair-check",
+        "5-expect-real-examples-to-be-messy",
+        "6-know-what-kind-of-answer-you-need",
+        "7-learn-the-computer-words-you-will-need",
+        "8-get-the-whole-course-folder",
+        "9-open-and-edit-one-lesson",
+        "choose-your-route",
+        "content",
+        "start-here",
+        "theme",
+        "visual-dialog"
+      ],
+      "progress_controls": []
+    },
+    "SETUP": {
+      "source_sha256": "a0eac5dc499712fa2ec15b7d9ea4fea60a8b04a7849c027499859714fea5f29f",
+      "reader_sha256": "a88f9d6d3d29f91d2364ba3bd1f1b78d2c967cb81d511e12f87e254c6e656314",
+      "source_ids": [
+        "1-find-the-course-folder",
+        "2-install-python-312",
+        "3-open-a-terminal-in-the-course-folder",
+        "4-make-a-private-place-for-course-packages",
+        "5-check-which-python-is-running",
+        "6-run-the-first-lesson",
+        "7-change-one-value",
+        "8-open-another-lesson",
+        "if-something-goes-wrong",
+        "saved-models",
+        "set-up-python",
+        "understand-the-setup-you-just-used",
+        "what-has-been-checked"
+      ],
+      "reader_ids": [
+        "1-find-the-course-folder",
+        "2-install-python-312",
+        "3-open-a-terminal-in-the-course-folder",
+        "4-make-a-private-place-for-course-packages",
+        "5-check-which-python-is-running",
+        "6-run-the-first-lesson",
+        "7-change-one-value",
+        "8-open-another-lesson",
+        "content",
+        "if-something-goes-wrong",
+        "saved-models",
+        "set-up-python",
+        "theme",
+        "understand-the-setup-you-just-used",
+        "visual-dialog",
+        "what-has-been-checked"
+      ],
+      "progress_controls": []
+    },
+    "PYTHON-BASICS": {
+      "source_sha256": "0866ff65d7b90d03ed09157d73f64115b3eacd2a925f42d1d2e28200aefb9ac1",
+      "reader_sha256": "08eda2c44dc680575d7a88b8f37d1274f4b234d449305c1c31b2ab888e23ffe4",
+      "source_ids": [
+        "1-give-a-value-a-name",
+        "2-keep-several-values-in-a-list",
+        "3-read-a-table",
+        "4-select-the-input-and-the-answer",
+        "5-select-some-rows",
+        "6-train-and-predict",
+        "7-reuse-a-small-rule",
+        "8-understand-a-pipeline",
+        "9-run-a-tiny-practice-script",
+        "a-condition-choose-a-branch",
+        "a-dictionary-fields-with-names",
+        "a-loop-repeat-for-each-value",
+        "a-small-start-with-python",
+        "an-object-a-value-with-its-own-operations",
+        "apply-it-without-copying",
+        "check-your-understanding",
+        "read-a-little-more-code-when-you-need-it"
+      ],
+      "reader_ids": [
+        "1-give-a-value-a-name",
+        "2-keep-several-values-in-a-list",
+        "3-read-a-table",
+        "4-select-the-input-and-the-answer",
+        "5-select-some-rows",
+        "6-train-and-predict",
+        "7-reuse-a-small-rule",
+        "8-understand-a-pipeline",
+        "9-run-a-tiny-practice-script",
+        "a-condition-choose-a-branch",
+        "a-dictionary-fields-with-names",
+        "a-loop-repeat-for-each-value",
+        "a-small-start-with-python",
+        "an-object-a-value-with-its-own-operations",
+        "apply-it-without-copying",
+        "check-your-understanding",
+        "content",
+        "read-a-little-more-code-when-you-need-it",
+        "theme",
+        "visual-dialog"
+      ],
+      "progress_controls": []
+    },
+    "LEARNING-PATH": {
+      "source_sha256": "0f56a31d250476643c0a5115b309d121e1ba41295bf661d22b3df587ef2198c5",
+      "reader_sha256": "e54f43952c7b61614df8e020b5c24b6a3bb89393d98b827912c57740cbdc2d37",
+      "source_ids": [
+        "extra-topics",
+        "grow-toward-ml-engineering-in-stages",
+        "how-to-use-a-lesson",
+        "review-what-you-learned",
+        "the-required-order",
+        "two-small-reading-bridges-for-the-early-split-lessons",
+        "what-finishing-means",
+        "why-this-order-matters",
+        "your-learning-path"
+      ],
+      "reader_ids": [
+        "content",
+        "extra-topics",
+        "grow-toward-ml-engineering-in-stages",
+        "how-to-use-a-lesson",
+        "review-what-you-learned",
+        "the-required-order",
+        "theme",
+        "two-small-reading-bridges-for-the-early-split-lessons",
+        "visual-dialog",
+        "what-finishing-means",
+        "why-this-order-matters",
+        "your-learning-path"
+      ],
+      "progress_controls": [
+        "Mark complete: 0. Get ready",
+        "Mark complete: 1. Make a prediction",
+        "Mark complete: 2. Choose a useful question",
+        "Mark complete: 3. Keep a fair check",
+        "Mark complete: 4. Find data problems",
+        "Mark complete: 5. Prepare inputs",
+        "Mark complete: 6. Compare with a simple guess",
+        "Mark complete: 7. Spot memorizing",
+        "Mark complete: 8. Read number errors",
+        "Mark complete: 9. Count category mistakes",
+        "Mark complete: 10. Explain what helped",
+        "Mark complete: 11. Save and use a model",
+        "Mark complete: 12. Watch later results",
+        "Mark complete: 13. Finish the guided project",
+        "Mark complete: 14. Try a new project"
+      ]
+    },
+    "PRACTICE": {
+      "source_sha256": "b2aa6754c683bd861773b3935dcc5f15f6a0c3268e54a3f98d9a814ddf0ce49f",
+      "reader_sha256": "c6047ac72f86f1d203a27b0b84eb2cee0f8e147331773b433278f355fc5d1dde",
+      "source_ids": [
+        "1-a-prediction",
+        "10-explain-without-claiming-a-cause",
+        "11-save-and-request",
+        "12-respond-to-an-alert",
+        "13-finish-a-partly-completed-encoding-task",
+        "14-choose-the-method-in-an-unfamiliar-case",
+        "2-a-useful-project",
+        "3-a-fair-check",
+        "4-find-and-fix-data-problems",
+        "5-prepare-a-new-row",
+        "6-a-simple-baseline",
+        "7-spot-memorizing",
+        "8-read-errors-and-uncertainty",
+        "9-count-category-mistakes",
+        "a-setting-is-a-choice-not-a-magic-number",
+        "practice-before-looking-at-the-answer",
+        "read-the-size-and-direction-of-a-mistake",
+        "review-after-module-12",
+        "review-after-module-4",
+        "review-after-module-8"
+      ],
+      "reader_ids": [
+        "1-a-prediction",
+        "10-explain-without-claiming-a-cause",
+        "11-save-and-request",
+        "12-respond-to-an-alert",
+        "13-finish-a-partly-completed-encoding-task",
+        "14-choose-the-method-in-an-unfamiliar-case",
+        "2-a-useful-project",
+        "3-a-fair-check",
+        "4-find-and-fix-data-problems",
+        "5-prepare-a-new-row",
+        "6-a-simple-baseline",
+        "7-spot-memorizing",
+        "8-read-errors-and-uncertainty",
+        "9-count-category-mistakes",
+        "a-setting-is-a-choice-not-a-magic-number",
+        "content",
+        "practice-before-looking-at-the-answer",
+        "read-the-size-and-direction-of-a-mistake",
+        "review-after-module-12",
+        "review-after-module-4",
+        "review-after-module-8",
+        "theme",
+        "visual-dialog"
+      ],
+      "progress_controls": []
+    },
+    "PROJECT-CHOICES": {
+      "source_sha256": "a3d9415baf51f95569b0f34d7f0a5b0b374cd91d45fc1c828f3fa5b3b96c40ba",
+      "reader_sha256": "29120e43fa1f680efef483b0b365354ca6a7f8f042b9fcea42bbec5941b79542",
+      "source_ids": [
+        "1-fill-in-a-project-brief",
+        "2-check-where-data-came-from",
+        "3-plan-care-for-people-and-data",
+        "4-connect-a-score-to-a-decision",
+        "5-read-results-honestly",
+        "6-write-a-small-model-card",
+        "7-respond-to-worse-later-results",
+        "8-know-this-courses-scope",
+        "make-useful-project-choices",
+        "what-the-current-course-covers",
+        "work-through-a-brief-before-writing-your-own"
+      ],
+      "reader_ids": [
+        "1-fill-in-a-project-brief",
+        "2-check-where-data-came-from",
+        "3-plan-care-for-people-and-data",
+        "4-connect-a-score-to-a-decision",
+        "5-read-results-honestly",
+        "6-write-a-small-model-card",
+        "7-respond-to-worse-later-results",
+        "8-know-this-courses-scope",
+        "content",
+        "make-useful-project-choices",
+        "theme",
+        "visual-dialog",
+        "what-the-current-course-covers",
+        "work-through-a-brief-before-writing-your-own"
+      ],
+      "progress_controls": []
+    },
+    "ELECTIVES": {
+      "source_sha256": "3d8d33ebc16c60723120043e6b0f237a71f9e045a128e784d729ddb9204bf579",
+      "reader_sha256": "3907ed74ade3a6c196e011d2fc3eee7933ba8d20e6ec978f2048834ed3f4476e",
+      "source_ids": [
+        "a-bridge-before-arrays-and-sequence-models",
+        "a-bridge-before-networks-trace-one-learning-step",
+        "a-few-useful-safeguards-for-learning",
+        "extra-topics-one-small-step-at-a-time",
+        "read-a-mathematical-expression-without-memorizing-it"
+      ],
+      "reader_ids": [
+        "a-bridge-before-arrays-and-sequence-models",
+        "a-bridge-before-networks-trace-one-learning-step",
+        "a-few-useful-safeguards-for-learning",
+        "content",
+        "extra-topics-one-small-step-at-a-time",
+        "read-a-mathematical-expression-without-memorizing-it",
+        "theme",
+        "visual-dialog"
+      ],
+      "progress_controls": []
+    },
+    "GLOSSARY": {
+      "source_sha256": "8467220fad94acc953fe7d8befda9814a5565f9fd3492a4475e5b5d58f90ca44",
+      "reader_sha256": "ef44bb91c2c918304b589e12a04ed54a92b047a81fe8a840fe0a80ebf59a233f",
+      "source_ids": [
+        "-files-and-data",
+        "-searchable-glossary",
+        "-training-and-checks",
+        "-using-a-model",
+        "code-and-learning-words",
+        "small-numbers-and-shapes"
+      ],
+      "reader_ids": [
+        "code-and-learning-words",
+        "content",
+        "files-and-data",
+        "searchable-glossary",
+        "small-numbers-and-shapes",
+        "theme",
+        "training-and-checks",
+        "using-a-model",
+        "visual-dialog"
+      ],
+      "progress_controls": []
+    },
+    "INDEPENDENT-PROJECT": {
+      "source_sha256": "fc8f10905332bab9d730fac08920cced2bf6094188fd3189bfcaf24e07231cac",
+      "reader_sha256": "75001504c38cc490941a93fa211e931509c87cad6dd2dc662349b72eb334bdbe",
+      "source_ids": [
+        "1-open-the-files",
+        "2-write-a-brief",
+        "3-inspect-and-plan",
+        "4-fill-in-the-missing-work",
+        "5-make-final-predictions",
+        "6-explain-and-hand-over",
+        "build-a-model-for-a-new-table",
+        "ideas-route",
+        "your-question"
+      ],
+      "reader_ids": [
+        "1-open-the-files",
+        "2-write-a-brief",
+        "3-inspect-and-plan",
+        "4-fill-in-the-missing-work",
+        "5-make-final-predictions",
+        "6-explain-and-hand-over",
+        "build-a-model-for-a-new-table",
+        "content",
+        "ideas-route",
+        "theme",
+        "visual-dialog",
+        "your-question"
+      ],
+      "progress_controls": []
+    },
+    "TEACHING": {
+      "source_sha256": "61704cb90d3430247b80c3f996548a04d137ecb82bb67399aedcddd63245eef0",
+      "reader_sha256": "63c2c6ee7c533b948ebf548ddea4f1277a2f500674f404694560c84d8c3e7a57",
+      "source_ids": [
+        "before-a-lesson",
+        "build-the-deliverables",
+        "check-and-teach-this-course",
+        "check-every-teaching-unit",
+        "check-the-reading-experience",
+        "keep-evidence-of-full-coverage",
+        "observe-new-learners",
+        "release-evidence",
+        "research-behind-the-teaching-approach",
+        "score-an-independent-project",
+        "test-a-clean-computer-setup",
+        "who-owns-the-work"
+      ],
+      "reader_ids": [
+        "before-a-lesson",
+        "build-the-deliverables",
+        "check-and-teach-this-course",
+        "check-every-teaching-unit",
+        "check-the-reading-experience",
+        "content",
+        "keep-evidence-of-full-coverage",
+        "observe-new-learners",
+        "release-evidence",
+        "research-behind-the-teaching-approach",
+        "score-an-independent-project",
+        "test-a-clean-computer-setup",
+        "theme",
+        "visual-dialog",
+        "who-owns-the-work"
+      ],
+      "progress_controls": []
+    },
+    "Data-Science-and-Machine-Learning": {
+      "source_sha256": "092ffc1fab8e306ad28428795b4d51ad9dbc24dc566cc28e732e40f0c5c60ef9",
+      "reader_sha256": "6f2cb3c8711e99db0164fce80b46eaa3c710bef13748b742e867c1a504a090e0",
+      "source_ids": [
+        "-1-data-science-pipeline",
+        "-1-data-science-pipeline-1",
+        "-11-problem-definition",
+        "-11-problem-definition-1",
+        "-110-model-monitoring--maintenance",
+        "-110-model-monitoring--maintenance-1",
+        "-12-data-collection",
+        "-12-data-collection-1",
+        "-13-data-cleaning--preprocessing",
+        "-13-data-cleaning--preprocessing-1",
+        "-1310-handle-large-numbers",
+        "-1310-handle-large-numbers-1",
+        "-132-remove-duplicates",
+        "-132-remove-duplicates-1",
+        "-133-fix-inconsistent-data",
+        "-133-fix-inconsistent-data-1",
+        "-134-handle-outliers",
+        "-134-handle-outliers-1",
+        "-138-handle-boolean-data",
+        "-138-handle-boolean-data-1",
+        "-139-handle-datetime-data",
+        "-139-handle-datetime-data-1",
+        "-14-exploratory-data-analysis-eda",
+        "-14-exploratory-data-analysis-eda-1",
+        "-17-model-selection--training",
+        "-17-model-selection--training-1",
+        "-18-model-evaluation",
+        "-18-model-evaluation-1",
+        "-19-model-deployment",
+        "-19-model-deployment-1",
+        "-1️⃣-min-max-scaling-normalization",
+        "-2-data-sets",
+        "-2-data-sets-1",
+        "-21-invented-salary-records",
+        "-21-invented-salary-records-1",
+        "-210-invented-bank-campaign-records",
+        "-210-invented-bank-campaign-records-1",
+        "-211-invented-health-related-rows",
+        "-212-hand-drawn-clothing-shapes",
+        "-212-hand-drawn-clothing-shapes-1",
+        "-213-invented-app-listings",
+        "-213-invented-app-listings-1",
+        "-22-invented-ferry-boarding-records",
+        "-23-invented-house-listings",
+        "-23-invented-house-listings-1",
+        "-24-invented-flower-measurements",
+        "-24-invented-flower-measurements-1",
+        "-25-invented-income-records",
+        "-25-invented-income-records-1",
+        "-26-invented-drink-measurements",
+        "-26-invented-drink-measurements-1",
+        "-27-invented-neighbourhood-prices",
+        "-28-hand-drawn-digit-shapes",
+        "-28-hand-drawn-digit-shapes-1",
+        "-29-invented-shopper-groups",
+        "-2️⃣-z-score-standardization-standardization",
+        "-3-machine-learning-categories",
+        "-3-machine-learning-categories-1",
+        "-31-supervised-learning",
+        "-31-supervised-learning-1",
+        "-32-unsupervised-learning",
+        "-32-unsupervised-learning-1",
+        "-33-semi-supervised-learning",
+        "-33-semi-supervised-learning-1",
+        "-34-reinforcement-learning",
+        "-34-reinforcement-learning-1",
+        "-3️⃣-log-transformation-log-scaling",
+        "-442--choose-the-right-data-split",
+        "-443--spot-overfitting-with-a-validation-curve",
+        "-444--choose-a-cutoff-for-rare-urgent-orders",
+        "-445--check-whether-predicted-probabilities-are-reliable",
+        "-446--evaluate-delivery-errors-by-route-weight-and-zone",
+        "-447--capstone-from-delivery-csv-to-local-model-service",
+        "-4️⃣-robust-scaling-median--iqr-scaling",
+        "-5️⃣-power-transformations-box-cox--yeo-johnson",
+        "-6️⃣-quantile-transformation-rank-scaling",
+        "-70-20-10-train-validation-test",
+        "-7️⃣-binning-discretization",
+        "-80-20-train-test",
+        "-8️⃣-polynomial-features-feature-expansion",
+        "-a-dashboard-that-refreshes-on-your-computer",
+        "-accuracy-precision-recall-f1-score-auc-roc",
+        "-actor-critic",
+        "-agent",
+        "-anomaly-detection",
+        "-apis-web-apps-or-cloud-services",
+        "-apply-log-transformation-if-data-is-highly-skewed",
+        "-apriori-algorithm",
+        "-association",
+        "-audio-waves-spectrograms",
+        "-bar-plots",
+        "-bayesian-optimization",
+        "-box-plots",
+        "-boxplots--visualization",
+        "-categorical-encoding",
+        "-categorical-encoding-1",
+        "-categorical-encoding-10",
+        "-categorical-encoding-2",
+        "-categorical-encoding-3",
+        "-categorical-encoding-4",
+        "-categorical-encoding-5",
+        "-categorical-encoding-6",
+        "-categorical-encoding-7",
+        "-categorical-encoding-8",
+        "-categorical-encoding-9",
+        "-category-summary--final-algorithm-diagram",
+        "-choose-the-best-machine-learning-model",
+        "-classification-algorithms",
+        "-classification-metrics",
+        "-clustering-algorithms",
+        "-co-training",
+        "-common-algorithms",
+        "-common-algorithms-1",
+        "-common-algorithms-2",
+        "-common-algorithms-3",
+        "-common-split-ratios",
+        "-complex-data-json-xml-dictionaries",
+        "-confusion-matrix",
+        "-contents",
+        "-convert-boolean-values-to-standard-format-1-or-0",
+        "-convert-text-to-numerical-representation",
+        "-convert-to-coordinates",
+        "-convert-to-datetime-format",
+        "-convert-to-lowercase--remove-punctuation",
+        "-convert-to-scientific-notation-if-values-are-too-large",
+        "-countvectorizer",
+        "-create-new-features",
+        "-cross-validation",
+        "-dbscan",
+        "-decision-trees-for-classification",
+        "-decision-trees-for-regression",
+        "-deep-q-networks-dqn",
+        "-define-the-objective",
+        "-description",
+        "-description-1",
+        "-description-10",
+        "-description-11",
+        "-description-12",
+        "-description-2",
+        "-description-3",
+        "-description-4",
+        "-description-5",
+        "-description-6",
+        "-description-7",
+        "-description-8",
+        "-description-9",
+        "-detect--remove-exact-duplicates",
+        "-detect-data-drift",
+        "-detection-methods",
+        "-dimensionality-reduction",
+        "-drift-detection-charts",
+        "-environment",
+        "-fastapi",
+        "-feature-engineering",
+        "-feature-extraction",
+        "-feature-importance-plot",
+        "-feature-scaling",
+        "-feature-scaling-1",
+        "-feature-scaling-2",
+        "-feature-scaling-3",
+        "-feature-scaling-4",
+        "-feature-scaling-5",
+        "-feature-scaling-6",
+        "-feature-scaling-7",
+        "-feature-scaling-8",
+        "-feature-scaling-9",
+        "-feature-selection",
+        "-fill-missing-values-with-mode",
+        "-first-api-call-from-a-web-page",
+        "-flask",
+        "-flask-fastapi-or-streamlit",
+        "-flattening",
+        "-frequent-pattern-growth",
+        "-gather-structured-and-unstructured-data",
+        "-gaussian-mixture-models-gmm",
+        "-geocoding-apis",
+        "-geospatial-latlong-addresses",
+        "-given-the-model",
+        "-gradient-boosting",
+        "-gradient-boosting-gbm",
+        "-grid-search",
+        "-handle-data-privacy--security-concerns",
+        "-handle-missing-dates-using-interpolation",
+        "-handle-missing-values",
+        "-handle-near-duplicates",
+        "-handling-skewed-data",
+        "-hierarchical-clustering",
+        "-histograms",
+        "-identify-data-sources",
+        "-identify-key-performance-metrics",
+        "-identify-missing-values",
+        "-image-embeddings",
+        "-implement-automated-alerts",
+        "-impute",
+        "-interquartile-range-iqr",
+        "-isolation-forest",
+        "-k-means",
+        "-k-means-classifier",
+        "-k-nearest-neighbors-knn",
+        "-key-concepts",
+        "-learn-the-model",
+        "-lesson-downloads",
+        "-lightgbm",
+        "-lightgbm-1",
+        "-linear-regression",
+        "-logistic-regression",
+        "-machine-learning-algorithms",
+        "-missing-values",
+        "-missing-values-1",
+        "-missing-values-2",
+        "-missing-values-3",
+        "-missing-values-4",
+        "-missing-values-5",
+        "-missing-values-6",
+        "-missing-values-7",
+        "-missing-values-8",
+        "-model-free",
+        "-monitor-model-accuracy--performance-over-time",
+        "-monte-carlo-tree-search-mcts",
+        "-multivariate-regression",
+        "-naive-bayes",
+        "-normalization",
+        "-normalization-1",
+        "-normalization-2",
+        "-normalization-min-max-scaling",
+        "-numerical-data-mean-median-mode-knn-imputer",
+        "-one-class-svm",
+        "-one-hot-encoding",
+        "-one-hot-encoding-for-unordered-categories",
+        "-outliers",
+        "-outliers-1",
+        "-outliers-10",
+        "-outliers-11",
+        "-outliers-2",
+        "-outliers-3",
+        "-outliers-4",
+        "-outliers-5",
+        "-outliers-6",
+        "-outliers-7",
+        "-outliers-8",
+        "-outliers-9",
+        "-pair-plots",
+        "-pdf-page-map",
+        "-policy",
+        "-policy-gradient-methods",
+        "-polynomial-regression",
+        "-practice",
+        "-practice-1",
+        "-practice-10",
+        "-practice-11",
+        "-practice-12",
+        "-practice-2",
+        "-practice-3",
+        "-practice-4",
+        "-practice-5",
+        "-practice-6",
+        "-practice-7",
+        "-practice-8",
+        "-practice-9",
+        "-principal-component-analysis-pca",
+        "-q-learning",
+        "-random-forest-for-classification",
+        "-random-forest-for-regression",
+        "-random-search",
+        "-read-the-output-before-changing-the-requests",
+        "-regression",
+        "-regression-algorithms",
+        "-regression-metrics",
+        "-remove",
+        "-remove-1",
+        "-remove-irrelevant-or-redundant-features",
+        "-remove-stop-words-eg-the-and-is",
+        "-residual-plots",
+        "-resizing",
+        "-resizing-1",
+        "-rest-api-or-integrate-with-mobileweb-apps",
+        "-retrain-the-model-periodically-with-new-data",
+        "-reward",
+        "-rmse-mae-r-score",
+        "-roc-curve",
+        "-scaling",
+        "-scatter-plots",
+        "-scheduled-model-checks",
+        "-self-training",
+        "-semi-supervised-support-vector-machines-s3vm",
+        "-set-constraints--assumptions",
+        "-simple-linear-regression",
+        "-source",
+        "-source-1",
+        "-source-10",
+        "-source-11",
+        "-source-12",
+        "-source-2",
+        "-source-3",
+        "-source-4",
+        "-source-5",
+        "-source-6",
+        "-source-7",
+        "-source-8",
+        "-source-9",
+        "-spot-check-and-handle-an-outlier",
+        "-standardization-z-score-scaling",
+        "-standardize-formats",
+        "-start-here",
+        "-start-here-1",
+        "-state",
+        "-stratified-sampling",
+        "-support-vector-machines-svm",
+        "-support-vector-regression-svr",
+        "-t-distributed-stochastic-neighbor-embedding-t-sne",
+        "-target-encoding-for-many-different-categories",
+        "-test-set",
+        "-tf-idf",
+        "-the-training-range-is-150-km-a-user-enters-90-km",
+        "-time-series-data-forward-fill-ffill-backward-fill-bfill",
+        "-tokenization--lemmatization",
+        "-train-once-test-many-times",
+        "-train-once-then-test-with-different-data",
+        "-training-set",
+        "-transform-data",
+        "-transform-features",
+        "-turn-ordered-names-into-numbers-ordinalencoder",
+        "-understand-the-domain-knowledge-related-to-the-data",
+        "-use-labels-to-make-fewer-inputs-supervised-lda",
+        "-use-statistical-tests-anova-chi-square-test",
+        "-validation-set",
+        "-value-function",
+        "-video-frames-sequences",
+        "-visualization",
+        "-visualization-helps-here",
+        "-visualization-helps-track-model-performance",
+        "-visualization-is-used-here",
+        "-visualization-is-used-here-1",
+        "-visualization-techniques",
+        "-visualization-techniques-1",
+        "-visualization-techniques-2",
+        "-visualization-techniques-3",
+        "-when-to-use",
+        "-which-technique-should-you-use",
+        "-word-embeddings-word2vec-bert-etc",
+        "-xgboost",
+        "-xgboost-1",
+        "-your-first-prediction",
+        "-z-score-algorithm",
+        "-z-score-method",
+        "1-1-problem-definition",
+        "1-10-model-monitoring-maintenance",
+        "1-2-data-collection",
+        "1-3-1-handle-missing-values",
+        "1-3-10-handle-large-numbers",
+        "1-3-2-remove-duplicates",
+        "1-3-3-fix-inconsistent-data",
+        "1-3-4-handle-outliers",
+        "1-3-5-normalize-or-standardize-data",
+        "1-3-6-convert-categorical-data",
+        "1-3-7-text-data-cleaning",
+        "1-3-8-handle-boolean-data",
+        "1-3-9-handle-date-time-data",
+        "1-3-data-cleaning-preprocessing",
+        "1-4-exploratory-data-analysis-eda",
+        "1-5-feature-engineering-feature-selection",
+        "1-6-data-splitting",
+        "1-7-model-selection-training",
+        "1-8-model-evaluation",
+        "1-9-model-deployment",
+        "1-data-science-pipeline",
+        "2-1-salary-experience-dataset",
+        "2-10-bank-marketing-dataset",
+        "2-11-heart-disease-dataset",
+        "2-12-fashion-mnist",
+        "2-13-google-play-store-dataset",
+        "2-2-titanic-dataset",
+        "2-3-house-prices-dataset",
+        "2-4-iris-dataset",
+        "2-5-uci-adult-income-dataset",
+        "2-6-wine-quality-dataset",
+        "2-7-boston-housing-dataset",
+        "2-8-mnist-dataset",
+        "2-9-customer-segmentation-dataset",
+        "2-data-sets",
+        "3-1-supervised-learning",
+        "3-2-unsupervised-learning",
+        "3-3-semi-supervised-learning",
+        "3-4-reinforcement-learning",
+        "3-machine-learning-categories",
+        "70-20-10-train-validation-test",
+        "80-20-train-test",
+        "a-dashboard-that-refreshes-on-your-computer",
+        "accuracy-precision-recall-f1-score-auc-roc",
+        "actions",
+        "actor-critic",
+        "agent",
+        "anomaly-detection",
+        "apis-web-apps-or-cloud-services",
+        "applied-labs",
+        "apply-log-transformation-if-data-is-highly-skewed",
+        "apriori-algorithm",
+        "association",
+        "audio-waves-spectrograms",
+        "aws-google-cloud-or-heroku",
+        "bar-plots",
+        "bayesian-optimization",
+        "beginner-path",
+        "binning-discretization",
+        "box-plots",
+        "boxplots-visualization",
+        "cap-clip-values",
+        "categorical-data-mode-unknown-placeholder",
+        "choose-the-best-machine-learning-model",
+        "classification-algorithms",
+        "classification-metrics",
+        "cloud-deployment-walkthrough",
+        "clustering-algorithms",
+        "co-training",
+        "common-algorithms",
+        "common-algorithms-2",
+        "common-algorithms-3",
+        "common-algorithms-4",
+        "common-split-ratios",
+        "complex-data-json-xml-dictionaries",
+        "confusion-matrix",
+        "contents",
+        "convert-boolean-values-to-standard-format-1-or-0",
+        "convert-text-to-numerical-representation",
+        "convert-to-coordinates",
+        "convert-to-datetime-format",
+        "convert-to-lowercase-remove-punctuation",
+        "convert-to-scientific-notation-if-values-are-too-large",
+        "core-course",
+        "core-lesson-library",
+        "countvectorizer",
+        "create-new-features",
+        "cross-validation",
+        "data",
+        "data-types-issues-preprocessing-techniques",
+        "dbscan",
+        "decision-trees-for-classification",
+        "decision-trees-for-regression",
+        "deep-q-networks-dqn",
+        "define-the-objective",
+        "description",
+        "description-10",
+        "description-11",
+        "description-12",
+        "description-13",
+        "description-2",
+        "description-3",
+        "description-4",
+        "description-5",
+        "description-6",
+        "description-7",
+        "description-8",
+        "description-9",
+        "detect-data-drift",
+        "detect-remove-exact-duplicates",
+        "detection-methods",
+        "dimensionality-reduction",
+        "drift-detection-charts",
+        "encoding-categorical-variables",
+        "environment",
+        "extract-useful-features-year-month-day-weekday-hour-etc",
+        "fastapi",
+        "feature-engineering",
+        "feature-importance-plot",
+        "feature-selection",
+        "fill-missing-values-with-mode",
+        "first-api-call-from-a-web-page",
+        "fix-typos-and-spelling-variations",
+        "flask",
+        "flask-fastapi-or-streamlit",
+        "focused-tasks-for-shared-exercises",
+        "frequent-pattern-growth",
+        "gather-structured-and-unstructured-data",
+        "gaussian-mixture-models-gmm",
+        "geocoding-apis",
+        "geospatial-lat-long-addresses",
+        "given-the-model",
+        "gradient-boosting",
+        "gradient-boosting-gbm",
+        "grid-search",
+        "handle-data-privacy-security-concerns",
+        "handle-missing-dates-using-interpolation",
+        "handle-missing-values",
+        "handle-near-duplicates",
+        "handling-strategies",
+        "heatmaps",
+        "hierarchical-clustering",
+        "histograms",
+        "identify-data-sources",
+        "identify-key-performance-metrics",
+        "identify-missing-values",
+        "image-embeddings",
+        "images-pixels-matrices",
+        "implement-automated-alerts",
+        "impute",
+        "independent-component-analysis-ica",
+        "interquartile-range-iqr",
+        "isolation-forest",
+        "k-means",
+        "k-means-classifier",
+        "k-nearest-neighbors-knn",
+        "key-concepts",
+        "label-encoding-for-ordered-categories",
+        "label-propagation",
+        "learn-and-apply-1-data-science-pipeline",
+        "learn-and-apply-11-problem-definition",
+        "learn-and-apply-110-model-monitoring--maintenance",
+        "learn-and-apply-12-data-collection",
+        "learn-and-apply-13-data-cleaning--preprocessing",
+        "learn-and-apply-131-handle-missing-values",
+        "learn-and-apply-1310-handle-large-numbers",
+        "learn-and-apply-132-remove-duplicates",
+        "learn-and-apply-133-fix-inconsistent-data",
+        "learn-and-apply-134-handle-outliers",
+        "learn-and-apply-135-normalize-or-standardize-data",
+        "learn-and-apply-136-convert-category-data",
+        "learn-and-apply-137-text-data-cleaning",
+        "learn-and-apply-138-handle-boolean-data",
+        "learn-and-apply-139-handle-datetime-data",
+        "learn-and-apply-14-exploratory-data-analysis-eda",
+        "learn-and-apply-15-feature-engineering--feature-selection",
+        "learn-and-apply-16-data-splitting",
+        "learn-and-apply-17-model-selection--training",
+        "learn-and-apply-18-model-evaluation",
+        "learn-and-apply-19-model-deployment",
+        "learn-and-apply-2-data-sets",
+        "learn-and-apply-3-machine-learning-categories",
+        "learn-and-apply-31-supervised-learning",
+        "learn-and-apply-32-unsupervised-learning",
+        "learn-and-apply-33-semi-supervised-learning",
+        "learn-and-apply-34-reinforcement-learning",
+        "learn-and-apply-70-20-10-train-validation-test",
+        "learn-and-apply-80-20-train-test",
+        "learn-and-apply-a-dashboard-that-refreshes-on-your-computer",
+        "learn-and-apply-accuracy",
+        "learn-and-apply-accuracy-precision-recall-f1-score-auc-roc",
+        "learn-and-apply-actions",
+        "learn-and-apply-actor-critic",
+        "learn-and-apply-age-from-date-of-birth",
+        "learn-and-apply-agent",
+        "learn-and-apply-anomaly-detection",
+        "learn-and-apply-anomaly-detection-diagram",
+        "learn-and-apply-anova",
+        "learn-and-apply-api-deployment",
+        "learn-and-apply-apis",
+        "learn-and-apply-apis-web-apps-or-cloud-services",
+        "learn-and-apply-apply-log-transformation-if-data-is-highly-skewed",
+        "learn-and-apply-apriori-algorithm",
+        "learn-and-apply-association",
+        "learn-and-apply-association-diagram",
+        "learn-and-apply-auc-roc",
+        "learn-and-apply-audio-waves-spectrograms",
+        "learn-and-apply-aws",
+        "learn-and-apply-aws-google-cloud-or-heroku",
+        "learn-and-apply-backward-fill-bfill",
+        "learn-and-apply-bar-plots",
+        "learn-and-apply-bayesian-optimization",
+        "learn-and-apply-bert",
+        "learn-and-apply-binning-discretization",
+        "learn-and-apply-boolean-truefalse",
+        "learn-and-apply-box-cox-transformation",
+        "learn-and-apply-box-plots",
+        "learn-and-apply-boxplots--visualization",
+        "learn-and-apply-capclip-values",
+        "learn-and-apply-capstone-from-delivery-csv-to-local-model-service",
+        "learn-and-apply-category-data-mode-unknown-placeholder",
+        "learn-and-apply-category-encoding",
+        "learn-and-apply-category-encoding-1",
+        "learn-and-apply-category-encoding-10",
+        "learn-and-apply-category-encoding-2",
+        "learn-and-apply-category-encoding-3",
+        "learn-and-apply-category-encoding-4",
+        "learn-and-apply-category-encoding-5",
+        "learn-and-apply-category-encoding-6",
+        "learn-and-apply-category-encoding-7",
+        "learn-and-apply-category-encoding-8",
+        "learn-and-apply-category-encoding-9",
+        "learn-and-apply-category-enum-labels",
+        "learn-and-apply-category-mode",
+        "learn-and-apply-check-whether-predicted-probabilities-are-reliable",
+        "learn-and-apply-chi-square-test",
+        "learn-and-apply-choose-a-cutoff-for-rare-urgent-orders",
+        "learn-and-apply-choose-the-best-machine-learning-model",
+        "learn-and-apply-choose-the-right-data-split",
+        "learn-and-apply-classification-algorithms",
+        "learn-and-apply-classification-diagram",
+        "learn-and-apply-classification-metrics",
+        "learn-and-apply-classification-semi-supervised",
+        "learn-and-apply-cloud-deployment-walkthrough",
+        "learn-and-apply-cloud-services",
+        "learn-and-apply-cloud-storage",
+        "learn-and-apply-clustering-algorithms",
+        "learn-and-apply-clustering-diagram",
+        "learn-and-apply-cnn-and-lstm-sequence-modeling",
+        "learn-and-apply-co-training",
+        "learn-and-apply-collection-method",
+        "learn-and-apply-common-algorithms",
+        "learn-and-apply-common-algorithms-1",
+        "learn-and-apply-common-algorithms-2",
+        "learn-and-apply-common-algorithms-3",
+        "learn-and-apply-common-split-ratios",
+        "learn-and-apply-compare-multiple-models",
+        "learn-and-apply-complex-data-json-xml-dictionaries",
+        "learn-and-apply-confusion-matrix",
+        "learn-and-apply-convert-boolean-values-to-standard-format-1-or-0",
+        "learn-and-apply-convert-date-formats-mmddyyyy-to-yyyy-mm-dd",
+        "learn-and-apply-convert-text-to-lowercase-and-remove-spaces",
+        "learn-and-apply-convert-text-to-numerical-representation",
+        "learn-and-apply-convert-to-coordinates",
+        "learn-and-apply-convert-to-datetime-format",
+        "learn-and-apply-convert-to-lowercase--remove-punctuation",
+        "learn-and-apply-convert-to-scientific-notation-if-values-are-too-large",
+        "learn-and-apply-countvectorizer",
+        "learn-and-apply-create-new-features",
+        "learn-and-apply-cross-validation",
+        "learn-and-apply-data",
+        "learn-and-apply-data-distributions-mean-median-skewness",
+        "learn-and-apply-data-type",
+        "learn-and-apply-data-types-issues--preprocessing-techniques",
+        "learn-and-apply-database-storage",
+        "learn-and-apply-databases",
+        "learn-and-apply-datetime-timestamps-dates",
+        "learn-and-apply-day",
+        "learn-and-apply-dbscan",
+        "learn-and-apply-decision-trees-for-classification",
+        "learn-and-apply-decision-trees-for-regression",
+        "learn-and-apply-deep-q-networks-dqn",
+        "learn-and-apply-define-the-objective",
+        "learn-and-apply-description",
+        "learn-and-apply-description-1",
+        "learn-and-apply-description-10",
+        "learn-and-apply-description-11",
+        "learn-and-apply-description-12",
+        "learn-and-apply-description-2",
+        "learn-and-apply-description-3",
+        "learn-and-apply-description-4",
+        "learn-and-apply-description-5",
+        "learn-and-apply-description-6",
+        "learn-and-apply-description-7",
+        "learn-and-apply-description-8",
+        "learn-and-apply-description-9",
+        "learn-and-apply-detect--remove-exact-duplicates",
+        "learn-and-apply-detect-data-drift",
+        "learn-and-apply-detecting-outliers--anomalies",
+        "learn-and-apply-detection-methods",
+        "learn-and-apply-dictionaries-and-missing-keys",
+        "learn-and-apply-dimensionality-reduction",
+        "learn-and-apply-dimensionality-reduction-diagram",
+        "learn-and-apply-drift-detection-charts",
+        "learn-and-apply-encoding-category-variables",
+        "learn-and-apply-ensure-correct-units-kg-vs-lbs",
+        "learn-and-apply-environment",
+        "learn-and-apply-evaluate-delivery-errors-by-route-weight-and-zone",
+        "learn-and-apply-extract-useful-features-year-month-day-weekday-hour-etc",
+        "learn-and-apply-extract-xml-fields",
+        "learn-and-apply-extracting-keywords-from-text",
+        "learn-and-apply-f1-score",
+        "learn-and-apply-fastapi",
+        "learn-and-apply-feature-engineering",
+        "learn-and-apply-feature-extraction",
+        "learn-and-apply-feature-importance-plot",
+        "learn-and-apply-feature-relationships-and-overlap-between-inputs-multicollinearity",
+        "learn-and-apply-feature-scaling",
+        "learn-and-apply-feature-scaling-1",
+        "learn-and-apply-feature-scaling-2",
+        "learn-and-apply-feature-scaling-3",
+        "learn-and-apply-feature-scaling-4",
+        "learn-and-apply-feature-scaling-5",
+        "learn-and-apply-feature-scaling-6",
+        "learn-and-apply-feature-scaling-7",
+        "learn-and-apply-feature-scaling-8",
+        "learn-and-apply-feature-scaling-9",
+        "learn-and-apply-feature-selection",
+        "learn-and-apply-file-size",
+        "learn-and-apply-files",
+        "learn-and-apply-fill-a-blank",
+        "learn-and-apply-fill-missing-values-with-mode",
+        "learn-and-apply-first-api-call-from-a-web-page",
+        "learn-and-apply-fix-typos-and-spelling-variations",
+        "learn-and-apply-fixed-range--1-1",
+        "learn-and-apply-fixed-range-0-1",
+        "learn-and-apply-flask",
+        "learn-and-apply-flask-fastapi-or-streamlit",
+        "learn-and-apply-flatten-json",
+        "learn-and-apply-flattening",
+        "learn-and-apply-forward-fill-ffill",
+        "learn-and-apply-frequent-pattern-growth",
+        "learn-and-apply-frequently-occurring-items",
+        "learn-and-apply-fuzzy-matching",
+        "learn-and-apply-gather-structured-and-unstructured-data",
+        "learn-and-apply-gaussian-mixture-models-gmm",
+        "learn-and-apply-gdpr",
+        "learn-and-apply-geocoding-apis",
+        "learn-and-apply-geospatial-latlong-addresses",
+        "learn-and-apply-given-the-model",
+        "learn-and-apply-google-cloud",
+        "learn-and-apply-gradient-boosting",
+        "learn-and-apply-gradient-boosting-gbm",
+        "learn-and-apply-grayscale",
+        "learn-and-apply-grid-search",
+        "learn-and-apply-hand-drawn-clothing-shapes",
+        "learn-and-apply-hand-drawn-digits",
+        "learn-and-apply-handle-data-privacy--security-concerns",
+        "learn-and-apply-handle-missing-dates-using-interpolation",
+        "learn-and-apply-handle-missing-values",
+        "learn-and-apply-handle-near-duplicates",
+        "learn-and-apply-handling-skewed-data",
+        "learn-and-apply-handling-strategies",
+        "learn-and-apply-heatmaps",
+        "learn-and-apply-heroku",
+        "learn-and-apply-hierarchical-clustering",
+        "learn-and-apply-hipaa",
+        "learn-and-apply-histograms",
+        "learn-and-apply-hour",
+        "learn-and-apply-identify-data-sources",
+        "learn-and-apply-identify-key-performance-metrics",
+        "learn-and-apply-identify-missing-values",
+        "learn-and-apply-image-embeddings",
+        "learn-and-apply-image-pixels-for-a-nearest-neighbour-model",
+        "learn-and-apply-images-pixels-matrices",
+        "learn-and-apply-implement-automated-alerts",
+        "learn-and-apply-independent-component-analysis-ica",
+        "learn-and-apply-interquartile-range-iqr",
+        "learn-and-apply-invented-app-listings",
+        "learn-and-apply-invented-bank-campaign-records",
+        "learn-and-apply-invented-drink-measurements",
+        "learn-and-apply-invented-ferry-boarding-records",
+        "learn-and-apply-invented-flower-measurements",
+        "learn-and-apply-invented-health-related-practice-rows",
+        "learn-and-apply-invented-house-listings",
+        "learn-and-apply-invented-income-records",
+        "learn-and-apply-invented-neighbourhood-prices",
+        "learn-and-apply-invented-salary-records",
+        "learn-and-apply-invented-shopper-groups",
+        "learn-and-apply-isolation-forest",
+        "learn-and-apply-k-means",
+        "learn-and-apply-k-means-classifier",
+        "learn-and-apply-k-nearest-neighbors-knn",
+        "learn-and-apply-key-concepts",
+        "learn-and-apply-knn-imputer",
+        "learn-and-apply-label-propagation",
+        "learn-and-apply-large-numbers-bigint-long-float",
+        "learn-and-apply-lasso-regression",
+        "learn-and-apply-learn-the-model",
+        "learn-and-apply-lemmatization",
+        "learn-and-apply-lightgbm",
+        "learn-and-apply-lightgbm-1",
+        "learn-and-apply-linear-regression",
+        "learn-and-apply-live-dashboards-using-tableau-power-bi-or-matplotlibseaborn",
+        "learn-and-apply-local-storage",
+        "learn-and-apply-log-transformation",
+        "learn-and-apply-log-transformation-log-scaling",
+        "learn-and-apply-log1p-and-base-10-log",
+        "learn-and-apply-logistic-regression",
+        "learn-and-apply-machine-learning-algorithms",
+        "learn-and-apply-mae",
+        "learn-and-apply-matplotlib",
+        "learn-and-apply-mean",
+        "learn-and-apply-median",
+        "learn-and-apply-mfcc-features",
+        "learn-and-apply-min-max-scaling-normalization",
+        "learn-and-apply-missing-values",
+        "learn-and-apply-missing-values-1",
+        "learn-and-apply-missing-values-2",
+        "learn-and-apply-missing-values-3",
+        "learn-and-apply-missing-values-4",
+        "learn-and-apply-missing-values-5",
+        "learn-and-apply-missing-values-6",
+        "learn-and-apply-missing-values-7",
+        "learn-and-apply-missing-values-8",
+        "learn-and-apply-mobile-app-integration",
+        "learn-and-apply-mode",
+        "learn-and-apply-model-based",
+        "learn-and-apply-model-free",
+        "learn-and-apply-monitor-model-accuracy--performance-over-time",
+        "learn-and-apply-monte-carlo-tree-search-mcts",
+        "learn-and-apply-month",
+        "learn-and-apply-mp4-and-frame-extraction",
+        "learn-and-apply-multiple-linear-regression",
+        "learn-and-apply-multivariate-regression",
+        "learn-and-apply-naive-bayes",
+        "learn-and-apply-normal-distribution",
+        "learn-and-apply-normalization",
+        "learn-and-apply-normalization-1",
+        "learn-and-apply-normalization-2",
+        "learn-and-apply-normalization-min-max-scaling",
+        "learn-and-apply-null-and-nan-indicators",
+        "learn-and-apply-numeric-int-float",
+        "learn-and-apply-numerical-data-mean-median-mode-knn-imputer",
+        "learn-and-apply-one-class-svm",
+        "learn-and-apply-one-hot-encoding",
+        "learn-and-apply-one-hot-encoding-for-unordered-categories",
+        "learn-and-apply-outliers",
+        "learn-and-apply-outliers-1",
+        "learn-and-apply-outliers-10",
+        "learn-and-apply-outliers-11",
+        "learn-and-apply-outliers-2",
+        "learn-and-apply-outliers-3",
+        "learn-and-apply-outliers-4",
+        "learn-and-apply-outliers-5",
+        "learn-and-apply-outliers-6",
+        "learn-and-apply-outliers-7",
+        "learn-and-apply-outliers-8",
+        "learn-and-apply-outliers-9",
+        "learn-and-apply-pair-plots",
+        "learn-and-apply-pair-plots-1",
+        "learn-and-apply-policy",
+        "learn-and-apply-policy-gradient-methods",
+        "learn-and-apply-policy-optimization",
+        "learn-and-apply-polynomial-features",
+        "learn-and-apply-polynomial-features-feature-expansion",
+        "learn-and-apply-polynomial-regression",
+        "learn-and-apply-power-bi",
+        "learn-and-apply-power-transformations-box-cox--yeo-johnson",
+        "learn-and-apply-practice",
+        "learn-and-apply-practice-1",
+        "learn-and-apply-practice-10",
+        "learn-and-apply-practice-11",
+        "learn-and-apply-practice-12",
+        "learn-and-apply-practice-2",
+        "learn-and-apply-practice-3",
+        "learn-and-apply-practice-4",
+        "learn-and-apply-practice-5",
+        "learn-and-apply-practice-6",
+        "learn-and-apply-practice-7",
+        "learn-and-apply-practice-8",
+        "learn-and-apply-practice-9",
+        "learn-and-apply-precision",
+        "learn-and-apply-principal-component-analysis-pca",
+        "learn-and-apply-q-learning",
+        "learn-and-apply-quantile-transformation-rank-scaling",
+        "learn-and-apply-r-score",
+        "learn-and-apply-random-forest-for-classification",
+        "learn-and-apply-random-forest-for-regression",
+        "learn-and-apply-random-search",
+        "learn-and-apply-real-time-model-accuracy-tracking-dashboards",
+        "learn-and-apply-recall",
+        "learn-and-apply-regression",
+        "learn-and-apply-regression-algorithms",
+        "learn-and-apply-regression-diagram",
+        "learn-and-apply-regression-metrics",
+        "learn-and-apply-remove",
+        "learn-and-apply-remove-1",
+        "learn-and-apply-remove-irrelevant-or-redundant-features",
+        "learn-and-apply-remove-stop-words-eg-the-and-is",
+        "learn-and-apply-residual-plots",
+        "learn-and-apply-resize-images",
+        "learn-and-apply-resizing",
+        "learn-and-apply-resizing-1",
+        "learn-and-apply-rest-api",
+        "learn-and-apply-rest-api-or-integrate-with-mobileweb-apps",
+        "learn-and-apply-retrain-the-model-periodically-with-new-data",
+        "learn-and-apply-reward",
+        "learn-and-apply-ridge-regression",
+        "learn-and-apply-ridgelasso-regression",
+        "learn-and-apply-rmse",
+        "learn-and-apply-rmse-mae-r-score",
+        "learn-and-apply-robust-scaling-median--iqr-scaling",
+        "learn-and-apply-roc-curve",
+        "learn-and-apply-scaling",
+        "learn-and-apply-scaling-and-normalization",
+        "learn-and-apply-scatter-plots",
+        "learn-and-apply-scheduled-model-checks",
+        "learn-and-apply-seaborn",
+        "learn-and-apply-self-training",
+        "learn-and-apply-semi-supervised-support-vector-machines-s3vm",
+        "learn-and-apply-set-constraints--assumptions",
+        "learn-and-apply-simple-linear-regression",
+        "learn-and-apply-simple-linear-regression-one-input",
+        "learn-and-apply-source",
+        "learn-and-apply-source-1",
+        "learn-and-apply-source-10",
+        "learn-and-apply-source-11",
+        "learn-and-apply-source-12",
+        "learn-and-apply-source-2",
+        "learn-and-apply-source-3",
+        "learn-and-apply-source-4",
+        "learn-and-apply-source-5",
+        "learn-and-apply-source-6",
+        "learn-and-apply-source-7",
+        "learn-and-apply-source-8",
+        "learn-and-apply-source-9",
+        "learn-and-apply-spectrograms",
+        "learn-and-apply-spot-check-and-handle-an-outlier",
+        "learn-and-apply-spot-overfitting-with-a-validation-curve",
+        "learn-and-apply-standardization-z-score-scaling",
+        "learn-and-apply-standardize-formats",
+        "learn-and-apply-standardize-text-cases-and-remove-spaces",
+        "learn-and-apply-start-here",
+        "learn-and-apply-state",
+        "learn-and-apply-store-data-in-a-centralized-location",
+        "learn-and-apply-stratified-sampling",
+        "learn-and-apply-streamlit",
+        "learn-and-apply-structured-data-tables-csvs",
+        "learn-and-apply-summary-of-machine-learning-categories",
+        "learn-and-apply-support-vector-machines-svm",
+        "learn-and-apply-support-vector-regression-svr",
+        "learn-and-apply-t-distributed-stochastic-neighbor-embedding-t-sne",
+        "learn-and-apply-tableau",
+        "learn-and-apply-target-encoding-for-many-different-categories",
+        "learn-and-apply-test-set",
+        "learn-and-apply-text-strings",
+        "learn-and-apply-tf-idf",
+        "learn-and-apply-time-series-data-forward-fill-ffill-backward-fill-bfill",
+        "learn-and-apply-tokenization",
+        "learn-and-apply-tokenization--lemmatization",
+        "learn-and-apply-track-notes-about-the-data",
+        "learn-and-apply-train-the-model-using-the-training-dataset",
+        "learn-and-apply-training-set",
+        "learn-and-apply-transform-data",
+        "learn-and-apply-transform-features",
+        "learn-and-apply-trends-correlations-and-patterns",
+        "learn-and-apply-tune-model-settings",
+        "learn-and-apply-turn-ordered-names-into-numbers-ordinalencoder",
+        "learn-and-apply-understand-the-business-problem-or-use-case",
+        "learn-and-apply-understand-the-domain-knowledge-related-to-the-data",
+        "learn-and-apply-uniform-distribution",
+        "learn-and-apply-unknown-placeholder",
+        "learn-and-apply-unstructured-data-text-images-videos",
+        "learn-and-apply-use-labels-to-make-fewer-inputs-supervised-lda",
+        "learn-and-apply-use-statistical-tests-anova-chi-square-test",
+        "learn-and-apply-validation-set",
+        "learn-and-apply-value-function",
+        "learn-and-apply-video-frames-sequences",
+        "learn-and-apply-visualization",
+        "learn-and-apply-visualization-helps-here",
+        "learn-and-apply-visualization-helps-track-model-performance",
+        "learn-and-apply-visualization-is-used-here",
+        "learn-and-apply-visualization-is-used-here-1",
+        "learn-and-apply-visualization-techniques",
+        "learn-and-apply-visualization-techniques-1",
+        "learn-and-apply-visualization-techniques-2",
+        "learn-and-apply-visualization-techniques-3",
+        "learn-and-apply-wav-and-mp3",
+        "learn-and-apply-web-app-deployment",
+        "learn-and-apply-web-app-integration",
+        "learn-and-apply-web-scraping",
+        "learn-and-apply-weekday",
+        "learn-and-apply-when-missing-values-change-the-answer",
+        "learn-and-apply-when-to-use",
+        "learn-and-apply-which-technique-should-you-use",
+        "learn-and-apply-word-embeddings-word2vec-bert-etc",
+        "learn-and-apply-word2vec",
+        "learn-and-apply-xgboost",
+        "learn-and-apply-xgboost-1",
+        "learn-and-apply-year",
+        "learn-and-apply-yeo-johnson-transformation",
+        "learn-and-apply-your-first-prediction",
+        "learn-and-apply-z-score-algorithm",
+        "learn-and-apply-z-score-method",
+        "learn-and-apply-z-score-standardization-standardization",
+        "learn-the-model",
+        "lesson-442",
+        "lesson-443",
+        "lesson-444",
+        "lesson-445",
+        "lesson-446",
+        "lesson-447",
+        "lesson-downloads",
+        "lightgbm",
+        "lightgbm-2",
+        "linear-discriminant-analysis-lda",
+        "linear-regression",
+        "live-dashboards-using-tableau-power-bi-or-matplotlib-seaborn",
+        "log-transformation-log-scaling",
+        "logistic-regression",
+        "machine-learning-algorithms",
+        "machine-learning-one-small-step-at-a-time",
+        "min-max-scaling-normalization",
+        "model-based",
+        "model-free",
+        "monitor-model-accuracy-performance-over-time",
+        "monte-carlo-tree-search-mcts",
+        "multivariate-regression",
+        "naive-bayes",
+        "normalization-min-max-scaling",
+        "numerical-data-mean-median-mode-knn-imputer",
+        "one-class-svm",
+        "one-hot-encoding-for-unordered-categories",
+        "pair-plots",
+        "pair-plots-2",
+        "pdf-page-map",
+        "policy",
+        "policy-gradient-methods",
+        "polynomial-features-feature-expansion",
+        "polynomial-regression",
+        "power-transformations-box-cox-yeo-johnson",
+        "practice",
+        "practice-10",
+        "practice-11",
+        "practice-12",
+        "practice-13",
+        "practice-2",
+        "practice-2-1-categorical-encoding",
+        "practice-2-1-feature-scaling",
+        "practice-2-1-missing-values",
+        "practice-2-1-outliers",
+        "practice-2-10-categorical-encoding",
+        "practice-2-10-feature-scaling",
+        "practice-2-10-missing-values",
+        "practice-2-10-outliers",
+        "practice-2-11-categorical-encoding",
+        "practice-2-11-feature-scaling",
+        "practice-2-11-outliers",
+        "practice-2-12-flattening",
+        "practice-2-12-normalization",
+        "practice-2-12-one-hot-encoding",
+        "practice-2-12-resizing",
+        "practice-2-13-categorical-encoding",
+        "practice-2-13-missing-values",
+        "practice-2-13-outliers",
+        "practice-2-2-categorical-encoding",
+        "practice-2-2-feature-extraction",
+        "practice-2-2-missing-values",
+        "practice-2-2-outliers",
+        "practice-2-2-scaling",
+        "practice-2-3-categorical-encoding",
+        "practice-2-3-feature-scaling",
+        "practice-2-3-handling-skewed-data",
+        "practice-2-3-missing-values",
+        "practice-2-3-outliers",
+        "practice-2-4-categorical-encoding",
+        "practice-2-4-feature-scaling",
+        "practice-2-4-outliers",
+        "practice-2-4-visualization",
+        "practice-2-5-categorical-encoding",
+        "practice-2-5-feature-scaling",
+        "practice-2-5-missing-values",
+        "practice-2-5-outliers",
+        "practice-2-6-categorical-encoding",
+        "practice-2-6-feature-scaling",
+        "practice-2-6-missing-values",
+        "practice-2-6-normalization",
+        "practice-2-6-outliers",
+        "practice-2-7-categorical-encoding",
+        "practice-2-7-feature-scaling",
+        "practice-2-7-missing-values",
+        "practice-2-7-outliers",
+        "practice-2-8-feature-scaling",
+        "practice-2-8-normalization",
+        "practice-2-8-outliers",
+        "practice-2-8-resizing",
+        "practice-2-9-categorical-encoding",
+        "practice-2-9-feature-scaling",
+        "practice-2-9-missing-values",
+        "practice-2-9-outliers",
+        "practice-3",
+        "practice-4",
+        "practice-5",
+        "practice-6",
+        "practice-7",
+        "practice-8",
+        "practice-9",
+        "principal-component-analysis-pca",
+        "q-learning",
+        "quantile-transformation-rank-scaling",
+        "random-forest-for-classification",
+        "random-forest-for-regression",
+        "random-search",
+        "real-time-model-accuracy-tracking-dashboards",
+        "regression",
+        "regression-algorithms",
+        "regression-metrics",
+        "remove",
+        "remove-2",
+        "remove-irrelevant-or-redundant-features",
+        "remove-stop-words-e-g-the-and-is",
+        "residual-plots",
+        "rest-api-or-integrate-with-mobile-web-apps",
+        "retrain-the-model-periodically-with-new-data",
+        "reward",
+        "ridge-lasso-regression",
+        "rmse-mae-r-score",
+        "robust-scaling-median-iqr-scaling",
+        "roc-curve",
+        "scaling-and-normalization",
+        "scatter-plots",
+        "scheduled-model-checks",
+        "self-training",
+        "semi-supervised-support-vector-machines-s3vm",
+        "set-constraints-assumptions",
+        "simple-linear-regression",
+        "source",
+        "source-10",
+        "source-11",
+        "source-12",
+        "source-13",
+        "source-2",
+        "source-3",
+        "source-4",
+        "source-5",
+        "source-6",
+        "source-7",
+        "source-8",
+        "source-9",
+        "spot-check-and-handle-an-outlier",
+        "standardization-z-score-scaling",
+        "standardize-formats",
+        "start-here",
+        "start-with-the-learning-path",
+        "state",
+        "store-data-in-a-centralized-location",
+        "stratified-sampling",
+        "streamlit",
+        "summary-of-machine-learning-categories",
+        "support-vector-machines-svm",
+        "support-vector-regression-svr",
+        "t-distributed-stochastic-neighbor-embedding-t-sne",
+        "target-encoding-for-high-cardinality-categories",
+        "test-set",
+        "tf-idf",
+        "time-series-data-forward-fill-ffill-backward-fill-bfill",
+        "tokenization-lemmatization",
+        "track-metadata",
+        "train-save-test",
+        "train-the-model-using-the-training-dataset",
+        "training-set",
+        "transform-data",
+        "transform-features",
+        "tune-hyperparameters",
+        "understand-the-business-problem-or-use-case",
+        "understand-the-domain-knowledge-related-to-the-data",
+        "use-statistical-tests-anova-chi-square-test",
+        "validation-set",
+        "value-function",
+        "video-frames-sequences",
+        "visualization-helps-here",
+        "visualization-helps-track-model-performance",
+        "visualization-is-used-here",
+        "visualization-is-used-here-2",
+        "visualization-techniques",
+        "visualization-techniques-2",
+        "visualization-techniques-3",
+        "visualization-techniques-4",
+        "when-missing-values-change-the-answer",
+        "when-to-use",
+        "which-technique-should-you-use",
+        "word-embeddings-word2vec-bert-etc",
+        "xgboost",
+        "xgboost-2",
+        "xgboost-and-lightgbm",
+        "your-first-prediction",
+        "z-score-algorithm",
+        "z-score-method",
+        "z-score-standardization-standardization",
+        "ℹ️-data",
+        "ℹ️-data-transformations",
+        "️-131-handle-missing-values",
+        "️-131-handle-missing-values-1",
+        "️-135-normalize-or-standardize-data",
+        "️-135-normalize-or-standardize-data-1",
+        "️-136-convert-categorical-data",
+        "️-136-convert-categorical-data-1",
+        "️-137-text-data-cleaning",
+        "️-137-text-data-cleaning-1",
+        "️-15-feature-engineering--feature-selection",
+        "️-15-feature-engineering--feature-selection-1",
+        "️-16-data-splitting",
+        "️-16-data-splitting-1",
+        "️-211-invented-health-related-rows",
+        "️-22-invented-ferry-boarding-records",
+        "️-27-invented-neighbourhood-prices",
+        "️-29-invented-shopper-groups",
+        "️-actions",
+        "️-added-exercises",
+        "️-applied-model-checks-and-capstone",
+        "️-aws-google-cloud-or-heroku",
+        "️-capclip-values",
+        "️-categorical-data-mode-unknown-placeholder",
+        "️-cloud-deployment-walkthrough",
+        "️-data-types-issues--preprocessing-techniques",
+        "️-data-types-issues--preprocessing-techniques-1",
+        "️-encoding-categorical-variables",
+        "️-extract-useful-features-year-month-day-weekday-hour-etc",
+        "️-fix-typos-and-spelling-variations",
+        "️-handling-strategies",
+        "️-heatmaps",
+        "️-images-pixels-matrices",
+        "️-independent-component-analysis-ica",
+        "️-label-propagation",
+        "️-live-dashboards-using-tableau-power-bi-or-matplotlibseaborn",
+        "️-model-based",
+        "️-pair-plots",
+        "️-real-time-model-accuracy-tracking-dashboards",
+        "️-ridgelasso-regression",
+        "️-scaling-and-normalization",
+        "️-store-data-in-a-centralized-location",
+        "️-streamlit",
+        "️-summary-of-machine-learning-categories",
+        "️-track-metadata",
+        "️-train-the-model-using-the-training-dataset",
+        "️-tune-model-settings",
+        "️-understand-the-business-problem-or-use-case",
+        "️-when-missing-values-change-the-answer"
+      ],
+      "reader_ids": [
+        "1-1-problem-definition",
+        "1-10-model-monitoring-maintenance",
+        "1-2-data-collection",
+        "1-3-1-handle-missing-values",
+        "1-3-10-handle-large-numbers",
+        "1-3-2-remove-duplicates",
+        "1-3-3-fix-inconsistent-data",
+        "1-3-4-handle-outliers",
+        "1-3-5-normalize-or-standardize-data",
+        "1-3-6-convert-categorical-data",
+        "1-3-7-text-data-cleaning",
+        "1-3-8-handle-boolean-data",
+        "1-3-9-handle-date-time-data",
+        "1-3-data-cleaning-preprocessing",
+        "1-4-exploratory-data-analysis-eda",
+        "1-5-feature-engineering-feature-selection",
+        "1-6-data-splitting",
+        "1-7-model-selection-training",
+        "1-8-model-evaluation",
+        "1-9-model-deployment",
+        "1-data-science-pipeline",
+        "1-data-science-pipeline_1",
+        "1-min-max-scaling-normalization",
+        "11-problem-definition",
+        "11-problem-definition_1",
+        "110-model-monitoring-maintenance",
+        "110-model-monitoring-maintenance_1",
+        "12-data-collection",
+        "12-data-collection_1",
+        "13-data-cleaning-preprocessing",
+        "13-data-cleaning-preprocessing_1",
+        "131-handle-missing-values",
+        "131-handle-missing-values_1",
+        "1310-handle-large-numbers",
+        "1310-handle-large-numbers_1",
+        "132-remove-duplicates",
+        "132-remove-duplicates_1",
+        "133-fix-inconsistent-data",
+        "133-fix-inconsistent-data_1",
+        "134-handle-outliers",
+        "134-handle-outliers_1",
+        "135-normalize-or-standardize-data",
+        "135-normalize-or-standardize-data_1",
+        "136-convert-categorical-data",
+        "136-convert-categorical-data_1",
+        "137-text-data-cleaning",
+        "137-text-data-cleaning_1",
+        "138-handle-boolean-data",
+        "138-handle-boolean-data_1",
+        "139-handle-datetime-data",
+        "139-handle-datetime-data_1",
+        "14-exploratory-data-analysis-eda",
+        "14-exploratory-data-analysis-eda_1",
+        "15-feature-engineering-feature-selection",
+        "15-feature-engineering-feature-selection_1",
+        "16-data-splitting",
+        "16-data-splitting_1",
+        "17-model-selection-training",
+        "17-model-selection-training_1",
+        "18-model-evaluation",
+        "18-model-evaluation_1",
+        "19-model-deployment",
+        "19-model-deployment_1",
+        "2-1-salary-experience-dataset",
+        "2-10-bank-marketing-dataset",
+        "2-11-heart-disease-dataset",
+        "2-12-fashion-mnist",
+        "2-13-google-play-store-dataset",
+        "2-2-titanic-dataset",
+        "2-3-house-prices-dataset",
+        "2-4-iris-dataset",
+        "2-5-uci-adult-income-dataset",
+        "2-6-wine-quality-dataset",
+        "2-7-boston-housing-dataset",
+        "2-8-mnist-dataset",
+        "2-9-customer-segmentation-dataset",
+        "2-data-sets",
+        "2-data-sets_1",
+        "2-z-score-standardization-standardization",
+        "21-invented-salary-records",
+        "21-invented-salary-records_1",
+        "210-invented-bank-campaign-records",
+        "210-invented-bank-campaign-records_1",
+        "211-invented-health-related-rows",
+        "211-invented-health-related-rows_1",
+        "212-hand-drawn-clothing-shapes",
+        "212-hand-drawn-clothing-shapes_1",
+        "213-invented-app-listings",
+        "213-invented-app-listings_1",
+        "22-invented-ferry-boarding-records",
+        "22-invented-ferry-boarding-records_1",
+        "23-invented-house-listings",
+        "23-invented-house-listings_1",
+        "24-invented-flower-measurements",
+        "24-invented-flower-measurements_1",
+        "25-invented-income-records",
+        "25-invented-income-records_1",
+        "26-invented-drink-measurements",
+        "26-invented-drink-measurements_1",
+        "27-invented-neighbourhood-prices",
+        "27-invented-neighbourhood-prices_1",
+        "28-hand-drawn-digit-shapes",
+        "28-hand-drawn-digit-shapes_1",
+        "29-invented-shopper-groups",
+        "29-invented-shopper-groups_1",
+        "3-1-supervised-learning",
+        "3-2-unsupervised-learning",
+        "3-3-semi-supervised-learning",
+        "3-4-reinforcement-learning",
+        "3-log-transformation-log-scaling",
+        "3-machine-learning-categories",
+        "3-machine-learning-categories_1",
+        "31-supervised-learning",
+        "31-supervised-learning_1",
+        "32-unsupervised-learning",
+        "32-unsupervised-learning_1",
+        "33-semi-supervised-learning",
+        "33-semi-supervised-learning_1",
+        "34-reinforcement-learning",
+        "34-reinforcement-learning_1",
+        "4-robust-scaling-median-iqr-scaling",
+        "442-choose-the-right-data-split",
+        "443-spot-overfitting-with-a-validation-curve",
+        "444-choose-a-cutoff-for-rare-urgent-orders",
+        "445-check-whether-predicted-probabilities-are-reliable",
+        "446-evaluate-delivery-errors-by-route-weight-and-zone",
+        "447-capstone-from-delivery-csv-to-local-model-service",
+        "5-power-transformations-box-cox-yeo-johnson",
+        "6-quantile-transformation-rank-scaling",
+        "7-binning-discretization",
+        "70-20-10-train-validation-test",
+        "8-polynomial-features-feature-expansion",
+        "80-20-train-test",
+        "a-dashboard-that-refreshes-on-your-computer",
+        "accuracy-precision-recall-f1-score-auc-roc",
+        "actions",
+        "actor-critic",
+        "added-exercises",
+        "agent",
+        "anomaly-detection",
+        "apis-web-apps-or-cloud-services",
+        "applied-labs",
+        "applied-model-checks-and-capstone",
+        "apply-log-transformation-if-data-is-highly-skewed",
+        "apriori-algorithm",
+        "association",
+        "audio-waves-spectrograms",
+        "aws-google-cloud-or-heroku",
+        "bar-plots",
+        "bayesian-optimization",
+        "beginner-path",
+        "binning-discretization",
+        "box-plots",
+        "boxplots-visualization",
+        "cap-clip-values",
+        "capclip-values",
+        "categorical-data-mode-unknown-placeholder",
+        "categorical-encoding",
+        "categorical-encoding_1",
+        "categorical-encoding_10",
+        "categorical-encoding_2",
+        "categorical-encoding_3",
+        "categorical-encoding_4",
+        "categorical-encoding_5",
+        "categorical-encoding_6",
+        "categorical-encoding_7",
+        "categorical-encoding_8",
+        "categorical-encoding_9",
+        "category-summary-final-algorithm-diagram",
+        "choose-the-best-machine-learning-model",
+        "classification-algorithms",
+        "classification-metrics",
+        "cloud-deployment-walkthrough",
+        "clustering-algorithms",
+        "co-training",
+        "common-algorithms",
+        "common-algorithms-2",
+        "common-algorithms-3",
+        "common-algorithms-4",
+        "common-algorithms_1",
+        "common-algorithms_2",
+        "common-algorithms_3",
+        "common-split-ratios",
+        "complex-data-json-xml-dictionaries",
+        "confusion-matrix",
+        "content",
+        "contents",
+        "convert-boolean-values-to-standard-format-1-or-0",
+        "convert-text-to-numerical-representation",
+        "convert-to-coordinates",
+        "convert-to-datetime-format",
+        "convert-to-lowercase-remove-punctuation",
+        "convert-to-scientific-notation-if-values-are-too-large",
+        "core-course",
+        "core-lesson-library",
+        "countvectorizer",
+        "create-new-features",
+        "cross-validation",
+        "data",
+        "data-types-issues-preprocessing-techniques",
+        "data-types-issues-preprocessing-techniques_1",
+        "dbscan",
+        "decision-trees-for-classification",
+        "decision-trees-for-regression",
+        "deep-q-networks-dqn",
+        "define-the-objective",
+        "description",
+        "description-10",
+        "description-11",
+        "description-12",
+        "description-13",
+        "description-2",
+        "description-3",
+        "description-4",
+        "description-5",
+        "description-6",
+        "description-7",
+        "description-8",
+        "description-9",
+        "description_1",
+        "description_10",
+        "description_11",
+        "description_12",
+        "description_2",
+        "description_3",
+        "description_4",
+        "description_5",
+        "description_6",
+        "description_7",
+        "description_8",
+        "description_9",
+        "detect-data-drift",
+        "detect-remove-exact-duplicates",
+        "detection-methods",
+        "dimensionality-reduction",
+        "drift-detection-charts",
+        "encoding-categorical-variables",
+        "environment",
+        "extract-useful-features-year-month-day-weekday-hour-etc",
+        "fastapi",
+        "feature-engineering",
+        "feature-extraction",
+        "feature-importance-plot",
+        "feature-scaling",
+        "feature-scaling_1",
+        "feature-scaling_2",
+        "feature-scaling_3",
+        "feature-scaling_4",
+        "feature-scaling_5",
+        "feature-scaling_6",
+        "feature-scaling_7",
+        "feature-scaling_8",
+        "feature-scaling_9",
+        "feature-selection",
+        "fill-missing-values-with-mode",
+        "first-api-call-from-a-web-page",
+        "fix-typos-and-spelling-variations",
+        "flask",
+        "flask-fastapi-or-streamlit",
+        "flattening",
+        "focused-tasks-for-shared-exercises",
+        "frequent-pattern-growth",
+        "gather-structured-and-unstructured-data",
+        "gaussian-mixture-models-gmm",
+        "geocoding-apis",
+        "geospatial-lat-long-addresses",
+        "geospatial-latlong-addresses",
+        "given-the-model",
+        "gradient-boosting",
+        "gradient-boosting-gbm",
+        "grid-search",
+        "handle-data-privacy-security-concerns",
+        "handle-missing-dates-using-interpolation",
+        "handle-missing-values",
+        "handle-near-duplicates",
+        "handling-skewed-data",
+        "handling-strategies",
+        "heatmaps",
+        "hierarchical-clustering",
+        "histograms",
+        "i-data",
+        "i-data-transformations",
+        "identify-data-sources",
+        "identify-key-performance-metrics",
+        "identify-missing-values",
+        "image-embeddings",
+        "images-pixels-matrices",
+        "implement-automated-alerts",
+        "impute",
+        "independent-component-analysis-ica",
+        "interquartile-range-iqr",
+        "isolation-forest",
+        "k-means",
+        "k-means-classifier",
+        "k-nearest-neighbors-knn",
+        "key-concepts",
+        "label-encoding-for-ordered-categories",
+        "label-propagation",
+        "learn-and-apply-1-data-science-pipeline",
+        "learn-and-apply-11-problem-definition",
+        "learn-and-apply-110-model-monitoring-maintenance",
+        "learn-and-apply-12-data-collection",
+        "learn-and-apply-13-data-cleaning-preprocessing",
+        "learn-and-apply-131-handle-missing-values",
+        "learn-and-apply-1310-handle-large-numbers",
+        "learn-and-apply-132-remove-duplicates",
+        "learn-and-apply-133-fix-inconsistent-data",
+        "learn-and-apply-134-handle-outliers",
+        "learn-and-apply-135-normalize-or-standardize-data",
+        "learn-and-apply-136-convert-category-data",
+        "learn-and-apply-137-text-data-cleaning",
+        "learn-and-apply-138-handle-boolean-data",
+        "learn-and-apply-139-handle-datetime-data",
+        "learn-and-apply-14-exploratory-data-analysis-eda",
+        "learn-and-apply-15-feature-engineering-feature-selection",
+        "learn-and-apply-16-data-splitting",
+        "learn-and-apply-17-model-selection-training",
+        "learn-and-apply-18-model-evaluation",
+        "learn-and-apply-19-model-deployment",
+        "learn-and-apply-2-data-sets",
+        "learn-and-apply-3-machine-learning-categories",
+        "learn-and-apply-31-supervised-learning",
+        "learn-and-apply-32-unsupervised-learning",
+        "learn-and-apply-33-semi-supervised-learning",
+        "learn-and-apply-34-reinforcement-learning",
+        "learn-and-apply-70-20-10-train-validation-test",
+        "learn-and-apply-80-20-train-test",
+        "learn-and-apply-a-dashboard-that-refreshes-on-your-computer",
+        "learn-and-apply-accuracy",
+        "learn-and-apply-accuracy-precision-recall-f1-score-auc-roc",
+        "learn-and-apply-actions",
+        "learn-and-apply-actor-critic",
+        "learn-and-apply-age-from-date-of-birth",
+        "learn-and-apply-agent",
+        "learn-and-apply-anomaly-detection",
+        "learn-and-apply-anomaly-detection-diagram",
+        "learn-and-apply-anova",
+        "learn-and-apply-api-deployment",
+        "learn-and-apply-apis",
+        "learn-and-apply-apis-web-apps-or-cloud-services",
+        "learn-and-apply-apply-log-transformation-if-data-is-highly-skewed",
+        "learn-and-apply-apriori-algorithm",
+        "learn-and-apply-association",
+        "learn-and-apply-association-diagram",
+        "learn-and-apply-auc-roc",
+        "learn-and-apply-audio-waves-spectrograms",
+        "learn-and-apply-aws",
+        "learn-and-apply-aws-google-cloud-or-heroku",
+        "learn-and-apply-backward-fill-bfill",
+        "learn-and-apply-bar-plots",
+        "learn-and-apply-bayesian-optimization",
+        "learn-and-apply-bert",
+        "learn-and-apply-binning-discretization",
+        "learn-and-apply-boolean-truefalse",
+        "learn-and-apply-box-cox-transformation",
+        "learn-and-apply-box-plots",
+        "learn-and-apply-boxplots-visualization",
+        "learn-and-apply-capclip-values",
+        "learn-and-apply-capstone-from-delivery-csv-to-local-model-service",
+        "learn-and-apply-category-data-mode-unknown-placeholder",
+        "learn-and-apply-category-encoding",
+        "learn-and-apply-category-encoding_1",
+        "learn-and-apply-category-encoding_10",
+        "learn-and-apply-category-encoding_2",
+        "learn-and-apply-category-encoding_3",
+        "learn-and-apply-category-encoding_4",
+        "learn-and-apply-category-encoding_5",
+        "learn-and-apply-category-encoding_6",
+        "learn-and-apply-category-encoding_7",
+        "learn-and-apply-category-encoding_8",
+        "learn-and-apply-category-encoding_9",
+        "learn-and-apply-category-enum-labels",
+        "learn-and-apply-category-mode",
+        "learn-and-apply-check-whether-predicted-probabilities-are-reliable",
+        "learn-and-apply-chi-square-test",
+        "learn-and-apply-choose-a-cutoff-for-rare-urgent-orders",
+        "learn-and-apply-choose-the-best-machine-learning-model",
+        "learn-and-apply-choose-the-right-data-split",
+        "learn-and-apply-classification-algorithms",
+        "learn-and-apply-classification-diagram",
+        "learn-and-apply-classification-metrics",
+        "learn-and-apply-classification-semi-supervised",
+        "learn-and-apply-cloud-deployment-walkthrough",
+        "learn-and-apply-cloud-services",
+        "learn-and-apply-cloud-storage",
+        "learn-and-apply-clustering-algorithms",
+        "learn-and-apply-clustering-diagram",
+        "learn-and-apply-cnn-and-lstm-sequence-modeling",
+        "learn-and-apply-co-training",
+        "learn-and-apply-collection-method",
+        "learn-and-apply-common-algorithms",
+        "learn-and-apply-common-algorithms_1",
+        "learn-and-apply-common-algorithms_2",
+        "learn-and-apply-common-algorithms_3",
+        "learn-and-apply-common-split-ratios",
+        "learn-and-apply-compare-multiple-models",
+        "learn-and-apply-complex-data-json-xml-dictionaries",
+        "learn-and-apply-confusion-matrix",
+        "learn-and-apply-convert-boolean-values-to-standard-format-1-or-0",
+        "learn-and-apply-convert-date-formats-mmddyyyy-to-yyyy-mm-dd",
+        "learn-and-apply-convert-text-to-lowercase-and-remove-spaces",
+        "learn-and-apply-convert-text-to-numerical-representation",
+        "learn-and-apply-convert-to-coordinates",
+        "learn-and-apply-convert-to-datetime-format",
+        "learn-and-apply-convert-to-lowercase-remove-punctuation",
+        "learn-and-apply-convert-to-scientific-notation-if-values-are-too-large",
+        "learn-and-apply-countvectorizer",
+        "learn-and-apply-create-new-features",
+        "learn-and-apply-cross-validation",
+        "learn-and-apply-data",
+        "learn-and-apply-data-distributions-mean-median-skewness",
+        "learn-and-apply-data-type",
+        "learn-and-apply-data-types-issues-preprocessing-techniques",
+        "learn-and-apply-database-storage",
+        "learn-and-apply-databases",
+        "learn-and-apply-datetime-timestamps-dates",
+        "learn-and-apply-day",
+        "learn-and-apply-dbscan",
+        "learn-and-apply-decision-trees-for-classification",
+        "learn-and-apply-decision-trees-for-regression",
+        "learn-and-apply-deep-q-networks-dqn",
+        "learn-and-apply-define-the-objective",
+        "learn-and-apply-description",
+        "learn-and-apply-description_1",
+        "learn-and-apply-description_10",
+        "learn-and-apply-description_11",
+        "learn-and-apply-description_12",
+        "learn-and-apply-description_2",
+        "learn-and-apply-description_3",
+        "learn-and-apply-description_4",
+        "learn-and-apply-description_5",
+        "learn-and-apply-description_6",
+        "learn-and-apply-description_7",
+        "learn-and-apply-description_8",
+        "learn-and-apply-description_9",
+        "learn-and-apply-detect-data-drift",
+        "learn-and-apply-detect-remove-exact-duplicates",
+        "learn-and-apply-detecting-outliers-anomalies",
+        "learn-and-apply-detection-methods",
+        "learn-and-apply-dictionaries-and-missing-keys",
+        "learn-and-apply-dimensionality-reduction",
+        "learn-and-apply-dimensionality-reduction-diagram",
+        "learn-and-apply-drift-detection-charts",
+        "learn-and-apply-encoding-category-variables",
+        "learn-and-apply-ensure-correct-units-kg-vs-lbs",
+        "learn-and-apply-environment",
+        "learn-and-apply-evaluate-delivery-errors-by-route-weight-and-zone",
+        "learn-and-apply-extract-useful-features-year-month-day-weekday-hour-etc",
+        "learn-and-apply-extract-xml-fields",
+        "learn-and-apply-extracting-keywords-from-text",
+        "learn-and-apply-f1-score",
+        "learn-and-apply-fastapi",
+        "learn-and-apply-feature-engineering",
+        "learn-and-apply-feature-extraction",
+        "learn-and-apply-feature-importance-plot",
+        "learn-and-apply-feature-relationships-and-overlap-between-inputs-multicollinearity",
+        "learn-and-apply-feature-scaling",
+        "learn-and-apply-feature-scaling_1",
+        "learn-and-apply-feature-scaling_2",
+        "learn-and-apply-feature-scaling_3",
+        "learn-and-apply-feature-scaling_4",
+        "learn-and-apply-feature-scaling_5",
+        "learn-and-apply-feature-scaling_6",
+        "learn-and-apply-feature-scaling_7",
+        "learn-and-apply-feature-scaling_8",
+        "learn-and-apply-feature-scaling_9",
+        "learn-and-apply-feature-selection",
+        "learn-and-apply-file-size",
+        "learn-and-apply-files",
+        "learn-and-apply-fill-a-blank",
+        "learn-and-apply-fill-missing-values-with-mode",
+        "learn-and-apply-first-api-call-from-a-web-page",
+        "learn-and-apply-fix-typos-and-spelling-variations",
+        "learn-and-apply-fixed-range-0-1",
+        "learn-and-apply-fixed-range-1-1",
+        "learn-and-apply-flask",
+        "learn-and-apply-flask-fastapi-or-streamlit",
+        "learn-and-apply-flatten-json",
+        "learn-and-apply-flattening",
+        "learn-and-apply-forward-fill-ffill",
+        "learn-and-apply-frequent-pattern-growth",
+        "learn-and-apply-frequently-occurring-items",
+        "learn-and-apply-fuzzy-matching",
+        "learn-and-apply-gather-structured-and-unstructured-data",
+        "learn-and-apply-gaussian-mixture-models-gmm",
+        "learn-and-apply-gdpr",
+        "learn-and-apply-geocoding-apis",
+        "learn-and-apply-geospatial-latlong-addresses",
+        "learn-and-apply-given-the-model",
+        "learn-and-apply-google-cloud",
+        "learn-and-apply-gradient-boosting",
+        "learn-and-apply-gradient-boosting-gbm",
+        "learn-and-apply-grayscale",
+        "learn-and-apply-grid-search",
+        "learn-and-apply-hand-drawn-clothing-shapes",
+        "learn-and-apply-hand-drawn-digits",
+        "learn-and-apply-handle-data-privacy-security-concerns",
+        "learn-and-apply-handle-missing-dates-using-interpolation",
+        "learn-and-apply-handle-missing-values",
+        "learn-and-apply-handle-near-duplicates",
+        "learn-and-apply-handling-skewed-data",
+        "learn-and-apply-handling-strategies",
+        "learn-and-apply-heatmaps",
+        "learn-and-apply-heroku",
+        "learn-and-apply-hierarchical-clustering",
+        "learn-and-apply-hipaa",
+        "learn-and-apply-histograms",
+        "learn-and-apply-hour",
+        "learn-and-apply-identify-data-sources",
+        "learn-and-apply-identify-key-performance-metrics",
+        "learn-and-apply-identify-missing-values",
+        "learn-and-apply-image-embeddings",
+        "learn-and-apply-image-pixels-for-a-nearest-neighbour-model",
+        "learn-and-apply-images-pixels-matrices",
+        "learn-and-apply-implement-automated-alerts",
+        "learn-and-apply-independent-component-analysis-ica",
+        "learn-and-apply-interquartile-range-iqr",
+        "learn-and-apply-invented-app-listings",
+        "learn-and-apply-invented-bank-campaign-records",
+        "learn-and-apply-invented-drink-measurements",
+        "learn-and-apply-invented-ferry-boarding-records",
+        "learn-and-apply-invented-flower-measurements",
+        "learn-and-apply-invented-health-related-practice-rows",
+        "learn-and-apply-invented-house-listings",
+        "learn-and-apply-invented-income-records",
+        "learn-and-apply-invented-neighbourhood-prices",
+        "learn-and-apply-invented-salary-records",
+        "learn-and-apply-invented-shopper-groups",
+        "learn-and-apply-isolation-forest",
+        "learn-and-apply-k-means",
+        "learn-and-apply-k-means-classifier",
+        "learn-and-apply-k-nearest-neighbors-knn",
+        "learn-and-apply-key-concepts",
+        "learn-and-apply-knn-imputer",
+        "learn-and-apply-label-propagation",
+        "learn-and-apply-large-numbers-bigint-long-float",
+        "learn-and-apply-lasso-regression",
+        "learn-and-apply-learn-the-model",
+        "learn-and-apply-lemmatization",
+        "learn-and-apply-lightgbm",
+        "learn-and-apply-lightgbm_1",
+        "learn-and-apply-linear-regression",
+        "learn-and-apply-live-dashboards-using-tableau-power-bi-or-matplotlibseaborn",
+        "learn-and-apply-local-storage",
+        "learn-and-apply-log-transformation",
+        "learn-and-apply-log-transformation-log-scaling",
+        "learn-and-apply-log1p-and-base-10-log",
+        "learn-and-apply-logistic-regression",
+        "learn-and-apply-machine-learning-algorithms",
+        "learn-and-apply-mae",
+        "learn-and-apply-matplotlib",
+        "learn-and-apply-mean",
+        "learn-and-apply-median",
+        "learn-and-apply-mfcc-features",
+        "learn-and-apply-min-max-scaling-normalization",
+        "learn-and-apply-missing-values",
+        "learn-and-apply-missing-values_1",
+        "learn-and-apply-missing-values_2",
+        "learn-and-apply-missing-values_3",
+        "learn-and-apply-missing-values_4",
+        "learn-and-apply-missing-values_5",
+        "learn-and-apply-missing-values_6",
+        "learn-and-apply-missing-values_7",
+        "learn-and-apply-missing-values_8",
+        "learn-and-apply-mobile-app-integration",
+        "learn-and-apply-mode",
+        "learn-and-apply-model-based",
+        "learn-and-apply-model-free",
+        "learn-and-apply-monitor-model-accuracy-performance-over-time",
+        "learn-and-apply-monte-carlo-tree-search-mcts",
+        "learn-and-apply-month",
+        "learn-and-apply-mp4-and-frame-extraction",
+        "learn-and-apply-multiple-linear-regression",
+        "learn-and-apply-multivariate-regression",
+        "learn-and-apply-naive-bayes",
+        "learn-and-apply-normal-distribution",
+        "learn-and-apply-normalization",
+        "learn-and-apply-normalization-min-max-scaling",
+        "learn-and-apply-normalization_1",
+        "learn-and-apply-normalization_2",
+        "learn-and-apply-null-and-nan-indicators",
+        "learn-and-apply-numeric-int-float",
+        "learn-and-apply-numerical-data-mean-median-mode-knn-imputer",
+        "learn-and-apply-one-class-svm",
+        "learn-and-apply-one-hot-encoding",
+        "learn-and-apply-one-hot-encoding-for-unordered-categories",
+        "learn-and-apply-outliers",
+        "learn-and-apply-outliers_1",
+        "learn-and-apply-outliers_10",
+        "learn-and-apply-outliers_11",
+        "learn-and-apply-outliers_2",
+        "learn-and-apply-outliers_3",
+        "learn-and-apply-outliers_4",
+        "learn-and-apply-outliers_5",
+        "learn-and-apply-outliers_6",
+        "learn-and-apply-outliers_7",
+        "learn-and-apply-outliers_8",
+        "learn-and-apply-outliers_9",
+        "learn-and-apply-pair-plots",
+        "learn-and-apply-pair-plots_1",
+        "learn-and-apply-policy",
+        "learn-and-apply-policy-gradient-methods",
+        "learn-and-apply-policy-optimization",
+        "learn-and-apply-polynomial-features",
+        "learn-and-apply-polynomial-features-feature-expansion",
+        "learn-and-apply-polynomial-regression",
+        "learn-and-apply-power-bi",
+        "learn-and-apply-power-transformations-box-cox-yeo-johnson",
+        "learn-and-apply-practice",
+        "learn-and-apply-practice_1",
+        "learn-and-apply-practice_10",
+        "learn-and-apply-practice_11",
+        "learn-and-apply-practice_12",
+        "learn-and-apply-practice_2",
+        "learn-and-apply-practice_3",
+        "learn-and-apply-practice_4",
+        "learn-and-apply-practice_5",
+        "learn-and-apply-practice_6",
+        "learn-and-apply-practice_7",
+        "learn-and-apply-practice_8",
+        "learn-and-apply-practice_9",
+        "learn-and-apply-precision",
+        "learn-and-apply-principal-component-analysis-pca",
+        "learn-and-apply-q-learning",
+        "learn-and-apply-quantile-transformation-rank-scaling",
+        "learn-and-apply-r2-score",
+        "learn-and-apply-random-forest-for-classification",
+        "learn-and-apply-random-forest-for-regression",
+        "learn-and-apply-random-search",
+        "learn-and-apply-real-time-model-accuracy-tracking-dashboards",
+        "learn-and-apply-recall",
+        "learn-and-apply-regression",
+        "learn-and-apply-regression-algorithms",
+        "learn-and-apply-regression-diagram",
+        "learn-and-apply-regression-metrics",
+        "learn-and-apply-remove",
+        "learn-and-apply-remove-irrelevant-or-redundant-features",
+        "learn-and-apply-remove-stop-words-eg-the-and-is",
+        "learn-and-apply-remove_1",
+        "learn-and-apply-residual-plots",
+        "learn-and-apply-resize-images",
+        "learn-and-apply-resizing",
+        "learn-and-apply-resizing_1",
+        "learn-and-apply-rest-api",
+        "learn-and-apply-rest-api-or-integrate-with-mobileweb-apps",
+        "learn-and-apply-retrain-the-model-periodically-with-new-data",
+        "learn-and-apply-reward",
+        "learn-and-apply-ridge-regression",
+        "learn-and-apply-ridgelasso-regression",
+        "learn-and-apply-rmse",
+        "learn-and-apply-rmse-mae-r2-score",
+        "learn-and-apply-robust-scaling-median-iqr-scaling",
+        "learn-and-apply-roc-curve",
+        "learn-and-apply-scaling",
+        "learn-and-apply-scaling-and-normalization",
+        "learn-and-apply-scatter-plots",
+        "learn-and-apply-scheduled-model-checks",
+        "learn-and-apply-seaborn",
+        "learn-and-apply-self-training",
+        "learn-and-apply-semi-supervised-support-vector-machines-s3vm",
+        "learn-and-apply-set-constraints-assumptions",
+        "learn-and-apply-simple-linear-regression",
+        "learn-and-apply-simple-linear-regression-one-input",
+        "learn-and-apply-source",
+        "learn-and-apply-source_1",
+        "learn-and-apply-source_10",
+        "learn-and-apply-source_11",
+        "learn-and-apply-source_12",
+        "learn-and-apply-source_2",
+        "learn-and-apply-source_3",
+        "learn-and-apply-source_4",
+        "learn-and-apply-source_5",
+        "learn-and-apply-source_6",
+        "learn-and-apply-source_7",
+        "learn-and-apply-source_8",
+        "learn-and-apply-source_9",
+        "learn-and-apply-spectrograms",
+        "learn-and-apply-spot-check-and-handle-an-outlier",
+        "learn-and-apply-spot-overfitting-with-a-validation-curve",
+        "learn-and-apply-standardization-z-score-scaling",
+        "learn-and-apply-standardize-formats",
+        "learn-and-apply-standardize-text-cases-and-remove-spaces",
+        "learn-and-apply-start-here",
+        "learn-and-apply-state",
+        "learn-and-apply-store-data-in-a-centralized-location",
+        "learn-and-apply-stratified-sampling",
+        "learn-and-apply-streamlit",
+        "learn-and-apply-structured-data-tables-csvs",
+        "learn-and-apply-summary-of-machine-learning-categories",
+        "learn-and-apply-support-vector-machines-svm",
+        "learn-and-apply-support-vector-regression-svr",
+        "learn-and-apply-t-distributed-stochastic-neighbor-embedding-t-sne",
+        "learn-and-apply-tableau",
+        "learn-and-apply-target-encoding-for-many-different-categories",
+        "learn-and-apply-test-set",
+        "learn-and-apply-text-strings",
+        "learn-and-apply-tf-idf",
+        "learn-and-apply-time-series-data-forward-fill-ffill-backward-fill-bfill",
+        "learn-and-apply-tokenization",
+        "learn-and-apply-tokenization-lemmatization",
+        "learn-and-apply-track-notes-about-the-data",
+        "learn-and-apply-train-the-model-using-the-training-dataset",
+        "learn-and-apply-training-set",
+        "learn-and-apply-transform-data",
+        "learn-and-apply-transform-features",
+        "learn-and-apply-trends-correlations-and-patterns",
+        "learn-and-apply-tune-model-settings",
+        "learn-and-apply-turn-ordered-names-into-numbers-ordinalencoder",
+        "learn-and-apply-understand-the-business-problem-or-use-case",
+        "learn-and-apply-understand-the-domain-knowledge-related-to-the-data",
+        "learn-and-apply-uniform-distribution",
+        "learn-and-apply-unknown-placeholder",
+        "learn-and-apply-unstructured-data-text-images-videos",
+        "learn-and-apply-use-labels-to-make-fewer-inputs-supervised-lda",
+        "learn-and-apply-use-statistical-tests-anova-chi-square-test",
+        "learn-and-apply-validation-set",
+        "learn-and-apply-value-function",
+        "learn-and-apply-video-frames-sequences",
+        "learn-and-apply-visualization",
+        "learn-and-apply-visualization-helps-here",
+        "learn-and-apply-visualization-helps-track-model-performance",
+        "learn-and-apply-visualization-is-used-here",
+        "learn-and-apply-visualization-is-used-here_1",
+        "learn-and-apply-visualization-techniques",
+        "learn-and-apply-visualization-techniques_1",
+        "learn-and-apply-visualization-techniques_2",
+        "learn-and-apply-visualization-techniques_3",
+        "learn-and-apply-wav-and-mp3",
+        "learn-and-apply-web-app-deployment",
+        "learn-and-apply-web-app-integration",
+        "learn-and-apply-web-scraping",
+        "learn-and-apply-weekday",
+        "learn-and-apply-when-missing-values-change-the-answer",
+        "learn-and-apply-when-to-use",
+        "learn-and-apply-which-technique-should-you-use",
+        "learn-and-apply-word-embeddings-word2vec-bert-etc",
+        "learn-and-apply-word2vec",
+        "learn-and-apply-xgboost",
+        "learn-and-apply-xgboost_1",
+        "learn-and-apply-year",
+        "learn-and-apply-yeo-johnson-transformation",
+        "learn-and-apply-your-first-prediction",
+        "learn-and-apply-z-score-algorithm",
+        "learn-and-apply-z-score-method",
+        "learn-and-apply-z-score-standardization-standardization",
+        "learn-the-model",
+        "lesson-442",
+        "lesson-443",
+        "lesson-444",
+        "lesson-445",
+        "lesson-446",
+        "lesson-447",
+        "lesson-downloads",
+        "lesson-search",
+        "lesson-track",
+        "lightgbm",
+        "lightgbm-2",
+        "lightgbm_1",
+        "linear-discriminant-analysis-lda",
+        "linear-regression",
+        "live-dashboards-using-tableau-power-bi-or-matplotlib-seaborn",
+        "live-dashboards-using-tableau-power-bi-or-matplotlibseaborn",
+        "log-transformation-log-scaling",
+        "logistic-regression",
+        "machine-learning-algorithms",
+        "machine-learning-one-small-step-at-a-time",
+        "min-max-scaling-normalization",
+        "missing-values",
+        "missing-values_1",
+        "missing-values_2",
+        "missing-values_3",
+        "missing-values_4",
+        "missing-values_5",
+        "missing-values_6",
+        "missing-values_7",
+        "missing-values_8",
+        "model-based",
+        "model-free",
+        "monitor-model-accuracy-performance-over-time",
+        "monte-carlo-tree-search-mcts",
+        "multivariate-regression",
+        "naive-bayes",
+        "normalization",
+        "normalization-min-max-scaling",
+        "normalization_1",
+        "normalization_2",
+        "numerical-data-mean-median-mode-knn-imputer",
+        "one-class-svm",
+        "one-hot-encoding",
+        "one-hot-encoding-for-unordered-categories",
+        "open-visual-1",
+        "open-visual-10",
+        "open-visual-11",
+        "open-visual-12",
+        "open-visual-13",
+        "open-visual-14",
+        "open-visual-15",
+        "open-visual-16",
+        "open-visual-17",
+        "open-visual-18",
+        "open-visual-19",
+        "open-visual-2",
+        "open-visual-20",
+        "open-visual-21",
+        "open-visual-22",
+        "open-visual-23",
+        "open-visual-24",
+        "open-visual-25",
+        "open-visual-26",
+        "open-visual-27",
+        "open-visual-28",
+        "open-visual-29",
+        "open-visual-3",
+        "open-visual-30",
+        "open-visual-31",
+        "open-visual-32",
+        "open-visual-33",
+        "open-visual-34",
+        "open-visual-35",
+        "open-visual-36",
+        "open-visual-37",
+        "open-visual-38",
+        "open-visual-39",
+        "open-visual-4",
+        "open-visual-40",
+        "open-visual-41",
+        "open-visual-42",
+        "open-visual-43",
+        "open-visual-44",
+        "open-visual-45",
+        "open-visual-46",
+        "open-visual-47",
+        "open-visual-48",
+        "open-visual-49",
+        "open-visual-5",
+        "open-visual-50",
+        "open-visual-51",
+        "open-visual-52",
+        "open-visual-53",
+        "open-visual-54",
+        "open-visual-55",
+        "open-visual-56",
+        "open-visual-57",
+        "open-visual-58",
+        "open-visual-59",
+        "open-visual-6",
+        "open-visual-60",
+        "open-visual-61",
+        "open-visual-62",
+        "open-visual-63",
+        "open-visual-64",
+        "open-visual-65",
+        "open-visual-66",
+        "open-visual-67",
+        "open-visual-68",
+        "open-visual-69",
+        "open-visual-7",
+        "open-visual-70",
+        "open-visual-71",
+        "open-visual-72",
+        "open-visual-8",
+        "open-visual-9",
+        "outliers",
+        "outliers_1",
+        "outliers_10",
+        "outliers_11",
+        "outliers_2",
+        "outliers_3",
+        "outliers_4",
+        "outliers_5",
+        "outliers_6",
+        "outliers_7",
+        "outliers_8",
+        "outliers_9",
+        "pair-plots",
+        "pair-plots-2",
+        "pair-plots_1",
+        "pdf-page-map",
+        "policy",
+        "policy-gradient-methods",
+        "polynomial-features-feature-expansion",
+        "polynomial-regression",
+        "power-transformations-box-cox-yeo-johnson",
+        "practice",
+        "practice-10",
+        "practice-11",
+        "practice-12",
+        "practice-13",
+        "practice-2",
+        "practice-2-1-categorical-encoding",
+        "practice-2-1-feature-scaling",
+        "practice-2-1-missing-values",
+        "practice-2-1-outliers",
+        "practice-2-10-categorical-encoding",
+        "practice-2-10-feature-scaling",
+        "practice-2-10-missing-values",
+        "practice-2-10-outliers",
+        "practice-2-11-categorical-encoding",
+        "practice-2-11-feature-scaling",
+        "practice-2-11-outliers",
+        "practice-2-12-flattening",
+        "practice-2-12-normalization",
+        "practice-2-12-one-hot-encoding",
+        "practice-2-12-resizing",
+        "practice-2-13-categorical-encoding",
+        "practice-2-13-missing-values",
+        "practice-2-13-outliers",
+        "practice-2-2-categorical-encoding",
+        "practice-2-2-feature-extraction",
+        "practice-2-2-missing-values",
+        "practice-2-2-outliers",
+        "practice-2-2-scaling",
+        "practice-2-3-categorical-encoding",
+        "practice-2-3-feature-scaling",
+        "practice-2-3-handling-skewed-data",
+        "practice-2-3-missing-values",
+        "practice-2-3-outliers",
+        "practice-2-4-categorical-encoding",
+        "practice-2-4-feature-scaling",
+        "practice-2-4-outliers",
+        "practice-2-4-visualization",
+        "practice-2-5-categorical-encoding",
+        "practice-2-5-feature-scaling",
+        "practice-2-5-missing-values",
+        "practice-2-5-outliers",
+        "practice-2-6-categorical-encoding",
+        "practice-2-6-feature-scaling",
+        "practice-2-6-missing-values",
+        "practice-2-6-normalization",
+        "practice-2-6-outliers",
+        "practice-2-7-categorical-encoding",
+        "practice-2-7-feature-scaling",
+        "practice-2-7-missing-values",
+        "practice-2-7-outliers",
+        "practice-2-8-feature-scaling",
+        "practice-2-8-normalization",
+        "practice-2-8-outliers",
+        "practice-2-8-resizing",
+        "practice-2-9-categorical-encoding",
+        "practice-2-9-feature-scaling",
+        "practice-2-9-missing-values",
+        "practice-2-9-outliers",
+        "practice-3",
+        "practice-4",
+        "practice-5",
+        "practice-6",
+        "practice-7",
+        "practice-8",
+        "practice-9",
+        "practice_1",
+        "practice_10",
+        "practice_11",
+        "practice_12",
+        "practice_2",
+        "practice_3",
+        "practice_4",
+        "practice_5",
+        "practice_6",
+        "practice_7",
+        "practice_8",
+        "practice_9",
+        "principal-component-analysis-pca",
+        "q-learning",
+        "quantile-transformation-rank-scaling",
+        "random-forest-for-classification",
+        "random-forest-for-regression",
+        "random-search",
+        "read-the-output-before-changing-the-requests",
+        "real-time-model-accuracy-tracking-dashboards",
+        "regression",
+        "regression-algorithms",
+        "regression-metrics",
+        "remove",
+        "remove-2",
+        "remove-irrelevant-or-redundant-features",
+        "remove-stop-words-e-g-the-and-is",
+        "remove-stop-words-eg-the-and-is",
+        "remove_1",
+        "residual-plots",
+        "resizing",
+        "resizing_1",
+        "rest-api-or-integrate-with-mobile-web-apps",
+        "rest-api-or-integrate-with-mobileweb-apps",
+        "retrain-the-model-periodically-with-new-data",
+        "reward",
+        "ridge-lasso-regression",
+        "ridgelasso-regression",
+        "rmse-mae-r-score",
+        "rmse-mae-r2-score",
+        "robust-scaling-median-iqr-scaling",
+        "roc-curve",
+        "scaling",
+        "scaling-and-normalization",
+        "scatter-plots",
+        "scheduled-model-checks",
+        "search-status",
+        "self-training",
+        "semi-supervised-support-vector-machines-s3vm",
+        "set-constraints-assumptions",
+        "simple-linear-regression",
+        "source",
+        "source-10",
+        "source-11",
+        "source-12",
+        "source-13",
+        "source-2",
+        "source-3",
+        "source-4",
+        "source-5",
+        "source-6",
+        "source-7",
+        "source-8",
+        "source-9",
+        "source_1",
+        "source_10",
+        "source_11",
+        "source_12",
+        "source_2",
+        "source_3",
+        "source_4",
+        "source_5",
+        "source_6",
+        "source_7",
+        "source_8",
+        "source_9",
+        "spot-check-and-handle-an-outlier",
+        "standardization-z-score-scaling",
+        "standardize-formats",
+        "start-here",
+        "start-here_1",
+        "start-with-the-learning-path",
+        "state",
+        "store-data-in-a-centralized-location",
+        "stratified-sampling",
+        "streamlit",
+        "summary-of-machine-learning-categories",
+        "support-vector-machines-svm",
+        "support-vector-regression-svr",
+        "t-distributed-stochastic-neighbor-embedding-t-sne",
+        "target-encoding-for-high-cardinality-categories",
+        "target-encoding-for-many-different-categories",
+        "test-set",
+        "tf-idf",
+        "the-training-range-is-150-km-a-user-enters-90-km",
+        "theme",
+        "time-series-data-forward-fill-ffill-backward-fill-bfill",
+        "tokenization-lemmatization",
+        "track-metadata",
+        "train-once-test-many-times",
+        "train-once-then-test-with-different-data",
+        "train-save-test",
+        "train-the-model-using-the-training-dataset",
+        "training-set",
+        "transform-data",
+        "transform-features",
+        "tune-hyperparameters",
+        "tune-model-settings",
+        "turn-ordered-names-into-numbers-ordinalencoder",
+        "understand-the-business-problem-or-use-case",
+        "understand-the-domain-knowledge-related-to-the-data",
+        "use-labels-to-make-fewer-inputs-supervised-lda",
+        "use-statistical-tests-anova-chi-square-test",
+        "validation-set",
+        "value-function",
+        "video-frames-sequences",
+        "visual-dialog",
+        "visualization",
+        "visualization-helps-here",
+        "visualization-helps-track-model-performance",
+        "visualization-is-used-here",
+        "visualization-is-used-here-2",
+        "visualization-is-used-here_1",
+        "visualization-techniques",
+        "visualization-techniques-2",
+        "visualization-techniques-3",
+        "visualization-techniques-4",
+        "visualization-techniques_1",
+        "visualization-techniques_2",
+        "visualization-techniques_3",
+        "when-missing-values-change-the-answer",
+        "when-to-use",
+        "which-technique-should-you-use",
+        "word-embeddings-word2vec-bert-etc",
+        "xgboost",
+        "xgboost-2",
+        "xgboost-and-lightgbm",
+        "xgboost_1",
+        "your-first-prediction",
+        "z-score-algorithm",
+        "z-score-method",
+        "z-score-standardization-standardization"
+      ],
+      "progress_controls": []
+    }
+  },
+  "teaching_note_aliases": {
+    "1": [
+      "learn-and-apply-start-here"
+    ],
+    "2": [
+      "learn-and-apply-your-first-prediction"
+    ],
+    "3": [
+      "learn-and-apply-1-data-science-pipeline"
+    ],
+    "4": [
+      "learn-and-apply-11-problem-definition"
+    ],
+    "5": [
+      "learn-and-apply-understand-the-business-problem-or-use-case"
+    ],
+    "6": [
+      "learn-and-apply-define-the-objective"
+    ],
+    "7": [
+      "learn-and-apply-identify-key-performance-metrics"
+    ],
+    "8": [
+      "learn-and-apply-understand-the-domain-knowledge-related-to-the-data"
+    ],
+    "9": [
+      "learn-and-apply-set-constraints--assumptions",
+      "learn-and-apply-set-constraints-assumptions"
+    ],
+    "10": [
+      "learn-and-apply-12-data-collection"
+    ],
+    "11": [
+      "learn-and-apply-identify-data-sources"
+    ],
+    "12": [
+      "learn-and-apply-databases"
+    ],
+    "13": [
+      "learn-and-apply-apis"
+    ],
+    "14": [
+      "learn-and-apply-web-scraping"
+    ],
+    "15": [
+      "learn-and-apply-files"
+    ],
+    "16": [
+      "learn-and-apply-gather-structured-and-unstructured-data"
+    ],
+    "17": [
+      "learn-and-apply-structured-data-tables-csvs"
+    ],
+    "18": [
+      "learn-and-apply-unstructured-data-text-images-videos"
+    ],
+    "19": [
+      "learn-and-apply-store-data-in-a-centralized-location"
+    ],
+    "20": [
+      "learn-and-apply-local-storage"
+    ],
+    "21": [
+      "learn-and-apply-cloud-storage"
+    ],
+    "22": [
+      "learn-and-apply-database-storage"
+    ],
+    "23": [
+      "learn-and-apply-track-notes-about-the-data"
+    ],
+    "24": [
+      "learn-and-apply-data-type"
+    ],
+    "25": [
+      "learn-and-apply-file-size"
+    ],
+    "26": [
+      "learn-and-apply-collection-method"
+    ],
+    "27": [
+      "learn-and-apply-handle-data-privacy--security-concerns",
+      "learn-and-apply-handle-data-privacy-security-concerns"
+    ],
+    "28": [
+      "learn-and-apply-gdpr"
+    ],
+    "29": [
+      "learn-and-apply-hipaa"
+    ],
+    "30": [
+      "learn-and-apply-13-data-cleaning--preprocessing",
+      "learn-and-apply-13-data-cleaning-preprocessing"
+    ],
+    "31": [
+      "learn-and-apply-131-handle-missing-values"
+    ],
+    "32": [
+      "learn-and-apply-identify-missing-values"
+    ],
+    "33": [
+      "learn-and-apply-null-and-nan-indicators"
+    ],
+    "34": [
+      "learn-and-apply-handle-missing-values"
+    ],
+    "35": [
+      "learn-and-apply-remove"
+    ],
+    "36": [
+      "learn-and-apply-fill-a-blank"
+    ],
+    "37": [
+      "learn-and-apply-numerical-data-mean-median-mode-knn-imputer"
+    ],
+    "38": [
+      "learn-and-apply-mean"
+    ],
+    "39": [
+      "learn-and-apply-median"
+    ],
+    "40": [
+      "learn-and-apply-mode"
+    ],
+    "41": [
+      "learn-and-apply-knn-imputer"
+    ],
+    "42": [
+      "learn-and-apply-category-data-mode-unknown-placeholder"
+    ],
+    "43": [
+      "learn-and-apply-category-mode"
+    ],
+    "44": [
+      "learn-and-apply-unknown-placeholder"
+    ],
+    "45": [
+      "learn-and-apply-time-series-data-forward-fill-ffill-backward-fill-bfill"
+    ],
+    "46": [
+      "learn-and-apply-forward-fill-ffill"
+    ],
+    "47": [
+      "learn-and-apply-backward-fill-bfill"
+    ],
+    "48": [
+      "learn-and-apply-when-missing-values-change-the-answer"
+    ],
+    "49": [
+      "learn-and-apply-132-remove-duplicates"
+    ],
+    "50": [
+      "learn-and-apply-detect--remove-exact-duplicates",
+      "learn-and-apply-detect-remove-exact-duplicates"
+    ],
+    "51": [
+      "learn-and-apply-handle-near-duplicates"
+    ],
+    "52": [
+      "learn-and-apply-standardize-text-cases-and-remove-spaces"
+    ],
+    "53": [
+      "learn-and-apply-fuzzy-matching"
+    ],
+    "54": [
+      "learn-and-apply-133-fix-inconsistent-data"
+    ],
+    "55": [
+      "learn-and-apply-standardize-formats"
+    ],
+    "56": [
+      "learn-and-apply-convert-date-formats-mmddyyyy-to-yyyy-mm-dd"
+    ],
+    "57": [
+      "learn-and-apply-convert-text-to-lowercase-and-remove-spaces"
+    ],
+    "58": [
+      "learn-and-apply-ensure-correct-units-kg-vs-lbs"
+    ],
+    "59": [
+      "learn-and-apply-fix-typos-and-spelling-variations"
+    ],
+    "60": [
+      "learn-and-apply-134-handle-outliers"
+    ],
+    "61": [
+      "learn-and-apply-detection-methods"
+    ],
+    "62": [
+      "learn-and-apply-boxplots--visualization",
+      "learn-and-apply-boxplots-visualization"
+    ],
+    "63": [
+      "learn-and-apply-z-score-method"
+    ],
+    "64": [
+      "learn-and-apply-interquartile-range-iqr"
+    ],
+    "65": [
+      "learn-and-apply-handling-strategies"
+    ],
+    "66": [
+      "learn-and-apply-remove-1",
+      "learn-and-apply-remove_1"
+    ],
+    "67": [
+      "learn-and-apply-capclip-values"
+    ],
+    "68": [
+      "learn-and-apply-transform-data"
+    ],
+    "69": [
+      "learn-and-apply-spot-check-and-handle-an-outlier"
+    ],
+    "70": [
+      "learn-and-apply-135-normalize-or-standardize-data"
+    ],
+    "71": [
+      "learn-and-apply-normalization-min-max-scaling"
+    ],
+    "72": [
+      "learn-and-apply-standardization-z-score-scaling"
+    ],
+    "73": [
+      "learn-and-apply-when-to-use"
+    ],
+    "74": [
+      "learn-and-apply-136-convert-category-data"
+    ],
+    "75": [
+      "learn-and-apply-one-hot-encoding-for-unordered-categories"
+    ],
+    "76": [
+      "learn-and-apply-turn-ordered-names-into-numbers-ordinalencoder"
+    ],
+    "77": [
+      "learn-and-apply-target-encoding-for-many-different-categories"
+    ],
+    "78": [
+      "learn-and-apply-137-text-data-cleaning"
+    ],
+    "79": [
+      "learn-and-apply-convert-to-lowercase--remove-punctuation",
+      "learn-and-apply-convert-to-lowercase-remove-punctuation"
+    ],
+    "80": [
+      "learn-and-apply-remove-stop-words-eg-the-and-is"
+    ],
+    "81": [
+      "learn-and-apply-tokenization--lemmatization",
+      "learn-and-apply-tokenization-lemmatization"
+    ],
+    "82": [
+      "learn-and-apply-tokenization"
+    ],
+    "83": [
+      "learn-and-apply-lemmatization"
+    ],
+    "84": [
+      "learn-and-apply-convert-text-to-numerical-representation"
+    ],
+    "85": [
+      "learn-and-apply-countvectorizer"
+    ],
+    "86": [
+      "learn-and-apply-tf-idf"
+    ],
+    "87": [
+      "learn-and-apply-word-embeddings-word2vec-bert-etc"
+    ],
+    "88": [
+      "learn-and-apply-word2vec"
+    ],
+    "89": [
+      "learn-and-apply-bert"
+    ],
+    "90": [
+      "learn-and-apply-138-handle-boolean-data"
+    ],
+    "91": [
+      "learn-and-apply-convert-boolean-values-to-standard-format-1-or-0"
+    ],
+    "92": [
+      "learn-and-apply-fill-missing-values-with-mode"
+    ],
+    "93": [
+      "learn-and-apply-139-handle-datetime-data"
+    ],
+    "94": [
+      "learn-and-apply-convert-to-datetime-format"
+    ],
+    "95": [
+      "learn-and-apply-extract-useful-features-year-month-day-weekday-hour-etc"
+    ],
+    "96": [
+      "learn-and-apply-year"
+    ],
+    "97": [
+      "learn-and-apply-month"
+    ],
+    "98": [
+      "learn-and-apply-day"
+    ],
+    "99": [
+      "learn-and-apply-weekday"
+    ],
+    "100": [
+      "learn-and-apply-hour"
+    ],
+    "101": [
+      "learn-and-apply-handle-missing-dates-using-interpolation"
+    ],
+    "102": [
+      "learn-and-apply-1310-handle-large-numbers"
+    ],
+    "103": [
+      "learn-and-apply-apply-log-transformation-if-data-is-highly-skewed"
+    ],
+    "104": [
+      "learn-and-apply-convert-to-scientific-notation-if-values-are-too-large"
+    ],
+    "105": [
+      "learn-and-apply-data-types-issues--preprocessing-techniques",
+      "learn-and-apply-data-types-issues-preprocessing-techniques"
+    ],
+    "106": [
+      "learn-and-apply-geospatial-latlong-addresses"
+    ],
+    "107": [
+      "learn-and-apply-convert-to-coordinates"
+    ],
+    "108": [
+      "learn-and-apply-geocoding-apis"
+    ],
+    "109": [
+      "learn-and-apply-complex-data-json-xml-dictionaries"
+    ],
+    "110": [
+      "learn-and-apply-flatten-json"
+    ],
+    "111": [
+      "learn-and-apply-extract-xml-fields"
+    ],
+    "112": [
+      "learn-and-apply-dictionaries-and-missing-keys"
+    ],
+    "113": [
+      "learn-and-apply-images-pixels-matrices"
+    ],
+    "114": [
+      "learn-and-apply-image-embeddings"
+    ],
+    "115": [
+      "learn-and-apply-resize-images"
+    ],
+    "116": [
+      "learn-and-apply-grayscale"
+    ],
+    "117": [
+      "learn-and-apply-image-pixels-for-a-nearest-neighbour-model"
+    ],
+    "118": [
+      "learn-and-apply-audio-waves-spectrograms"
+    ],
+    "119": [
+      "learn-and-apply-wav-and-mp3"
+    ],
+    "120": [
+      "learn-and-apply-spectrograms"
+    ],
+    "121": [
+      "learn-and-apply-mfcc-features"
+    ],
+    "122": [
+      "learn-and-apply-video-frames-sequences"
+    ],
+    "123": [
+      "learn-and-apply-mp4-and-frame-extraction"
+    ],
+    "124": [
+      "learn-and-apply-cnn-and-lstm-sequence-modeling"
+    ],
+    "125": [
+      "learn-and-apply-numeric-int-float"
+    ],
+    "126": [
+      "learn-and-apply-category-enum-labels"
+    ],
+    "127": [
+      "learn-and-apply-text-strings"
+    ],
+    "128": [
+      "learn-and-apply-boolean-truefalse"
+    ],
+    "129": [
+      "learn-and-apply-large-numbers-bigint-long-float"
+    ],
+    "130": [
+      "learn-and-apply-datetime-timestamps-dates"
+    ],
+    "131": [
+      "learn-and-apply-data"
+    ],
+    "132": [
+      "learn-and-apply-min-max-scaling-normalization"
+    ],
+    "133": [
+      "learn-and-apply-fixed-range-0-1"
+    ],
+    "134": [
+      "learn-and-apply-fixed-range--1-1",
+      "learn-and-apply-fixed-range-1-1"
+    ],
+    "135": [
+      "learn-and-apply-z-score-standardization-standardization"
+    ],
+    "136": [
+      "learn-and-apply-log-transformation-log-scaling"
+    ],
+    "137": [
+      "learn-and-apply-log1p-and-base-10-log"
+    ],
+    "138": [
+      "learn-and-apply-robust-scaling-median--iqr-scaling",
+      "learn-and-apply-robust-scaling-median-iqr-scaling"
+    ],
+    "139": [
+      "learn-and-apply-power-transformations-box-cox--yeo-johnson",
+      "learn-and-apply-power-transformations-box-cox-yeo-johnson"
+    ],
+    "140": [
+      "learn-and-apply-box-cox-transformation"
+    ],
+    "141": [
+      "learn-and-apply-yeo-johnson-transformation"
+    ],
+    "142": [
+      "learn-and-apply-quantile-transformation-rank-scaling"
+    ],
+    "143": [
+      "learn-and-apply-uniform-distribution"
+    ],
+    "144": [
+      "learn-and-apply-normal-distribution"
+    ],
+    "145": [
+      "learn-and-apply-binning-discretization"
+    ],
+    "146": [
+      "learn-and-apply-polynomial-features-feature-expansion"
+    ],
+    "147": [
+      "learn-and-apply-which-technique-should-you-use"
+    ],
+    "148": [
+      "learn-and-apply-14-exploratory-data-analysis-eda"
+    ],
+    "149": [
+      "learn-and-apply-visualization-is-used-here"
+    ],
+    "150": [
+      "learn-and-apply-data-distributions-mean-median-skewness"
+    ],
+    "151": [
+      "learn-and-apply-trends-correlations-and-patterns"
+    ],
+    "152": [
+      "learn-and-apply-detecting-outliers--anomalies",
+      "learn-and-apply-detecting-outliers-anomalies"
+    ],
+    "153": [
+      "learn-and-apply-feature-relationships-and-overlap-between-inputs-multicollinearity"
+    ],
+    "154": [
+      "learn-and-apply-visualization-techniques"
+    ],
+    "155": [
+      "learn-and-apply-histograms"
+    ],
+    "156": [
+      "learn-and-apply-scatter-plots"
+    ],
+    "157": [
+      "learn-and-apply-box-plots"
+    ],
+    "158": [
+      "learn-and-apply-heatmaps"
+    ],
+    "159": [
+      "learn-and-apply-pair-plots"
+    ],
+    "160": [
+      "learn-and-apply-15-feature-engineering--feature-selection",
+      "learn-and-apply-15-feature-engineering-feature-selection"
+    ],
+    "161": [
+      "learn-and-apply-visualization-helps-here"
+    ],
+    "162": [
+      "learn-and-apply-feature-engineering"
+    ],
+    "163": [
+      "learn-and-apply-create-new-features"
+    ],
+    "164": [
+      "learn-and-apply-age-from-date-of-birth"
+    ],
+    "165": [
+      "learn-and-apply-extracting-keywords-from-text"
+    ],
+    "166": [
+      "learn-and-apply-transform-features"
+    ],
+    "167": [
+      "learn-and-apply-log-transformation"
+    ],
+    "168": [
+      "learn-and-apply-polynomial-features"
+    ],
+    "169": [
+      "learn-and-apply-feature-selection"
+    ],
+    "170": [
+      "learn-and-apply-remove-irrelevant-or-redundant-features"
+    ],
+    "171": [
+      "learn-and-apply-use-statistical-tests-anova-chi-square-test"
+    ],
+    "172": [
+      "learn-and-apply-anova"
+    ],
+    "173": [
+      "learn-and-apply-chi-square-test"
+    ],
+    "174": [
+      "learn-and-apply-encoding-category-variables"
+    ],
+    "175": [
+      "learn-and-apply-scaling-and-normalization"
+    ],
+    "176": [
+      "learn-and-apply-visualization-techniques-1",
+      "learn-and-apply-visualization-techniques_1"
+    ],
+    "177": [
+      "learn-and-apply-bar-plots"
+    ],
+    "178": [
+      "learn-and-apply-pair-plots-1",
+      "learn-and-apply-pair-plots_1"
+    ],
+    "179": [
+      "learn-and-apply-16-data-splitting"
+    ],
+    "180": [
+      "learn-and-apply-training-set"
+    ],
+    "181": [
+      "learn-and-apply-validation-set"
+    ],
+    "182": [
+      "learn-and-apply-test-set"
+    ],
+    "183": [
+      "learn-and-apply-common-split-ratios"
+    ],
+    "184": [
+      "learn-and-apply-80-20-train-test"
+    ],
+    "185": [
+      "learn-and-apply-70-20-10-train-validation-test"
+    ],
+    "186": [
+      "learn-and-apply-stratified-sampling"
+    ],
+    "187": [
+      "learn-and-apply-17-model-selection--training",
+      "learn-and-apply-17-model-selection-training"
+    ],
+    "188": [
+      "learn-and-apply-choose-the-best-machine-learning-model"
+    ],
+    "189": [
+      "learn-and-apply-train-the-model-using-the-training-dataset"
+    ],
+    "190": [
+      "learn-and-apply-tune-model-settings"
+    ],
+    "191": [
+      "learn-and-apply-grid-search"
+    ],
+    "192": [
+      "learn-and-apply-random-search"
+    ],
+    "193": [
+      "learn-and-apply-bayesian-optimization"
+    ],
+    "194": [
+      "learn-and-apply-cross-validation"
+    ],
+    "195": [
+      "learn-and-apply-18-model-evaluation"
+    ],
+    "196": [
+      "learn-and-apply-visualization-is-used-here-1",
+      "learn-and-apply-visualization-is-used-here_1"
+    ],
+    "197": [
+      "learn-and-apply-classification-metrics"
+    ],
+    "198": [
+      "learn-and-apply-accuracy-precision-recall-f1-score-auc-roc"
+    ],
+    "199": [
+      "learn-and-apply-accuracy"
+    ],
+    "200": [
+      "learn-and-apply-precision"
+    ],
+    "201": [
+      "learn-and-apply-recall"
+    ],
+    "202": [
+      "learn-and-apply-f1-score"
+    ],
+    "203": [
+      "learn-and-apply-auc-roc"
+    ],
+    "204": [
+      "learn-and-apply-visualization-techniques-2",
+      "learn-and-apply-visualization-techniques_2"
+    ],
+    "205": [
+      "learn-and-apply-confusion-matrix"
+    ],
+    "206": [
+      "learn-and-apply-roc-curve"
+    ],
+    "207": [
+      "learn-and-apply-feature-importance-plot"
+    ],
+    "208": [
+      "learn-and-apply-regression-metrics"
+    ],
+    "209": [
+      "learn-and-apply-rmse-mae-r-score",
+      "learn-and-apply-rmse-mae-r2-score"
+    ],
+    "210": [
+      "learn-and-apply-residual-plots"
+    ],
+    "211": [
+      "learn-and-apply-rmse"
+    ],
+    "212": [
+      "learn-and-apply-mae"
+    ],
+    "213": [
+      "learn-and-apply-r-score",
+      "learn-and-apply-r2-score"
+    ],
+    "214": [
+      "learn-and-apply-compare-multiple-models"
+    ],
+    "215": [
+      "learn-and-apply-19-model-deployment"
+    ],
+    "216": [
+      "learn-and-apply-apis-web-apps-or-cloud-services"
+    ],
+    "217": [
+      "learn-and-apply-api-deployment"
+    ],
+    "218": [
+      "learn-and-apply-web-app-deployment"
+    ],
+    "219": [
+      "learn-and-apply-cloud-services"
+    ],
+    "220": [
+      "learn-and-apply-flask-fastapi-or-streamlit"
+    ],
+    "221": [
+      "learn-and-apply-fastapi"
+    ],
+    "222": [
+      "learn-and-apply-flask"
+    ],
+    "223": [
+      "learn-and-apply-streamlit"
+    ],
+    "224": [
+      "learn-and-apply-aws-google-cloud-or-heroku"
+    ],
+    "225": [
+      "learn-and-apply-aws"
+    ],
+    "226": [
+      "learn-and-apply-google-cloud"
+    ],
+    "227": [
+      "learn-and-apply-heroku"
+    ],
+    "228": [
+      "learn-and-apply-rest-api-or-integrate-with-mobileweb-apps"
+    ],
+    "229": [
+      "learn-and-apply-rest-api"
+    ],
+    "230": [
+      "learn-and-apply-mobile-app-integration"
+    ],
+    "231": [
+      "learn-and-apply-web-app-integration"
+    ],
+    "232": [
+      "learn-and-apply-first-api-call-from-a-web-page"
+    ],
+    "233": [
+      "learn-and-apply-cloud-deployment-walkthrough"
+    ],
+    "234": [
+      "learn-and-apply-110-model-monitoring--maintenance",
+      "learn-and-apply-110-model-monitoring-maintenance"
+    ],
+    "235": [
+      "learn-and-apply-visualization-helps-track-model-performance"
+    ],
+    "236": [
+      "learn-and-apply-monitor-model-accuracy--performance-over-time",
+      "learn-and-apply-monitor-model-accuracy-performance-over-time"
+    ],
+    "237": [
+      "learn-and-apply-detect-data-drift"
+    ],
+    "238": [
+      "learn-and-apply-implement-automated-alerts"
+    ],
+    "239": [
+      "learn-and-apply-retrain-the-model-periodically-with-new-data"
+    ],
+    "240": [
+      "learn-and-apply-visualization-techniques-3",
+      "learn-and-apply-visualization-techniques_3"
+    ],
+    "241": [
+      "learn-and-apply-live-dashboards-using-tableau-power-bi-or-matplotlibseaborn"
+    ],
+    "242": [
+      "learn-and-apply-tableau"
+    ],
+    "243": [
+      "learn-and-apply-power-bi"
+    ],
+    "244": [
+      "learn-and-apply-matplotlib"
+    ],
+    "245": [
+      "learn-and-apply-seaborn"
+    ],
+    "246": [
+      "learn-and-apply-drift-detection-charts"
+    ],
+    "247": [
+      "learn-and-apply-real-time-model-accuracy-tracking-dashboards"
+    ],
+    "248": [
+      "learn-and-apply-a-dashboard-that-refreshes-on-your-computer"
+    ],
+    "249": [
+      "learn-and-apply-scheduled-model-checks"
+    ],
+    "250": [
+      "learn-and-apply-2-data-sets"
+    ],
+    "251": [
+      "learn-and-apply-invented-salary-records"
+    ],
+    "252": [
+      "learn-and-apply-description"
+    ],
+    "253": [
+      "learn-and-apply-practice"
+    ],
+    "254": [
+      "learn-and-apply-missing-values"
+    ],
+    "255": [
+      "learn-and-apply-feature-scaling"
+    ],
+    "256": [
+      "learn-and-apply-outliers"
+    ],
+    "257": [
+      "learn-and-apply-category-encoding"
+    ],
+    "258": [
+      "learn-and-apply-source"
+    ],
+    "259": [
+      "learn-and-apply-invented-ferry-boarding-records"
+    ],
+    "260": [
+      "learn-and-apply-description-1",
+      "learn-and-apply-description_1"
+    ],
+    "261": [
+      "learn-and-apply-practice-1",
+      "learn-and-apply-practice_1"
+    ],
+    "262": [
+      "learn-and-apply-missing-values-1",
+      "learn-and-apply-missing-values_1"
+    ],
+    "263": [
+      "learn-and-apply-category-encoding-1",
+      "learn-and-apply-category-encoding_1"
+    ],
+    "264": [
+      "learn-and-apply-outliers-1",
+      "learn-and-apply-outliers_1"
+    ],
+    "265": [
+      "learn-and-apply-scaling"
+    ],
+    "266": [
+      "learn-and-apply-feature-extraction"
+    ],
+    "267": [
+      "learn-and-apply-source-1",
+      "learn-and-apply-source_1"
+    ],
+    "268": [
+      "learn-and-apply-invented-house-listings"
+    ],
+    "269": [
+      "learn-and-apply-description-2",
+      "learn-and-apply-description_2"
+    ],
+    "270": [
+      "learn-and-apply-practice-2",
+      "learn-and-apply-practice_2"
+    ],
+    "271": [
+      "learn-and-apply-missing-values-2",
+      "learn-and-apply-missing-values_2"
+    ],
+    "272": [
+      "learn-and-apply-category-encoding-2",
+      "learn-and-apply-category-encoding_2"
+    ],
+    "273": [
+      "learn-and-apply-outliers-2",
+      "learn-and-apply-outliers_2"
+    ],
+    "274": [
+      "learn-and-apply-feature-scaling-1",
+      "learn-and-apply-feature-scaling_1"
+    ],
+    "275": [
+      "learn-and-apply-handling-skewed-data"
+    ],
+    "276": [
+      "learn-and-apply-source-2",
+      "learn-and-apply-source_2"
+    ],
+    "277": [
+      "learn-and-apply-invented-flower-measurements"
+    ],
+    "278": [
+      "learn-and-apply-description-3",
+      "learn-and-apply-description_3"
+    ],
+    "279": [
+      "learn-and-apply-practice-3",
+      "learn-and-apply-practice_3"
+    ],
+    "280": [
+      "learn-and-apply-feature-scaling-2",
+      "learn-and-apply-feature-scaling_2"
+    ],
+    "281": [
+      "learn-and-apply-outliers-3",
+      "learn-and-apply-outliers_3"
+    ],
+    "282": [
+      "learn-and-apply-category-encoding-3",
+      "learn-and-apply-category-encoding_3"
+    ],
+    "283": [
+      "learn-and-apply-visualization"
+    ],
+    "284": [
+      "learn-and-apply-source-3",
+      "learn-and-apply-source_3"
+    ],
+    "285": [
+      "learn-and-apply-invented-income-records"
+    ],
+    "286": [
+      "learn-and-apply-description-4",
+      "learn-and-apply-description_4"
+    ],
+    "287": [
+      "learn-and-apply-practice-4",
+      "learn-and-apply-practice_4"
+    ],
+    "288": [
+      "learn-and-apply-missing-values-3",
+      "learn-and-apply-missing-values_3"
+    ],
+    "289": [
+      "learn-and-apply-category-encoding-4",
+      "learn-and-apply-category-encoding_4"
+    ],
+    "290": [
+      "learn-and-apply-feature-scaling-3",
+      "learn-and-apply-feature-scaling_3"
+    ],
+    "291": [
+      "learn-and-apply-outliers-4",
+      "learn-and-apply-outliers_4"
+    ],
+    "292": [
+      "learn-and-apply-source-4",
+      "learn-and-apply-source_4"
+    ],
+    "293": [
+      "learn-and-apply-invented-drink-measurements"
+    ],
+    "294": [
+      "learn-and-apply-description-5",
+      "learn-and-apply-description_5"
+    ],
+    "295": [
+      "learn-and-apply-practice-5",
+      "learn-and-apply-practice_5"
+    ],
+    "296": [
+      "learn-and-apply-missing-values-4",
+      "learn-and-apply-missing-values_4"
+    ],
+    "297": [
+      "learn-and-apply-outliers-5",
+      "learn-and-apply-outliers_5"
+    ],
+    "298": [
+      "learn-and-apply-feature-scaling-4",
+      "learn-and-apply-feature-scaling_4"
+    ],
+    "299": [
+      "learn-and-apply-category-encoding-5",
+      "learn-and-apply-category-encoding_5"
+    ],
+    "300": [
+      "learn-and-apply-normalization"
+    ],
+    "301": [
+      "learn-and-apply-source-5",
+      "learn-and-apply-source_5"
+    ],
+    "302": [
+      "learn-and-apply-invented-neighbourhood-prices"
+    ],
+    "303": [
+      "learn-and-apply-description-6",
+      "learn-and-apply-description_6"
+    ],
+    "304": [
+      "learn-and-apply-practice-6",
+      "learn-and-apply-practice_6"
+    ],
+    "305": [
+      "learn-and-apply-missing-values-5",
+      "learn-and-apply-missing-values_5"
+    ],
+    "306": [
+      "learn-and-apply-feature-scaling-5",
+      "learn-and-apply-feature-scaling_5"
+    ],
+    "307": [
+      "learn-and-apply-outliers-6",
+      "learn-and-apply-outliers_6"
+    ],
+    "308": [
+      "learn-and-apply-category-encoding-6",
+      "learn-and-apply-category-encoding_6"
+    ],
+    "309": [
+      "learn-and-apply-source-6",
+      "learn-and-apply-source_6"
+    ],
+    "310": [
+      "learn-and-apply-hand-drawn-digits"
+    ],
+    "311": [
+      "learn-and-apply-description-7",
+      "learn-and-apply-description_7"
+    ],
+    "312": [
+      "learn-and-apply-practice-7",
+      "learn-and-apply-practice_7"
+    ],
+    "313": [
+      "learn-and-apply-resizing"
+    ],
+    "314": [
+      "learn-and-apply-normalization-1",
+      "learn-and-apply-normalization_1"
+    ],
+    "315": [
+      "learn-and-apply-feature-scaling-6",
+      "learn-and-apply-feature-scaling_6"
+    ],
+    "316": [
+      "learn-and-apply-outliers-7",
+      "learn-and-apply-outliers_7"
+    ],
+    "317": [
+      "learn-and-apply-source-7",
+      "learn-and-apply-source_7"
+    ],
+    "318": [
+      "learn-and-apply-invented-shopper-groups"
+    ],
+    "319": [
+      "learn-and-apply-description-8",
+      "learn-and-apply-description_8"
+    ],
+    "320": [
+      "learn-and-apply-practice-8",
+      "learn-and-apply-practice_8"
+    ],
+    "321": [
+      "learn-and-apply-missing-values-6",
+      "learn-and-apply-missing-values_6"
+    ],
+    "322": [
+      "learn-and-apply-feature-scaling-7",
+      "learn-and-apply-feature-scaling_7"
+    ],
+    "323": [
+      "learn-and-apply-category-encoding-7",
+      "learn-and-apply-category-encoding_7"
+    ],
+    "324": [
+      "learn-and-apply-outliers-8",
+      "learn-and-apply-outliers_8"
+    ],
+    "325": [
+      "learn-and-apply-source-8",
+      "learn-and-apply-source_8"
+    ],
+    "326": [
+      "learn-and-apply-invented-bank-campaign-records"
+    ],
+    "327": [
+      "learn-and-apply-description-9",
+      "learn-and-apply-description_9"
+    ],
+    "328": [
+      "learn-and-apply-practice-9",
+      "learn-and-apply-practice_9"
+    ],
+    "329": [
+      "learn-and-apply-category-encoding-8",
+      "learn-and-apply-category-encoding_8"
+    ],
+    "330": [
+      "learn-and-apply-feature-scaling-8",
+      "learn-and-apply-feature-scaling_8"
+    ],
+    "331": [
+      "learn-and-apply-outliers-9",
+      "learn-and-apply-outliers_9"
+    ],
+    "332": [
+      "learn-and-apply-missing-values-7",
+      "learn-and-apply-missing-values_7"
+    ],
+    "333": [
+      "learn-and-apply-source-9",
+      "learn-and-apply-source_9"
+    ],
+    "334": [
+      "learn-and-apply-invented-health-related-practice-rows"
+    ],
+    "335": [
+      "learn-and-apply-description-10",
+      "learn-and-apply-description_10"
+    ],
+    "336": [
+      "learn-and-apply-practice-10",
+      "learn-and-apply-practice_10"
+    ],
+    "337": [
+      "learn-and-apply-feature-scaling-9",
+      "learn-and-apply-feature-scaling_9"
+    ],
+    "338": [
+      "learn-and-apply-category-encoding-9",
+      "learn-and-apply-category-encoding_9"
+    ],
+    "339": [
+      "learn-and-apply-outliers-10",
+      "learn-and-apply-outliers_10"
+    ],
+    "340": [
+      "learn-and-apply-source-10",
+      "learn-and-apply-source_10"
+    ],
+    "341": [
+      "learn-and-apply-hand-drawn-clothing-shapes"
+    ],
+    "342": [
+      "learn-and-apply-description-11",
+      "learn-and-apply-description_11"
+    ],
+    "343": [
+      "learn-and-apply-practice-11",
+      "learn-and-apply-practice_11"
+    ],
+    "344": [
+      "learn-and-apply-resizing-1",
+      "learn-and-apply-resizing_1"
+    ],
+    "345": [
+      "learn-and-apply-normalization-2",
+      "learn-and-apply-normalization_2"
+    ],
+    "346": [
+      "learn-and-apply-one-hot-encoding"
+    ],
+    "347": [
+      "learn-and-apply-flattening"
+    ],
+    "348": [
+      "learn-and-apply-source-11",
+      "learn-and-apply-source_11"
+    ],
+    "349": [
+      "learn-and-apply-invented-app-listings"
+    ],
+    "350": [
+      "learn-and-apply-description-12",
+      "learn-and-apply-description_12"
+    ],
+    "351": [
+      "learn-and-apply-practice-12",
+      "learn-and-apply-practice_12"
+    ],
+    "352": [
+      "learn-and-apply-category-encoding-10",
+      "learn-and-apply-category-encoding_10"
+    ],
+    "353": [
+      "learn-and-apply-missing-values-8",
+      "learn-and-apply-missing-values_8"
+    ],
+    "354": [
+      "learn-and-apply-outliers-11",
+      "learn-and-apply-outliers_11"
+    ],
+    "355": [
+      "learn-and-apply-source-12",
+      "learn-and-apply-source_12"
+    ],
+    "356": [
+      "learn-and-apply-3-machine-learning-categories"
+    ],
+    "357": [
+      "learn-and-apply-31-supervised-learning"
+    ],
+    "358": [
+      "learn-and-apply-common-algorithms"
+    ],
+    "359": [
+      "learn-and-apply-regression-algorithms"
+    ],
+    "360": [
+      "learn-and-apply-linear-regression"
+    ],
+    "361": [
+      "learn-and-apply-ridgelasso-regression"
+    ],
+    "362": [
+      "learn-and-apply-ridge-regression"
+    ],
+    "363": [
+      "learn-and-apply-lasso-regression"
+    ],
+    "364": [
+      "learn-and-apply-polynomial-regression"
+    ],
+    "365": [
+      "learn-and-apply-support-vector-regression-svr"
+    ],
+    "366": [
+      "learn-and-apply-decision-trees-for-regression"
+    ],
+    "367": [
+      "learn-and-apply-random-forest-for-regression"
+    ],
+    "368": [
+      "learn-and-apply-gradient-boosting-gbm"
+    ],
+    "369": [
+      "learn-and-apply-xgboost"
+    ],
+    "370": [
+      "learn-and-apply-lightgbm"
+    ],
+    "371": [
+      "learn-and-apply-classification-algorithms"
+    ],
+    "372": [
+      "learn-and-apply-logistic-regression"
+    ],
+    "373": [
+      "learn-and-apply-k-nearest-neighbors-knn"
+    ],
+    "374": [
+      "learn-and-apply-support-vector-machines-svm"
+    ],
+    "375": [
+      "learn-and-apply-decision-trees-for-classification"
+    ],
+    "376": [
+      "learn-and-apply-random-forest-for-classification"
+    ],
+    "377": [
+      "learn-and-apply-naive-bayes"
+    ],
+    "378": [
+      "learn-and-apply-gradient-boosting"
+    ],
+    "379": [
+      "learn-and-apply-xgboost-1",
+      "learn-and-apply-xgboost_1"
+    ],
+    "380": [
+      "learn-and-apply-lightgbm-1",
+      "learn-and-apply-lightgbm_1"
+    ],
+    "381": [
+      "learn-and-apply-k-means-classifier"
+    ],
+    "382": [
+      "learn-and-apply-32-unsupervised-learning"
+    ],
+    "383": [
+      "learn-and-apply-common-algorithms-1",
+      "learn-and-apply-common-algorithms_1"
+    ],
+    "384": [
+      "learn-and-apply-clustering-algorithms"
+    ],
+    "385": [
+      "learn-and-apply-k-means"
+    ],
+    "386": [
+      "learn-and-apply-hierarchical-clustering"
+    ],
+    "387": [
+      "learn-and-apply-dbscan"
+    ],
+    "388": [
+      "learn-and-apply-gaussian-mixture-models-gmm"
+    ],
+    "389": [
+      "learn-and-apply-dimensionality-reduction"
+    ],
+    "390": [
+      "learn-and-apply-principal-component-analysis-pca"
+    ],
+    "391": [
+      "learn-and-apply-t-distributed-stochastic-neighbor-embedding-t-sne"
+    ],
+    "392": [
+      "learn-and-apply-use-labels-to-make-fewer-inputs-supervised-lda"
+    ],
+    "393": [
+      "learn-and-apply-independent-component-analysis-ica"
+    ],
+    "394": [
+      "learn-and-apply-anomaly-detection"
+    ],
+    "395": [
+      "learn-and-apply-isolation-forest"
+    ],
+    "396": [
+      "learn-and-apply-one-class-svm"
+    ],
+    "397": [
+      "learn-and-apply-z-score-algorithm"
+    ],
+    "398": [
+      "learn-and-apply-association"
+    ],
+    "399": [
+      "learn-and-apply-apriori-algorithm"
+    ],
+    "400": [
+      "learn-and-apply-frequent-pattern-growth"
+    ],
+    "401": [
+      "learn-and-apply-frequently-occurring-items"
+    ],
+    "402": [
+      "learn-and-apply-33-semi-supervised-learning"
+    ],
+    "403": [
+      "learn-and-apply-common-algorithms-2",
+      "learn-and-apply-common-algorithms_2"
+    ],
+    "404": [
+      "learn-and-apply-semi-supervised-support-vector-machines-s3vm"
+    ],
+    "405": [
+      "learn-and-apply-label-propagation"
+    ],
+    "406": [
+      "learn-and-apply-self-training"
+    ],
+    "407": [
+      "learn-and-apply-co-training"
+    ],
+    "408": [
+      "learn-and-apply-regression"
+    ],
+    "409": [
+      "learn-and-apply-classification-semi-supervised"
+    ],
+    "410": [
+      "learn-and-apply-34-reinforcement-learning"
+    ],
+    "411": [
+      "learn-and-apply-key-concepts"
+    ],
+    "412": [
+      "learn-and-apply-agent"
+    ],
+    "413": [
+      "learn-and-apply-environment"
+    ],
+    "414": [
+      "learn-and-apply-actions"
+    ],
+    "415": [
+      "learn-and-apply-state"
+    ],
+    "416": [
+      "learn-and-apply-reward"
+    ],
+    "417": [
+      "learn-and-apply-policy"
+    ],
+    "418": [
+      "learn-and-apply-value-function"
+    ],
+    "419": [
+      "learn-and-apply-common-algorithms-3",
+      "learn-and-apply-common-algorithms_3"
+    ],
+    "420": [
+      "learn-and-apply-q-learning"
+    ],
+    "421": [
+      "learn-and-apply-deep-q-networks-dqn"
+    ],
+    "422": [
+      "learn-and-apply-policy-gradient-methods"
+    ],
+    "423": [
+      "learn-and-apply-actor-critic"
+    ],
+    "424": [
+      "learn-and-apply-monte-carlo-tree-search-mcts"
+    ],
+    "425": [
+      "learn-and-apply-model-free"
+    ],
+    "426": [
+      "learn-and-apply-policy-optimization"
+    ],
+    "427": [
+      "learn-and-apply-model-based"
+    ],
+    "428": [
+      "learn-and-apply-learn-the-model"
+    ],
+    "429": [
+      "learn-and-apply-given-the-model"
+    ],
+    "430": [
+      "learn-and-apply-summary-of-machine-learning-categories"
+    ],
+    "431": [
+      "learn-and-apply-machine-learning-algorithms"
+    ],
+    "432": [
+      "learn-and-apply-simple-linear-regression"
+    ],
+    "433": [
+      "learn-and-apply-multivariate-regression"
+    ],
+    "434": [
+      "learn-and-apply-simple-linear-regression-one-input"
+    ],
+    "435": [
+      "learn-and-apply-multiple-linear-regression"
+    ],
+    "436": [
+      "learn-and-apply-regression-diagram"
+    ],
+    "437": [
+      "learn-and-apply-classification-diagram"
+    ],
+    "438": [
+      "learn-and-apply-clustering-diagram"
+    ],
+    "439": [
+      "learn-and-apply-dimensionality-reduction-diagram"
+    ],
+    "440": [
+      "learn-and-apply-anomaly-detection-diagram"
+    ],
+    "441": [
+      "learn-and-apply-association-diagram"
+    ],
+    "442": [
+      "learn-and-apply-choose-the-right-data-split"
+    ],
+    "443": [
+      "learn-and-apply-spot-overfitting-with-a-validation-curve"
+    ],
+    "444": [
+      "learn-and-apply-choose-a-cutoff-for-rare-urgent-orders"
+    ],
+    "445": [
+      "learn-and-apply-check-whether-predicted-probabilities-are-reliable"
+    ],
+    "446": [
+      "learn-and-apply-evaluate-delivery-errors-by-route-weight-and-zone"
+    ],
+    "447": [
+      "learn-and-apply-capstone-from-delivery-csv-to-local-model-service"
+    ]
+  }
+}

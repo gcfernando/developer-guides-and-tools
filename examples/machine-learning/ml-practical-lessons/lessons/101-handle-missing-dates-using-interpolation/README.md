@@ -74,7 +74,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** This estimates the missing measurement, not the missing date. It uses the later reading; a live February 2 prediction could not use February 3.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 No. That would use a future observation. For live forecasting restrict information to what had arrived; keep retrospective repair clearly labelled.

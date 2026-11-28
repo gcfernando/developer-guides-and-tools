@@ -80,7 +80,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** An Unknown category with no training examples does not gain a learned effect merely because the name is written down. A new east zone and an absent zone are different situations.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 The fill changes the blank. It does not turn the named east zone into the training mode. Unknown-name handling belongs to the encoder and service policy; test it explicitly.

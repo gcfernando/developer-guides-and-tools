@@ -70,7 +70,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** Guesses are not facts. The search grows exponentially and its balance constraint is an assumption.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 No. Compare with a labeled-only baseline on separate confirmed answers.

@@ -71,7 +71,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** Early greedy choices can prevent discovery. Learning depends on exploration and sufficient suitable experience.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 Moves not selected by initial tie-breaking can remain untested. Inspect experience coverage and evaluate the policy.

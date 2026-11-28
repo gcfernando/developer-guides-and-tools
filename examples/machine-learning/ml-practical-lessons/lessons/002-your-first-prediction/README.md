@@ -80,7 +80,7 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 **Common mistakes and limits.** These exact made-up numbers show the calculation. They do not show how traffic or a new town will affect a real trip.
 
-<details>
+<details markdown="1">
 <summary>Check your choice and reason</summary>
 
 The estimate is 26 minutes. The actual time remains unknown. Editing a request does not create a measured answer.
