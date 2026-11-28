@@ -12,6 +12,7 @@ import markdown
 from bs4 import BeautifulSoup
 
 ROOT = Path(__file__).resolve().parents[1]
+COURSE_URL = 'https://gcfernando.github.io/developer-guides-and-tools/examples/machine-learning/ml-practical-lessons/'
 PAGES = ['README', 'START-HERE', 'SETUP', 'PYTHON-BASICS', 'LEARNING-PATH', 'PRACTICE',
          'PROJECT-CHOICES', 'ELECTIVES', 'GLOSSARY', 'INDEPENDENT-PROJECT', 'TEACHING',
          'Data-Science-and-Machine-Learning']
@@ -47,6 +48,8 @@ def render(text, title, prefix='', workbook=False):
             del heading['id']
     for a in soup.select('a[href]'):
         href=a['href']
+        if href.startswith(COURSE_URL):
+            href=prefix+href[len(COURSE_URL):]
         for page in PAGES:
             href=re.sub(r'(?<![\w-])'+re.escape(page)+r'\.md(?=#|$)',page+'.html',href)
         a['href']=href
@@ -85,7 +88,12 @@ def zip_folder(folder, output):
             z.writestr(info,p.read_bytes())
         # Readable instructions travel with every download.
         info=zipfile.ZipInfo(folder.name+'/README.html',date_time=(2026,1,1,0,0,0)); info.compress_type=zipfile.ZIP_DEFLATED
-        z.writestr(info,render((folder/'README.md').read_text(encoding='utf-8'),folder.name,prefix='../'))
+        readme=(folder/'README.md').read_text(encoding='utf-8')
+        # Repository lessons sit two levels below the guides. Downloaded lesson
+        # folders sit directly inside the complete course folder instead.
+        for guide in ('LEARNING-PATH', 'ELECTIVES'):
+            readme=readme.replace('(../../'+guide+'.md)', '(../'+guide+'.md)')
+        z.writestr(info,render(readme,folder.name,prefix='../'))
 
 
 def main():

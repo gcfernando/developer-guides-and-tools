@@ -27,6 +27,16 @@ python course_tools/check_course.py
 
 The build makes downloadable ZIPs and readable HTML pages. The checks inspect links, Python syntax and the documented practice changes. Run `python course_tools/check_course.py --run` to also run distinct lesson scripts. Optional packages may be absent; the report must say which lessons did not run. Build tools are for the author. A learner does not need them.
 
+Before publishing, also run the full repository checks. From the repository root (`DeveloperResources`), run:
+
+```bash
+npm ci
+npm test
+npm run check:repository
+```
+
+In Windows PowerShell, use `npm.cmd` if PowerShell blocks `npm.ps1`. The repository checks include rules for links in Markdown. Course checks alone do not cover all publication rules. Keep repository lesson links relative to `lessons/<lesson>/`; the build adjusts guide links in each ZIP's browser page for a folder extracted directly inside the course folder.
+
 ## Test a clean computer setup
 
 This is a release task, not a claim that it has already passed.

@@ -25,6 +25,12 @@ python course_tools/build_course.py
 python course_tools/check_course.py
 </code></pre>
 <p>The build makes downloadable ZIPs and readable HTML pages. The checks inspect links, Python syntax and the documented practice changes. Run <code>python course_tools/check_course.py --run</code> to also run distinct lesson scripts. Optional packages may be absent; the report must say which lessons did not run. Build tools are for the author. A learner does not need them.</p>
+<p>Before publishing, also run the full repository checks. From the repository root (<code>DeveloperResources</code>), run:</p>
+<pre><code class="language-bash">npm ci
+npm test
+npm run check:repository
+</code></pre>
+<p>In Windows PowerShell, use <code>npm.cmd</code> if PowerShell blocks <code>npm.ps1</code>. The repository checks include rules for links in Markdown. Course checks alone do not cover all publication rules. Keep repository lesson links relative to <code>lessons/&lt;lesson&gt;/</code>; the build adjusts guide links in each ZIP's browser page for a folder extracted directly inside the course folder.</p>
 <h2 id="test-a-clean-computer-setup">Test a clean computer setup</h2>
 <p>This is a release task, not a claim that it has already passed.</p>
 <div aria-label="Scrollable table" class="table-frame" role="region" tabindex="0"><table>

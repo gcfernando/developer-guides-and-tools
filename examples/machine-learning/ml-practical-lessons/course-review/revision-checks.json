@@ -2526,5 +2526,21 @@
     "independent_checker": "valid submission and duplicate-ID rejection passed",
     "unchanged_build_is_reproducible": true,
     "portable_line_endings": "LF in source text and generated pages; course Git attributes preserve LF"
+  },
+  "ci_link_repair": {
+    "date": "2026-11-28",
+    "failed_commit": "7c914eb7f660d34daff3097fab9325537470cfa1",
+    "cause": "Lesson README guide links used the downloaded folder depth in repository source; review HTML used a relative Markdown reader link.",
+    "fix": "Correct repository Markdown links; rebase extracted HTML links during ZIP build; use the published report URL in Markdown and its local path in generated HTML.",
+    "checks": {
+      "full_npm_test": "passed in temporary Windows checkout, including 11942 local links, 122 published links and 7728 fragments",
+      "repository_standards": "passed",
+      "course_checks": "458 Python sources, 12 root pages, 448 ZIPs, 447 manifest rows, 8 learner regression groups and page controls passed",
+      "new_regression": "Every extracted ZIP browser guide link points to an existing course file"
+    },
+    "not_verified": [
+      "A new GitHub Actions run after publishing this repair",
+      "Local Jekyll site build; Ruby is not available in this session"
+    ]
   }
 }

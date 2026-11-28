@@ -54,4 +54,4 @@ No lesson scripts are executed by the repository's standard documentation build.
 
 ## For the course author
 
-Use [Teaching](TEACHING.md) for the lesson template, learner study and release checks. Run `python course_tools/build_course.py` to rebuild pages and ZIPs, then `python course_tools/check_course.py` to check the result. [The original review](course-review/report.html) describes the earlier course. [The response log](course-review/implementation-status.csv) records changes and any human checks still needed.
+Use [Teaching](TEACHING.md) for the lesson template, learner study and release checks. Run `python course_tools/build_course.py` to rebuild pages and ZIPs, then `python course_tools/check_course.py` to check the result. [The original review](https://gcfernando.github.io/developer-guides-and-tools/examples/machine-learning/ml-practical-lessons/course-review/report.html) describes the earlier course. [The response log](course-review/implementation-status.csv) records changes and any human checks still needed.

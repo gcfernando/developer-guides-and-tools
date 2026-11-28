@@ -44,6 +44,15 @@ def structure():
     for archive in sorted((ROOT/'sample_code_folder').glob('*.zip')):
         with zipfile.ZipFile(archive) as z:
             if z.testzip(): problems.append(f'Archive CRC: {archive.name}')
+            # Check the guide links as a learner sees them after extracting a
+            # download directly into the complete course folder.
+            reader=BeautifulSoup(z.read(archive.stem+'/README.html'),'html.parser')
+            for link in reader.select('a[href]'):
+                href=link['href']
+                if href.startswith('../'):
+                    target=(ROOT/archive.stem/href.split('#')[0]).resolve()
+                    if not target.is_file():
+                        problems.append(f'{archive.name}: missing extracted reader link {href}')
             folder=ROOT/'lessons'/archive.stem
             for path in folder.rglob('*'):
                 if path.is_file() and '__pycache__' not in path.parts and path.suffix not in ('.joblib','.pyc'):
