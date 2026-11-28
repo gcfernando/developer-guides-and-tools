@@ -4,21 +4,35 @@
 
 ## Your goal
 
-Review a recorded 90 kg parcel, correct it using the weighing slip, and compare the two predictions on a graph.
+Investigate a recorded 90 kg parcel. Use the weighing slip to choose KEEP, CORRECT or FLAG, then compare predictions for the same kept-back parcel.
 
 ## Before you start
 
-Sort numbers. The middle half is the values between the lower and upper quarters.
+Find a parcel ID on the horizontal axis and kg on the vertical axis.
 
-Use the [main learning path](../../LEARNING-PATH.md) if you have not learned this yet. For extra topics, read [the extra-topic guide](../../ELECTIVES.md). In the repository, these links open the course guides. If you downloaded a ZIP, open README.html for the browser links. Keep the extracted lesson folder directly inside the complete course folder.
+Use the [learning path](../../LEARNING-PATH.md) to find the earlier skill, the [word list](../../GLOSSARY.md) for a term, and [Setup](../../SETUP.md) for computer steps. Extra-topic prerequisites and bridges are in [Extra topics](../../ELECTIVES.md). In an extracted ZIP, open README.html for the browser links and keep this folder directly inside the complete course folder.
 
 ## The idea in simple words
 
-An outlier is an unusual value. A flag says check it. It does not say it is wrong. Use the source to keep, correct or set it aside.
+Source review decides whether a flagged measurement is wrong, valid or unresolved.
+
+**Why and when.** Use the source record before changing an unusual training value.
+
+**A worked example to follow.** Parcel 5 has recorded weight 90 kg and crosses the 12.5 kg review line. A slip confirming 5 kg justifies correction; 90 kg justifies keeping it; an absent usable slip leaves it flagged. The later chart compares predictions for the same held-back parcel 8, whose actual time is 26 minutes.
+
+**Input and output.** The supplied sample fields are `parcel`, `weight_kg`, `minutes`. In that field order, one original row is:
+
+```text
+1 | 1 | 12
+```
+
+`(missing)` means a blank, not zero. The result table below belongs to the original supplied files.
+
+**Follow the Python.** Open the complete [lesson.py](lesson.py) beside these instructions. Keep the original field beside the inspected or changed value. Trace the named preparation or review step, and check whether it uses a fixed rule or a value learned from training. The [requirements file](requirements.txt) lists its packages. The next section gives exact run commands; use the same course Python to install and run.
 
 ## Guess first
 
-Does an outlier flag prove a recording error? Write your answer before running the script.
+The slip confirms 90 kg, but correcting to 5 would improve this one score. Which value belongs in the reviewed data? Write a reason before running or opening the answer.
 
 ## Run one step at a time
 
@@ -64,15 +78,16 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 ## Explain the result
 
-<details>
-<summary>Read the answer after trying</summary>
+**Common mistakes and limits.** The flag does not establish an error, and improvement on one held-back trip does not establish general improvement. Do not use the test answer to invent a correction.
 
-No. A very heavy parcel can be real. Ask for a source check.
+<details>
+<summary>Check your choice and reason</summary>
+
+Keep 90 kg. Evidence about the measurement decides correction. Model suitability is a separate question requiring more suitable check examples.
 
 </details>
 
-You can move on when you can explain the goal, the changed value and why the result did or did not change. Then return to the next box in the main learning path.
-
+After the guided file change above, close the notes and explain the same decision for a different supplied row. State one condition that makes this method unsuitable. If you cannot explain the reason, repeat the small worked example before adding more code.
 
 ## 📋 Sample data
 
@@ -118,3 +133,7 @@ Open [the weighing slip](weighing_slip.csv). Keep the parcel ID as 5.
 **👀 Read the visual.** The dashed line is the real time for **parcel 8**, which was kept aside. The orange bar ends at **17.7 min**. The teal bar reaches **26.0 min**.
 
 **👉 What to do.** Use the verified training correction, then check more kept-back deliveries before trusting the improvement in an app.
+
+<!-- teaching-note:start -->
+<!-- teaching-profile:outlier_review -->
+<!-- teaching-note:end -->

@@ -8,17 +8,31 @@ Pick a score that fits the question, such as minutes of error or how many urgent
 
 ## Before you start
 
-Name the person and decision the result should help.
+Name a person who needs to make a decision.
 
-Use the [main learning path](../../LEARNING-PATH.md) if you have not learned this yet. For extra topics, read [the extra-topic guide](../../ELECTIVES.md). In the repository, these links open the course guides. If you downloaded a ZIP, open README.html for the browser links. Keep the extracted lesson folder directly inside the complete course folder.
+Use the [learning path](../../LEARNING-PATH.md) to find the earlier skill, the [word list](../../GLOSSARY.md) for a term, and [Setup](../../SETUP.md) for computer steps. Extra-topic prerequisites and bridges are in [Extra topics](../../ELECTIVES.md). In an extracted ZIP, open README.html for the browser links and keep this folder directly inside the complete course folder.
 
 ## The idea in simple words
 
-A project needs a useful question before it needs a model. A fixed rule may be enough. A score must match the decision.
+A project brief states the decision, wanted answer, available inputs, useful score and practical limits.
+
+**Why and when.** Write the brief before choosing an algorithm. It can reveal that a report or ordinary rule is enough.
+
+**A worked example to follow.** A shop wants a delivery estimate before dispatch. Distance is available then; the finished delivery time is not. Minutes of error answer this question more directly than a percentage of correct category names.
+
+**Input and output.** The supplied sample fields are `use_case`, `objective`, `metric`, `domain_check`, `constraint`. In that field order, one original row is:
+
+```text
+Estimate delivery time | regression | RMSE | Distance is in km | One laptop
+```
+
+`(missing)` means a blank, not zero. The result table below belongs to the original supplied files.
+
+**Follow the Python.** Open the complete [lesson.py](lesson.py) beside these instructions. Trace the named source fields into the printed table, file or request result. Check names and counts before interpreting what the program reports. The [requirements file](requirements.txt) lists its packages. The next section gives exact run commands; use the same course Python to install and run.
 
 ## Guess first
 
-Do we always need machine learning? Write your answer before running the script.
+For a rule giving free delivery above 50 currency units, write the decision and decide whether training is needed. Then change the question to estimated arrival time. Write a reason before running or opening the answer.
 
 ## Run one step at a time
 
@@ -57,15 +71,16 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 ## Explain the result
 
-<details>
-<summary>Read the answer after trying</summary>
+**Common mistakes and limits.** A convenient score is not automatically a useful business goal. State units, when fields arrive, and who acts on the result.
 
-No. Use a known rule or report if it answers the question well enough.
+<details>
+<summary>Check your choice and reason</summary>
+
+Free delivery follows an agreed threshold, so no learned model is needed. Arrival time may need examples; compare it with a simple existing estimate and choose an acceptable error in minutes.
 
 </details>
 
-You can move on when you can explain the goal, the changed value and why the result did or did not change. Then return to the next box in the main learning path.
-
+After the guided file change above, close the notes and explain the same decision for a different supplied row. State one condition that makes this method unsuitable. If you cannot explain the reason, repeat the small worked example before adding more code.
 
 ## 📋 Sample data
 
@@ -74,3 +89,7 @@ You can move on when you can explain the goal, the changed value and why the res
 | Estimate delivery time | regression | RMSE | Distance is in km | One laptop |
 | Route support messages | classification | F1 | Negation changes meaning | Review missed items |
 | Group shoppers | clustering | Silhouette | Income and scores use different units | Groups must be interpretable |
+
+<!-- teaching-note:start -->
+<!-- teaching-profile:project_brief -->
+<!-- teaching-note:end -->

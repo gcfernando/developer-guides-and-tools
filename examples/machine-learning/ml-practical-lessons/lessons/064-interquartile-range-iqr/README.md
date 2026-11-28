@@ -8,17 +8,31 @@ Use the middle half of the weight distribution to set a review range.
 
 ## Before you start
 
-Sort numbers. The middle half is the values between the lower and upper quarters.
+Sort weights and read graph axes in kg.
 
-Use the [main learning path](../../LEARNING-PATH.md) if you have not learned this yet. For extra topics, read [the extra-topic guide](../../ELECTIVES.md). In the repository, these links open the course guides. If you downloaded a ZIP, open README.html for the browser links. Keep the extracted lesson folder directly inside the complete course folder.
+Use the [learning path](../../LEARNING-PATH.md) to find the earlier skill, the [word list](../../GLOSSARY.md) for a term, and [Setup](../../SETUP.md) for computer steps. Extra-topic prerequisites and bridges are in [Extra topics](../../ELECTIVES.md). In an extracted ZIP, open README.html for the browser links and keep this folder directly inside the complete course folder.
 
 ## The idea in simple words
 
-An outlier is an unusual value. A flag says check it. It does not say it is wrong. Use the source to keep, correct or set it aside.
+An outlier is unusual under a stated comparison rule. A flag asks for investigation.
+
+**Why and when.** Use plots and numerical rules to find records that deserve attention before fitting or reporting.
+
+**A worked example to follow.** The 80 kg value lies far from most weights. A z-score compares it with the average and standard deviation. IQR compares it with the middle half. On a box plot, read kg on the value axis; a whisker limit is a review rule, not a physical weight limit.
+
+**Input and output.** The supplied sample fields are `weight_kg`. In that field order, one original row is:
+
+```text
+2
+```
+
+`(missing)` means a blank, not zero. The result table below belongs to the original supplied files.
+
+**Follow the Python.** Open the complete [lesson.py](lesson.py) beside these instructions. Keep the original field beside the inspected or changed value. Trace the named preparation or review step, and check whether it uses a fixed rule or a value learned from training. The [requirements file](requirements.txt) lists its packages. The next section gives exact run commands; use the same course Python to install and run.
 
 ## Guess first
 
-Does an outlier flag prove a recording error? Write your answer before running the script.
+A weighing slip confirms an unusual 80 kg shipment. What should you do before choosing a model that cannot handle it? Write a reason before running or opening the answer.
 
 ## Run one step at a time
 
@@ -54,15 +68,16 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 ## Explain the result
 
-<details>
-<summary>Read the answer after trying</summary>
+**Common mistakes and limits.** Do not delete every flagged value. Large valid deliveries may be exactly the cases a service must support. Small samples and skew affect the rules.
 
-No. A very heavy parcel can be real. Ask for a source check.
+<details>
+<summary>Check your choice and reason</summary>
+
+Keep the confirmed fact, check whether such shipments are in scope, gather suitable training/check examples, or state a service limit. Do not edit a real value merely to improve a score.
 
 </details>
 
-You can move on when you can explain the goal, the changed value and why the result did or did not change. Then return to the next box in the main learning path.
-
+After the guided file change above, close the notes and explain the same decision for a different supplied row. State one condition that makes this method unsuitable. If you cannot explain the reason, repeat the small worked example before adding more code.
 
 ## 📋 Sample data
 
@@ -86,3 +101,7 @@ Showing the first 8 of 12 rows. The CSV has the full sample.
 **👀 Read the visual.** Find the dashed upper limit and the 80 kg point.
 
 **👉 What to do.** Check the weight and unit before choosing a correction.
+
+<!-- teaching-note:start -->
+<!-- teaching-profile:outlier_detection -->
+<!-- teaching-note:end -->

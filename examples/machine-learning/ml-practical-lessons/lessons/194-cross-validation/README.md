@@ -8,17 +8,31 @@ Take turns holding different deliveries back and compare the error on each group
 
 ## Before you start
 
-Know a baseline, a score and a model setting.
+Calculate an average error and distinguish training from check rows.
 
-Use the [main learning path](../../LEARNING-PATH.md) if you have not learned this yet. For extra topics, read [the extra-topic guide](../../ELECTIVES.md). In the repository, these links open the course guides. If you downloaded a ZIP, open README.html for the browser links. Keep the extracted lesson folder directly inside the complete course folder.
+Use the [learning path](../../LEARNING-PATH.md) to find the earlier skill, the [word list](../../GLOSSARY.md) for a term, and [Setup](../../SETUP.md) for computer steps. Extra-topic prerequisites and bridges are in [Extra topics](../../ELECTIVES.md). In an extracted ZIP, open README.html for the browser links and keep this folder directly inside the complete course folder.
 
 ## The idea in simple words
 
-Compare candidates on the same validation rows. A setting controls learning. Cross-validation repeats checks inside training. Do not call the best validation score a final test.
+Cross-validation takes turns holding groups back so a procedure is checked on several divisions.
+
+**Why and when.** Use it inside model development when the fold design matches the intended new cases.
+
+**A worked example to follow.** For three folds, each part is held back once while the other parts train a fresh fit. The lesson prints training size, check size and each fold’s average error in minutes.
+
+**Input and output.** The supplied sample fields are `distance_km`, `weight_kg`, `delivery_minutes`. In that field order, one original row is:
+
+```text
+2 | 1 | 19
+```
+
+`(missing)` means a blank, not zero. The result table below belongs to the original supplied files.
+
+**Follow the Python.** Open the complete [lesson.py](lesson.py) beside these instructions. Keep inputs apart from measured answers. Follow this script’s split and fit, then trace the saved preparation into the held-back result and any new request. A request must not supply its own training answer. The [requirements file](requirements.txt) lists its packages. The next section gives exact run commands; use the same course Python to install and run.
 
 ## Guess first
 
-Does the smallest training error always win? Write your answer before running the script.
+May you scale every row first and then cross-validate a classifier using the scaled table? Write a reason before running or opening the answer.
 
 ## Run one step at a time
 
@@ -56,15 +70,16 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 ## Explain the result
 
-<details>
-<summary>Read the answer after trying</summary>
+**Common mistakes and limits.** Refit imputers/scalers inside each training fold. Random folds are unsuitable for some future-time or repeated-customer tasks. Fold variation is not automatically a confidence interval.
 
-No. It may memorize. Use separate validation results to choose.
+<details>
+<summary>Check your choice and reason</summary>
+
+Fit a preparation/model pipeline separately inside each training fold. Otherwise its check distribution can influence preparation before the check.
 
 </details>
 
-You can move on when you can explain the goal, the changed value and why the result did or did not change. Then return to the next box in the main learning path.
-
+After the guided file change above, close the notes and explain the same decision for a different supplied row. State one condition that makes this method unsuitable. If you cannot explain the reason, repeat the small worked example before adding more code.
 
 ## 📋 Sample data
 
@@ -76,3 +91,7 @@ You can move on when you can explain the goal, the changed value and why the res
 | 8 | 4 | 40 |
 | 10 | 1 | 33 |
 | 12 | 3 | 44 |
+
+<!-- teaching-note:start -->
+<!-- teaching-profile:cross_validation -->
+<!-- teaching-note:end -->

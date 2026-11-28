@@ -7,7 +7,7 @@ title: "Start learning machine learning"
 
 You do not need to know machine learning. You do not need to know Python yet.
 
-Machine learning is a way to find a useful pattern in examples. We give a computer some examples with known answers. It builds a rule from them. We then check the rule on other examples.
+Machine learning is a way to find a useful pattern in examples. In our first example, we give a computer completed examples with known answers. This is supervised learning. It learns a rule, which we check on separate examples. Other kinds of ML can find groups without supplied group answers or learn actions from rewards.
 
 In this course, we often ask: **How many minutes might a delivery take?**
 

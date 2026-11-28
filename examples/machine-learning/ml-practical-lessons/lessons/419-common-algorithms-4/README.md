@@ -8,17 +8,31 @@ Learn from trial moves until the robot can choose a better path.
 
 ## Before you start
 
-Read the robot, reward and network notes in Extra topics.
+Explain state, action and discounted return.
 
-Use the [main learning path](../../LEARNING-PATH.md) if you have not learned this yet. For extra topics, read [the extra-topic guide](../../ELECTIVES.md). In the repository, these links open the course guides. If you downloaded a ZIP, open README.html for the browser links. Keep the extracted lesson folder directly inside the complete course folder.
+Use the [learning path](../../LEARNING-PATH.md) to find the earlier skill, the [word list](../../GLOSSARY.md) for a term, and [Setup](../../SETUP.md) for computer steps. Extra-topic prerequisites and bridges are in [Extra topics](../../ELECTIVES.md). In an extracted ZIP, open README.html for the browser links and keep this folder directly inside the complete course folder.
 
 ## The idea in simple words
 
-An agent chooses an action, sees a result and gets a reward. A policy is its action rule. Return adds rewards, often giving later rewards less weight.
+Q-learning updates a table of action values from observed transitions and later estimated values.
+
+**Why and when.** Use a small table when states/actions are manageable and interaction is appropriate.
+
+**A worked example to follow.** The agent explores sometimes, otherwise choosing its largest value. It updates the observed entry; a terminal goal adds no next-action value.
+
+**Input and output.** The supplied sample fields are `state`, `action`, `next_state`, `reward`, `done`. In that field order, one original row is:
+
+```text
+0 | 0 | 0 | -0.02 | False
+```
+
+`(missing)` means a blank, not zero. The result table below belongs to the original supplied files.
+
+**Follow the Python.** Open the complete [lesson.py](lesson.py) beside these instructions. Find the state/action inputs, follow the transition and reward calculation, then inspect the policy, action values or planned move this particular script produces. The [requirements file](requirements.txt) lists its packages. The next section gives exact run commands; use the same course Python to install and run.
 
 ## Guess first
 
-Does one rewarded move prove a policy is reliable? Write your answer before running the script.
+If all values start at zero and the agent never explores, what can remain untested? Write a reason before running or opening the answer.
 
 ## Run one step at a time
 
@@ -55,15 +69,16 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 ## Explain the result
 
-<details>
-<summary>Read the answer after trying</summary>
+**Common mistakes and limits.** Early greedy choices can prevent discovery. Learning depends on exploration and sufficient suitable experience.
 
-No. Check the whole policy over suitable trials.
+<details>
+<summary>Check your choice and reason</summary>
+
+Moves not selected by initial tie-breaking can remain untested. Inspect experience coverage and evaluate the policy.
 
 </details>
 
-You can move on when you can explain the goal, the changed value and why the result did or did not change. Then return to the next box in the main learning path.
-
+After the guided file change above, close the notes and explain the same decision for a different supplied row. State one condition that makes this method unsuitable. If you cannot explain the reason, repeat the small worked example before adding more code.
 
 ## 📋 Sample data
 
@@ -85,3 +100,7 @@ You can move on when you can explain the goal, the changed value and why the res
 | 0 |
 | 1 |
 | 3 |
+
+<!-- teaching-note:start -->
+<!-- teaching-profile:q_learning -->
+<!-- teaching-note:end -->

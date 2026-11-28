@@ -8,17 +8,31 @@ Make the hand-drawn digit shapes the same size before using them in a model.
 
 ## Before you start
 
-Finish the main preparation and checking modules.
+Read the named fields and explain the preparation taught earlier.
 
-Use the [main learning path](../../LEARNING-PATH.md) if you have not learned this yet. For extra topics, read [the extra-topic guide](../../ELECTIVES.md). In the repository, these links open the course guides. If you downloaded a ZIP, open README.html for the browser links. Keep the extracted lesson folder directly inside the complete course folder.
+Use the [learning path](../../LEARNING-PATH.md) to find the earlier skill, the [word list](../../GLOSSARY.md) for a term, and [Setup](../../SETUP.md) for computer steps. Extra-topic prerequisites and bridges are in [Extra topics](../../ELECTIVES.md). In an extracted ZIP, open README.html for the browser links and keep this folder directly inside the complete course folder.
 
 ## The idea in simple words
 
-These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+Resizing changes an image’s row and column count.
+
+**Why and when.** Use it when a model expects one fixed image shape.
+
+**A worked example to follow.** The digit drawings exercise uses pixel_rows. Its output is label. An 8-by-8 grayscale image has 64 pixels; a 10-by-10 version has 100. A # is a lit pixel, a dot is dark, and / starts a new row.
+
+**Input and output.** The supplied sample fields are `split`, `pixel_rows`, `label`. In that field order, one original row is:
+
+```text
+train | ###/#.#/#.#/#.#/### | 0
+```
+
+`(missing)` means a blank, not zero. The result table below belongs to the original supplied files.
+
+**Follow the Python.** Open the complete [lesson.py](lesson.py) beside these instructions. Keep inputs apart from measured answers. Follow this script’s split and fit, then trace the saved preparation into the held-back result and any new request. A request must not supply its own training answer. The [requirements file](requirements.txt) lists its packages. The next section gives exact run commands; use the same course Python to install and run.
 
 ## Guess first
 
-Do two correct examples prove that the model will work for a real population? Write your answer before running the script.
+Resize a copy to 10 by 10. Predict the number of pixels and explain why that is not flattening. Write a reason before running or opening the answer.
 
 ## Run one step at a time
 
@@ -60,15 +74,16 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 ## Explain the result
 
-<details>
-<summary>Read the answer after trying</summary>
+**Common mistakes and limits.** More pixels do not create new measured detail. Choose an interpolation rule suited to the task and reuse it for all splits.
 
-No. They show the calculation. Check more suitable data and describe what is missing.
+<details>
+<summary>Check your choice and reason</summary>
+
+There are 100 pixels. Resizing changes the grid; flattening rearranges an existing grid into one row without changing its element count.
 
 </details>
 
-You can move on when you can explain the goal, the changed value and why the result did or did not change. Then return to the next box in the main learning path.
-
+After the guided file change above, close the notes and explain the same decision for a different supplied row. State one condition that makes this method unsuitable. If you cannot explain the reason, repeat the small worked example before adding more code.
 
 ## 📋 Sample data
 
@@ -91,3 +106,7 @@ Showing the first 8 of 12 rows. The CSV has the full sample.
 | --- |
 | ###/#.#/#.#/#.#/##. |
 | ###/..#/.##/.#./.#. |
+
+<!-- teaching-note:start -->
+<!-- teaching-profile:dataset_313 -->
+<!-- teaching-note:end -->

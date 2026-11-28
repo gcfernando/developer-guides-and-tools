@@ -140,3 +140,26 @@ The course review also ran examples on Windows with Python 3.12.10 and different
 A `.joblib` file can hold a trained model. Load only a file you made or trust. Loading it can run code. Keep the training data, script and package versions with it. See [model persistence](https://scikit-learn.org/stable/model_persistence.html).
 
 Next: read [A small start with Python](PYTHON-BASICS.md), then open [the learning path](LEARNING-PATH.md).
+
+## Understand the setup you just used
+
+| Step | Why it matters | Check you can perform |
+| --- | --- | --- |
+| Extract the files | The script needs actual companion files, not the ZIP preview. | Find lesson.py beside its CSV. |
+| Choose Python | Version and installed packages affect what can run. | Print the version and executable path. |
+| Enter a folder | Commands start from the terminal's current location. | Explain why an existing file can still give “not found”. |
+| Use an environment | One interpreter must install and run the packages. | Show `.venv` in the executable path. |
+| Install requirements | Imports need packages in that environment. | Explain why a different Python's installation does not fix this interpreter. |
+| Run saved instructions | Unsaved editor changes are not executed. | Run once and identify the result headings. |
+| Edit/save/rerun | A saved input changes a request. | Change 4 to 8 and explain 26 minutes. |
+| Open another lesson | Its schema and extra packages may differ. | Read the README and requirements first. |
+| Load a saved model | The artifact keeps fitted state. | Explain why an ordinary new request needs no refit and why you must trust the file. |
+
+**Apply it.** A terminal prints a Python path outside `.venv` and reports a missing package. What comes first: change the lesson or check the interpreter?
+
+<details>
+<summary>Answer and reason</summary>
+
+Check the interpreter. Activate or explicitly call the course Python, then install the declared requirement using that same interpreter if needed. Editing correct data or code does not repair a different interpreter's missing package.
+
+</details>

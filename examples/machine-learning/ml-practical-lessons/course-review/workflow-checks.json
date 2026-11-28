@@ -1,0 +1,14 @@
+{
+  "checked_at_utc": "2026-11-28T08:35:51.430526+00:00",
+  "passed": true,
+  "checks": [
+    "Both documented commands run.",
+    "All four requests receive finite estimates, including a changed blank weight.",
+    "Error uses only the two remaining measured answers.",
+    "Prediction preserves the saved model bytes."
+  ],
+  "training_output": "Rows to teach: 16. To choose: 4. To check: 4.\nAverage validation error: model 0.70 min, baseline 8.75 min.\nChosen model: linear regression.\nAverage error on the final test rows: 0.38 minutes.\nSaved delivery_model.joblib. Next run: python test_delivery_model.py\n",
+  "original_request_output": "Average error where the actual time is known: 0.80 minutes.\n distance_km  weight_kg  zone  predicted_minutes  actual_minutes  error_minutes\n           5        2.0 North              22.27            23.0           0.73\n           8        3.0 South              33.26            34.0           0.74\n          11          — North              35.07            36.0           0.93\n           6        1.0  West              25.45               —              —\n",
+  "changed_request_output": "Average error where the actual time is known: 0.84 minutes.\n distance_km  weight_kg  zone  predicted_minutes  actual_minutes  error_minutes\n           5          — North              23.14               —              —\n           8        3.0 South              33.26            34.0           0.74\n          11          — North              35.07            36.0           0.93\n           6        1.0  West              25.45               —              —\n",
+  "method": "Trusted local source; temporary copy. Not a learner study."
+}

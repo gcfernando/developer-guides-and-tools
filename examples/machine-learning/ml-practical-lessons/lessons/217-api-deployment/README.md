@@ -8,17 +8,31 @@ Test a prediction route before deploying it.
 
 ## Before you start
 
-Train and save a model. Know an input and a prediction.
+Train a small model and identify its required input names and units.
 
-Use the [main learning path](../../LEARNING-PATH.md) if you have not learned this yet. For extra topics, read [the extra-topic guide](../../ELECTIVES.md). In the repository, these links open the course guides. If you downloaded a ZIP, open README.html for the browser links. Keep the extracted lesson folder directly inside the complete course folder.
+Use the [learning path](../../LEARNING-PATH.md) to find the earlier skill, the [word list](../../GLOSSARY.md) for a term, and [Setup](../../SETUP.md) for computer steps. Extra-topic prerequisites and bridges are in [Extra topics](../../ELECTIVES.md). In an extracted ZIP, open README.html for the browser links and keep this folder directly inside the complete course folder.
 
 ## The idea in simple words
 
-A request gives inputs to a program. A response gives its answer or a clear problem. An HTTP status is a short result code. Local tests do not publish a server.
+A prediction service accepts a request, validates inputs and returns an estimate or a clear error.
+
+**Why and when.** Use a service when another program needs the saved model. Test locally before considering hosting.
+
+**A worked example to follow.** A request supplies distance_km and weight_kg; the response contains minutes. A negative distance should be rejected rather than quietly producing a normal estimate. HTTP status reports success or the kind of failure.
+
+**Input and output.** The supplied sample fields are `distance_km`, `weight_kg`, `delivery_minutes`. In that field order, one original row is:
+
+```text
+2 | 1 | 19
+```
+
+`(missing)` means a blank, not zero. The result table below belongs to the original supplied files.
+
+**Follow the Python.** Open the complete [lesson.py](lesson.py) beside these instructions. Keep inputs apart from measured answers. Follow this script’s split and fit, then trace the saved preparation into the held-back result and any new request. A request must not supply its own training answer. The [requirements file](requirements.txt) lists its packages. The next section gives exact run commands; use the same course Python to install and run.
 
 ## Guess first
 
-Should a negative distance receive a normal estimate? Write your answer before running the script.
+A client sends metres in a field named distance_km. Will a numeric type check detect the mistake? What belongs in the input contract? Write a reason before running or opening the answer.
 
 ## Run one step at a time
 
@@ -57,15 +71,16 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 ## Explain the result
 
-<details>
-<summary>Read the answer after trying</summary>
+**Common mistakes and limits.** Local test-client calls do not deploy a public server. Valid types do not establish in-scope ranges or reliable predictions. Load only model files you created or trust.
 
-No. Reject it with a clear explanation. A valid-looking value can still be outside the tested range.
+<details>
+<summary>Check your choice and reason</summary>
+
+Not necessarily. Record units, names, ranges, missing-value rules and unfamiliar-category policy, and test examples that violate them.
 
 </details>
 
-You can move on when you can explain the goal, the changed value and why the result did or did not change. Then return to the next box in the main learning path.
-
+After the guided file change above, close the notes and explain the same decision for a different supplied row. State one condition that makes this method unsuitable. If you cannot explain the reason, repeat the small worked example before adding more code.
 
 ## 📋 Sample data
 
@@ -85,3 +100,7 @@ You can move on when you can explain the goal, the changed value and why the res
 | 5 | 2 |
 | 20 | 4 |
 | -2 | 3 |
+
+<!-- teaching-note:start -->
+<!-- teaching-profile:service -->
+<!-- teaching-note:end -->

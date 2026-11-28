@@ -1,0 +1,19 @@
+Rows: training 32, validation 12, test 16.
+The split asks about new distance/weight combinations.
+Coefficients: minutes per one training-standard-deviation input increase.
+    method  alpha  km_coefficient  kg_coefficient  validation_mae_minutes
+No penalty   0.00          23.541           6.160                   1.019
+     Ridge   0.01          23.533           6.156                   1.018
+     Ridge   0.10          23.462           6.127                   1.003
+     Ridge   1.00          22.776           5.847                   0.896
+     Ridge  10.00          17.646           3.928                   3.584
+     Ridge 100.00           5.483           0.747                  10.291
+     Lasso   0.01          23.529           6.148                   1.017
+     Lasso   0.10          23.421           6.039                   1.006
+     Lasso   1.00          22.336           4.954                   1.546
+     Lasso  10.00          12.492           0.000                   7.706
+     Lasso 100.00           0.000           0.000                  13.198
+Validation choice: Ridge, alpha 1.
+Frozen-choice test MAE: 1.527 minutes.
+A smaller coefficient is not automatically a better validation result.
+A zero coefficient does not prove that the field never matters.

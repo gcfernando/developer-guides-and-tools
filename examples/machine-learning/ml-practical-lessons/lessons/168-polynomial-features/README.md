@@ -8,17 +8,31 @@ Add powers of an input to capture a curve.
 
 ## Before you start
 
-Know the target and which facts exist at prediction time.
+Calculate 2 × 2 and 2 × 2 × 2; keep validation separate.
 
-Use the [main learning path](../../LEARNING-PATH.md) if you have not learned this yet. For extra topics, read [the extra-topic guide](../../ELECTIVES.md). In the repository, these links open the course guides. If you downloaded a ZIP, open README.html for the browser links. Keep the extracted lesson folder directly inside the complete course folder.
+Use the [learning path](../../LEARNING-PATH.md) to find the earlier skill, the [word list](../../GLOSSARY.md) for a term, and [Setup](../../SETUP.md) for computer steps. Extra-topic prerequisites and bridges are in [Extra topics](../../ELECTIVES.md). In an extracted ZIP, open README.html for the browser links and keep this folder directly inside the complete course folder.
 
 ## The idea in simple words
 
-A useful feature must be known in time. Some inputs repeat the same information. Choose features within training, not by inspecting final test answers.
+Polynomial features add powers and products so a linear model can represent curved relationships.
+
+**Why and when.** Try a small degree when a curve is plausible, then check whether the added flexibility helps on validation rows.
+
+**A worked example to follow.** For one input x = 2, the degree-three row is x, x², x³ = 2, 4, 8. These are three features from one measured input. For x greater than 1, the cubic grows faster than the square. A graph with a logarithmic output axis uses multiplicative spacing, so start with the small table before reading that optional graph.
+
+**Input and output.** The supplied sample fields are `signal`, `cost`. In that field order, one original row is:
+
+```text
+1 | 10
+```
+
+`(missing)` means a blank, not zero. The result table below belongs to the original supplied files.
+
+**Follow the Python.** Open the complete [lesson.py](lesson.py) beside these instructions. Keep inputs apart from measured answers. Follow this script’s split and fit, then trace the saved preparation into the held-back result and any new request. A request must not supply its own training answer. The [requirements file](requirements.txt) lists its packages. The next section gives exact run commands; use the same course Python to install and run.
 
 ## Guess first
 
-Does a high feature-importance score prove a cause? Write your answer before running the script.
+Write the three features for x = 3. Does the cubic term make predictions safe far outside the observed range? Write a reason before running or opening the answer.
 
 ## Run one step at a time
 
@@ -59,15 +73,16 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 ## Explain the result
 
-<details>
-<summary>Read the answer after trying</summary>
+**Common mistakes and limits.** High powers can grow rapidly outside training and overfit. More columns are not automatically more evidence. Scaling and regularization may matter.
 
-No. It shows reliance by this model in this check.
+<details>
+<summary>Check your choice and reason</summary>
+
+They are 3, 9 and 27. No: large powers can make extrapolation unstable. Choose degree within validation and state the supported range.
 
 </details>
 
-You can move on when you can explain the goal, the changed value and why the result did or did not change. Then return to the next box in the main learning path.
-
+After the guided file change above, close the notes and explain the same decision for a different supplied row. State one condition that makes this method unsuitable. If you cannot explain the reason, repeat the small worked example before adding more code.
 
 ## 📋 Sample data
 
@@ -91,3 +106,7 @@ Showing the first 8 of 9 rows. The CSV has the full sample.
 | 3 |
 | 15 |
 | 40 |
+
+<!-- teaching-note:start -->
+<!-- teaching-profile:polynomial -->
+<!-- teaching-note:end -->

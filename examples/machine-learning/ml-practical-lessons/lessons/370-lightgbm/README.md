@@ -8,17 +8,31 @@ Use LightGBM to predict delivery time and read the kept-back error.
 
 ## Before you start
 
-Finish the main path through overfitting and validation.
+Explain a fitted tree, an error and validation.
 
-Use the [main learning path](../../LEARNING-PATH.md) if you have not learned this yet. For extra topics, read [the extra-topic guide](../../ELECTIVES.md). In the repository, these links open the course guides. If you downloaded a ZIP, open README.html for the browser links. Keep the extracted lesson folder directly inside the complete course folder.
+Use the [learning path](../../LEARNING-PATH.md) to find the earlier skill, the [word list](../../GLOSSARY.md) for a term, and [Setup](../../SETUP.md) for computer steps. Extra-topic prerequisites and bridges are in [Extra topics](../../ELECTIVES.md). In an extracted ZIP, open README.html for the browser links and keep this folder directly inside the complete course folder.
 
 ## The idea in simple words
 
-Different algorithms learn different rules. The catalog is practice, not a leaderboard for choosing from final test scores. Use a common validation comparison for your own choice.
+Boosting adds models in sequence so later components address remaining fitting errors under a chosen loss.
+
+**Why and when.** Consider it for structured-table tasks after a simple baseline, with controlled complexity and validation.
+
+**A worked example to follow.** The supplied boosting model receives distance and weight. Read prediction minutes for regression or late/on-time labels for classification, then inspect held-back errors. XGBoost and LightGBM are separate implementations with their own settings.
+
+**Input and output.** The supplied sample fields are `km`, `kg`, `minutes`. In that field order, one original row is:
+
+```text
+48 | 4 | 90.0
+```
+
+`(missing)` means a blank, not zero. The result table below belongs to the original supplied files.
+
+**Follow the Python.** Open the complete [lesson.py](lesson.py) beside these instructions. Keep inputs apart from measured answers. Follow this script’s split and fit, then trace the saved preparation into the held-back result and any new request. A request must not supply its own training answer. The [requirements file](requirements.txt) lists its packages. The next section gives exact run commands; use the same course Python to install and run.
 
 ## Guess first
 
-Should you choose a model by opening many final test results? Write your answer before running the script.
+A boosted model beats a baseline on training but loses on validation. Should it replace the baseline? Write a reason before running or opening the answer.
 
 ## Run one step at a time
 
@@ -59,19 +73,20 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 ## Explain the result
 
-<details>
-<summary>Read the answer after trying</summary>
+**Common mistakes and limits.** Sequential fitting can overfit; model size, learning rate and tree complexity need care. Package availability and fast execution are not evidence of better learning.
 
-No. Use validation first, then one final check.
+<details>
+<summary>Check your choice and reason</summary>
+
+Not on that evidence. Keep the stronger validated procedure or investigate a justified simpler setting without using the final test for selection.
 
 </details>
 
-You can move on when you can explain the goal, the changed value and why the result did or did not change. Then return to the next box in the main learning path.
+After the guided file change above, close the notes and explain the same decision for a different supplied row. State one condition that makes this method unsuitable. If you cannot explain the reason, repeat the small worked example before adding more code.
 
 ### What this particular check asks
 
 This example keeps exact distance-and-weight combinations out of its test training rows. That is a deliberately stricter, special question. Independent orders may have the same measurements. Equal numbers alone do not prove leakage. Use shipment identity and the intended future job to choose a normal split; see lesson 442.
-
 
 ## 📋 Sample data
 
@@ -95,3 +110,7 @@ Showing the first 8 of 60 rows. The CSV has the full sample.
 | 5 | 2 |
 | 16 | 4 |
 | 42 | 9 |
+
+<!-- teaching-note:start -->
+<!-- teaching-profile:boosting -->
+<!-- teaching-note:end -->

@@ -8,17 +8,31 @@ Turn category names into separate 0-or-1 columns for a model.
 
 ## Before you start
 
-Read the Files and data terms in the glossary.
+Tell a category name from a measured amount.
 
-Use the [main learning path](../../LEARNING-PATH.md) if you have not learned this yet. For extra topics, read [the extra-topic guide](../../ELECTIVES.md). In the repository, these links open the course guides. If you downloaded a ZIP, open README.html for the browser links. Keep the extracted lesson folder directly inside the complete course folder.
+Use the [learning path](../../LEARNING-PATH.md) to find the earlier skill, the [word list](../../GLOSSARY.md) for a term, and [Setup](../../SETUP.md) for computer steps. Extra-topic prerequisites and bridges are in [Extra topics](../../ELECTIVES.md). In an extracted ZIP, open README.html for the browser links and keep this folder directly inside the complete course folder.
 
 ## The idea in simple words
 
-Choose a representation based on meaning. A number, name, yes/no value and date need different checks before a model can use them.
+One-hot encoding gives each known category a separate 0-or-1 column. It avoids inventing an order between names.
+
+**Why and when.** Use it for a modest set of unordered names when the chosen model requires numeric inputs.
+
+**A worked example to follow.** This script explicitly declares the column order Red, Blue, Green. Green becomes 0, 0, 1. Fit the encoder using training inputs, then transform check rows and new requests with that same encoder. The order and number of columns stay fixed.
+
+**Input and output.** The supplied sample fields are `color`, `orders`. In that field order, one original row is:
+
+```text
+Red | 20
+```
+
+`(missing)` means a blank, not zero. The result table below belongs to the original supplied files.
+
+**Follow the Python.** Open the complete [lesson.py](lesson.py) beside these instructions. Keep inputs apart from measured answers. Follow this script’s split and fit, then trace the saved preparation into the held-back result and any new request. A request must not supply its own training answer. The [requirements file](requirements.txt) lists its packages. The next section gives exact run commands; use the same course Python to install and run.
 
 ## Guess first
 
-Is every field made of digits a measured number? Write your answer before running the script.
+Encode Blue on paper. A new request says Yellow. Add a Yellow column only to that request, or keep the saved three-column schema? Explain what the service must decide. Write a reason before running or opening the answer.
 
 ## Run one step at a time
 
@@ -62,19 +76,20 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 ## Explain the result
 
-<details>
-<summary>Read the answer after trying</summary>
+**Common mistakes and limits.** Purple becomes 0, 0, 0 here because handle_unknown is ignore. That is an allowed representation, not evidence about Purple-specific demand. Do not fit a separate encoder on new requests. Thousands of categories may need a different, validated approach.
 
-No. An event ID may be a name and should stay exact text.
+<details>
+<summary>Check your choice and reason</summary>
+
+Blue is 0, 1, 0. Keep the saved schema; changing only the request columns breaks the model contract. This demonstration maps Yellow to all zeros. A real service must explicitly reject, review or use a tested fallback for unfamiliar names.
 
 </details>
 
-You can move on when you can explain the goal, the changed value and why the result did or did not change. Then return to the next box in the main learning path.
+After the guided file change above, close the notes and explain the same decision for a different supplied row. State one condition that makes this method unsuitable. If you cannot explain the reason, repeat the small worked example before adding more code.
 
 ### A new category
 
 Purple becomes all zeros in this example. The model has no Purple-specific evidence. A real service may reject a new name or use a tested fallback. An encoded row is not proof that its prediction is reliable.
-
 
 ## 📋 Sample data
 
@@ -95,3 +110,7 @@ Purple becomes all zeros in this example. The model has no Purple-specific evide
 | Red |
 | Blue |
 | Purple |
+
+<!-- teaching-note:start -->
+<!-- teaching-profile:one_hot -->
+<!-- teaching-note:end -->

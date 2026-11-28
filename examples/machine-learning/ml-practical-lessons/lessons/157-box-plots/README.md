@@ -8,17 +8,31 @@ Find which weights sit far outside the usual group.
 
 ## Before you start
 
-Read axes, units and one point per row.
+Sort weights and read graph axes in kg.
 
-Use the [main learning path](../../LEARNING-PATH.md) if you have not learned this yet. For extra topics, read [the extra-topic guide](../../ELECTIVES.md). In the repository, these links open the course guides. If you downloaded a ZIP, open README.html for the browser links. Keep the extracted lesson folder directly inside the complete course folder.
+Use the [learning path](../../LEARNING-PATH.md) to find the earlier skill, the [word list](../../GLOSSARY.md) for a term, and [Setup](../../SETUP.md) for computer steps. Extra-topic prerequisites and bridges are in [Extra topics](../../ELECTIVES.md). In an extracted ZIP, open README.html for the browser links and keep this folder directly inside the complete course folder.
 
 ## The idea in simple words
 
-A chart answers a question about the data. A histogram counts ranges; a scatterplot compares two facts. A correlation shows movement together, not a cause.
+An outlier is unusual under a stated comparison rule. A flag asks for investigation.
+
+**Why and when.** Use plots and numerical rules to find records that deserve attention before fitting or reporting.
+
+**A worked example to follow.** The 80 kg value lies far from most weights. A z-score compares it with the average and standard deviation. IQR compares it with the middle half. On a box plot, read kg on the value axis; a whisker limit is a review rule, not a physical weight limit.
+
+**Input and output.** The supplied sample fields are `distance`, `route_distance`, `weight`, `minutes`. In that field order, one original row is:
+
+```text
+2 | 2.2 | 1 | 19
+```
+
+`(missing)` means a blank, not zero. The result table below belongs to the original supplied files.
+
+**Follow the Python.** Open the complete [lesson.py](lesson.py) beside these instructions. Keep the original field beside the inspected or changed value. Trace the named preparation or review step, and check whether it uses a fixed rule or a value learned from training. The [requirements file](requirements.txt) lists its packages. The next section gives exact run commands; use the same course Python to install and run.
 
 ## Guess first
 
-Does a strong correlation prove what causes the result? Write your answer before running the script.
+A weighing slip confirms an unusual 80 kg shipment. What should you do before choosing a model that cannot handle it? Write a reason before running or opening the answer.
 
 ## Run one step at a time
 
@@ -57,15 +71,16 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 ## Explain the result
 
-<details>
-<summary>Read the answer after trying</summary>
+**Common mistakes and limits.** Do not delete every flagged value. Large valid deliveries may be exactly the cases a service must support. Small samples and skew affect the rules.
 
-No. Check other explanations and what was actually measured.
+<details>
+<summary>Check your choice and reason</summary>
+
+Keep the confirmed fact, check whether such shipments are in scope, gather suitable training/check examples, or state a service limit. Do not edit a real value merely to improve a score.
 
 </details>
 
-You can move on when you can explain the goal, the changed value and why the result did or did not change. Then return to the next box in the main learning path.
-
+After the guided file change above, close the notes and explain the same decision for a different supplied row. State one condition that makes this method unsuitable. If you cannot explain the reason, repeat the small worked example before adding more code.
 
 ## 📋 Sample data
 
@@ -77,3 +92,7 @@ You can move on when you can explain the goal, the changed value and why the res
 | 8 | 8.8 | 4 | 40 |
 | 10 | 11 | 1 | 33 |
 | 12 | 13.2 | 15 | 61 |
+
+<!-- teaching-note:start -->
+<!-- teaching-profile:outlier_detection -->
+<!-- teaching-note:end -->

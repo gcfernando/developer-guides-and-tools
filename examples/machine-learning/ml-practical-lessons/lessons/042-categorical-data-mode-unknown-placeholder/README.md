@@ -8,17 +8,31 @@ Try the most common delivery zone and an explicit Unknown label for the same bla
 
 ## Before you start
 
-Find a missing input and a missing answer. Keep training and checks separate.
+Distinguish a missing zone from a new, named zone.
 
-Use the [main learning path](../../LEARNING-PATH.md) if you have not learned this yet. For extra topics, read [the extra-topic guide](../../ELECTIVES.md). In the repository, these links open the course guides. If you downloaded a ZIP, open README.html for the browser links. Keep the extracted lesson folder directly inside the complete course folder.
+Use the [learning path](../../LEARNING-PATH.md) to find the earlier skill, the [word list](../../GLOSSARY.md) for a term, and [Setup](../../SETUP.md) for computer steps. Extra-topic prerequisites and bridges are in [Extra topics](../../ELECTIVES.md). In an extracted ZIP, open README.html for the browser links and keep this folder directly inside the complete course folder.
 
 ## The idea in simple words
 
-A fill is an estimate, not a recovered fact. Learn a fill rule on training rows. Reuse it on new rows. Do not invent training answers.
+A categorical fill replaces a missing name with the most common training name or an explicit Unknown name.
+
+**Why and when.** Use the mode if a common-category assumption is defensible. Preserve Unknown when missingness deserves its own visible category.
+
+**A worked example to follow.** The lesson fits the fill and encoder on the first four rows. It then handles the same blank zone under both choices. An explicit Unknown is a chosen placeholder, not a measurement that the parcel came from a zone called Unknown.
+
+**Input and output.** The supplied sample fields are `zone`, `minutes`. In that field order, one original row is:
+
+```text
+north | 19
+```
+
+`(missing)` means a blank, not zero. The result table below belongs to the original supplied files.
+
+**Follow the Python.** Open the complete [lesson.py](lesson.py) beside these instructions. Keep inputs apart from measured answers. Follow this script’s split and fit, then trace the saved preparation into the held-back result and any new request. A request must not supply its own training answer. The [requirements file](requirements.txt) lists its packages. The next section gives exact run commands; use the same course Python to install and run.
 
 ## Guess first
 
-May a new request change the saved training median? Write your answer before running the script.
+A request says east and another leaves zone blank. Which one can a missing-value fill change? What must the service decide separately? Write a reason before running or opening the answer.
 
 ## Run one step at a time
 
@@ -64,15 +78,16 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 ## Explain the result
 
-<details>
-<summary>Read the answer after trying</summary>
+**Common mistakes and limits.** An Unknown category with no training examples does not gain a learned effect merely because the name is written down. A new east zone and an absent zone are different situations.
 
-No. Apply the saved rule. A deliberate retraining step is a separate action.
+<details>
+<summary>Check your choice and reason</summary>
+
+The fill changes the blank. It does not turn the named east zone into the training mode. Unknown-name handling belongs to the encoder and service policy; test it explicitly.
 
 </details>
 
-You can move on when you can explain the goal, the changed value and why the result did or did not change. Then return to the next box in the main learning path.
-
+After the guided file change above, close the notes and explain the same decision for a different supplied row. State one condition that makes this method unsuitable. If you cannot explain the reason, repeat the small worked example before adding more code.
 
 ## 📋 Sample data
 
@@ -93,3 +108,7 @@ You can move on when you can explain the goal, the changed value and why the res
 | south |
 | north |
 | east |
+
+<!-- teaching-note:start -->
+<!-- teaching-profile:category_fill -->
+<!-- teaching-note:end -->

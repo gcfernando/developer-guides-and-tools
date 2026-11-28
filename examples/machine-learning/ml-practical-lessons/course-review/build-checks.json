@@ -1,0 +1,7 @@
+{
+  "checked_at_utc": "2026-11-28T08:39:56.739946+00:00",
+  "check": "Second build has identical artifact hashes",
+  "artifacts": 460,
+  "manifest_sha256": "0d5ef2e1d53dda3fc64be9dd121f8e24746cc742f50816c1ff3da1bfbe6d7650",
+  "passed": true
+}

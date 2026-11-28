@@ -28,6 +28,15 @@ Study one small part at a time. Time estimates have not been tested yet. Stop wh
 | [ ] | 13. Finish the guided project | Lesson 447 | Explain all five parts of its ten-point check without reading the answers. |
 | [ ] | 14. Try a new project | [Independent project](INDEPENDENT-PROJECT.md) | Choose, build, check and explain a model without a full solution script. |
 
+## Two small reading bridges for the early split lessons
+
+You will see a score while learning how to keep rows separate. You do not need a full metrics chapter yet.
+
+- **Error in minutes:** an actual time of 30 and prediction of 27 differ by 3 minutes. MAE averages the sizes of such differences. Two mistakes of 2 and 4 minutes have MAE 3 minutes.
+- **Balanced accuracy:** count the share correct within each class, then average the class shares. Catching 8 of 10 urgent orders and correctly leaving 18 of 20 regular orders unflagged gives `(0.8 + 0.9) ÷ 2 = 0.85`. These are worked arithmetic examples, not additional experimental results.
+
+Use these to read lessons 179 and 442. First inspect what rows the split kept apart. A smaller score cannot repair a split that answers the wrong question. Module 8 and module 9 later explain the metrics more fully.
+
 Find each ZIP in `sample_code_folder`. Extract it as shown in Start here. The [workbook](Data-Science-and-Machine-Learning.md#lesson-downloads) also has all links.
 
 ## Why this order matters
@@ -57,3 +66,9 @@ You do not need every algorithm for a first model. Read [Extra topics](ELECTIVES
 ## What finishing means
 
 The ideas route helps you ask useful questions about an ML project. The Python route helps you build and explain a small checked project. Neither means you have mastered every part of ML. Build more projects, get feedback and keep checking your assumptions.
+
+## Grow toward ML engineering in stages
+
+First explain a small result by hand. Next run and modify a complete example. Then finish a partly completed task without copying its answer. Finally build a new checked project and let someone else reproduce it. Those are different achievements: record which you actually demonstrated.
+
+After the independent project, strengthen Python programming, data querying, mathematics as needed, software testing, version control, deployment operations and responsible data handling through further practice. Use the optional catalogue to answer a specific project need. Memorizing more algorithm names is not the same as being able to operate a reliable ML system.

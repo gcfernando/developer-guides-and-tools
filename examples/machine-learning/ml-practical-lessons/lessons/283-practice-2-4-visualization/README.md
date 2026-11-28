@@ -8,17 +8,31 @@ Plot petal and sepal measurements to see which flowers look similar.
 
 ## Before you start
 
-Finish the main preparation and checking modules.
+Read the named fields and explain the preparation taught earlier.
 
-Use the [main learning path](../../LEARNING-PATH.md) if you have not learned this yet. For extra topics, read [the extra-topic guide](../../ELECTIVES.md). In the repository, these links open the course guides. If you downloaded a ZIP, open README.html for the browser links. Keep the extracted lesson folder directly inside the complete course folder.
+Use the [learning path](../../LEARNING-PATH.md) to find the earlier skill, the [word list](../../GLOSSARY.md) for a term, and [Setup](../../SETUP.md) for computer steps. Extra-topic prerequisites and bridges are in [Extra topics](../../ELECTIVES.md). In an extracted ZIP, open README.html for the browser links and keep this folder directly inside the complete course folder.
 
 ## The idea in simple words
 
-These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+Inspect or derive a representation for a stated data question before using it in a fit.
+
+**Why and when.** Use this focused task to explain what the flower measurements representation keeps and changes.
+
+**A worked example to follow.** The flower measurements exercise uses sepal and petal measurements. Its output is species. The flower names star, fan and bell are invented classes with no ranking. Keep the original fields beside the derived value or chart so its meaning can be checked.
+
+**Input and output.** The supplied sample fields are `sepal_length`, `sepal_width`, `petal_length`, `petal_width`, `species`. In that field order, one original row is:
+
+```text
+3 | 2 | 1 | .2 | star
+```
+
+`(missing)` means a blank, not zero. The result table below belongs to the original supplied files.
+
+**Follow the Python.** Open the complete [lesson.py](lesson.py) beside these instructions. Keep inputs apart from measured answers. Follow this script’s split and fit, then trace the saved preparation into the held-back result and any new request. A request must not supply its own training answer. The [requirements file](requirements.txt) lists its packages. The next section gives exact run commands; use the same course Python to install and run.
 
 ## Guess first
 
-Do two correct examples prove that the model will work for a real population? Write your answer before running the script.
+Explain one original field and its derived value or plotted point in the flower measurements. What information could the change lose? Write a reason before running or opening the answer.
 
 ## Run one step at a time
 
@@ -59,15 +73,16 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 ## Explain the result
 
-<details>
-<summary>Read the answer after trying</summary>
+**Common mistakes and limits.** A clearer picture or a transformed target is not proof of improved validation. Reverse a target transform before interpreting predictions in original units.
 
-No. They show the calculation. Check more suitable data and describe what is missing.
+<details>
+<summary>Check your choice and reason</summary>
+
+Name the actual field, units and transformation or axis. Identify the retained meaning and any discarded detail; compare a justified alternative using validation rather than appearance alone.
 
 </details>
 
-You can move on when you can explain the goal, the changed value and why the result did or did not change. Then return to the next box in the main learning path.
-
+After the guided file change above, close the notes and explain the same decision for a different supplied row. State one condition that makes this method unsuitable. If you cannot explain the reason, repeat the small worked example before adding more code.
 
 ## 📋 Sample data
 
@@ -97,3 +112,7 @@ You can move on when you can explain the goal, the changed value and why the res
 **👀 Read the visual.** Compare each point with the known flower types nearby.
 
 **👉 What to do.** Run the code to use all four measurements for your new prediction.
+
+<!-- teaching-note:start -->
+<!-- teaching-profile:dataset_283 -->
+<!-- teaching-note:end -->

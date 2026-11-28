@@ -110,9 +110,77 @@ Type terminal commands in the terminal. Put Python code in the `.py` file. Do no
 
 ## Check your understanding
 
-1. What does `fit` do? It learns from training examples.
-2. Does `predict` need the true answer for a new request? No. It uses the inputs.
-3. Why keep a preparation step with the model? New inputs need the same rules used during training.
-4. What is position zero? The first item.
+Try these before opening the answer. Explain the reason, not just the word.
+
+1. What does `fit` learn from? Which rows must stay separate?
+2. Does `predict` need the true answer for a new request?
+3. Why keep a preparation step with the model?
+4. In `[4, 8, 12]`, what value is at position zero?
+
+<details>
+<summary>Check the answers and reasons</summary>
+
+`fit` learns model or preparation values from training examples. Validation helps choose settings and test rows check the frozen choice. `predict` needs the new inputs, not their measured answer. Keeping preparation with the model reuses the same fitted rules. Position zero is the first item: 4 here.
+
+</details>
+
+## Read a little more code when you need it
+
+You do not need these patterns before making your first prediction. Return here when a later script uses one. Each example below runs on its own using Python; no extra package or file is needed.
+
+### A dictionary: fields with names
+
+```python
+delivery = {"distance_km": 4, "zone": "North"}
+print(delivery["distance_km"])
+```
+
+Braces hold named values. The quoted name is a **key**. This prints `4`. A CSV row and an API request can carry similar fields, but their formats differ. A missing key is different from a key whose value is unknown. Try changing the distance to 8: it prints 8. Keep names exactly as the receiving program expects.
+
+### A condition: choose a branch
+
+```python
+distance_km = -4
+if distance_km < 0:
+    print("Check the distance")
+else:
+    print("Distance is nonnegative")
+```
+
+`if` checks a condition. The indented lines belong to its branch. This prints `Check the distance`. Change −4 to 4 and predict the other message before running. Passing this one check does not prove a distance is within a model's tested range.
+
+### A loop: repeat for each value
+
+```python
+distances = [1, 2, 3]
+for distance in distances:
+    print(10 + 2 * distance)
+```
+
+`for` takes each list value in order and runs the indented step. It prints 12, 14 and 16 on separate lines. These are results of our written rule, not proof that a learned model will generalize. Add 4; explain why a fourth line with 18 appears.
+
+### An object: a value with its own operations
+
+An **object** groups a value or state with operations. A fitted model object keeps learned values; `model.predict(...)` asks that object to use them. A **method** is an operation belonging to an object. This does not mean `predict` trains the model again. An error about an absent method is a clue to check what kind of object you have.
+
+## Apply it without copying
+
+Use a dictionary to store a distance of 8. Read that value into a variable. Use the written rule `10 + 2 * distance`, then check whether the distance is negative before printing an estimate. Write the expected output first.
+
+<details>
+<summary>One complete answer</summary>
+
+```python
+delivery = {"distance_km": 8}
+distance = delivery["distance_km"]
+if distance < 0:
+    print("Check the distance")
+else:
+    print(10 + 2 * distance)
+```
+
+It prints 26. This is a written-rule exercise. A later ML script replaces that written calculation with a fitted model's `predict` operation while preserving the input contract.
+
+</details>
 
 Next: follow the first module in [the learning path](LEARNING-PATH.md).

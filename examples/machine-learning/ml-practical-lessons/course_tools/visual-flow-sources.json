@@ -1,0 +1,506 @@
+{
+  "api-request-steps": {
+    "title": "How does one request become a delivery estimate?",
+    "steps": [
+      {
+        "label": "Send the inputs",
+        "text": "Distance is 5 km. Weight is 2 kg."
+      },
+      {
+        "label": "Check the request",
+        "text": "Reject a negative distance or an invalid weight."
+      },
+      {
+        "label": "Return an estimate",
+        "text": "Give valid input to the model and return the predicted minutes."
+      }
+    ],
+    "observation": "Follow the request containing 5 km and 2 kg. Validation happens before the prediction."
+  },
+  "audio-feature-steps": {
+    "title": "How does a recording become a model input?",
+    "steps": [
+      {
+        "label": "Open the recording",
+        "text": "Read the waveform, which is the sound signal over time."
+      },
+      {
+        "label": "Measure frequencies",
+        "text": "Open a spectrogram or summarize the tone with MFCC features."
+      },
+      {
+        "label": "Try a new tone",
+        "text": "Apply the same steps and check the predicted sound class."
+      }
+    ],
+    "observation": "The same recording moves from a sound wave to frequency measurements and a class estimate."
+  },
+  "boolean-input-steps": {
+    "title": "How do we preserve yes, no and unknown?",
+    "steps": [
+      {
+        "label": "Recognize yes",
+        "text": "Yes, true or 1 means the value is 1."
+      },
+      {
+        "label": "Recognize no",
+        "text": "No, false or 0 means the value is 0."
+      },
+      {
+        "label": "Handle unknown",
+        "text": "Keep unfamiliar entries missing until the fill rule runs."
+      }
+    ],
+    "observation": "Known yes becomes 1 and known no becomes 0. Unknown remains missing until a stated rule handles it."
+  },
+  "choose-model-setting": {
+    "title": "How do we choose a model setting fairly?",
+    "steps": [
+      {
+        "label": "Try settings",
+        "text": "For a decision tree, try depths 1, 2 and 3."
+      },
+      {
+        "label": "Compare results",
+        "text": "Pick one score and use it for each candidate."
+      },
+      {
+        "label": "Check the winner",
+        "text": "Evaluate the chosen setting on the reserved test rows."
+      }
+    ],
+    "observation": "Try the same validation comparison for each setting. The final test checks the frozen choice."
+  },
+  "convert-to-lowercase-remove-punctuation": {
+    "title": "What changes when we clean this message?",
+    "steps": [
+      {
+        "label": "A new message changes from WHERE IS MY PARCEL!!! to where is my parcel",
+        "text": "A new message changes from WHERE IS MY PARCEL!!! to where is my parcel."
+      },
+      {
+        "label": "The model reads word counts and predicts delivery",
+        "text": "The model reads word counts and predicts delivery."
+      }
+    ],
+    "observation": "Compare WHERE IS MY PARCEL!!! with where is my parcel before counting the words."
+  },
+  "data-collection-steps": {
+    "title": "How can we trace a collected order back to its source?",
+    "steps": [
+      {
+        "label": "Bring rows in",
+        "text": "Read the order IDs and delivery zones."
+      },
+      {
+        "label": "Keep the source",
+        "text": "Record the file name, origin and column types."
+      },
+      {
+        "label": "Check and share",
+        "text": "Reopen the export. Share the fields your task needs."
+      }
+    ],
+    "observation": "Keep the order ID, field meanings and collection source so an exported row can be checked."
+  },
+  "datetime-feature-steps": {
+    "title": "Which useful inputs can one timestamp supply?",
+    "steps": [
+      {
+        "label": "Read the time",
+        "text": "Parse the input string as a timestamp."
+      },
+      {
+        "label": "Extract fields",
+        "text": "2025, month 2, day 5. Wednesday at hour 9."
+      },
+      {
+        "label": "Choose inputs",
+        "text": "Use hour and weekday if they matter for predicting order counts."
+      }
+    ],
+    "observation": "The supplied 2025-02-05 09:00 timestamp provides a year, month, day, weekday and hour."
+  },
+  "duplicate-check-steps": {
+    "title": "Are these two records really the same order?",
+    "steps": [
+      {
+        "label": "Compare fields",
+        "text": "Look at order ID, name and the measured time."
+      },
+      {
+        "label": "Confirm identity",
+        "text": "Matching IDs and values may be two copies of the same order."
+      },
+      {
+        "label": "Review conflicts",
+        "text": "Different orders can share a name. Use the source to confirm."
+      }
+    ],
+    "observation": "Similar names alone do not prove a repeated order. Compare the order identity and source."
+  },
+  "encoding-choices-steps": {
+    "title": "Which representation fits this category field?",
+    "steps": [
+      {
+        "label": "Unordered labels",
+        "text": "Red, blue, green. Use a 0-or-1 column for each known color."
+      },
+      {
+        "label": "Ordered labels",
+        "text": "Low, medium, high. Use ordered numbers such as 0, 1, 2."
+      },
+      {
+        "label": "Many labels",
+        "text": "For many suppliers, learn target summaries from training rows."
+      }
+    ],
+    "observation": "Unordered colours, ordered priorities and many supplier names call for different choices."
+  },
+  "features-from-raw-data": {
+    "title": "How does a birth date become an age input?",
+    "steps": [
+      {
+        "label": "Raw input",
+        "text": "Birth date: 2000-10-03."
+      },
+      {
+        "label": "Derived feature",
+        "text": "Age on 2025-04-01: 24 years."
+      },
+      {
+        "label": "Reuse the rule",
+        "text": "Follow the same reference-date rule for each new row."
+      }
+    ],
+    "observation": "At the supplied reference date 2025-04-01, the birth date 2000-10-03 gives age 24."
+  },
+  "image-feature-steps": {
+    "title": "How does a picture become model-ready numbers?",
+    "steps": [
+      {
+        "label": "Read the image",
+        "text": "Start with the color values for each pixel."
+      },
+      {
+        "label": "Make the shape fit",
+        "text": "Resize to a fixed grid. Use grayscale when color is unnecessary."
+      },
+      {
+        "label": "Give the model numbers",
+        "text": "Use the pixel grid or a short feature vector built from it."
+      }
+    ],
+    "observation": "Apply the same image size and representation rules to training pictures and new pictures."
+  },
+  "large-number-steps": {
+    "title": "Are we changing the display or changing the feature?",
+    "steps": [
+      {
+        "label": "Read the count",
+        "text": "This could be the number of page views."
+      },
+      {
+        "label": "Display the number",
+        "text": "1 × 10⁸ is the same count written more compactly."
+      },
+      {
+        "label": "Transform for a model",
+        "text": "A log changes the input. Reuse the same log for new rows."
+      }
+    ],
+    "observation": "Scientific notation keeps the same quantity. A log changes the numeric input the model receives."
+  },
+  "missing-values-steps": {
+    "title": "How can a new request use the training fill rule?",
+    "steps": [
+      {
+        "label": "Find the gap",
+        "text": "The weight is blank. The measured delivery time is present."
+      },
+      {
+        "label": "Learn a fill rule",
+        "text": "Use a rule based on the training weights, such as their median."
+      },
+      {
+        "label": "Reuse the rule",
+        "text": "Fill a blank on a new request using that saved rule."
+      }
+    ],
+    "observation": "A missing weight is filled using the saved training rule. The measured outcome is a separate field."
+  },
+  "monitoring-steps": {
+    "title": "What should we do when later model results change?",
+    "steps": [
+      {
+        "label": "Watch the inputs",
+        "text": "Are recent deliveries longer than training deliveries?"
+      },
+      {
+        "label": "Wait for outcomes",
+        "text": "Compare predictions with measured times once the trips finish."
+      },
+      {
+        "label": "Decide what to do",
+        "text": "Inspect the bad cases and test an updated model if needed."
+      }
+    ],
+    "observation": "Inspect new inputs and wait for measured outcomes before judging errors or replacing a model."
+  },
+  "outlier-source-decision": {
+    "title": "What does the source tell us to do?",
+    "steps": [
+      {
+        "label": "Confirmed 5 kg: CORRECT",
+        "text": "Use the source-confirmed weight in the reviewed training copy. Keep the original record for tracing the change."
+      },
+      {
+        "label": "Confirmed 90 kg: KEEP",
+        "text": "The unusual value is real. Keep it and check whether the intended model should handle heavy parcels."
+      },
+      {
+        "label": "No usable slip: FLAG",
+        "text": "Ask for a source check. For this practice run, set the uncertain row aside; do not invent its true weight."
+      }
+    ],
+    "observation": "A verified 5 kg means CORRECT; a verified 90 kg means KEEP; no usable source means FLAG."
+  },
+  "pick-model-metric": {
+    "title": "Which check matches the answer we need?",
+    "steps": [
+      {
+        "label": "A number",
+        "text": "For minutes, use the measured time to calculate the error."
+      },
+      {
+        "label": "A category",
+        "text": "Count which urgent orders the model caught and which it missed."
+      },
+      {
+        "label": "A ranked risk",
+        "text": "Use an ROC curve to explore risk thresholds."
+      }
+    ],
+    "observation": "Minutes require numeric-error measures. Urgent-order decisions require counts of misses and false alarms."
+  },
+  "problem-definition-steps": {
+    "title": "What useful question will the model answer?",
+    "steps": [
+      {
+        "label": "Ask a question",
+        "text": "How long will the delivery take?"
+      },
+      {
+        "label": "List known inputs",
+        "text": "Distance in km. Parcel weight in kg."
+      },
+      {
+        "label": "Check the answer",
+        "text": "Compare predicted minutes with measured minutes."
+      }
+    ],
+    "observation": "For delivery time, name the inputs known before the trip and compare estimates with measured minutes."
+  },
+  "reinforcement-steps": {
+    "title": "What feedback follows this robot move?",
+    "steps": [
+      {
+        "label": "Read the state",
+        "text": "The robot starts in cell 3."
+      },
+      {
+        "label": "Take an action",
+        "text": "It chooses to move right."
+      },
+      {
+        "label": "Get feedback",
+        "text": "It reaches cell 4, the goal, and earns +1."
+      }
+    ],
+    "observation": "The supplied robot starts in cell 3, moves right to cell 4 and receives the goal reward +1."
+  },
+  "request-journey": {
+    "title": "How does the 4 km request become an 18-minute estimate?",
+    "steps": [
+      {
+        "label": "Open the CSV",
+        "text": "The new trip is 4 km. Its delivery time is still unknown."
+      },
+      {
+        "label": "Run the lesson",
+        "text": "The model uses the pattern it learned from past trips."
+      },
+      {
+        "label": "Read the answer",
+        "text": "4 km"
+      },
+      {
+        "label": "18 min",
+        "text": "Try a different distance and compare."
+      }
+    ],
+    "observation": "The request supplies distance, not a known new outcome. The model reuses its training pattern."
+  },
+  "semi-supervised-steps": {
+    "title": "How do we check whether extra guessed labels help?",
+    "steps": [
+      {
+        "label": "Start with labels",
+        "text": "Train a first model using the known classes."
+      },
+      {
+        "label": "Use unlabeled rows",
+        "text": "Add confident guesses as extra training labels."
+      },
+      {
+        "label": "Check the change",
+        "text": "Compare with the original model on labeled check rows."
+      }
+    ],
+    "observation": "Keep confirmed labels separate from model guesses and compare against a labelled independent check."
+  },
+  "standardize-formats-steps": {
+    "title": "How do we make one shipment use consistent units?",
+    "steps": [
+      {
+        "label": "Raw shipment",
+        "text": "US date 01/07/2025, weight 18 lb and zone NORTH."
+      },
+      {
+        "label": "Clean the fields",
+        "text": "Date 2025-01-07. Weight 8.16 kg. Zone north."
+      },
+      {
+        "label": "Give model inputs",
+        "text": "Use kilograms, the weekday and a zone indicator."
+      }
+    ],
+    "observation": "The supplied 18 lb shipment becomes about 8.16 kg; its date and zone are standardized too."
+  },
+  "supervised-model-steps": {
+    "title": "How do known deliveries teach a model?",
+    "steps": [
+      {
+        "label": "Read completed trips",
+        "text": "Distance, weight and measured time."
+      },
+      {
+        "label": "Teach the model",
+        "text": "Provide the inputs and measured answer for every training trip."
+      },
+      {
+        "label": "Try a new trip",
+        "text": "Enter a new distance and weight and read the estimate."
+      }
+    ],
+    "observation": "Training supplies both inputs and measured minutes. A new request supplies only the available inputs."
+  },
+  "text-cleaning-steps": {
+    "title": "How do the same text rules reach a new message?",
+    "steps": [
+      {
+        "label": "Read the text",
+        "text": "MY Parcel Is Late!!!"
+      },
+      {
+        "label": "Clean the text",
+        "text": "my parcel is late"
+      },
+      {
+        "label": "Count and predict",
+        "text": "parcel = 1 and late = 1. Predict a category from the counts."
+      }
+    ],
+    "observation": "Read MY Parcel Is Late!!!, clean it, then reuse the fitted vocabulary to count known words."
+  },
+  "train-save-test-steps": {
+    "title": "Which command should run after a request changes?",
+    "steps": [
+      {
+        "label": "Train and save",
+        "text": "Run the training script on completed deliveries."
+      },
+      {
+        "label": "Change the request",
+        "text": "Enter a different distance, weight or zone in the new CSV."
+      },
+      {
+        "label": "Run only the test",
+        "text": "Load the saved model and read its estimates."
+      }
+    ],
+    "observation": "Train and save once. After changing the request CSV, run the prediction script without retraining."
+  },
+  "training-validation-test-steps": {
+    "title": "Which rows teach, choose and check?",
+    "steps": [
+      {
+        "label": "Training · 70",
+        "text": "Teach the model with these rows."
+      },
+      {
+        "label": "Validation · 20",
+        "text": "Compare settings such as tree depth on these rows."
+      },
+      {
+        "label": "Test · 10",
+        "text": "Check the chosen model once using these rows."
+      }
+    ],
+    "observation": "The supplied split gives 70 rows to training, 20 to validation and 10 to the final test."
+  },
+  "unsupervised-model-steps": {
+    "title": "How can we describe groups without supplied group answers?",
+    "steps": [
+      {
+        "label": "Read the inputs",
+        "text": "Age, income and spending score."
+      },
+      {
+        "label": "Find groups",
+        "text": "Put shoppers with similar measurements near one another."
+      },
+      {
+        "label": "Inspect the result",
+        "text": "Read the group averages before describing each group."
+      }
+    ],
+    "observation": "The grouping method sees shopper inputs. Inspect the resulting profiles before giving groups useful names."
+  },
+  "video-feature-steps": {
+    "title": "Why must a motion model keep frames in order?",
+    "steps": [
+      {
+        "label": "Extract frames",
+        "text": "Read the video as a sequence of pictures."
+      },
+      {
+        "label": "Measure each frame",
+        "text": "Use the same image model for every frame."
+      },
+      {
+        "label": "Read the sequence",
+        "text": "Use the order of the frames to predict left or right."
+      }
+    ],
+    "observation": "The same image representation feeds each ordered frame to the sequence model. Reversing order can reverse motion."
+  },
+  "workbook-pipeline": {
+    "title": "How does a delivery question become a checked model?",
+    "steps": [
+      {
+        "label": "Prepare the rows",
+        "text": "Read past trips. Clean the inputs and set aside some rows to check."
+      },
+      {
+        "label": "Teach and check",
+        "text": "Train with the measured times. Compare estimates with the check rows."
+      },
+      {
+        "label": "Use and monitor",
+        "text": "Estimate new times. Let measured outcomes tell you when to investigate."
+      }
+    ],
+    "observation": "Prepare known inputs, teach and check the model, then monitor predictions after actual outcomes arrive."
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "python": "3.12.10",
+  "checks": [
+    {
+      "lesson": "361-ridge-lasso-regression",
+      "script": "penalty_lab.py",
+      "expected_output_matches": true,
+      "behavior_check": "Coefficients shown, strong Lasso zeros observed, choice follows validation; separate frozen-choice test reported."
+    },
+    {
+      "lesson": "362-ridge-regression",
+      "script": "penalty_lab.py",
+      "expected_output_matches": true,
+      "behavior_check": "Coefficients shown, strong Lasso zeros observed, choice follows validation; separate frozen-choice test reported."
+    },
+    {
+      "lesson": "363-lasso-regression",
+      "script": "penalty_lab.py",
+      "expected_output_matches": true,
+      "behavior_check": "Coefficients shown, strong Lasso zeros observed, choice follows validation; separate frozen-choice test reported."
+    },
+    {
+      "lesson": "087-word-embeddings-word2vec-bert-etc",
+      "script": "network_bridge.py",
+      "expected_output_matches": true,
+      "behavior_check": "Original update matches output; learning-rate change to 1.0 raises loss to 81, showing updates need care."
+    },
+    {
+      "lesson": "088-word2vec",
+      "script": "network_bridge.py",
+      "expected_output_matches": true,
+      "behavior_check": "Original update matches output; learning-rate change to 1.0 raises loss to 81, showing updates need care."
+    },
+    {
+      "lesson": "089-bert",
+      "script": "network_bridge.py",
+      "expected_output_matches": true,
+      "behavior_check": "Original update matches output; learning-rate change to 1.0 raises loss to 81, showing updates need care."
+    },
+    {
+      "lesson": "122-video-frames-sequences",
+      "script": "network_bridge.py",
+      "expected_output_matches": true,
+      "behavior_check": "Original update matches output; learning-rate change to 1.0 raises loss to 81, showing updates need care."
+    },
+    {
+      "lesson": "123-mp4-and-frame-extraction",
+      "script": "network_bridge.py",
+      "expected_output_matches": true,
+      "behavior_check": "Original update matches output; learning-rate change to 1.0 raises loss to 81, showing updates need care."
+    },
+    {
+      "lesson": "124-cnn-and-lstm-sequence-modeling",
+      "script": "network_bridge.py",
+      "expected_output_matches": true,
+      "behavior_check": "Original update matches output; learning-rate change to 1.0 raises loss to 81, showing updates need care."
+    },
+    {
+      "lesson": "421-deep-q-networks-dqn",
+      "script": "network_bridge.py",
+      "expected_output_matches": true,
+      "behavior_check": "Original update matches output; learning-rate change to 1.0 raises loss to 81, showing updates need care."
+    }
+  ],
+  "method": "Ran original examples and controlled changes in temporary copies.",
+  "learner_study": "Not performed."
+}

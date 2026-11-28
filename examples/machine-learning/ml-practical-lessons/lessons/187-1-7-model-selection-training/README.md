@@ -8,17 +8,31 @@ Compare candidate models using the same training task and a common error measure
 
 ## Before you start
 
-Know a baseline, a score and a model setting.
+Calculate a baseline score and explain validation.
 
-Use the [main learning path](../../LEARNING-PATH.md) if you have not learned this yet. For extra topics, read [the extra-topic guide](../../ELECTIVES.md). In the repository, these links open the course guides. If you downloaded a ZIP, open README.html for the browser links. Keep the extracted lesson folder directly inside the complete course folder.
+Use the [learning path](../../LEARNING-PATH.md) to find the earlier skill, the [word list](../../GLOSSARY.md) for a term, and [Setup](../../SETUP.md) for computer steps. Extra-topic prerequisites and bridges are in [Extra topics](../../ELECTIVES.md). In an extracted ZIP, open README.html for the browser links and keep this folder directly inside the complete course folder.
 
 ## The idea in simple words
 
-Compare candidates on the same validation rows. A setting controls learning. Cross-validation repeats checks inside training. Do not call the best validation score a final test.
+Model comparison tests candidate learning rules on the same task, rows and metric.
+
+**Why and when.** Use the simplest justified baseline first, then add candidates whose assumptions suit the input and decision.
+
+**A worked example to follow.** The lesson places scaling inside a pipeline and takes the same validation folds for each classifier. A DummyClassifier provides a comparison that learns no useful input relationship.
+
+**Input and output.** The supplied sample fields are `km`, `kg`, `answer`. In that field order, one original row is:
+
+```text
+47 | 3 | 1
+```
+
+`(missing)` means a blank, not zero. The result table below belongs to the original supplied files.
+
+**Follow the Python.** Open the complete [lesson.py](lesson.py) beside these instructions. Keep inputs apart from measured answers. Follow this script’s split and fit, then trace the saved preparation into the held-back result and any new request. A request must not supply its own training answer. The [requirements file](requirements.txt) lists its packages. The next section gives exact run commands; use the same course Python to install and run.
 
 ## Guess first
 
-Does the smallest training error always win? Write your answer before running the script.
+One candidate has slightly better validation F1 but cannot meet the agreed response time. Must it be chosen? Write a reason before running or opening the answer.
 
 ## Run one step at a time
 
@@ -57,15 +71,16 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 ## Explain the result
 
-<details>
-<summary>Read the answer after trying</summary>
+**Common mistakes and limits.** A larger model is not automatically better. A validation winner is not a final test estimate. Also compare practical requirements and failure types.
 
-No. It may memorize. Use separate validation results to choose.
+<details>
+<summary>Check your choice and reason</summary>
+
+No. Check uncertainty and the project constraints. Choose a usable procedure with documented trade-offs, then evaluate the frozen choice separately.
 
 </details>
 
-You can move on when you can explain the goal, the changed value and why the result did or did not change. Then return to the next box in the main learning path.
-
+After the guided file change above, close the notes and explain the same decision for a different supplied row. State one condition that makes this method unsuitable. If you cannot explain the reason, repeat the small worked example before adding more code.
 
 ## 📋 Sample data
 
@@ -91,3 +106,7 @@ Showing the first 8 of 84 rows. The CSV has the full sample.
 **👉 What to do.** A deeper tree can memorize the training rows. Use validation results to choose its depth.
 
 These scores compare settings on validation folds. Use an independent test set for the final score after you choose a model.
+
+<!-- teaching-note:start -->
+<!-- teaching-profile:model_comparison -->
+<!-- teaching-note:end -->

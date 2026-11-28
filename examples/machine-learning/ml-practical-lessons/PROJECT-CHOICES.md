@@ -100,4 +100,19 @@ An alert means “investigate”. It does not prove the model needs retraining.
 
 ## 8. Know this course's scope
 
+## Work through a brief before writing your own
+
+A library wants to estimate loan duration at checkout. The decision is when to send a reminder. Available inputs include book format, loan type and the agreed due date. The future actual return date is the answer source, not an available predictor. A baseline might always use the middle duration among earlier completed training loans. Choose validation/check dates to match later use. Pending loans need a separate status; their unknown duration is not zero.
+
+**Your task.** Draft the model-card fields for this case. Explain a privacy limit, an error measure, a fallback and the person who responds when later errors rise. Then propose a reason an ordinary due-date rule might be sufficient.
+
+<details>
+<summary>One reasoned answer</summary>
+
+Use only approved fields needed for the reminder decision; do not expose personal borrowing histories unnecessarily. Read absolute errors in days and inspect large misses and pending-loan coverage. Keep an ordinary due-date reminder as a possible fallback, with a named librarian reviewing data/label changes and results. If the decision is simply “send on the agreed date”, a fixed rule already expresses the policy and no learned estimate is needed. Each card field should connect to that decision rather than become paperwork without an action.
+
+</details>
+
+## What the current course covers
+
 This course focuses on predicting numbers, known categories and groups from data. Generative AI creates content such as text or pictures. A pretrained model has already learned from other data. Retrieval finds information to use as context. These ideas can be combined, but they need their own evaluation. A good delivery prediction does not prove that a chatbot gives correct answers.

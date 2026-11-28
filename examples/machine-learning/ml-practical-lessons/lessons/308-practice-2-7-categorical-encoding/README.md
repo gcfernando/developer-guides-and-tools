@@ -8,17 +8,31 @@ Turn categories in the invented neighborhood records into numbers the model can 
 
 ## Before you start
 
-Finish the main preparation and checking modules.
+Read the named fields and explain the preparation taught earlier.
 
-Use the [main learning path](../../LEARNING-PATH.md) if you have not learned this yet. For extra topics, read [the extra-topic guide](../../ELECTIVES.md). In the repository, these links open the course guides. If you downloaded a ZIP, open README.html for the browser links. Keep the extracted lesson folder directly inside the complete course folder.
+Use the [learning path](../../LEARNING-PATH.md) to find the earlier skill, the [word list](../../GLOSSARY.md) for a term, and [Setup](../../SETUP.md) for computer steps. Extra-topic prerequisites and bridges are in [Extra topics](../../ELECTIVES.md). In an extracted ZIP, open README.html for the browser links and keep this folder directly inside the complete course folder.
 
 ## The idea in simple words
 
-These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+Encoding gives a name a consistent numeric representation while preserving whether it is an input category or an answer label.
+
+**Why and when.** Use it before the numeric estimator receives the neighbourhood records fields.
+
+**A worked example to follow.** The neighbourhood records exercise uses crime_per_1000, rooms, household_income and zone. Its output is price. Read the script’s selected category fields or target encoder. A class ID names a class; it does not turn that class into a measured amount. These invented fields are not the historical Boston Housing dataset.
+
+**Input and output.** The supplied sample fields are `crime_per_1000`, `rooms`, `household_income`, `zone`, `price`. In that field order, one original row is:
+
+```text
+2 | 3 | 38000 | North | 180000
+```
+
+`(missing)` means a blank, not zero. The result table below belongs to the original supplied files.
+
+**Follow the Python.** Open the complete [lesson.py](lesson.py) beside these instructions. Keep inputs apart from measured answers. Follow this script’s split and fit, then trace the saved preparation into the held-back result and any new request. A request must not supply its own training answer. The [requirements file](requirements.txt) lists its packages. The next section gives exact run commands; use the same course Python to install and run.
 
 ## Guess first
 
-Do two correct examples prove that the model will work for a real population? Write your answer before running the script.
+Find one category or target label in this neighbourhood records exercise. Is it a model input or the answer? What happens if a new name arrives? Write a reason before running or opening the answer.
 
 ## Run one step at a time
 
@@ -64,15 +78,16 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 ## Explain the result
 
-<details>
-<summary>Read the answer after trying</summary>
+**Common mistakes and limits.** Do not invent a category ranking or fit a separate column list on new rows. One-hot target labels in a drawing demonstration are separate from input encoding.
 
-No. They show the calculation. Check more suitable data and describe what is missing.
+<details>
+<summary>Check your choice and reason</summary>
+
+Trace the named field into features or target. Inputs use the saved category schema; unknown names need a stated policy. Targets remain the known classes the classifier was trained to distinguish.
 
 </details>
 
-You can move on when you can explain the goal, the changed value and why the result did or did not change. Then return to the next box in the main learning path.
-
+After the guided file change above, close the notes and explain the same decision for a different supplied row. State one condition that makes this method unsuitable. If you cannot explain the reason, repeat the small worked example before adding more code.
 
 ## 📋 Sample data
 
@@ -94,3 +109,7 @@ You can move on when you can explain the goal, the changed value and why the res
 | 2 | 3 | 38000.0 | North |
 | 1 | 5 | 61000.0 | South |
 | 4 | 4 | — | Central |
+
+<!-- teaching-note:start -->
+<!-- teaching-profile:dataset_308 -->
+<!-- teaching-note:end -->

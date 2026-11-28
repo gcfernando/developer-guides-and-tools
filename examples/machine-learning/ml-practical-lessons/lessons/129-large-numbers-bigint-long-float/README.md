@@ -8,17 +8,31 @@ Read large values and display them in a shorter format.
 
 ## Before you start
 
-Read the Files and data terms in the glossary.
+Distinguish an identifier from a measured count.
 
-Use the [main learning path](../../LEARNING-PATH.md) if you have not learned this yet. For extra topics, read [the extra-topic guide](../../ELECTIVES.md). In the repository, these links open the course guides. If you downloaded a ZIP, open README.html for the browser links. Keep the extracted lesson folder directly inside the complete course folder.
+Use the [learning path](../../LEARNING-PATH.md) to find the earlier skill, the [word list](../../GLOSSARY.md) for a term, and [Setup](../../SETUP.md) for computer steps. Extra-topic prerequisites and bridges are in [Extra topics](../../ELECTIVES.md). In an extracted ZIP, open README.html for the browser links and keep this folder directly inside the complete course folder.
 
 ## The idea in simple words
 
-Choose a representation based on meaning. A number, name, yes/no value and date need different checks before a model can use them.
+Scientific notation writes the same value compactly. An ID remains a name even when all its characters are digits.
+
+**Why and when.** Use compact notation to display large measurements, and exact strings to preserve long IDs.
+
+**A worked example to follow.** 1000 and 1e3 mean the same number. The script preserves event_id as text and separately passes log-transformed visits to the cost model.
+
+**Input and output.** The supplied sample fields are `event_id`, `visits`, `server_cost`. In that field order, one original row is:
+
+```text
+123456789012345 | 100 | 8
+```
+
+`(missing)` means a blank, not zero. The result table below belongs to the original supplied files.
+
+**Follow the Python.** Open the complete [lesson.py](lesson.py) beside these instructions. Keep the original field beside the inspected or changed value. Trace the named preparation or review step, and check whether it uses a fixed rule or a value learned from training. The [requirements file](requirements.txt) lists its packages. The next section gives exact run commands; use the same course Python to install and run.
 
 ## Guess first
 
-Is every field made of digits a measured number? Write your answer before running the script.
+A table has an account ID 000123 and a count of 1000000. Which may be formatted as 1e6 and which should preserve characters? Write a reason before running or opening the answer.
 
 ## Run one step at a time
 
@@ -56,15 +70,16 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 ## Explain the result
 
-<details>
-<summary>Read the answer after trying</summary>
+**Common mistakes and limits.** Rounding an ID or treating its magnitude as a useful measurement can destroy identity or invent a relationship.
 
-No. An event ID may be a name and should stay exact text.
+<details>
+<summary>Check your choice and reason</summary>
+
+The count may be displayed as 1e6. Preserve 000123 exactly as text; its leading zeros can be part of its identity.
 
 </details>
 
-You can move on when you can explain the goal, the changed value and why the result did or did not change. Then return to the next box in the main learning path.
-
+After the guided file change above, close the notes and explain the same decision for a different supplied row. State one condition that makes this method unsuitable. If you cannot explain the reason, repeat the small worked example before adding more code.
 
 ## 📋 Sample data
 
@@ -74,3 +89,7 @@ You can move on when you can explain the goal, the changed value and why the res
 | 123456789012346 | 10000 | 15 |
 | 123456789012347 | 1000000 | 19 |
 | 123456789012348 | 12500000000 | 30 |
+
+<!-- teaching-note:start -->
+<!-- teaching-profile:scientific_notation -->
+<!-- teaching-note:end -->

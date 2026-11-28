@@ -8,17 +8,31 @@ Look at nearby deliveries with known answers to predict late or on time.
 
 ## Before you start
 
-Finish the main path through overfitting and validation.
+Read distance between two scaled input rows.
 
-Use the [main learning path](../../LEARNING-PATH.md) if you have not learned this yet. For extra topics, read [the extra-topic guide](../../ELECTIVES.md). In the repository, these links open the course guides. If you downloaded a ZIP, open README.html for the browser links. Keep the extracted lesson folder directly inside the complete course folder.
+Use the [learning path](../../LEARNING-PATH.md) to find the earlier skill, the [word list](../../GLOSSARY.md) for a term, and [Setup](../../SETUP.md) for computer steps. Extra-topic prerequisites and bridges are in [Extra topics](../../ELECTIVES.md). In an extracted ZIP, open README.html for the browser links and keep this folder directly inside the complete course folder.
 
 ## The idea in simple words
 
-Different algorithms learn different rules. The catalog is practice, not a leaderboard for choosing from final test scores. Use a common validation comparison for your own choice.
+K-nearest neighbours classifies using the labels of nearby training cases.
+
+**Why and when.** Use it when the chosen representation and distance make nearby cases meaningfully comparable.
+
+**A worked example to follow.** The script scales km and kg before looking at five neighbours. Their labels supply evidence for the new delivery’s class.
+
+**Input and output.** The supplied sample fields are `km`, `kg`, `late`. In that field order, one original row is:
+
+```text
+48 | 4 | 1
+```
+
+`(missing)` means a blank, not zero. The result table below belongs to the original supplied files.
+
+**Follow the Python.** Open the complete [lesson.py](lesson.py) beside these instructions. Keep inputs apart from measured answers. Follow this script’s split and fit, then trace the saved preparation into the held-back result and any new request. A request must not supply its own training answer. The [requirements file](requirements.txt) lists its packages. The next section gives exact run commands; use the same course Python to install and run.
 
 ## Guess first
 
-Should you choose a model by opening many final test results? Write your answer before running the script.
+Changing kg to grams without changing the saved preparation changes which neighbours? Why can that matter? Write a reason before running or opening the answer.
 
 ## Run one step at a time
 
@@ -59,19 +73,20 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 ## Explain the result
 
-<details>
-<summary>Read the answer after trying</summary>
+**Common mistakes and limits.** Unscaled units can dominate distance. Too many irrelevant inputs, few neighbours or a new population can make similarity misleading.
 
-No. Use validation first, then one final check.
+<details>
+<summary>Check your choice and reason</summary>
+
+It can make weight dominate a raw distance. Keep consistent units and fit scaling within training, then validate the neighbour rule.
 
 </details>
 
-You can move on when you can explain the goal, the changed value and why the result did or did not change. Then return to the next box in the main learning path.
+After the guided file change above, close the notes and explain the same decision for a different supplied row. State one condition that makes this method unsuitable. If you cannot explain the reason, repeat the small worked example before adding more code.
 
 ### What this particular check asks
 
 This example keeps exact distance-and-weight combinations out of its test training rows. That is a deliberately stricter, special question. Independent orders may have the same measurements. Equal numbers alone do not prove leakage. Use shipment identity and the intended future job to choose a normal split; see lesson 442.
-
 
 ## 📋 Sample data
 
@@ -95,3 +110,7 @@ Showing the first 8 of 60 rows. The CSV has the full sample.
 | 5 | 2 |
 | 16 | 4 |
 | 42 | 9 |
+
+<!-- teaching-note:start -->
+<!-- teaching-profile:knn -->
+<!-- teaching-note:end -->

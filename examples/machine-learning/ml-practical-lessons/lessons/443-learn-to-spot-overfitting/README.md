@@ -8,17 +8,31 @@ Vary model complexity, read the training and validation errors, and test the sel
 
 ## Before you start
 
-Understand a validation score and tree depth.
+Read training and validation errors in the same units.
 
-Use the [main learning path](../../LEARNING-PATH.md) if you have not learned this yet. For extra topics, read [the extra-topic guide](../../ELECTIVES.md). In the repository, these links open the course guides. If you downloaded a ZIP, open README.html for the browser links. Keep the extracted lesson folder directly inside the complete course folder.
+Use the [learning path](../../LEARNING-PATH.md) to find the earlier skill, the [word list](../../GLOSSARY.md) for a term, and [Setup](../../SETUP.md) for computer steps. Extra-topic prerequisites and bridges are in [Extra topics](../../ELECTIVES.md). In an extracted ZIP, open README.html for the browser links and keep this folder directly inside the complete course folder.
 
 ## The idea in simple words
 
-A deep tree can remember training details. Read training and validation errors together. Freeze the setting before the final test.
+Overfitting helps the training fit while harming performance on separate relevant cases.
+
+**Why and when.** Use validation to select complexity before a final test.
+
+**A worked example to follow.** Depth varies while training and validation errors are printed together. A deep tree can nearly memorize training while losing to a shallower tree on validation.
+
+**Input and output.** The supplied sample fields are `distance_km`, `actual_minutes`, `split`. In that field order, one original row is:
+
+```text
+6.97 | 26.5 | train
+```
+
+`(missing)` means a blank, not zero. The result table below belongs to the original supplied files.
+
+**Follow the Python.** Open the complete [lesson.py](lesson.py) beside these instructions. Keep inputs apart from measured answers. Follow this script’s split and fit, then trace the saved preparation into the held-back result and any new request. A request must not supply its own training answer. The [requirements file](requirements.txt) lists its packages. The next section gives exact run commands; use the same course Python to install and run.
 
 ## Guess first
 
-Why might a lower training error be a bad choice? Write your answer before running the script.
+Depth 25 wins training; depth 3 wins validation. Which proceeds to final assessment? Write a reason before running or opening the answer.
 
 ## Run one step at a time
 
@@ -61,11 +75,19 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 ## Explain the result
 
-<details>
-<summary>Read the answer after trying</summary>
+**Common mistakes and limits.** A gap concerns these samples, not every future case. Repeated choices using test results consume that test.
 
-It can come with a worse validation error.
+<details>
+<summary>Check your choice and reason</summary>
+
+Depth 3 on that evidence. Freeze the procedure, then report separate test errors, counts and limitations.
 
 </details>
 
-You can move on when you can explain the goal, the changed value and why the result did or did not change. Then return to the next box in the main learning path.
+After the guided file change above, close the notes and explain the same decision for a different supplied row. State one condition that makes this method unsuitable. If you cannot explain the reason, repeat the small worked example before adding more code.
+
+
+
+<!-- teaching-note:start -->
+<!-- teaching-profile:overfitting -->
+<!-- teaching-note:end -->

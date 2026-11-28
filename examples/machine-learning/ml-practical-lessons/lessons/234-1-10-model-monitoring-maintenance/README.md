@@ -8,17 +8,31 @@ Follow a model over several batches and decide when to investigate or retrain.
 
 ## Before you start
 
-Read a model score and wait for actual outcomes.
+Read an error or category score and distinguish prediction from later outcome.
 
-Use the [main learning path](../../LEARNING-PATH.md) if you have not learned this yet. For extra topics, read [the extra-topic guide](../../ELECTIVES.md). In the repository, these links open the course guides. If you downloaded a ZIP, open README.html for the browser links. Keep the extracted lesson folder directly inside the complete course folder.
+Use the [learning path](../../LEARNING-PATH.md) to find the earlier skill, the [word list](../../GLOSSARY.md) for a term, and [Setup](../../SETUP.md) for computer steps. Extra-topic prerequisites and bridges are in [Extra topics](../../ELECTIVES.md). In an extracted ZIP, open README.html for the browser links and keep this folder directly inside the complete course folder.
 
 ## The idea in simple words
 
-Monitoring watches later inputs and results. Drift means change over time. A change is a reason to investigate, not an automatic instruction to replace a model.
+Monitoring watches inputs and measured results over time. Drift means a change worth investigating.
+
+**Why and when.** Use it after a model starts receiving new cases, with a named owner and action for each alert.
+
+**A worked example to follow.** Later trips may be longer than historical trips. Compare their input distributions, then calculate accuracy or error only after outcomes arrive. A candidate retrained on recent labeled rows needs a separate later comparison with the current model.
+
+**Input and output.** The supplied sample fields are `batch`, `km`, `late`. In that field order, one original row is:
+
+```text
+historical | 19 | True
+```
+
+`(missing)` means a blank, not zero. The result table below belongs to the original supplied files.
+
+**Follow the Python.** Open the complete [lesson.py](lesson.py) beside these instructions. Keep inputs apart from measured answers. Follow this script’s split and fit, then trace the saved preparation into the held-back result and any new request. A request must not supply its own training answer. The [requirements file](requirements.txt) lists its packages. The next section gives exact run commands; use the same course Python to install and run.
 
 ## Guess first
 
-Can we measure new accuracy before the true answers arrive? Write your answer before running the script.
+West-zone error rises. Name three checks before replacing the model. Write a reason before running or opening the answer.
 
 ## Run one step at a time
 
@@ -55,15 +69,16 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 ## Explain the result
 
-<details>
-<summary>Read the answer after trying</summary>
+**Common mistakes and limits.** Input change alone does not prove worse predictions. An alert does not automatically authorize retraining or replacement. Delayed labels limit what is currently measurable.
 
-No. Record predictions and wait for outcomes.
+<details>
+<summary>Check your choice and reason</summary>
+
+Verify units/schema and labels, inspect affected cases and counts, and check changes in routes or population. Use the agreed fallback if needed; compare any candidate fairly before promotion.
 
 </details>
 
-You can move on when you can explain the goal, the changed value and why the result did or did not change. Then return to the next box in the main learning path.
-
+After the guided file change above, close the notes and explain the same decision for a different supplied row. State one condition that makes this method unsuitable. If you cannot explain the reason, repeat the small worked example before adding more code.
 
 ## 📋 Sample data
 
@@ -87,3 +102,7 @@ Showing the first 8 of 160 rows. The CSV has the full sample.
 **👀 Read the visual.** Review new inputs and later measured outcomes.
 
 **👉 What to do.** A change in trip distances is a reason to check. Use measured results to see whether the predictions got worse.
+
+<!-- teaching-note:start -->
+<!-- teaching-profile:monitoring -->
+<!-- teaching-note:end -->

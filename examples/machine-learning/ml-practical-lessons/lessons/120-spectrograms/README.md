@@ -8,17 +8,31 @@ See how a tone’s frequencies appear in a spectrogram.
 
 ## Before you start
 
-Finish the audio notes in Extra topics.
+Read a time axis, a frequency in hertz, and a simple wave.
 
-Use the [main learning path](../../LEARNING-PATH.md) if you have not learned this yet. For extra topics, read [the extra-topic guide](../../ELECTIVES.md). In the repository, these links open the course guides. If you downloaded a ZIP, open README.html for the browser links. Keep the extracted lesson folder directly inside the complete course folder.
+Use the [learning path](../../LEARNING-PATH.md) to find the earlier skill, the [word list](../../GLOSSARY.md) for a term, and [Setup](../../SETUP.md) for computer steps. Extra-topic prerequisites and bridges are in [Extra topics](../../ELECTIVES.md). In an extracted ZIP, open README.html for the browser links and keep this folder directly inside the complete course folder.
 
 ## The idea in simple words
 
-A sound can be shown over time or by its frequencies. The example makes tones locally. A short feature list summarizes them before comparing them.
+Audio samples record a changing signal. A spectrogram shows frequency content over time; MFCCs summarize a transformed frequency representation.
+
+**Why and when.** Use a fixed sample rate and the same feature calculation when comparing recordings.
+
+**A worked example to follow.** The script creates low and high tones, saves WAV, extracts frequency features and classifies pitch. A decoded MP3 is checked through the same feature function rather than treated as identical bytes.
+
+**Input and output.** The supplied sample fields are `frequency_hz`, `label`. In that field order, one original row is:
+
+```text
+260 | low
+```
+
+`(missing)` means a blank, not zero. The result table below belongs to the original supplied files.
+
+**Follow the Python.** Open the complete [lesson.py](lesson.py) beside these instructions. Keep inputs apart from measured answers. Follow this script’s split and fit, then trace the saved preparation into the held-back result and any new request. A request must not supply its own training answer. The [requirements file](requirements.txt) lists its packages. The next section gives exact run commands; use the same course Python to install and run.
 
 ## Guess first
 
-Does a tone example prove the model recognizes everyday speech? Write your answer before running the script.
+Two recordings have different sample rates. May you compare their feature columns without checking how those columns were constructed? Write a reason before running or opening the answer.
 
 ## Run one step at a time
 
@@ -57,15 +71,16 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 ## Explain the result
 
-<details>
-<summary>Read the answer after trying</summary>
+**Common mistakes and limits.** A tone classifier does not recognize speech. Compression and sample rate can change values. Extra FFmpeg/media dependencies must be available before running the audio tasks.
 
-No. Speech is a much harder and different task.
+<details>
+<summary>Check your choice and reason</summary>
+
+No. Decode and prepare a consistent sample rate, channels and frame procedure, then check feature shape and validation behavior. The same column position must retain the same meaning.
 
 </details>
 
-You can move on when you can explain the goal, the changed value and why the result did or did not change. Then return to the next box in the main learning path.
-
+After the guided file change above, close the notes and explain the same decision for a different supplied row. State one condition that makes this method unsuitable. If you cannot explain the reason, repeat the small worked example before adding more code.
 
 ## 📋 Sample data
 
@@ -83,3 +98,7 @@ You can move on when you can explain the goal, the changed value and why the res
 | 870 |
 | 285 |
 | 920 |
+
+<!-- teaching-note:start -->
+<!-- teaching-profile:audio -->
+<!-- teaching-note:end -->

@@ -8,17 +8,31 @@ Use age, cholesterol and other practice measurements from invented health-relate
 
 ## Before you start
 
-Finish the main preparation and checking modules.
+Read the named fields and explain the preparation taught earlier.
 
-Use the [main learning path](../../LEARNING-PATH.md) if you have not learned this yet. For extra topics, read [the extra-topic guide](../../ELECTIVES.md). In the repository, these links open the course guides. If you downloaded a ZIP, open README.html for the browser links. Keep the extracted lesson folder directly inside the complete course folder.
+Use the [learning path](../../LEARNING-PATH.md) to find the earlier skill, the [word list](../../GLOSSARY.md) for a term, and [Setup](../../SETUP.md) for computer steps. Extra-topic prerequisites and bridges are in [Extra topics](../../ELECTIVES.md). In an extracted ZIP, open README.html for the browser links and keep this folder directly inside the complete course folder.
 
 ## The idea in simple words
 
-These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+A complete practice pipeline connects input preparation with a fit and a separate check.
+
+**Why and when.** Use this health-related practice rows exercise to trace one row through the supplied workflow.
+
+**A worked example to follow.** The health-related practice rows exercise uses age, cholesterol, blood_pressure, exercise_score and categories. Its output is example_label. The fabricated labels have no diagnostic or clinical use. Find one kept-back row and compare its prediction with its recorded answer where a confirmed answer exists.
+
+**Input and output.** The supplied sample fields are `age`, `cholesterol`, `blood_pressure`, `exercise_score`, `sex`, `chest_pain`, `example_label`. In that field order, one original row is:
+
+```text
+29 | 155 | 111 | 80 | F | none | 0
+```
+
+`(missing)` means a blank, not zero. The result table below belongs to the original supplied files.
+
+**Follow the Python.** Open the complete [lesson.py](lesson.py) beside these instructions. Keep inputs apart from measured answers. Follow this script’s split and fit, then trace the saved preparation into the held-back result and any new request. A request must not supply its own training answer. The [requirements file](requirements.txt) lists its packages. The next section gives exact run commands; use the same course Python to install and run.
 
 ## Guess first
 
-Do two correct examples prove that the model will work for a real population? Write your answer before running the script.
+Write a three-line handoff for the health-related practice rows: input contract, result meaning, and one reason the result may fail on new cases. Write a reason before running or opening the answer.
 
 ## Run one step at a time
 
@@ -64,15 +78,16 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 ## Explain the result
 
-<details>
-<summary>Read the answer after trying</summary>
+**Common mistakes and limits.** The tiny invented table illustrates mechanics. Two correct predictions, a cluster assignment or a familiar benchmark name does not establish real-world performance.
 
-No. They show the calculation. Check more suitable data and describe what is missing.
+<details>
+<summary>Check your choice and reason</summary>
+
+Name age, cholesterol, blood_pressure, exercise_score and categories; explain example_label in the appropriate unit or category; state a specific missing population, recording problem or representation limit. Use more suitable independent data before making a general claim.
 
 </details>
 
-You can move on when you can explain the goal, the changed value and why the result did or did not change. Then return to the next box in the main learning path.
-
+After the guided file change above, close the notes and explain the same decision for a different supplied row. State one condition that makes this method unsuitable. If you cannot explain the reason, repeat the small worked example before adding more code.
 
 ## 📋 Sample data
 
@@ -94,3 +109,7 @@ You can move on when you can explain the goal, the changed value and why the res
 | 29 | 155 | 111 | 80 | F | none |
 | 65 | 277 | 155 | 34 | F | reported |
 | 58 | 250 | 147 | 39 | F | reported |
+
+<!-- teaching-note:start -->
+<!-- teaching-profile:dataset_334 -->
+<!-- teaching-note:end -->

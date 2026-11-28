@@ -8,17 +8,31 @@ Use a pair plot to check relationships before deciding which columns to keep.
 
 ## Before you start
 
-Know the target and which facts exist at prediction time.
+Read horizontal and vertical axes and identify one record.
 
-Use the [main learning path](../../LEARNING-PATH.md) if you have not learned this yet. For extra topics, read [the extra-topic guide](../../ELECTIVES.md). In the repository, these links open the course guides. If you downloaded a ZIP, open README.html for the browser links. Keep the extracted lesson folder directly inside the complete course folder.
+Use the [learning path](../../LEARNING-PATH.md) to find the earlier skill, the [word list](../../GLOSSARY.md) for a term, and [Setup](../../SETUP.md) for computer steps. Extra-topic prerequisites and bridges are in [Extra topics](../../ELECTIVES.md). In an extracted ZIP, open README.html for the browser links and keep this folder directly inside the complete course folder.
 
 ## The idea in simple words
 
-A useful feature must be known in time. Some inputs repeat the same information. Choose features within training, not by inspecting final test answers.
+Exploration asks questions of recorded data using summaries and charts.
+
+**Why and when.** Use a chart that answers a particular question before making a modeling decision.
+
+**A worked example to follow.** A histogram counts records in weight ranges; a scatterplot puts one delivery at distance and time; a heatmap summarizes correlations; a pair plot shows several pairs. The duplicate route_distance column moves exactly with distance in the tiny sample.
+
+**Input and output.** The supplied sample fields are `distance`, `route_distance`, `weight`, `minutes`. In that field order, one original row is:
+
+```text
+2 | 2.2 | 1 | 19
+```
+
+`(missing)` means a blank, not zero. The result table below belongs to the original supplied files.
+
+**Follow the Python.** Open the complete [lesson.py](lesson.py) beside these instructions. Keep the original field beside the inspected or changed value. Trace the named preparation or review step, and check whether it uses a fixed rule or a value learned from training. The [requirements file](requirements.txt) lists its packages. The next section gives exact run commands; use the same course Python to install and run.
 
 ## Guess first
 
-Does a high feature-importance score prove a cause? Write your answer before running the script.
+Which chart would show whether longer trips tend to take longer? Which chart would show how often a weight range occurs? Write a reason before running or opening the answer.
 
 ## Run one step at a time
 
@@ -57,19 +71,20 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 ## Explain the result
 
-<details>
-<summary>Read the answer after trying</summary>
+**Common mistakes and limits.** Correlation does not establish cause. Axis scales, missing rows and small counts can change a story. Use training data when exploration guides model choices.
 
-No. It shows reliance by this model in this check.
+<details>
+<summary>Check your choice and reason</summary>
+
+Use a distance-versus-time scatterplot for the relationship and a weight histogram for frequency. Name units and counts; do not infer causation from a sloping cloud.
 
 </details>
 
-You can move on when you can explain the goal, the changed value and why the result did or did not change. Then return to the next box in the main learning path.
+After the guided file change above, close the notes and explain the same decision for a different supplied row. State one condition that makes this method unsuitable. If you cannot explain the reason, repeat the small worked example before adding more code.
 
 ### What this particular check asks
 
 This example keeps exact distance-and-weight combinations out of its test training rows. That is a deliberately stricter, special question. Independent orders may have the same measurements. Equal numbers alone do not prove leakage. Use shipment identity and the intended future job to choose a normal split; see lesson 442.
-
 
 ## 📋 Sample data
 
@@ -81,3 +96,7 @@ This example keeps exact distance-and-weight combinations out of its test traini
 | 8 | 8.8 | 4 | 40 |
 | 10 | 11 | 1 | 33 |
 | 12 | 13.2 | 15 | 61 |
+
+<!-- teaching-note:start -->
+<!-- teaching-profile:exploration -->
+<!-- teaching-note:end -->

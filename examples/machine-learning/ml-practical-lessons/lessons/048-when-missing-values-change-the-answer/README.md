@@ -8,17 +8,31 @@ See how losing the slower trips can make the average delivery time look too low.
 
 ## Before you start
 
-Calculate an average by adding values and dividing by their count.
+Calculate an average from a list.
 
-Use the [main learning path](../../LEARNING-PATH.md) if you have not learned this yet. For extra topics, read [the extra-topic guide](../../ELECTIVES.md). In the repository, these links open the course guides. If you downloaded a ZIP, open README.html for the browser links. Keep the extracted lesson folder directly inside the complete course folder.
+Use the [learning path](../../LEARNING-PATH.md) to find the earlier skill, the [word list](../../GLOSSARY.md) for a term, and [Setup](../../SETUP.md) for computer steps. Extra-topic prerequisites and bridges are in [Extra topics](../../ELECTIVES.md). In an extracted ZIP, open README.html for the browser links and keep this folder directly inside the complete course folder.
 
 ## The idea in simple words
 
-If slow deliveries lose their recorded times, the remaining average can look too fast. A clean table can still leave out important cases.
+A missing-data pattern can change which cases a summary represents.
+
+**Why and when.** Investigate missingness when some routes, people or times are less likely to be recorded.
+
+**A worked example to follow.** All six invented times average 23 minutes. The recorded subset averages 18 because two slow trips are absent. The lower number describes recorded trips, not necessarily all deliveries.
+
+**Input and output.** The supplied sample fields are `Route`, `True time`, `Recorded time`. In that field order, one original row is:
+
+```text
+Short | 12 | 12.0
+```
+
+`(missing)` means a blank, not zero. The result table below belongs to the original supplied files.
+
+**Follow the Python.** Open the complete [lesson.py](lesson.py) beside these instructions. Keep the original field beside the inspected or changed value. Trace the named preparation or review step, and check whether it uses a fixed rule or a value learned from training. The [requirements file](requirements.txt) lists its packages. The next section gives exact run commands; use the same course Python to install and run.
 
 ## Guess first
 
-Does filling blanks guarantee the reported average is fair? Write your answer before running the script.
+If a broken recorder misses long routes, does a complete-looking filled table prove its average is representative? Write a reason before running or opening the answer.
 
 ## Run one step at a time
 
@@ -55,15 +69,16 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 ## Explain the result
 
-<details>
-<summary>Read the answer after trying</summary>
+**Common mistakes and limits.** Filling gaps does not establish fairness or recover unknown outcomes. In real data the missing true times may be unavailable.
 
-No. Investigate why the values were missing.
+<details>
+<summary>Check your choice and reason</summary>
+
+No. Compare missing counts by route and time, inspect the recorder/source, and report what is unknown. A fill alone cannot establish the absent outcomes.
 
 </details>
 
-You can move on when you can explain the goal, the changed value and why the result did or did not change. Then return to the next box in the main learning path.
-
+After the guided file change above, close the notes and explain the same decision for a different supplied row. State one condition that makes this method unsuitable. If you cannot explain the reason, repeat the small worked example before adding more code.
 
 ## 📋 Sample data
 
@@ -75,3 +90,7 @@ You can move on when you can explain the goal, the changed value and why the res
 | Long | 30 | 30.0 |
 | Long | 32 | — |
 | Long | 34 | — |
+
+<!-- teaching-note:start -->
+<!-- teaching-profile:missing_bias -->
+<!-- teaching-note:end -->

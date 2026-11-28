@@ -8,17 +8,31 @@ Create and read a text file, picture and short video, then check the file list.
 
 ## Before you start
 
-Know what a file and folder are.
+Tell a file name, folder and CSV field apart.
 
-Use the [main learning path](../../LEARNING-PATH.md) if you have not learned this yet. For extra topics, read [the extra-topic guide](../../ELECTIVES.md). In the repository, these links open the course guides. If you downloaded a ZIP, open README.html for the browser links. Keep the extracted lesson folder directly inside the complete course folder.
+Use the [learning path](../../LEARNING-PATH.md) to find the earlier skill, the [word list](../../GLOSSARY.md) for a term, and [Setup](../../SETUP.md) for computer steps. Extra-topic prerequisites and bridges are in [Extra topics](../../ELECTIVES.md). In an extracted ZIP, open README.html for the browser links and keep this folder directly inside the complete course folder.
 
 ## The idea in simple words
 
-A file list records where each item is. Share only needed fields. Removing a contact field is one small sharing step, not proof of legal compliance.
+A file list records where items are. Metadata records how they were obtained and what they mean.
+
+**Why and when.** Use these notes whenever someone else must find, reproduce or safely share the data. Keep only fields needed for the agreed purpose.
+
+**A worked example to follow.** The exercise writes deliveries.csv without the fictional contact field. A manifest lists text, picture and video files. File size is measured in bytes; it does not tell you whether the facts are correct.
+
+**Input and output.** The supplied sample fields are `order_id`, `minutes`, `contact`. In that field order, one original row is:
+
+```text
+1 | 22 | sample1@example.invalid
+```
+
+`(missing)` means a blank, not zero. The result table below belongs to the original supplied files.
+
+**Follow the Python.** Open the complete [lesson.py](lesson.py) beside these instructions. Trace the named source fields into the printed table, file or request result. Check names and counts before interpreting what the program reports. The [requirements file](requirements.txt) lists its packages. The next section gives exact run commands; use the same course Python to install and run.
 
 ## Guess first
 
-Should a shared export include a contact field the task does not need? Write your answer before running the script.
+Imagine the image file has a name but cannot be opened. Which checks should supplement its entry in the manifest? What should accompany a shared table? Write a reason before running or opening the answer.
 
 ## Run one step at a time
 
@@ -59,15 +73,16 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 ## Explain the result
 
-<details>
-<summary>Read the answer after trying</summary>
+**Common mistakes and limits.** A local folder is not a cloud upload. Removing one contact field does not establish legal compliance, consent, access control or a retention policy. The named legal topics illustrate only this small data-sharing step.
 
-No. Also check purpose, permission, access and retention with the data owner.
+<details>
+<summary>Check your choice and reason</summary>
+
+Check that the file exists, can be decoded and has the expected content and dimensions. Share the needed table fields plus source, collection method, meanings, access permission and retention notes. Use the optional service walkthrough for actual cloud practice.
 
 </details>
 
-You can move on when you can explain the goal, the changed value and why the result did or did not change. Then return to the next box in the main learning path.
-
+After the guided file change above, close the notes and explain the same decision for a different supplied row. State one condition that makes this method unsuitable. If you cannot explain the reason, repeat the small worked example before adding more code.
 
 ## 📋 Sample data
 
@@ -75,3 +90,7 @@ You can move on when you can explain the goal, the changed value and why the res
 | --- | --- | --- |
 | 1 | 22 | sample1@example.invalid |
 | 2 | 31 | sample2@example.invalid |
+
+<!-- teaching-note:start -->
+<!-- teaching-profile:files_metadata -->
+<!-- teaching-note:end -->

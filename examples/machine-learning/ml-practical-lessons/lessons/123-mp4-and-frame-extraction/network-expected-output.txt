@@ -1,0 +1,7 @@
+Input: 2. Measured training answer: 3.
+Before: prediction 2.00; squared-error loss 1.00.
+Gradients: weight -4.00; bias -2.00.
+After: weight 1.40; bias 0.20; prediction 3.00.
+After: squared-error loss 0.00.
+Only this training row was checked. No separate prediction quality was measured.
+The chosen values make this one update exact; other data/rates need not do so.

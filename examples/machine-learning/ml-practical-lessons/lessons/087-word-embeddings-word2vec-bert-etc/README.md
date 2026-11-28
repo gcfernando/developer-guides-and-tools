@@ -8,17 +8,31 @@ Represent a message with a short list of numbers and feed it into a classifier.
 
 ## Before you start
 
-Finish word counts and the network notes in Extra topics first.
+Read a list of numbers as a vector; complete the network bridge in Extra topics.
 
-Use the [main learning path](../../LEARNING-PATH.md) if you have not learned this yet. For extra topics, read [the extra-topic guide](../../ELECTIVES.md). In the repository, these links open the course guides. If you downloaded a ZIP, open README.html for the browser links. Keep the extracted lesson folder directly inside the complete course folder.
+Use the [learning path](../../LEARNING-PATH.md) to find the earlier skill, the [word list](../../GLOSSARY.md) for a term, and [Setup](../../SETUP.md) for computer steps. Extra-topic prerequisites and bridges are in [Extra topics](../../ELECTIVES.md). In an extracted ZIP, open README.html for the browser links and keep this folder directly inside the complete course folder.
 
 ## The idea in simple words
 
-An embedding is a list of numbers representing a message. This tiny example shows the steps. A randomly started BERT model has not learned a language.
+An embedding is a list of numbers representing an item. Its usefulness depends on how that representation was constructed or learned.
+
+**Why and when.** Use embeddings when a validated representation captures information useful for your task. Compare with a word-count baseline.
+
+**A worked example to follow.** Word2Vec learns tiny vectors from the supplied training messages and averages known-word vectors. The BERT exercise starts a random small encoder to show token vectors and pooling; it is not a pretrained language model.
+
+**Input and output.** The supplied sample fields are `message`, `category`. In that field order, one original row is:
+
+```text
+MY Parcel Is Late!!! | delivery
+```
+
+`(missing)` means a blank, not zero. The result table below belongs to the original supplied files.
+
+**Follow the Python.** Open the complete [lesson.py](lesson.py) beside these instructions. Keep inputs apart from measured answers. Follow this script’s split and fit, then trace the saved preparation into the held-back result and any new request. A request must not supply its own training answer. The [requirements file](requirements.txt) lists its packages. The next section gives exact run commands; use the same course Python to install and run.
 
 ## Guess first
 
-Does a random encoder understand a message because it returns numbers? Write your answer before running the script.
+Which evidence would you need before replacing a word-count model with these vectors? Write a reason before running or opening the answer.
 
 ## Run one step at a time
 
@@ -58,15 +72,16 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 ## Explain the result
 
-<details>
-<summary>Read the answer after trying</summary>
+**Common mistakes and limits.** A returned array does not prove language understanding. The tiny corpus and random BERT weights do not justify claims about real message meaning.
 
-No. Returning an array does not prove useful language knowledge.
+<details>
+<summary>Check your choice and reason</summary>
+
+Use the same untouched validation examples, report suitable errors and inspect new words/languages and failures. Check representation provenance. Do not choose from a single convenient prediction.
 
 </details>
 
-You can move on when you can explain the goal, the changed value and why the result did or did not change. Then return to the next box in the main learning path.
-
+After the guided file change above, close the notes and explain the same decision for a different supplied row. State one condition that makes this method unsuitable. If you cannot explain the reason, repeat the small worked example before adding more code.
 
 ## 📋 Sample data
 
@@ -88,3 +103,20 @@ You can move on when you can explain the goal, the changed value and why the res
 | The parcel is late! |
 | I need a refund for two charges. |
 | WHERE ARE MY PACKAGES? |
+
+<!-- extra-lab:start -->
+## Trace one update before a network
+
+Read the [network bridge](../../ELECTIVES.md#a-bridge-before-networks-trace-one-learning-step) before the larger training loop. The complete [network_bridge.py](network_bridge.py) needs only Python:
+
+```bash
+python network_bridge.py
+```
+
+Its [recorded output](network-expected-output.txt) follows one input, a weighted sum, a squared mistake, and a change to the weight and bias. It does not measure performance on separate examples. In that practice file change `learning_rate = 0.1` to `learning_rate = 1.0`, save, and run again. This row's loss rises from 1 to 81: a larger step can make learning worse. Restore 0.1 afterward. Complete the array-shape paper task in Extra topics before reading frame or token tensors.
+<!-- extra-lab:end -->
+
+
+<!-- teaching-note:start -->
+<!-- teaching-profile:word_vectors -->
+<!-- teaching-note:end -->

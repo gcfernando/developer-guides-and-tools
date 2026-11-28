@@ -1,0 +1,2516 @@
+{
+  "checked_at_utc": "2026-11-28T08:01:54.475964+00:00",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "method": "Distinct source/data groups; scripts run in temporary copies. No learner study.",
+  "results": [
+    {
+      "exit_code": 0,
+      "stdout": "One completed delivery\n distance_km  minutes\n           1       12\n\nCompare the recorded and predicted minutes\n distance_km  minutes  predicted_minutes\n           5       20               20.0\n           6       22               22.0\n\nNew delivery estimates\n distance_km  Predicted time (min)\n           4                  18.0\n           7                  24.0\n           9                  28.0\n",
+      "stderr": "",
+      "lesson": "001-start-here",
+      "copies": [
+        "001-start-here",
+        "002-your-first-prediction"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "              use_case\nEstimate delivery time\nRoute support messages\n        Group shoppers\nFirst decision: Estimate delivery time\n",
+      "stderr": "",
+      "lesson": "003-1-data-science-pipeline",
+      "copies": [
+        "003-1-data-science-pipeline",
+        "005-understand-the-business-problem-or-use-case"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "              use_case      objective\nEstimate delivery time     regression\nRoute support messages classification\n        Group shoppers     clustering\nFirst decision: Estimate delivery time\n",
+      "stderr": "",
+      "lesson": "004-1-1-problem-definition",
+      "copies": [
+        "004-1-1-problem-definition",
+        "006-define-the-objective"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "              use_case     metric\nEstimate delivery time       RMSE\nRoute support messages         F1\n        Group shoppers Silhouette\nFirst decision: Estimate delivery time\n",
+      "stderr": "",
+      "lesson": "007-identify-key-performance-metrics",
+      "copies": [
+        "007-identify-key-performance-metrics"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "              use_case                          domain_check\nEstimate delivery time                     Distance is in km\nRoute support messages              Negation changes meaning\n        Group shoppers Income and scores use different units\nFirst decision: Estimate delivery time\n",
+      "stderr": "",
+      "lesson": "008-understand-the-domain-knowledge-related-to-the-data",
+      "copies": [
+        "008-understand-the-domain-knowledge-related-to-the-data"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "              use_case                   constraint\nEstimate delivery time                   One laptop\nRoute support messages          Review missed items\n        Group shoppers Groups must be interpretable\nFirst decision: Estimate delivery time\n",
+      "stderr": "",
+      "lesson": "009-set-constraints-assumptions",
+      "copies": [
+        "009-set-constraints-assumptions"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Rows from the CSV and database: 3 3\n\nOrders returned by the local API\n order_id  zone\n        1 north\n        2 south\n        3  west\nParsed HTML: ['north', 'south', 'west']\n",
+      "stderr": "C:\\Gehan\\Projects\\DeveloperResources\\examples\\machine-learning\\ml-practical-lessons\\.venv\\Lib\\site-packages\\fastapi\\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.\n  from starlette.testclient import TestClient as TestClient  # noqa\n",
+      "lesson": "010-1-2-data-collection",
+      "copies": [
+        "010-1-2-data-collection",
+        "011-identify-data-sources",
+        "012-databases",
+        "013-apis",
+        "014-web-scraping",
+        "015-files",
+        "022-database-storage"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "{'source': 'original sample', 'method': 'created in Python', 'bytes': 27, 'types': {'order_id': 'int64', 'minutes': 'int64'}}\nfile_type  collected\n     text       True\n    image       True\n    video       True\nImage width and height: (16, 16)\nVideo frames read: 2\n",
+      "stderr": "",
+      "lesson": "016-gather-structured-and-unstructured-data",
+      "copies": [
+        "016-gather-structured-and-unstructured-data",
+        "017-structured-data-tables-csvs",
+        "018-unstructured-data-text-images-videos",
+        "019-store-data-in-a-centralized-location",
+        "020-local-storage",
+        "021-cloud-storage",
+        "023-track-metadata",
+        "024-data-type",
+        "025-file-size",
+        "026-collection-method",
+        "027-handle-data-privacy-security-concerns",
+        "028-gdpr",
+        "029-hipaa"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "          Column  Missing cells\n     distance_km              0\n       weight_kg              1\n            zone              2\ndelivery_minutes              0\n\nRows to review\n distance_km  weight_kg  zone\n           4        NaN north\n           6        2.0   NaN\n          10        1.0   NaN\n",
+      "stderr": "",
+      "lesson": "030-1-3-data-cleaning-preprocessing",
+      "copies": [
+        "030-1-3-data-cleaning-preprocessing",
+        "031-1-3-1-handle-missing-values",
+        "032-identify-missing-values",
+        "033-null-and-nan-indicators"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Rows retained: 4\nHeld-out prediction: [35.0]\n[25. 41.]\n",
+      "stderr": "",
+      "lesson": "034-handle-missing-values",
+      "copies": [
+        "034-handle-missing-values",
+        "035-remove"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": " New row               Method  Filled kg  Prediction in minutes  Actual minutes\n       1                 Mean       2.33                  33.59            33.0\n       2                 Mean       2.00                  28.56            29.0\n       3                 Mean       2.33                  36.85               —\n       1               Median       2.00                  32.14            33.0\n       2               Median       2.00                  29.00            29.0\n       3               Median       2.00                  35.29               —\n       1 Most frequent (mode)       1.00                  45.00            33.0\n       2 Most frequent (mode)       2.00                  32.60            29.0\n       3 Most frequent (mode)       1.00                  57.40               —\n       1  KNN (two neighbors)       3.00                  41.00            33.0\n       2  KNN (two neighbors)       2.00                  31.00            29.0\n       3  KNN (two neighbors)       3.00                  48.33               —\n",
+      "stderr": "",
+      "lesson": "036-impute",
+      "copies": [
+        "036-impute",
+        "037-numerical-data-mean-median-mode-knn-imputer"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": " distance_km  weight_kg  filled_weight_kg  predicted_minutes  actual_minutes\n          10          —          2.333333              33.59            33.0\n           6        2.0          2.000000              28.56            29.0\n          14          —          2.333333              36.85               —\n",
+      "stderr": "",
+      "lesson": "038-mean",
+      "copies": [
+        "038-mean"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": " distance_km  weight_kg  filled_weight_kg  predicted_minutes  actual_minutes\n          10          —               2.0              32.14            33.0\n           6        2.0               2.0              29.00            29.0\n          14          —               2.0              35.29               —\n",
+      "stderr": "",
+      "lesson": "039-median",
+      "copies": [
+        "039-median"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": " distance_km  weight_kg  filled_weight_kg  predicted_minutes  actual_minutes\n          10          —               1.0               45.0            33.0\n           6        2.0               2.0               32.6            29.0\n          14          —               1.0               57.4               —\n",
+      "stderr": "",
+      "lesson": "040-mode",
+      "copies": [
+        "040-mode"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": " New row              Method  Filled kg  Prediction in minutes  Actual minutes\n       1 KNN (two neighbors)        3.0                  41.00            33.0\n       2 KNN (two neighbors)        2.0                  31.00            29.0\n       3 KNN (two neighbors)        3.0                  48.33               —\n",
+      "stderr": "",
+      "lesson": "041-knn-imputer",
+      "copies": [
+        "041-knn-imputer"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Mode  zone filled  minutes\n  NaN  north     26.0\nsouth  south     40.0\nnorth  north     26.0\n east   east     33.0\nExplicit Unknown  zone  filled  minutes\n  NaN Unknown    29.00\nsouth   south    40.00\nnorth   north    24.50\n east    east    31.17\n          Method  Check row Zone sent to encoder  Actual time (min)  Predicted time (min)\n            Mode          5                north                 33                  26.0\n            Mode          6                south                 44                  40.0\nExplicit Unknown          5              Unknown                 33                  29.0\nExplicit Unknown          6                south                 44                  40.0\n",
+      "stderr": "",
+      "lesson": "042-categorical-data-mode-unknown-placeholder",
+      "copies": [
+        "042-categorical-data-mode-unknown-placeholder"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Mode  zone filled  minutes\n  NaN  north     26.0\nsouth  south     40.0\nnorth  north     26.0\n east   east     33.0\nMethod  Check row Zone sent to encoder  Actual time (min)  Predicted time (min)\n  Mode          5                north                 33                  26.0\n  Mode          6                south                 44                  40.0\n",
+      "stderr": "",
+      "lesson": "043-categorical-mode",
+      "copies": [
+        "043-categorical-mode"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Explicit Unknown  zone  filled  minutes\n  NaN Unknown    29.00\nsouth   south    40.00\nnorth   north    24.50\n east    east    31.17\n          Method  Check row Zone sent to encoder  Actual time (min)  Predicted time (min)\nExplicit Unknown          5              Unknown                 33                  29.0\nExplicit Unknown          6                south                 44                  40.0\n",
+      "stderr": "",
+      "lesson": "044-unknown-placeholder",
+      "copies": [
+        "044-unknown-placeholder"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": " day  requests  forward  backward\n   1      10.0     10.0      10.0\n   2       NaN     10.0      16.0\n   3      16.0     16.0      16.0\n   4      19.0     19.0      19.0\nDay 5 forecast: [22.0]\n day  prediction\n   6        25.3\n   7        28.6\n  10        38.5\n",
+      "stderr": "",
+      "lesson": "045-time-series-data-forward-fill-ffill-backward-fill-bfill",
+      "copies": [
+        "045-time-series-data-forward-fill-ffill-backward-fill-bfill",
+        "046-forward-fill-ffill"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": " day  requests  forward  backward\n   1      10.0     10.0      10.0\n   2       NaN     10.0      16.0\n   3      16.0     16.0      16.0\n   4      19.0     19.0      19.0\nDay 5 forecast: [22.0]\n day  prediction\n   6        24.7\n   7        27.4\n  10        35.5\n",
+      "stderr": "",
+      "lesson": "047-backward-fill-bfill",
+      "copies": [
+        "047-backward-fill-bfill"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "       Average uses  Average time (min)\n      All six times                23.0\nRecorded times only                18.0\n",
+      "stderr": "<user-home>\\AppData\\Local\\Temp\\ml-course-run-q144ambq\\048-when-missing-values-change-the-answer\\lesson.py:47: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown\n  plt.show()\n",
+      "lesson": "048-when-missing-values-change-the-answer",
+      "copies": [
+        "048-when-missing-values-change-the-answer"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Repeated rows: 1\nD prediction: [30.0]\n km  prediction\n  4        18.0\n  9        28.0\n 13        36.0\n",
+      "stderr": "",
+      "lesson": "049-1-3-2-remove-duplicates",
+      "copies": [
+        "049-1-3-2-remove-duplicates",
+        "050-detect-remove-exact-duplicates"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Similar names: 0.91\nConfirmed distinct orders: ['A', 'B']\n",
+      "stderr": "",
+      "lesson": "051-handle-near-duplicates",
+      "copies": [
+        "051-handle-near-duplicates",
+        "052-standardize-text-cases-and-remove-spaces",
+        "053-fuzzy-matching"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Original date Standard date Original weight  Weight (kg) Original zone Standard zone  South flag\n   01/02/2025    2025-01-02           10 lb         4.54         NORTH         north           0\n   2025-01-03    2025-01-03            8 kg         8.00         south         south           1\n   01/04/2025    2025-01-04          35 lbs        15.88         NORTH         north           0\n   2025-01-05    2025-01-05           16 kg        16.00         south         south           1\n   2025-01-06    2025-01-06           12 kg        12.00         north         north           0\n   Shipment  Actual time (min)  Predicted time (min)\nCheck row 5                 35                  34.5\n      date  weight_kg  zone  weekday  is_south  predicted_minutes\n2025-01-07   8.164663 north        1         0              26.89\n2025-01-09   7.000000 south        3         1              25.89\n2025-01-10  13.607771 north        4         0              34.61\n",
+      "stderr": "",
+      "lesson": "054-1-3-3-fix-inconsistent-data",
+      "copies": [
+        "054-1-3-3-fix-inconsistent-data",
+        "055-standardize-formats",
+        "056-convert-date-formats-mm-dd-yyyy-to-yyyy-mm-dd",
+        "057-convert-text-to-lowercase-and-remove-spaces",
+        "058-ensure-correct-units-kg-vs-lbs"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "category standard\n    Male     Male\n       M     Male\n  Female   Female\n  female   Female\nHeld-out encoded row: [[1.0, 0.0]]\n",
+      "stderr": "",
+      "lesson": "059-fix-typos-and-spelling-variations",
+      "copies": [
+        "059-fix-typos-and-spelling-variations"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": " weight_kg  Z-score  IQR\n        80     True True\n",
+      "stderr": "<user-home>\\AppData\\Local\\Temp\\ml-course-run-p5_07vd3\\060-1-3-4-handle-outliers\\lesson.py:43: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown\n  plt.show()\n",
+      "lesson": "060-1-3-4-handle-outliers",
+      "copies": [
+        "060-1-3-4-handle-outliers"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": " weight_kg  Z-score  IQR\n        80     True True\n",
+      "stderr": "<user-home>\\AppData\\Local\\Temp\\ml-course-run-e61hq09z\\061-detection-methods\\lesson.py:42: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown\n  plt.show()\n",
+      "lesson": "061-detection-methods",
+      "copies": [
+        "061-detection-methods",
+        "062-boxplots-visualization"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": " weight_kg  Z-score  IQR\n        80     True True\n",
+      "stderr": "<user-home>\\AppData\\Local\\Temp\\ml-course-run-zare05cu\\063-z-score-method\\lesson.py:42: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown\n  plt.show()\n",
+      "lesson": "063-z-score-method",
+      "copies": [
+        "063-z-score-method"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": " weight_kg  Z-score  IQR\n        80     True True\n",
+      "stderr": "<user-home>\\AppData\\Local\\Temp\\ml-course-run-jrz3xtc_\\064-interquartile-range-iqr\\lesson.py:43: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown\n  plt.show()\n",
+      "lesson": "064-interquartile-range-iqr",
+      "copies": [
+        "064-interquartile-range-iqr"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Confirmed errors removed: 1\nremove only\n weight_used_by_model  original_weight_kg  predicted_minutes  actual_minutes\n                  7.0                 7.0               28.1              32\nremove and clip\n weight_used_by_model  original_weight_kg  predicted_minutes  actual_minutes\n                  7.0                 7.0               44.3              32\nremove and log\n weight_used_by_model  original_weight_kg  predicted_minutes  actual_minutes\n             2.079442                 7.0               38.8              32\n",
+      "stderr": "",
+      "lesson": "065-handling-strategies",
+      "copies": [
+        "065-handling-strategies",
+        "066-remove-2",
+        "067-cap-clip-values",
+        "068-transform-data"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Training review range: -3.5 to 12.5 kg.\nTraining records outside that range\n parcel  weight_kg\n      5         90\n\nDecision: CORRECT\nThe slip confirms 5 kg. Change 90 kg to 5 kg.\n\nCheck parcel 8\n      Training data  Predicted minutes  Actual minutes\n   Original records               17.7              26\nAfter source review               26.0              26\nOpen review-weights.png and compare-estimates.png in this folder.\n",
+      "stderr": "",
+      "lesson": "069-spot-check-and-handle-an-outlier",
+      "copies": [
+        "069-spot-check-and-handle-an-outlier"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Training rows before and after scaling\n distance_km  weight_kg  scaled_distance  scaled_weight\n           2          1             0.00           0.00\n           4          3             0.33           0.67\n           6          2             0.67           0.33\n           8          4             1.00           1.00\n\nCheck the predictions against actual deliveries\n distance_km  weight_kg  actual_minutes  predicted_minutes\n          10          1              33               31.0\n          12          3              44               42.0\n\nNew deliveries and their predicted minutes\n distance_km  weight_kg  scaled_distance  scaled_weight  predicted_minutes\n           5          2             0.50           0.33               27.5\n          10          3             1.33           0.67               39.0\n          12          4             1.67           1.00               46.0\n",
+      "stderr": "",
+      "lesson": "070-1-3-5-normalize-or-standardize-data",
+      "copies": [
+        "070-1-3-5-normalize-or-standardize-data",
+        "125-numeric-int-float",
+        "175-scaling-and-normalization"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Training rows before and after scaling\n distance_km  weight_kg  scaled_distance  scaled_weight\n           2          1             0.00           0.00\n           4          3             0.33           0.67\n           6          2             0.67           0.33\n           8          4             1.00           1.00\n\nCheck the predictions against actual deliveries\n distance_km  weight_kg  actual_minutes  predicted_minutes\n          10          1              33               31.0\n          12          3              44               42.0\n\nNew deliveries and their predicted minutes\n distance_km  weight_kg  scaled_distance  scaled_weight  predicted_minutes\n           5          2             0.50           0.33               27.5\n          10          3             1.33           0.67               39.0\n          12          4             1.67           1.00               46.0\n",
+      "stderr": "",
+      "lesson": "071-normalization-min-max-scaling",
+      "copies": [
+        "071-normalization-min-max-scaling"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Training rows before and after scaling\n distance_km  weight_kg  scaled_distance  scaled_weight\n           2          1            -1.34          -1.34\n           4          3            -0.45           0.45\n           6          2             0.45          -0.45\n           8          4             1.34           1.34\n\nCheck the predictions against actual deliveries\n distance_km  weight_kg  actual_minutes  predicted_minutes\n          10          1              33               31.0\n          12          3              44               42.0\n\nNew deliveries and their predicted minutes\n distance_km  weight_kg  scaled_distance  scaled_weight  predicted_minutes\n           5          2             0.00          -0.45               27.5\n          10          3             2.24           0.45               39.0\n          12          4             3.13           1.34               46.0\n",
+      "stderr": "",
+      "lesson": "072-standardization-z-score-scaling",
+      "copies": [
+        "072-standardization-z-score-scaling"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Raw                         MAE 10.88\nMin-Max Scaling             MAE 12.18\nZ-Score Standardization     MAE 10.94\nLog Transformation          MAE 3.64\nRobust Scaling              MAE 10.37\nPower Transformations       MAE 3.64\nQuantile Transformation     MAE 12.63\nBinning                     MAE 12.63\nPolynomial Features         MAE 10.80\n",
+      "stderr": "",
+      "lesson": "073-when-to-use",
+      "copies": [
+        "073-when-to-use",
+        "147-which-technique-should-you-use"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Check actual / predicted: [23] [21.0]\nOriginal color  Red  Blue  Green\n           Red    1     0      0\n          Blue    0     1      0\n         Green    0     0      1\n        Purple    0     0      0\n color  Red  Blue  Green  Predicted orders\n   Red    1     0      0              21.0\n  Blue    0     1      0              13.0\nPurple    0     0      0              16.5\n",
+      "stderr": "",
+      "lesson": "074-1-3-6-convert-categorical-data",
+      "copies": [
+        "074-1-3-6-convert-categorical-data",
+        "075-one-hot-encoding-for-unordered-categories",
+        "126-categorical-enum-labels",
+        "174-encoding-categorical-variables"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Priority codes: [0.0, 1.0, 2.0]\nHeld-out label: ['review']\npriority action\n     Low   wait\n  Medium review\n    High review\n",
+      "stderr": "",
+      "lesson": "076-label-encoding-for-ordered-categories",
+      "copies": [
+        "076-label-encoding-for-ordered-categories"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "supplier  delayed\n     S00        1\n     S01        1\n     S02        1\n     S03        1\n     S04        0\nHoldout predictions: [0, 0, 0, 0, 0, 0]\nEncoded supplier values: [0.23, 0.57, 0.43]\nDelay probabilities: [0.42, 0.44, 0.43]\nsupplier  delay_probability\n     S00               0.42\n     S03               0.44\n  Unseen               0.43\n",
+      "stderr": "",
+      "lesson": "077-target-encoding-for-high-cardinality-categories",
+      "copies": [
+        "077-target-encoding-for-high-cardinality-categories"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "    Original message   Cleaned message\nMY Parcel Is Late!!! my parcel is late\nCheck actual / predicted: ['delivery', 'billing'] ['delivery', 'billing']\n               Raw message             Clean message Prediction\n     WHERE IS MY PARCEL!!!        where is my parcel   delivery\n    REFUND my card charge!     refund my card charge    billing\nThe package never arrived. the package never arrived   delivery\n",
+      "stderr": "",
+      "lesson": "078-1-3-7-text-data-cleaning",
+      "copies": [
+        "078-1-3-7-text-data-cleaning",
+        "079-convert-to-lowercase-remove-punctuation",
+        "127-text-strings"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Before: ['the', 'parcel', 'is', 'not', 'here', 'and', 'am', 'waiting']\nAfter: ['parcel', 'not', 'here', 'am', 'waiting']\nActual: ['delivery', 'billing']\nPredicted: ['delivery', 'billing']\n                         message predicted\n             The parcel is late!  delivery\nI need a refund for two charges.   billing\n          WHERE ARE MY PACKAGES?  delivery\n",
+      "stderr": "",
+      "lesson": "080-remove-stop-words-e-g-the-and-is",
+      "copies": [
+        "080-remove-stop-words-e-g-the-and-is"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Tokens: ['late', 'parcel', 'and', 'two', 'charge']\nActual: ['delivery', 'billing']\nPredicted: ['delivery', 'billing']\n                         message predicted\n             The parcel is late!  delivery\nI need a refund for two charges.   billing\n          WHERE ARE MY PACKAGES?  delivery\n",
+      "stderr": "",
+      "lesson": "081-tokenization-lemmatization",
+      "copies": [
+        "081-tokenization-lemmatization",
+        "082-tokenization",
+        "083-lemmatization"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "CountVectorizer parcel feature: 1 predictions: ['delivery', 'billing']\n                         message predicted\n             The parcel is late!  delivery\nI need a refund for two charges.   billing\n          WHERE ARE MY PACKAGES?  delivery\nTfidfVectorizer parcel feature: 0.52 predictions: ['delivery', 'billing']\n                         message predicted\n             The parcel is late!  delivery\nI need a refund for two charges.   billing\n          WHERE ARE MY PACKAGES?  delivery\n",
+      "stderr": "",
+      "lesson": "084-convert-text-to-numerical-representation",
+      "copies": [
+        "084-convert-text-to-numerical-representation"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "CountVectorizer parcel feature: 1 predictions: ['delivery', 'billing']\n                         message predicted\n             The parcel is late!  delivery\nI need a refund for two charges.   billing\n          WHERE ARE MY PACKAGES?  delivery\n",
+      "stderr": "",
+      "lesson": "085-countvectorizer",
+      "copies": [
+        "085-countvectorizer"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "TfidfVectorizer parcel feature: 0.52 predictions: ['delivery', 'billing']\n                         message predicted\n             The parcel is late!  delivery\nI need a refund for two charges.   billing\n          WHERE ARE MY PACKAGES?  delivery\n",
+      "stderr": "",
+      "lesson": "086-tf-idf",
+      "copies": [
+        "086-tf-idf"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Training matrix: (6, 8)\nHeld-out predictions: ['delivery', 'billing']\n                         message predicted\n             The parcel is late!  delivery\nI need a refund for two charges.   billing\n          WHERE ARE MY PACKAGES?   billing\n",
+      "stderr": "",
+      "lesson": "087-word-embeddings-word2vec-bert-etc",
+      "copies": [
+        "087-word-embeddings-word2vec-bert-etc",
+        "088-word2vec"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Training matrix: (6, 16)\nHeld-out predictions: ['delivery', 'billing']\n                         message predicted\n             The parcel is late!  delivery\nI need a refund for two charges.  delivery\n          WHERE ARE MY PACKAGES?  delivery\n",
+      "stderr": "",
+      "lesson": "089-bert",
+      "copies": [
+        "089-bert"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "signed_up  flag\n      Yes   1.0\n       no   0.0\n     true   1.0\n        0   0.0\n  unknown   NaN\n",
+      "stderr": "",
+      "lesson": "090-1-3-8-handle-boolean-data",
+      "copies": [
+        "090-1-3-8-handle-boolean-data",
+        "091-convert-boolean-values-to-standard-format-1-or-0"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "signed_up  flag\n      Yes   1.0\n       No   0.0\n     True   1.0\n        0   0.0\n        1   1.0\n  unknown   NaN\nImputed value: [1.0]\nPrediction: [1]\nsigned_up  flag  prediction\n  unknown   NaN           1\n      Yes   1.0           1\n        0   0.0           0\n",
+      "stderr": "",
+      "lesson": "092-fill-missing-values-with-mode",
+      "copies": [
+        "092-fill-missing-values-with-mode",
+        "128-boolean-true-false"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "['2025-02-03', '2025-02-04', 'invalid date', '2023-02-10']\n",
+      "stderr": "",
+      "lesson": "093-1-3-9-handle-date-time-data",
+      "copies": [
+        "093-1-3-9-handle-date-time-data",
+        "094-convert-to-datetime-format",
+        "130-datetime-timestamps-dates"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": " Year  Month  Day  Weekday  Hour\n 2025      2    3        0     8\n 2025      2    3        0    10\n 2025      2    4        1     8\n 2025      2    4        1    10\n       timestamp  Weekday  Hour  estimated_orders\n2025-02-05 09:00        2     9              18.0\n2025-03-08 17:30        5    17              43.0\n2026-01-12 08:30        0     8              10.0\n",
+      "stderr": "",
+      "lesson": "095-extract-useful-features-year-month-day-weekday-hour-etc",
+      "copies": [
+        "095-extract-useful-features-year-month-day-weekday-hour-etc"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": " Year  Month  Day  Weekday  Hour\n 2024      1    1        0     9\n 2024      2    3        5    17\n 2024      3    4        0     9\n 2025      1    4        5    17\n 2025      2    3        0     9\n 2025      3    4        1    17\n 2026      1    5        0     9\n 2026      2    7        5    17\n       timestamp  Year  estimated_orders\n2025-02-05 09:00  2025              27.5\n2025-03-08 17:30  2025              27.5\n2026-01-12 08:30  2026              45.8\n",
+      "stderr": "",
+      "lesson": "096-year",
+      "copies": [
+        "096-year"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": " Year  Month  Day  Weekday  Hour\n 2024      1    1        0     9\n 2024      2    3        5    17\n 2024      3    4        0     9\n 2025      1    4        5    17\n 2025      2    3        0     9\n 2025      3    4        1    17\n 2026      1    5        0     9\n 2026      2    7        5    17\n       timestamp  Month  estimated_orders\n2025-02-05 09:00      2              25.4\n2025-03-08 17:30      3              26.9\n2026-01-12 08:30      1              23.9\n",
+      "stderr": "",
+      "lesson": "097-month",
+      "copies": [
+        "097-month"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": " Year  Month  Day  Weekday  Hour\n 2025      2    3        0     8\n 2025      2    3        0    10\n 2025      2    4        1     8\n 2025      2    4        1    10\n       timestamp  Day  estimated_orders\n2025-02-05 09:00    5              18.0\n2025-03-08 17:30    8              27.0\n2026-01-12 08:30   12              39.0\n",
+      "stderr": "",
+      "lesson": "098-day",
+      "copies": [
+        "098-day"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": " Year  Month  Day  Weekday  Hour\n 2025      2    3        0     8\n 2025      2    3        0    10\n 2025      2    4        1     8\n 2025      2    4        1    10\n       timestamp  Weekday  estimated_orders\n2025-02-05 09:00        2              18.0\n2025-03-08 17:30        5              27.0\n2026-01-12 08:30        0              12.0\n",
+      "stderr": "",
+      "lesson": "099-weekday",
+      "copies": [
+        "099-weekday"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": " Year  Month  Day  Weekday  Hour\n 2025      2    3        0     8\n 2025      2    3        0    10\n 2025      2    4        1     8\n 2025      2    4        1    10\n       timestamp  Hour  estimated_orders\n2025-02-05 09:00     9              13.5\n2025-03-08 17:30    17              29.5\n2026-01-12 08:30     8              11.5\n",
+      "stderr": "",
+      "lesson": "100-hour",
+      "copies": [
+        "100-hour"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "            observed  interpolated\nday                               \n2025-02-01      10.0          10.0\n2025-02-02       NaN          13.0\n2025-02-03      16.0          16.0\n2025-02-04      19.0          19.0\n",
+      "stderr": "",
+      "lesson": "101-handle-missing-dates-using-interpolation",
+      "copies": [
+        "101-handle-missing-dates-using-interpolation"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Log Transformation first two training rows: [[0.69], [1.79]]\nActual costs: [23, 48]\nPredicted costs: [26.7, 47.2]\n signal  predicted_cost\n      3           13.94\n     15           31.43\n     40           43.30\n",
+      "stderr": "",
+      "lesson": "102-1-3-10-handle-large-numbers",
+      "copies": [
+        "102-1-3-10-handle-large-numbers",
+        "103-apply-log-transformation-if-data-is-highly-skewed",
+        "136-log-transformation-log-scaling",
+        "167-log-transformation"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "First ID: 123456789012345\nTraffic display: ['1.000e+02', '1.000e+04', '1.000e+06', '1.250e+10']\nNumeric log features: [4.62, 9.21, 13.82, 23.25]\nHeld-out cost estimate: [30.8]\n",
+      "stderr": "",
+      "lesson": "104-convert-to-scientific-notation-if-values-are-too-large",
+      "copies": [
+        "104-convert-to-scientific-notation-if-values-are-too-large",
+        "129-large-numbers-bigint-long-float"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "    address  minutes  parcel.kg  latitude  longitude\nDepot North       10        1.0     59.35      18.05\nDepot South       16        3.0     59.28      18.02\nDepot North       12        NaN     59.35      18.05\n    Unknown       15        2.0       NaN        NaN\nXML weight: 2.0\nHeld-out estimate: [12.0]\n",
+      "stderr": "",
+      "lesson": "105-data-types-issues-preprocessing-techniques",
+      "copies": [
+        "105-data-types-issues-preprocessing-techniques",
+        "109-complex-data-json-xml-dictionaries",
+        "110-flatten-json",
+        "111-extract-xml-fields",
+        "112-dictionaries-and-missing-keys"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "      address  weight_kg             latitude            longitude    estimated_minutes\n  North Depot          3                59.35                18.06                 22.5\n  South Depot          2                59.28                18.02                 23.0\nUnknown Depot          2 address needs review address needs review address needs review\n",
+      "stderr": "",
+      "lesson": "106-geospatial-lat-long-addresses",
+      "copies": [
+        "106-geospatial-lat-long-addresses",
+        "107-convert-to-coordinates",
+        "108-geocoding-apis"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Image matrix becomes one row: (4, 16)\nFirst normalized pixels: [0.059, 0.059, 0.059, 0.059]\nNew picture: ['light', 'dark', 'light']\n",
+      "stderr": "",
+      "lesson": "113-images-pixels-matrices",
+      "copies": [
+        "113-images-pixels-matrices",
+        "115-resize-images",
+        "116-grayscale",
+        "117-convolutional-neural-networks-cnn"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": " Vertical spread  Horizontal spread Label or prediction\n            0.00               1.12            Sideways\n            0.00               1.12            Sideways\n            1.12               0.00             Upright\n            1.12               0.00             Upright\n            1.12               0.00 Upright (predicted)\nPredicted direction for each new drawing: ['Upright', 'Sideways']\n",
+      "stderr": "<user-home>\\AppData\\Local\\Temp\\ml-course-run-36h11cjd\\114-image-embeddings\\lesson.py:74: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown\n  plt.show()\n",
+      "lesson": "114-image-embeddings",
+      "copies": [
+        "114-image-embeddings"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "One MFCC row: 8\nNew WAV sound: ['high']\nDecoded MP3 sound: ['high']\n285 low\n920 high\n",
+      "stderr": "",
+      "lesson": "118-audio-waves-spectrograms",
+      "copies": [
+        "118-audio-waves-spectrograms",
+        "119-wav-and-mp3",
+        "120-spectrograms",
+        "121-mfcc-features"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Clips × frames × channels × height × width: (8, 4, 1, 6, 6)\nDecoded MP4 direction: [1]\nDirections for all new clips: [1, 0]\n",
+      "stderr": "",
+      "lesson": "122-video-frames-sequences",
+      "copies": [
+        "122-video-frames-sequences",
+        "123-mp4-and-frame-extraction",
+        "124-cnn-and-lstm-sequence-modeling"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Min-Max Scaling first two training rows: [[0.0], [0.03]]\nActual costs: [23, 48]\nPredicted costs: [23.9, 37.7]\n signal  predicted_cost\n      3           21.69\n     15           25.40\n     40           33.12\n",
+      "stderr": "",
+      "lesson": "131-data",
+      "copies": [
+        "131-data",
+        "132-min-max-scaling-normalization",
+        "133-fixed-range-0-1"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Min-Max Scaling first two training rows: [[-1.0], [-0.95]]\nActual costs: [23, 48]\nPredicted costs: [23.9, 37.7]\n signal  predicted_cost\n      3           21.69\n     15           25.40\n     40           33.12\n",
+      "stderr": "",
+      "lesson": "134-fixed-range-1-1",
+      "copies": [
+        "134-fixed-range-1-1"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Z-Score Standardization first two training rows: [[-0.82], [-0.75]]\nActual costs: [23, 48]\nPredicted costs: [23.9, 37.7]\n signal  predicted_cost\n      3           21.69\n     15           25.40\n     40           33.12\n",
+      "stderr": "",
+      "lesson": "135-z-score-standardization-standardization",
+      "copies": [
+        "135-z-score-standardization-standardization"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": " signal  log1p  log10\n      1  0.693  0.000\n      5  1.792  0.699\n     12  2.565  1.079\n     20  3.045  1.301\n     35  3.584  1.544\n     80  4.394  1.903\n    160  5.081  2.204\n     10  2.398  1.000\n     55  4.025  1.740\nLog Transformation first two training rows: [[0.69], [1.79]]\nActual costs: [23, 48]\nPredicted costs: [26.7, 47.2]\n signal  predicted_cost\n      3           13.94\n     15           31.43\n     40           43.30\n",
+      "stderr": "",
+      "lesson": "137-log1p-and-base-10-log",
+      "copies": [
+        "137-log1p-and-base-10-log"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Robust Scaling first two training rows: [[-0.39], [-0.31]]\nActual costs: [23, 48]\nPredicted costs: [23.9, 37.7]\n signal  predicted_cost\n      3           21.69\n     15           25.40\n     40           33.12\n",
+      "stderr": "",
+      "lesson": "138-robust-scaling-median-iqr-scaling",
+      "copies": [
+        "138-robust-scaling-median-iqr-scaling"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Box-Cox first two training rows: [[-1.64], [-0.85]]\nActual costs: [23, 48]\nPredicted costs: [26.5, 46.6]\n signal  predicted_cost\n      3           14.76\n     15           30.88\n     40           42.52\nYeo-Johnson first two training rows: [[-1.6], [-0.9]]\nActual costs: [23, 48]\nPredicted costs: [26.0, 47.0]\n signal  predicted_cost\n      3           13.99\n     15           30.63\n     40           42.79\n",
+      "stderr": "",
+      "lesson": "139-power-transformations-box-cox-yeo-johnson",
+      "copies": [
+        "139-power-transformations-box-cox-yeo-johnson"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Box-Cox first two training rows: [[-1.64], [-0.85]]\nActual costs: [23, 48]\nPredicted costs: [26.5, 46.6]\n signal  predicted_cost\n      3           14.76\n     15           30.88\n     40           42.52\n",
+      "stderr": "",
+      "lesson": "140-box-cox-transformation",
+      "copies": [
+        "140-box-cox-transformation"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Yeo-Johnson first two training rows: [[-1.6], [-0.9]]\nActual costs: [23, 48]\nPredicted costs: [26.0, 47.0]\n signal  predicted_cost\n     -4         -118.07\n      0           -1.23\n     14           29.82\n",
+      "stderr": "",
+      "lesson": "141-yeo-johnson-transformation",
+      "copies": [
+        "141-yeo-johnson-transformation"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "uniform first two training rows: [[0.0], [0.13]]\nActual costs: [23, 48]\nPredicted costs: [24.0, 48.1]\n signal  predicted_cost\n      3           12.39\n     15           29.78\n     40           42.76\nnormal first two training rows: [[-5.2], [-1.11]]\nActual costs: [23, 48]\nPredicted costs: [31.7, 38.5]\n signal  predicted_cost\n      3           26.38\n     15           33.36\n     40           36.88\n",
+      "stderr": "",
+      "lesson": "142-quantile-transformation-rank-scaling",
+      "copies": [
+        "142-quantile-transformation-rank-scaling"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "uniform first two training rows: [[0.0], [0.13]]\nActual costs: [23, 48]\nPredicted costs: [24.0, 48.1]\n signal  predicted_cost\n      3           12.39\n     15           29.78\n     40           42.76\n",
+      "stderr": "",
+      "lesson": "143-uniform-distribution",
+      "copies": [
+        "143-uniform-distribution"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "normal first two training rows: [[-5.2], [-1.11]]\nActual costs: [23, 48]\nPredicted costs: [31.7, 38.5]\n signal  predicted_cost\n      3           26.38\n     15           33.36\n     40           36.88\n",
+      "stderr": "",
+      "lesson": "144-normal-distribution",
+      "copies": [
+        "144-normal-distribution"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Binning first two training rows: [[1.0, 0.0, 0.0], [1.0, 0.0, 0.0]]\nActual costs: [23, 48]\nPredicted costs: [25.0, 53.0]\nTraining edges: [1.0, 54.0, 107.0, 160.0]\n signal  predicted_cost\n      3            25.0\n     15            25.0\n     40            25.0\n",
+      "stderr": "",
+      "lesson": "145-binning-discretization",
+      "copies": [
+        "145-binning-discretization"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Polynomial Features first two training rows: [[1.0, 1.0, 1.0], [5.0, 25.0, 125.0]]\nActual costs: [23, 48]\nPredicted costs: [22.0, 49.4]\n signal  predicted_cost\n      3           14.10\n     15           26.99\n     40           44.07\n",
+      "stderr": "",
+      "lesson": "146-polynomial-features-feature-expansion",
+      "copies": [
+        "146-polynomial-features-feature-expansion",
+        "166-transform-features",
+        "168-polynomial-features"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "        distance  route_distance  weight  minutes\nmean         7.0             7.7    4.33    35.33\nmedian       7.0             7.7    2.50    31.50\nskew         0.0            -0.0    2.20     1.26\nDistance overlap: 1.0\n",
+      "stderr": "<user-home>\\AppData\\Local\\Temp\\ml-course-run-wpsa72_k\\148-1-4-exploratory-data-analysis-eda\\lesson.py:38: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown\n  plt.show()\n",
+      "lesson": "148-1-4-exploratory-data-analysis-eda",
+      "copies": [
+        "148-1-4-exploratory-data-analysis-eda",
+        "149-visualization-is-used-here",
+        "150-data-distributions-mean-median-skewness",
+        "151-trends-correlations-and-patterns",
+        "153-feature-relationships-and-multicollinearity",
+        "154-visualization-techniques",
+        "159-pair-plots",
+        "178-pair-plots-2"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": " weight_kg  Z-score  IQR\n        80     True True\n",
+      "stderr": "<user-home>\\AppData\\Local\\Temp\\ml-course-run-hvenpf08\\152-detecting-outliers-anomalies\\lesson.py:40: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown\n  plt.show()\n",
+      "lesson": "152-detecting-outliers-anomalies",
+      "copies": [
+        "152-detecting-outliers-anomalies"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "        distance  route_distance  weight  minutes\nmean         7.0             7.7    4.33    35.33\nmedian       7.0             7.7    2.50    31.50\nskew         0.0            -0.0    2.20     1.26\nDistance overlap: 1.0\n",
+      "stderr": "<user-home>\\AppData\\Local\\Temp\\ml-course-run-5miyt7g7\\155-histograms\\lesson.py:35: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown\n  plt.show()\n",
+      "lesson": "155-histograms",
+      "copies": [
+        "155-histograms"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "        distance  route_distance  weight  minutes\nmean         7.0             7.7    4.33    35.33\nmedian       7.0             7.7    2.50    31.50\nskew         0.0            -0.0    2.20     1.26\nDistance overlap: 1.0\n",
+      "stderr": "<user-home>\\AppData\\Local\\Temp\\ml-course-run-88oecotc\\156-scatter-plots\\lesson.py:35: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown\n  plt.show()\n",
+      "lesson": "156-scatter-plots",
+      "copies": [
+        "156-scatter-plots"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "        distance  route_distance  weight  minutes\nmean         7.0             7.7    4.33    35.33\nmedian       7.0             7.7    2.50    31.50\nskew         0.0            -0.0    2.20     1.26\nDistance overlap: 1.0\n",
+      "stderr": "<user-home>\\AppData\\Local\\Temp\\ml-course-run-64t5rymi\\157-box-plots\\lesson.py:35: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown\n  plt.show()\n",
+      "lesson": "157-box-plots",
+      "copies": [
+        "157-box-plots"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "        distance  route_distance  weight  minutes\nmean         7.0             7.7    4.33    35.33\nmedian       7.0             7.7    2.50    31.50\nskew         0.0            -0.0    2.20     1.26\nDistance overlap: 1.0\n",
+      "stderr": "<user-home>\\AppData\\Local\\Temp\\ml-course-run-5_7uud1j\\158-heatmaps\\lesson.py:35: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown\n  plt.show()\n",
+      "lesson": "158-heatmaps",
+      "copies": [
+        "158-heatmaps"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "accuracy     0.900\nprecision    0.895\nrecall       0.944\nF1           0.919\nAUC-ROC      0.991\n distance  weight  predicted_urgent\n        5       2                 0\n       28       7                 1\n       40       5                 1\n",
+      "stderr": "<user-home>\\AppData\\Local\\Temp\\ml-course-run-i7otrou0\\160-1-5-feature-engineering-feature-selection\\lesson.py:121: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown\n  plt.show()\n",
+      "lesson": "160-1-5-feature-engineering-feature-selection",
+      "copies": [
+        "160-1-5-feature-engineering-feature-selection",
+        "161-visualization-helps-here",
+        "176-visualization-techniques-2",
+        "195-1-8-model-evaluation",
+        "196-visualization-is-used-here-2",
+        "197-classification-metrics",
+        "198-accuracy-precision-recall-f1-score-auc-roc",
+        "204-visualization-techniques-3",
+        "214-compare-multiple-models"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": " age  urgent\n  34       0\n  24       0\n  42       1\n  32       0\n  27       1\nHeld-out prediction: [0]\n     birth            message  prediction\n1996-05-01      urgent parcel           0\n1990-07-04     regular update           1\n2000-01-01 thanks for writing           0\n",
+      "stderr": "",
+      "lesson": "162-feature-engineering",
+      "copies": [
+        "162-feature-engineering",
+        "163-create-new-features",
+        "164-age-from-date-of-birth",
+        "165-extracting-keywords-from-text"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "ANOVA selected: ['minutes']\nHeld-out labels: [0, 1]\nChi-square selected: ['keyword']\nHeld-out labels: [0, 1]\n",
+      "stderr": "",
+      "lesson": "169-feature-selection",
+      "copies": [
+        "169-feature-selection",
+        "171-use-statistical-tests-anova-chi-square-test"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Excluded columns: ['id', 'duplicate_minutes']\nANOVA selected: ['minutes']\nHeld-out labels: [0, 1]\nChi-square selected: ['keyword']\nHeld-out labels: [0, 1]\n",
+      "stderr": "",
+      "lesson": "170-remove-irrelevant-or-redundant-features",
+      "copies": [
+        "170-remove-irrelevant-or-redundant-features"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "ANOVA selected: ['minutes']\nHeld-out labels: [0, 1]\n",
+      "stderr": "",
+      "lesson": "172-anova",
+      "copies": [
+        "172-anova"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Chi-square selected: ['keyword']\nHeld-out labels: [0, 1]\n",
+      "stderr": "",
+      "lesson": "173-chi-square-test",
+      "copies": [
+        "173-chi-square-test"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "accuracy     0.900\nprecision    0.895\nrecall       0.944\nF1           0.919\nAUC-ROC      0.991\n distance  weight  predicted_urgent\n        5       2                 0\n       28       7                 1\n       40       5                 1\n",
+      "stderr": "<user-home>\\AppData\\Local\\Temp\\ml-course-run-k3sw9ne8\\177-bar-plots\\lesson.py:110: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown\n  plt.show()\n",
+      "lesson": "177-bar-plots",
+      "copies": [
+        "177-bar-plots",
+        "207-feature-importance-plot"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Shared shipment IDs across splits: 0\n       Set  Rows  Urgent  Urgent (%)\n  Training    70      14        20.0\nValidation    20       4        20.0\n      Test    10       2        20.0\n\nValidation scores by tree depth\n Depth  Balanced accuracy\n     1              0.500\n     2              0.500\n     3              0.562\nTrace how the three sets have different jobs.\nChosen depth: 3\nTest: 2 urgent caught, 0 urgent missed, 1 false alarms, 7 regular correct.\nThe test contains only 2 urgent orders. A single missed order changes recall a lot.\n distance_km  weight_kg  predicted_urgent\n           5          2             False\n          39          4             False\n          47          3             False\n",
+      "stderr": "",
+      "lesson": "179-1-6-data-splitting",
+      "copies": [
+        "179-1-6-data-splitting"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Shared shipment IDs across splits: 0\n       Set  Rows  Urgent  Urgent (%)\n  Training    70      14        20.0\nValidation    20       4        20.0\n      Test    10       2        20.0\n\nValidation scores by tree depth\n Depth  Balanced accuracy\n     1              0.500\n     2              0.500\n     3              0.562\nLook for Training. Only those rows teach the tree.\nChosen depth: 3\nTest: 2 urgent caught, 0 urgent missed, 1 false alarms, 7 regular correct.\nThe test contains only 2 urgent orders. A single missed order changes recall a lot.\n distance_km  weight_kg  predicted_urgent\n           5          2             False\n          39          4             False\n          47          3             False\n",
+      "stderr": "",
+      "lesson": "180-training-set",
+      "copies": [
+        "180-training-set"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Shared shipment IDs across splits: 0\n       Set  Rows  Urgent  Urgent (%)\n  Training    70      14        20.0\nValidation    20       4        20.0\n      Test    10       2        20.0\n\nValidation scores by tree depth\n Depth  Balanced accuracy\n     1              0.500\n     2              0.500\n     3              0.562\nTrace the chosen depth to Validation. The test result comes later.\nChosen depth: 3\nTest: 2 urgent caught, 0 urgent missed, 1 false alarms, 7 regular correct.\nThe test contains only 2 urgent orders. A single missed order changes recall a lot.\n distance_km  weight_kg  predicted_urgent\n           5          2             False\n          39          4             False\n          47          3             False\n",
+      "stderr": "",
+      "lesson": "181-validation-set",
+      "copies": [
+        "181-validation-set"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Shared shipment IDs across splits: 0\n       Set  Rows  Urgent  Urgent (%)\n  Training    70      14        20.0\nValidation    20       4        20.0\n      Test    10       2        20.0\n\nValidation scores by tree depth\n Depth  Balanced accuracy\n     1              0.500\n     2              0.500\n     3              0.562\nLook for Test. Count missed urgent cases after the depth has been chosen.\nChosen depth: 3\nTest: 2 urgent caught, 0 urgent missed, 1 false alarms, 7 regular correct.\nThe test contains only 2 urgent orders. A single missed order changes recall a lot.\n distance_km  weight_kg  predicted_urgent\n           5          2             False\n          39          4             False\n          47          3             False\n",
+      "stderr": "",
+      "lesson": "182-test-set",
+      "copies": [
+        "182-test-set"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Shared shipment IDs across splits: 0\n       Set  Rows  Urgent  Urgent (%)\n  Training    70      14        20.0\nValidation    20       4        20.0\n      Test    10       2        20.0\n\nValidation scores by tree depth\n Depth  Balanced accuracy\n     1              0.500\n     2              0.500\n     3              0.562\nRun the 70/20/10 recipe here. Compare the second recipe in lesson 184.\nChosen depth: 3\nTest: 2 urgent caught, 0 urgent missed, 1 false alarms, 7 regular correct.\nThe test contains only 2 urgent orders. A single missed order changes recall a lot.\n distance_km  weight_kg  predicted_urgent\n           5          2             False\n          39          4             False\n          47          3             False\n",
+      "stderr": "",
+      "lesson": "183-common-split-ratios",
+      "copies": [
+        "183-common-split-ratios"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Shared shipment IDs across splits: 0\n     Set  Rows  Urgent  Urgent (%)\nTraining    80      16        20.0\n    Test    20       4        20.0\nLook for 80 training orders and 20 test orders. The tree depth is fixed before testing.\nChosen depth: 2\nTest: 4 urgent caught, 0 urgent missed, 1 false alarms, 15 regular correct.\nThe test contains only 4 urgent orders. A single missed order changes recall a lot.\n distance_km  weight_kg  predicted_urgent\n           5          2             False\n          39          4             False\n          47          3             False\n",
+      "stderr": "",
+      "lesson": "184-80-20-train-test",
+      "copies": [
+        "184-80-20-train-test"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Shared shipment IDs across splits: 0\n       Set  Rows  Urgent  Urgent (%)\n  Training    70      14        20.0\nValidation    20       4        20.0\n      Test    10       2        20.0\n\nValidation scores by tree depth\n Depth  Balanced accuracy\n     1              0.500\n     2              0.500\n     3              0.562\nLook for 70 training, 20 validation, and 10 test orders.\nChosen depth: 3\nTest: 2 urgent caught, 0 urgent missed, 1 false alarms, 7 regular correct.\nThe test contains only 2 urgent orders. A single missed order changes recall a lot.\n distance_km  weight_kg  predicted_urgent\n           5          2             False\n          39          4             False\n          47          3             False\n",
+      "stderr": "",
+      "lesson": "185-70-20-10-train-validation-test",
+      "copies": [
+        "185-70-20-10-train-validation-test"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Shared shipment IDs across splits: 0\n       Set  Rows  Urgent  Urgent (%)\n  Training    70      14        20.0\nValidation    20       4        20.0\n      Test    10       2        20.0\n\nValidation scores by tree depth\n Depth  Balanced accuracy\n     1              0.500\n     2              0.500\n     3              0.562\nEvery set should have 20 percent urgent orders in the supplied CSV.\nChosen depth: 3\nTest: 2 urgent caught, 0 urgent missed, 1 false alarms, 7 regular correct.\nThe test contains only 2 urgent orders. A single missed order changes recall a lot.\n distance_km  weight_kg  predicted_urgent\n           5          2             False\n          39          4             False\n          47          3             False\n",
+      "stderr": "",
+      "lesson": "186-stratified-sampling",
+      "copies": [
+        "186-stratified-sampling"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "DummyClassifier 0.687\nLogisticRegression 0.908\nDecisionTreeClassifier 0.744\nRandomForestClassifier 0.825\nSVC 0.88\n",
+      "stderr": "",
+      "lesson": "187-1-7-model-selection-training",
+      "copies": [
+        "187-1-7-model-selection-training",
+        "188-choose-the-best-machine-learning-model",
+        "189-train-the-model-using-the-training-dataset"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "GridSearchCV 1 MAE 0.81\nRandomizedSearchCV 0.062 MAE 0.837\nBayesian 1.585 MAE 0.802\n input_1  input_2  input_3  prediction\n       1        0       -1        5.85\n       0        0        0       -0.20\n      -1        1        2       -7.36\n",
+      "stderr": "",
+      "lesson": "190-tune-hyperparameters",
+      "copies": [
+        "190-tune-hyperparameters",
+        "193-bayesian-optimization"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "GridSearchCV 1 MAE 0.81\n input_1  input_2  input_3  prediction\n       1        0       -1        5.93\n       0        0        0       -0.19\n      -1        1        2       -7.42\n",
+      "stderr": "",
+      "lesson": "191-grid-search",
+      "copies": [
+        "191-grid-search"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "RandomizedSearchCV 0.062 MAE 0.837\n input_1  input_2  input_3  prediction\n       1        0       -1        6.06\n       0        0        0       -0.16\n      -1        1        2       -7.51\n",
+      "stderr": "",
+      "lesson": "192-random-search",
+      "copies": [
+        "192-random-search"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": " Fold  Rows to learn  Rows to check  Average error in minutes\n    1              4              2                      0.37\n    2              4              2                      0.49\n    3              4              2                      0.57\n",
+      "stderr": "",
+      "lesson": "194-cross-validation",
+      "copies": [
+        "194-cross-validation"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Fraction of all rows the model classified correctly.\naccuracy 0.9\n distance  weight  predicted_urgent\n        5       2                 0\n       28       7                 1\n       40       5                 1\n",
+      "stderr": "",
+      "lesson": "199-accuracy",
+      "copies": [
+        "199-accuracy"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Among rows the model called urgent, how many really were urgent?\nprecision 0.895\n distance  weight  predicted_urgent\n        5       2                 0\n       28       7                 1\n       40       5                 1\n",
+      "stderr": "",
+      "lesson": "200-precision",
+      "copies": [
+        "200-precision"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Among truly urgent rows, how many did the model catch?\nrecall 0.944\n distance  weight  predicted_urgent\n        5       2                 0\n       28       7                 1\n       40       5                 1\n",
+      "stderr": "",
+      "lesson": "201-recall",
+      "copies": [
+        "201-recall"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Combines precision and recall. It falls when either score is low.\nF1 0.919\n distance  weight  predicted_urgent\n        5       2                 0\n       28       7                 1\n       40       5                 1\n",
+      "stderr": "",
+      "lesson": "202-f1-score",
+      "copies": [
+        "202-f1-score"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Measures ranking across thresholds. A random ranker is about 0.50.\nAUC-ROC 0.991\n distance  weight  predicted_urgent\n        5       2                 0\n       28       7                 1\n       40       5                 1\n",
+      "stderr": "",
+      "lesson": "203-auc-roc",
+      "copies": [
+        "203-auc-roc"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "                Predicted regular  Predicted urgent\nActual regular                 10                 2\nActual urgent                   1                17\nMissed urgent orders: 1. False alarms: 2.\n",
+      "stderr": "",
+      "lesson": "205-confusion-matrix",
+      "copies": [
+        "205-confusion-matrix"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": " Cutoff  Urgent caught  Urgent missed  False alarms  Urgent recall  False alarm rate\n   0.25             18              0             2          1.000             0.167\n   0.75             17              1             1          0.944             0.083\nAUC-ROC: 0.991\nHere the test cutoffs are fixed for teaching. Choose an app cutoff on validation data.\n",
+      "stderr": "",
+      "lesson": "206-roc-curve",
+      "copies": [
+        "206-roc-curve"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Worked calculation: two test deliveries. Use lesson 446 for a larger evaluation.\nRMSE: 2.0\nMAE: 2.0\nR²: 0.868\n distance_km  weight_kg  prediction\n           5          2        27.5\n          13          3        43.5\n          20          7        70.0\n",
+      "stderr": "<user-home>\\AppData\\Local\\Temp\\ml-course-run-nvg_w49x\\208-regression-metrics\\lesson.py:56: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown\n  plt.show()\n",
+      "lesson": "208-regression-metrics",
+      "copies": [
+        "208-regression-metrics",
+        "209-rmse-mae-r-score",
+        "210-residual-plots"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Worked calculation: two test deliveries. Use lesson 446 for a larger evaluation.\nTypical error in minutes, with extra weight on large misses.\n2.0\n distance_km  weight_kg  prediction\n           5          2        27.5\n          13          3        43.5\n          20          7        70.0\n",
+      "stderr": "",
+      "lesson": "211-rmse",
+      "copies": [
+        "211-rmse"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Worked calculation: two test deliveries. Use lesson 446 for a larger evaluation.\nAverage absolute error in minutes.\n2.0\n distance_km  weight_kg  prediction\n           5          2        27.5\n          13          3        43.5\n          20          7        70.0\n",
+      "stderr": "",
+      "lesson": "212-mae",
+      "copies": [
+        "212-mae"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Worked calculation: two test deliveries. Use lesson 446 for a larger evaluation.\nCompares errors with a simple average baseline. 1 is perfect and negative is worse than that baseline.\n0.868\n distance_km  weight_kg  prediction\n           5          2        27.5\n          13          3        43.5\n          20          7        70.0\n",
+      "stderr": "",
+      "lesson": "213-r-score",
+      "copies": [
+        "213-r-score"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "200 {'minutes': 27.8}\nInvalid distance: 422\n{'distance_km': 5, 'weight_kg': 2} 200 {'minutes': 27.8}\n{'distance_km': 20, 'weight_kg': 4} 200 {'minutes': 61.4}\n{'distance_km': -2, 'weight_kg': 3} 422 {'detail': [{'type': 'greater_than_equal', 'loc': ['body', 'distance_km'], 'msg': 'Input should be greater than or equal to 0', 'input': -2, 'ctx': {'ge': 0.0}}]}\n",
+      "stderr": "C:\\Gehan\\Projects\\DeveloperResources\\examples\\machine-learning\\ml-practical-lessons\\.venv\\Lib\\site-packages\\fastapi\\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.\n  from starlette.testclient import TestClient as TestClient  # noqa\n",
+      "lesson": "215-1-9-model-deployment",
+      "copies": [
+        "215-1-9-model-deployment",
+        "216-apis-web-apps-or-cloud-services",
+        "217-api-deployment",
+        "220-flask-fastapi-or-streamlit",
+        "221-fastapi",
+        "229-rest-api",
+        "230-mobile-app-integration"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "       Action  HTTP status  Predicted minutes\nOpen the page          200                NaN\n Predict 4 km          200               18.0\nResponse: {'minutes': 18.0}\n8 200 {'minutes': 26.0}\n12 200 {'minutes': 34.0}\n",
+      "stderr": "C:\\Gehan\\Projects\\DeveloperResources\\examples\\machine-learning\\ml-practical-lessons\\.venv\\Lib\\site-packages\\fastapi\\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.\n  from starlette.testclient import TestClient as TestClient  # noqa\n",
+      "lesson": "218-web-app-deployment",
+      "copies": [
+        "218-web-app-deployment",
+        "231-web-app-integration",
+        "232-first-api-call-from-a-web-page"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": " distance_km  weight_kg  valid  expected_status\n           5          2   True              200\n          15          6   True              200\n          -2          4  False              422\n           5          0  False              422\nPlatform to explore: Cloud services\nThese are expected responses from a local contract check.\nUse the FastAPI lesson to send real requests to a local test client.\n",
+      "stderr": "",
+      "lesson": "219-cloud-services",
+      "copies": [
+        "219-cloud-services"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "200 {'minutes': 27.8}\n{'distance_km': 5, 'weight_kg': 2} 200 {'minutes': 27.8}\n{'distance_km': 20, 'weight_kg': 4} 200 {'minutes': 61.4}\n{'distance_km': -2, 'weight_kg': 3} 400 {'error': 'Distance must be finite and nonnegative and weight positive.'}\n",
+      "stderr": "",
+      "lesson": "222-flask",
+      "copies": [
+        "222-flask"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Prediction: 27.5 minutes\n5 2 Prediction: 27.5 minutes\n10 4 Prediction: 43.0 minutes\n15 1 Prediction: 38.5 minutes\n",
+      "stderr": "2026-11-28 09:00:41.959 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
+      "lesson": "223-streamlit",
+      "copies": [
+        "223-streamlit"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": " distance_km  weight_kg  valid  expected_status\n           5          2   True              200\n          15          6   True              200\n          -2          4  False              422\n           5          0  False              422\nPlatform to explore: AWS, Google Cloud, or Heroku\nThese are expected responses from a local contract check.\nUse the FastAPI lesson to send real requests to a local test client.\n",
+      "stderr": "",
+      "lesson": "224-aws-google-cloud-or-heroku",
+      "copies": [
+        "224-aws-google-cloud-or-heroku"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": " distance_km  weight_kg  valid  expected_status\n           5          2   True              200\n          15          6   True              200\n          -2          4  False              422\n           5          0  False              422\nPlatform to explore: AWS\nThese are expected responses from a local contract check.\nUse the FastAPI lesson to send real requests to a local test client.\n",
+      "stderr": "",
+      "lesson": "225-aws",
+      "copies": [
+        "225-aws"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": " distance_km  weight_kg  valid  expected_status\n           5          2   True              200\n          15          6   True              200\n          -2          4  False              422\n           5          0  False              422\nPlatform to explore: Google Cloud\nThese are expected responses from a local contract check.\nUse the FastAPI lesson to send real requests to a local test client.\n",
+      "stderr": "",
+      "lesson": "226-google-cloud",
+      "copies": [
+        "226-google-cloud"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": " distance_km  weight_kg  valid  expected_status\n           5          2   True              200\n          15          6   True              200\n          -2          4  False              422\n           5          0  False              422\nPlatform to explore: Heroku\nThese are expected responses from a local contract check.\nUse the FastAPI lesson to send real requests to a local test client.\n",
+      "stderr": "",
+      "lesson": "227-heroku",
+      "copies": [
+        "227-heroku"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "POST /predict {\"distance_km\": 5, \"weight_kg\": 2}\nPOST /predict {\"distance_km\": 10, \"weight_kg\": 3}\nPOST /predict {\"distance_km\": 14, \"weight_kg\": 4}\n",
+      "stderr": "",
+      "lesson": "228-rest-api-or-integrate-with-mobile-web-apps",
+      "copies": [
+        "228-rest-api-or-integrate-with-mobile-web-apps"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": " distance_km  weight_kg  valid  expected_status\n           5          2   True              200\n          15          6   True              200\n          -2          4  False              422\n           5          0  False              422\nPlatform to explore: Cloud deployment walkthrough\nThese are expected responses from a local contract check.\nUse the FastAPI lesson to send real requests to a local test client.\n",
+      "stderr": "",
+      "lesson": "233-cloud-deployment-walkthrough",
+      "copies": [
+        "233-cloud-deployment-walkthrough"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Recent accuracy: 0.53 median km change: 7.0\nALERT: investigate before promoting a candidate.\nLater batch, live / candidate: 0.5 1.0\n",
+      "stderr": "<user-home>\\AppData\\Local\\Temp\\ml-course-run-vko10_ci\\234-1-10-model-monitoring-maintenance\\lesson.py:64: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown\n  plt.show()\n",
+      "lesson": "234-1-10-model-monitoring-maintenance",
+      "copies": [
+        "234-1-10-model-monitoring-maintenance",
+        "235-visualization-helps-track-model-performance",
+        "236-monitor-model-accuracy-performance-over-time",
+        "237-detect-data-drift",
+        "238-implement-automated-alerts",
+        "239-retrain-the-model-periodically-with-new-data",
+        "244-matplotlib",
+        "245-seaborn",
+        "246-drift-detection-charts",
+        "247-real-time-model-accuracy-tracking-dashboards"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "        Dashboard field Value\nLatest labeled accuracy   80%\n        Alert threshold   85%\n          Alert visible  True\n",
+      "stderr": "2026-11-28 09:00:45.986 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
+      "lesson": "240-visualization-techniques-4",
+      "copies": [
+        "240-visualization-techniques-4",
+        "241-live-dashboards-using-tableau-power-bi-or-matplotlib-seaborn",
+        "248-a-dashboard-that-refreshes-on-your-computer"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "    Batch  Correct  Checked  Accuracy\n  Morning       18       20       0.9\n   Midday       14       20       0.7\nAfternoon       16       20       0.8\nIn Tableau, open dashboard_import.csv, then chart Accuracy by Batch.\nEdit the sample, rerun Python, then refresh the imported file.\n",
+      "stderr": "",
+      "lesson": "242-tableau",
+      "copies": [
+        "242-tableau"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "    Batch  Correct  Checked  Accuracy\n  Morning       18       20       0.9\n   Midday       14       20       0.7\nAfternoon       16       20       0.8\nIn Power BI, open dashboard_import.csv, then chart Accuracy by Batch.\nEdit the sample, rerun Python, then refresh the imported file.\n",
+      "stderr": "",
+      "lesson": "243-power-bi",
+      "copies": [
+        "243-power-bi"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "  Check  Current error (min)  Candidate error (min)           Decision\n Monday                  0.0                    0.0 Keep current model\nTuesday                  3.0                    0.0   Review candidate\n",
+      "stderr": "",
+      "lesson": "249-scheduled-model-checks",
+      "copies": [
+        "249-scheduled-model-checks"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Missing cells before filling or removing rows: {'experience': 0, 'department': 0, 'salary': 1}\n     Field  Rows to review\nexperience               0\n    salary               0\nFlagged original rows: []\n Original row  Actual answer  Prediction\n            8        55000.0     55923.1\n            9        37000.0     37846.2\n Original row  Actual answer  Prediction  Prediction with scaled target\n            8        55000.0     55923.1                        55923.1\n            9        37000.0     37846.2                        37846.2\nAverage of available salaries: 45500.0\nAverage with median-filled blanks: 45071.4\n experience  department   prediction\n          1     Support 31384.615385\n          3     Support 37846.153846\n          4 Engineering 41743.589744\n",
+      "stderr": "",
+      "lesson": "250-2-data-sets",
+      "copies": [
+        "250-2-data-sets",
+        "251-2-1-salary-experience-dataset",
+        "253-practice",
+        "254-practice-2-1-missing-values",
+        "255-practice-2-1-feature-scaling",
+        "256-practice-2-1-outliers",
+        "257-practice-2-1-categorical-encoding"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "PDF reference: Generated example\nOrigin of this CSV: original synthetic practice rows\nRows: 9\n    Column    Type\nexperience   int64\ndepartment  object\n    salary float64\n experience  department  salary\n          1     Support 32000.0\n          2     Support 34000.0\n          4 Engineering 42000.0\n",
+      "stderr": "",
+      "lesson": "252-description",
+      "copies": [
+        "252-description",
+        "258-source"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Missing cells before filling or removing rows: {'age': 1, 'fare': 0, 'family_size': 0, 'cabin_recorded': 0, 'pass_type': 0, 'terminal': 1, 'priority': 0}\n         Field  Rows to review\n           age               0\n          fare               1\n   family_size               0\ncabin_recorded               0\nFlagged original rows: [7]\n Original row  Actual answer  Prediction\n            8              0           0\n            9              1           1\n age  fare pass_type terminal cabin  siblings  parents  family_size  cabin_recorded  prediction\n18.0    12  standard    north   NaN         0        1            2               0           0\n57.0    42   premium    south     B         1        1            3               1           1\n52.0    46   premium    south     B         0        0            1               1           1\n",
+      "stderr": "",
+      "lesson": "259-2-2-titanic-dataset",
+      "copies": [
+        "259-2-2-titanic-dataset",
+        "261-practice-2",
+        "262-practice-2-2-missing-values",
+        "263-practice-2-2-categorical-encoding",
+        "264-practice-2-2-outliers",
+        "265-practice-2-2-scaling",
+        "266-practice-2-2-feature-extraction"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "PDF reference: Kaggle Titanic Dataset\nOrigin of this CSV: original synthetic practice rows\nRows: 9\n   Column    Type\n      age float64\n     fare   int64\npass_type  object\n terminal  object\n    cabin  object\n siblings   int64\n  parents   int64\n priority   int64\n age  fare pass_type terminal cabin  siblings  parents  priority\n18.0    12  standard    north   NaN         0        1         0\n NaN    18  standard      NaN     A         1        0         0\n52.0    46   premium    south     B         0        0         1\n",
+      "stderr": "",
+      "lesson": "260-description-2",
+      "copies": [
+        "260-description-2",
+        "267-source-2"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Missing cells before filling or removing rows: {'area': 0, 'rooms': 0, 'neighborhood': 0, 'street': 0, 'exterior': 0, 'pool': 0, 'garage': 0, 'price': 0}\nField  Rows to review\n area               1\nprice               1\nFlagged original rows: [4]\n Original row  Actual answer  Prediction\n            7         187000    251362.9\n            8         395000    573207.9\n Original row  Actual answer  Prediction  Prediction after inverse log\n            7         187000    251362.9                      206335.4\n            8         395000    573207.9                      483310.7\n area  rooms neighborhood street exterior pool garage    prediction\n   55      2        North  paved     wood  NaN   none 218573.595948\n  140      5        South  paved    brick good double 573207.861393\n  105      4        North gravel     wood  NaN single 333573.595948\n",
+      "stderr": "",
+      "lesson": "268-2-3-house-prices-dataset",
+      "copies": [
+        "268-2-3-house-prices-dataset",
+        "270-practice-3",
+        "271-practice-2-3-missing-values",
+        "272-practice-2-3-categorical-encoding",
+        "273-practice-2-3-outliers",
+        "274-practice-2-3-feature-scaling",
+        "275-practice-2-3-handling-skewed-data"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "PDF reference: Kaggle House Prices Dataset\nOrigin of this CSV: original synthetic practice rows\nRows: 8\n      Column   Type\n        area  int64\n       rooms  int64\nneighborhood object\n      street object\n    exterior object\n        pool object\n      garage object\n       price  int64\n area  rooms neighborhood street exterior pool garage  price\n   55      2        North  paved     wood  NaN   none 165000\n   72      3        South  paved    brick  NaN single 215000\n  105      4        North gravel     wood  NaN single 280000\n",
+      "stderr": "",
+      "lesson": "269-description-3",
+      "copies": [
+        "269-description-3",
+        "276-source-3"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Flower measurements to review: {'sepal_length': 0, 'sepal_width': 0, 'petal_length': 0, 'petal_width': 1}\nActual: ['fan', 'bell']\nPredicted: ['fan', 'bell']\n sepal_length  sepal_width  petal_length  petal_width prediction\n          3.0          2.0           1.0          0.2       star\n          5.9          2.9           4.9          1.9       bell\n          4.5          2.0           3.0          0.8        fan\n",
+      "stderr": "<user-home>\\AppData\\Local\\Temp\\ml-course-run-q7kdqo9e\\277-2-4-iris-dataset\\lesson.py:41: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown\n  plt.show()\n",
+      "lesson": "277-2-4-iris-dataset",
+      "copies": [
+        "277-2-4-iris-dataset",
+        "279-practice-4",
+        "281-practice-2-4-outliers",
+        "282-practice-2-4-categorical-encoding",
+        "283-practice-2-4-visualization"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "PDF reference: UCI Iris Dataset\nOrigin of this CSV: original synthetic practice rows\nRows: 8\n      Column    Type\nsepal_length float64\n sepal_width float64\npetal_length float64\n petal_width float64\n     species  object\n sepal_length  sepal_width  petal_length  petal_width species\n          3.0          2.0           1.0          0.2    star\n          3.2          2.1           1.2          0.3    star\n          4.5          2.0           3.0          0.8     fan\n",
+      "stderr": "",
+      "lesson": "278-description-4",
+      "copies": [
+        "278-description-4",
+        "284-source-4"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Flower measurements to review: {'sepal_length': 0, 'sepal_width': 0, 'petal_length': 0, 'petal_width': 1}\nFirst scaled flower: [-1.28, -0.81, -1.27, -0.83]\nActual: ['fan', 'bell']\nPredicted: ['fan', 'bell']\n sepal_length  sepal_width  petal_length  petal_width prediction\n          3.0          2.0           1.0          0.2       star\n          5.9          2.9           4.9          1.9       bell\n          4.5          2.0           3.0          0.8        fan\n",
+      "stderr": "<user-home>\\AppData\\Local\\Temp\\ml-course-run-mtxmbg5v\\280-practice-2-4-feature-scaling\\lesson.py:41: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown\n  plt.show()\n",
+      "lesson": "280-practice-2-4-feature-scaling",
+      "copies": [
+        "280-practice-2-4-feature-scaling"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Missing cells before filling or removing rows: {'age': 0, 'hours': 0, 'education': 0, 'workclass': 1, 'occupation': 1, 'marital_status': 0, 'income_group': 0}\nField  Rows to review\n  age               0\nhours               0\nFlagged original rows: []\n Original row Actual answer  Prediction\n            7   50k_or_less 50k_or_less\n            8     above_50k   above_50k\n age  hours education workclass occupation marital_status  prediction\n  22     25    school   private     retail         single 50k_or_less\n  38     45    degree    public   engineer        married   above_50k\n  36     45    degree    public    manager        married   above_50k\n",
+      "stderr": "",
+      "lesson": "285-2-5-uci-adult-income-dataset",
+      "copies": [
+        "285-2-5-uci-adult-income-dataset",
+        "287-practice-5",
+        "288-practice-2-5-missing-values",
+        "289-practice-2-5-categorical-encoding",
+        "290-practice-2-5-feature-scaling",
+        "291-practice-2-5-outliers"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "PDF reference: UCI Adult Dataset\nOrigin of this CSV: original synthetic practice rows\nRows: 8\n        Column   Type\n           age  int64\n         hours  int64\n     education object\n     workclass object\n    occupation object\nmarital_status object\n  income_group object\n age  hours education workclass occupation marital_status income_group\n  22     25    school   private     retail         single  50k_or_less\n  30     35    degree   private    analyst         single  50k_or_less\n  36     45    degree    public    manager        married    above_50k\n",
+      "stderr": "",
+      "lesson": "286-description-5",
+      "copies": [
+        "286-description-5",
+        "292-source-5"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Missing cells before filling or removing rows: {'alcohol': 0, 'citric_acid': 0, 'sulphates': 1, 'quality': 0}\n      Field  Rows to review\n    alcohol               1\ncitric_acid               0\n  sulphates               0\nFlagged original rows: [6]\n Original row  Actual answer  Prediction\n            7              5         5.2\n            8              7         7.1\nClass predictions: ['lower', 'higher']\n alcohol  citric_acid  sulphates  prediction\n     8.0          0.2        0.3    4.279202\n    12.1          0.4        0.7    7.065527\n    10.0          0.3        NaN    5.000000\n",
+      "stderr": "",
+      "lesson": "293-2-6-wine-quality-dataset",
+      "copies": [
+        "293-2-6-wine-quality-dataset",
+        "295-practice-6",
+        "297-practice-2-6-outliers",
+        "298-practice-2-6-feature-scaling",
+        "299-practice-2-6-categorical-encoding"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "PDF reference: UCI Wine Quality Dataset\nOrigin of this CSV: original synthetic practice rows\nRows: 8\n     Column    Type\n    alcohol float64\ncitric_acid float64\n  sulphates float64\n    quality   int64\n alcohol  citric_acid  sulphates  quality\n     8.0          0.2        0.3        4\n     9.0          0.2        0.4        5\n    10.0          0.3        NaN        5\n",
+      "stderr": "",
+      "lesson": "294-description-6",
+      "copies": [
+        "294-description-6",
+        "301-source-6"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Missing cells before filling or removing rows: {'alcohol': 0, 'citric_acid': 0, 'sulphates': 1, 'quality': 0}\n      Field  Rows to review\n    alcohol               1\ncitric_acid               0\n  sulphates               0\nFlagged original rows: [6]\nTraining median used for missing sulphates: 0.6\n Original row  Actual answer  Prediction\n            7              5         5.2\n            8              7         7.1\nClass predictions: ['lower', 'higher']\n alcohol  citric_acid  sulphates  prediction\n     8.0          0.2        0.3    4.279202\n    12.1          0.4        0.7    7.065527\n    10.0          0.3        NaN    5.000000\n",
+      "stderr": "",
+      "lesson": "296-practice-2-6-missing-values",
+      "copies": [
+        "296-practice-2-6-missing-values"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Missing cells before filling or removing rows: {'alcohol': 0, 'citric_acid': 0, 'sulphates': 1, 'quality': 0}\n      Field  Rows to review\n    alcohol               1\ncitric_acid               0\n  sulphates               0\nFlagged original rows: [6]\nMin-Max training minima: [0.0, 0.0, 0.0]\nMin-Max training maxima: [1.0, 1.0, 1.0]\n Original row  Actual answer  Prediction\n            7              5         5.2\n            8              7         7.1\nClass predictions: ['lower', 'higher']\n alcohol  citric_acid  sulphates  prediction\n     8.0          0.2        0.3    4.279202\n    12.1          0.4        0.7    7.065527\n    10.0          0.3        NaN    5.000000\n",
+      "stderr": "",
+      "lesson": "300-practice-2-6-normalization",
+      "copies": [
+        "300-practice-2-6-normalization"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Missing cells before filling or removing rows: {'crime_per_1000': 0, 'rooms': 0, 'household_income': 1, 'zone': 0, 'price': 0}\n           Field  Rows to review\n  crime_per_1000               1\n           rooms               0\nhousehold_income               1\nFlagged original rows: [5, 6]\n Original row  Actual answer  Prediction\n            7         230000    235290.5\n            8         312000    317095.4\n crime_per_1000  rooms  household_income    zone    prediction\n              2      3           38000.0   North 180000.000000\n              1      5           61000.0   South 317095.435685\n              4      4               NaN Central 215000.000000\n",
+      "stderr": "",
+      "lesson": "302-2-7-boston-housing-dataset",
+      "copies": [
+        "302-2-7-boston-housing-dataset",
+        "304-practice-7",
+        "305-practice-2-7-missing-values",
+        "306-practice-2-7-feature-scaling",
+        "307-practice-2-7-outliers",
+        "308-practice-2-7-categorical-encoding"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "PDF reference: UCI Boston Housing Dataset\nOrigin of this CSV: original synthetic practice rows\nRows: 8\n          Column    Type\n  crime_per_1000   int64\n           rooms   int64\nhousehold_income float64\n            zone  object\n           price   int64\n crime_per_1000  rooms  household_income    zone  price\n              2      3           38000.0   North 180000\n              1      5           57000.0   South 300000\n              4      4               NaN Central 215000\n",
+      "stderr": "",
+      "lesson": "303-description-7",
+      "copies": [
+        "303-description-7",
+        "309-source-7"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "First raw sketch: ['###', '#.#', '#.#', '#.#', '###']\nBlank images to inspect: 0\nModel-input shape: (10, 64)\nPixel range: 0.0 1.0\nTargets: ['0', '7']\nPredictions: ['0', '7']\nFirst one-hot label: [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]\nNew labels: ['0', '7']\n",
+      "stderr": "",
+      "lesson": "310-2-8-mnist-dataset",
+      "copies": [
+        "310-2-8-mnist-dataset",
+        "312-practice-8",
+        "313-practice-2-8-resizing",
+        "314-practice-2-8-normalization",
+        "315-practice-2-8-feature-scaling",
+        "316-practice-2-8-outliers"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "PDF reference: MNIST Dataset\nOrigin of this CSV: original synthetic practice rows\nRows: 12\n    Column   Type\n     split object\npixel_rows object\n     label  int64\nsplit          pixel_rows  label\ntrain ###/#.#/#.#/#.#/###      0\ntrain .#./##./.#./.#./###      1\ntrain ###/..#/###/#../###      2\n",
+      "stderr": "",
+      "lesson": "311-description-8",
+      "copies": [
+        "311-description-8",
+        "317-source-8"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "       age  annual_income  score\n0.05  21.4        25050.0  40.70\n0.95  62.4       117400.0  78.95\npassthrough         age  annual_income  score\ngroup                            \n0      21.5        25500.0   69.0\n1      60.7       104666.7   77.3\n2      39.0        57666.7   51.3\nNew group: [1]\n age  annual_income  score region  cluster\n  21        24000.0   68.0  north        0\n  61        96000.0   78.0   west        1\n  22        27000.0   70.0  north        0\nStandardScaler()         age  annual_income  score\ngroup                            \n0      22.3        25500.0   70.0\n1      60.7       104666.7   77.3\n2      44.0        57666.7   41.0\nNew group: [1]\n age  annual_income  score region  cluster\n  21        24000.0   68.0  north        0\n  61        96000.0   78.0   west        1\n  22        27000.0   70.0  north        0\n",
+      "stderr": "",
+      "lesson": "318-2-9-customer-segmentation-dataset",
+      "copies": [
+        "318-2-9-customer-segmentation-dataset",
+        "320-practice-9",
+        "321-practice-2-9-missing-values",
+        "322-practice-2-9-feature-scaling",
+        "323-practice-2-9-categorical-encoding",
+        "324-practice-2-9-outliers"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "PDF reference: Kaggle Customer Segmentation Dataset\nOrigin of this CSV: original synthetic practice rows\nRows: 10\n       Column    Type\n          age   int64\nannual_income float64\n        score float64\n       region  object\n age  annual_income  score region\n  21        24000.0   68.0  north\n  24            NaN   72.0  north\n  22        27000.0   70.0  north\n",
+      "stderr": "",
+      "lesson": "319-description-9",
+      "copies": [
+        "319-description-9",
+        "325-source-9"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Balance / duration range: {'balance': {'min': 300, 'max': 12000}, 'duration': {'min': 35, 'max': 650}}\nTraining-only descriptive duration scale: [-0.86, -0.63, -0.19, 0.88, -0.97, 1.77]\nMissing cells before filling or removing rows: {'age': 0, 'balance': 0, 'job': 1, 'marital': 1, 'education': 0, 'prior': 0, 'subscribed': 0}\n   Field  Rows to review\n balance               0\nduration               0\nFlagged original rows: []\n Original row Actual answer Prediction\n            7            no         no\n            8           yes        yes\n age  balance  duration     job marital education   prior prediction\n  21      500        60 student  single    school    none         no\n  49     5000       220 manager married    degree success        yes\n  44     4200       210 manager married    degree success        yes\n",
+      "stderr": "",
+      "lesson": "326-2-10-bank-marketing-dataset",
+      "copies": [
+        "326-2-10-bank-marketing-dataset",
+        "328-practice-10",
+        "329-practice-2-10-categorical-encoding",
+        "330-practice-2-10-feature-scaling",
+        "331-practice-2-10-outliers",
+        "332-practice-2-10-missing-values"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "PDF reference: UCI Bank Marketing Dataset\nOrigin of this CSV: original synthetic practice rows\nRows: 8\n    Column   Type\n       age  int64\n   balance  int64\n  duration  int64\n       job object\n   marital object\n education object\n     prior object\nsubscribed object\n age  balance  duration     job marital education   prior subscribed\n  21      500        60 student  single    school    none         no\n  36     1200       110   admin married    degree    none         no\n  44     4200       210 manager married    degree success        yes\n",
+      "stderr": "",
+      "lesson": "327-description-10",
+      "copies": [
+        "327-description-10",
+        "333-source-10"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Missing cells before filling or removing rows: {'age': 0, 'cholesterol': 0, 'blood_pressure': 0, 'exercise_score': 0, 'sex': 0, 'chest_pain': 0, 'example_label': 0}\n         Field  Rows to review\n           age               0\n   cholesterol               0\nblood_pressure               0\nexercise_score               0\nFlagged original rows: []\n Original row  Actual answer  Prediction\n            7              0           0\n            8              1           1\n age  cholesterol  blood_pressure  exercise_score sex chest_pain  prediction\n  29          155             111              80   F       none           0\n  65          277             155              34   F   reported           1\n  58          250             147              39   F   reported           1\n",
+      "stderr": "",
+      "lesson": "334-2-11-heart-disease-dataset",
+      "copies": [
+        "334-2-11-heart-disease-dataset",
+        "336-practice-11",
+        "337-practice-2-11-feature-scaling",
+        "338-practice-2-11-categorical-encoding",
+        "339-practice-2-11-outliers"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "PDF reference: UCI Heart Disease Dataset\nOrigin of this CSV: original synthetic practice rows\nRows: 8\n        Column   Type\n           age  int64\n   cholesterol  int64\nblood_pressure  int64\nexercise_score  int64\n           sex object\n    chest_pain object\n example_label  int64\n age  cholesterol  blood_pressure  exercise_score sex chest_pain  example_label\n  29          155             111              80   F       none              0\n  38          166             118              72   M       none              0\n  58          250             147              39   F   reported              1\n",
+      "stderr": "",
+      "lesson": "335-description-11",
+      "copies": [
+        "335-description-11",
+        "340-source-11"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "First raw sketch: ['.###.', '#####', '#.#.#', '..#..', '.###.']\nBlank images to inspect: 0\nModel-input shape: (3, 64)\nPixel range: 0.0 1.0\nTargets: ['T-shirt', 'dress']\nPredictions: ['T-shirt', 'dress']\nFirst one-hot label: [1.0, 0.0, 0.0]\nNew labels: ['T-shirt', 'dress']\n",
+      "stderr": "",
+      "lesson": "341-2-12-fashion-mnist",
+      "copies": [
+        "341-2-12-fashion-mnist",
+        "343-practice-12",
+        "345-practice-2-12-normalization",
+        "346-practice-2-12-one-hot-encoding"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "PDF reference: Fashion MNIST Dataset\nOrigin of this CSV: original synthetic practice rows\nRows: 5\n    Column   Type\n     split object\npixel_rows object\n     label object\nsplit                    pixel_rows    label\ntrain .###./#####/#.#.#/..#../.###.  T-shirt\ntrain ..#../.###./.###./#####/#####    dress\ntrain .###./.###./.#.#./.#.#./.#.#. trousers\n",
+      "stderr": "",
+      "lesson": "342-description-12",
+      "copies": [
+        "342-description-12",
+        "348-source-12"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Original picture: 5 columns by 5 rows.\nResized picture: 8 columns by 8 rows.\nPixel count: 25 before, 64 after.\n",
+      "stderr": "",
+      "lesson": "344-practice-2-12-resizing",
+      "copies": [
+        "344-practice-2-12-resizing"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Original shape: (5, 5). Flattened shape: (25,).\nFirst ten values: [0, 255, 255, 255, 0, 255, 255, 255, 255, 255]\nRecovered the original grid: True\n",
+      "stderr": "",
+      "lesson": "347-practice-2-12-flattening",
+      "copies": [
+        "347-practice-2-12-flattening"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Missing ratings: 1\nname  price  installs\nPlan     35     80000\n Map      4      2000\nHoldout forecast: [661.0]\n  name category  rating  price price_band rating_band  predicted_installs\n Meter    tools     4.1      0       free     above_4              1000.0\n  Quiz     game     4.2      2       paid     above_4               661.0\nPuzzle     game     3.9      0       free   at_most_4               650.0\n",
+      "stderr": "",
+      "lesson": "349-2-13-google-play-store-dataset",
+      "copies": [
+        "349-2-13-google-play-store-dataset",
+        "351-practice-13",
+        "352-practice-2-13-categorical-encoding",
+        "353-practice-2-13-missing-values",
+        "354-practice-2-13-outliers"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "PDF reference: Google Play Store Dataset (Kaggle)\nOrigin of this CSV: original synthetic practice rows\nRows: 7\n  Column    Type\n    name  object\ncategory  object\n  rating float64\n   price  object\ninstalls  object\n  name category  rating price installs\n Meter    tools     4.1    $0   1,000+\n   Map   travel     4.8    $4   2,000+\nPuzzle     game     3.9    $0     650+\n",
+      "stderr": "",
+      "lesson": "350-description-13",
+      "copies": [
+        "350-description-13",
+        "355-source-13"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "LinearRegression MAE: 1.26\nFirst actual / predicted: 72.0 69.9\nNew inputs and predictions:\n km  kg  predicted_minutes\n  5   2              22.02\n 16   4              42.33\n 42   9              90.87\n",
+      "stderr": "",
+      "lesson": "356-3-machine-learning-categories",
+      "copies": [
+        "356-3-machine-learning-categories",
+        "357-3-1-supervised-learning",
+        "358-common-algorithms",
+        "359-regression-algorithms",
+        "360-linear-regression"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "New inputs and predictions:\n km  kg  predicted_minutes\n  5   2              22.05\n 16   4              42.35\n 42   9              90.85\nRidge MAE: 1.27\nFirst actual / predicted: 72.0 69.8\nNew inputs and predictions:\n km  kg  predicted_minutes\n  5   2              22.09\n 16   4              42.37\n 42   9              90.83\nLasso MAE: 1.27\nFirst actual / predicted: 72.0 69.8\n",
+      "stderr": "",
+      "lesson": "361-ridge-lasso-regression",
+      "copies": [
+        "361-ridge-lasso-regression"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Ridge MAE: 1.27\nFirst actual / predicted: 72.0 69.8\nNew inputs and predictions:\n km  kg  predicted_minutes\n  5   2              22.05\n 16   4              42.35\n 42   9              90.85\n",
+      "stderr": "",
+      "lesson": "362-ridge-regression",
+      "copies": [
+        "362-ridge-regression"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Lasso MAE: 1.31\nFirst actual / predicted: 72.0 69.6\nNew inputs and predictions:\n km  kg  predicted_minutes\n  5   2              22.69\n 16   4              42.70\n 42   9              90.49\n",
+      "stderr": "",
+      "lesson": "363-lasso-regression",
+      "copies": [
+        "363-lasso-regression"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "New inputs and predictions:\n km  kg  predicted_minutes\n  5   2              26.01\n 16   4              42.68\n 42   9              90.83\nPipeline MAE: 1.66\nFirst actual / predicted: 72.0 68.5\n",
+      "stderr": "",
+      "lesson": "364-polynomial-regression",
+      "copies": [
+        "364-polynomial-regression"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Pipeline MAE: 1.82\nFirst actual / predicted: 72.0 70.5\nNew inputs and predictions:\n km  kg  predicted_minutes\n  5   2              32.28\n 16   4              39.67\n 42   9              93.44\n",
+      "stderr": "",
+      "lesson": "365-support-vector-regression-svr",
+      "copies": [
+        "365-support-vector-regression-svr"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "DecisionTreeRegressor MAE: 5.52\nFirst actual / predicted: 72.0 81.2\nNew inputs and predictions:\n km  kg  predicted_minutes\n  5   2              22.75\n 16   4              45.50\n 42   9              88.83\n",
+      "stderr": "",
+      "lesson": "366-decision-trees-for-regression",
+      "copies": [
+        "366-decision-trees-for-regression"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "RandomForestRegressor MAE: 5.05\nFirst actual / predicted: 72.0 71.7\nNew inputs and predictions:\n km  kg  predicted_minutes\n  5   2              28.12\n 16   4              50.05\n 42   9              87.75\n",
+      "stderr": "",
+      "lesson": "367-random-forest-for-regression",
+      "copies": [
+        "367-random-forest-for-regression"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "GradientBoostingRegressor MAE: 3.99\nFirst actual / predicted: 72.0 78.4\nNew inputs and predictions:\n km  kg  predicted_minutes\n  5   2              25.10\n 16   4              46.07\n 42   9              91.46\n",
+      "stderr": "",
+      "lesson": "368-gradient-boosting-gbm",
+      "copies": [
+        "368-gradient-boosting-gbm"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "XGBRegressor MAE: 5.71\nFirst actual / predicted: 72.0 61.7\nNew inputs and predictions:\n km  kg  predicted_minutes\n  5   2          22.840000\n 16   4          51.450001\n 42   9          89.629997\n",
+      "stderr": "",
+      "lesson": "369-xgboost",
+      "copies": [
+        "369-xgboost"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "New inputs and predictions:\n km  kg  predicted_minutes\n  5   2              28.51\n 16   4              48.65\n 42   9              90.40\nLGBMRegressor MAE: 5.03\nFirst actual / predicted: 72.0 79.4\n",
+      "stderr": "",
+      "lesson": "370-lightgbm",
+      "copies": [
+        "370-lightgbm"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Accuracy: 1.0\nPredicted: [0, 1, 0, 1]\nActual: [0, 1, 0, 1]\n km  kg  predicted_late\n  5   2               0\n 16   4               0\n 42   9               1\n",
+      "stderr": "",
+      "lesson": "371-classification-algorithms",
+      "copies": [
+        "371-classification-algorithms",
+        "372-logistic-regression",
+        "437-classification-diagram"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Accuracy: 1.0\nPredicted: [0, 1, 0, 1]\nActual: [0, 1, 0, 1]\n km  kg  predicted_late\n  5   2               0\n 16   4               0\n 42   9               1\n",
+      "stderr": "",
+      "lesson": "373-k-nearest-neighbors-knn",
+      "copies": [
+        "373-k-nearest-neighbors-knn"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Accuracy: 1.0\nPredicted: [0, 1, 0, 1]\nActual: [0, 1, 0, 1]\n km  kg  predicted_late\n  5   2               0\n 16   4               0\n 42   9               1\n",
+      "stderr": "",
+      "lesson": "374-support-vector-machines-svm",
+      "copies": [
+        "374-support-vector-machines-svm"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Accuracy: 1.0\nPredicted: [0, 1, 0, 1]\nActual: [0, 1, 0, 1]\n km  kg  predicted_late\n  5   2               0\n 16   4               0\n 42   9               1\n",
+      "stderr": "",
+      "lesson": "375-decision-trees-for-classification",
+      "copies": [
+        "375-decision-trees-for-classification"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Accuracy: 0.933\nPredicted: [1, 1, 0, 1]\nActual: [0, 1, 0, 1]\n km  kg  predicted_late\n  5   2               0\n 16   4               0\n 42   9               1\n",
+      "stderr": "",
+      "lesson": "376-random-forest-for-classification",
+      "copies": [
+        "376-random-forest-for-classification"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Accuracy: 1.0\nPredicted: [0, 1, 0, 1]\nActual: [0, 1, 0, 1]\n km  kg  predicted_late\n  5   2               0\n 16   4               0\n 42   9               1\n",
+      "stderr": "",
+      "lesson": "377-naive-bayes",
+      "copies": [
+        "377-naive-bayes"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Accuracy: 1.0\nPredicted: [0, 1, 0, 1]\nActual: [0, 1, 0, 1]\n km  kg  predicted_late\n  5   2               0\n 16   4               0\n 42   9               1\n",
+      "stderr": "",
+      "lesson": "378-gradient-boosting",
+      "copies": [
+        "378-gradient-boosting"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Accuracy: 1.0\nPredicted: [0, 1, 0, 1]\nActual: [0, 1, 0, 1]\n km  kg  predicted_late\n  5   2               0\n 16   4               0\n 42   9               1\n",
+      "stderr": "",
+      "lesson": "379-xgboost-2",
+      "copies": [
+        "379-xgboost-2"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Accuracy: 1.0\nPredicted: [0, 1, 0, 1]\nActual: [0, 1, 0, 1]\n km  kg  predicted_late\n  5   2               0\n 16   4               0\n 42   9               1\n",
+      "stderr": "",
+      "lesson": "380-lightgbm-2",
+      "copies": [
+        "380-lightgbm-2"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Cluster IDs: [0, 1, 0]\nMapped class predictions: ['local', 'long', 'local']\n",
+      "stderr": "",
+      "lesson": "381-k-means-classifier",
+      "copies": [
+        "381-k-means-classifier"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Labels: [0, 0, 0, 2, 2, 2, 1, 1, 1]\n        age  income  spending\ngroup                        \n0      23.3    28.0      70.7\n1      61.7    92.3      79.7\n2      43.7    58.7      43.0\n[21 25 71] -> 0\n[64 95 82] -> 1\n[26 31 68] -> 0\n",
+      "stderr": "",
+      "lesson": "382-3-2-unsupervised-learning",
+      "copies": [
+        "382-3-2-unsupervised-learning",
+        "383-common-algorithms-2",
+        "384-clustering-algorithms",
+        "385-k-means",
+        "438-clustering-diagram"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Labels: [1, 1, 1, 2, 2, 2, 0, 0, 0]\n        age  income  spending\ngroup                        \n0      61.7    92.3      79.7\n1      23.3    28.0      70.7\n2      43.7    58.7      43.0\n",
+      "stderr": "<user-home>\\AppData\\Local\\Temp\\ml-course-run-17cuwibb\\386-hierarchical-clustering\\lesson.py:46: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown\n  plt.show()\n",
+      "lesson": "386-hierarchical-clustering",
+      "copies": [
+        "386-hierarchical-clustering"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Labels: [0, 0, 0, 1, 1, 1, 2, 2, 2]\n        age  income  spending\ngroup                        \n0      23.3    28.0      70.7\n1      43.7    58.7      43.0\n2      61.7    92.3      79.7\n",
+      "stderr": "",
+      "lesson": "387-dbscan",
+      "copies": [
+        "387-dbscan"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Labels: [0, 0, 0, 2, 2, 2, 1, 1, 1]\n        age  income  spending\ngroup                        \n0      23.3    28.0      70.7\n1      61.7    92.3      79.7\n2      43.7    58.7      43.0\nFirst membership probabilities: [[1.0, 0.0, 0.0]]\n[21 25 71] -> [1. 0. 0.]\n[64 95 82] -> [0. 1. 0.]\n[26 31 68] -> [1. 0. 0.]\n",
+      "stderr": "",
+      "lesson": "388-gaussian-mixture-models-gmm",
+      "copies": [
+        "388-gaussian-mixture-models-gmm"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Variance explained: [0.94, 0.05]\nOutput shape: (8, 2)\nFirst two rows: [[-2.3, -0.19], [-1.66, -0.16]]\n[2 1 3] -> [-2.3  -0.19]\n[10  9 10] -> [2.57 0.29]\n[4 1 2] -> [-2.05  0.65]\n",
+      "stderr": "",
+      "lesson": "389-dimensionality-reduction",
+      "copies": [
+        "389-dimensionality-reduction",
+        "390-principal-component-analysis-pca",
+        "439-dimensionality-reduction-diagram"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Output shape: (8, 2)\nFirst two rows: [[-0.47999998927116394, 21.760000228881836], [-2.5999999046325684, 13.529999732971191]]\n",
+      "stderr": "<user-home>\\AppData\\Local\\Temp\\ml-course-run-tt5o0ajd\\391-t-distributed-stochastic-neighbor-embedding-t-sne\\lesson.py:36: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown\n  plt.show()\n",
+      "lesson": "391-t-distributed-stochastic-neighbor-embedding-t-sne",
+      "copies": [
+        "391-t-distributed-stochastic-neighbor-embedding-t-sne"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Training class predictions: [0, 0, 0, 1, 1, 1, 1, 1]\nOutput shape: (8, 1)\nFirst two rows: [[-3.92], [-2.91]]\n[2 1 3] -> [-3.92]\n[10  9 10] -> [3.76]\n[4 1 2] -> [-5.26]\n",
+      "stderr": "",
+      "lesson": "392-linear-discriminant-analysis-lda",
+      "copies": [
+        "392-linear-discriminant-analysis-lda"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Output shape: (8, 2)\nFirst two rows: [[-1.21, -0.82], [-0.86, -0.65]]\n[2 1 3] -> [-1.21 -0.82]\n[10  9 10] -> [1.31 1.12]\n[4 1 2] -> [-1.6   1.38]\n",
+      "stderr": "",
+      "lesson": "393-independent-component-analysis-ica",
+      "copies": [
+        "393-independent-component-analysis-ica"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Example training shipments: [[10.0, 4.15], [9.73, 3.55], [9.55, 3.5]]\nTypical / unusually large: [1, -1, -1]\n",
+      "stderr": "",
+      "lesson": "394-anomaly-detection",
+      "copies": [
+        "394-anomaly-detection",
+        "395-isolation-forest",
+        "440-anomaly-detection-diagram"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Example training shipments: [[10.0, 4.15], [9.73, 3.55], [9.55, 3.5]]\nTypical / unusually large: [1, -1, -1]\n",
+      "stderr": "",
+      "lesson": "396-one-class-svm",
+      "copies": [
+        "396-one-class-svm"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Z-scores: [0.0, 24.49, 1.63]\nFlagged: [False, True, False]\n",
+      "stderr": "",
+      "lesson": "397-z-score-algorithm",
+      "copies": [
+        "397-z-score-algorithm"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "apriori [(('bread', 'milk'), 0.6)]\nfpgrowth [(('bread', 'milk'), 0.6)]\nMilk to bread confidence: 0.75\n",
+      "stderr": "",
+      "lesson": "398-association",
+      "copies": [
+        "398-association",
+        "401-frequently-occurring-items",
+        "441-association-diagram"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "apriori [(('bread', 'milk'), 0.6)]\nMilk to bread confidence: 0.75\n",
+      "stderr": "",
+      "lesson": "399-apriori-algorithm",
+      "copies": [
+        "399-apriori-algorithm"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "fpgrowth [(('bread', 'milk'), 0.6)]\nMilk to bread confidence: 0.75\n",
+      "stderr": "",
+      "lesson": "400-frequent-pattern-growth",
+      "copies": [
+        "400-frequent-pattern-growth"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Chosen training pseudo-labels: (-1, -1, 1, 1)\nPredictions for new rows: [-1, 1, 1]\n",
+      "stderr": "",
+      "lesson": "402-3-3-semi-supervised-learning",
+      "copies": [
+        "402-3-3-semi-supervised-learning",
+        "403-common-algorithms-3",
+        "404-semi-supervised-support-vector-machines-s3vm"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Labeled / unlabeled training rows: 8 46\nHoldout accuracy: 1.0\nPredictions from new feature rows: [0, 1, 1]\n",
+      "stderr": "",
+      "lesson": "405-label-propagation",
+      "copies": [
+        "405-label-propagation"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Labeled / unlabeled training rows: 8 46\nAdded pseudo-labels: 46\nLabeled-only / self-training: 1.0 1.0\nNew guesses: [0, 1, 1]\n",
+      "stderr": "",
+      "lesson": "406-self-training",
+      "copies": [
+        "406-self-training",
+        "409-classification-semi-supervised"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Labeled / unlabeled training rows: 8 46\nLabels per view: [13, 13]\nHoldout accuracy: 1.0\nNew guesses: [0, 1, 1]\n",
+      "stderr": "",
+      "lesson": "407-co-training",
+      "copies": [
+        "407-co-training"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Added values: 5\nHoldout MAE, before / after: 0.47 0.57\nFresh estimates: [27.56, 60.9, 66.96]\n",
+      "stderr": "",
+      "lesson": "408-regression",
+      "copies": [
+        "408-regression"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": " Move  From cell Action  To cell  Reward\n    1          0  Right        1   -0.02\n    2          1  Right        2   -0.02\n    3          2  Right        3   -0.02\n    4          3  Right        4    1.00\nDiscounted return: 0.8\nFrom cell 1 move right to 2, reward = -0.02\nFrom cell 3 move right to 4, reward = 1.0\n",
+      "stderr": "",
+      "lesson": "410-3-4-reinforcement-learning",
+      "copies": [
+        "410-3-4-reinforcement-learning",
+        "411-key-concepts",
+        "418-value-function"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "The agent is the delivery robot. It follows a rule that chooses its next move.\n Start Action  Next cell  Reward  At goal\n     0   left          0   -0.02    False\n     0  right          1   -0.02    False\n     2  right          3   -0.02    False\n     3  right          4    1.00     True\n",
+      "stderr": "",
+      "lesson": "412-agent",
+      "copies": [
+        "412-agent"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "The CSV describes the track. Each row says what happens after a move.\n Start Action  Next cell  Reward  At goal\n     0   left          0   -0.02    False\n     0  right          1   -0.02    False\n     2  right          3   -0.02    False\n     3  right          4    1.00     True\n",
+      "stderr": "",
+      "lesson": "413-environment",
+      "copies": [
+        "413-environment"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Left is 0 and right is 1. Test both from the same cell.\n Start Action  Next cell  Reward  At goal\n     0   left          0   -0.02    False\n     0  right          1   -0.02    False\n     2  right          3   -0.02    False\n     3  right          4    1.00     True\n",
+      "stderr": "",
+      "lesson": "414-actions",
+      "copies": [
+        "414-actions"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "The state is the robot's current cell on the track.\n Start Action  Next cell  Reward  At goal\n     0   left          0   -0.02    False\n     0  right          1   -0.02    False\n     2  right          3   -0.02    False\n     3  right          4    1.00     True\n",
+      "stderr": "",
+      "lesson": "415-state",
+      "copies": [
+        "415-state"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "The reward is the number the robot receives after a move.\n Start Action  Next cell  Reward  At goal\n     0   left          0   -0.02    False\n     0  right          1   -0.02    False\n     2  right          3   -0.02    False\n     3  right          4    1.00     True\n",
+      "stderr": "",
+      "lesson": "416-reward",
+      "copies": [
+        "416-reward"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "A policy is a rule for choosing a move. This rule chooses right until the goal.\n Start Action  Next cell  Reward  At goal\n     0   left          0   -0.02    False\n     0  right          1   -0.02    False\n     2  right          3   -0.02    False\n     3  right          4    1.00     True\n",
+      "stderr": "",
+      "lesson": "417-policy",
+      "copies": [
+        "417-policy"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Best actions (0 left, 1 right): [1, 1, 1, 1]\nState values: [0.8, 0.86, 0.93, 1.0]\nMoves for test starts: [1, 1, 1]\n",
+      "stderr": "",
+      "lesson": "419-common-algorithms-4",
+      "copies": [
+        "419-common-algorithms-4",
+        "420-q-learning",
+        "425-model-free"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Replay transitions: 8\nDQN policy: [1, 1, 1, 1]\nMoves for test starts: [1, 1, 1]\n",
+      "stderr": "",
+      "lesson": "421-deep-q-networks-dqn",
+      "copies": [
+        "421-deep-q-networks-dqn"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Policy gradient chosen button: 1\n",
+      "stderr": "",
+      "lesson": "422-policy-gradient-methods",
+      "copies": [
+        "422-policy-gradient-methods",
+        "426-policy-optimization"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Policy gradient chosen button: 1\nActor-Critic chosen button: 1\nEstimated policy value: 0.72\n",
+      "stderr": "",
+      "lesson": "423-actor-critic",
+      "copies": [
+        "423-actor-critic"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "First-step visits: [17, 223]\nRecommended first action: 1\n",
+      "stderr": "",
+      "lesson": "424-monte-carlo-tree-search-mcts",
+      "copies": [
+        "424-monte-carlo-tree-search-mcts"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Given first-action values: [0.74, 0.8]\nBest action: 1\nLearned first-action values: [0.74, 0.8]\nBest action: 1\nStart 0, planned values: [0.7403087499999998, 0.8003249999999998]\nStart 1, planned values: [0.7403087499999998, 0.8634999999999999]\nStart 3, planned values: [0.8634999999999999, 1.0]\n",
+      "stderr": "",
+      "lesson": "427-model-based",
+      "copies": [
+        "427-model-based"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "learn-the-model first-action values: [0.74, 0.8]\nBest action: 1\nStart 0, planned values: [0.7403087499999998, 0.8003249999999998]\nStart 1, planned values: [0.7403087499999998, 0.8634999999999999]\nStart 3, planned values: [0.8634999999999999, 1.0]\n",
+      "stderr": "",
+      "lesson": "428-learn-the-model",
+      "copies": [
+        "428-learn-the-model"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "given-the-model first-action values: [0.74, 0.8]\nBest action: 1\nStart 0, planned values: [0.7403087499999998, 0.8003249999999998]\nStart 1, planned values: [0.7403087499999998, 0.8634999999999999]\nStart 3, planned values: [0.8634999999999999, 1.0]\n",
+      "stderr": "",
+      "lesson": "429-given-the-model",
+      "copies": [
+        "429-given-the-model"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Worked examples\n                                      problem      feedback learning_category\n                        Predict delivery time known answers        Supervised\n          Group routes by distance and weight    no answers      Unsupervised\n             Tag the remaining delivery notes  some answers   Semi-supervised\nLearn which corridor reaches the loading door       rewards     Reinforcement\n\nYour examples\n                                problem      feedback learning_category\n                 Predict package weight known answers        Supervised\n           Find unusual delivery routes    no answers      Unsupervised\nClassify photos with a few known labels  some answers   Semi-supervised\n      Learn parcel sorting with scoring       rewards     Reinforcement\n",
+      "stderr": "",
+      "lesson": "430-summary-of-machine-learning-categories",
+      "copies": [
+        "430-summary-of-machine-learning-categories"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Simple predictions: [45.0, 51.2]\nMultiple-predictor predictions: [31.0, 42.0]\nTwo outcomes per row: [[31.0, 1.55], [42.0, 1.95]]\n distance_km  weight_kg   prediction\n           5          2 [27.5, 0.85]\n          13          3  [43.5, 2.1]\n          20          7 [70.0, 3.35]\n",
+      "stderr": "",
+      "lesson": "431-machine-learning-algorithms",
+      "copies": [
+        "431-machine-learning-algorithms"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Simple predictions: [45.0, 51.2]\n distance_km  minutes\n           5     29.5\n          12     51.2\n          20     76.0\n",
+      "stderr": "",
+      "lesson": "432-simple-linear-regression",
+      "copies": [
+        "432-simple-linear-regression",
+        "434-simple-linear-regression-one-input"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Simple predictions: [45.0, 51.2]\nMultiple-predictor predictions: [31.0, 42.0]\nTwo outcomes per row: [[31.0, 1.55], [42.0, 1.95]]\n distance_km  weight_kg  predicted_minutes  predicted_fuel_litres\n           5          2               27.5                   0.85\n          13          3               43.5                   2.10\n          20          7               70.0                   3.35\n",
+      "stderr": "",
+      "lesson": "433-multivariate-regression",
+      "copies": [
+        "433-multivariate-regression"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Simple predictions: [45.0, 51.2]\nMultiple-predictor predictions: [31.0, 42.0]\nTwo outcomes per row: [[31.0, 1.55], [42.0, 1.95]]\n distance_km  weight_kg  predicted_minutes\n           5          2               27.5\n          13          3               43.5\n          20          7               70.0\n",
+      "stderr": "",
+      "lesson": "435-multiple-linear-regression",
+      "copies": [
+        "435-multiple-linear-regression"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "New inputs and predictions:\n km  kg  predicted_minutes\n  5   2              22.02\n 16   4              42.33\n 42   9              90.87\nLinearRegression MAE: 1.26\nFirst actual / predicted: 72.0 69.9\n",
+      "stderr": "",
+      "lesson": "436-regression-diagram",
+      "copies": [
+        "436-regression-diagram"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "    Plan  Test orders  Shared shipments  Shared customers  Test is entirely later  Test MAE (min)\n  random          105                 0                63                   False            2.92\ncustomer          105                 0                 0                   False            5.91\n    time          105                 0                84                    True            2.50\n\nRandom: independent orders in the same setting. Customer: customers the model has never seen.\nTime: later orders. Their customers may already be known. Pick the plan before comparing scores.\n",
+      "stderr": "",
+      "lesson": "442-choose-the-right-split",
+      "copies": [
+        "442-choose-the-right-split"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": " Depth  Training MAE  Validation MAE\n     1          5.44            4.79\n     2          3.68            3.24\n     3          2.75            2.99\n     5          1.92            3.57\n    10          0.14            4.21\n    25          0.01            4.30\nSelected depth: 3. Test MAE: 3.91 minutes.\nOpen validation-curve.png. The vertical gap measures how differently the two sets behaved.\n",
+      "stderr": "",
+      "lesson": "443-learn-to-spot-overfitting",
+      "copies": [
+        "443-learn-to-spot-overfitting"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Validation urgent share: 17.1%. Always silent accuracy: 82.9%; recall: 0%.\nValidation choice: cutoff 0.192; precision 40.0%; recall 70.1%.\n                Rule  Cutoff  Urgent caught  Urgent missed  False alarms  Precision  Recall\n             Default   0.500             38            105            26      0.594   0.266\nChosen on validation   0.192            104             39           199      0.343   0.727\nValidation average precision: 0.504\n",
+      "stderr": "",
+      "lesson": "444-rare-event-threshold",
+      "copies": [
+        "444-rare-event-threshold"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Raw forest test Brier score: 0.1081\nAdjusted forest test Brier score: 0.1083\nLower Brier score is better on this probability check. Changing bins changes the visual, not the score.\n",
+      "stderr": "",
+      "lesson": "445-calibrate-probabilities",
+      "copies": [
+        "445-calibrate-probabilities"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Test deliveries: 180. First test day: 2025-02-24.\n  Method  MAE (min)  RMSE (min)  R squared\nbaseline      23.70       28.43      -0.00\n   model       2.89        3.73       0.98\n\nBy route\n        orders  model_mae  baseline_mae\nroute                                  \nLong        61       2.57         31.79\nMedium      63       3.13          9.92\nShort       56       2.99         30.38\n\nBy weight\n         orders  model_mae  baseline_mae\nweight                                  \nHeavy       122       2.61         23.06\nLight        46       2.73         25.93\nMissing      12       6.39         21.66\n\nBy zone\n       orders  model_mae  baseline_mae\nzone                                  \nNorth      68       2.62         24.74\nSouth      56       3.04         25.97\nWest       56       3.09         20.16\nLook at the order count before drawing a conclusion about a group.\n",
+      "stderr": "",
+      "lesson": "446-larger-regression-evaluation",
+      "copies": [
+        "446-larger-regression-evaluation"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Train: 430. Validation: 140. Test: 150.\nTraining median validation MAE: 22.36 minutes.\nRidge validation MAE: 2.98 minutes.\nSelected: Ridge. Final test MAE: 2.80 minutes.\nSaved delivery_model.joblib and model-info.json. Load the file you generated in this folder.\n\nLocal service results\n15 km, North: 200 {'predicted_minutes': 32.3, 'model': 'Ridge'}\n45 km, South: 200 {'predicted_minutes': 81.4, 'model': 'Ridge'}\n65 km, West: 200 {'predicted_minutes': 108.2, 'model': 'Ridge'}\n90 km, North: 422 {'detail': \"That distance is outside the model's training range.\"}\n-4 km, West: 422 {'detail': 'Enter a nonnegative distance.'}\n12 km, Unknown: 422 {'detail': 'Choose one of the known zones.'}\n\nLater MAE by zone\n       orders   mae\nzone               \nNorth      72  4.97\nSouth      67  4.12\nWest       41  9.07\nLater batch: 180 orders, MAE 5.59 minutes.\nChange from final test: +2.78 minutes.\nDecision: INVESTIGATE. The practice alert triggers above a 2-minute increase.\n",
+      "stderr": "C:\\Gehan\\Projects\\DeveloperResources\\examples\\machine-learning\\ml-practical-lessons\\.venv\\Lib\\site-packages\\fastapi\\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.\n  from starlette.testclient import TestClient as TestClient  # noqa\n",
+      "lesson": "447-delivery-model-capstone",
+      "copies": [
+        "447-delivery-model-capstone"
+      ],
+      "matches_expected": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Rows to teach: 16. To choose: 4. To check: 4.\nAverage validation error: model 0.70 min, baseline 8.75 min.\nChosen model: linear regression.\nAverage error on the final test rows: 0.38 minutes.\nSaved delivery_model.joblib. Next run: python test_delivery_model.py\n",
+      "stderr": "",
+      "lesson": "train-and-test",
+      "copies": [
+        "train-and-test"
+      ]
+    }
+  ]
+}

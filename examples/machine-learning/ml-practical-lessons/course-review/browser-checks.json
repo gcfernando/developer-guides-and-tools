@@ -1,0 +1,10 @@
+{
+  "checked_at_utc": "2026-11-28T08:29:10.427Z",
+  "browser": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+  "status": "unverified: browser check did not complete",
+  "error": "Error: EBUSY: resource busy or locked, open 'C:\\Users\\Gehan\\AppData\\Local\\Temp\\ml-real-browser-ZDO9u6\\DevToolsActivePort'\n    at Object.readFileSync (node:fs:440:20)\n    at main (C:\\Gehan\\Projects\\DeveloperResources\\examples\\machine-learning\\ml-practical-lessons\\course_tools\\check_browser_real.cjs:41:19)",
+  "browser_diagnostics": "[34456:30368:1128/092910.287:ERROR:components\\os_crypt\\async\\browser\\os_crypt_win.cc:63] Failed to encrypt: The system cannot find the file specified. (0x2)\r\n[34456:33100:1128/092910.354:ERROR:chrome\\installer\\util\\google_update_settings_win.cc:270] Failed opening key Software\\Google\\Update\\ClientStateMedium\\{8A69D345-D564-463c-AFF1-A69D9E530F96} to set usagestats; result: 5\r\n\r\nDevTools listening on ws://127.0.0.1:49171/devtools/browser/979304cd-fed7-4ff1-90e4-6442cfcc438e\r\n",
+  "limits": [
+    "No passing real-browser result is claimed. Structural page checks run separately."
+  ]
+}

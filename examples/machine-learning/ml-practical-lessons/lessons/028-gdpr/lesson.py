@@ -23,7 +23,7 @@ folder.mkdir(exist_ok=True)
 rows = pd.read_csv(input_path)
 shared_columns = ["order_id", "minutes"]
 csv_path = folder / "deliveries.csv"
-rows[shared_columns].to_csv(csv_path, index=False)
+rows[shared_columns].to_csv(csv_path, index=False, lineterminator="\n")
 
 (folder / "message.txt").write_text("Package arrived", encoding="utf-8")
 image = Image.new("RGB", (16, 16), "skyblue")

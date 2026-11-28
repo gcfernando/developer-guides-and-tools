@@ -8,17 +8,31 @@ Turn Low, Medium and High into ordered numbers before predicting a review action
 
 ## Before you start
 
-Tell a category name from a measured number.
+Explain why low, medium and high have an order.
 
-Use the [main learning path](../../LEARNING-PATH.md) if you have not learned this yet. For extra topics, read [the extra-topic guide](../../ELECTIVES.md). In the repository, these links open the course guides. If you downloaded a ZIP, open README.html for the browser links. Keep the extracted lesson folder directly inside the complete course folder.
+Use the [learning path](../../LEARNING-PATH.md) to find the earlier skill, the [word list](../../GLOSSARY.md) for a term, and [Setup](../../SETUP.md) for computer steps. Extra-topic prerequisites and bridges are in [Extra topics](../../ELECTIVES.md). In an extracted ZIP, open README.html for the browser links and keep this folder directly inside the complete course folder.
 
 ## The idea in simple words
 
-Unordered names get separate 0-or-1 columns. Ordered names such as low, medium and high can use an explicit order. LabelEncoder is for answer labels.
+Ordinal encoding records an explicit order between input categories. Label encoding gives identifiers to answer classes.
+
+**Why and when.** Use an order only when the field meaning supports it. The model may also impose a spacing assumption on those numbers.
+
+**A worked example to follow.** Low, Medium, High become 0, 1, 2 in this exercise. LabelEncoder separately turns the wait/review answers into class IDs and reverses predictions to readable names.
+
+**Input and output.** The supplied sample fields are `priority`, `action`. In that field order, one original row is:
+
+```text
+Low | wait
+```
+
+`(missing)` means a blank, not zero. The result table below belongs to the original supplied files.
+
+**Follow the Python.** Open the complete [lesson.py](lesson.py) beside these instructions. Keep inputs apart from measured answers. Follow this script’s split and fit, then trace the saved preparation into the held-back result and any new request. A request must not supply its own training answer. The [requirements file](requirements.txt) lists its packages. The next section gives exact run commands; use the same course Python to install and run.
 
 ## Guess first
 
-Should red, green and blue receive a made-up low-to-high order? Write your answer before running the script.
+Could North, South and West be ordered 0, 1, 2 because a terminal prints them that way? Write a reason before running or opening the answer.
 
 ## Run one step at a time
 
@@ -58,11 +72,19 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 ## Explain the result
 
-<details>
-<summary>Read the answer after trying</summary>
+**Common mistakes and limits.** Codes 0, 1, 2 do not prove that the gap between low and medium equals the gap between medium and high. Unordered colours need a different representation.
 
-No. Use separate columns when there is no real order.
+<details>
+<summary>Check your choice and reason</summary>
+
+No. Alphabetical or display order is not a real scale. Use separate columns or another justified categorical representation.
 
 </details>
 
-You can move on when you can explain the goal, the changed value and why the result did or did not change. Then return to the next box in the main learning path.
+After the guided file change above, close the notes and explain the same decision for a different supplied row. State one condition that makes this method unsuitable. If you cannot explain the reason, repeat the small worked example before adding more code.
+
+
+
+<!-- teaching-note:start -->
+<!-- teaching-profile:ordinal -->
+<!-- teaching-note:end -->

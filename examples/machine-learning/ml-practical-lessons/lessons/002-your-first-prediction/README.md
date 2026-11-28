@@ -8,17 +8,31 @@ Predict how long a 4 km delivery will take, then check the model against two tri
 
 ## Before you start
 
-Read a table and add small numbers.
+Read one row and multiply a small number by two.
 
-Use the [main learning path](../../LEARNING-PATH.md) if you have not learned this yet. For extra topics, read [the extra-topic guide](../../ELECTIVES.md). In the repository, these links open the course guides. If you downloaded a ZIP, open README.html for the browser links. Keep the extracted lesson folder directly inside the complete course folder.
+Use the [learning path](../../LEARNING-PATH.md) to find the earlier skill, the [word list](../../GLOSSARY.md) for a term, and [Setup](../../SETUP.md) for computer steps. Extra-topic prerequisites and bridges are in [Extra topics](../../ELECTIVES.md). In an extracted ZIP, open README.html for the browser links and keep this folder directly inside the complete course folder.
 
 ## The idea in simple words
 
-Distance is known before the trip. The measured time is the answer. Training learns a rule; prediction uses it.
+A prediction is an estimate made from inputs. Training learns the rule from completed examples.
+
+**Why and when.** Use a prediction when the answer is not yet known. A fixed rule is enough when the rule is already agreed.
+
+**A worked example to follow.** A trip of 4 km has no measured time yet. The tiny training table follows 10 + 2 × distance, so the estimate is 18 minutes. Compare a completed trip with its recorded time before trusting a rule.
+
+**Input and output.** The supplied sample fields are `distance_km`, `minutes`. In that field order, one original row is:
+
+```text
+1 | 12
+```
+
+`(missing)` means a blank, not zero. The result table below belongs to the original supplied files.
+
+**Follow the Python.** Open the complete [lesson.py](lesson.py) beside these instructions. Keep inputs apart from measured answers. Follow this script’s split and fit, then trace the saved preparation into the held-back result and any new request. A request must not supply its own training answer. The [requirements file](requirements.txt) lists its packages. The next section gives exact run commands; use the same course Python to install and run.
 
 ## Guess first
 
-What happens to the guess when distance rises from 4 to 8? Write your answer before running the script.
+Without running Python, predict 8 km. Which field must stay unknown until that trip finishes? Write a reason before running or opening the answer.
 
 ## Run one step at a time
 
@@ -64,15 +78,16 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 ## Explain the result
 
-<details>
-<summary>Read the answer after trying</summary>
+**Common mistakes and limits.** These exact made-up numbers show the calculation. They do not show how traffic or a new town will affect a real trip.
 
-It rises from 18 to 26 minutes in this made-up example. Real times can vary.
+<details>
+<summary>Check your choice and reason</summary>
+
+The estimate is 26 minutes. The actual time remains unknown. Editing a request does not create a measured answer.
 
 </details>
 
-You can move on when you can explain the goal, the changed value and why the result did or did not change. Then return to the next box in the main learning path.
-
+After the guided file change above, close the notes and explain the same decision for a different supplied row. State one condition that makes this method unsuitable. If you cannot explain the reason, repeat the small worked example before adding more code.
 
 ## 📋 Sample data
 
@@ -91,3 +106,7 @@ You can move on when you can explain the goal, the changed value and why the res
 | 4 |
 | 7 |
 | 9 |
+
+<!-- teaching-note:start -->
+<!-- teaching-profile:first_prediction -->
+<!-- teaching-note:end -->

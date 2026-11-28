@@ -8,17 +8,31 @@ Use Box-Cox to reshape positive readings before predicting cost.
 
 ## Before you start
 
-Understand scaling, a baseline and validation.
+Read a graph and distinguish zero from a positive value.
 
-Use the [main learning path](../../LEARNING-PATH.md) if you have not learned this yet. For extra topics, read [the extra-topic guide](../../ELECTIVES.md). In the repository, these links open the course guides. If you downloaded a ZIP, open README.html for the browser links. Keep the extracted lesson folder directly inside the complete course folder.
+Use the [learning path](../../LEARNING-PATH.md) to find the earlier skill, the [word list](../../GLOSSARY.md) for a term, and [Setup](../../SETUP.md) for computer steps. Extra-topic prerequisites and bridges are in [Extra topics](../../ELECTIVES.md). In an extracted ZIP, open README.html for the browser links and keep this folder directly inside the complete course folder.
 
 ## The idea in simple words
 
-Use a transformation only for a stated reason. Compare it with unchanged inputs on the same validation rows. Learn every data-based rule inside training.
+Power transformations reshape numerical gaps using parameters learned from training data.
+
+**Why and when.** Try them when a skewed feature or model assumptions suggest a reason, and compare validation evidence.
+
+**A worked example to follow.** Box–Cox requires strictly positive values. Yeo–Johnson accepts zero and negative values. The fitted transformation is reused for new signal readings before the cost model.
+
+**Input and output.** The supplied sample fields are `signal`, `cost`. In that field order, one original row is:
+
+```text
+1 | 10
+```
+
+`(missing)` means a blank, not zero. The result table below belongs to the original supplied files.
+
+**Follow the Python.** Open the complete [lesson.py](lesson.py) beside these instructions. Keep inputs apart from measured answers. Follow this script’s split and fit, then trace the saved preparation into the held-back result and any new request. A request must not supply its own training answer. The [requirements file](requirements.txt) lists its packages. The next section gives exact run commands; use the same course Python to install and run.
 
 ## Guess first
 
-Must all eight transformations be applied? Write your answer before running the script.
+A feature contains −4, 0 and 14. Which of these two methods can accept it directly? Write a reason before running or opening the answer.
 
 ## Run one step at a time
 
@@ -59,15 +73,16 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 ## Explain the result
 
-<details>
-<summary>Read the answer after trying</summary>
+**Common mistakes and limits.** A more symmetric-looking histogram is not proof of better predictions. Fit parameters within training, and do not shift inputs arbitrarily merely to make a command run.
 
-No. Start simple. Compare a suitable candidate and keep separate final test rows.
+<details>
+<summary>Check your choice and reason</summary>
+
+Yeo–Johnson. Box–Cox cannot directly accept its nonpositive entries. Suitability and validation still decide whether transforming is useful.
 
 </details>
 
-You can move on when you can explain the goal, the changed value and why the result did or did not change. Then return to the next box in the main learning path.
-
+After the guided file change above, close the notes and explain the same decision for a different supplied row. State one condition that makes this method unsuitable. If you cannot explain the reason, repeat the small worked example before adding more code.
 
 ## 📋 Sample data
 
@@ -91,3 +106,7 @@ Showing the first 8 of 9 rows. The CSV has the full sample.
 | 3 |
 | 15 |
 | 40 |
+
+<!-- teaching-note:start -->
+<!-- teaching-profile:power -->
+<!-- teaching-note:end -->

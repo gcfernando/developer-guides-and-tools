@@ -8,17 +8,31 @@ Drop selected common words such as the and is, then test a delivery or billing m
 
 ## Before you start
 
-Read a message as text. Start with counting one word.
+Count a word in a short sentence.
 
-Use the [main learning path](../../LEARNING-PATH.md) if you have not learned this yet. For extra topics, read [the extra-topic guide](../../ELECTIVES.md). In the repository, these links open the course guides. If you downloaded a ZIP, open README.html for the browser links. Keep the extracted lesson folder directly inside the complete course folder.
+Use the [learning path](../../LEARNING-PATH.md) to find the earlier skill, the [word list](../../GLOSSARY.md) for a term, and [Setup](../../SETUP.md) for computer steps. Extra-topic prerequisites and bridges are in [Extra topics](../../ELECTIVES.md). In an extracted ZIP, open README.html for the browser links and keep this folder directly inside the complete course folder.
 
 ## The idea in simple words
 
-A model needs numbers. Counts make one column for a known word. TF-IDF gives different weights to common and less common words. Cleanup can lose meaning.
+A stop-word list removes selected common words before the model sees counts.
+
+**Why and when.** Try it only if those words add little useful information for the task.
+
+**A worked example to follow.** The explicit list removes the, and, is. The example keeps not, so the phrase not here retains a clue that the parcel is absent.
+
+**Input and output.** The supplied sample fields are `message`, `category`. In that field order, one original row is:
+
+```text
+MY Parcel Is Late!!! | delivery
+```
+
+`(missing)` means a blank, not zero. The result table below belongs to the original supplied files.
+
+**Follow the Python.** Open the complete [lesson.py](lesson.py) beside these instructions. Keep inputs apart from measured answers. Follow this script’s split and fit, then trace the saved preparation into the held-back result and any new request. A request must not supply its own training answer. The [requirements file](requirements.txt) lists its packages. The next section gives exact run commands; use the same course Python to install and run.
 
 ## Guess first
 
-Should we always remove the word not? Write your answer before running the script.
+Would a stop list that removes not be safe for distinguishing late from not late? Write a reason before running or opening the answer.
 
 ## Run one step at a time
 
@@ -60,15 +74,16 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 ## Explain the result
 
-<details>
-<summary>Read the answer after trying</summary>
+**Common mistakes and limits.** A general stop list may remove negation or words useful for your language and task. Shorter text is not automatically a better representation.
 
-No. Removing it can reverse meaning. Test cleanup for the task.
+<details>
+<summary>Check your choice and reason</summary>
+
+Not without evidence. Those phrases could become identical. Compare token lists and validation mistakes before deciding.
 
 </details>
 
-You can move on when you can explain the goal, the changed value and why the result did or did not change. Then return to the next box in the main learning path.
-
+After the guided file change above, close the notes and explain the same decision for a different supplied row. State one condition that makes this method unsuitable. If you cannot explain the reason, repeat the small worked example before adding more code.
 
 ## 📋 Sample data
 
@@ -90,3 +105,7 @@ You can move on when you can explain the goal, the changed value and why the res
 | The parcel is late! |
 | I need a refund for two charges. |
 | WHERE ARE MY PACKAGES? |
+
+<!-- teaching-note:start -->
+<!-- teaching-profile:stop_words -->
+<!-- teaching-note:end -->

@@ -8,17 +8,31 @@ Compare random, customer-grouped, and chronological splits on the same delivery 
 
 ## Before you start
 
-Explain training and test roles.
+Read a held-back row and error in minutes.
 
-Use the [main learning path](../../LEARNING-PATH.md) if you have not learned this yet. For extra topics, read [the extra-topic guide](../../ELECTIVES.md). In the repository, these links open the course guides. If you downloaded a ZIP, open README.html for the browser links. Keep the extracted lesson folder directly inside the complete course folder.
+Use the [learning path](../../LEARNING-PATH.md) to find the earlier skill, the [word list](../../GLOSSARY.md) for a term, and [Setup](../../SETUP.md) for computer steps. Extra-topic prerequisites and bridges are in [Extra topics](../../ELECTIVES.md). In an extracted ZIP, open README.html for the browser links and keep this folder directly inside the complete course folder.
 
 ## The idea in simple words
 
-Choose a split for the question, not for its best-looking score. Random rows, new customers and later dates are different questions.
+A split defines the new-case question: comparable orders, unseen customers or later dates.
+
+**Why and when.** Choose the question before inspecting which split produces the best score.
+
+**A worked example to follow.** MAE averages mistake sizes: actual 30 versus prediction 27 is an absolute error of 3 minutes. The script prints shared shipment IDs, shared customer IDs and date order before MAE.
+
+**Input and output.** The supplied sample fields are `shipment_id`, `customer_id`, `date`, `distance_km`, `weight_kg`, `actual_minutes`. In that field order, one original row is:
+
+```text
+S0000 | C001 | 2025-01-01 | 5.36 | 17.07 | 35.9
+```
+
+`(missing)` means a blank, not zero. The result table below belongs to the original supplied files.
+
+**Follow the Python.** Open the complete [lesson.py](lesson.py) beside these instructions. Keep inputs apart from measured answers. Follow this script’s split and fit, then trace the saved preparation into the held-back result and any new request. A request must not supply its own training answer. The [requirements file](requirements.txt) lists its packages. The next section gives exact run commands; use the same course Python to install and run.
 
 ## Guess first
 
-Which split tests new customers? Write your answer before running the script.
+A model must handle new customers next month. What checks can a random split miss? Write a reason before running or opening the answer.
 
 ## Run one step at a time
 
@@ -59,11 +73,19 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 ## Explain the result
 
-<details>
-<summary>Read the answer after trying</summary>
+**Common mistakes and limits.** No shared shipment IDs is not sufficient for every job. Customer ID is deliberately included here to illustrate known versus unseen customers, not as a universal input recommendation.
 
-Keep customer groups separate.
+<details>
+<summary>Check your choice and reason</summary>
+
+Keep customers unseen for the new-customer question, and consider later-time evaluation for future use. Design combined evaluation for the actual job.
 
 </details>
 
-You can move on when you can explain the goal, the changed value and why the result did or did not change. Then return to the next box in the main learning path.
+After the guided file change above, close the notes and explain the same decision for a different supplied row. State one condition that makes this method unsuitable. If you cannot explain the reason, repeat the small worked example before adding more code.
+
+
+
+<!-- teaching-note:start -->
+<!-- teaching-profile:split_choice -->
+<!-- teaching-note:end -->

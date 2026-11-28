@@ -8,17 +8,31 @@ Read the dataset name from the PDF and inspect the invented flower measurements 
 
 ## Before you start
 
-Finish the main preparation and checking modules.
+Read the named fields and explain the preparation taught earlier.
 
-Use the [main learning path](../../LEARNING-PATH.md) if you have not learned this yet. For extra topics, read [the extra-topic guide](../../ELECTIVES.md). In the repository, these links open the course guides. If you downloaded a ZIP, open README.html for the browser links. Keep the extracted lesson folder directly inside the complete course folder.
+Use the [learning path](../../LEARNING-PATH.md) to find the earlier skill, the [word list](../../GLOSSARY.md) for a term, and [Setup](../../SETUP.md) for computer steps. Extra-topic prerequisites and bridges are in [Extra topics](../../ELECTIVES.md). In an extracted ZIP, open README.html for the browser links and keep this folder directly inside the complete course folder.
 
 ## The idea in simple words
 
-These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+A source note states where a table came from; a description explains what one row and each field mean.
+
+**Why and when.** Use it before treating the flower measurements as evidence about a real population.
+
+**A worked example to follow.** The flower measurements exercise uses sepal and petal measurements. Its output is species. These are original invented practice rows, even where the folder preserves an old benchmark name. The flower names star, fan and bell are invented classes with no ranking.
+
+**Input and output.** The supplied sample fields are `sepal_length`, `sepal_width`, `petal_length`, `petal_width`, `species`. In that field order, one original row is:
+
+```text
+3 | 2 | 1 | .2 | star
+```
+
+`(missing)` means a blank, not zero. The result table below belongs to the original supplied files.
+
+**Follow the Python.** Open the complete [lesson.py](lesson.py) beside these instructions. Trace the named source fields into the printed table, file or request result. Check names and counts before interpreting what the program reports. The [requirements file](requirements.txt) lists its packages. The next section gives exact run commands; use the same course Python to install and run.
 
 ## Guess first
 
-Do two correct examples prove that the model will work for a real population? Write your answer before running the script.
+Write a source note for this flower measurements exercise: are the rows invented, what does one row represent, and what does the final answer mean? Write a reason before running or opening the answer.
 
 ## Run one step at a time
 
@@ -64,15 +78,16 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 ## Explain the result
 
-<details>
-<summary>Read the answer after trying</summary>
+**Common mistakes and limits.** Do not claim that a historical benchmark was downloaded or that a made-up label was measured. The separate Wine project has its own real source and licence.
 
-No. They show the calculation. Check more suitable data and describe what is missing.
+<details>
+<summary>Check your choice and reason</summary>
+
+Say that the rows were created for this workbook, name the row entity and target, and state the limitation. A familiar folder name is not proof of provenance.
 
 </details>
 
-You can move on when you can explain the goal, the changed value and why the result did or did not change. Then return to the next box in the main learning path.
-
+After the guided file change above, close the notes and explain the same decision for a different supplied row. State one condition that makes this method unsuitable. If you cannot explain the reason, repeat the small worked example before adding more code.
 
 ## 📋 Sample data
 
@@ -86,3 +101,7 @@ You can move on when you can explain the goal, the changed value and why the res
 | 6.2 | 3.1 | 5.2 | 4.6 | bell |
 | 4.7 | 2.2 | 3.2 | .9 | fan |
 | 5.9 | 2.9 | 4.9 | 1.9 | bell |
+
+<!-- teaching-note:start -->
+<!-- teaching-profile:dataset_284 -->
+<!-- teaching-note:end -->

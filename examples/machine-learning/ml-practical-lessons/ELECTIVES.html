@@ -5,11 +5,13 @@
 html[data-theme=light]{color-scheme:light;--bg:#f5f7fa;--panel:#fff;--text:#203346;--muted:#4e6274;--line:#cbd6df;--link:#145b91}
 html[data-theme=dark]{color-scheme:dark;--bg:#111c26;--panel:#192936;--text:#e6edf4;--muted:#b9c8d7;--line:#455d70;--link:#93caff}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:18px/1.7 system-ui,sans-serif}header,main{max-width:1100px;margin:auto;padding:20px 28px}header{border-bottom:1px solid var(--line)}nav{display:flex;flex-wrap:wrap;gap:10px 22px}main{padding-bottom:90px}h1,h2,h3,h4,h5,h6{line-height:1.3;scroll-margin-top:20px}h1{font-size:2.2rem}h2{font-size:1.65rem;margin-top:2.7rem}h3{font-size:1.35rem}h4,h5,h6{font-size:1.15rem}p,li{max-width:86ch}li{margin:.35rem 0}a{color:var(--link);text-underline-offset:.15em}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #d78d13;outline-offset:3px}.skip{position:absolute;top:-100px}.skip:focus{top:0;background:var(--panel);padding:12px}table{border-collapse:collapse;width:100%;font-size:.95rem;background:var(--panel)}th,td{padding:10px 14px;text-align:left;border:1px solid var(--line);vertical-align:top}.table-frame{overflow-x:auto;margin:20px 0}code{font-size:.9em;overflow-wrap:anywhere}pre{background:var(--panel);border:1px solid var(--line);padding:18px;overflow-x:auto;line-height:1.5}pre code{overflow-wrap:normal}img{max-width:100%;height:auto;background:white}details{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:15px 20px;margin:18px 0}summary{cursor:pointer;font-weight:650}.tools{padding:18px;border:1px solid var(--line);background:var(--panel);margin:20px 0}.tools label{display:block}.tools input{width:min(100%,600px)}input,select,button{font:inherit;padding:7px 12px;border:1px solid var(--line);border-radius:5px;background:var(--panel);color:var(--text)}button{cursor:pointer}.copy{font-size:.8rem;float:right}.hint{color:var(--muted);font-size:.9rem}.toc ul{padding-left:22px}.toc{border-left:4px solid var(--line);padding-left:15px;max-height:420px;overflow:auto}.progress{height:4px;background:var(--link);position:fixed;left:0;top:0;z-index:10;width:0}.checklist-item{list-style:none}.checklist-item input{width:auto;margin-right:10px}[hidden]{display:none!important}@media(max-width:650px){body{font-size:17px}header,main{padding:16px}h1{font-size:1.8rem}th,td{padding:8px}.tools input{width:100%}}@media print{body{font-size:11pt;background:white;color:#111}header,.tools,.copy,.progress{display:none}main{padding:0;max-width:none}pre{white-space:pre-wrap}a{color:inherit}details{break-inside:avoid}h2,h3{break-after:avoid}}
+
+.teaching-visual{margin:2rem 0;padding:1rem;border:1px solid var(--line);border-radius:10px;background:var(--panel)}.teaching-visual figcaption{font-weight:650;margin-bottom:.6rem}.visual-flow{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:1rem;padding:0;list-style:none;counter-reset:visual-step}.visual-flow li{padding:1rem;border:1px solid var(--line);border-radius:8px;counter-increment:visual-step}.visual-flow li::before{content:'Step ' counter(visual-step);display:block;font-size:.85em;font-weight:700}.visual-options li::before{content:"Option " counter(visual-step)}.visual-flow strong{display:block}.visual-help{font-size:.95rem}.visual-actions{display:flex;gap:1rem;flex-wrap:wrap;align-items:center}.visual-dialog{width:min(98vw,1500px);max-width:none;max-height:96vh;padding:1rem;background:var(--panel);color:var(--text);border:2px solid var(--line)}.visual-dialog::backdrop{background:#102032cc}.visual-dialog img{max-width:none;width:auto;min-width:100%;height:auto}.visual-dialog .image-scroll{overflow:auto;max-height:78vh}.visual-dialog header{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.25rem;max-width:none}.visual-dialog button{position:sticky;right:0}.visual-caption-detail{font-weight:400}.table-frame:focus-visible{outline:3px solid #d78d13;outline-offset:3px}.table-frame table{margin:0}.visual-data{font-size:.95rem}.visual-data th{white-space:normal}.visual-source{overflow-wrap:anywhere}@media(max-width:650px){.teaching-visual{margin:1.5rem 0;padding:.7rem}.visual-flow{grid-template-columns:1fr}.visual-help{font-size:1rem}}@media print{.visual-actions,.visual-dialog{display:none}.teaching-visual{break-inside:avoid}.visual-data[open]{display:block}}
 </style></head><body><a class="skip" href="#content">Skip to the lesson</a><div class="progress" aria-hidden="true"></div><header><nav aria-label="Course pages"><a href="START-HERE.html">Start here</a><a href="LEARNING-PATH.html">Learning path</a><a href="SETUP.html">Setup</a><a href="GLOSSARY.html">Word list</a><a href="Data-Science-and-Machine-Learning.html#lesson-downloads">Lesson library</a><button id="theme" type="button">Change colour theme</button></nav></header><main id="content"><h1 id="extra-topics-one-small-step-at-a-time">Extra topics, one small step at a time</h1>
 <p><a href="LEARNING-PATH.html">Learning path</a> · <a href="GLOSSARY.html">Word list</a></p>
 <p>These topics are optional. Finish the main path first. A technical name is useful for looking things up. You do not need to remember every name now.</p>
 <p>Before starting an extra topic, explain its small first example on paper. If that is hard, use the named earlier skill first.</p>
-<div aria-label="Scrollable table" class="table-frame" role="region" tabindex="0"><table>
+<div aria-label="Extra topics, one small step at a time, table 1. Scroll horizontally if needed." class="table-frame"><table>
 <thead>
 <tr>
 <th>Topic</th>
@@ -183,11 +185,76 @@ html[data-theme=dark]{color-scheme:dark;--bg:#111c26;--panel:#192936;--text:#e6e
 <p>For groups, try two choices of K, where K is the number of centres. Then try data without clear groups. Compare profiles and whether small changes produce very different groups. A silhouette score describes separation under a distance rule. It does not prove the groups help a business.</p>
 <p>For dates, hours repeat. 23:00 and 00:00 are only an hour apart. Do not assume their written hour numbers give a useful distance. Time zones also matter: record whether a timestamp is local time or UTC. Keep the meaning and prediction time with the data.</p>
 <p>For text, try “not late”, “late!”, a product code and a name where case matters. Removing punctuation or common words can remove useful meaning. The right choice depends on the task and language.</p>
-<p>For neural networks, learn one step at a time: inputs, weights, output, loss, update, and a separate check. A <strong>loss</strong> measures mistakes during learning. An <strong>optimizer</strong> changes weights to reduce that loss. An <strong>epoch</strong> is one pass through training data. Do not start by memorizing a long training loop.</p></main><script>
+<p>For neural networks, learn one step at a time: inputs, weights, output, loss, update, and a separate check. A <strong>loss</strong> measures mistakes during learning. An <strong>optimizer</strong> changes weights to reduce that loss. An <strong>epoch</strong> is one pass through training data. Do not start by memorizing a long training loop.</p>
+<h2 id="a-bridge-before-networks-trace-one-learning-step">A bridge before networks: trace one learning step</h2>
+<p><strong>Purpose.</strong> Explain how a learned weight can change before reading BERT, video or DQN code. This is preparation, not a new required step before the first delivery prediction.</p>
+<p><strong>Ready check.</strong> Calculate <code>1 × 2 + 0</code> and <code>(2 − 3)²</code>. They are 2 and 1. If the square is unfamiliar, it means multiply the difference by itself.</p>
+<p>A <strong>weight</strong> multiplies an input. A <strong>bias</strong> is the starting amount added afterward. Think of a delivery estimate with a starting preparation time plus extra time for distance. A single linear neuron uses this same weighted-sum calculation; larger networks connect many operations, often adding nonlinear steps.</p>
+<p>The complete <a href="lessons/089-bert/network_bridge.py">network_bridge.py</a> uses only Python. It also travels inside the BERT, Word2Vec, video and DQN lesson folders. From an extracted folder containing it, run <code>python network_bridge.py</code>.</p>
+<div aria-label="A bridge before networks: trace one learning step, table 2. Scroll horizontally if needed." class="table-frame"><table>
+<thead>
+<tr>
+<th>Part</th>
+<th>This invented training row</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Confirmed training answer</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Initial weight and bias</td>
+<td>1 and 0</td>
+</tr>
+<tr>
+<td>Initial prediction</td>
+<td><code>1 × 2 + 0 = 2</code></td>
+</tr>
+<tr>
+<td>Squared-error loss</td>
+<td><code>(2 − 3)² = 1</code></td>
+</tr>
+</tbody>
+</table></div>
+<p>The script then calculates a <strong>gradient</strong> for each learned value: how the loss changes locally when that value changes. It subtracts a small multiple of each gradient. The multiple is the <strong>learning rate</strong>. For this specific row and rate, weight becomes 1.4 and bias becomes 0.2. The new prediction is <code>1.4 × 2 + 0.2 = 3</code>, and this row's loss is zero. These values were checked by running the supplied script; its full output is in <a href="lessons/089-bert/network-expected-output.txt">network-expected-output.txt</a>.</p>
+<p><strong>What to notice.</strong> The input and measured answer stayed fixed. The weight and bias changed. The chosen simple values make this update exact. Other data or learning rates need not reach zero, and a smaller training loss does not establish performance on separate rows.</p>
+<p><strong>Common mistake.</strong> Calling a network with random weights does not mean it has learned language. The workbook's tiny random BERT encoder demonstrates array flow. Its numeric output is not evidence of pretrained language knowledge.</p>
+<p><strong>Apply it.</strong> Before running, predict what changes if the measured answer is 4 instead of 3. Edit only <code>measured_minutes</code> in a copy of the bridge script. Which values should remain inputs, which values should change during learning, and what would a fair performance check still need?</p>
+<details>
+<summary>Reasoned answer</summary>
+<p>The input stays 2. The starting weight, bias and learning rate stay as written for this comparison. A different training error produces different gradients, then different updated weight/bias and prediction. To assess usefulness, reserve suitable separate examples with confirmed answers. One fitted row cannot establish generalization.</p>
+</details>
+<h2 id="a-bridge-before-arrays-and-sequence-models">A bridge before arrays and sequence models</h2>
+<p>An <strong>array</strong> stores values by position. A <strong>shape</strong> tells how many positions exist in each direction. A 2-by-3 grid has two rows with three values each. A vector is one row/list of values. A tensor is the general multidimensional form used by many network tools.</p>
+<pre><code class="language-python">picture = [[0, 1, 0], [1, 1, 1]]
+flat = [value for row in picture for value in row]
+print("Rows:", len(picture), "Columns:", len(picture[0]))
+print("Flattened:", flat)
+</code></pre>
+<p>This complete Python-only example prints two rows, three columns, then <code>[0, 1, 0, 1, 1, 1]</code>. The nested loops read one row, then its values. It changes representation, not the pixel count. A frame sequence adds a time direction: frame 1, frame 2, and so on. Read the video's printed shape as batches × frames × channels × height × width. A wrong ordering can be accepted as numbers while representing the wrong thing.</p>
+<p><strong>Apply it.</strong> Draw the grid. Flatten it on paper by columns instead. Do you obtain the same list? Why must training and prediction use the same order?</p>
+<details>
+<summary>Answer</summary>
+<p>Column-first gives <code>[0, 1, 1, 1, 0, 1]</code>. The list differs. A model attaches meaning to input positions, so changing only prediction order gives its learned weights different pixels.</p>
+</details>
+<h2 id="read-a-mathematical-expression-without-memorizing-it">Read a mathematical expression without memorizing it</h2>
+<p>Start with the named quantities and their units. Substitute one small value. Calculate one step at a time and return to the real question. For example, <code>actual − predicted</code> is a signed mistake in minutes, while its square has squared-minute units. Averaging squares and then taking a square root returns RMSE to minutes.</p>
+<p>Do not start an elective until you can explain its small worked example and input/output shape. If it remains unclear, use the earlier lesson or bridge and try a partly completed case. An optional name is not a missing achievement on the first learning path.</p></main><dialog id="visual-dialog" class="visual-dialog" aria-label="Enlarged teaching figure"><header><strong data-visual-title>Figure</strong><button type="button" data-close-visual>Close figure</button></header><p class="hint">Scroll within the image to inspect its labels. Press Escape or Close figure to return.</p><div class="image-scroll"><img alt=""></div></dialog><script>
 (()=>{'use strict';
 const theme=document.getElementById('theme');let saved;try{saved=localStorage.getItem('ml-course-theme')}catch{}if(saved)document.documentElement.dataset.theme=saved;
 theme.addEventListener('click',()=>{const current=document.documentElement.dataset.theme|| (matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');const next=current==='dark'?'light':'dark';document.documentElement.dataset.theme=next;try{localStorage.setItem('ml-course-theme',next)}catch{}});
-for(const pre of document.querySelectorAll('pre')){const button=document.createElement('button');button.className='copy';button.textContent='Copy code';button.type='button';button.addEventListener('click',async()=>{const text=pre.querySelector('code')?.textContent||pre.textContent;try{if(navigator.clipboard?.writeText){await navigator.clipboard.writeText(text)}else{const area=document.createElement('textarea');area.value=text;document.body.append(area);area.select();if(!document.execCommand('copy'))throw Error();area.remove()}button.textContent='Copied'}catch{button.textContent='Select the text to copy'}setTimeout(()=>button.textContent='Copy code',1800)});pre.before(button)}
+for(const pre of document.querySelectorAll('pre')){const code=pre.querySelector('code');const language=code?.className||'';const label=/language-(bash|powershell|bat|shell)/.test(language)?'Copy terminal command':/language-(text|plaintext)/.test(language)?'Copy example output':'Copy code example';const button=document.createElement('button');button.className='copy';button.textContent=label;button.type='button';button.addEventListener('click',async()=>{const text=code?.textContent||pre.textContent;try{if(navigator.clipboard?.writeText){await navigator.clipboard.writeText(text)}else{const area=document.createElement('textarea');area.value=text;document.body.append(area);area.select();if(!document.execCommand('copy'))throw Error();area.remove()}button.textContent='Copied'}catch{button.textContent='Select the text to copy'}setTimeout(()=>button.textContent=label,1800)});pre.before(button)}
+const tableRegions=[...document.querySelectorAll('.table-frame')];
+const updateTables=()=>{const widths=tableRegions.map(region=>region.scrollWidth>region.clientWidth+1);tableRegions.forEach((region,index)=>{if(widths[index]){region.tabIndex=0;region.setAttribute('role','region')}else{region.removeAttribute('tabindex');region.removeAttribute('role')}})};
+let tableFrame;const scheduleTables=()=>{cancelAnimationFrame(tableFrame);tableFrame=requestAnimationFrame(updateTables)};
+scheduleTables();addEventListener('resize',scheduleTables);document.addEventListener('toggle',scheduleTables,true);
+for(const button of document.querySelectorAll('[data-open-visual]')){button.addEventListener('click',()=>{const dialog=document.getElementById('visual-dialog');const image=dialog.querySelector('img');image.src=button.dataset.openVisual;image.alt=button.dataset.visualAlt||'';dialog.querySelector('[data-visual-title]').textContent=button.dataset.visualTitle||'Figure';dialog.showModal();dialog.querySelector('[data-close-visual]').focus();dialog.dataset.returnTo=button.id})}
+const visualDialog=document.getElementById('visual-dialog');if(visualDialog){visualDialog.querySelector('[data-close-visual]').addEventListener('click',()=>visualDialog.close());visualDialog.addEventListener('close',()=>document.getElementById(visualDialog.dataset.returnTo)?.focus())}
 const search=document.getElementById('lesson-search'),track=document.getElementById('lesson-track');if(search){const rows=[...document.querySelectorAll('tr[data-track]')];const update=()=>{const terms=search.value.toLowerCase().trim().split(/\s+/).filter(Boolean);let count=0;for(const row of rows){const show=(!track.value||row.dataset.track===track.value)&&terms.every(word=>row.textContent.toLowerCase().includes(word));row.hidden=!show;if(show)count++}document.getElementById('search-status').textContent=count+' matching lesson entries'};search.addEventListener('input',update);track.addEventListener('change',update);update()}
 for(const [index,input] of [...document.querySelectorAll('input[data-course-check]')].entries()){const key='ml-course-check:'+location.pathname+':'+index;try{input.checked=localStorage.getItem(key)==='yes'}catch{}input.addEventListener('change',()=>{try{localStorage.setItem(key,input.checked?'yes':'no')}catch{}})}
 const progress=document.querySelector('.progress');addEventListener('scroll',()=>{const size=document.documentElement.scrollHeight-innerHeight;progress.style.width=(size>0?100*scrollY/size:0)+'%'},{passive:true});

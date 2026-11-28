@@ -8,17 +8,31 @@ Look for dense groups of shoppers and flag isolated points as noise.
 
 ## Before you start
 
-Understand scaling and distance between inputs.
+Explain nearby points and a dense region.
 
-Use the [main learning path](../../LEARNING-PATH.md) if you have not learned this yet. For extra topics, read [the extra-topic guide](../../ELECTIVES.md). In the repository, these links open the course guides. If you downloaded a ZIP, open README.html for the browser links. Keep the extracted lesson folder directly inside the complete course folder.
+Use the [learning path](../../LEARNING-PATH.md) to find the earlier skill, the [word list](../../GLOSSARY.md) for a term, and [Setup](../../SETUP.md) for computer steps. Extra-topic prerequisites and bridges are in [Extra topics](../../ELECTIVES.md). In an extracted ZIP, open README.html for the browser links and keep this folder directly inside the complete course folder.
 
 ## The idea in simple words
 
-Grouping has no supplied correct group labels. Inspect group profiles and stability. A group number is only a name. Some data has no useful groups.
+DBSCAN links dense neighborhoods and can leave isolated cases as noise.
+
+**Why and when.** Use it when density is meaningful and fixed K is undesirable; check scaling and density variation.
+
+**A worked example to follow.** eps controls neighborhood distance; min_samples controls the local count. Label −1 means the rule did not assign the case to a dense group.
+
+**Input and output.** The supplied sample fields are `age`, `income`, `spending`. In that field order, one original row is:
+
+```text
+21 | 25 | 71
+```
+
+`(missing)` means a blank, not zero. The result table below belongs to the original supplied files.
+
+**Follow the Python.** Open the complete [lesson.py](lesson.py) beside these instructions. Follow the chosen measurements through their preparation and fitted grouping, projection or review rule. Read the resulting representation or flag using the explanation above; do not invent confirmed group answers. The [requirements file](requirements.txt) lists its packages. The next section gives exact run commands; use the same course Python to install and run.
 
 ## Guess first
 
-Does group 2 mean better than group 1? Write your answer before running the script.
+An isolated source-confirmed shopper gets −1. Delete the record? Write a reason before running or opening the answer.
 
 ## Run one step at a time
 
@@ -58,15 +72,16 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 ## Explain the result
 
-<details>
-<summary>Read the answer after trying</summary>
+**Common mistakes and limits.** Noise is not proof of a bad record. One global density rule can struggle with unequal group densities.
 
-No. The numbers have no ranking.
+<details>
+<summary>Check your choice and reason</summary>
+
+No. Review the density rule and intended analysis; preserve confirmed facts.
 
 </details>
 
-You can move on when you can explain the goal, the changed value and why the result did or did not change. Then return to the next box in the main learning path.
-
+After the guided file change above, close the notes and explain the same decision for a different supplied row. State one condition that makes this method unsuitable. If you cannot explain the reason, repeat the small worked example before adding more code.
 
 ## 📋 Sample data
 
@@ -84,3 +99,7 @@ You can move on when you can explain the goal, the changed value and why the res
 Showing the first 8 of 9 rows. The CSV has the full sample.
 
 When you edit the CSV, this lesson recomputes the result for the whole table. It does not project a separate new row with an existing fitted estimator.
+
+<!-- teaching-note:start -->
+<!-- teaching-profile:dbscan -->
+<!-- teaching-note:end -->

@@ -8,17 +8,31 @@ Compare a delivery model to a median baseline on a larger batch of future delive
 
 ## Before you start
 
-Calculate MAE and explain a baseline.
+Calculate MAE and a training-median baseline.
 
-Use the [main learning path](../../LEARNING-PATH.md) if you have not learned this yet. For extra topics, read [the extra-topic guide](../../ELECTIVES.md). In the repository, these links open the course guides. If you downloaded a ZIP, open README.html for the browser links. Keep the extracted lesson folder directly inside the complete course folder.
+Use the [learning path](../../LEARNING-PATH.md) to find the earlier skill, the [word list](../../GLOSSARY.md) for a term, and [Setup](../../SETUP.md) for computer steps. Extra-topic prerequisites and bridges are in [Extra topics](../../ELECTIVES.md). In an extracted ZIP, open README.html for the browser links and keep this folder directly inside the complete course folder.
 
 ## The idea in simple words
 
-Read overall error and errors by route, weight and zone. Put counts beside scores. A small group is less certain.
+Group evaluation finds different error behavior hidden by an overall average.
+
+**Why and when.** Inspect meaningful routes, missing inputs and zones with counts beside scores.
+
+**A worked example to follow.** The lesson checks later deliveries, compares model and baseline in minutes, then groups errors. Reporting-boundary changes affect membership, not already-computed predictions.
+
+**Input and output.** The supplied sample fields are `shipment_id`, `delivery_date`, `distance_km`, `weight_kg`, `zone`, `actual_minutes`. In that field order, one original row is:
+
+```text
+D00001 | 2025-01-01 | 51.86 | (missing) | North | 89.1
+```
+
+`(missing)` means a blank, not zero. The result table below belongs to the original supplied files.
+
+**Follow the Python.** Open the complete [lesson.py](lesson.py) beside these instructions. Keep inputs apart from measured answers. Follow this script’s split and fit, then trace the saved preparation into the held-back result and any new request. A request must not supply its own training answer. The [requirements file](requirements.txt) lists its packages. The next section gives exact run commands; use the same course Python to install and run.
 
 ## Guess first
 
-Which matters beside a group's MAE? Write your answer before running the script.
+A missing-weight group has high MAE and few orders. What belongs in the report? Write a reason before running or opening the answer.
 
 ## Run one step at a time
 
@@ -64,11 +78,19 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 ## Explain the result
 
-<details>
-<summary>Read the answer after trying</summary>
+**Common mistakes and limits.** Small-group scores are uncertain. Inspect actual cases before claiming a cause or repeatedly selecting from final-test subgroup results.
 
-Its size and the actual examples behind its errors.
+<details>
+<summary>Check your choice and reason</summary>
+
+Its count, error, underlying cases, missingness pattern and limitations; investigate source/pipeline behavior and check further suitable examples.
 
 </details>
 
-You can move on when you can explain the goal, the changed value and why the result did or did not change. Then return to the next box in the main learning path.
+After the guided file change above, close the notes and explain the same decision for a different supplied row. State one condition that makes this method unsuitable. If you cannot explain the reason, repeat the small worked example before adding more code.
+
+
+
+<!-- teaching-note:start -->
+<!-- teaching-profile:group_errors -->
+<!-- teaching-note:end -->

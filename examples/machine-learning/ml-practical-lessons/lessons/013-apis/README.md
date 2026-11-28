@@ -8,17 +8,31 @@ Use a local test client to request order rows and read the JSON reply.
 
 ## Before you start
 
-Read a CSV table. A request asks another program for data.
+Read a CSV header and count rows.
 
-Use the [main learning path](../../LEARNING-PATH.md) if you have not learned this yet. For extra topics, read [the extra-topic guide](../../ELECTIVES.md). In the repository, these links open the course guides. If you downloaded a ZIP, open README.html for the browser links. Keep the extracted lesson folder directly inside the complete course folder.
+Use the [learning path](../../LEARNING-PATH.md) to find the earlier skill, the [word list](../../GLOSSARY.md) for a term, and [Setup](../../SETUP.md) for computer steps. Extra-topic prerequisites and bridges are in [Extra topics](../../ELECTIVES.md). In an extracted ZIP, open README.html for the browser links and keep this folder directly inside the complete course folder.
 
 ## The idea in simple words
 
-A CSV, database, API and web page can hold similar facts. This practice stays on your computer. It does not ask a public website for data.
+Collection brings recorded facts into a table. A database query, API request and web-page parser are different ways to obtain rows.
+
+**Why and when.** Use a source whose fields, permissions and update times fit the question. Keep the original source identifiable.
+
+**A worked example to follow.** The three order IDs in sample.csv are copied into an in-memory SQLite table and returned by a local API. The HTML example extracts the same zones from supplied tags. Count IDs at each step: a successful request alone does not prove every row arrived.
+
+**Input and output.** The supplied sample fields are `order_id`, `zone`. In that field order, one original row is:
+
+```text
+1 | north
+```
+
+`(missing)` means a blank, not zero. The result table below belongs to the original supplied files.
+
+**Follow the Python.** Open the complete [lesson.py](lesson.py) beside these instructions. Trace the named source fields into the printed table, file or request result. Check names and counts before interpreting what the program reports. The [requirements file](requirements.txt) lists its packages. The next section gives exact run commands; use the same course Python to install and run.
 
 ## Guess first
 
-How will you know that all required rows arrived? Write your answer before running the script.
+Add one invented order with a unique ID. Before running, predict the CSV, database and local API row counts. Which source would you inspect if they disagree? Write a reason before running or opening the answer.
 
 ## Run one step at a time
 
@@ -60,15 +74,16 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 ## Explain the result
 
-<details>
-<summary>Read the answer after trying</summary>
+**Common mistakes and limits.** The script uses local fixtures, not a live public API or web scraper. Real APIs may paginate, fail or change their schema. An HTML page can change its tags.
 
-Compare row counts, IDs and required fields. A live source may return rows in several pages.
+<details>
+<summary>Check your choice and reason</summary>
+
+Every complete copy should contain the extra order once. Trace its ID from the original CSV through each result. Investigate filtering, paging or parsing rather than silently accepting fewer rows.
 
 </details>
 
-You can move on when you can explain the goal, the changed value and why the result did or did not change. Then return to the next box in the main learning path.
-
+After the guided file change above, close the notes and explain the same decision for a different supplied row. State one condition that makes this method unsuitable. If you cannot explain the reason, repeat the small worked example before adding more code.
 
 ## 📋 Sample data
 
@@ -77,3 +92,7 @@ You can move on when you can explain the goal, the changed value and why the res
 | 1 | north |
 | 2 | south |
 | 3 | west |
+
+<!-- teaching-note:start -->
+<!-- teaching-profile:collection -->
+<!-- teaching-note:end -->

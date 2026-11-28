@@ -2,7 +2,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const yaml = require('yaml');
 const ROOT = path.resolve(__dirname, '..');
-const excluded = new Set(['.git', 'node_modules', '_site', '.runtime', 'artifacts', 'vendor', '.bundle', '.jekyll-cache', '.sass-cache', '__pycache__']);
+const excluded = new Set(['.git', 'node_modules', '.venv', '.ci-check', '_site', '.runtime', 'artifacts', 'vendor', '.bundle', '.jekyll-cache', '.sass-cache', '__pycache__']);
 function walk(dir = ROOT) {
   return fs.readdirSync(dir, {withFileTypes:true}).flatMap(entry => {
     if (excluded.has(entry.name)) return [];

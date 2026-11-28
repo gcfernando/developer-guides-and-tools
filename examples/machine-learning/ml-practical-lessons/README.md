@@ -7,6 +7,18 @@ permalink: /examples/machine-learning/ml-practical-lessons/guide/
 
 # Machine learning practical lessons
 
+Choose a starting point by what you can explain, not by how many files you have run. Several lesson numbers share a script but ask different questions. Each teaching note now names its decision, needed prior skill, worked example, input/output, limits and new application task.
+
+| Your immediate goal | Start with | Evidence you can produce |
+| --- | --- | --- |
+| Understand a prediction without code | Start here and paper practice | Explain a new input, estimate and measured answer. |
+| Run and modify a first model | Setup, Python basics and 002 | Save an edit and explain the changed result. |
+| Build a checked project | The required learning path | Compare with a baseline and justify a fair check. |
+| Explore an advanced method | Its Extra topics readiness task | Trace input to output and name an unsuitable case. |
+| Demonstrate independent application | The Wine project after guided work | Hand over your own reproducible procedure and limitations. |
+
+**Check your next choice.** You can run a script but cannot explain why it reuses a saved scaler. Return to the preparation lesson and trace a new row before collecting more algorithm names. Record execution and explanation as different achievements.
+
 [Developer guides and tools](https://gcfernando.github.io/developer-guides-and-tools/repository/) · [All examples](https://gcfernando.github.io/developer-guides-and-tools/examples/) · [Machine learning path](https://gcfernando.github.io/developer-guides-and-tools/learning-paths/machine-learning/)
 
 Learn machine learning one small step at a time. Start with a table and a prediction you can calculate on paper. Later, use Python to learn from old deliveries, check mistakes, and try a local prediction service.
@@ -31,7 +43,7 @@ For offline reading, open `START-HERE.html`. Keep the complete course folder tog
 | 447 numbered entries | 24 Core, 380 Practice and 43 Reference entries. Some numbers ask different questions about the same exercise. They are not 447 separate projects. |
 | 448 ZIP downloads | The numbered lessons plus a separate [train-and-test example](sample_code_folder/train-and-test.zip) |
 | `sample_code_folder/` | Lesson archives containing scripts, sample data, requirements and instructions |
-| `workbook-figures/` | 100 diagrams and charts, including mobile versions |
+| `workbook-figures/` | Diagrams and charts with readable mobile variants, text explanations and source-backed value tables |
 | `lessons/` | Editable source files used to build the lesson ZIPs. Learners can use the ZIPs instead. |
 | `projects/wine/` | A real-data independent project with a starter script, separate final answers and source credit. |
 | [Practice](PRACTICE.md), [Project choices](PROJECT-CHOICES.md), and [Extra topics](ELECTIVES.md) | Questions with explained answers, project worksheets and help for harder topics. |

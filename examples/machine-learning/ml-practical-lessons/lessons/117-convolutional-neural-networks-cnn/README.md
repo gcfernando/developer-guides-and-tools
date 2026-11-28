@@ -8,17 +8,31 @@ Turn a tiny picture into numbers, then predict light or dark with KNN. This is n
 
 ## Before you start
 
-Draw a small grid. Each cell is a pixel value.
+Draw a small grid and label row and column positions.
 
-Use the [main learning path](../../LEARNING-PATH.md) if you have not learned this yet. For extra topics, read [the extra-topic guide](../../ELECTIVES.md). In the repository, these links open the course guides. If you downloaded a ZIP, open README.html for the browser links. Keep the extracted lesson folder directly inside the complete course folder.
+Use the [learning path](../../LEARNING-PATH.md) to find the earlier skill, the [word list](../../GLOSSARY.md) for a term, and [Setup](../../SETUP.md) for computer steps. Extra-topic prerequisites and bridges are in [Extra topics](../../ELECTIVES.md). In an extracted ZIP, open README.html for the browser links and keep this folder directly inside the complete course folder.
 
 ## The idea in simple words
 
-Resize makes pictures the same size. Flatten puts the grid in a row. This KNN example compares pixel values; it does not train a CNN.
+A digital picture stores pixel values. Resize changes its grid size; grayscale changes colour representation; flatten arranges values in a row.
+
+**Why and when.** Prepare all images with the same rules for a pixel-based model. Keep spatial dimensions for models that use neighborhoods.
+
+**A worked example to follow.** This exercise makes a 6-by-6 RGB image, converts brightness to a 4-by-4 grid and flattens it into 16 values divided by 255. A nearest-neighbour classifier compares those numeric rows; it is not a CNN.
+
+**Input and output.** The supplied sample fields are `red`, `green`, `blue`, `label`. In that field order, one original row is:
+
+```text
+15 | 15 | 15 | dark
+```
+
+`(missing)` means a blank, not zero. The result table below belongs to the original supplied files.
+
+**Follow the Python.** Open the complete [lesson.py](lesson.py) beside these instructions. Keep inputs apart from measured answers. Follow this script’s split and fit, then trace the saved preparation into the held-back result and any new request. A request must not supply its own training answer. The [requirements file](requirements.txt) lists its packages. The next section gives exact run commands; use the same course Python to install and run.
 
 ## Guess first
 
-Do flattening and resizing mean the same thing? Write your answer before running the script.
+A 4-by-4 grayscale grid becomes how many values after flattening? Could a new 5-by-5 row be sent to the same 16-input model? Write a reason before running or opening the answer.
 
 ## Run one step at a time
 
@@ -55,15 +69,16 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 ## Explain the result
 
-<details>
-<summary>Read the answer after trying</summary>
+**Common mistakes and limits.** Grayscale can discard useful colour information. Resizing and flattening are different operations. A uniform-colour toy image is far simpler than an everyday photograph.
 
-No. Resizing changes the grid size. Flattening changes how its values are arranged.
+<details>
+<summary>Check your choice and reason</summary>
+
+It becomes 16 values. Apply the saved resizing/preparation rule first; the model expects the same input count and ordering.
 
 </details>
 
-You can move on when you can explain the goal, the changed value and why the result did or did not change. Then return to the next box in the main learning path.
-
+After the guided file change above, close the notes and explain the same decision for a different supplied row. State one condition that makes this method unsuitable. If you cannot explain the reason, repeat the small worked example before adding more code.
 
 ## 📋 Sample data
 
@@ -81,3 +96,7 @@ You can move on when you can explain the goal, the changed value and why the res
 | 210 | 210 | 210 |
 | 8 | 8 | 8 |
 | 255 | 230 | 210 |
+
+<!-- teaching-note:start -->
+<!-- teaching-profile:pixels -->
+<!-- teaching-note:end -->

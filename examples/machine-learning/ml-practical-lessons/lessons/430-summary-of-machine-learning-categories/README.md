@@ -8,17 +8,31 @@ Match a delivery problem to one of the four learning categories.
 
 ## Before you start
 
-Explain number prediction, categories, groups and rewards.
+Name numbers, categories, groups and rewards.
 
-Use the [main learning path](../../LEARNING-PATH.md) if you have not learned this yet. For extra topics, read [the extra-topic guide](../../ELECTIVES.md). In the repository, these links open the course guides. If you downloaded a ZIP, open README.html for the browser links. Keep the extracted lesson folder directly inside the complete course folder.
+Use the [learning path](../../LEARNING-PATH.md) to find the earlier skill, the [word list](../../GLOSSARY.md) for a term, and [Setup](../../SETUP.md) for computer steps. Extra-topic prerequisites and bridges are in [Extra topics](../../ELECTIVES.md). In an extracted ZIP, open README.html for the browser links and keep this folder directly inside the complete course folder.
 
 ## The idea in simple words
 
-Choose a learning task from the answer and feedback available. Multiple regression means several inputs. Multivariate regression can mean several outputs.
+Learning categories describe the available feedback and the learning task.
+
+**Why and when.** Choose a workflow from the question rather than memorize every algorithm.
+
+**A worked example to follow.** Known answers suggest supervised learning; unlabeled grouping is unsupervised; mixed labels can motivate semi-supervised methods; actions and rewards motivate reinforcement learning.
+
+**Input and output.** The supplied sample fields are `problem`, `target`, `feedback`. In that field order, one original row is:
+
+```text
+Predict delivery time | minutes | known answers
+```
+
+`(missing)` means a blank, not zero. The result table below belongs to the original supplied files.
+
+**Follow the Python.** Open the complete [lesson.py](lesson.py) beside these instructions. Trace the named source fields into the printed table, file or request result. Check names and counts before interpreting what the program reports. The [requirements file](requirements.txt) lists its packages. The next section gives exact run commands; use the same course Python to install and run.
 
 ## Guess first
 
-Does the word regression mean the answer is a known category? Write your answer before running the script.
+A robot classifies pictures and learns routes from rewards. Must it have only one learning category? Write a reason before running or opening the answer.
 
 ## Run one step at a time
 
@@ -64,11 +78,19 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 ## Explain the result
 
-<details>
-<summary>Read the answer after trying</summary>
+**Common mistakes and limits.** Numeric class IDs do not turn classification into regression. One product can combine tasks.
 
-No. Regression predicts numbers.
+<details>
+<summary>Check your choice and reason</summary>
+
+No. Its components have different feedback, outputs and evaluation.
 
 </details>
 
-You can move on when you can explain the goal, the changed value and why the result did or did not change. Then return to the next box in the main learning path.
+After the guided file change above, close the notes and explain the same decision for a different supplied row. State one condition that makes this method unsuitable. If you cannot explain the reason, repeat the small worked example before adding more code.
+
+
+
+<!-- teaching-note:start -->
+<!-- teaching-profile:categories -->
+<!-- teaching-note:end -->

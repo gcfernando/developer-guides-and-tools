@@ -1,5 +1,26 @@
 # 🚚 Train, save, and test a delivery model
 
+## Learn and apply the saved-model workflow
+
+**Why and when.** Saving keeps the training preparation and selected model available for later inputs. Use it when repeated requests should apply one fitted rule rather than retrain for each customer.
+
+**Ready check.** Explain why an unknown measured time must not be filled with the model's own guess and then counted as a correct test answer.
+
+**Worked flow.** The first script fits from training rows, compares with a median baseline on validation and checks the chosen procedure on separate test rows. Its saved artifact contains the fitted preparation. The second script reads distance_km, weight_kg and zone from a new CSV and predicts minutes. A supplied actual_minutes is used only to score a genuinely completed trip.
+
+**Code to inspect.** In `train_delivery_model.py`, find the three `split` filters and the validation comparison. In `test_delivery_model.py`, find the artifact load and `predict` call. Neither a new request nor an empty actual_minutes field should refit the training median.
+
+**Mistakes to avoid.** Do not fit a new scaler, category list or fill value on the request CSV. Do not load an untrusted Joblib file. A physically possible long route can still exceed the model's checked evidence; this small example is not a production service policy.
+
+**Apply it.** Change a request distance but leave its old measured time unchanged. Why would a printed error then be misleading? Clear the old answer before running.
+
+<details>
+<summary>Answer and reason</summary>
+
+The old measured time described the original completed trip, not the invented request. A prediction needs inputs only. Its error can be measured only after a real outcome for that same case is recorded. Reuse the saved fit without pretending a request edit creates new ground truth.
+
+</details>
+
 Read the main learning path before this exercise. You need to know training, validation and test rows, missing values and category inputs. Keep the same active course environment for every command.
 
 **In simple words:** training learns and saves a rule. Prediction opens that saved rule and uses it for a new request. Changing a request does not require learning again.
@@ -29,7 +50,7 @@ After training, look for the saved model filename. When you run the test script,
 
 ## 🧪 Try one change
 
-Leave the weight blank for the 11 km route and rerun only the test script. The sample model fills in the missing weight and still returns an estimate.
+For the first row (the 5 km route), clear `weight_kg` and `actual_minutes`, save the CSV, and rerun only the test script. The saved training rule fills the missing weight and returns an estimate. The changed request has no measured answer, so its error stays blank. Check that the printed average uses only rows with measured times. The supplied 11 km row already has a blank weight; leaving that row alone would not test a change.
 
 ## 📊 Read the visual
 

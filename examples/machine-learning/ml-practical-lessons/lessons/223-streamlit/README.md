@@ -8,17 +8,31 @@ Fill in a Streamlit form and see the delivery estimate change.
 
 ## Before you start
 
-Train and save a model. Know an input and a prediction.
+Explain an input field, a request and a response.
 
-Use the [main learning path](../../LEARNING-PATH.md) if you have not learned this yet. For extra topics, read [the extra-topic guide](../../ELECTIVES.md). In the repository, these links open the course guides. If you downloaded a ZIP, open README.html for the browser links. Keep the extracted lesson folder directly inside the complete course folder.
+Use the [learning path](../../LEARNING-PATH.md) to find the earlier skill, the [word list](../../GLOSSARY.md) for a term, and [Setup](../../SETUP.md) for computer steps. Extra-topic prerequisites and bridges are in [Extra topics](../../ELECTIVES.md). In an extracted ZIP, open README.html for the browser links and keep this folder directly inside the complete course folder.
 
 ## The idea in simple words
 
-A request gives inputs to a program. A response gives its answer or a clear problem. An HTTP status is a short result code. Local tests do not publish a server.
+A form collects inputs and displays the service response. It is another way to use the same model contract.
+
+**Why and when.** Use it to let a person make a controlled local request after the prediction code works.
+
+**A worked example to follow.** Enter a distance, select Predict and read returned minutes. The endpoint must still validate a negative or missing value, even if the browser provides a numeric input control.
+
+**Input and output.** The supplied sample fields are `distance_km`, `weight_kg`, `delivery_minutes`. In that field order, one original row is:
+
+```text
+2 | 1 | 19
+```
+
+`(missing)` means a blank, not zero. The result table below belongs to the original supplied files.
+
+**Follow the Python.** Open the complete [lesson.py](lesson.py) beside these instructions. Keep inputs apart from measured answers. Follow this script’s split and fit, then trace the saved preparation into the held-back result and any new request. A request must not supply its own training answer. The [requirements file](requirements.txt) lists its packages. The next section gives exact run commands; use the same course Python to install and run.
 
 ## Guess first
 
-Should a negative distance receive a normal estimate? Write your answer before running the script.
+If someone bypasses the form and sends a negative number directly, should the endpoint accept it because the form normally blocks it? Write a reason before running or opening the answer.
 
 ## Run one step at a time
 
@@ -56,19 +70,20 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 ## Explain the result
 
-<details>
-<summary>Read the answer after trying</summary>
+**Common mistakes and limits.** A working server test is not a tested browser layout. The practice app is local; it does not establish deployment security or production reliability.
 
-No. Reject it with a clear explanation. A valid-looking value can still be outside the tested range.
+<details>
+<summary>Check your choice and reason</summary>
+
+No. Validate at the service boundary and return a clear problem. Show an understandable message in the form as well.
 
 </details>
 
-You can move on when you can explain the goal, the changed value and why the result did or did not change. Then return to the next box in the main learning path.
+After the guided file change above, close the notes and explain the same decision for a different supplied row. State one condition that makes this method unsuitable. If you cannot explain the reason, repeat the small worked example before adding more code.
 
 ### Open the form yourself
 
 Run `python -m streamlit run delivery_app.py`. Open the local address printed in the terminal. Enter a distance and weight. Stop with Ctrl+C. The supplied file resolves its own CSV path.
-
 
 ## 📋 Sample data
 
@@ -86,3 +101,7 @@ Run `python -m streamlit run delivery_app.py`. Open the local address printed in
 | 5 | 2 |
 | 10 | 4 |
 | 15 | 1 |
+
+<!-- teaching-note:start -->
+<!-- teaching-profile:web_form -->
+<!-- teaching-note:end -->

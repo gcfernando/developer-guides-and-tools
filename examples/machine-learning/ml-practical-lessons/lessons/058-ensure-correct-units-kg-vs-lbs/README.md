@@ -8,17 +8,31 @@ Convert pounds to kilograms so every weight means the same thing to the model.
 
 ## Before you start
 
-Read dates, units and names. Know the difference between a number and text.
+Read a date format and distinguish pounds from kilograms.
 
-Use the [main learning path](../../LEARNING-PATH.md) if you have not learned this yet. For extra topics, read [the extra-topic guide](../../ELECTIVES.md). In the repository, these links open the course guides. If you downloaded a ZIP, open README.html for the browser links. Keep the extracted lesson folder directly inside the complete course folder.
+Use the [learning path](../../LEARNING-PATH.md) to find the earlier skill, the [word list](../../GLOSSARY.md) for a term, and [Setup](../../SETUP.md) for computer steps. Extra-topic prerequisites and bridges are in [Extra topics](../../ELECTIVES.md). In an extracted ZIP, open README.html for the browser links and keep this folder directly inside the complete course folder.
 
 ## The idea in simple words
 
-Use one clear format for the same meaning. Ten pounds is about 4.54 kilograms. A spelling change is safe only when the source confirms the same meaning.
+Standardizing formats gives the same meaning one consistent representation.
+
+**Why and when.** Do this before combining systems whose dates, units or category spellings differ.
+
+**A worked example to follow.** The lesson knows that 01/02/2025 uses month/day/year, so it becomes 2025-01-02. A 10 lb measurement becomes about 4.54 kg. Trimming NORTH gives north; its meaning stays the same.
+
+**Input and output.** The supplied sample fields are `ship_date`, `weight`, `unit`, `zone`, `minutes`. In that field order, one original row is:
+
+```text
+01/02/2025 | 10 | lb | NORTH  | 19
+```
+
+`(missing)` means a blank, not zero. The result table below belongs to the original supplied files.
+
+**Follow the Python.** Open the complete [lesson.py](lesson.py) beside these instructions. Keep the original field beside the inspected or changed value. Trace the named preparation or review step, and check whether it uses a fixed rule or a value learned from training. The [requirements file](requirements.txt) lists its packages. The next section gives exact run commands; use the same course Python to install and run.
 
 ## Guess first
 
-Should 10 lb be passed to a kg field as the number 10? Write your answer before running the script.
+A new source says 02/03/2025 but gives no date convention. May you assume the same format? What is 22 lb in kg? Write a reason before running or opening the answer.
 
 ## Run one step at a time
 
@@ -64,15 +78,16 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 ## Explain the result
 
-<details>
-<summary>Read the answer after trying</summary>
+**Common mistakes and limits.** Do not guess an ambiguous date format. A unit conversion is a fixed known rule, unlike a training median learned from data. Check unsupported names rather than silently treating them as a known zone.
 
-No. Convert it to about 4.54 kg first.
+<details>
+<summary>Check your choice and reason</summary>
+
+Ask the source about its date convention. The fixed conversion gives about 9.98 kg. Apply the same confirmed conversion rules to training and later requests.
 
 </details>
 
-You can move on when you can explain the goal, the changed value and why the result did or did not change. Then return to the next box in the main learning path.
-
+After the guided file change above, close the notes and explain the same decision for a different supplied row. State one condition that makes this method unsuitable. If you cannot explain the reason, repeat the small worked example before adding more code.
 
 ## 📋 Sample data
 
@@ -91,3 +106,7 @@ You can move on when you can explain the goal, the changed value and why the res
 | 01/07/2025 | 18 | lb | NORTH |
 | 2025-01-09 | 7 | kg | south |
 | 2025-01-10 | 30 | lbs | north |
+
+<!-- teaching-note:start -->
+<!-- teaching-profile:standard_formats -->
+<!-- teaching-note:end -->

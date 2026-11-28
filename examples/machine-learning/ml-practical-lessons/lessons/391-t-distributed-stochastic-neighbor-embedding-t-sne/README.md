@@ -8,17 +8,31 @@ Draw similar rows near one another in a two-dimensional plot.
 
 ## Before you start
 
-Read columns, spread and the projection notes in Extra topics.
+Compare nearby rows and read a two-axis plot.
 
-Use the [main learning path](../../LEARNING-PATH.md) if you have not learned this yet. For extra topics, read [the extra-topic guide](../../ELECTIVES.md). In the repository, these links open the course guides. If you downloaded a ZIP, open README.html for the browser links. Keep the extracted lesson folder directly inside the complete course folder.
+Use the [learning path](../../LEARNING-PATH.md) to find the earlier skill, the [word list](../../GLOSSARY.md) for a term, and [Setup](../../SETUP.md) for computer steps. Extra-topic prerequisites and bridges are in [Extra topics](../../ELECTIVES.md). In an extracted ZIP, open README.html for the browser links and keep this folder directly inside the complete course folder.
 
 ## The idea in simple words
 
-A projection combines measurements into fewer columns. PCA keeps spread. LDA uses known labels. t-SNE shows local neighbours and is not a reliable map of distant groups.
+t-SNE draws a low-dimensional view emphasizing local neighbors.
+
+**Why and when.** Inspect local structure in the displayed sample and compare settings.
+
+**A worked example to follow.** The lesson projects scaled long, wide and score into two display coordinates. The axes have no original physical unit.
+
+**Input and output.** The supplied sample fields are `long`, `wide`, `score`, `group`. In that field order, one original row is:
+
+```text
+2 | 1 | 3 | 0
+```
+
+`(missing)` means a blank, not zero. The result table below belongs to the original supplied files.
+
+**Follow the Python.** Open the complete [lesson.py](lesson.py) beside these instructions. Follow the chosen measurements through their preparation and fitted grouping, projection or review rule. Read the resulting representation or flag using the explanation above; do not invent confirmed group answers. The [requirements file](requirements.txt) lists its packages. The next section gives exact run commands; use the same course Python to install and run.
 
 ## Guess first
 
-Does every projection ignore labels? Write your answer before running the script.
+Are far-apart islands a reliable distance in the original units? Write a reason before running or opening the answer.
 
 ## Run one step at a time
 
@@ -54,15 +68,16 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 ## Explain the result
 
-<details>
-<summary>Read the answer after trying</summary>
+**Common mistakes and limits.** Distant gaps, group sizes and orientations can mislead. This example refits the sample rather than transforming separate new rows.
 
-No. LDA uses them and is supervised.
+<details>
+<summary>Check your choice and reason</summary>
+
+No. Inspect original measurements and neighbors before interpreting the gap.
 
 </details>
 
-You can move on when you can explain the goal, the changed value and why the result did or did not change. Then return to the next box in the main learning path.
-
+After the guided file change above, close the notes and explain the same decision for a different supplied row. State one condition that makes this method unsuitable. If you cannot explain the reason, repeat the small worked example before adding more code.
 
 ## 📋 Sample data
 
@@ -78,3 +93,7 @@ You can move on when you can explain the goal, the changed value and why the res
 | 10 | 9 | 10 | 1 |
 
 When you edit the CSV, this lesson recomputes the result for the whole table. It does not project a separate new row with an existing fitted estimator.
+
+<!-- teaching-note:start -->
+<!-- teaching-profile:tsne -->
+<!-- teaching-note:end -->

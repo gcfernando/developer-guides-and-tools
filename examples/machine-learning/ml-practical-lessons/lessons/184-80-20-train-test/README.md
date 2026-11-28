@@ -8,17 +8,31 @@ Train with 80% of the rows and check the model with the remaining 20%.
 
 ## Before you start
 
-Understand the three row roles from Start here.
+Name inputs and answers; count urgent and regular orders.
 
-Use the [main learning path](../../LEARNING-PATH.md) if you have not learned this yet. For extra topics, read [the extra-topic guide](../../ELECTIVES.md). In the repository, these links open the course guides. If you downloaded a ZIP, open README.html for the browser links. Keep the extracted lesson folder directly inside the complete course folder.
+Use the [learning path](../../LEARNING-PATH.md) to find the earlier skill, the [word list](../../GLOSSARY.md) for a term, and [Setup](../../SETUP.md) for computer steps. Extra-topic prerequisites and bridges are in [Extra topics](../../ELECTIVES.md). In an extracted ZIP, open README.html for the browser links and keep this folder directly inside the complete course folder.
 
 ## The idea in simple words
 
-Training teaches. Validation chooses. Test checks the final choice. Match the split to future use. Equal input numbers do not alone prove copied observations.
+Training learns, validation chooses, and test checks the frozen choice. A split defines which new-case question is being tested.
+
+**Why and when.** Set aside suitable check rows before any data-based preparation or model selection.
+
+**A worked example to follow.** The 70/20/10 recipe uses 70 orders for fitting, 20 for choosing tree depth and 10 for testing. Balanced accuracy averages recall within each class: if 8/10 urgent and 18/20 regular are correct, it is (0.8 + 0.9) ÷ 2 = 0.85. This is a reading aid, not the script’s measured result.
+
+**Input and output.** The supplied sample fields are `shipment_id`, `distance_km`, `weight_kg`, `urgent`. In that field order, one original row is:
+
+```text
+D001 | 2.78 | 6.47 | False
+```
+
+`(missing)` means a blank, not zero. The result table below belongs to the original supplied files.
+
+**Follow the Python.** Open the complete [lesson.py](lesson.py) beside these instructions. Keep inputs apart from measured answers. Follow this script’s split and fit, then trace the saved preparation into the held-back result and any new request. A request must not supply its own training answer. The [requirements file](requirements.txt) lists its packages. The next section gives exact run commands; use the same course Python to install and run.
 
 ## Guess first
 
-May you choose tree depth using the final test answers? Write your answer before running the script.
+A tree catches 4 of 5 urgent orders and correctly leaves 9 of 10 regular orders unflagged. Calculate balanced accuracy. May you choose its depth from final test answers? Write a reason before running or opening the answer.
 
 ## Run one step at a time
 
@@ -64,11 +78,19 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 ## Explain the result
 
-<details>
-<summary>Read the answer after trying</summary>
+**Common mistakes and limits.** A percentage ratio does not establish independence. Keep repeated shipment identity together. Stratification preserves class shares; it does not fix time or customer leakage.
 
-No. Use validation. Keep the final test for the frozen choice.
+<details>
+<summary>Check your choice and reason</summary>
+
+The average of 0.8 and 0.9 is 0.85. Choose depth on validation or inside training cross-validation, then use the final test once for the chosen procedure.
 
 </details>
 
-You can move on when you can explain the goal, the changed value and why the result did or did not change. Then return to the next box in the main learning path.
+After the guided file change above, close the notes and explain the same decision for a different supplied row. State one condition that makes this method unsuitable. If you cannot explain the reason, repeat the small worked example before adding more code.
+
+
+
+<!-- teaching-note:start -->
+<!-- teaching-profile:split -->
+<!-- teaching-note:end -->

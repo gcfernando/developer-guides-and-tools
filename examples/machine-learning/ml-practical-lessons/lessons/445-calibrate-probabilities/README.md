@@ -8,17 +8,31 @@ Train a calibration model using validation rows and compare probability quality 
 
 ## Before you start
 
-Understand probability and calibration in Extra topics.
+Read probabilities and group outcome fractions.
 
-Use the [main learning path](../../LEARNING-PATH.md) if you have not learned this yet. For extra topics, read [the extra-topic guide](../../ELECTIVES.md). In the repository, these links open the course guides. If you downloaded a ZIP, open README.html for the browser links. Keep the extracted lesson folder directly inside the complete course folder.
+Use the [learning path](../../LEARNING-PATH.md) to find the earlier skill, the [word list](../../GLOSSARY.md) for a term, and [Setup](../../SETUP.md) for computer steps. Extra-topic prerequisites and bridges are in [Extra topics](../../ELECTIVES.md). In an extracted ZIP, open README.html for the browser links and keep this folder directly inside the complete course folder.
 
 ## The idea in simple words
 
-Calibration compares stated chances with observed shares. More bins only change the picture's grouping, not the saved probability errors.
+Calibration asks whether similar predicted chances correspond to similar observed event rates.
+
+**Why and when.** Check it when probability values inform decisions, alongside ranking and counts.
+
+**A worked example to follow.** Train the base forest, fit a sigmoid adjustment on separate validation rows, then compare test probabilities. Brier score averages squared probability errors; it reflects more than calibration alone.
+
+**Input and output.** The supplied sample fields are `order_id`, `distance_km`, `weight_kg`, `rush_hour`, `vehicle_load`, `urgent`, `split`. In that field order, one original row is:
+
+```text
+R00000 | 76.01 | 14.8 | 0 | 10 | 1 | train
+```
+
+`(missing)` means a blank, not zero. The result table below belongs to the original supplied files.
+
+**Follow the Python.** Open the complete [lesson.py](lesson.py) beside these instructions. Keep inputs apart from measured answers. Follow this script’s split and fit, then trace the saved preparation into the held-back result and any new request. A request must not supply its own training answer. The [requirements file](requirements.txt) lists its packages. The next section gives exact run commands; use the same course Python to install and run.
 
 ## Guess first
 
-Must a probability adjustment improve every test? Write your answer before running the script.
+Does a 0.7 average predicted chance guarantee seven successes in the next ten cases? Write a reason before running or opening the answer.
 
 ## Run one step at a time
 
@@ -55,11 +69,19 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 ## Explain the result
 
-<details>
-<summary>Read the answer after trying</summary>
+**Common mistakes and limits.** More chart bins change grouping, not the underlying Brier score. Small bins are uncertain and adjustment need not improve a particular test.
 
-No. Check it on separate rows and inspect counts.
+<details>
+<summary>Check your choice and reason</summary>
+
+No. Assess rates across suitable groups with counts and uncertainty, not promises for one small batch.
 
 </details>
 
-You can move on when you can explain the goal, the changed value and why the result did or did not change. Then return to the next box in the main learning path.
+After the guided file change above, close the notes and explain the same decision for a different supplied row. State one condition that makes this method unsuitable. If you cannot explain the reason, repeat the small worked example before adding more code.
+
+
+
+<!-- teaching-note:start -->
+<!-- teaching-profile:calibration -->
+<!-- teaching-note:end -->

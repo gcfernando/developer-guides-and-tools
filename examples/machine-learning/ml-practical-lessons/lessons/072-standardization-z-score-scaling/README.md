@@ -8,17 +8,31 @@ Measure distance and weight relative to their training averages, then estimate a
 
 ## Before you start
 
-Read minimum, maximum and average. Keep training rows separate.
+Read a minimum, maximum, average and spread.
 
-Use the [main learning path](../../LEARNING-PATH.md) if you have not learned this yet. For extra topics, read [the extra-topic guide](../../ELECTIVES.md). In the repository, these links open the course guides. If you downloaded a ZIP, open README.html for the browser links. Keep the extracted lesson folder directly inside the complete course folder.
+Use the [learning path](../../LEARNING-PATH.md) to find the earlier skill, the [word list](../../GLOSSARY.md) for a term, and [Setup](../../SETUP.md) for computer steps. Extra-topic prerequisites and bridges are in [Extra topics](../../ELECTIVES.md). In an extracted ZIP, open README.html for the browser links and keep this folder directly inside the complete course folder.
 
 ## The idea in simple words
 
-Scaling changes the numbers the model receives. Save the rule learned from training. A value above the old maximum may become greater than 1.
+Scaling changes the numbers passed to a model, using a rule fitted on training values.
+
+**Why and when.** Use it when input units affect distances or penalties. Compare with unchanged inputs; trees often do not need ordinary linear scaling.
+
+**A worked example to follow.** Min-max uses (value − training minimum) ÷ training range. With limits 1 and 50 km, 90 km becomes 89 ÷ 49, about 1.8163. Standard scaling subtracts the training mean and divides by its standard deviation. Robust scaling uses the training median and IQR.
+
+**Input and output.** The supplied sample fields are `distance_km`, `weight_kg`, `delivery_minutes`. In that field order, one original row is:
+
+```text
+2 | 1 | 19
+```
+
+`(missing)` means a blank, not zero. The result table below belongs to the original supplied files.
+
+**Follow the Python.** Open the complete [lesson.py](lesson.py) beside these instructions. Keep inputs apart from measured answers. Follow this script’s split and fit, then trace the saved preparation into the held-back result and any new request. A request must not supply its own training answer. The [requirements file](requirements.txt) lists its packages. The next section gives exact run commands; use the same course Python to install and run.
 
 ## Guess first
 
-Does a scaled value above 1 prove the input is invalid? Write your answer before running the script.
+The fitted range is 1–50 km. What does 25 km become? Does an out-of-range number automatically mean an invalid measurement? Write a reason before running or opening the answer.
 
 ## Run one step at a time
 
@@ -64,15 +78,16 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 ## Explain the result
 
-<details>
-<summary>Read the answer after trying</summary>
+**Common mistakes and limits.** New values can fall outside a fitted 0–1 range. Do not refit on each request. Scaling is not a guarantee of better predictions or a way to make a distribution normal.
 
-No. It may be a possible value outside the training range. The service needs a stated policy.
+<details>
+<summary>Check your choice and reason</summary>
+
+25 becomes 24 ÷ 49, about 0.4898. An out-of-range number may be physically possible but outside the evidence for a service. Keep the fitted rule and apply a stated acceptance/fallback policy.
 
 </details>
 
-You can move on when you can explain the goal, the changed value and why the result did or did not change. Then return to the next box in the main learning path.
-
+After the guided file change above, close the notes and explain the same decision for a different supplied row. State one condition that makes this method unsuitable. If you cannot explain the reason, repeat the small worked example before adding more code.
 
 ## 📋 Sample data
 
@@ -92,3 +107,7 @@ You can move on when you can explain the goal, the changed value and why the res
 | 5 | 2 |
 | 10 | 3 |
 | 12 | 4 |
+
+<!-- teaching-note:start -->
+<!-- teaching-profile:scaling -->
+<!-- teaching-note:end -->

@@ -38,6 +38,20 @@ Explain a limit: this historical sample does not establish performance on all wi
 
 ## 4. Fill in the missing work
 
+Before writing the whole procedure, complete these smaller decisions. They give structure without supplying a model solution:
+
+1. From training only, count examples per wine type. Write what an always-most-common-type baseline would predict.
+2. Write the input-column list without row_id or wine_type. Explain which operation learns any scale or fill value.
+3. Sketch a two-row result table: baseline and candidate, with the same validation metric and counts.
+4. Write one reason to keep the baseline even if a candidate has an impressive training score.
+
+<details>
+<summary>Check the decisions, then close this hint</summary>
+
+The most common training type defines the constant baseline; it does not come from test answers. Preparation fits on training inputs. Both procedures receive the same validation cases and metric. Training performance alone can reward memorization; a usable candidate needs separate evidence and practical justification. The supplied starter intentionally stops before model fitting: this part is your independent exercise, not a complete implementation to copy.
+
+</details>
+
 Copy `starter.py` to `my_model.py`. Keep your own notes. Add the steps yourself:
 
 - Read training inputs and their targets.

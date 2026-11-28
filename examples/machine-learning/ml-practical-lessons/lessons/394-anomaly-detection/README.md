@@ -8,17 +8,31 @@ Compare a typical parcel with one that needs a closer look.
 
 ## Before you start
 
-Understand an unusual value and a source check.
+Read a training reference and unusual parcel.
 
-Use the [main learning path](../../LEARNING-PATH.md) if you have not learned this yet. For extra topics, read [the extra-topic guide](../../ELECTIVES.md). In the repository, these links open the course guides. If you downloaded a ZIP, open README.html for the browser links. Keep the extracted lesson folder directly inside the complete course folder.
+Use the [learning path](../../LEARNING-PATH.md) to find the earlier skill, the [word list](../../GLOSSARY.md) for a term, and [Setup](../../SETUP.md) for computer steps. Extra-topic prerequisites and bridges are in [Extra topics](../../ELECTIVES.md). In an extracted ZIP, open README.html for the browser links and keep this folder directly inside the complete course folder.
 
 ## The idea in simple words
 
-An anomaly detector flags a row unlike the usual training rows. A flag does not prove an error or harm. Investigate the source before removing it.
+An anomaly detector flags inputs unlike its reference under a selected rule.
+
+**Why and when.** Prioritize source review using a suitable reference and acceptable alert workload.
+
+**A worked example to follow.** Isolation Forest uses random partitions; One-Class SVM learns a reference boundary. Here −1 flags a new parcel unlike routine training measurements.
+
+**Input and output.** The supplied sample fields are `minutes`, `kg`. In that field order, one original row is:
+
+```text
+10.001230153357483 | 4.149372768754235
+```
+
+`(missing)` means a blank, not zero. The result table below belongs to the original supplied files.
+
+**Follow the Python.** Open the complete [lesson.py](lesson.py) beside these instructions. Follow the chosen measurements through their preparation and fitted grouping, projection or review rule. Read the resulting representation or flag using the explanation above; do not invent confirmed group answers. The [requirements file](requirements.txt) lists its packages. The next section gives exact run commands; use the same course Python to install and run.
 
 ## Guess first
 
-Should every flagged parcel be deleted? Write your answer before running the script.
+A valid new parcel type repeatedly gets flagged. What comes before deleting it? Write a reason before running or opening the answer.
 
 ## Run one step at a time
 
@@ -54,15 +68,16 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 ## Explain the result
 
-<details>
-<summary>Read the answer after trying</summary>
+**Common mistakes and limits.** A flag proves neither harm nor recording error. An incomplete or contaminated reference changes what looks unusual.
 
-No. A valid unusual parcel may be important.
+<details>
+<summary>Check your choice and reason</summary>
+
+Verify its source and scope, inspect counts and examples, then validate any reference or service-policy change.
 
 </details>
 
-You can move on when you can explain the goal, the changed value and why the result did or did not change. Then return to the next box in the main learning path.
-
+After the guided file change above, close the notes and explain the same decision for a different supplied row. State one condition that makes this method unsuitable. If you cannot explain the reason, repeat the small worked example before adding more code.
 
 ## 📋 Sample data
 
@@ -86,3 +101,7 @@ Showing the first 8 of 45 rows. The CSV has the full sample.
 | 10 | 4 |
 | 50 | 34 |
 | 12 | 6 |
+
+<!-- teaching-note:start -->
+<!-- teaching-profile:anomaly -->
+<!-- teaching-note:end -->

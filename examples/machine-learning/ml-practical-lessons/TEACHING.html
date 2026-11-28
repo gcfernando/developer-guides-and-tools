@@ -5,6 +5,8 @@
 html[data-theme=light]{color-scheme:light;--bg:#f5f7fa;--panel:#fff;--text:#203346;--muted:#4e6274;--line:#cbd6df;--link:#145b91}
 html[data-theme=dark]{color-scheme:dark;--bg:#111c26;--panel:#192936;--text:#e6edf4;--muted:#b9c8d7;--line:#455d70;--link:#93caff}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:18px/1.7 system-ui,sans-serif}header,main{max-width:1100px;margin:auto;padding:20px 28px}header{border-bottom:1px solid var(--line)}nav{display:flex;flex-wrap:wrap;gap:10px 22px}main{padding-bottom:90px}h1,h2,h3,h4,h5,h6{line-height:1.3;scroll-margin-top:20px}h1{font-size:2.2rem}h2{font-size:1.65rem;margin-top:2.7rem}h3{font-size:1.35rem}h4,h5,h6{font-size:1.15rem}p,li{max-width:86ch}li{margin:.35rem 0}a{color:var(--link);text-underline-offset:.15em}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #d78d13;outline-offset:3px}.skip{position:absolute;top:-100px}.skip:focus{top:0;background:var(--panel);padding:12px}table{border-collapse:collapse;width:100%;font-size:.95rem;background:var(--panel)}th,td{padding:10px 14px;text-align:left;border:1px solid var(--line);vertical-align:top}.table-frame{overflow-x:auto;margin:20px 0}code{font-size:.9em;overflow-wrap:anywhere}pre{background:var(--panel);border:1px solid var(--line);padding:18px;overflow-x:auto;line-height:1.5}pre code{overflow-wrap:normal}img{max-width:100%;height:auto;background:white}details{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:15px 20px;margin:18px 0}summary{cursor:pointer;font-weight:650}.tools{padding:18px;border:1px solid var(--line);background:var(--panel);margin:20px 0}.tools label{display:block}.tools input{width:min(100%,600px)}input,select,button{font:inherit;padding:7px 12px;border:1px solid var(--line);border-radius:5px;background:var(--panel);color:var(--text)}button{cursor:pointer}.copy{font-size:.8rem;float:right}.hint{color:var(--muted);font-size:.9rem}.toc ul{padding-left:22px}.toc{border-left:4px solid var(--line);padding-left:15px;max-height:420px;overflow:auto}.progress{height:4px;background:var(--link);position:fixed;left:0;top:0;z-index:10;width:0}.checklist-item{list-style:none}.checklist-item input{width:auto;margin-right:10px}[hidden]{display:none!important}@media(max-width:650px){body{font-size:17px}header,main{padding:16px}h1{font-size:1.8rem}th,td{padding:8px}.tools input{width:100%}}@media print{body{font-size:11pt;background:white;color:#111}header,.tools,.copy,.progress{display:none}main{padding:0;max-width:none}pre{white-space:pre-wrap}a{color:inherit}details{break-inside:avoid}h2,h3{break-after:avoid}}
+
+.teaching-visual{margin:2rem 0;padding:1rem;border:1px solid var(--line);border-radius:10px;background:var(--panel)}.teaching-visual figcaption{font-weight:650;margin-bottom:.6rem}.visual-flow{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:1rem;padding:0;list-style:none;counter-reset:visual-step}.visual-flow li{padding:1rem;border:1px solid var(--line);border-radius:8px;counter-increment:visual-step}.visual-flow li::before{content:'Step ' counter(visual-step);display:block;font-size:.85em;font-weight:700}.visual-options li::before{content:"Option " counter(visual-step)}.visual-flow strong{display:block}.visual-help{font-size:.95rem}.visual-actions{display:flex;gap:1rem;flex-wrap:wrap;align-items:center}.visual-dialog{width:min(98vw,1500px);max-width:none;max-height:96vh;padding:1rem;background:var(--panel);color:var(--text);border:2px solid var(--line)}.visual-dialog::backdrop{background:#102032cc}.visual-dialog img{max-width:none;width:auto;min-width:100%;height:auto}.visual-dialog .image-scroll{overflow:auto;max-height:78vh}.visual-dialog header{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.25rem;max-width:none}.visual-dialog button{position:sticky;right:0}.visual-caption-detail{font-weight:400}.table-frame:focus-visible{outline:3px solid #d78d13;outline-offset:3px}.table-frame table{margin:0}.visual-data{font-size:.95rem}.visual-data th{white-space:normal}.visual-source{overflow-wrap:anywhere}@media(max-width:650px){.teaching-visual{margin:1.5rem 0;padding:.7rem}.visual-flow{grid-template-columns:1fr}.visual-help{font-size:1rem}}@media print{.visual-actions,.visual-dialog{display:none}.teaching-visual{break-inside:avoid}.visual-data[open]{display:block}}
 </style></head><body><a class="skip" href="#content">Skip to the lesson</a><div class="progress" aria-hidden="true"></div><header><nav aria-label="Course pages"><a href="START-HERE.html">Start here</a><a href="LEARNING-PATH.html">Learning path</a><a href="SETUP.html">Setup</a><a href="GLOSSARY.html">Word list</a><a href="Data-Science-and-Machine-Learning.html#lesson-downloads">Lesson library</a><button id="theme" type="button">Change colour theme</button></nav></header><main id="content"><h1 id="check-and-teach-this-course">Check and teach this course</h1>
 <p>The course is written for a reader with no ML or Python background. Use short, clear sentences. Explain each new word and action. Keep the correct names next to the plain explanation.</p>
 <h2 id="before-a-lesson">Before a lesson</h2>
@@ -17,14 +19,83 @@ html[data-theme=dark]{color-scheme:dark;--bg:#111c26;--panel:#192936;--text:#e6e
 <li>Finish with a new case that is similar but not identical.</li>
 </ol>
 <p>Do not measure progress by the number of files run. Use the checks in the learning path. Keep the complete solution to the independent project out of the learner's first attempt.</p>
+<h2 id="who-owns-the-work">Who owns the work</h2>
+<p>The same teaching standard applies to every section and nested topic, including Practice, Reference and extra topics. One-hot encoding and outliers are examples of the approach, not its boundary. Keep shared exercises when they serve several topics, but explain what each topic asks the learner to do with them.</p>
+<div aria-label="Who owns the work, table 1. Scroll horizontally if needed." class="table-frame"><table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Owns</th>
+<th>Checks with the other two roles</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lead ML expert</td>
+<td>Technical accuracy, prior skills, learning order, suitable uses, fair evaluation and technical acceptance.</td>
+<td>Check every claim, code example, result and visual. Distinguish a useful demonstration from evidence about a real service.</td>
+</tr>
+<tr>
+<td>Document writer</td>
+<td>Simple explanations and complete runnable Python teaching files; data and package instructions; comments, result explanations, exercises and answers.</td>
+<td>Keep names, units, row identities and steps consistent across the writing, code and visuals.</td>
+</tr>
+<tr>
+<td>UI/UX engineer</td>
+<td>Design and creation of all ML images, graphs, diagrams and visual learning flows; accessible page controls and layouts; editable visual sources.</td>
+<td>Use data and results checked by the ML expert. Use the writer's simple labels, captions and reading instructions.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Review a whole teaching unit together. A correct script, a correct paragraph and a correct image can still explain different things. Follow the same row through all three. Ask whether the exercise tests the skill promised in the goal.</p>
+<h2 id="check-every-teaching-unit">Check every teaching unit</h2>
+<p>Use this checklist for a concept, subtopic or feature. A navigation heading can point to a shared explanation. Record that mapping instead of silently omitting it. A new picture or script is useful only when it helps teach the idea.</p>
+<ol>
+<li>State one task the learner will be able to do.</li>
+<li>Check the needed prior skill with a small task and link to help.</li>
+<li>Explain the meaning in ordinary words, then introduce the technical name.</li>
+<li>Explain why and when the method helps, and when it is unsuitable.</li>
+<li>Start with a familiar situation, then use a small ML example.</li>
+<li>Show the inputs, their meanings and units, and the output shape.</li>
+<li>Follow one row through numbered steps. Explain why each important step exists.</li>
+<li>Give complete runnable code where code teaches the idea. Supply imports, package requirements and sample files. Clearly distinguish Python, terminal commands and output.</li>
+<li>Run the example and its documented changes. Record the actual output, explain it and mark anything not run as unverified.</li>
+<li>Explain likely mistakes and recovery. Do not change a measurement simply to make the result look better.</li>
+<li>Supply a partly completed task, then an unfamiliar case with a separate explained answer.</li>
+<li>Return to the idea later in a mixed task, where the learner must choose the method.</li>
+</ol>
+<p>For each visual, state its question; explain the axes, units, markers and reading order; trace one case; state what to notice and what the picture cannot establish. Include important values or relationships as readable text or a table. Colour must have a second cue such as a label, shape or line style.</p>
+<h2 id="keep-evidence-of-full-coverage">Keep evidence of full coverage</h2>
+<p><code>coverage.csv</code> preserves the historical lesson and download map. <code>course-review/teaching-coverage.csv</code> adds an inventory of all authored learner headings, code blocks, figure uses and runnable sources. Its JSON summary records counts and limitations. Regenerate it after a reviewed content change:</p>
+<pre><code class="language-bash">python course_tools/audit_teaching.py --write
+python course_tools/audit_teaching.py
+</code></pre>
+<p>An inventory row means the source is accounted for. It does not mean a beginner has understood it. Keep the course check results, team review, actual browser observations, clean-install checks and learner observations separate. Never turn "not applicable" into a way to hide missing teaching material. Give a reason for a shared example or text-only treatment.</p>
+<p>The original PDF mentioned in the historical page map and editable sources for some original figures were not supplied. Preserve their provenance. Any replacement visual must be based on the supplied data or an explicitly labelled illustration, with an editable source.</p>
+<h2 id="research-behind-the-teaching-approach">Research behind the teaching approach</h2>
+<p>The recommendations below guide the design. Their application to this workbook still needs learner testing.</p>
+<ul>
+<li>Alternate worked solutions and problems; connect everyday examples with formal representations; explain pictures in words; revisit key ideas after a delay. The <a href="https://ies.ed.gov/ncee/WWC/PracticeGuide/1/Published">IES practice guide</a> gives different evidence strengths for different recommendations. It rates repeated retrieval and deep explanatory questions more strongly than pre-questions. Do not claim all methods have the same evidence.</li>
+<li>Check what learners can do before starting. <a href="https://www.cmu.edu/teaching/assessment/priorknowledge/index.html">Carnegie Mellon's prior-knowledge guidance</a> distinguishes direct tasks from learners' self-reports. Neither an adult job title nor interest in ML establishes prior coding knowledge.</li>
+<li>Keep learned preparation inside training and reuse it on later rows. <a href="https://scikit-learn.org/1.8/common_pitfalls.html">Scikit-learn's common pitfalls</a> explain inconsistent preparation and leakage. The course pins scikit-learn 1.8; check examples against that version before introducing a newer API.</li>
+<li>Give graphs and diagrams descriptions that communicate essential values, relationships and trends. Follow <a href="https://www.w3.org/WAI/tutorials/images/complex/">W3C complex-image guidance</a> and <a href="https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html">use-of-colour guidance</a>.</li>
+<li>Test enlarged and narrow reading layouts. <a href="https://www.w3.org/WAI/WCAG22/Understanding/reflow.html">W3C reflow guidance</a> allows necessary two-dimensional scrolling in charts and tables. Do not shrink their labels until they become unreadable merely to avoid a local scrollbar.</li>
+</ul>
 <h2 id="build-the-deliverables">Build the deliverables</h2>
 <p>Editable lesson files live in <code>lessons/</code>. The workbook text is in <code>Data-Science-and-Machine-Learning.md</code>. Edit the simple-word help in each lesson README. The main guides explain the shared ideas.</p>
 <p>From this course folder, with the course environment active, run:</p>
 <pre><code class="language-bash">python -m pip install -r course_tools/requirements.txt
+python -m pip install -r course_tools/requirements-visuals.txt
+python course_tools/author_teaching.py
+python course_tools/build_visuals.py
 python course_tools/build_course.py
+python course_tools/audit_teaching.py --write
 python course_tools/check_course.py
+python course_tools/check_teaching_examples.py
+python course_tools/check_saved_workflow.py
+python course_tools/audit_teaching.py
 </code></pre>
-<p>The build makes downloadable ZIPs and readable HTML pages. The checks inspect links, Python syntax and the documented practice changes. Run <code>python course_tools/check_course.py --run</code> to also run distinct lesson scripts. Optional packages may be absent; the report must say which lessons did not run. Build tools are for the author. A learner does not need them.</p>
+<p>The build makes downloadable ZIPs and readable HTML pages. The checks inspect links, Python syntax and the documented practice changes. Run <code>python course_tools/check_course.py --run</code> to also run distinct lesson scripts. Its new evidence is written to <code>course-review/execution-checks.json</code>; older review records remain historical evidence. Optional packages may be absent; the report must say which lessons did not run. Build tools are for the author. A learner does not need them.</p>
 <p>Before publishing, also run the full repository checks. From the repository root (<code>DeveloperResources</code>), run:</p>
 <pre><code class="language-bash">npm ci
 npm test
@@ -38,7 +109,7 @@ npm run check:site
 <p>The website check runs after the site build. It checks the published pages, including each page's title, short description and canonical URL (its main web address). A passing <code>npm test</code> does not replace this website check. If Ruby is unavailable, record that the full site build still needs verification.</p>
 <h2 id="test-a-clean-computer-setup">Test a clean computer setup</h2>
 <p>This is a release task, not a claim that it has already passed.</p>
-<div aria-label="Scrollable table" class="table-frame" role="region" tabindex="0"><table>
+<div aria-label="Test a clean computer setup, table 2. Scroll horizontally if needed." class="table-frame"><table>
 <thead>
 <tr>
 <th>Computer</th>
@@ -79,7 +150,7 @@ npm run check:site
 <p>Use a clean environment. Follow only the learner instructions. Record the full package versions and any missing operating-system tools. Keep the test output. Do not mark the platform passed just because code worked in an old environment.</p>
 <h2 id="observe-new-learners">Observe new learners</h2>
 <p>Ask several people who have never coded to try the first modules. Include students and working professionals. Ask them to say what they think each step means. Do not silently repair files for them.</p>
-<div aria-label="Scrollable table" class="table-frame" role="region" tabindex="0"><table>
+<div aria-label="Observe new learners, table 3. Scroll horizontally if needed." class="table-frame"><table>
 <thead>
 <tr>
 <th>Module and route</th>
@@ -102,9 +173,44 @@ npm run check:site
 </tbody>
 </table></div>
 <p>Record observed times before publishing course-time estimates. After a few days, ask learners to solve a small new case without the notes. The independent project checks transfer. A successful install or a copied output does not establish that.</p>
+<p>Use a small first pilot to find problems, then revise and try again. Include readers with little technical experience and different ages and devices. Explain the task without explaining the answer. Record which hints or assistance were needed. Ask younger readers to work with appropriate teacher or family support.</p>
+<div aria-label="Observe new learners, table 4. Scroll horizontally if needed." class="table-frame"><table>
+<thead>
+<tr>
+<th>Task</th>
+<th>Evidence to observe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Prepare a new category</td>
+<td>The learner keeps the fitted column names and order, explains the unknown-name policy, and distinguishes an encoded value from evidence of a reliable prediction.</td>
+</tr>
+<tr>
+<td>Investigate an unusual value</td>
+<td>The learner reads the axes, locates the record, asks for source evidence, and justifies keeping, correcting or flagging it.</td>
+</tr>
+<tr>
+<td>Explain a model setting</td>
+<td>The learner reads the changed setting and result, explains what was learned, and chooses with validation rather than final test answers.</td>
+</tr>
+<tr>
+<td>Build a new small project</td>
+<td>The learner identifies available inputs, reserves a fair check, trains a baseline, inspects errors and explains limitations.</td>
+</tr>
+<tr>
+<td>Return after a delay</td>
+<td>The learner applies an earlier idea to a different case without copying its supplied answer.</td>
+</tr>
+</tbody>
+</table></div>
+<p>These are proposed observation tasks, not results of a completed study. A small pilot cannot establish success for every reader. Record what failed as carefully as what worked.</p>
+<h2 id="check-the-reading-experience">Check the reading experience</h2>
+<p>Run <code>node course_tools/check_browser_real.cjs</code> from the course folder to check a locally installed Chrome or Edge. Set <code>ML_COURSE_BROWSER</code> to its executable if needed. This serves only the course on a local address and records actual results in <code>course-review/browser-checks.json</code>. A browser launch failure is an unverified check, not a pass. The structural page checks run separately in <code>check_course.py</code>.</p>
+<p>Use real browsers after automated page checks. Test keyboard navigation, named progress controls, code-copy actions, image descriptions and full-size views. Check phone-sized layouts at 320 CSS pixels, text enlargement, a 400% zoom view, light and dark themes, and grayscale printing. Check that essential content remains available even when an image cannot be seen. Record the browser, viewport, assistive technology if used, and actual observation. A simulated DOM check is not a screen-reader test.</p>
 <h2 id="score-an-independent-project">Score an independent project</h2>
 <p>Give 0 to 4 points in each area. Zero means missing. One means a claim with little evidence. Two means partly correct work. Three means correct work with a clear reason. Four means correct work plus a useful limitation or alternative.</p>
-<div aria-label="Scrollable table" class="table-frame" role="region" tabindex="0"><table>
+<div aria-label="Score an independent project, table 5. Scroll horizontally if needed." class="table-frame"><table>
 <thead>
 <tr>
 <th>Area</th>
@@ -136,11 +242,18 @@ npm run check:site
 </table></div>
 <p>Require evidence in every area. A high total cannot excuse leakage or using test answers to choose a model. Ask for a corrected project and a new fair check when those occur.</p>
 <h2 id="release-evidence">Release evidence</h2>
-<p>Keep a dated check report. Separate code changes, automated checks, manual browser checks, clean setup checks and observed learner results. The original audit remains in <code>course-review/</code>; it describes the old state. <code>course-review/implementation-status.csv</code> records the response and any checks that still require a person or another computer.</p></main><script>
+<p>Read the <a href="course-review/IMPLEMENTATION.md">implementation and verification report</a> for the current changes, executed checks and open observation tasks. Keep the generated coverage CSV separate from claims about learner success.</p>
+<p>Keep a dated check report. Separate code changes, automated checks, manual browser checks, clean setup checks and observed learner results. The original audit remains in <code>course-review/</code>; it describes the old state. <code>course-review/implementation-status.csv</code> records the response and any checks that still require a person or another computer.</p></main><dialog id="visual-dialog" class="visual-dialog" aria-label="Enlarged teaching figure"><header><strong data-visual-title>Figure</strong><button type="button" data-close-visual>Close figure</button></header><p class="hint">Scroll within the image to inspect its labels. Press Escape or Close figure to return.</p><div class="image-scroll"><img alt=""></div></dialog><script>
 (()=>{'use strict';
 const theme=document.getElementById('theme');let saved;try{saved=localStorage.getItem('ml-course-theme')}catch{}if(saved)document.documentElement.dataset.theme=saved;
 theme.addEventListener('click',()=>{const current=document.documentElement.dataset.theme|| (matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');const next=current==='dark'?'light':'dark';document.documentElement.dataset.theme=next;try{localStorage.setItem('ml-course-theme',next)}catch{}});
-for(const pre of document.querySelectorAll('pre')){const button=document.createElement('button');button.className='copy';button.textContent='Copy code';button.type='button';button.addEventListener('click',async()=>{const text=pre.querySelector('code')?.textContent||pre.textContent;try{if(navigator.clipboard?.writeText){await navigator.clipboard.writeText(text)}else{const area=document.createElement('textarea');area.value=text;document.body.append(area);area.select();if(!document.execCommand('copy'))throw Error();area.remove()}button.textContent='Copied'}catch{button.textContent='Select the text to copy'}setTimeout(()=>button.textContent='Copy code',1800)});pre.before(button)}
+for(const pre of document.querySelectorAll('pre')){const code=pre.querySelector('code');const language=code?.className||'';const label=/language-(bash|powershell|bat|shell)/.test(language)?'Copy terminal command':/language-(text|plaintext)/.test(language)?'Copy example output':'Copy code example';const button=document.createElement('button');button.className='copy';button.textContent=label;button.type='button';button.addEventListener('click',async()=>{const text=code?.textContent||pre.textContent;try{if(navigator.clipboard?.writeText){await navigator.clipboard.writeText(text)}else{const area=document.createElement('textarea');area.value=text;document.body.append(area);area.select();if(!document.execCommand('copy'))throw Error();area.remove()}button.textContent='Copied'}catch{button.textContent='Select the text to copy'}setTimeout(()=>button.textContent=label,1800)});pre.before(button)}
+const tableRegions=[...document.querySelectorAll('.table-frame')];
+const updateTables=()=>{const widths=tableRegions.map(region=>region.scrollWidth>region.clientWidth+1);tableRegions.forEach((region,index)=>{if(widths[index]){region.tabIndex=0;region.setAttribute('role','region')}else{region.removeAttribute('tabindex');region.removeAttribute('role')}})};
+let tableFrame;const scheduleTables=()=>{cancelAnimationFrame(tableFrame);tableFrame=requestAnimationFrame(updateTables)};
+scheduleTables();addEventListener('resize',scheduleTables);document.addEventListener('toggle',scheduleTables,true);
+for(const button of document.querySelectorAll('[data-open-visual]')){button.addEventListener('click',()=>{const dialog=document.getElementById('visual-dialog');const image=dialog.querySelector('img');image.src=button.dataset.openVisual;image.alt=button.dataset.visualAlt||'';dialog.querySelector('[data-visual-title]').textContent=button.dataset.visualTitle||'Figure';dialog.showModal();dialog.querySelector('[data-close-visual]').focus();dialog.dataset.returnTo=button.id})}
+const visualDialog=document.getElementById('visual-dialog');if(visualDialog){visualDialog.querySelector('[data-close-visual]').addEventListener('click',()=>visualDialog.close());visualDialog.addEventListener('close',()=>document.getElementById(visualDialog.dataset.returnTo)?.focus())}
 const search=document.getElementById('lesson-search'),track=document.getElementById('lesson-track');if(search){const rows=[...document.querySelectorAll('tr[data-track]')];const update=()=>{const terms=search.value.toLowerCase().trim().split(/\s+/).filter(Boolean);let count=0;for(const row of rows){const show=(!track.value||row.dataset.track===track.value)&&terms.every(word=>row.textContent.toLowerCase().includes(word));row.hidden=!show;if(show)count++}document.getElementById('search-status').textContent=count+' matching lesson entries'};search.addEventListener('input',update);track.addEventListener('change',update);update()}
 for(const [index,input] of [...document.querySelectorAll('input[data-course-check]')].entries()){const key='ml-course-check:'+location.pathname+':'+index;try{input.checked=localStorage.getItem(key)==='yes'}catch{}input.addEventListener('change',()=>{try{localStorage.setItem(key,input.checked?'yes':'no')}catch{}})}
 const progress=document.querySelector('.progress');addEventListener('scroll',()=>{const size=document.documentElement.scrollHeight-innerHeight;progress.style.width=(size>0?100*scrollY/size:0)+'%'},{passive:true});

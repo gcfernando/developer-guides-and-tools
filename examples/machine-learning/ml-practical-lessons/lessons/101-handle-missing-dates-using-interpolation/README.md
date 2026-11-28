@@ -8,17 +8,31 @@ Estimate a missing time-series reading from the readings on either side.
 
 ## Before you start
 
-Put dates in order and check that each date appears once.
+Sort dates and check one reading per date.
 
-Use the [main learning path](../../LEARNING-PATH.md) if you have not learned this yet. For extra topics, read [the extra-topic guide](../../ELECTIVES.md). In the repository, these links open the course guides. If you downloaded a ZIP, open README.html for the browser links. Keep the extracted lesson folder directly inside the complete course folder.
+Use the [learning path](../../LEARNING-PATH.md) to find the earlier skill, the [word list](../../GLOSSARY.md) for a term, and [Setup](../../SETUP.md) for computer steps. Extra-topic prerequisites and bridges are in [Extra topics](../../ELECTIVES.md). In an extracted ZIP, open README.html for the browser links and keep this folder directly inside the complete course folder.
 
 ## The idea in simple words
 
-A daily calendar can reveal a missing measurement. Interpolation estimates it using readings around the gap. Here we are looking back, not predicting live.
+Interpolation estimates a gap between known readings on a stated calendar.
+
+**Why and when.** Use it for a retrospective series when the neighboring readings and a smooth-change assumption make sense.
+
+**A worked example to follow.** February 1 has 10 orders and February 3 has 16. A straight time interpolation gives February 2 a value of 13. Changing February 3 to 18 makes the midpoint 14.
+
+**Input and output.** The supplied sample fields are `day`, `orders`. In that field order, one original row is:
+
+```text
+2025-02-01 | 10
+```
+
+`(missing)` means a blank, not zero. The result table below belongs to the original supplied files.
+
+**Follow the Python.** Open the complete [lesson.py](lesson.py) beside these instructions. Keep the original field beside the inspected or changed value. Trace the named preparation or review step, and check whether it uses a fixed rule or a value learned from training. The [requirements file](requirements.txt) lists its packages. The next section gives exact run commands; use the same course Python to install and run.
 
 ## Guess first
 
-If February 3 rises, can the estimate for February 2 rise? Write your answer before running the script.
+May a real-time February 2 forecast report the interpolated 13 as though it used only available information? Write a reason before running or opening the answer.
 
 ## Run one step at a time
 
@@ -58,15 +72,16 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 ## Explain the result
 
-<details>
-<summary>Read the answer after trying</summary>
+**Common mistakes and limits.** This estimates the missing measurement, not the missing date. It uses the later reading; a live February 2 prediction could not use February 3.
 
-Yes. The past-series estimate uses that later reading. Do not use it for a live February 2 decision.
+<details>
+<summary>Check your choice and reason</summary>
+
+No. That would use a future observation. For live forecasting restrict information to what had arrived; keep retrospective repair clearly labelled.
 
 </details>
 
-You can move on when you can explain the goal, the changed value and why the result did or did not change. Then return to the next box in the main learning path.
-
+After the guided file change above, close the notes and explain the same decision for a different supplied row. State one condition that makes this method unsuitable. If you cannot explain the reason, repeat the small worked example before adding more code.
 
 ## 📋 Sample data
 
@@ -75,3 +90,7 @@ You can move on when you can explain the goal, the changed value and why the res
 | 2025-02-01 | 10 |
 | 2025-02-03 | 16 |
 | 2025-02-04 | 19 |
+
+<!-- teaching-note:start -->
+<!-- teaching-profile:interpolation -->
+<!-- teaching-note:end -->

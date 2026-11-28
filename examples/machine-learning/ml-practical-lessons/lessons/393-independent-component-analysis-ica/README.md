@@ -8,17 +8,31 @@ Use independent component analysis to separate patterns mixed across the measure
 
 ## Before you start
 
-Read columns, spread and the projection notes in Extra topics.
+Explain a mixed signal and vector.
 
-Use the [main learning path](../../LEARNING-PATH.md) if you have not learned this yet. For extra topics, read [the extra-topic guide](../../ELECTIVES.md). In the repository, these links open the course guides. If you downloaded a ZIP, open README.html for the browser links. Keep the extracted lesson folder directly inside the complete course folder.
+Use the [learning path](../../LEARNING-PATH.md) to find the earlier skill, the [word list](../../GLOSSARY.md) for a term, and [Setup](../../SETUP.md) for computer steps. Extra-topic prerequisites and bridges are in [Extra topics](../../ELECTIVES.md). In an extracted ZIP, open README.html for the browser links and keep this folder directly inside the complete course folder.
 
 ## The idea in simple words
 
-A projection combines measurements into fewer columns. PCA keeps spread. LDA uses known labels. t-SNE shows local neighbours and is not a reliable map of distant groups.
+ICA seeks components that are statistically more independent under a mixing model.
+
+**Why and when.** Use it when source-separation assumptions and interpretation are plausible.
+
+**A worked example to follow.** Two microphones hearing two speakers illustrate mixing. The lesson projects measured columns; it does not establish that physical sources were recovered.
+
+**Input and output.** The supplied sample fields are `long`, `wide`, `score`, `group`. In that field order, one original row is:
+
+```text
+2 | 1 | 3 | 0
+```
+
+`(missing)` means a blank, not zero. The result table below belongs to the original supplied files.
+
+**Follow the Python.** Open the complete [lesson.py](lesson.py) beside these instructions. Follow the chosen measurements through their preparation and fitted grouping, projection or review rule. Read the resulting representation or flag using the explanation above; do not invent confirmed group answers. The [requirements file](requirements.txt) lists its packages. The next section gives exact run commands; use the same course Python to install and run.
 
 ## Guess first
 
-Does every projection ignore labels? Write your answer before running the script.
+A component reverses sign between fits. Must its information have changed? Write a reason before running or opening the answer.
 
 ## Run one step at a time
 
@@ -57,15 +71,16 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 ## Explain the result
 
-<details>
-<summary>Read the answer after trying</summary>
+**Common mistakes and limits.** Component order, sign and scale can be ambiguous. Convergence and source meaning need checks.
 
-No. LDA uses them and is supervised.
+<details>
+<summary>Check your choice and reason</summary>
+
+Not necessarily. Compare patterns and reconstructions, accounting for sign/order ambiguity.
 
 </details>
 
-You can move on when you can explain the goal, the changed value and why the result did or did not change. Then return to the next box in the main learning path.
-
+After the guided file change above, close the notes and explain the same decision for a different supplied row. State one condition that makes this method unsuitable. If you cannot explain the reason, repeat the small worked example before adding more code.
 
 ## 📋 Sample data
 
@@ -87,3 +102,7 @@ You can move on when you can explain the goal, the changed value and why the res
 | 2 | 1 | 3 |
 | 10 | 9 | 10 |
 | 4 | 1 | 2 |
+
+<!-- teaching-note:start -->
+<!-- teaching-profile:ica -->
+<!-- teaching-note:end -->

@@ -8,17 +8,31 @@ Train, validate, test, and save a model. Send local requests and monitor later l
 
 ## Before you start
 
-Finish all earlier main-path modules.
+Complete preparation, fair checks, baseline, API and monitoring.
 
-Use the [main learning path](../../LEARNING-PATH.md) if you have not learned this yet. For extra topics, read [the extra-topic guide](../../ELECTIVES.md). In the repository, these links open the course guides. If you downloaded a ZIP, open README.html for the browser links. Keep the extracted lesson folder directly inside the complete course folder.
+Use the [learning path](../../LEARNING-PATH.md) to find the earlier skill, the [word list](../../GLOSSARY.md) for a term, and [Setup](../../SETUP.md) for computer steps. Extra-topic prerequisites and bridges are in [Extra topics](../../ELECTIVES.md). In an extracted ZIP, open README.html for the browser links and keep this folder directly inside the complete course folder.
 
 ## The idea in simple words
 
-Connect training, choice, final check, saved rules, requests and later monitoring. Explain each decision rather than only copying printed scores.
+A checked workflow connects an input contract to learning, choice, evaluation, saved preparation and later use.
+
+**Why and when.** Explain the guided workflow before attempting the independent project.
+
+**A worked example to follow.** Split whole dates, compare Ridge with a training-median baseline, save the winner, validate requests, then compare a later labeled batch. Missing weights use the saved training preparation.
+
+**Input and output.** The supplied sample fields are `shipment_id`, `delivery_date`, `distance_km`, `weight_kg`, `zone`, `actual_minutes`. In that field order, one original row is:
+
+```text
+D00001 | 2025-01-01 | 51.86 | (missing) | North | 89.1
+```
+
+`(missing)` means a blank, not zero. The result table below belongs to the original supplied files.
+
+**Follow the Python.** Open the complete [lesson.py](lesson.py) beside these instructions. Keep inputs apart from measured answers. Follow this script’s split and fit, then trace the saved preparation into the held-back result and any new request. A request must not supply its own training answer. The [requirements file](requirements.txt) lists its packages. The next section gives exact run commands; use the same course Python to install and run.
 
 ## Guess first
 
-What does the later-batch alert ask you to do? Write your answer before running the script.
+A valid request is accepted but West-zone errors rise. Does input validation prove continued usefulness? Write a reason before running or opening the answer.
 
 ## Run one step at a time
 
@@ -64,15 +78,16 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 ## Explain the result
 
-<details>
-<summary>Read the answer after trying</summary>
+**Common mistakes and limits.** Synthetic results do not prove real-service quality. Valid inputs, accuracy, operational readiness and permission to deploy are separate questions.
 
-Investigate data and changes before replacing the model.
+<details>
+<summary>Check your choice and reason</summary>
+
+No. Inspect measured outcomes, counts and source changes. Apply the agreed fallback and compare any replacement fairly before promotion.
 
 </details>
 
-You can move on when you can explain the goal, the changed value and why the result did or did not change. Then return to the next box in the main learning path.
-
+After the guided file change above, close the notes and explain the same decision for a different supplied row. State one condition that makes this method unsuitable. If you cannot explain the reason, repeat the small worked example before adding more code.
 
 ## 📋 Data dictionary
 
@@ -115,3 +130,7 @@ The saved artifact includes `model-info.json` with the columns, training distanc
 | 2 | Compare the later batch with the test and explain why West deserves a closer look. |
 
 The alert calls for investigation. Verify measurements and routing changes, then compare any replacement on a separate later batch before updating the service.
+
+<!-- teaching-note:start -->
+<!-- teaching-profile:capstone -->
+<!-- teaching-note:end -->

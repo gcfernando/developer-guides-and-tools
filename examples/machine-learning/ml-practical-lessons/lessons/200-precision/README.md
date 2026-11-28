@@ -8,17 +8,31 @@ Find out how often an order predicted urgent is actually urgent.
 
 ## Before you start
 
-Count correct and wrong categories before calculating fractions.
+Count alerts and truly urgent alerts.
 
-Use the [main learning path](../../LEARNING-PATH.md) if you have not learned this yet. For extra topics, read [the extra-topic guide](../../ELECTIVES.md). In the repository, these links open the course guides. If you downloaded a ZIP, open README.html for the browser links. Keep the extracted lesson folder directly inside the complete course folder.
+Use the [learning path](../../LEARNING-PATH.md) to find the earlier skill, the [word list](../../GLOSSARY.md) for a term, and [Setup](../../SETUP.md) for computer steps. Extra-topic prerequisites and bridges are in [Extra topics](../../ELECTIVES.md). In an extracted ZIP, open README.html for the browser links and keep this folder directly inside the complete course folder.
 
 ## The idea in simple words
 
-A missed urgent order and a false alarm are different mistakes. Precision counts correct alerts out of alerts. Recall counts caught urgent orders out of real urgent orders.
+Precision is truly urgent alerts divided by all alerts.
+
+**Why and when.** Use it to assess how often a review team’s alerts are useful, together with missed cases and capacity.
+
+**A worked example to follow.** If 17 of 19 alerts are urgent, precision is 17 ÷ 19, about 89.5%. Two alerts are false alarms.
+
+**Input and output.** The supplied sample fields are `distance`, `weight`, `answer`. In that field order, one original row is:
+
+```text
+37 | 5 | 1
+```
+
+`(missing)` means a blank, not zero. The result table below belongs to the original supplied files.
+
+**Follow the Python.** Open the complete [lesson.py](lesson.py) beside these instructions. Keep inputs apart from measured answers. Follow this script’s split and fit, then trace the saved preparation into the held-back result and any new request. A request must not supply its own training answer. The [requirements file](requirements.txt) lists its packages. The next section gives exact run commands; use the same course Python to install and run.
 
 ## Guess first
 
-Which denominator belongs to recall? Write your answer before running the script.
+Eight alerts include six urgent orders. What is precision, and what additional count is needed for recall? Write a reason before running or opening the answer.
 
 ## Run one step at a time
 
@@ -58,19 +72,20 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 ## Explain the result
 
-<details>
-<summary>Read the answer after trying</summary>
+**Common mistakes and limits.** High precision alone can hide many missed urgent cases. It changes with prevalence and the cutoff.
 
-All truly urgent orders. Write the counts first.
+<details>
+<summary>Check your choice and reason</summary>
+
+Precision is 6 ÷ 8 = 75%. Recall also needs the total number of truly urgent orders, including missed ones.
 
 </details>
 
-You can move on when you can explain the goal, the changed value and why the result did or did not change. Then return to the next box in the main learning path.
+After the guided file change above, close the notes and explain the same decision for a different supplied row. State one condition that makes this method unsuitable. If you cannot explain the reason, repeat the small worked example before adding more code.
 
 ### What this particular check asks
 
 This example keeps exact distance-and-weight combinations out of its test training rows. That is a deliberately stricter, special question. Independent orders may have the same measurements. Equal numbers alone do not prove leakage. Use shipment identity and the intended future job to choose a normal split; see lesson 442.
-
 
 ## 📋 Sample data
 
@@ -94,3 +109,7 @@ Showing the first 8 of 120 rows. The CSV has the full sample.
 | 5 | 2 |
 | 28 | 7 |
 | 40 | 5 |
+
+<!-- teaching-note:start -->
+<!-- teaching-profile:precision -->
+<!-- teaching-note:end -->

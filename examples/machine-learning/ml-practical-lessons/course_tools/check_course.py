@@ -73,6 +73,24 @@ def structure():
             # The historical manifest can contain a descriptive list of extra files.
             if value and ';' not in value and ',' not in value and not (ROOT/'lessons'/value).exists():
                 problems.append(f"Manifest {row['ID']}: missing {field}: {value}")
+    visual_manifest=ROOT/'course_tools/visuals.json'
+    if visual_manifest.is_file():
+        catalog=json.loads(visual_manifest.read_text(encoding='utf-8'))['visuals']
+        for picture in (ROOT/'workbook-figures').glob('*.png'):
+            if picture.name not in catalog:
+                problems.append(f'Figure lacks teaching metadata: {picture.name}')
+        for name,item in catalog.items():
+            for field in ('teaching_question','read_instructions','observation','limit','generation_source'):
+                if not item.get(field): problems.append(f'Figure {name}: missing {field}')
+            table=item.get('table_data',{})
+            if not table.get('columns') or not table.get('rows'):
+                problems.append(f'Figure {name}: missing readable values or text equivalent')
+            elif any(len(row)!=len(table['columns']) for row in table['rows']):
+                problems.append(f'Figure {name}: table row does not match its headings')
+            for source in item.get('sources',[]):
+                path=ROOT/source['path']
+                if not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest()!=source['sha256']:
+                    problems.append(f'Figure {name}: stale or missing source {source["path"]}; rebuild visuals')
     print(f'Checked {len(sources)} Python sources, {len(htmls)} pages, 448 archives and 447 manifest rows.')
     return problems
 
@@ -139,6 +157,19 @@ def regressions():
         folder=fixture('447-',parent)
         result=run_script(folder); assert result['exit_code']==0 and 'INVESTIGATE' in result['stdout'] and '422' in result['stdout'],result
         checks.append('The full capstone trains, serves practice requests and monitors later outcomes.')
+        folder=fixture('075-',parent)
+        pd.DataFrame({'color':['Green','Purple','Red']}).to_csv(folder/'new_inputs.csv',index=False)
+        result=run_script(folder)
+        assert result['exit_code']==0 and re.search(r'Green\s+0\s+0\s+1',result['stdout']) and re.search(r'Purple\s+0\s+0\s+0',result['stdout']),result
+        checks.append('One-hot encoding preserves the declared column order and the documented unknown-category policy.')
+        folder=fixture('326-',parent)
+        result=run_script(folder); assert result['exit_code']==0,result
+        pd.read_csv(folder/'new_inputs.csv').assign(duration=99999).to_csv(folder/'new_inputs.csv',index=False)
+        changed=run_script(folder); assert changed['exit_code']==0,changed
+        # Compare prediction fields rather than the displayed descriptive duration.
+        original_labels=re.findall(r'\b(?:yes|no)\s*$',result['stdout'],re.M)
+        assert original_labels and original_labels==re.findall(r'\b(?:yes|no)\s*$',changed['stdout'],re.M),(result,changed)
+        checks.append('Before-call bank predictions do not change when a request changes only current-call duration.')
     print('Learner regressions passed:',len(checks))
     return checks
 
@@ -175,8 +206,13 @@ def run_all(refresh=False):
         for result in pool.map(job,jobs):
             results.append(result)
             if result['exit_code']!=0: print('Could not run:',result['lesson'],result['stderr'].splitlines()[-1:])
-    output=ROOT/'course-review/revision-checks.json'
-    report=json.dumps({'python':sys.version,'results':results},indent=2,ensure_ascii=False)+'\n'
+    output=ROOT/'course-review/execution-checks.json'
+    from datetime import datetime, timezone
+    import platform
+    report=json.dumps({'checked_at_utc':datetime.now(timezone.utc).isoformat(),
+                      'python':sys.version,'platform':platform.platform(),
+                      'method':'Distinct source/data groups; scripts run in temporary copies. No learner study.',
+                      'results':results},indent=2,ensure_ascii=False)+'\n'
     # Keep local account names out of the shareable execution report.
     home=str(Path.home())
     for prefix in (home,home.replace('\\','/')):
@@ -201,8 +237,10 @@ def main():
     if args.run or args.refresh_outputs:
         results=run_all(args.refresh_outputs)
         # Missing extras are recorded, not silently called passing.
-        unexpected=[r for r in results if r['exit_code']!=0 and not any(word in r['stderr'] for word in ['ModuleNotFoundError','TiffWriter.write()','Could not find a backend'])]
-        if unexpected: raise SystemExit(f'{len(unexpected)} unexpected runtime failures; see revision-checks.json')
+        unexpected=[r for r in results if r['exit_code']!=0 and 'ModuleNotFoundError' not in r['stderr']]
+        if unexpected: raise SystemExit(f'{len(unexpected)} runtime failures; see execution-checks.json')
+        blocked=[r for r in results if r['exit_code']!=0 and 'ModuleNotFoundError' in r['stderr']]
+        if blocked: print(f'{len(blocked)} examples remain unverified because packages are missing; see execution-checks.json.')
         if any(r.get('matches_expected') is False for r in results): raise SystemExit('An expected output differs.')
 
 

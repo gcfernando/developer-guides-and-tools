@@ -7,6 +7,17 @@ permalink: /examples/machine-learning/ml-practical-lessons/glossary/
 
 # 🔎 Searchable glossary
 
+Use this as a tool while doing a lesson, rather than a list to memorize. Read the plain meaning, return to its worked example, and point to that object or value in the supplied input/output. A term is useful when it helps you make a choice.
+
+**Try three distinctions.** In a new delivery, identify a feature, the target we eventually measure, and the prediction available now. Explain why a missing value is not zero and why validation is not the final test. Then use the table below to check your wording.
+
+<details>
+<summary>Reasoned answer</summary>
+
+Distance can be a feature known before departure. Actual minutes are the target measured after completion. Predicted minutes are the model's estimate. A blank means a fact is unavailable; zero is a recorded quantity. Validation influences choices, while the final test assesses the frozen procedure. These distinctions determine which values may be used and which conclusions may be reported.
+
+</details>
+
 [← Back to the workbook](Data-Science-and-Machine-Learning.md#contents)
 
 Press **Ctrl+F** on Windows or Linux, or **Command+F** on a Mac. Search for the term you saw in a lesson. The last column opens a worked example.

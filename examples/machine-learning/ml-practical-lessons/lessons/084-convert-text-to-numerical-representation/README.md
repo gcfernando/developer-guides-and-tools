@@ -8,17 +8,31 @@ Compare plain word counts and weighted word counts for short messages.
 
 ## Before you start
 
-Read a message as text. Start with counting one word.
+Count parcel in three short messages.
 
-Use the [main learning path](../../LEARNING-PATH.md) if you have not learned this yet. For extra topics, read [the extra-topic guide](../../ELECTIVES.md). In the repository, these links open the course guides. If you downloaded a ZIP, open README.html for the browser links. Keep the extracted lesson folder directly inside the complete course folder.
+Use the [learning path](../../LEARNING-PATH.md) to find the earlier skill, the [word list](../../GLOSSARY.md) for a term, and [Setup](../../SETUP.md) for computer steps. Extra-topic prerequisites and bridges are in [Extra topics](../../ELECTIVES.md). In an extracted ZIP, open README.html for the browser links and keep this folder directly inside the complete course folder.
 
 ## The idea in simple words
 
-A model needs numbers. Counts make one column for a known word. TF-IDF gives different weights to common and less common words. Cleanup can lose meaning.
+Word counts record occurrences. TF-IDF changes weights using how common a word is across training messages.
+
+**Why and when.** Use counts as a simple text baseline; compare TF-IDF when common words should contribute differently.
+
+**A worked example to follow.** A known word has one fixed column. Its raw count may be 1 in a message; its TF-IDF value also depends on the training corpus and normalization. The script prints both values for parcel before predicting held-back categories.
+
+**Input and output.** The supplied sample fields are `message`, `category`. In that field order, one original row is:
+
+```text
+MY Parcel Is Late!!! | delivery
+```
+
+`(missing)` means a blank, not zero. The result table below belongs to the original supplied files.
+
+**Follow the Python.** Open the complete [lesson.py](lesson.py) beside these instructions. Keep inputs apart from measured answers. Follow this script’s split and fit, then trace the saved preparation into the held-back result and any new request. A request must not supply its own training answer. The [requirements file](requirements.txt) lists its packages. The next section gives exact run commands; use the same course Python to install and run.
 
 ## Guess first
 
-Should we always remove the word not? Write your answer before running the script.
+A new message contains only words absent from training. Does a predicted category establish that the text was understood? Write a reason before running or opening the answer.
 
 ## Run one step at a time
 
@@ -62,15 +76,16 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 ## Explain the result
 
-<details>
-<summary>Read the answer after trying</summary>
+**Common mistakes and limits.** A TF-IDF weight is not a probability or a semantic meaning. Fit vocabulary and IDF on training only; a new message must not relearn them.
 
-No. Removing it can reverse meaning. Test cleanup for the task.
+<details>
+<summary>Check your choice and reason</summary>
+
+No. Its representation can contain no known-word evidence. Inspect it, record the limitation and use an appropriate fallback or better training coverage.
 
 </details>
 
-You can move on when you can explain the goal, the changed value and why the result did or did not change. Then return to the next box in the main learning path.
-
+After the guided file change above, close the notes and explain the same decision for a different supplied row. State one condition that makes this method unsuitable. If you cannot explain the reason, repeat the small worked example before adding more code.
 
 ## 📋 Sample data
 
@@ -92,3 +107,7 @@ You can move on when you can explain the goal, the changed value and why the res
 | The parcel is late! |
 | I need a refund for two charges. |
 | WHERE ARE MY PACKAGES? |
+
+<!-- teaching-note:start -->
+<!-- teaching-profile:word_counts -->
+<!-- teaching-note:end -->

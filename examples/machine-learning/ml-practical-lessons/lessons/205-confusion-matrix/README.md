@@ -8,17 +8,31 @@ Locate missed urgent orders and false alarms in a labeled matrix.
 
 ## Before you start
 
-Count correct and wrong categories before calculating fractions.
+Distinguish actual classes from predicted classes.
 
-Use the [main learning path](../../LEARNING-PATH.md) if you have not learned this yet. For extra topics, read [the extra-topic guide](../../ELECTIVES.md). In the repository, these links open the course guides. If you downloaded a ZIP, open README.html for the browser links. Keep the extracted lesson folder directly inside the complete course folder.
+Use the [learning path](../../LEARNING-PATH.md) to find the earlier skill, the [word list](../../GLOSSARY.md) for a term, and [Setup](../../SETUP.md) for computer steps. Extra-topic prerequisites and bridges are in [Extra topics](../../ELECTIVES.md). In an extracted ZIP, open README.html for the browser links and keep this folder directly inside the complete course folder.
 
 ## The idea in simple words
 
-A missed urgent order and a false alarm are different mistakes. Precision counts correct alerts out of alerts. Recall counts caught urgent orders out of real urgent orders.
+A confusion matrix counts each combination of actual and predicted class.
+
+**Why and when.** Use it to make missed cases and false alarms concrete before calculating ratios.
+
+**A worked example to follow.** Read actual urgent along the row and predicted regular down the column: that cell counts misses. Actual regular with predicted urgent counts false alarms. Write the row and column meanings before reading a number.
+
+**Input and output.** The supplied sample fields are `distance`, `weight`, `answer`. In that field order, one original row is:
+
+```text
+37 | 5 | 1
+```
+
+`(missing)` means a blank, not zero. The result table below belongs to the original supplied files.
+
+**Follow the Python.** Open the complete [lesson.py](lesson.py) beside these instructions. Keep inputs apart from measured answers. Follow this script’s split and fit, then trace the saved preparation into the held-back result and any new request. A request must not supply its own training answer. The [requirements file](requirements.txt) lists its packages. The next section gives exact run commands; use the same course Python to install and run.
 
 ## Guess first
 
-Which denominator belongs to recall? Write your answer before running the script.
+A matrix has actual rows and predicted columns. Where is an urgent order that received no alert? Write a reason before running or opening the answer.
 
 ## Run one step at a time
 
@@ -56,15 +70,23 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 ## Explain the result
 
-<details>
-<summary>Read the answer after trying</summary>
+**Common mistakes and limits.** Libraries or charts may swap axis conventions. Never infer a cell’s meaning from position or colour alone.
 
-All truly urgent orders. Write the counts first.
+<details>
+<summary>Check your choice and reason</summary>
+
+In actual urgent / predicted regular. Count that cell as a false negative. Explain which class is considered positive.
 
 </details>
 
-You can move on when you can explain the goal, the changed value and why the result did or did not change. Then return to the next box in the main learning path.
+After the guided file change above, close the notes and explain the same decision for a different supplied row. State one condition that makes this method unsuitable. If you cannot explain the reason, repeat the small worked example before adding more code.
 
 ### What this particular check asks
 
 This example keeps exact distance-and-weight combinations out of its test training rows. That is a deliberately stricter, special question. Independent orders may have the same measurements. Equal numbers alone do not prove leakage. Use shipment identity and the intended future job to choose a normal split; see lesson 442.
+
+
+
+<!-- teaching-note:start -->
+<!-- teaching-profile:confusion -->
+<!-- teaching-note:end -->

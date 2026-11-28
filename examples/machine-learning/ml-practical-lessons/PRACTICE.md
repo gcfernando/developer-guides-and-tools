@@ -182,3 +182,42 @@ Check the measurements and labels. Ask whether routes or recording rules changed
 ## Review after module 12
 
 A support team can review only 20 alerts a day. A new cutoff would raise 100. Explain why recall alone cannot choose the cutoff. Write a short note for a manager: result, evidence, limits and next action. Then continue to the guided and independent projects.
+
+## 13. Finish a partly completed encoding task
+
+Training has zone names North and South. The saved encoder uses columns `[North, South]`. Complete the blank entries before viewing the reason.
+
+| Request | North | South | What needs a decision? |
+| --- | --- | --- | --- |
+| South | ? | ? | A known category |
+| North | ? | ? | A known category |
+| East | ? | ? | An unfamiliar name |
+
+<details>
+<summary>Hint</summary>
+
+Each known name activates its own column. Do not invent a new input column only at prediction time. The unfamiliar-name behavior must be specified separately.
+
+</details>
+
+<details>
+<summary>Answer and reason</summary>
+
+South is `0, 1`; North is `1, 0`. Under the lesson's `handle_unknown="ignore"` policy, East is `0, 0`. Other policies can reject or explicitly represent unknowns. Zero indicators do not establish how the model should behave for East. Keep the fitted schema and evaluate the chosen service policy.
+
+</details>
+
+## 14. Choose the method in an unfamiliar case
+
+A library records book format as paperback, hardback or audio. Another field is reservation priority low, medium or high. One recorded loan lasted 800 days. A reader's final return date is unknown when predicting the loan duration.
+
+Write an input-preparation plan. Explain the representation for each category field, what to investigate about the long loan, which information is unavailable at prediction time, and a fair way to check later loans. Do not start by choosing a complex algorithm.
+
+<details>
+<summary>One reasoned plan</summary>
+
+Book format has no inherent numeric ranking; a fixed one-hot representation is a suitable candidate. Priority has a stated order, but integer gaps impose an additional assumption for some models. Investigate the 800-day source record and library rules before keeping, correcting or flagging it. The future return date is unavailable as an input for duration prediction. Learn preparation on earlier training loans, choose using validation and check separate later completed loans against a simple baseline. State who is missing from the records and which outcomes are still pending.
+
+</details>
+
+Try this case again after a few days without the answer. Then try the independent Wine project. Recognition of a familiar delivery number is easier than applying the rule to a new setting; record both separately.

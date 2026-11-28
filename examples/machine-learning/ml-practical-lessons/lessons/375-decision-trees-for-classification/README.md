@@ -8,17 +8,31 @@ Use a tree of yes/no decisions to predict whether a delivery will be late.
 
 ## Before you start
 
-Finish the main path through overfitting and validation.
+Read a yes/no condition and count classes.
 
-Use the [main learning path](../../LEARNING-PATH.md) if you have not learned this yet. For extra topics, read [the extra-topic guide](../../ELECTIVES.md). In the repository, these links open the course guides. If you downloaded a ZIP, open README.html for the browser links. Keep the extracted lesson folder directly inside the complete course folder.
+Use the [learning path](../../LEARNING-PATH.md) to find the earlier skill, the [word list](../../GLOSSARY.md) for a term, and [Setup](../../SETUP.md) for computer steps. Extra-topic prerequisites and bridges are in [Extra topics](../../ELECTIVES.md). In an extracted ZIP, open README.html for the browser links and keep this folder directly inside the complete course folder.
 
 ## The idea in simple words
 
-Different algorithms learn different rules. The catalog is practice, not a leaderboard for choosing from final test scores. Use a common validation comparison for your own choice.
+A classification tree learns conditions that divide rows into regions with class evidence.
+
+**Why and when.** Use it for threshold/interacting patterns while controlling depth and checking separate cases.
+
+**A worked example to follow.** A branch asks about one input, then another. A new delivery follows the same conditions to a leaf; its class comes from the training evidence there.
+
+**Input and output.** The supplied sample fields are `km`, `kg`, `late`. In that field order, one original row is:
+
+```text
+48 | 4 | 1
+```
+
+`(missing)` means a blank, not zero. The result table below belongs to the original supplied files.
+
+**Follow the Python.** Open the complete [lesson.py](lesson.py) beside these instructions. Keep inputs apart from measured answers. Follow this script’s split and fit, then trace the saved preparation into the held-back result and any new request. A request must not supply its own training answer. The [requirements file](requirements.txt) lists its packages. The next section gives exact run commands; use the same course Python to install and run.
 
 ## Guess first
 
-Should you choose a model by opening many final test results? Write your answer before running the script.
+A leaf contains one urgent training order and no others. Should its apparently perfect training purity establish certainty? Write a reason before running or opening the answer.
 
 ## Run one step at a time
 
@@ -59,19 +73,20 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 ## Explain the result
 
-<details>
-<summary>Read the answer after trying</summary>
+**Common mistakes and limits.** Deep leaves can contain very few cases. A readable rule is not automatically a reliable or causal rule.
 
-No. Use validation first, then one final check.
+<details>
+<summary>Check your choice and reason</summary>
+
+No. One case is weak evidence. Check independent rows, constrain complexity and report the available counts.
 
 </details>
 
-You can move on when you can explain the goal, the changed value and why the result did or did not change. Then return to the next box in the main learning path.
+After the guided file change above, close the notes and explain the same decision for a different supplied row. State one condition that makes this method unsuitable. If you cannot explain the reason, repeat the small worked example before adding more code.
 
 ### What this particular check asks
 
 This example keeps exact distance-and-weight combinations out of its test training rows. That is a deliberately stricter, special question. Independent orders may have the same measurements. Equal numbers alone do not prove leakage. Use shipment identity and the intended future job to choose a normal split; see lesson 442.
-
 
 ## 📋 Sample data
 
@@ -95,3 +110,7 @@ Showing the first 8 of 60 rows. The CSV has the full sample.
 | 5 | 2 |
 | 16 | 4 |
 | 42 | 9 |
+
+<!-- teaching-note:start -->
+<!-- teaching-profile:classification_tree -->
+<!-- teaching-note:end -->

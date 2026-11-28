@@ -1,5 +1,9 @@
 # Data source and licence
 
+**Use this source note.** Before fitting, tell a partner which values are real source measurements, which changes belong to the course, and what the split does not test. A source note describes provenance; it does not certify that a sample represents a future population.
+
+**Check your reading.** Do target names 0, 1 and 2 mean increasing wine quality? No. They rename three types. The source-to-course code change described below preserves class identity and does not establish an order or quality ranking.
+
 Wine [Dataset]. Stefan Aeberhard and M. Forina (1992). UCI Machine Learning Repository. DOI: [10.24432/C5PC7J](https://doi.org/10.24432/C5PC7J).
 
 Source page: [UCI Wine](https://archive.ics.uci.edu/dataset/109/wine).

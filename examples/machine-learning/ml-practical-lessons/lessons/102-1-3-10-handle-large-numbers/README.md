@@ -8,17 +8,31 @@ Check how a log makes large numeric values easier to compare.
 
 ## Before you start
 
-Read large numbers and know which fields are IDs.
+Compare 10, 100 and 1000 and explain a zero.
 
-Use the [main learning path](../../LEARNING-PATH.md) if you have not learned this yet. For extra topics, read [the extra-topic guide](../../ELECTIVES.md). In the repository, these links open the course guides. If you downloaded a ZIP, open README.html for the browser links. Keep the extracted lesson folder directly inside the complete course folder.
+Use the [learning path](../../LEARNING-PATH.md) to find the earlier skill, the [word list](../../GLOSSARY.md) for a term, and [Setup](../../SETUP.md) for computer steps. Extra-topic prerequisites and bridges are in [Extra topics](../../ELECTIVES.md). In an extracted ZIP, open README.html for the browser links and keep this folder directly inside the complete course folder.
 
 ## The idea in simple words
 
-Scientific notation only changes how a number is displayed. A log changes the numeric input. An ID is a name, even when it contains digits.
+A logarithm compresses large positive gaps; log1p applies natural log to 1 + value.
+
+**Why and when.** Try a log for a skewed measurement or a multiplicative relationship, then compare validation results with unchanged input.
+
+**A worked example to follow.** Base-10 log maps 1, 10, 100, 1000 to 0, 1, 2, 3. log1p keeps zero valid and uses a different base. The lesson trains on the transformed signal and predicts cost in its original unit.
+
+**Input and output.** The supplied sample fields are `signal`, `cost`. In that field order, one original row is:
+
+```text
+1 | 10
+```
+
+`(missing)` means a blank, not zero. The result table below belongs to the original supplied files.
+
+**Follow the Python.** Open the complete [lesson.py](lesson.py) beside these instructions. Keep inputs apart from measured answers. Follow this script’s split and fit, then trace the saved preparation into the held-back result and any new request. A request must not supply its own training answer. The [requirements file](requirements.txt) lists its packages. The next section gives exact run commands; use the same course Python to install and run.
 
 ## Guess first
 
-Does writing 1000 as 1e3 make its value smaller? Write your answer before running the script.
+Does writing 1000 as 1e3 make it a log feature? What happens to zero under log10 and log1p? Write a reason before running or opening the answer.
 
 ## Run one step at a time
 
@@ -59,15 +73,16 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 ## Explain the result
 
-<details>
-<summary>Read the answer after trying</summary>
+**Common mistakes and limits.** Scientific notation is only a display choice. A log actually changes the numeric feature. Check the domain; logging negative values can fail, and a target log needs its inverse before interpreting predictions.
 
-No. The value stays 1000. A log is a different operation.
+<details>
+<summary>Check your choice and reason</summary>
+
+1e3 is still 1000. log10(0) is not finite, while log1p(0) is 0. Choose a justified valid transformation and reuse it consistently.
 
 </details>
 
-You can move on when you can explain the goal, the changed value and why the result did or did not change. Then return to the next box in the main learning path.
-
+After the guided file change above, close the notes and explain the same decision for a different supplied row. State one condition that makes this method unsuitable. If you cannot explain the reason, repeat the small worked example before adding more code.
 
 ## 📋 Sample data
 
@@ -99,3 +114,7 @@ Showing the first 8 of 9 rows. The CSV has the full sample.
 **👀 Read the visual.** Start with the count 100,000,000.
 
 **👉 What to do.** Use scientific notation for readability. Apply a transformation when the model should see a different scale.
+
+<!-- teaching-note:start -->
+<!-- teaching-profile:log -->
+<!-- teaching-note:end -->

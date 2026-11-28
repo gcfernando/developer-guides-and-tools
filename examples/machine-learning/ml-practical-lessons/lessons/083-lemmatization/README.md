@@ -8,17 +8,31 @@ Bring words such as charges and charged back to charge in the sample vocabulary.
 
 ## Before you start
 
-Read a message as text. Start with counting one word.
+Identify individual words and their spelling variants.
 
-Use the [main learning path](../../LEARNING-PATH.md) if you have not learned this yet. For extra topics, read [the extra-topic guide](../../ELECTIVES.md). In the repository, these links open the course guides. If you downloaded a ZIP, open README.html for the browser links. Keep the extracted lesson folder directly inside the complete course folder.
+Use the [learning path](../../LEARNING-PATH.md) to find the earlier skill, the [word list](../../GLOSSARY.md) for a term, and [Setup](../../SETUP.md) for computer steps. Extra-topic prerequisites and bridges are in [Extra topics](../../ELECTIVES.md). In an extracted ZIP, open README.html for the browser links and keep this folder directly inside the complete course folder.
 
 ## The idea in simple words
 
-A model needs numbers. Counts make one column for a known word. TF-IDF gives different weights to common and less common words. Cleanup can lose meaning.
+Tokenization splits text into pieces. Lemmatization maps word forms to a base form using language rules or a stated lookup.
+
+**Why and when.** Use tokens to form features; consider base forms when variants should share evidence.
+
+**A worked example to follow.** This small lookup turns charged and charges into charge, then counts the resulting tokens. It is an explicit exercise dictionary rather than a full language system.
+
+**Input and output.** The supplied sample fields are `message`, `category`. In that field order, one original row is:
+
+```text
+MY Parcel Is Late!!! | delivery
+```
+
+`(missing)` means a blank, not zero. The result table below belongs to the original supplied files.
+
+**Follow the Python.** Open the complete [lesson.py](lesson.py) beside these instructions. Keep inputs apart from measured answers. Follow this script’s split and fit, then trace the saved preparation into the held-back result and any new request. A request must not supply its own training answer. The [requirements file](requirements.txt) lists its packages. The next section gives exact run commands; use the same course Python to install and run.
 
 ## Guess first
 
-Should we always remove the word not? Write your answer before running the script.
+An unfamiliar word arrives. Should the lesson’s dictionary invent its base form? What should remain consistent between old and new messages? Write a reason before running or opening the answer.
 
 ## Run one step at a time
 
@@ -59,15 +73,16 @@ If a file is missing, list the files with `dir` or `ls` and enter the folder hol
 
 ## Explain the result
 
-<details>
-<summary>Read the answer after trying</summary>
+**Common mistakes and limits.** The lookup covers only listed forms. Context, language and ambiguous words can change the correct base form.
 
-No. Removing it can reverse meaning. Test cleanup for the task.
+<details>
+<summary>Check your choice and reason</summary>
+
+Keep an unlisted token unchanged or apply a tested language tool. Reuse exactly the same tokenizer and vocabulary preparation for training and prediction.
 
 </details>
 
-You can move on when you can explain the goal, the changed value and why the result did or did not change. Then return to the next box in the main learning path.
-
+After the guided file change above, close the notes and explain the same decision for a different supplied row. State one condition that makes this method unsuitable. If you cannot explain the reason, repeat the small worked example before adding more code.
 
 ## 📋 Sample data
 
@@ -89,3 +104,7 @@ You can move on when you can explain the goal, the changed value and why the res
 | The parcel is late! |
 | I need a refund for two charges. |
 | WHERE ARE MY PACKAGES? |
+
+<!-- teaching-note:start -->
+<!-- teaching-profile:token_lemma -->
+<!-- teaching-note:end -->
