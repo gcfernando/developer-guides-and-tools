@@ -1,0 +1,7 @@
+Accuracy: 0.933
+Predicted: [1, 1, 0, 1]
+Actual: [0, 1, 0, 1]
+ km  kg  predicted_late
+  5   2               0
+ 16   4               0
+ 42   9               1

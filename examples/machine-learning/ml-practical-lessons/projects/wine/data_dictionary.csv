@@ -1,0 +1,16 @@
+field,meaning,units
+row_id,Name for a row. Do not use as a model input.,category name
+alcohol,Alcohol measurement.,not stated here; keep source values
+malic_acid,Malic acid measurement.,not stated here; keep source values
+ash,Ash measurement.,not stated here; keep source values
+alcalinity_of_ash,Alkalinity of ash measurement; spelling follows the source.,not stated here; keep source values
+magnesium,Magnesium measurement.,not stated here; keep source values
+total_phenols,Total phenols measurement.,not stated here; keep source values
+flavanoids,Flavanoids measurement.,not stated here; keep source values
+nonflavanoid_phenols,Nonflavanoid phenols measurement.,not stated here; keep source values
+proanthocyanins,Proanthocyanins measurement.,not stated here; keep source values
+color_intensity,Colour intensity measurement.,not stated here; keep source values
+hue,Hue measurement.,not stated here; keep source values
+od280/od315_of_diluted_wines,Ratio of two optical measurements on diluted wine.,not stated here; keep source values
+proline,Proline measurement.,not stated here; keep source values
+wine_type,"Known type code: 0, 1 or 2. The target, not an input.",category name

@@ -1,0 +1,16 @@
+PDF reference: UCI Bank Marketing Dataset
+Origin of this CSV: original synthetic practice rows
+Rows: 8
+    Column   Type
+       age  int64
+   balance  int64
+  duration  int64
+       job object
+   marital object
+ education object
+     prior object
+subscribed object
+ age  balance  duration     job marital education   prior subscribed
+  21      500        60 student  single    school    none         no
+  36     1200       110   admin married    degree    none         no
+  44     4200       210 manager married    degree success        yes

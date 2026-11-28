@@ -1,0 +1,3 @@
+Rows retained: 4
+Held-out prediction: [35.0]
+[25. 41.]

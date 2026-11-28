@@ -1,0 +1,5 @@
+              use_case                   constraint
+Estimate delivery time                   One laptop
+Route support messages          Review missed items
+        Group shoppers Groups must be interpretable
+First decision: Estimate delivery time

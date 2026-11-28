@@ -1,0 +1,36 @@
+"""
+State
+
+Give the robot different starting positions and see its next state.
+
+Run: python lesson.py
+Try changing start from 0 to 2 in new_inputs.csv. Compare the new output.
+"""
+
+from pathlib import Path
+import pandas as pd
+
+input_path = Path(__file__).resolve().with_name("sample.csv")
+new_path = Path(__file__).resolve().with_name("new_inputs.csv")
+
+
+# 1. Read the track rules. Each row describes one move and its reward.
+track = pd.read_csv(input_path).set_index(["state", "action"])
+# 2. Read the new CSV rows, then apply the rules from the sample.
+cases = pd.read_csv(new_path)
+
+
+records = []
+for case in cases.itertuples(index=False):
+    turn = track.loc[(case.start, case.action)]
+    direction = "left" if case.action == 0 else "right"
+    records.append(
+        [case.start, direction, turn["next_state"], turn["reward"], turn["done"]]
+    )
+
+
+print("The state is the robot's current cell on the track.")
+result = pd.DataFrame(
+    records, columns=["Start", "Action", "Next cell", "Reward", "At goal"]
+)
+print(result.to_string(index=False))

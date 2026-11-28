@@ -1,0 +1,13 @@
+Training review range: -3.5 to 12.5 kg.
+Training records outside that range
+ parcel  weight_kg
+      5         90
+
+Decision: CORRECT
+The slip confirms 5 kg. Change 90 kg to 5 kg.
+
+Check parcel 8
+      Training data  Predicted minutes  Actual minutes
+   Original records               17.7              26
+After source review               26.0              26
+Open review-weights.png and compare-estimates.png in this folder.

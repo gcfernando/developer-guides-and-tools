@@ -1,0 +1,5 @@
+problem,target,feedback
+Predict delivery time,minutes,known answers
+Group routes by distance and weight,,no answers
+Tag the remaining delivery notes,urgency,some answers
+Learn which corridor reaches the loading door,,rewards

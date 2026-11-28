@@ -1,0 +1,5 @@
+DummyClassifier 0.687
+LogisticRegression 0.908
+DecisionTreeClassifier 0.744
+RandomForestClassifier 0.825
+SVC 0.88

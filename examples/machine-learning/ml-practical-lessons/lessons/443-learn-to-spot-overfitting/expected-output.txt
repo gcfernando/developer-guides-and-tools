@@ -1,0 +1,9 @@
+ Depth  Training MAE  Validation MAE
+     1          5.44            4.79
+     2          3.68            3.24
+     3          2.75            2.99
+     5          1.92            3.57
+    10          0.14            4.21
+    25          0.01            4.30
+Selected depth: 3. Test MAE: 3.91 minutes.
+Open validation-curve.png. The vertical gap measures how differently the two sets behaved.

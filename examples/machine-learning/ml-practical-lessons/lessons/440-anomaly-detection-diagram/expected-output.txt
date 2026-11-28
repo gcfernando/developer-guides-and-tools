@@ -1,0 +1,2 @@
+Example training shipments: [[10.0, 4.15], [9.73, 3.55], [9.55, 3.5]]
+Typical / unusually large: [1, -1, -1]

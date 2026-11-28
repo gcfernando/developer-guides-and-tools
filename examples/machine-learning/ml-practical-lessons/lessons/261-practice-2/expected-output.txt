@@ -1,0 +1,14 @@
+Missing cells before filling or removing rows: {'age': 1, 'fare': 0, 'family_size': 0, 'cabin_recorded': 0, 'pass_type': 0, 'terminal': 1, 'priority': 0}
+         Field  Rows to review
+           age               0
+          fare               1
+   family_size               0
+cabin_recorded               0
+Flagged original rows: [7]
+ Original row  Actual answer  Prediction
+            8              0           0
+            9              1           1
+ age  fare pass_type terminal cabin  siblings  parents  family_size  cabin_recorded  prediction
+18.0    12  standard    north   NaN         0        1            2               0           0
+57.0    42   premium    south     B         1        1            3               1           1
+52.0    46   premium    south     B         0        0            1               1           1

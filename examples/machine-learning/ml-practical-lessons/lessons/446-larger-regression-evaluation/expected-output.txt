@@ -1,0 +1,26 @@
+Test deliveries: 180. First test day: 2025-02-24.
+  Method  MAE (min)  RMSE (min)  R squared
+baseline      23.70       28.43      -0.00
+   model       2.89        3.73       0.98
+
+By route
+        orders  model_mae  baseline_mae
+route
+Long        61       2.57         31.79
+Medium      63       3.13          9.92
+Short       56       2.99         30.38
+
+By weight
+         orders  model_mae  baseline_mae
+weight
+Heavy       122       2.61         23.06
+Light        46       2.73         25.93
+Missing      12       6.39         21.66
+
+By zone
+       orders  model_mae  baseline_mae
+zone
+North      68       2.62         24.74
+South      56       3.04         25.97
+West       56       3.09         20.16
+Look at the order count before drawing a conclusion about a group.

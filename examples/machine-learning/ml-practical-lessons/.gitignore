@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.venv/
+*.joblib
+predictions.csv
+my_model.py

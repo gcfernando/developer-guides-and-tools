@@ -1,0 +1,4 @@
+Prediction: 27.5 minutes
+5 2 Prediction: 27.5 minutes
+10 4 Prediction: 43.0 minutes
+15 1 Prediction: 38.5 minutes

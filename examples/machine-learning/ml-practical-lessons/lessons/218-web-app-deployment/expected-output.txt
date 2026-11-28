@@ -1,0 +1,6 @@
+       Action  HTTP status  Predicted minutes
+Open the page          200                NaN
+ Predict 4 km          200               18.0
+Response: {'minutes': 18.0}
+8 200 {'minutes': 26.0}
+12 200 {'minutes': 34.0}

@@ -1,0 +1,7 @@
+ Vertical spread  Horizontal spread Label or prediction
+            0.00               1.12            Sideways
+            0.00               1.12            Sideways
+            1.12               0.00             Upright
+            1.12               0.00             Upright
+            1.12               0.00 Upright (predicted)
+Predicted direction for each new drawing: ['Upright', 'Sideways']

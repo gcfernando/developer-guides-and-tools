@@ -1,0 +1,3 @@
+Image matrix becomes one row: (4, 16)
+First normalized pixels: [0.059, 0.059, 0.059, 0.059]
+New picture: ['light', 'dark', 'light']

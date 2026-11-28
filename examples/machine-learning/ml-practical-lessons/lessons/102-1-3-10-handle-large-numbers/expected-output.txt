@@ -1,0 +1,7 @@
+Log Transformation first two training rows: [[0.69], [1.79]]
+Actual costs: [23, 48]
+Predicted costs: [26.7, 47.2]
+ signal  predicted_cost
+      3           13.94
+     15           31.43
+     40           43.30

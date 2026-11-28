@@ -1,0 +1,5 @@
+200 {'minutes': 27.8}
+Invalid distance: 422
+{'distance_km': 5, 'weight_kg': 2} 200 {'minutes': 27.8}
+{'distance_km': 20, 'weight_kg': 4} 200 {'minutes': 61.4}
+{'distance_km': -2, 'weight_kg': 3} 422 {'detail': [{'type': 'greater_than_equal', 'loc': ['body', 'distance_km'], 'msg': 'Input should be greater than or equal to 0', 'input': -2, 'ctx': {'ge': 0.0}}]}

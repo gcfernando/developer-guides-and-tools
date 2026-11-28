@@ -1,0 +1,8 @@
+First raw sketch: ['.###.', '#####', '#.#.#', '..#..', '.###.']
+Blank images to inspect: 0
+Model-input shape: (3, 64)
+Pixel range: 0.0 1.0
+Targets: ['T-shirt', 'dress']
+Predictions: ['T-shirt', 'dress']
+First one-hot label: [1.0, 0.0, 0.0]
+New labels: ['T-shirt', 'dress']

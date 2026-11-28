@@ -1,0 +1,4 @@
+age,hours,education,workclass,occupation,marital_status
+22,25,school,private,retail,single
+38,45,degree,public,engineer,married
+36,45,degree,public,manager,married

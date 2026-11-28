@@ -1,83 +1,62 @@
 ---
 layout: default
 title: "Data Science and Machine Learning — Practical Python Workbook"
-description: "Learn data preparation, evaluation and local model services with worked Python lessons, synthetic data and downloadable exercises."
+description: "Learn data preparation, evaluation and local model services with worked Python lessons, made-up data and downloadable exercises."
 permalink: /examples/machine-learning/ml-practical-lessons/
 canonical_url: https://gcfernando.github.io/developer-guides-and-tools/examples/machine-learning/ml-practical-lessons/Data-Science-and-Machine-Learning.html
 sitemap: false
 robots: index,follow
 ---
 
-[Course guide](README.md) · [Machine learning path](https://gcfernando.github.io/developer-guides-and-tools/learning-paths/machine-learning/) · [All resources](https://gcfernando.github.io/developer-guides-and-tools/documentation/)
+# Machine learning, one small step at a time
 
-# 🌈 Data Science & ML · Python Workbook
+**New to this subject? Open [Start here](START-HERE.md) first.** It explains tables, files and a prediction by hand. No Python is needed for the paper route.
 
-Predict delivery times from CSV data, check the model on unseen deliveries, and try a local prediction service. The workbook uses synthetic data so you can reproduce the exercises and inspect each decision.
+Use [Your learning path](LEARNING-PATH.md) for the required order. This workbook is a library of examples. Do not read all 447 numbered entries as a single first lesson. Some numbers name different questions about the same script.
 
-[Start with a prediction](#beginner-path) · [Follow the Core course](#core-course) · [Find a lesson ZIP](#lesson-downloads) · [Look up a term](GLOSSARY.md)
+[Setup](SETUP.md) · [Python basics](PYTHON-BASICS.md) · [Practice and answers](PRACTICE.md) · [Project choices](PROJECT-CHOICES.md) · [Extra topics](ELECTIVES.md) · [Word list](GLOSSARY.md)
 
 <a id="beginner-path"></a>
 
-## 🌱 Beginner path
+## Start with the learning path
 
-**Start with lesson 002.** Open the complete workbook folder from your download or repository copy, then extract lesson 002 inside it. Open a terminal in the lesson folder, where you can see `lesson.py` and the CSV files. If you need Python, follow the [setup guide](SETUP.md) first. Keep each script beside its own data files.
-
-### 🚚 1. Make a prediction
-
-[⬇️ Lesson 002 ZIP](sample_code_folder/002-your-first-prediction.zip)
-
-```bash
-python -m pip install -r requirements.txt
-python lesson.py
-```
-
-Under **New delivery estimates**, find **18.0 minutes** next to **4 km**. Open `new_inputs.csv`, change the first distance from **4** to **8**, save, and run `python lesson.py` again. That row should now say **26.0 minutes**.
-
-If Python reports that it cannot find `lesson.py`, open the terminal in the folder that contains the file. If your computer uses `python3`, use it in both commands.
-
-### ⚖️ 2. Investigate the 90 kg parcel
-
-[⬇️ Lesson 069 ZIP](sample_code_folder/069-spot-check-and-handle-an-outlier.zip)
-
-Extract the lesson and open a terminal in its folder. Run `python -m pip install -r requirements.txt` once, then `python lesson.py`.
-
-Read **Decision: CORRECT** and compare **17.7** and **26.0 minutes** for the same reserved parcel. In `weighing_slip.csv`, change the second cell from **5** to **90** and rerun. Expect **KEEP**. Clear that cell and rerun again. Expect **FLAG**.
-
-### 📏 3. Test a saved model with 90 km
-
-[⬇️ Lesson 071 ZIP](sample_code_folder/071-normalization-min-max-scaling.zip)
-
-Extract the lesson, open its folder in a terminal, and run these commands.
-
-```bash
-python -m pip install -r requirements.txt
-python train_range_model.py
-python test_range_model.py
-```
-
-Find **1.8163** and **Outside training range** next to **90 km**. Change 90 to **45** in `range_requests.csv`. Run only `python test_range_model.py` again. The 45 km row should show **100.0 minutes**.
-
-Use the [HTML workbook](https://gcfernando.github.io/developer-guides-and-tools/examples/machine-learning/ml-practical-lessons/Data-Science-and-Machine-Learning.html) for responsive tables and diagrams. Keep the Markdown, HTML, and supporting folders together after unzipping the workbook.
+1. Read Start here. Calculate the 4 km prediction on paper.
+2. Choose the ideas route or the Python route.
+3. For Python, follow Setup and activate the course environment. Every `python` command below assumes that environment is active. Use the same Python for installation and execution.
+4. Follow the modules in Your learning path. Use the check question before moving on.
 
 <a id="core-course"></a>
 
-## 🧭 Core course
+## Core lesson library
 
-**Core** gives you a path from a first prediction to a local delivery service. **Practice** gives you another task to try. **Reference** documents a topic or platform. Some PDF headings share a script. Follow the question for the lesson you opened.
+Core means required somewhere in the main learning path. The table below follows that path. Practice means extra work. Reference means a topic to look up later. The path also uses the separate train-and-test example and the independent project.
 
-If you are setting up Python for the first time, use the [shared setup page](SETUP.md). Use the [glossary](GLOSSARY.md) when a term is new.
-
-| Lesson name | What you’ll do | Download |
+| Lesson | Your small task | Download |
 | --- | --- | --- |
-| [002 · Your first prediction](#your-first-prediction) **Core** | Read a CSV, make a prediction, and change one distance. | [⬇️ Lesson ZIP](sample_code_folder/002-your-first-prediction.zip) |
-| [032 · Identify missing values](#identify-missing-values) **Core** | Find missing weights and zones before preparing the data. | [⬇️ Lesson ZIP](sample_code_folder/032-identify-missing-values.zip) |
-| [055 · Standardize formats](#standardize-formats) **Core** | Make dates and kilograms consistent across input rows. | [⬇️ Lesson ZIP](sample_code_folder/055-standardize-formats.zip) |
-| [069 · Spot, check, and handle an outlier](#spot-check-and-handle-an-outlier) **Core** | Verify an unusual weight before correcting it or setting it aside. | [⬇️ Lesson ZIP](sample_code_folder/069-spot-check-and-handle-an-outlier.zip) |
-| [071 · Normalization (Min-Max Scaling)](#normalization-min-max-scaling) **Core** | Use a saved scaler and model to check a new delivery request. | [⬇️ Lesson ZIP](sample_code_folder/071-normalization-min-max-scaling.zip) |
-| [442 · Choose the right data split](#lesson-442) **Core** | Choose a split that matches the orders the app will see. | [⬇️ Lesson ZIP](sample_code_folder/442-choose-the-right-split.zip) |
-| [444 · Choose a cutoff for rare urgent orders](#lesson-444) **Core** | Balance missed urgent orders and false alarms. First read [lesson 205](#confusion-matrix). | [⬇️ Lesson ZIP](sample_code_folder/444-rare-event-threshold.zip) |
-| [446 · Evaluate delivery errors by route, weight and zone](#lesson-446) **Core** | Read errors in minutes for routes, weights, and delivery zones. | [⬇️ Lesson ZIP](sample_code_folder/446-larger-regression-evaluation.zip) |
-| [447 · Capstone: From delivery CSV to local model service](#lesson-447) **Core** | After lessons 442 and 446, build a local service and monitor it on later deliveries. | [⬇️ Lesson ZIP](sample_code_folder/447-delivery-model-capstone.zip) |
+| 002 - Your first prediction **Core** | Predict how long a 4 km delivery will take, then check the model against two trips with known times. | [Lesson ZIP](sample_code_folder/002-your-first-prediction.zip) |
+| 004 - 1.1 Problem Definition **Core** | Decide what question the model should answer and how you will judge its answers. | [Lesson ZIP](sample_code_folder/004-1-1-problem-definition.zip) |
+| 009 - Set constraints & assumptions **Core** | Record the time, hardware and accuracy limits that affect your project. | [Lesson ZIP](sample_code_folder/009-set-constraints-assumptions.zip) |
+| 179 - 1.6. Data Splitting **Core** | Give training, validation and test rows different jobs. | [Lesson ZIP](sample_code_folder/179-1-6-data-splitting.zip) |
+| 442 - Choose the right data split **Core** | Compare random, customer-grouped, and chronological splits on the same delivery data. | [Lesson ZIP](sample_code_folder/442-choose-the-right-split.zip) |
+| 032 - Identify missing values **Core** | Find which weights or delivery zones are missing and read the affected rows. | [Lesson ZIP](sample_code_folder/032-identify-missing-values.zip) |
+| 048 - When missing values change the answer **Core** | See how losing the slower trips can make the average delivery time look too low. | [Lesson ZIP](sample_code_folder/048-when-missing-values-change-the-answer.zip) |
+| 050 - Detect & Remove Exact Duplicates **Core** | Keep one copy of each exact row before training on distance and time. | [Lesson ZIP](sample_code_folder/050-detect-remove-exact-duplicates.zip) |
+| 055 - Standardize formats **Core** | Turn dates, pounds and uneven zone names into consistent model inputs, then predict a new delivery. | [Lesson ZIP](sample_code_folder/055-standardize-formats.zip) |
+| 069 - Spot, check, and handle an outlier **Core** | Review a recorded 90 kg parcel, correct it using the weighing slip, and compare the two predictions on a graph. | [Lesson ZIP](sample_code_folder/069-spot-check-and-handle-an-outlier.zip) |
+| 035 - Remove **Core** | Drop a spare note column and remove rows missing a required distance or known time. | [Lesson ZIP](sample_code_folder/035-remove.zip) |
+| 039 - Median **Core** | Fill an empty weight with the middle training weight after sorting. | [Lesson ZIP](sample_code_folder/039-median.zip) |
+| 044 - Unknown placeholder **Core** | Keep a blank zone visible to the model by using Unknown as its own category. | [Lesson ZIP](sample_code_folder/044-unknown-placeholder.zip) |
+| 071 - Normalization (Min-Max Scaling) **Core** | Scale known distances, then see what happens when training covers 1–50 km and someone enters 90 km. | [Lesson ZIP](sample_code_folder/071-normalization-min-max-scaling.zip) |
+| 075 - One-Hot Encoding (For Unordered Categories) **Core** | Give each known color its own 0-or-1 column and try a new color. | [Lesson ZIP](sample_code_folder/075-one-hot-encoding-for-unordered-categories.zip) |
+| 443 - Spot overfitting with a validation curve **Core** | Vary model complexity, read the training and validation errors, and test the selected setting once. | [Lesson ZIP](sample_code_folder/443-learn-to-spot-overfitting.zip) |
+| 194 - Cross-validation **Core** | Take turns holding different deliveries back and compare the error on each group. | [Lesson ZIP](sample_code_folder/194-cross-validation.zip) |
+| 208 - Regression Metrics **Core** | Read prediction errors in minutes and compare them with a simple baseline. Worked calculation using two test trips. | [Lesson ZIP](sample_code_folder/208-regression-metrics.zip) |
+| 446 - Evaluate delivery errors by route, weight and zone **Core** | Compare a delivery model to a median baseline on a larger batch of future deliveries. | [Lesson ZIP](sample_code_folder/446-larger-regression-evaluation.zip) |
+| 205 - Confusion Matrix **Core** | Locate missed urgent orders and false alarms in a labeled matrix. | [Lesson ZIP](sample_code_folder/205-confusion-matrix.zip) |
+| 444 - Choose a cutoff for rare urgent orders **Core** | Compare precision and recall and pick an alert cutoff on validation orders before testing. | [Lesson ZIP](sample_code_folder/444-rare-event-threshold.zip) |
+| 207 - Feature Importance Plot **Core** | Shuffle an input to see how much worse the model performs without its original values. | [Lesson ZIP](sample_code_folder/207-feature-importance-plot.zip) |
+| 232 - First API call from a web page **Core** | Send a distance to a local model from a web page and read the response. | [Lesson ZIP](sample_code_folder/232-first-api-call-from-a-web-page.zip) |
+| 447 - Capstone: From delivery CSV to local model service **Core** | Train, validate, test, and save a model. Send local requests and monitor later labeled deliveries. | [Lesson ZIP](sample_code_folder/447-delivery-model-capstone.zip) |
 
 <a id="contents"></a>
 
@@ -103,19 +82,19 @@ If you are setting up Python for the first time, use the [shared setup page](SET
   - [1.9. Model Deployment](#1-9-model-deployment)
   - [1.10. Model Monitoring & Maintenance](#1-10-model-monitoring-maintenance)
 - [2. Data Sets](#2-data-sets)
-  - [2.1. Salary & Experience Dataset](#2-1-salary-experience-dataset)
-  - [2.2. Titanic Dataset](#2-2-titanic-dataset)
-  - [2.3. House Prices Dataset](#2-3-house-prices-dataset)
-  - [2.4. Iris Dataset](#2-4-iris-dataset)
-  - [2.5. UCI Adult Income Dataset](#2-5-uci-adult-income-dataset)
-  - [2.6. Wine Quality Dataset](#2-6-wine-quality-dataset)
-  - [2.7. Boston Housing Dataset](#2-7-boston-housing-dataset)
-  - [2.8. MNIST Dataset](#2-8-mnist-dataset)
-  - [2.9. Customer Segmentation Dataset](#2-9-customer-segmentation-dataset)
-  - [2.10. Bank Marketing Dataset](#2-10-bank-marketing-dataset)
-  - [2.11. Heart Disease Dataset](#2-11-heart-disease-dataset)
-  - [2.12. Fashion MNIST](#2-12-fashion-mnist)
-  - [2.13. Google Play Store Dataset](#2-13-google-play-store-dataset)
+  - [2.1. Invented salary records](#2-1-salary-experience-dataset)
+  - [2.2. Invented ferry boarding records](#2-2-titanic-dataset)
+  - [2.3. Invented house listings](#2-3-house-prices-dataset)
+  - [2.4. Invented flower measurements](#2-4-iris-dataset)
+  - [2.5. Invented income records](#2-5-uci-adult-income-dataset)
+  - [2.6. Invented drink measurements](#2-6-wine-quality-dataset)
+  - [2.7. Invented neighbourhood prices](#2-7-boston-housing-dataset)
+  - [2.8. Hand-drawn digit shapes](#2-8-mnist-dataset)
+  - [2.9. Invented shopper groups](#2-9-customer-segmentation-dataset)
+  - [2.10. Invented bank campaign records](#2-10-bank-marketing-dataset)
+  - [2.11. Invented health-related rows](#2-11-heart-disease-dataset)
+  - [2.12. Hand-drawn clothing shapes](#2-12-fashion-mnist)
+  - [2.13. Invented app listings](#2-13-google-play-store-dataset)
 - [3. Machine Learning Categories](#3-machine-learning-categories)
   - [3.1. Supervised Learning](#3-1-supervised-learning)
   - [3.2. Unsupervised Learning](#3-2-unsupervised-learning)
@@ -130,7 +109,21 @@ If you are setting up Python for the first time, use the [shared setup page](SET
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Start here **Practice** | Read a delivery table, teach a model with three rows, and ask it for a new delivery time. | [⬇️ Lesson ZIP](sample_code_folder/001-start-here.zip) |
+| 001 - Start here **Practice** | Read a delivery table, teach a model with three rows, and ask it for a new delivery time. | [Lesson ZIP](sample_code_folder/001-start-here.zip) |
+
+**Before this lesson.** Read a table and add small numbers.
+
+**In simple words.** Distance is known before the trip. The measured time is the answer. Training learns a rule; prediction uses it.
+
+**Guess first.** What happens to the guess when distance rises from 4 to 8? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+It rises from 18 to 26 minutes in this made-up example. Real times can vary.
+
+</details>
+
 
 ![Open the CSV. The new trip is 4 km. Its delivery time is still unknown. → Run the lesson. The model uses the pattern it learned from past trips. → Read the answer. 4 km → 18 min. Try a different distance and compare.](workbook-figures/request-journey-mobile.png)
 
@@ -152,9 +145,23 @@ Each lesson has its own package list and CSVs. Run the commands from its folder.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Your first prediction **Core** | Predict how long a 4 km delivery will take, then check the model against two trips with known times. | [⬇️ Lesson ZIP](sample_code_folder/002-your-first-prediction.zip) |
+| 002 - Your first prediction **Core** | Predict how long a 4 km delivery will take, then check the model against two trips with known times. | [Lesson ZIP](sample_code_folder/002-your-first-prediction.zip) |
 
-**➡️ Next Core lesson.** [Identify missing values](#identify-missing-values).
+**Before this lesson.** Read a table and add small numbers.
+
+**In simple words.** Distance is known before the trip. The measured time is the answer. Training learns a rule; prediction uses it.
+
+**Guess first.** What happens to the guess when distance rises from 4 to 8? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+It rises from 18 to 26 minutes in this made-up example. Real times can vary.
+
+</details>
+
+
+**Next step.** Return to [Your learning path](LEARNING-PATH.md) and open the next unfinished module.
 
 **🎯 Goal.** How long might a 4 km delivery take? Each **row** is one delivery. Each **column** is one type of fact. Distance is the input. The known time is the answer the model learns from.
 
@@ -229,7 +236,7 @@ print(results.to_string(index=False))
 | 7 | 24.0 |
 | 9 | 28.0 |
 
-**🧪 Change one input.** In new_inputs.csv change 4 to 8. After rerunning, the first estimate should be 26.0 minutes.
+**Your small change.** In new_inputs.csv change 4 to 8. After rerunning, the first estimate should be 26.0 minutes. Save the named CSV before running again.
 
 **📩 CSV used for the estimates**
 
@@ -270,7 +277,21 @@ print(results.to_string(index=False))
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 1. Data Science Pipeline **Practice** | Turn a business question into something you can measure before you choose a model. | [⬇️ Lesson ZIP](sample_code_folder/003-1-data-science-pipeline.zip) |
+| 003 - 1. Data Science Pipeline **Practice** | Turn a business question into something you can measure before you choose a model. | [Lesson ZIP](sample_code_folder/003-1-data-science-pipeline.zip) |
+
+**Before this lesson.** Name the person and decision the result should help.
+
+**In simple words.** A project needs a useful question before it needs a model. A fixed rule may be enough. A score must match the decision.
+
+**Guess first.** Do we always need machine learning? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Use a known rule or report if it answers the question well enough.
+
+</details>
+
 
 ![Prepare the rows. Read past trips. Clean the inputs and set aside some rows to check. → Teach and check. Train with the measured times. Compare estimates with the check rows. → Use and monitor. Estimate new times. Let measured outcomes tell you when to investigate.](workbook-figures/workbook-pipeline-mobile.png)
 
@@ -284,7 +305,21 @@ print(results.to_string(index=False))
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 1.1 Problem Definition **Practice** | Decide what question the model should answer and how you will judge its answers. | [⬇️ Lesson ZIP](sample_code_folder/004-1-1-problem-definition.zip) |
+| 004 - 1.1 Problem Definition **Core** | Decide what question the model should answer and how you will judge its answers. | [Lesson ZIP](sample_code_folder/004-1-1-problem-definition.zip) |
+
+**Before this lesson.** Name the person and decision the result should help.
+
+**In simple words.** A project needs a useful question before it needs a model. A fixed rule may be enough. A score must match the decision.
+
+**Guess first.** Do we always need machine learning? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Use a known rule or report if it answers the question well enough.
+
+</details>
+
 
 **📌 Before you start.** Pick one result you want the app to produce.
 
@@ -300,7 +335,21 @@ print(results.to_string(index=False))
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Understand the business problem or use case **Practice** | Name the decision you want to make for a delivery, a support message, or a shopper. | [⬇️ Lesson ZIP](sample_code_folder/005-understand-the-business-problem-or-use-case.zip) |
+| 005 - Understand the business problem or use case **Practice** | Name the decision you want to make for a delivery, a support message, or a shopper. | [Lesson ZIP](sample_code_folder/005-understand-the-business-problem-or-use-case.zip) |
+
+**Before this lesson.** Name the person and decision the result should help.
+
+**In simple words.** A project needs a useful question before it needs a model. A fixed rule may be enough. A score must match the decision.
+
+**Guess first.** Do we always need machine learning? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Use a known rule or report if it answers the question well enough.
+
+</details>
+
 
 In the worksheet below, write the decision or action the result should support.
 
@@ -310,7 +359,21 @@ In the worksheet below, write the decision or action the result should support.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Define the objective **Practice** | Decide whether the task needs a number, a category, or groups of similar rows. | [⬇️ Lesson ZIP](sample_code_folder/006-define-the-objective.zip) |
+| 006 - Define the objective **Practice** | Decide whether the task needs a number, a category, or groups of similar rows. | [Lesson ZIP](sample_code_folder/006-define-the-objective.zip) |
+
+**Before this lesson.** Name the person and decision the result should help.
+
+**In simple words.** A project needs a useful question before it needs a model. A fixed rule may be enough. A score must match the decision.
+
+**Guess first.** Do we always need machine learning? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Use a known rule or report if it answers the question well enough.
+
+</details>
+
 
 Choose what the output should look like. The sample worksheet distinguishes a number, a category, and a group.
 
@@ -320,7 +383,21 @@ Choose what the output should look like. The sample worksheet distinguishes a nu
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Identify key performance metrics **Practice** | Pick a score that fits the question, such as minutes of error or how many urgent cases the model catches. | [⬇️ Lesson ZIP](sample_code_folder/007-identify-key-performance-metrics.zip) |
+| 007 - Identify key performance metrics **Practice** | Pick a score that fits the question, such as minutes of error or how many urgent cases the model catches. | [Lesson ZIP](sample_code_folder/007-identify-key-performance-metrics.zip) |
+
+**Before this lesson.** Name the person and decision the result should help.
+
+**In simple words.** A project needs a useful question before it needs a model. A fixed rule may be enough. A score must match the decision.
+
+**Guess first.** Do we always need machine learning? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Use a known rule or report if it answers the question well enough.
+
+</details>
+
 
 Use the worksheet to select a first check. The evaluation section shows how to compute accuracy, RMSE, and F1-score.
 
@@ -330,7 +407,21 @@ Use the worksheet to select a first check. The evaluation section shows how to c
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Understand the domain knowledge related to the data **Practice** | Write down what the data means, including its units and what you know before predicting. | [⬇️ Lesson ZIP](sample_code_folder/008-understand-the-domain-knowledge-related-to-the-data.zip) |
+| 008 - Understand the domain knowledge related to the data **Practice** | Write down what the data means, including its units and what you know before predicting. | [Lesson ZIP](sample_code_folder/008-understand-the-domain-knowledge-related-to-the-data.zip) |
+
+**Before this lesson.** Name the person and decision the result should help.
+
+**In simple words.** A project needs a useful question before it needs a model. A fixed rule may be enough. A score must match the decision.
+
+**Guess first.** Do we always need machine learning? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Use a known rule or report if it answers the question well enough.
+
+</details>
+
 
 Add a units or timing check for each input you plan to use.
 
@@ -340,7 +431,21 @@ Add a units or timing check for each input you plan to use.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Set constraints & assumptions **Practice** | Record the time, hardware and accuracy limits that affect your project. | [⬇️ Lesson ZIP](sample_code_folder/009-set-constraints-assumptions.zip) |
+| 009 - Set constraints & assumptions **Core** | Record the time, hardware and accuracy limits that affect your project. | [Lesson ZIP](sample_code_folder/009-set-constraints-assumptions.zip) |
+
+**Before this lesson.** Name the person and decision the result should help.
+
+**In simple words.** A project needs a useful question before it needs a model. A fixed rule may be enough. A score must match the decision.
+
+**Guess first.** Do we always need machine learning? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Use a known rule or report if it answers the question well enough.
+
+</details>
+
 
 Write one row for each practical choice before you train. Change the goal and choose a different metric or check.
 
@@ -367,7 +472,7 @@ Group shoppers Groups must be interpretable
 First decision: Estimate delivery time
 ```
 
-**🧪 Change one input.** Add one task to sample.csv with a decision, objective, metric, domain check and constraint. Look for it in the printed table.
+**Your small change.** Add one task to sample.csv with a decision, objective, metric, domain check and constraint. Look for it in the printed table. Save the named CSV before running again.
 
 
 **💡 Takeaway.** Record the domain assumption, available computing power, and the error you can tolerate. Accuracy is another option for classification. Revisit the brief after evaluation.
@@ -378,7 +483,21 @@ First decision: Estimate delivery time
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 1.2 Data Collection **Practice** | Read orders from a CSV, a small database, a local API, and a sample web page. | [⬇️ Lesson ZIP](sample_code_folder/010-1-2-data-collection.zip) |
+| 010 - 1.2 Data Collection **Practice** | Read orders from a CSV, a small database, a local API, and a sample web page. | [Lesson ZIP](sample_code_folder/010-1-2-data-collection.zip) |
+
+**Before this lesson.** Read a CSV table. A request asks another program for data.
+
+**In simple words.** A CSV, database, API and web page can hold similar facts. This practice stays on your computer. It does not ask a public website for data.
+
+**Guess first.** How will you know that all required rows arrived? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+Compare row counts, IDs and required fields. A live source may return rows in several pages.
+
+</details>
+
 
 **📌 Before you start.** Know which fields you need and what each row should represent.
 
@@ -394,7 +513,21 @@ First decision: Estimate delivery time
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Identify data sources **Practice** | Compare four ways to bring order data into Python. | [⬇️ Lesson ZIP](sample_code_folder/011-identify-data-sources.zip) |
+| 011 - Identify data sources **Practice** | Compare four ways to bring order data into Python. | [Lesson ZIP](sample_code_folder/011-identify-data-sources.zip) |
+
+**Before this lesson.** Read a CSV table. A request asks another program for data.
+
+**In simple words.** A CSV, database, API and web page can hold similar facts. This practice stays on your computer. It does not ask a public website for data.
+
+**Guess first.** How will you know that all required rows arrived? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+Compare row counts, IDs and required fields. A live source may return rows in several pages.
+
+</details>
+
 
 Create four sources in Python. Use a local test API and a sample HTML page so you can practise without sending a request over the network.
 
@@ -421,7 +554,7 @@ Orders returned by the local API
 order_id  zone
 ```
 
-**🧪 Change one input.** Add order_id 4 with zone west in sample.csv. Look for it in the database, API or page output.
+**Your small change.** Add order_id 4 with zone west in sample.csv. Look for it in the database, API or page output. Save the named CSV before running again.
 
 
 **💡 Takeaway.** The test client makes a GET request and checks the response before reading its rows. The HTML parser extracts the zone from the supplied page. For a live API, check pagination as well as status. For web scraping, check permitted access and the site’s terms first.
@@ -432,7 +565,21 @@ order_id  zone
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Gather structured and unstructured data **Practice** | Collect a delivery table, a text file, an image, and a short video into one folder. | [⬇️ Lesson ZIP](sample_code_folder/016-gather-structured-and-unstructured-data.zip) |
+| 016 - Gather structured and unstructured data **Practice** | Collect a delivery table, a text file, an image, and a short video into one folder. | [Lesson ZIP](sample_code_folder/016-gather-structured-and-unstructured-data.zip) |
+
+**Before this lesson.** Know what a file and folder are.
+
+**In simple words.** A file list records where each item is. Share only needed fields. Removing a contact field is one small sharing step, not proof of legal compliance.
+
+**Guess first.** Should a shared export include a contact field the task does not need? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Also check purpose, permission, access and retention with the data owner.
+
+</details>
+
 
 The collection exercise below creates a CSV for structured records and a manifest for text, images, and video.
 
@@ -442,7 +589,21 @@ The collection exercise below creates a CSV for structured records and a manifes
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Store data in a centralized location **Practice** | Save the collected records, media and file list in one location. | [⬇️ Lesson ZIP](sample_code_folder/019-store-data-in-a-centralized-location.zip) |
+| 019 - Store data in a centralized location **Practice** | Save the collected records, media and file list in one location. | [Lesson ZIP](sample_code_folder/019-store-data-in-a-centralized-location.zip) |
+
+**Before this lesson.** Know what a file and folder are.
+
+**In simple words.** A file list records where each item is. Share only needed fields. Removing a contact field is one small sharing step, not proof of legal compliance.
+
+**Guess first.** Should a shared export include a contact field the task does not need? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Also check purpose, permission, access and retention with the data owner.
+
+</details>
+
 
 Run the collection exercise and inspect the files in `collection_demo/`.
 
@@ -452,7 +613,21 @@ Run the collection exercise and inspect the files in `collection_demo/`.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Track metadata **Practice** | Record where a file came from, how large it is and what its columns contain. | [⬇️ Lesson ZIP](sample_code_folder/023-track-metadata.zip) |
+| 023 - Track notes about the data **Practice** | Record where a file came from, how large it is and what its columns contain. | [Lesson ZIP](sample_code_folder/023-track-metadata.zip) |
+
+**Before this lesson.** Know what a file and folder are.
+
+**In simple words.** A file list records where each item is. Share only needed fields. Removing a contact field is one small sharing step, not proof of legal compliance.
+
+**Guess first.** Should a shared export include a contact field the task does not need? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Also check purpose, permission, access and retention with the data owner.
+
+</details>
+
 
 After the collection exercise runs, inspect its printed source, file size, collection method, and field types.
 
@@ -462,7 +637,21 @@ After the collection exercise runs, inspect its printed source, file size, colle
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Handle data privacy & security concerns **Practice** | Export a delivery table with order IDs and times while keeping contact details out of the shared file. | [⬇️ Lesson ZIP](sample_code_folder/027-handle-data-privacy-security-concerns.zip) |
+| 027 - Handle data privacy & security concerns **Practice** | Export a delivery table with order IDs and times while keeping contact details out of the shared file. | [Lesson ZIP](sample_code_folder/027-handle-data-privacy-security-concerns.zip) |
+
+**Before this lesson.** Know what a file and folder are.
+
+**In simple words.** A file list records where each item is. Share only needed fields. Removing a contact field is one small sharing step, not proof of legal compliance.
+
+**Guess first.** Should a shared export include a contact field the task does not need? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Also check purpose, permission, access and retention with the data owner.
+
+</details>
+
 
 Keep a list of fields you actually need. The example removes a fictional contact field before sharing. Access controls, retention, and permission to collect data are separate checks.
 
@@ -490,7 +679,7 @@ file_type  collected
 text       True
 ```
 
-**🧪 Change one input.** Try changing order_id from 1 to 2 in sample.csv. Compare the new output.
+**Your small change.** Change a fictional contact in sample.csv. Rerun. Open collection_demo/deliveries.csv and check that contact is still absent. Save the named CSV before running again.
 
 
 **💡 Takeaway.** The manifest lists the three sample files. Open the image and count the video frames to confirm they can be read. This exercise uses Pillow and imageio with FFmpeg from the setup commands. For real data, choose a controlled local directory, cloud store, or database and review applicable requirements such as GDPR or HIPAA with the data owner.
@@ -501,7 +690,21 @@ text       True
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 1.3 Data Cleaning & Preprocessing **Practice** | Start by finding blanks and question marks in your delivery data. | [⬇️ Lesson ZIP](sample_code_folder/030-1-3-data-cleaning-preprocessing.zip) |
+| 030 - 1.3 Data Cleaning & Preprocessing **Practice** | Start by finding blanks and question marks in your delivery data. | [Lesson ZIP](sample_code_folder/030-1-3-data-cleaning-preprocessing.zip) |
+
+**Before this lesson.** Read rows and columns. A blank and zero mean different things.
+
+**In simple words.** First find the gaps. A question mark can mean missing. Count gaps before choosing what to do with them.
+
+**Guess first.** If a blank becomes 2, what happens to the missing count? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+The count falls by one. The new value is a supplied measurement only if you have a source for it.
+
+</details>
+
 
 **📌 Before you start.** Open an extracted lesson, find sample.csv, and identify its inputs and known answer.
 
@@ -511,7 +714,21 @@ text       True
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 1.3.1 Handle Missing Values **Practice** | Count missing entries and locate the delivery rows you need to review. | [⬇️ Lesson ZIP](sample_code_folder/031-1-3-1-handle-missing-values.zip) |
+| 031 - 1.3.1 Handle Missing Values **Practice** | Count missing entries and locate the delivery rows you need to review. | [Lesson ZIP](sample_code_folder/031-1-3-1-handle-missing-values.zip) |
+
+**Before this lesson.** Read rows and columns. A blank and zero mean different things.
+
+**In simple words.** First find the gaps. A question mark can mean missing. Count gaps before choosing what to do with them.
+
+**Guess first.** If a blank becomes 2, what happens to the missing count? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+The count falls by one. The new value is a supplied measurement only if you have a source for it.
+
+</details>
+
 
 ![Find the gap. The weight is blank. The measured delivery time is present. → Learn a fill rule. Use a rule based on the training weights, such as their median. → Reuse the rule. Fill a blank on a new request using that saved rule.](workbook-figures/missing-values-steps-mobile.png)
 
@@ -525,9 +742,23 @@ text       True
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Identify missing values **Core** | Find which weights or delivery zones are missing and read the affected rows. | [⬇️ Lesson ZIP](sample_code_folder/032-identify-missing-values.zip) |
+| 032 - Identify missing values **Core** | Find which weights or delivery zones are missing and read the affected rows. | [Lesson ZIP](sample_code_folder/032-identify-missing-values.zip) |
 
-**➡️ Next Core lesson.** [Standardize formats](#standardize-formats).
+**Before this lesson.** Read rows and columns. A blank and zero mean different things.
+
+**In simple words.** First find the gaps. A question mark can mean missing. Count gaps before choosing what to do with them.
+
+**Guess first.** If a blank becomes 2, what happens to the missing count? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+The count falls by one. The new value is a supplied measurement only if you have a source for it.
+
+</details>
+
+
+**Next step.** Return to [Your learning path](LEARNING-PATH.md) and open the next unfinished module.
 
 Read a CSV with blank numeric and categorical cells and a custom missing marker. Find the affected columns and rows before choosing a treatment.
 
@@ -556,7 +787,7 @@ Read a CSV with blank numeric and categorical cells and a custom missing marker.
 | distance_km | 0 |
 | weight_kg | 1 |
 
-**🧪 Change one input.** Fill the blank weight with 2 in sample.csv. The missing weight count should fall by one.
+**Your small change.** Fill the blank weight with 2 in sample.csv. The missing weight count should fall by one. Save the named CSV before running again.
 
 **🐍 Complete script from the ZIP**
 
@@ -607,7 +838,21 @@ print(
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Handle missing values **Practice** | Decide which incomplete delivery rows you can still use to train a model. | [⬇️ Lesson ZIP](sample_code_folder/034-handle-missing-values.zip) |
+| 034 - Handle missing values **Practice** | Decide which incomplete delivery rows you can still use to train a model. | [Lesson ZIP](sample_code_folder/034-handle-missing-values.zip) |
+
+**Before this lesson.** Find a missing input and a missing answer. Keep training and checks separate.
+
+**In simple words.** A fill is an estimate, not a recovered fact. Learn a fill rule on training rows. Reuse it on new rows. Do not invent training answers.
+
+**Guess first.** May a new request change the saved training median? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Apply the saved rule. A deliberate retraining step is a separate action.
+
+</details>
+
 
 <a id="remove"></a>
 
@@ -615,7 +860,21 @@ print(
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Remove **Practice** | Drop a spare note column and remove rows missing a required distance or known time. | [⬇️ Lesson ZIP](sample_code_folder/035-remove.zip) |
+| 035 - Remove **Core** | Drop a spare note column and remove rows missing a required distance or known time. | [Lesson ZIP](sample_code_folder/035-remove.zip) |
+
+**Before this lesson.** Find a missing input and a missing answer. Keep training and checks separate.
+
+**In simple words.** A fill is an estimate, not a recovered fact. Learn a fill rule on training rows. Reuse it on new rows. Do not invent training answers.
+
+**Guess first.** May a new request change the saved training median? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Apply the saved rule. A deliberate retraining step is a separate action.
+
+</details>
+
 
 Inspect a tiny table. Drop an unhelpful note column, drop training rows missing an input you cannot recover, and use the remaining rows for a regression fit.
 
@@ -647,7 +906,7 @@ Held-out prediction: [35.0]
 [25. 41.]
 ```
 
-**🧪 Change one input.** Leave distance_km blank on a practice row. Compare the number of usable rows and enter a new distance to predict.
+**Your small change.** Leave distance_km blank on a practice row. Compare the number of usable rows and enter a new distance to predict. Save the named CSV before running again.
 
 
 **💡 Takeaway.** Choose what to drop after reviewing why a value is missing. A required label is a different case from a missing input.
@@ -658,7 +917,21 @@ Held-out prediction: [35.0]
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Impute **Practice** | Fill a missing parcel weight before estimating the delivery time. | [⬇️ Lesson ZIP](sample_code_folder/036-impute.zip) |
+| 036 - Fill a blank **Practice** | Fill a missing parcel weight before estimating the delivery time. | [Lesson ZIP](sample_code_folder/036-impute.zip) |
+
+**Before this lesson.** Find a missing input and a missing answer. Keep training and checks separate.
+
+**In simple words.** A fill is an estimate, not a recovered fact. Learn a fill rule on training rows. Reuse it on new rows. Do not invent training answers.
+
+**Guess first.** May a new request change the saved training median? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Apply the saved rule. A deliberate retraining step is a separate action.
+
+</details>
+
 
 Run the numeric and categorical examples below on training rows, then inspect what the fitted imputer returns on later rows.
 
@@ -668,7 +941,21 @@ Run the numeric and categorical examples below on training rows, then inspect wh
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Numerical Data: Mean, Median, Mode, KNN Imputer **Practice** | Compare four ways of filling the same missing weight and see how each changes the prediction. | [⬇️ Lesson ZIP](sample_code_folder/037-numerical-data-mean-median-mode-knn-imputer.zip) |
+| 037 - Numerical Data: Mean, Median, Mode, KNN Imputer **Practice** | Compare four ways of filling the same missing weight and see how each changes the prediction. | [Lesson ZIP](sample_code_folder/037-numerical-data-mean-median-mode-knn-imputer.zip) |
+
+**Before this lesson.** Find a missing input and a missing answer. Keep training and checks separate.
+
+**In simple words.** A fill is an estimate, not a recovered fact. Learn a fill rule on training rows. Reuse it on new rows. Do not invent training answers.
+
+**Guess first.** May a new request change the saved training median? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Apply the saved rule. A deliberate retraining step is a separate action.
+
+</details>
+
 
 **🎯 Goal.** How long would a 10 km delivery take if the parcel weight had not been recorded? Use the first four deliveries to learn. For the fifth delivery, deliberately hide the known 1 kg weight, and keep its actual time, 33 minutes, for comparison.
 
@@ -702,7 +989,7 @@ Run the numeric and categorical examples below on training rows, then inspect wh
 | 1 | Mean | 2.33 | 33.59 | 33.0 |
 | 2 | Mean | 2.00 | 28.56 | 29.0 |
 
-**🧪 Change one input.** Leave weight_kg blank for a new distance and compare what each method fills in.
+**Your small change.** Change a distance in new_inputs.csv. Clear actual_minutes on that row: the old measured time does not describe your invented request. Compare the new guess. Save the named CSV before running again.
 
 
 ![The same shipment gets a different weight and prediction under each method. The dashed line marks its actual time. Choose a method on more than one validation row.](workbook-figures/numerical-data-mean-median-mode-knn-imputer.png)
@@ -719,7 +1006,21 @@ Run the numeric and categorical examples below on training rows, then inspect wh
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Categorical Data: Mode, "Unknown" placeholder **Practice** | Try the most common delivery zone and an explicit Unknown label for the same blank cell. | [⬇️ Lesson ZIP](sample_code_folder/042-categorical-data-mode-unknown-placeholder.zip) |
+| 042 - Category Data: Mode, "Unknown" placeholder **Practice** | Try the most common delivery zone and an explicit Unknown label for the same blank cell. | [Lesson ZIP](sample_code_folder/042-categorical-data-mode-unknown-placeholder.zip) |
+
+**Before this lesson.** Find a missing input and a missing answer. Keep training and checks separate.
+
+**In simple words.** A fill is an estimate, not a recovered fact. Learn a fill rule on training rows. Reuse it on new rows. Do not invent training answers.
+
+**Guess first.** May a new request change the saved training median? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Apply the saved rule. A deliberate retraining step is a separate action.
+
+</details>
+
 
 **🎯 Goal.** If the zone is missing, should a model see the most common zone or a separate Unknown category? Compare what happens to the same two deliveries.
 
@@ -750,7 +1051,7 @@ Run the numeric and categorical examples below on training rows, then inspect wh
 | NaN | north | 26.0 |
 | south | south | 40.0 |
 
-**🧪 Change one input.** Change zone in new_inputs.csv, for example from ? to north. Compare the printed rows.
+**Your small change.** Change zone in new_inputs.csv, for example from ? to north. Compare the printed rows. Save the named CSV before running again.
 
 
 **Read the table.** On row 5 the mode uses North, while the other approach preserves Unknown. Row 6 is already South, so both methods keep it.
@@ -761,9 +1062,23 @@ Run the numeric and categorical examples below on training rows, then inspect wh
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Time-Series Data: Forward Fill (ffill), Backward Fill (bfill) **Practice** | Fill a gap in daily counts using the previous day or the next recorded day. | [⬇️ Lesson ZIP](sample_code_folder/045-time-series-data-forward-fill-ffill-backward-fill-bfill.zip) |
+| 045 - Time-Series Data: Forward Fill (ffill), Backward Fill (bfill) **Practice** | Fill a gap in daily counts using the previous day or the next recorded day. | [Lesson ZIP](sample_code_folder/045-time-series-data-forward-fill-ffill-backward-fill-bfill.zip) |
 
-Fill a gap in train data and predict a later count. Compare a past-only fill with a retrospective fill when the later observation is already known.
+**Before this lesson.** Put dates in order. Know when a reading becomes available.
+
+**In simple words.** Forward fill uses an earlier reading. Backward fill uses a later reading, so it is for a past series where that later reading is already known.
+
+**Guess first.** Can a live day-2 prediction use a reading from day 3? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. That reading has not arrived yet.
+
+</details>
+
+
+Fill a gap in train data and predict a later count. Compare a past-only fill with a past-series fill when the later observation is already known.
 
 **📋 Sample data**
 
@@ -791,7 +1106,7 @@ Fill a gap in train data and predict a later count. Compare a past-only fill wit
 | 1 | 10.0 | 10.0 | 10.0 |
 | 2 | NaN | 10.0 | 16.0 |
 
-**🧪 Change one input.** Edit the input values in new_inputs.csv and compare the displayed predictions.
+**Your small change.** Edit the input values in new_inputs.csv and compare the displayed predictions. Save the named CSV before running again.
 
 
 **💡 Takeaway.** Forward fill uses the earlier value 10. Backward fill uses 16 from day 3. For a day-2 live prediction, that later value would be unavailable.
@@ -802,7 +1117,21 @@ Fill a gap in train data and predict a later count. Compare a past-only fill wit
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| When missing values change the answer **Practice** | See how losing the slower trips can make the average delivery time look too low. | [⬇️ Lesson ZIP](sample_code_folder/048-when-missing-values-change-the-answer.zip) |
+| 048 - When missing values change the answer **Core** | See how losing the slower trips can make the average delivery time look too low. | [Lesson ZIP](sample_code_folder/048-when-missing-values-change-the-answer.zip) |
+
+**Before this lesson.** Calculate an average by adding values and dividing by their count.
+
+**In simple words.** If slow deliveries lose their recorded times, the remaining average can look too fast. A clean table can still leave out important cases.
+
+**Guess first.** Does filling blanks guarantee the reported average is fair? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Investigate why the values were missing.
+
+</details>
+
 
 **🎯 Goal.** What happens to the reported average if the slowest deliveries are the ones without a recorded time?
 
@@ -832,7 +1161,7 @@ Fill a gap in train data and predict a later count. Compare a past-only fill wit
 | All six times | 23.0 |
 | Recorded times only | 18.0 |
 
-**🧪 Change one input.** Try changing True time from 12 to 16 in sample.csv. Compare the new output.
+**Your small change.** In sample.csv, change the missing Recorded time for the 32-minute delivery to 32. Compare the recorded-only average with the all-times average. Save the named CSV before running again.
 
 
 ![When two slow deliveries are missing, the average falls. Use the graph to compare the two sets of rows.](workbook-figures/when-missing-values-change-the-answer.png)
@@ -849,7 +1178,21 @@ The toy example keeps the true times so you can see what was lost. In a real dat
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 1.3.2 Remove Duplicates **Practice** | Check whether repeated order records would give some deliveries extra weight in training. | [⬇️ Lesson ZIP](sample_code_folder/049-1-3-2-remove-duplicates.zip) |
+| 049 - 1.3.2 Remove Duplicates **Practice** | Check whether repeated order records would give some deliveries extra weight in training. | [Lesson ZIP](sample_code_folder/049-1-3-2-remove-duplicates.zip) |
+
+**Before this lesson.** Know what one row and its order ID mean.
+
+**In simple words.** Two copies of one order can give it too much influence. Two different orders can share a name, distance or weight. Check identity before removing anything.
+
+**Guess first.** Are equal measurements enough to prove two rows are copies? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Use the order identity and the source record.
+
+</details>
+
 
 ![Compare fields. Look at order ID, name and the measured time. → Confirm identity. Matching IDs and values may be two copies of the same order. → Review conflicts. Different orders can share a name. Use the source to confirm.](workbook-figures/duplicate-check-steps-mobile.png)
 
@@ -863,7 +1206,21 @@ The toy example keeps the true times so you can see what was lost. In a real dat
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Detect & Remove Exact Duplicates **Practice** | Keep one copy of each exact row before training on distance and time. | [⬇️ Lesson ZIP](sample_code_folder/050-detect-remove-exact-duplicates.zip) |
+| 050 - Detect & Remove Exact Duplicates **Core** | Keep one copy of each exact row before training on distance and time. | [Lesson ZIP](sample_code_folder/050-detect-remove-exact-duplicates.zip) |
+
+**Before this lesson.** Know what one row and its order ID mean.
+
+**In simple words.** Two copies of one order can give it too much influence. Two different orders can share a name, distance or weight. Check identity before removing anything.
+
+**Guess first.** Are equal measurements enough to prove two rows are copies? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Use the order identity and the source record.
+
+</details>
+
 
 Count repeated records, keep the first exact copy, then fit on one row per order.
 
@@ -896,7 +1253,7 @@ D prediction: [30.0]
 km  prediction
 ```
 
-**🧪 Change one input.** Edit the input values in new_inputs.csv and compare the displayed predictions.
+**Your small change.** Edit the input values in new_inputs.csv and compare the displayed predictions. Save the named CSV before running again.
 
 
 <a id="handle-near-duplicates"></a>
@@ -905,7 +1262,21 @@ km  prediction
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Handle Near-Duplicates **Practice** | Compare near-identical names and use the order ID before combining records. | [⬇️ Lesson ZIP](sample_code_folder/051-handle-near-duplicates.zip) |
+| 051 - Handle Near-Duplicates **Practice** | Compare near-identical names and use the order ID before combining records. | [Lesson ZIP](sample_code_folder/051-handle-near-duplicates.zip) |
+
+**Before this lesson.** Know what one row and its order ID mean.
+
+**In simple words.** Two copies of one order can give it too much influence. Two different orders can share a name, distance or weight. Check identity before removing anything.
+
+**Guess first.** Are equal measurements enough to prove two rows are copies? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Use the order identity and the source record.
+
+</details>
+
 
 Normalize the name and use fuzzy matching to flag a candidate. Confirm the shared order ID before merging.
 
@@ -931,7 +1302,7 @@ Similar names: 0.91
 Confirmed distinct orders: ['A', 'B']
 ```
 
-**🧪 Change one input.** Try changing order_id from A to B in sample.csv. Compare the new output.
+**Your small change.** Try changing order_id from A to B in sample.csv. Compare the new output. Save the named CSV before running again.
 
 
 **💡 Takeaway.** The similar names with different order IDs remain separate. If the same person can appear more than once, decide whether to group their rows when splitting.
@@ -942,7 +1313,21 @@ Confirmed distinct orders: ['A', 'B']
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 1.3.3 Fix Inconsistent Data **Practice** | Get two systems’ dates, weight units and delivery zones into one shared format. | [⬇️ Lesson ZIP](sample_code_folder/054-1-3-3-fix-inconsistent-data.zip) |
+| 054 - 1.3.3 Fix Inconsistent Data **Practice** | Get two systems’ dates, weight units and delivery zones into one shared format. | [Lesson ZIP](sample_code_folder/054-1-3-3-fix-inconsistent-data.zip) |
+
+**Before this lesson.** Read dates, units and names. Know the difference between a number and text.
+
+**In simple words.** Use one clear format for the same meaning. Ten pounds is about 4.54 kilograms. A spelling change is safe only when the source confirms the same meaning.
+
+**Guess first.** Should 10 lb be passed to a kg field as the number 10? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Convert it to about 4.54 kg first.
+
+</details>
+
 
 <a id="standardize-formats"></a>
 
@@ -950,9 +1335,23 @@ Confirmed distinct orders: ['A', 'B']
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Standardize formats **Core** | Turn dates, pounds and uneven zone names into consistent model inputs, then predict a new delivery. | [⬇️ Lesson ZIP](sample_code_folder/055-standardize-formats.zip) |
+| 055 - Standardize formats **Core** | Turn dates, pounds and uneven zone names into consistent model inputs, then predict a new delivery. | [Lesson ZIP](sample_code_folder/055-standardize-formats.zip) |
 
-**➡️ Next Core lesson.** [Investigate the outlier](#spot-check-and-handle-an-outlier).
+**Before this lesson.** Read dates, units and names. Know the difference between a number and text.
+
+**In simple words.** Use one clear format for the same meaning. Ten pounds is about 4.54 kilograms. A spelling change is safe only when the source confirms the same meaning.
+
+**Guess first.** Should 10 lb be passed to a kg field as the number 10? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Convert it to about 4.54 kg first.
+
+</details>
+
+
+**Next step.** Return to [Your learning path](LEARNING-PATH.md) and open the next unfinished module.
 
 ![Raw shipment. US date 01/07/2025, weight 18 lb and zone NORTH. → Clean the fields. Date 2025-01-07. Weight 8.16 kg. Zone north. → Give model inputs. Use kilograms, the weekday and a zone indicator.](workbook-figures/standardize-formats-steps-mobile.png)
 
@@ -990,7 +1389,7 @@ Original date Standard date Original weight  Weight (kg) Original zone Standard 
 2025-01-03    2025-01-03            8 kg         8.00         south         south           1
 ```
 
-**🧪 Change one input.** Try 22 lb on 01/13/2025 in new_inputs.csv. The cleaned row should show 2025-01-13 and about 9.98 kg.
+**Your small change.** Try 22 lb on 01/13/2025 in new_inputs.csv. The cleaned row should show 2025-01-13 and about 9.98 kg. Save the named CSV before running again.
 
 **🐍 Complete script from the ZIP**
 
@@ -1101,13 +1500,29 @@ print(changed.to_string(index=False))
 
 **Read the table.** The model uses kilograms, weekday, and a South flag. The true delivery times are the answers used during training.
 
+This model learns from only four rows and three input fields. That is enough to show the file conversions, but much too little to judge a useful delivery model. The larger evaluation lesson checks many more trips.
+
 <a id="fix-typos-and-spelling-variations"></a>
 
 ##### ✍️ Fix typos and spelling variations
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Fix typos and spelling variations **Practice** | Map known spelling variants to a single category before encoding it. | [⬇️ Lesson ZIP](sample_code_folder/059-fix-typos-and-spelling-variations.zip) |
+| 059 - Fix typos and spelling variations **Practice** | Map known spelling variants to a single category before encoding it. | [Lesson ZIP](sample_code_folder/059-fix-typos-and-spelling-variations.zip) |
+
+**Before this lesson.** Read dates, units and names. Know the difference between a number and text.
+
+**In simple words.** Use one clear format for the same meaning. Ten pounds is about 4.54 kilograms. A spelling change is safe only when the source confirms the same meaning.
+
+**Guess first.** Should 10 lb be passed to a kg field as the number 10? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Convert it to about 4.54 kg first.
+
+</details>
+
 
 Clean a category from the source PDF’s example. Use an explicit mapping for trusted variants, then train and apply an encoder.
 
@@ -1136,7 +1551,7 @@ Male     Male
 M     Male
 ```
 
-**🧪 Change one input.** Try changing record_id from 1 to 3 in sample.csv. Compare the new output.
+**Your small change.** In sample.csv, replace M with male. Rerun and check that the standard value remains Male. Then try an unknown spelling and read the error before restoring the file. Save the named CSV before running again.
 
 
 **💡 Takeaway.** Check the field definition before equating two spellings. Apply the same mapping and encoder before a model’s prediction, as in the one-hot lab below.
@@ -1147,7 +1562,21 @@ M     Male
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 1.3.4 Handle Outliers **Practice** | Use parcel weights to see which records deserve a closer look. | [⬇️ Lesson ZIP](sample_code_folder/060-1-3-4-handle-outliers.zip) |
+| 060 - 1.3.4 Handle Outliers **Practice** | Use parcel weights to see which records deserve a closer look. | [Lesson ZIP](sample_code_folder/060-1-3-4-handle-outliers.zip) |
+
+**Before this lesson.** Sort numbers. The middle half is the values between the lower and upper quarters.
+
+**In simple words.** An outlier is an unusual value. A flag says check it. It does not say it is wrong. Use the source to keep, correct or set it aside.
+
+**Guess first.** Does an outlier flag prove a recording error? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. A very heavy parcel can be real. Ask for a source check.
+
+</details>
+
 
 <a id="detection-methods"></a>
 
@@ -1155,7 +1584,21 @@ M     Male
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Detection Methods **Practice** | Compare two ways to flag unusual parcel weights and inspect the chart. | [⬇️ Lesson ZIP](sample_code_folder/061-detection-methods.zip) |
+| 061 - Detection Methods **Practice** | Compare two ways to flag unusual parcel weights and inspect the chart. | [Lesson ZIP](sample_code_folder/061-detection-methods.zip) |
+
+**Before this lesson.** Sort numbers. The middle half is the values between the lower and upper quarters.
+
+**In simple words.** An outlier is an unusual value. A flag says check it. It does not say it is wrong. Use the source to keep, correct or set it aside.
+
+**Guess first.** Does an outlier flag prove a recording error? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. A very heavy parcel can be real. Ask for a source check.
+
+</details>
+
 
 <a id="boxplots-visualization"></a>
 
@@ -1163,7 +1606,21 @@ M     Male
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Boxplots & Visualization **Practice** | Find a weight far from the others on a boxplot. | [⬇️ Lesson ZIP](sample_code_folder/062-boxplots-visualization.zip) |
+| 062 - Boxplots & Visualization **Practice** | Find a weight far from the others on a boxplot. | [Lesson ZIP](sample_code_folder/062-boxplots-visualization.zip) |
+
+**Before this lesson.** Sort numbers. The middle half is the values between the lower and upper quarters.
+
+**In simple words.** An outlier is an unusual value. A flag says check it. It does not say it is wrong. Use the source to keep, correct or set it aside.
+
+**Guess first.** Does an outlier flag prove a recording error? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. A very heavy parcel can be real. Ask for a source check.
+
+</details>
+
 
 Run the detection code below and inspect the isolated point above the upper whisker.
 
@@ -1173,7 +1630,21 @@ Run the detection code below and inspect the isolated point above the upper whis
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Z-score Method **Practice** | Flag a parcel that is more than three standard deviations from the average weight. | [⬇️ Lesson ZIP](sample_code_folder/063-z-score-method.zip) |
+| 063 - Z-score Method **Practice** | Flag a parcel that is more than three standard deviations from the average weight. | [Lesson ZIP](sample_code_folder/063-z-score-method.zip) |
+
+**Before this lesson.** Sort numbers. The middle half is the values between the lower and upper quarters.
+
+**In simple words.** An outlier is an unusual value. A flag says check it. It does not say it is wrong. Use the source to keep, correct or set it aside.
+
+**Guess first.** Does an outlier flag prove a recording error? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. A very heavy parcel can be real. Ask for a source check.
+
+</details>
+
 
 The detection code calculates the training mean and standard deviation, then flags readings more than 3 standard deviations away.
 
@@ -1183,7 +1654,21 @@ The detection code calculates the training mean and standard deviation, then fla
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Interquartile Range (IQR) **Practice** | Use the middle half of the weight distribution to set a review range. | [⬇️ Lesson ZIP](sample_code_folder/064-interquartile-range-iqr.zip) |
+| 064 - Interquartile Range (IQR) **Practice** | Use the middle half of the weight distribution to set a review range. | [Lesson ZIP](sample_code_folder/064-interquartile-range-iqr.zip) |
+
+**Before this lesson.** Sort numbers. The middle half is the values between the lower and upper quarters.
+
+**In simple words.** An outlier is an unusual value. A flag says check it. It does not say it is wrong. Use the source to keep, correct or set it aside.
+
+**Guess first.** Does an outlier flag prove a recording error? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. A very heavy parcel can be real. Ask for a source check.
+
+</details>
+
 
 Create normal-looking delivery weights and a deliberately large value. Flag it with the two numeric checks, then inspect the box plot.
 
@@ -1215,7 +1700,7 @@ weight_kg  Z-score  IQR
 80     True True
 ```
 
-**🧪 Change one input.** Compare 80 kg with 8 kg. Change or add a measured weight in sample.csv, then look for the flag and the boxplot.
+**Your small change.** Compare 80 kg with 8 kg. Change or add a measured weight in sample.csv, then look for the flag and the boxplot. Save the named CSV before running again.
 
 
 ![Two views of the same weight box plot. The full view marks an 80 kg outlier. The zoomed view separates the middle half from the 9.375 kg upper review limit.](workbook-figures/interquartile-range-iqr.png)
@@ -1232,7 +1717,21 @@ weight_kg  Z-score  IQR
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Handling Strategies **Practice** | Compare deleting a confirmed error, clipping a value and applying a log. | [⬇️ Lesson ZIP](sample_code_folder/065-handling-strategies.zip) |
+| 065 - Handling Strategies **Practice** | Compare deleting a confirmed error, clipping a value and applying a log. | [Lesson ZIP](sample_code_folder/065-handling-strategies.zip) |
+
+**Before this lesson.** Sort numbers. The middle half is the values between the lower and upper quarters.
+
+**In simple words.** An outlier is an unusual value. A flag says check it. It does not say it is wrong. Use the source to keep, correct or set it aside.
+
+**Guess first.** Does an outlier flag prove a recording error? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. A very heavy parcel can be real. Ask for a source check.
+
+</details>
+
 
 <a id="remove-2"></a>
 
@@ -1240,7 +1739,21 @@ weight_kg  Z-score  IQR
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Remove **Practice** | Remove an impossible negative parcel weight before fitting a model. | [⬇️ Lesson ZIP](sample_code_folder/066-remove-2.zip) |
+| 066 - Remove **Practice** | Remove an impossible negative parcel weight before fitting a model. | [Lesson ZIP](sample_code_folder/066-remove-2.zip) |
+
+**Before this lesson.** Sort numbers. The middle half is the values between the lower and upper quarters.
+
+**In simple words.** An outlier is an unusual value. A flag says check it. It does not say it is wrong. Use the source to keep, correct or set it aside.
+
+**Guess first.** Does an outlier flag prove a recording error? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. A very heavy parcel can be real. Ask for a source check.
+
+</details>
+
 
 In the handling exercise below, remove the deliberately invalid negative weight and check the row count.
 
@@ -1250,9 +1763,23 @@ In the handling exercise below, remove the deliberately invalid negative weight 
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Cap/Clip Values **Practice** | Cap very low and very high weights using limits learned from training rows. | [⬇️ Lesson ZIP](sample_code_folder/067-cap-clip-values.zip) |
+| 067 - Cap/Clip Values **Practice** | Cap very low and very high weights using limits learned from training rows. | [Lesson ZIP](sample_code_folder/067-cap-clip-values.zip) |
 
-In the same exercise, print the capped training input and apply the training limit to the held-out row.
+**Before this lesson.** Sort numbers. The middle half is the values between the lower and upper quarters.
+
+**In simple words.** An outlier is an unusual value. A flag says check it. It does not say it is wrong. Use the source to keep, correct or set it aside.
+
+**Guess first.** Does an outlier flag prove a recording error? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. A very heavy parcel can be real. Ask for a source check.
+
+</details>
+
+
+In the same exercise, print the capped training input and apply the training limit to the kept-back row.
 
 <a id="transform-data"></a>
 
@@ -1260,7 +1787,21 @@ In the same exercise, print the capped training input and apply the training lim
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Transform Data **Practice** | Use a log to shrink the effect of large weights, then compare the predicted time. | [⬇️ Lesson ZIP](sample_code_folder/068-transform-data.zip) |
+| 068 - Transform Data **Practice** | Use a log to shrink the effect of large weights, then compare the predicted time. | [Lesson ZIP](sample_code_folder/068-transform-data.zip) |
+
+**Before this lesson.** Sort numbers. The middle half is the values between the lower and upper quarters.
+
+**In simple words.** An outlier is an unusual value. A flag says check it. It does not say it is wrong. Use the source to keep, correct or set it aside.
+
+**Guess first.** Does an outlier flag prove a recording error? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. A very heavy parcel can be real. Ask for a source check.
+
+</details>
+
 
 Run three strategies on a table with a deliberately invalid negative weight and a real heavy shipment. Learn the clipping limit from training data.
 
@@ -1292,7 +1833,7 @@ remove only
 weight_used_by_model  original_weight_kg  predicted_minutes  actual_minutes
 ```
 
-**🧪 Change one input.** Try changing weight_kg from 1 to 2 in sample.csv. Compare the new output.
+**Your small change.** Try changing weight_kg from 1 to 2 in sample.csv. Compare the new output. Save the named CSV before running again.
 
 
 **💡 Takeaway.** Use a validation set to choose a strategy. For cross-validation, learn a clipping bound inside each training fold.
@@ -1303,9 +1844,23 @@ weight_used_by_model  original_weight_kg  predicted_minutes  actual_minutes
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Spot, check, and handle an outlier **Core** | Review a recorded 90 kg parcel, correct it using the weighing slip, and compare the two predictions on a graph. | [⬇️ Lesson ZIP](sample_code_folder/069-spot-check-and-handle-an-outlier.zip) |
+| 069 - Spot, check, and handle an outlier **Core** | Review a recorded 90 kg parcel, correct it using the weighing slip, and compare the two predictions on a graph. | [Lesson ZIP](sample_code_folder/069-spot-check-and-handle-an-outlier.zip) |
 
-**➡️ Next Core lesson.** [Min-Max Scaling](#normalization-min-max-scaling).
+**Before this lesson.** Sort numbers. The middle half is the values between the lower and upper quarters.
+
+**In simple words.** An outlier is an unusual value. A flag says check it. It does not say it is wrong. Use the source to keep, correct or set it aside.
+
+**Guess first.** Does an outlier flag prove a recording error? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. A very heavy parcel can be real. Ask for a source check.
+
+</details>
+
+
+**Next step.** Return to [Your learning path](LEARNING-PATH.md) and open the next unfinished module.
 
 **🎯 Goal.** Is a 90 kg parcel a recording mistake? Follow one point from the raw table to the flag, check the source, then compare two model predictions.
 
@@ -1432,7 +1987,7 @@ print("Open review-weights.png and compare-estimates.png in this folder.")
 | Original records | 17.7 | 26 |
 | After source review | 26.0 | 26 |
 
-**🧪 Change one input.** In weighing_slip.csv, change the verified weight from 5 to 90 for KEEP. Clear the second cell for FLAG.
+**Your small change.** In weighing_slip.csv, change the verified weight from 5 to 90 for KEEP. Clear the second cell for FLAG. Save the named CSV before running again.
 
 | Second cell in weighing_slip.csv | Expected decision | Action |
 | --- | --- | --- |
@@ -1453,11 +2008,11 @@ print("Open review-weights.png and compare-estimates.png in this folder.")
 
 **👉 Use what you see.** Keep a confirmed 90 kg. If the source is missing, request a reweigh and leave the value flagged.
 
-![The original and reviewed models estimate 17.7 and 26.0 minutes for the same held-out 8 kg parcel. Its actual time was 26 minutes.](workbook-figures/spot-check-and-handle-an-outlier-2.png)
+![The original and reviewed models estimate 17.7 and 26.0 minutes for the same kept-back 8 kg parcel. Its actual time was 26 minutes.](workbook-figures/spot-check-and-handle-an-outlier-2.png)
 
 **👀 Read the visual.** The corrected bar reaches the actual-time line for this parcel. Test on more deliveries before treating that as evidence of a general improvement.
 
-**👉 Use what you see.** Use the verified training correction, then check more held-out deliveries before trusting the improvement in an app.
+**👉 Use what you see.** Use the verified training correction, then check more kept-back deliveries before trusting the improvement in an app.
 
 **💡 What happened?** The example supplies a fictional source note confirming that parcel 5 weighed **5 kg**. Only that confirmation justifies correcting the 90. If the source confirms 90 kg, keep it and decide whether the model should handle that kind of delivery. The error for one check parcel illustrates the effect. It does not establish how well the model will work elsewhere.
 
@@ -1467,7 +2022,21 @@ print("Open review-weights.png and compare-estimates.png in this folder.")
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 1.3.5 Normalize or Standardize Data **Practice** | Learn a scale from training deliveries and reuse it on new rows. | [⬇️ Lesson ZIP](sample_code_folder/070-1-3-5-normalize-or-standardize-data.zip) |
+| 070 - 1.3.5 Normalize or Standardize Data **Practice** | Learn a scale from training deliveries and reuse it on new rows. | [Lesson ZIP](sample_code_folder/070-1-3-5-normalize-or-standardize-data.zip) |
+
+**Before this lesson.** Read minimum, maximum and average. Keep training rows separate.
+
+**In simple words.** Scaling changes the numbers the model receives. Save the rule learned from training. A value above the old maximum may become greater than 1.
+
+**Guess first.** Does a scaled value above 1 prove the input is invalid? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. It may be a possible value outside the training range. The service needs a stated policy.
+
+</details>
+
 
 <a id="normalization-min-max-scaling"></a>
 
@@ -1475,7 +2044,21 @@ print("Open review-weights.png and compare-estimates.png in this folder.")
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Normalization (Min-Max Scaling) **Core** | Scale known distances, then see what happens when training covers 1–50 km and someone enters 90 km. | [⬇️ Lesson ZIP](sample_code_folder/071-normalization-min-max-scaling.zip) |
+| 071 - Normalization (Min-Max Scaling) **Core** | Scale known distances, then see what happens when training covers 1–50 km and someone enters 90 km. | [Lesson ZIP](sample_code_folder/071-normalization-min-max-scaling.zip) |
+
+**Before this lesson.** Read minimum, maximum and average. Keep training rows separate.
+
+**In simple words.** Scaling changes the numbers the model receives. Save the rule learned from training. A value above the old maximum may become greater than 1.
+
+**Guess first.** Does a scaled value above 1 prove the input is invalid? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. It may be a possible value outside the training range. The service needs a stated policy.
+
+</details>
+
 
 ![Side-by-side charts show distance and weight on their original scales and after min–max scaling.](workbook-figures/normalization-min-max-scaling.png)
 
@@ -1483,7 +2066,7 @@ print("Open review-weights.png and compare-estimates.png in this folder.")
 
 **👉 Use what you see.** Scale the new distance with those same endpoints. The weight uses its own training endpoints.
 
-**➡️ Next Core lesson.** [Choose the right data split](#lesson-442).
+**Next step.** Return to [Your learning path](LEARNING-PATH.md) and open the next unfinished module.
 
 **🎯 Goal.** How long will a 5 km delivery with a 2 kg parcel take? We know the distance and weight. The **delivery time** is the answer we want the model to predict. Below, the first four rows teach the model and the last two check it.
 
@@ -1571,7 +2154,7 @@ print(new_delivery.to_string(index=False))
 | 10 | 3 | 1.33 | 0.67 | 39.0 |
 | 12 | 4 | 1.67 | 1.00 | 46.0 |
 
-**🧪 Change one input.** Change 90 to 45 in range_requests.csv. Run only test_range_model.py. The app should offer an estimate.
+**Your small change.** Change 90 to 45 in range_requests.csv. Run only test_range_model.py. The app should offer an estimate. Save the named CSV before running again.
 
 
 **Read the prediction.** The model receives approximately **0.50** and **0.33** for the new delivery and predicts **27.5 minutes**. A later distance outside the training range can scale below 0 or above 1. Keep the same fitted scaler when predicting. This linear model illustrates the wiring. Scaling can change how distance-based or regularized models behave.
@@ -1702,7 +2285,21 @@ print(
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Standardization (Z-score Scaling) **Practice** | Measure distance and weight relative to their training averages, then estimate a new delivery time. | [⬇️ Lesson ZIP](sample_code_folder/072-standardization-z-score-scaling.zip) |
+| 072 - Standardization (Z-score Scaling) **Practice** | Measure distance and weight relative to their training averages, then estimate a new delivery time. | [Lesson ZIP](sample_code_folder/072-standardization-z-score-scaling.zip) |
+
+**Before this lesson.** Read minimum, maximum and average. Keep training rows separate.
+
+**In simple words.** Scaling changes the numbers the model receives. Save the rule learned from training. A value above the old maximum may become greater than 1.
+
+**Guess first.** Does a scaled value above 1 prove the input is invalid? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. It may be a possible value outside the training range. The service needs a stated policy.
+
+</details>
+
 
 ![Side-by-side charts show scaled distance and weight relative to the training mean at zero.](workbook-figures/standardization-z-score-scaling.png)
 
@@ -1742,7 +2339,7 @@ distance_km  weight_kg  scaled_distance  scaled_weight  predicted_minutes
 5          2             0.00          -0.45               27.5
 ```
 
-**🧪 Change one input.** In new_inputs.csv, try 5 km and 2 kg, then try 12 km and 4 kg. Read the scaled values and predicted minutes in the same row.
+**Your small change.** In new_inputs.csv, try 5 km and 2 kg, then try 12 km and 4 kg. Read the scaled values and predicted minutes in the same row. Save the named CSV before running again.
 
 
 **Read the prediction.** The input scale changes and this example still predicts **27.5 minutes** for the new delivery. Standardization works for this calculation even when the data is skewed.
@@ -1753,7 +2350,21 @@ distance_km  weight_kg  scaled_distance  scaled_weight  predicted_minutes
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| When to use? **Practice** | Compare several transformations using the same rows and pick one based on validation error. | [⬇️ Lesson ZIP](sample_code_folder/073-when-to-use.zip) |
+| 073 - When to use? **Practice** | Compare several transformations using the same rows and pick one based on validation error. | [Lesson ZIP](sample_code_folder/073-when-to-use.zip) |
+
+**Before this lesson.** Read minimum, maximum and average. Keep training rows separate.
+
+**In simple words.** Scaling changes the numbers the model receives. Save the rule learned from training. A value above the old maximum may become greater than 1.
+
+**Guess first.** Does a scaled value above 1 prove the input is invalid? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. It may be a possible value outside the training range. The service needs a stated policy.
+
+</details>
+
 
 Run [Which Technique Should You Use?](#which-technique-should-you-use) to compare the original values and both scalers under the same validation procedure. Choose the setup on validation rows and measure the chosen model on separate final test rows.
 
@@ -1763,7 +2374,21 @@ Run [Which Technique Should You Use?](#which-technique-should-you-use) to compar
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 1.3.6 Convert Categorical Data **Practice** | Turn labels such as color into numerical columns a model can read. | [⬇️ Lesson ZIP](sample_code_folder/074-1-3-6-convert-categorical-data.zip) |
+| 074 - 1.3.6 Convert Category Data **Practice** | Turn labels such as color into numerical columns a model can read. | [Lesson ZIP](sample_code_folder/074-1-3-6-convert-categorical-data.zip) |
+
+**Before this lesson.** Tell a category name from a measured number.
+
+**In simple words.** Unordered names get separate 0-or-1 columns. Ordered names such as low, medium and high can use an explicit order. LabelEncoder is for answer labels.
+
+**Guess first.** Should red, green and blue receive a made-up low-to-high order? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Use separate columns when there is no real order.
+
+</details>
+
 
 ![Unordered labels. Red, blue, green. Use a 0-or-1 column for each known color. → Ordered labels. Low, medium, high. Use ordered numbers such as 0, 1, 2. → Many labels. For many suppliers, learn target summaries from training rows.](workbook-figures/encoding-choices-steps-mobile.png)
 
@@ -1777,7 +2402,21 @@ Run [Which Technique Should You Use?](#which-technique-should-you-use) to compar
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| One-Hot Encoding (For Unordered Categories) **Practice** | Give each known color its own 0-or-1 column and try a new color. | [⬇️ Lesson ZIP](sample_code_folder/075-one-hot-encoding-for-unordered-categories.zip) |
+| 075 - One-Hot Encoding (For Unordered Categories) **Core** | Give each known color its own 0-or-1 column and try a new color. | [Lesson ZIP](sample_code_folder/075-one-hot-encoding-for-unordered-categories.zip) |
+
+**Before this lesson.** Tell a category name from a measured number.
+
+**In simple words.** Unordered names get separate 0-or-1 columns. Ordered names such as low, medium and high can use an explicit order. LabelEncoder is for answer labels.
+
+**Guess first.** Should red, green and blue receive a made-up low-to-high order? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Use separate columns when there is no real order.
+
+</details>
+
 
 ![A labeled grid shows one column per learned color, with zeros in all columns for unfamiliar purple.](workbook-figures/one-hot-encoding-for-unordered-categories.png)
 
@@ -1816,7 +2455,7 @@ Run [Which Technique Should You Use?](#which-technique-should-you-use) to compar
 | Red | 1 | 0 | 0 |
 | Blue | 0 | 1 | 0 |
 
-**🧪 Change one input.** In new_inputs.csv, enter Red, Blue and an unfamiliar color such as Purple. See the encoded columns and predicted orders for each one.
+**Your small change.** In new_inputs.csv, enter Red, Blue and an unfamiliar color such as Purple. See the encoded columns and predicted orders for each one. Save the named CSV before running again.
 
 **🐍 Complete script from the ZIP**
 
@@ -1860,6 +2499,8 @@ encoding_table.insert(0, "Original color", colors["color"])
 
 # 4. Teach the model from the training inputs and the recorded order count.
 model = LinearRegression().fit(training_bits, training["orders"])
+print("Check actual / predicted:", checking["orders"].tolist(),
+      model.predict(encoder.transform(checking[["color"]])).round(1).tolist())
 # 5. Apply the fitted model to the new CSV rows and print a result for each row.
 test_colors = pd.read_csv(new_path)
 fresh_bits = encoder.transform(test_colors)
@@ -1876,11 +2517,25 @@ print(results.to_string(index=False))
 
 <a id="label-encoding-for-ordered-categories"></a>
 
-##### 🪜 Label Encoding (For Ordered Categories)
+##### 🪜 Turn ordered names into numbers (OrdinalEncoder)
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Label Encoding (For Ordered Categories) **Practice** | Turn Low, Medium and High into ordered numbers before predicting a review action. | [⬇️ Lesson ZIP](sample_code_folder/076-label-encoding-for-ordered-categories.zip) |
+| 076 - Turn ordered names into numbers (OrdinalEncoder) **Practice** | Turn Low, Medium and High into ordered numbers before predicting a review action. | [Lesson ZIP](sample_code_folder/076-label-encoding-for-ordered-categories.zip) |
+
+**Before this lesson.** Tell a category name from a measured number.
+
+**In simple words.** Unordered names get separate 0-or-1 columns. Ordered names such as low, medium and high can use an explicit order. LabelEncoder is for answer labels.
+
+**Guess first.** Should red, green and blue receive a made-up low-to-high order? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Use separate columns when there is no real order.
+
+</details>
+
 
 Encode ordered priority values low → medium → high. Use LabelEncoder separately for the answer column when integer class IDs are needed.
 
@@ -1913,20 +2568,34 @@ Held-out label: ['review']
 priority action
 ```
 
-**🧪 Change one input.** Try changing priority from Low to High in new_inputs.csv. Compare the new output.
+**Your small change.** Try changing priority from Low to High in new_inputs.csv. Compare the new output. Save the named CSV before running again.
 
 
 **💡 Takeaway.** The input uses **OrdinalEncoder** because priority has a meaningful order. LabelEncoder maps the labels and reverses the prediction.
 
 <a id="target-encoding-for-high-cardinality-categories"></a>
 
-##### 🎯 Target Encoding (For High-Cardinality Categories)
+##### 🎯 Target Encoding (For Many Different Categories)
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Target Encoding (For High-Cardinality Categories) **Practice** | Summarize each supplier by its learned delay rate and try a supplier the model has never seen. | [⬇️ Lesson ZIP](sample_code_folder/077-target-encoding-for-high-cardinality-categories.zip) |
+| 077 - Target Encoding (For Many Different Categories) **Practice** | Summarize each supplier by its learned delay rate and try a supplier the model has never seen. | [Lesson ZIP](sample_code_folder/077-target-encoding-for-high-cardinality-categories.zip) |
 
-Generate batches with repeated supplier IDs and different delay rates. Fit a cross-fitted target encoder inside a pipeline. Inspect the value used for an unseen supplier.
+**Before this lesson.** Understand categories, training rows and leakage.
+
+**In simple words.** Count how often training orders were delayed for a supplier. A target encoder uses a careful version of this idea. It must not give a training row its own answer.
+
+**Guess first.** Why is a supplier with one order uncertain? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+One outcome is little evidence. Smoothing uses broader training information to avoid trusting a tiny group too much.
+
+</details>
+
+
+Generate batches with repeated supplier IDs and different delay rates. Fit a cross-fitted target encoder inside a pipeline. Inspect the value used for an new supplier.
 
 Replace a supplier name with a number based on how often its training orders were delayed. If 2 of 5 orders were delayed, the simple rate is 2 ÷ 5 = 0.40. The encoder adjusts rates for small groups and computes training values without using the row’s own answer.
 
@@ -1956,12 +2625,12 @@ Replace a supplier name with a number based on how often its training orders wer
 | S00 | 1 |
 | S01 | 1 |
 
-**🧪 Change one input.** Enter S00 and a supplier name such as New Supplier. Compare their encoded values and estimated chances of delay.
+**Your small change.** Enter S00 and a supplier name such as New Supplier. Compare their encoded values and estimated chances of delay. Save the named CSV before running again.
 
 
 **💡 Takeaway.** The encoder estimates a smoothed training target rate. The training transform inside the pipeline uses cross-fitting. If the real task predicts completely new suppliers, group the evaluation split by supplier.
 
-**Read one row.** The first number belongs to supplier S00. The second is the value used for an unseen supplier. These numbers represent training delay rates, adjusted by the encoder.
+**Read one row.** The first number belongs to supplier S00. The second is the value used for an new supplier. These numbers represent training delay rates, adjusted by the encoder.
 
 <a id="1-3-7-text-data-cleaning"></a>
 
@@ -1969,7 +2638,21 @@ Replace a supplier name with a number based on how often its training orders wer
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 1.3.7 Text Data Cleaning **Practice** | Clean the capitalization and punctuation in support messages before classifying them. | [⬇️ Lesson ZIP](sample_code_folder/078-1-3-7-text-data-cleaning.zip) |
+| 078 - 1.3.7 Text Data Cleaning **Practice** | Clean the capitalization and punctuation in support messages before classifying them. | [Lesson ZIP](sample_code_folder/078-1-3-7-text-data-cleaning.zip) |
+
+**Before this lesson.** Read a message as text. Start with counting one word.
+
+**In simple words.** A model needs numbers. Counts make one column for a known word. TF-IDF gives different weights to common and less common words. Cleanup can lose meaning.
+
+**Guess first.** Should we always remove the word not? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Removing it can reverse meaning. Test cleanup for the task.
+
+</details>
+
 
 ![Read the text. MY Parcel Is Late!!! → Clean the text. my parcel is late → Count and predict. parcel = 1 and late = 1. Predict a category from the counts.](workbook-figures/text-cleaning-steps-mobile.png)
 
@@ -1983,7 +2666,21 @@ Replace a supplier name with a number based on how often its training orders wer
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Convert to lowercase & remove punctuation **Practice** | Compare the original and cleaned message, then see which category the model predicts. | [⬇️ Lesson ZIP](sample_code_folder/079-convert-to-lowercase-remove-punctuation.zip) |
+| 079 - Convert to lowercase & remove punctuation **Practice** | Compare the original and cleaned message, then see which category the model predicts. | [Lesson ZIP](sample_code_folder/079-convert-to-lowercase-remove-punctuation.zip) |
+
+**Before this lesson.** Read a message as text. Start with counting one word.
+
+**In simple words.** A model needs numbers. Counts make one column for a known word. TF-IDF gives different weights to common and less common words. Cleanup can lose meaning.
+
+**Guess first.** Should we always remove the word not? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Removing it can reverse meaning. Test cleanup for the task.
+
+</details>
+
 
 ![A new message changes from WHERE IS MY PARCEL!!! to where is my parcel. The model reads word counts and predicts delivery.](workbook-figures/convert-to-lowercase-remove-punctuation-mobile.png)
 
@@ -2024,7 +2721,7 @@ MY Parcel Is Late!!! my parcel is late
 Raw message             Clean message Prediction
 ```
 
-**🧪 Change one input.** Try WHERE IS MY PARCEL!!! and check that cleanup produces where is my parcel.
+**Your small change.** Try WHERE IS MY PARCEL!!! and check that cleanup produces where is my parcel. Save the named CSV before running again.
 
 **🐍 Complete script from the ZIP**
 
@@ -2076,6 +2773,8 @@ counts = CountVectorizer(preprocessor=clean_message)
 word_counts = counts.fit_transform(training["message"])
 # 4. Teach the model from the training inputs and the known message category.
 model = LogisticRegression().fit(word_counts, training["category"])
+print("Check actual / predicted:", checking["category"].tolist(),
+      model.predict(counts.transform(checking["message"])).tolist())
 
 
 # 5. Apply the fitted model to the new CSV rows and print a result for each row.
@@ -2100,7 +2799,21 @@ print(results.to_string(index=False))
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Remove stop words (e.g., "the", "and", "is") **Practice** | Drop selected common words such as the and is, then test a delivery or billing message. | [⬇️ Lesson ZIP](sample_code_folder/080-remove-stop-words-e-g-the-and-is.zip) |
+| 080 - Remove stop words (e.g., "the", "and", "is") **Practice** | Drop selected common words such as the and is, then test a delivery or billing message. | [Lesson ZIP](sample_code_folder/080-remove-stop-words-e-g-the-and-is.zip) |
+
+**Before this lesson.** Read a message as text. Start with counting one word.
+
+**In simple words.** A model needs numbers. Counts make one column for a known word. TF-IDF gives different weights to common and less common words. Cleanup can lose meaning.
+
+**Guess first.** Should we always remove the word not? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Removing it can reverse meaning. Test cleanup for the task.
+
+</details>
+
 
 Inspect the tokens before and after removing a small stop list. Keep the word ‘not’ so it can retain meaning in a larger dataset.
 
@@ -2135,7 +2848,7 @@ After: ['parcel', 'not', 'here', 'am', 'waiting']
 Actual: ['delivery', 'billing']
 ```
 
-**🧪 Change one input.** Replace one message in new_inputs.csv. Include one delivery message and one billing message.
+**Your small change.** Replace one message in new_inputs.csv. Include one delivery message and one billing message. Save the named CSV before running again.
 
 
 <a id="tokenization-lemmatization"></a>
@@ -2144,7 +2857,21 @@ Actual: ['delivery', 'billing']
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Tokenization & Lemmatization **Practice** | Split sentences into words and bring a few word variants back to the same form. | [⬇️ Lesson ZIP](sample_code_folder/081-tokenization-lemmatization.zip) |
+| 081 - Tokenization & Lemmatization **Practice** | Split sentences into words and bring a few word variants back to the same form. | [Lesson ZIP](sample_code_folder/081-tokenization-lemmatization.zip) |
+
+**Before this lesson.** Read a message as text. Start with counting one word.
+
+**In simple words.** A model needs numbers. Counts make one column for a known word. TF-IDF gives different weights to common and less common words. Cleanup can lose meaning.
+
+**Guess first.** Should we always remove the word not? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Removing it can reverse meaning. Test cleanup for the task.
+
+</details>
+
 
 Split a sentence into tokens and apply a short, explicit base-form dictionary. Fit the word-count classifier using the same tokenizer for predictions.
 
@@ -2179,7 +2906,7 @@ Actual: ['delivery', 'billing']
 Predicted: ['delivery', 'billing']
 ```
 
-**🧪 Change one input.** Replace one message in new_inputs.csv. Include one delivery message and one billing message.
+**Your small change.** Replace one message in new_inputs.csv. Include one delivery message and one billing message. Save the named CSV before running again.
 
 
 **💡 Takeaway.** This small dictionary covers the words in the exercise. For varied text, use and test a language-aware lemmatizer.
@@ -2190,7 +2917,21 @@ Predicted: ['delivery', 'billing']
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Convert Text to Numerical Representation **Practice** | Compare plain word counts and weighted word counts for short messages. | [⬇️ Lesson ZIP](sample_code_folder/084-convert-text-to-numerical-representation.zip) |
+| 084 - Convert Text to Numerical Representation **Practice** | Compare plain word counts and weighted word counts for short messages. | [Lesson ZIP](sample_code_folder/084-convert-text-to-numerical-representation.zip) |
+
+**Before this lesson.** Read a message as text. Start with counting one word.
+
+**In simple words.** A model needs numbers. Counts make one column for a known word. TF-IDF gives different weights to common and less common words. Cleanup can lose meaning.
+
+**Guess first.** Should we always remove the word not? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Removing it can reverse meaning. Test cleanup for the task.
+
+</details>
+
 
 Use the same messages to compare two ways of turning words into numbers. The combined script prints a raw count and a TF-IDF weight for the word `parcel`. Follow the same row before comparing the two values.
 
@@ -2213,7 +2954,21 @@ Use the same messages to compare two ways of turning words into numbers. The com
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| CountVectorizer **Practice** | Make one column for each learned word and count it in a new message. | [⬇️ Lesson ZIP](sample_code_folder/085-countvectorizer.zip) |
+| 085 - CountVectorizer **Practice** | Make one column for each learned word and count it in a new message. | [Lesson ZIP](sample_code_folder/085-countvectorizer.zip) |
+
+**Before this lesson.** Read a message as text. Start with counting one word.
+
+**In simple words.** A model needs numbers. Counts make one column for a known word. TF-IDF gives different weights to common and less common words. Cleanup can lose meaning.
+
+**Guess first.** Should we always remove the word not? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Removing it can reverse meaning. Test cleanup for the task.
+
+</details>
+
 
 **▶️ Run.** Unzip the lesson and follow its README to run `python lesson.py`.
 
@@ -2223,7 +2978,7 @@ Use the same messages to compare two ways of turning words into numbers. The com
 
 **✅ Check.** Look for `CountVectorizer parcel feature: 1`. The first training message contains `parcel` once.
 
-**🧪 Change one input.** In `new_inputs.csv`, change the first message to `WHERE ARE MY PACKAGES?`. Rerun the script and find the edited message beside its predicted category.
+**Your small change.** Change message in new_inputs.csv, for example from The parcel is late! to WHERE ARE MY PACKAGES?. Compare the printed rows. Save the named CSV before running again.
 
 <a id="tf-idf"></a>
 
@@ -2231,7 +2986,21 @@ Use the same messages to compare two ways of turning words into numbers. The com
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| TF-IDF **Practice** | Make words that stand out across messages count more than words that appear everywhere. | [⬇️ Lesson ZIP](sample_code_folder/086-tf-idf.zip) |
+| 086 - TF-IDF **Practice** | Make words that stand out across messages count more than words that appear everywhere. | [Lesson ZIP](sample_code_folder/086-tf-idf.zip) |
+
+**Before this lesson.** Read a message as text. Start with counting one word.
+
+**In simple words.** A model needs numbers. Counts make one column for a known word. TF-IDF gives different weights to common and less common words. Cleanup can lose meaning.
+
+**Guess first.** Should we always remove the word not? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Removing it can reverse meaning. Test cleanup for the task.
+
+</details>
+
 
 **▶️ Run.** Unzip the lesson and follow its README to run `python lesson.py`.
 
@@ -2241,7 +3010,7 @@ Use the same messages to compare two ways of turning words into numbers. The com
 
 **✅ Check.** Look for `TfidfVectorizer parcel feature: 0.52`. This is the rounded weight for `parcel` in the first training message.
 
-**🧪 Change one input.** In `new_inputs.csv`, change the first message to `WHERE ARE MY PACKAGES?`. Rerun the script and find the edited message beside its predicted category.
+**Your small change.** Change message in new_inputs.csv, for example from The parcel is late! to WHERE ARE MY PACKAGES?. Compare the printed rows. Save the named CSV before running again.
 
 <a id="word-embeddings-word2vec-bert-etc"></a>
 
@@ -2249,7 +3018,21 @@ Use the same messages to compare two ways of turning words into numbers. The com
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Word Embeddings (Word2Vec, BERT, etc.) **Practice** | Represent a message with a short list of numbers and feed it into a classifier. | [⬇️ Lesson ZIP](sample_code_folder/087-word-embeddings-word2vec-bert-etc.zip) |
+| 087 - Word Embeddings (Word2Vec, BERT, etc.) **Practice** | Represent a message with a short list of numbers and feed it into a classifier. | [Lesson ZIP](sample_code_folder/087-word-embeddings-word2vec-bert-etc.zip) |
+
+**Before this lesson.** Finish word counts and the network notes in Extra topics first.
+
+**In simple words.** An embedding is a list of numbers representing a message. This tiny example shows the steps. A randomly started BERT model has not learned a language.
+
+**Guess first.** Does a random encoder understand a message because it returns numbers? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Returning an array does not prove useful language knowledge.
+
+</details>
+
 
 Fit Word2Vec only on original training sentences. Average their word vectors into one row per message, then train a message classifier.
 
@@ -2285,7 +3068,7 @@ Held-out predictions: ['delivery', 'billing']
 message predicted
 ```
 
-**🧪 Change one input.** Replace one message in new_inputs.csv. Include one delivery message and one billing message.
+**Your small change.** Replace one message in new_inputs.csv. Include one delivery message and one billing message. Save the named CSV before running again.
 
 
 **💡 Takeaway.** An 8-element row enters the classifier. A tiny corpus illustrates the mechanics. Use more original text before comparing representation quality.
@@ -2324,7 +3107,7 @@ Held-out predictions: ['delivery', 'billing']
 message predicted
 ```
 
-**🧪 Change one input.** Replace one message in new_inputs.csv. Include one delivery message and one billing message.
+**Your small change.** Replace one message in new_inputs.csv. Include one delivery message and one billing message. Save the named CSV before running again.
 
 
 **💡 Takeaway.** The attention mask excludes padding. This randomly initialized encoder demonstrates the mechanics and has no learned language knowledge.
@@ -2335,7 +3118,21 @@ message predicted
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 1.3.8 Handle Boolean Data **Practice** | Make mixed yes/no entries consistent before a model uses them. | [⬇️ Lesson ZIP](sample_code_folder/090-1-3-8-handle-boolean-data.zip) |
+| 090 - 1.3.8 Handle Boolean Data **Practice** | Make mixed yes/no entries consistent before a model uses them. | [Lesson ZIP](sample_code_folder/090-1-3-8-handle-boolean-data.zip) |
+
+**Before this lesson.** Tell yes, no and unknown apart.
+
+**In simple words.** Yes, true and 1 mean known yes. No, false and 0 mean known no. An unknown value stays missing until a stated rule handles it.
+
+**Guess first.** Is unknown the same as false? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. False is a known answer. Unknown is missing information.
+
+</details>
+
 
 ![Recognize yes. Yes, true or 1 means the value is 1. → Recognize no. No, false or 0 means the value is 0. → Handle unknown. Keep unfamiliar entries missing until the fill rule runs.](workbook-figures/boolean-input-steps-mobile.png)
 
@@ -2349,7 +3146,21 @@ message predicted
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Convert Boolean values to standard format (1 or 0) **Practice** | Change different spellings of yes and no into 1 and 0 and flag unrecognized values. | [⬇️ Lesson ZIP](sample_code_folder/091-convert-boolean-values-to-standard-format-1-or-0.zip) |
+| 091 - Convert Boolean values to standard format (1 or 0) **Practice** | Change different spellings of yes and no into 1 and 0 and flag unrecognized values. | [Lesson ZIP](sample_code_folder/091-convert-boolean-values-to-standard-format-1-or-0.zip) |
+
+**Before this lesson.** Tell yes, no and unknown apart.
+
+**In simple words.** Yes, true and 1 mean known yes. No, false and 0 mean known no. An unknown value stays missing until a stated rule handles it.
+
+**Guess first.** Is unknown the same as false? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. False is a known answer. Unknown is missing information.
+
+</details>
+
 
 Create and read a short signup CSV. Map the original spellings to numeric flags before modeling.
 
@@ -2377,7 +3188,7 @@ Create and read a short signup CSV. Map the original spellings to numeric flags 
 | Yes | 1.0 |
 | no | 0.0 |
 
-**🧪 Change one input.** Change signed_up in sample.csv, for example from Yes to true. Compare the printed rows.
+**Your small change.** Change signed_up in sample.csv, for example from Yes to true. Compare the printed rows. Save the named CSV before running again.
 
 
 **💡 Takeaway.** The unknown entry stays missing so the next example can handle it explicitly.
@@ -2388,7 +3199,21 @@ Create and read a short signup CSV. Map the original spellings to numeric flags 
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Fill missing values with mode **Practice** | Fill an unknown signup flag with the most common training value before making a prediction. | [⬇️ Lesson ZIP](sample_code_folder/092-fill-missing-values-with-mode.zip) |
+| 092 - Fill missing values with mode **Practice** | Fill an unknown signup flag with the most common training value before making a prediction. | [Lesson ZIP](sample_code_folder/092-fill-missing-values-with-mode.zip) |
+
+**Before this lesson.** Tell yes, no and unknown apart.
+
+**In simple words.** Yes, true and 1 mean known yes. No, false and 0 mean known no. An unknown value stays missing until a stated rule handles it.
+
+**Guess first.** Is unknown the same as false? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. False is a known answer. Unknown is missing information.
+
+</details>
+
 
 Read mixed Boolean spellings, map them to 0/1, and fit the most-frequent imputer inside a classifier.
 
@@ -2419,7 +3244,7 @@ Read mixed Boolean spellings, map them to 0/1, and fit the most-frequent imputer
 | Yes | 1.0 |
 | No | 0.0 |
 
-**🧪 Change one input.** Try Yes, 0 and an unknown value in new_inputs.csv.
+**Your small change.** Try Yes, 0 and an unknown value in new_inputs.csv. Save the named CSV before running again.
 
 
 <a id="1-3-9-handle-date-time-data"></a>
@@ -2428,7 +3253,21 @@ Read mixed Boolean spellings, map them to 0/1, and fit the most-frequent imputer
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 1.3.9 Handle Date/Time Data **Practice** | Read written dates and timestamps so Python can use them consistently. | [⬇️ Lesson ZIP](sample_code_folder/093-1-3-9-handle-date-time-data.zip) |
+| 093 - 1.3.9 Handle Date/Time Data **Practice** | Read written dates and timestamps so Python can use them consistently. | [Lesson ZIP](sample_code_folder/093-1-3-9-handle-date-time-data.zip) |
+
+**Before this lesson.** Read a date and time. Know the format used in the file.
+
+**In simple words.** Parse a date once, then take parts such as year or hour. These are possible inputs, not proof they are useful. Keep timezone and prediction timing clear.
+
+**Guess first.** Are hour 23 and hour 0 far apart in time? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They are an hour apart across midnight. Numeric coding may need to reflect that cycle.
+
+</details>
+
 
 ![Read the time. Parse the input string as a timestamp. → Extract fields. 2025, month 2, day 5. Wednesday at hour 9. → Choose inputs. Use hour and weekday if they matter for predicting order counts.](workbook-figures/datetime-feature-steps-mobile.png)
 
@@ -2442,7 +3281,21 @@ Read mixed Boolean spellings, map them to 0/1, and fit the most-frequent imputer
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Convert to datetime format **Practice** | Parse two date formats and a Unix timestamp, and spot an unreadable value. | [⬇️ Lesson ZIP](sample_code_folder/094-convert-to-datetime-format.zip) |
+| 094 - Convert to datetime format **Practice** | Parse two date formats and a Unix timestamp, and spot an unreadable value. | [Lesson ZIP](sample_code_folder/094-convert-to-datetime-format.zip) |
+
+**Before this lesson.** Read a date and time. Know the format used in the file.
+
+**In simple words.** Parse a date once, then take parts such as year or hour. These are possible inputs, not proof they are useful. Keep timezone and prediction timing clear.
+
+**Guess first.** Are hour 23 and hour 0 far apart in time? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They are an hour apart across midnight. Numeric coding may need to reflect that cycle.
+
+</details>
+
 
 Read two timestamp formats plus a Unix timestamp. Convert valid values and report a malformed date.
 
@@ -2459,7 +3312,7 @@ Read two timestamp formats plus a Unix timestamp. Convert valid values and repor
 ['2025-02-03', '2025-02-04', 'invalid date', '2023-02-10']
 ```
 
-**🧪 Change one input.** Enter 12/31/2025, 2025-12-31 and an unreadable date. Compare the results.
+**Your small change.** Enter 12/31/2025, 2025-12-31 and an unreadable date. Compare the results. Save the named CSV before running again.
 
 
 <a id="extract-useful-features-year-month-day-weekday-hour-etc"></a>
@@ -2468,7 +3321,21 @@ Read two timestamp formats plus a Unix timestamp. Convert valid values and repor
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Extract useful features (Year, Month, Day, Weekday, Hour, etc.) **Practice** | Turn one timestamp into model inputs such as weekday and hour. | [⬇️ Lesson ZIP](sample_code_folder/095-extract-useful-features-year-month-day-weekday-hour-etc.zip) |
+| 095 - Extract useful features (Year, Month, Day, Weekday, Hour, etc.) **Practice** | Turn one timestamp into model inputs such as weekday and hour. | [Lesson ZIP](sample_code_folder/095-extract-useful-features-year-month-day-weekday-hour-etc.zip) |
+
+**Before this lesson.** Read a date and time. Know the format used in the file.
+
+**In simple words.** Parse a date once, then take parts such as year or hour. These are possible inputs, not proof they are useful. Keep timezone and prediction timing clear.
+
+**Guess first.** Are hour 23 and hour 0 far apart in time? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They are an hour apart across midnight. Numeric coding may need to reflect that cycle.
+
+</details>
+
 
 Turn timestamp strings into five features. Use hour and weekday to fit a delivery-volume model, then predict a new hour using the same parser.
 
@@ -2497,7 +3364,7 @@ Turn timestamp strings into five features. Use hour and weekday to fit a deliver
 | 2025 | 2 | 3 | 0 | 8 |
 | 2025 | 2 | 3 | 0 | 10 |
 
-**🧪 Change one input.** Try 2025-02-05 09:00 and 2026-01-12 08:30 in new_inputs.csv. Keep the YYYY-MM-DD HH:MM format.
+**Your small change.** Try 2025-02-05 09:00 and 2026-01-12 08:30 in new_inputs.csv. Keep the YYYY-MM-DD HH:MM format. Save the named CSV before running again.
 
 
 <a id="handle-missing-dates-using-interpolation"></a>
@@ -2506,9 +3373,23 @@ Turn timestamp strings into five features. Use hour and weekday to fit a deliver
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Handle missing dates using interpolation **Practice** | Estimate a missing time-series reading from the readings on either side. | [⬇️ Lesson ZIP](sample_code_folder/101-handle-missing-dates-using-interpolation.zip) |
+| 101 - Handle missing dates using interpolation **Practice** | Estimate a missing time-series reading from the readings on either side. | [Lesson ZIP](sample_code_folder/101-handle-missing-dates-using-interpolation.zip) |
 
-Put observations on a daily calendar and estimate the missing measurement in a retrospective series.
+**Before this lesson.** Put dates in order and check that each date appears once.
+
+**In simple words.** A daily calendar can reveal a missing measurement. Interpolation estimates it using readings around the gap. Here we are looking back, not predicting live.
+
+**Guess first.** If February 3 rises, can the estimate for February 2 rise? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+Yes. The past-series estimate uses that later reading. Do not use it for a live February 2 decision.
+
+</details>
+
+
+Put observations on a daily calendar and estimate the missing measurement in a past-series series.
 
 **📋 Sample data**
 
@@ -2533,7 +3414,7 @@ day
 2025-02-01      10.0          10.0
 ```
 
-**🧪 Change one input.** Try changing day from 2025-02-01 to 2025-02-04 in sample.csv. Compare the new output.
+**Your small change.** In sample.csv, change orders for 2025-02-03 from 16 to 18. The February 2 estimate should become 14. Keep each date unique. Save the named CSV before running again.
 
 
 **💡 Takeaway.** February 2 gets 13 using both adjacent days. Interpolate a missing measurement on a known schedule. For a live prediction on February 2, restrict inputs to data actually available then.
@@ -2544,7 +3425,21 @@ day
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 1.3.10 Handle Large Numbers **Practice** | Check how a log makes large numeric values easier to compare. | [⬇️ Lesson ZIP](sample_code_folder/102-1-3-10-handle-large-numbers.zip) |
+| 102 - 1.3.10 Handle Large Numbers **Practice** | Check how a log makes large numeric values easier to compare. | [Lesson ZIP](sample_code_folder/102-1-3-10-handle-large-numbers.zip) |
+
+**Before this lesson.** Read large numbers and know which fields are IDs.
+
+**In simple words.** Scientific notation only changes how a number is displayed. A log changes the numeric input. An ID is a name, even when it contains digits.
+
+**Guess first.** Does writing 1000 as 1e3 make its value smaller? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. The value stays 1000. A log is a different operation.
+
+</details>
+
 
 ![Read the count. This could be the number of page views. → Display the number. 1 × 10⁸ is the same count written more compactly. → Transform for a model. A log changes the input. Reuse the same log for new rows.](workbook-figures/large-number-steps-mobile.png)
 
@@ -2558,7 +3453,21 @@ day
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Apply Log Transformation (if data is highly skewed) **Practice** | Use a log so a few very large readings have less influence on the scale. | [⬇️ Lesson ZIP](sample_code_folder/103-apply-log-transformation-if-data-is-highly-skewed.zip) |
+| 103 - Apply Log Transformation (if data is highly skewed) **Practice** | Use a log so a few very large readings have less influence on the scale. | [Lesson ZIP](sample_code_folder/103-apply-log-transformation-if-data-is-highly-skewed.zip) |
+
+**Before this lesson.** Read large numbers and know which fields are IDs.
+
+**In simple words.** Scientific notation only changes how a number is displayed. A log changes the numeric input. An ID is a name, even when it contains digits.
+
+**Guess first.** Does writing 1000 as 1e3 make its value smaller? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. The value stays 1000. A log is a different operation.
+
+</details>
+
 
 Run the traffic model below and compare the raw counts with the log features. Try `log1p` when the feature can contain zero.
 
@@ -2568,7 +3477,21 @@ Run the traffic model below and compare the raw counts with the log features. Tr
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Convert to scientific notation (if values are too large) **Practice** | Display large numbers in compact scientific notation and read the original value alongside them. | [⬇️ Lesson ZIP](sample_code_folder/104-convert-to-scientific-notation-if-values-are-too-large.zip) |
+| 104 - Convert to scientific notation (if values are too large) **Practice** | Display large numbers in compact scientific notation and read the original value alongside them. | [Lesson ZIP](sample_code_folder/104-convert-to-scientific-notation-if-values-are-too-large.zip) |
+
+**Before this lesson.** Read large numbers and know which fields are IDs.
+
+**In simple words.** Scientific notation only changes how a number is displayed. A log changes the numeric input. An ID is a name, even when it contains digits.
+
+**Guess first.** Does writing 1000 as 1e3 make its value smaller? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. The value stays 1000. A log is a different operation.
+
+</details>
+
 
 Read large traffic values and long event IDs. Display traffic in scientific notation and send its log-transformed numeric form into regression.
 
@@ -2597,7 +3520,7 @@ Traffic display: ['1.000e+02', '1.000e+04', '1.000e+06', '1.250e+10']
 Numeric log features: [4.62, 9.21, 13.82, 23.25]
 ```
 
-**🧪 Change one input.** Try changing event_id from 123456789012345 to 123456789012347 in sample.csv. Compare the new output.
+**Your small change.** Change visits in sample.csv from 100 to 1000. Compare its written scientific notation and log value. Keep event_id as exact text; do not use it as a measurement. Save the named CSV before running again.
 
 
 **💡 Takeaway.** Scientific notation changes the display. The log changes the numeric feature. IDs remain exact strings and stay out of the model.
@@ -2608,7 +3531,21 @@ Numeric log features: [4.62, 9.21, 13.82, 23.25]
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Data Types, Issues & Preprocessing Techniques **Practice** | Turn a nested record into a flat row and identify the fields a model can use. | [⬇️ Lesson ZIP](sample_code_folder/105-data-types-issues-preprocessing-techniques.zip) |
+| 105 - Data Types, Issues & Preprocessing Techniques **Practice** | Turn a nested record into a flat row and identify the fields a model can use. | [Lesson ZIP](sample_code_folder/105-data-types-issues-preprocessing-techniques.zip) |
+
+**Before this lesson.** Read a simple row, a named field and a missing value.
+
+**In simple words.** A nested record holds facts inside other facts. Flattening puts selected facts into columns. A local address lookup has only the addresses in its own list.
+
+**Guess first.** What should happen to an address absent from that list? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+Flag it for a source lookup. Do not invent coordinates.
+
+</details>
+
 
 | PDF data type | Example you can try | Common issue and fix |
 | --- | --- | --- |
@@ -2630,7 +3567,21 @@ Numeric log features: [4.62, 9.21, 13.82, 23.25]
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Geospatial (Lat/Long, Addresses) **Practice** | Look up coordinates for three depots and use them to estimate delivery time. | [⬇️ Lesson ZIP](sample_code_folder/106-geospatial-lat-long-addresses.zip) |
+| 106 - Geospatial (Lat/Long, Addresses) **Practice** | Look up coordinates for three depots and use them to estimate delivery time. | [Lesson ZIP](sample_code_folder/106-geospatial-lat-long-addresses.zip) |
+
+**Before this lesson.** Read a simple row, a named field and a missing value.
+
+**In simple words.** A nested record holds facts inside other facts. Flattening puts selected facts into columns. A local address lookup has only the addresses in its own list.
+
+**Guess first.** What should happen to an address absent from that list? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+Flag it for a source lookup. Do not invent coordinates.
+
+</details>
+
 
 Use the local list of depots to find latitude and longitude. Separate addresses with coordinates from those that need review.
 
@@ -2640,9 +3591,23 @@ Use the local list of depots to find latitude and longitude. Separate addresses 
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Convert to coordinates **Practice** | Look up the latitude and longitude of a known depot. | [⬇️ Lesson ZIP](sample_code_folder/107-convert-to-coordinates.zip) |
+| 107 - Convert to coordinates **Practice** | Turn a known depot name into latitude and longitude. | [Lesson ZIP](sample_code_folder/107-convert-to-coordinates.zip) |
 
-**🧪 Change one input.** In `new_inputs.csv`, change `North Depot` to `Unknown Depot`. Follow the README to rerun the script. The unknown address needs review and gets no estimate.
+**Before this lesson.** Read a simple row, a named field and a missing value.
+
+**In simple words.** A nested record holds facts inside other facts. Flattening puts selected facts into columns. A local address lookup has only the addresses in its own list.
+
+**Guess first.** What should happen to an address absent from that list? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+Flag it for a source lookup. Do not invent coordinates.
+
+</details>
+
+
+**Your small change.** Change address in new_inputs.csv, for example from North Depot to Unknown Depot. Compare the printed rows. Save the named CSV before running again.
 
 <a id="geocoding-apis"></a>
 
@@ -2650,7 +3615,21 @@ Use the local list of depots to find latitude and longitude. Separate addresses 
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Geocoding APIs **Reference** | Run the offline lookup and read the walkthrough for replacing it with a live provider. | [⬇️ Lesson ZIP](sample_code_folder/108-geocoding-apis.zip) |
+| 108 - Geocoding APIs **Reference** | Try a local address lookup and see how it handles an address outside its small list. | [Lesson ZIP](sample_code_folder/108-geocoding-apis.zip) |
+
+**Before this lesson.** Read a simple row, a named field and a missing value.
+
+**In simple words.** A nested record holds facts inside other facts. Flattening puts selected facts into columns. A local address lookup has only the addresses in its own list.
+
+**Guess first.** What should happen to an address absent from that list? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+Flag it for a source lookup. Do not invent coordinates.
+
+</details>
+
 
 Open the ZIP’s README for the manual walkthrough. The runnable example uses a local depot lookup.
 
@@ -2661,7 +3640,21 @@ Open the ZIP’s README for the manual walkthrough. The runnable example uses a 
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Complex Data (JSON, XML, Dictionaries) **Practice** | Read the same delivery fields from a nested dictionary, JSON, and XML. | [⬇️ Lesson ZIP](sample_code_folder/109-complex-data-json-xml-dictionaries.zip) |
+| 109 - Complex Data (JSON, XML, Dictionaries) **Practice** | Read the same delivery fields from a nested dictionary, JSON, and XML. | [Lesson ZIP](sample_code_folder/109-complex-data-json-xml-dictionaries.zip) |
+
+**Before this lesson.** Read a simple row, a named field and a missing value.
+
+**In simple words.** A nested record holds facts inside other facts. Flattening puts selected facts into columns. A local address lookup has only the addresses in its own list.
+
+**Guess first.** What should happen to an address absent from that list? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+Flag it for a source lookup. Do not invent coordinates.
+
+</details>
+
 
 Resolve some sample addresses using a small offline lookup, preserve missing coordinates, and flatten two nested input formats. Feed the extracted fields into a simple model.
 
@@ -2689,7 +3682,7 @@ Resolve some sample addresses using a small offline lookup, preserve missing coo
 | Depot North | 10 | 1.0 | 59.35 | 18.05 |
 | Depot South | 16 | 3.0 | 59.28 | 18.02 |
 
-**🧪 Change one input.** Change address in sample.csv, for example from Depot North to Depot South. Compare the printed rows.
+**Your small change.** Change address in sample.csv, for example from Depot North to Depot South. Compare the printed rows. Save the named CSV before running again.
 
 
 <a id="images-pixels-matrices"></a>
@@ -2698,7 +3691,21 @@ Resolve some sample addresses using a small offline lookup, preserve missing coo
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Images (Pixels, Matrices) **Practice** | Turn simple color pictures into a small matrix of numbers. | [⬇️ Lesson ZIP](sample_code_folder/113-images-pixels-matrices.zip) |
+| 113 - Images (Pixels, Matrices) **Practice** | Turn simple color pictures into a small matrix of numbers. | [Lesson ZIP](sample_code_folder/113-images-pixels-matrices.zip) |
+
+**Before this lesson.** Draw a small grid. Each cell is a pixel value.
+
+**In simple words.** Resize makes pictures the same size. Flatten puts the grid in a row. This KNN example compares pixel values; it does not train a CNN.
+
+**Guess first.** Do flattening and resizing mean the same thing? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Resizing changes the grid size. Flattening changes how its values are arranged.
+
+</details>
+
 
 ![Read the image. Start with the color values for each pixel. → Make the shape fit. Resize to a fixed grid. Use grayscale when color is unnecessary. → Give the model numbers. Use the pixel grid or a short feature vector built from it.](workbook-figures/image-feature-steps-mobile.png)
 
@@ -2724,7 +3731,7 @@ First normalized pixels: [0.059, 0.059, 0.059, 0.059]
 New picture: ['light', 'dark', 'light']
 ```
 
-**🧪 Change one input.** Edit the red, green, and blue numbers (0–255) in new_inputs.csv to predict dark or light.
+**Your small change.** Edit the red, green, and blue numbers (0–255) in new_inputs.csv to predict dark or light. Save the named CSV before running again.
 
 
 <a id="image-embeddings"></a>
@@ -2733,7 +3740,21 @@ New picture: ['light', 'dark', 'light']
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Image embeddings **Practice** | Summarize a drawing with two numeric measurements and use them to predict its direction. | [⬇️ Lesson ZIP](sample_code_folder/114-image-embeddings.zip) |
+| 114 - Image embeddings **Practice** | Summarize a drawing with two numeric measurements and use them to predict its direction. | [Lesson ZIP](sample_code_folder/114-image-embeddings.zip) |
+
+**Before this lesson.** Draw a small grid. Each cell is a pixel value.
+
+**In simple words.** Resize makes pictures the same size. Flatten puts the grid in a row. This KNN example compares pixel values; it does not train a CNN.
+
+**Guess first.** Do flattening and resizing mean the same thing? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Resizing changes the grid size. Flattening changes how its values are arranged.
+
+</details>
+
 
 **🎯 Goal.** Can two easy measurements describe a picture well enough to tell whether a bar is sideways or upright? A short list of numbers that represents a picture is an embedding.
 
@@ -2763,7 +3784,7 @@ Vertical spread  Horizontal spread Label or prediction
 0.00               1.12            Sideways
 ```
 
-**🧪 Change one input.** Try changing direction from Upright to Sideways in new_inputs.csv. Compare the new output.
+**Your small change.** Try changing direction from Upright to Sideways in new_inputs.csv. Compare the new output. Save the named CSV before running again.
 
 
 ![Three six by six pixel grids show upright and sideways examples and a new drawing. Each shows numeric vertical and horizontal spread below it.](workbook-figures/image-embeddings.png)
@@ -2780,7 +3801,21 @@ A vertical bar spreads lit pixels across several rows. The first number is large
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Audio (Waves, Spectrograms) **Practice** | Create tones, inspect how their pitch looks in a plot, and classify them. | [⬇️ Lesson ZIP](sample_code_folder/118-audio-waves-spectrograms.zip) |
+| 118 - Audio (Waves, Spectrograms) **Practice** | Create tones, inspect how their pitch looks in a plot, and classify them. | [Lesson ZIP](sample_code_folder/118-audio-waves-spectrograms.zip) |
+
+**Before this lesson.** Finish the audio notes in Extra topics.
+
+**In simple words.** A sound can be shown over time or by its frequencies. The example makes tones locally. A short feature list summarizes them before comparing them.
+
+**Guess first.** Does a tone example prove the model recognizes everyday speech? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Speech is a much harder and different task.
+
+</details>
+
 
 ![Open the recording. Read the waveform, which is the sound signal over time. → Measure frequencies. Open a spectrogram or summarize the tone with MFCC features. → Try a new tone. Apply the same steps and check the predicted sound class.](workbook-figures/audio-feature-steps-mobile.png)
 
@@ -2807,7 +3842,7 @@ New WAV sound: ['high']
 Decoded MP3 sound: ['high']
 ```
 
-**🧪 Change one input.** Change the frequency in new_inputs.csv to a value around 280 or 900. The script creates real WAV audio from those numbers and checks an MP3 round trip.
+**Your small change.** Change the frequency in new_inputs.csv to a value around 280 or 900. The script creates real WAV audio from those numbers and checks an MP3 round trip. Save the named CSV before running again.
 
 
 <a id="video-frames-sequences"></a>
@@ -2816,7 +3851,21 @@ Decoded MP3 sound: ['high']
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Video (Frames, Sequences) **Practice** | Make a short video from frames and classify which way an object moves. | [⬇️ Lesson ZIP](sample_code_folder/122-video-frames-sequences.zip) |
+| 122 - Video (Frames, Sequences) **Practice** | Make a short video from frames and classify which way an object moves. | [Lesson ZIP](sample_code_folder/122-video-frames-sequences.zip) |
+
+**Before this lesson.** Understand one image, array shapes and basic network training.
+
+**In simple words.** A video is a sequence of frames. The order matters for motion. The extra lesson uses a network to read each frame and another to read the sequence.
+
+**Guess first.** Can reversing the same frames change the motion? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+Yes. Keep frames from a source clip together when checking a model.
+
+</details>
+
 
 ![Extract frames. Read the video as a sequence of pictures. → Measure each frame. Use the same image model for every frame. → Read the sequence. Use the order of the frames to predict left or right.](workbook-figures/video-feature-steps-mobile.png)
 
@@ -2842,7 +3891,7 @@ Decoded MP4 direction: [1]
 Directions for all new clips: [1, 0]
 ```
 
-**🧪 Change one input.** Try changing direction from 1 to 0 in new_inputs.csv. Compare the new output.
+**Your small change.** Try changing direction from 1 to 0 in new_inputs.csv. Compare the new output. Save the named CSV before running again.
 
 
 **💡 Takeaway.** Keep all frames from a source clip in the same split. When using MP4, decode frames in order and choose a frame interval before creating the tensor.
@@ -2853,7 +3902,21 @@ Directions for all new clips: [1, 0]
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Data **Practice** | Use original sensor readings to see how a numeric transformation changes model inputs. | [⬇️ Lesson ZIP](sample_code_folder/131-data.zip) |
+| 131 - Data **Practice** | Use original sensor readings to see how a numeric transformation changes model inputs. | [Lesson ZIP](sample_code_folder/131-data.zip) |
+
+**Before this lesson.** Understand scaling, a baseline and validation.
+
+**In simple words.** Use a transformation only for a stated reason. Compare it with unchanged inputs on the same validation rows. Learn every data-based rule inside training.
+
+**Guess first.** Must all eight transformations be applied? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Start simple. Compare a suitable candidate and keep separate final test rows.
+
+</details>
+
 
 These eight transformations use only original measurements. Fit each transformation on training rows and keep the same fitted object for later predictions.
 
@@ -2863,7 +3926,21 @@ These eight transformations use only original measurements. Fit each transformat
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Min-Max Scaling (Normalization) **Practice** | Rescale the sensor training range to 0–1 and predict the costs of new readings. | [⬇️ Lesson ZIP](sample_code_folder/132-min-max-scaling-normalization.zip) |
+| 132 - Min-Max Scaling (Normalization) **Practice** | Rescale the sensor training range to 0–1 and predict the costs of new readings. | [Lesson ZIP](sample_code_folder/132-min-max-scaling-normalization.zip) |
+
+**Before this lesson.** Understand scaling, a baseline and validation.
+
+**In simple words.** Use a transformation only for a stated reason. Compare it with unchanged inputs on the same validation rows. Learn every data-based rule inside training.
+
+**Guess first.** Must all eight transformations be applied? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Start simple. Compare a suitable candidate and keep separate final test rows.
+
+</details>
+
 
 **🎯 Goal.** How much might a new reading cost? Signal is the input. Cost is the known answer. Change the signal first, then give the model that changed number.
 
@@ -2899,7 +3976,7 @@ Actual costs: [23, 48]
 Predicted costs: [23.9, 37.7]
 ```
 
-**🧪 Change one input.** Try a signal reading of 3, 15, or 40 in new_inputs.csv. Compare the predicted cost for each row.
+**Your small change.** Try a signal reading of 3, 15, or 40 in new_inputs.csv. Compare the predicted cost for each row. Save the named CSV before running again.
 
 
 ![Each dot connects one original measurement to the value used by the model.](workbook-figures/min-max-scaling-normalization.png)
@@ -2916,7 +3993,21 @@ Predicted costs: [23.9, 37.7]
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Z-Score Standardization (Standardization) **Practice** | Measure sensor readings in standard deviations from the training average. | [⬇️ Lesson ZIP](sample_code_folder/135-z-score-standardization-standardization.zip) |
+| 135 - Z-Score Standardization (Standardization) **Practice** | Measure sensor readings in standard deviations from the training average. | [Lesson ZIP](sample_code_folder/135-z-score-standardization-standardization.zip) |
+
+**Before this lesson.** Understand scaling, a baseline and validation.
+
+**In simple words.** Use a transformation only for a stated reason. Compare it with unchanged inputs on the same validation rows. Learn every data-based rule inside training.
+
+**Guess first.** Must all eight transformations be applied? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Start simple. Compare a suitable candidate and keep separate final test rows.
+
+</details>
+
 
 **🎯 Goal.** How much might a new reading cost? Signal is the input. Cost is the known answer. Change the signal first, then give the model that changed number.
 
@@ -2952,7 +4043,7 @@ Actual costs: [23, 48]
 Predicted costs: [23.9, 37.7]
 ```
 
-**🧪 Change one input.** Try a signal reading of 3, 15, or 40 in new_inputs.csv. Compare the predicted cost for each row.
+**Your small change.** Try a signal reading of 3, 15, or 40 in new_inputs.csv. Compare the predicted cost for each row. Save the named CSV before running again.
 
 
 ![Each dot connects one original measurement to the value used by the model.](workbook-figures/z-score-standardization-standardization.png)
@@ -2969,7 +4060,21 @@ Predicted costs: [23.9, 37.7]
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Log Transformation (Log Scaling) **Practice** | Use a log so large sensor readings have less influence on the scale. | [⬇️ Lesson ZIP](sample_code_folder/136-log-transformation-log-scaling.zip) |
+| 136 - Log Transformation (Log Scaling) **Practice** | Use a log so large sensor readings have less influence on the scale. | [Lesson ZIP](sample_code_folder/136-log-transformation-log-scaling.zip) |
+
+**Before this lesson.** Understand scaling, a baseline and validation.
+
+**In simple words.** Use a transformation only for a stated reason. Compare it with unchanged inputs on the same validation rows. Learn every data-based rule inside training.
+
+**Guess first.** Must all eight transformations be applied? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Start simple. Compare a suitable candidate and keep separate final test rows.
+
+</details>
+
 
 **🎯 Goal.** How much might a new reading cost? Signal is the input. Cost is the known answer. Change the signal first, then give the model that changed number.
 
@@ -3005,7 +4110,7 @@ Actual costs: [23, 48]
 Predicted costs: [26.7, 47.2]
 ```
 
-**🧪 Change one input.** Try a signal reading of 3, 15, or 40 in new_inputs.csv. Compare the predicted cost for each row.
+**Your small change.** Try a signal reading of 3, 15, or 40 in new_inputs.csv. Compare the predicted cost for each row. Save the named CSV before running again.
 
 
 ![Each dot connects one original measurement to the value used by the model.](workbook-figures/log-transformation-log-scaling.png)
@@ -3022,7 +4127,21 @@ Predicted costs: [26.7, 47.2]
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Robust Scaling (Median & IQR Scaling) **Practice** | Scale readings using the middle value and the spread of the middle half. | [⬇️ Lesson ZIP](sample_code_folder/138-robust-scaling-median-iqr-scaling.zip) |
+| 138 - Robust Scaling (Median & IQR Scaling) **Practice** | Scale readings using the middle value and the spread of the middle half. | [Lesson ZIP](sample_code_folder/138-robust-scaling-median-iqr-scaling.zip) |
+
+**Before this lesson.** Understand scaling, a baseline and validation.
+
+**In simple words.** Use a transformation only for a stated reason. Compare it with unchanged inputs on the same validation rows. Learn every data-based rule inside training.
+
+**Guess first.** Must all eight transformations be applied? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Start simple. Compare a suitable candidate and keep separate final test rows.
+
+</details>
+
 
 **🎯 Goal.** How much might a new reading cost? Signal is the input. Cost is the known answer. Change the signal first, then give the model that changed number.
 
@@ -3058,7 +4177,7 @@ Actual costs: [23, 48]
 Predicted costs: [23.9, 37.7]
 ```
 
-**🧪 Change one input.** Try a signal reading of 3, 15, or 40 in new_inputs.csv. Compare the predicted cost for each row.
+**Your small change.** Try a signal reading of 3, 15, or 40 in new_inputs.csv. Compare the predicted cost for each row. Save the named CSV before running again.
 
 
 ![Each dot connects one original measurement to the value used by the model.](workbook-figures/robust-scaling-median-iqr-scaling.png)
@@ -3075,7 +4194,21 @@ Predicted costs: [23.9, 37.7]
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Power Transformations (Box-Cox & Yeo-Johnson) **Practice** | Try two power transformations on the same readings and compare the cost predictions. | [⬇️ Lesson ZIP](sample_code_folder/139-power-transformations-box-cox-yeo-johnson.zip) |
+| 139 - Power Transformations (Box-Cox & Yeo-Johnson) **Practice** | Try two power transformations on the same readings and compare the cost predictions. | [Lesson ZIP](sample_code_folder/139-power-transformations-box-cox-yeo-johnson.zip) |
+
+**Before this lesson.** Understand scaling, a baseline and validation.
+
+**In simple words.** Use a transformation only for a stated reason. Compare it with unchanged inputs on the same validation rows. Learn every data-based rule inside training.
+
+**Guess first.** Must all eight transformations be applied? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Start simple. Compare a suitable candidate and keep separate final test rows.
+
+</details>
+
 
 **🎯 Goal.** How much might a new reading cost? Signal is the input. Cost is the known answer. Change the signal first, then give the model that changed number.
 
@@ -3111,7 +4244,7 @@ Actual costs: [23, 48]
 Predicted costs: [26.5, 46.6]
 ```
 
-**🧪 Change one input.** Try a signal reading of 3, 15, or 40 in new_inputs.csv. Compare the predicted cost for each row.
+**Your small change.** Try a signal reading of 3, 15, or 40 in new_inputs.csv. Compare the predicted cost for each row. Save the named CSV before running again.
 
 
 ![Two curves show the fitted Box–Cox and Yeo–Johnson values for the same seven training readings.](workbook-figures/power-transformations-box-cox-yeo-johnson.png)
@@ -3128,7 +4261,21 @@ Predicted costs: [26.5, 46.6]
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Quantile Transformation (Rank Scaling) **Practice** | Use the rank of each reading to place it on a new scale. | [⬇️ Lesson ZIP](sample_code_folder/142-quantile-transformation-rank-scaling.zip) |
+| 142 - Quantile Transformation (Rank Scaling) **Practice** | Use the rank of each reading to place it on a new scale. | [Lesson ZIP](sample_code_folder/142-quantile-transformation-rank-scaling.zip) |
+
+**Before this lesson.** Understand scaling, a baseline and validation.
+
+**In simple words.** Use a transformation only for a stated reason. Compare it with unchanged inputs on the same validation rows. Learn every data-based rule inside training.
+
+**Guess first.** Must all eight transformations be applied? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Start simple. Compare a suitable candidate and keep separate final test rows.
+
+</details>
+
 
 **🎯 Goal.** How much might a new reading cost? Signal is the input. Cost is the known answer. Change the signal first, then give the model that changed number.
 
@@ -3164,7 +4311,7 @@ Actual costs: [23, 48]
 Predicted costs: [24.0, 48.1]
 ```
 
-**🧪 Change one input.** Try a signal reading of 3, 15, or 40 in new_inputs.csv. Compare the predicted cost for each row.
+**Your small change.** Try a signal reading of 3, 15, or 40 in new_inputs.csv. Compare the predicted cost for each row. Save the named CSV before running again.
 
 
 ![Uniform and normal quantile transformations plotted for the same seven training readings.](workbook-figures/quantile-transformation-rank-scaling.png)
@@ -3181,7 +4328,21 @@ Predicted costs: [24.0, 48.1]
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Binning (Discretization) **Practice** | Put continuous sensor readings into bins and use the bins as model inputs. | [⬇️ Lesson ZIP](sample_code_folder/145-binning-discretization.zip) |
+| 145 - Binning (Discretization) **Practice** | Put continuous sensor readings into bins and use the bins as model inputs. | [Lesson ZIP](sample_code_folder/145-binning-discretization.zip) |
+
+**Before this lesson.** Understand scaling, a baseline and validation.
+
+**In simple words.** Use a transformation only for a stated reason. Compare it with unchanged inputs on the same validation rows. Learn every data-based rule inside training.
+
+**Guess first.** Must all eight transformations be applied? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Start simple. Compare a suitable candidate and keep separate final test rows.
+
+</details>
+
 
 **🎯 Goal.** How much might a new reading cost? Signal is the input. Cost is the known answer. Change the signal first, then give the model that changed number.
 
@@ -3217,7 +4378,7 @@ Actual costs: [23, 48]
 Predicted costs: [25.0, 53.0]
 ```
 
-**🧪 Change one input.** Enter 3, 60, and 150 as signal values. Compare their predictions with the printed bin limits.
+**Your small change.** Enter 3, 60, and 150 as signal values. Compare their predictions with the printed bin limits. Save the named CSV before running again.
 
 
 ![Each dot connects one original measurement to the value used by the model.](workbook-figures/binning-discretization.png)
@@ -3234,7 +4395,21 @@ Predicted costs: [25.0, 53.0]
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Polynomial Features (Feature Expansion) **Practice** | Add squared terms so a linear model can describe a curved pattern. | [⬇️ Lesson ZIP](sample_code_folder/146-polynomial-features-feature-expansion.zip) |
+| 146 - Polynomial Features (Feature Expansion) **Practice** | Add squared terms so a linear model can describe a curved pattern. | [Lesson ZIP](sample_code_folder/146-polynomial-features-feature-expansion.zip) |
+
+**Before this lesson.** Understand scaling, a baseline and validation.
+
+**In simple words.** Use a transformation only for a stated reason. Compare it with unchanged inputs on the same validation rows. Learn every data-based rule inside training.
+
+**Guess first.** Must all eight transformations be applied? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Start simple. Compare a suitable candidate and keep separate final test rows.
+
+</details>
+
 
 **🎯 Goal.** How much might a new reading cost? Signal is the input. Cost is the known answer. Change the signal first, then give the model that changed number.
 
@@ -3270,7 +4445,7 @@ Actual costs: [23, 48]
 Predicted costs: [22.0, 49.4]
 ```
 
-**🧪 Change one input.** Try a signal reading of 3, 15, or 40 in new_inputs.csv. Compare the predicted cost for each row.
+**Your small change.** Try a signal reading of 3, 15, or 40 in new_inputs.csv. Compare the predicted cost for each row. Save the named CSV before running again.
 
 
 ![Each dot connects one original measurement to the value used by the model.](workbook-figures/polynomial-features-feature-expansion.png)
@@ -3287,7 +4462,21 @@ Predicted costs: [22.0, 49.4]
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Which Technique Should You Use? **Practice** | Use the same validation folds to compare which transformation makes better predictions. | [⬇️ Lesson ZIP](sample_code_folder/147-which-technique-should-you-use.zip) |
+| 147 - Which Technique Should You Use? **Practice** | Use the same validation folds to compare which transformation makes better predictions. | [Lesson ZIP](sample_code_folder/147-which-technique-should-you-use.zip) |
+
+**Before this lesson.** Understand scaling, a baseline and validation.
+
+**In simple words.** Use a transformation only for a stated reason. Compare it with unchanged inputs on the same validation rows. Learn every data-based rule inside training.
+
+**Guess first.** Must all eight transformations be applied? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Start simple. Compare a suitable candidate and keep separate final test rows.
+
+</details>
+
 
 Compare candidates using the same folds on an original, skewed feature. Each transformation learns from the training part of each fold. The validation scores help you choose a method. Use separate final test rows to measure the result you would report.
 
@@ -3320,7 +4509,7 @@ Showing the first 8 of 9 rows. The CSV has the full sample.
 | Min-Max Scaling | MAE 12.18 |
 | Z-Score Standardization | MAE 10.94 |
 
-**🧪 Change one input.** Try changing signal from 1 to 12 in sample.csv. Compare the new output.
+**Your small change.** Try changing signal from 1 to 12 in sample.csv. Compare the new output. Save the named CSV before running again.
 
 
 **💡 Takeaway.** Compare the reported errors and any differences in results across folds. One small table illustrates the method.
@@ -3331,7 +4520,21 @@ Showing the first 8 of 9 rows. The CSV has the full sample.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 1.4. Exploratory Data Analysis (EDA) **Practice** | Explore a delivery table with charts and numbers before you train. | [⬇️ Lesson ZIP](sample_code_folder/148-1-4-exploratory-data-analysis-eda.zip) |
+| 148 - 1.4. Exploratory Data Analysis (EDA) **Practice** | Explore a delivery table with charts and numbers before you train. | [Lesson ZIP](sample_code_folder/148-1-4-exploratory-data-analysis-eda.zip) |
+
+**Before this lesson.** Read axes, units and one point per row.
+
+**In simple words.** A chart answers a question about the data. A histogram counts ranges; a scatterplot compares two facts. A correlation shows movement together, not a cause.
+
+**Guess first.** Does a strong correlation prove what causes the result? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Check other explanations and what was actually measured.
+
+</details>
+
 
 **📌 Before you start.** Read a sample table and locate its numeric columns.
 
@@ -3341,7 +4544,21 @@ Showing the first 8 of 9 rows. The CSV has the full sample.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Visualization is used here! **Practice** | Use charts to see how weights spread and how time changes with distance. | [⬇️ Lesson ZIP](sample_code_folder/149-visualization-is-used-here.zip) |
+| 149 - Visualization is used here! **Practice** | Use charts to see how weights spread and how time changes with distance. | [Lesson ZIP](sample_code_folder/149-visualization-is-used-here.zip) |
+
+**Before this lesson.** Read axes, units and one point per row.
+
+**In simple words.** A chart answers a question about the data. A histogram counts ranges; a scatterplot compares two facts. A correlation shows movement together, not a cause.
+
+**Guess first.** Does a strong correlation prove what causes the result? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Check other explanations and what was actually measured.
+
+</details>
+
 
 <a id="visualization-techniques"></a>
 
@@ -3349,7 +4566,21 @@ Showing the first 8 of 9 rows. The CSV has the full sample.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Visualization Techniques **Practice** | Use histograms, scatter plots, box plots, heatmaps and pair plots to explore the same table. | [⬇️ Lesson ZIP](sample_code_folder/154-visualization-techniques.zip) |
+| 154 - Visualization Techniques **Practice** | Use histograms, scatter plots, box plots, heatmaps and pair plots to explore the same table. | [Lesson ZIP](sample_code_folder/154-visualization-techniques.zip) |
+
+**Before this lesson.** Read axes, units and one point per row.
+
+**In simple words.** A chart answers a question about the data. A histogram counts ranges; a scatterplot compares two facts. A correlation shows movement together, not a cause.
+
+**Guess first.** Does a strong correlation prove what causes the result? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Check other explanations and what was actually measured.
+
+</details>
+
 
 <a id="histograms"></a>
 
@@ -3357,7 +4588,21 @@ Showing the first 8 of 9 rows. The CSV has the full sample.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Histograms **Practice** | Count how often each range of weights occurs. | [⬇️ Lesson ZIP](sample_code_folder/155-histograms.zip) |
+| 155 - Histograms **Practice** | Count how often each range of weights occurs. | [Lesson ZIP](sample_code_folder/155-histograms.zip) |
+
+**Before this lesson.** Read axes, units and one point per row.
+
+**In simple words.** A chart answers a question about the data. A histogram counts ranges; a scatterplot compares two facts. A correlation shows movement together, not a cause.
+
+**Guess first.** Does a strong correlation prove what causes the result? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Check other explanations and what was actually measured.
+
+</details>
+
 
 Count how many weights fall in each range before checking the large value.
 
@@ -3367,7 +4612,21 @@ Count how many weights fall in each range before checking the large value.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Scatter Plots **Practice** | Put distance on one axis and delivery time on the other. | [⬇️ Lesson ZIP](sample_code_folder/156-scatter-plots.zip) |
+| 156 - Scatter Plots **Practice** | Put distance on one axis and delivery time on the other. | [Lesson ZIP](sample_code_folder/156-scatter-plots.zip) |
+
+**Before this lesson.** Read axes, units and one point per row.
+
+**In simple words.** A chart answers a question about the data. A histogram counts ranges; a scatterplot compares two facts. A correlation shows movement together, not a cause.
+
+**Guess first.** Does a strong correlation prove what causes the result? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Check other explanations and what was actually measured.
+
+</details>
+
 
 One dot is one delivery. Read distance along the bottom and minutes up the side.
 
@@ -3377,7 +4636,21 @@ One dot is one delivery. Read distance along the bottom and minutes up the side.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Box Plots **Practice** | Find which weights sit far outside the usual group. | [⬇️ Lesson ZIP](sample_code_folder/157-box-plots.zip) |
+| 157 - Box Plots **Practice** | Find which weights sit far outside the usual group. | [Lesson ZIP](sample_code_folder/157-box-plots.zip) |
+
+**Before this lesson.** Read axes, units and one point per row.
+
+**In simple words.** A chart answers a question about the data. A histogram counts ranges; a scatterplot compares two facts. A correlation shows movement together, not a cause.
+
+**Guess first.** Does a strong correlation prove what causes the result? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Check other explanations and what was actually measured.
+
+</details>
+
 
 The box represents the middle half of the weights. Inspect a point far beyond the whiskers.
 
@@ -3387,7 +4660,21 @@ The box represents the middle half of the weights. Inspect a point far beyond th
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Heatmaps **Practice** | Compare how strongly pairs of numeric columns move together. | [⬇️ Lesson ZIP](sample_code_folder/158-heatmaps.zip) |
+| 158 - Heatmaps **Practice** | Compare how strongly pairs of numeric columns move together. | [Lesson ZIP](sample_code_folder/158-heatmaps.zip) |
+
+**Before this lesson.** Read axes, units and one point per row.
+
+**In simple words.** A chart answers a question about the data. A histogram counts ranges; a scatterplot compares two facts. A correlation shows movement together, not a cause.
+
+**Guess first.** Does a strong correlation prove what causes the result? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Check other explanations and what was actually measured.
+
+</details>
+
 
 Find the value where two column names meet. Values near 1 indicate the measurements rise together.
 
@@ -3397,7 +4684,21 @@ Find the value where two column names meet. Values near 1 indicate the measureme
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Pair Plots **Practice** | View several pairs of input columns at once. | [⬇️ Lesson ZIP](sample_code_folder/159-pair-plots.zip) |
+| 159 - Pair Plots **Practice** | View several pairs of input columns at once. | [Lesson ZIP](sample_code_folder/159-pair-plots.zip) |
+
+**Before this lesson.** Read axes, units and one point per row.
+
+**In simple words.** A chart answers a question about the data. A histogram counts ranges; a scatterplot compares two facts. A correlation shows movement together, not a cause.
+
+**Guess first.** Does a strong correlation prove what causes the result? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Check other explanations and what was actually measured.
+
+</details>
+
 
 Run the following example for all five charts. The diagonal panels show one field at a time.
 
@@ -3430,7 +4731,7 @@ mean         7.0             7.7    4.33    35.33
 median       7.0             7.7    2.50    31.50
 ```
 
-**🧪 Change one input.** Try changing distance from 2 to 6 in sample.csv. Compare the new output.
+**Your small change.** Try changing distance from 2 to 6 in sample.csv. Compare the new output. Save the named CSV before running again.
 
 
 ![Panels show weight frequency, a scatterplot of distance and time, a weight box plot and a labeled four-by-four correlation matrix.](workbook-figures/pair-plots-1.png)
@@ -3445,7 +4746,7 @@ median       7.0             7.7    2.50    31.50
 
 **👉 Use what you see.** If two measured columns show nearly the same pattern, check if both are available and useful before training with both.
 
-**💡 Takeaway.** Distance and route distance track one another perfectly in the sample. The name for this kind of overlap between model inputs is **multicollinearity**. Consider keeping one. If exploration guides modeling, use training data.
+**💡 Takeaway.** Distance and route distance track one another perfectly in the sample. The name for this kind of overlap between model inputs is **overlap between inputs (multicollinearity)**. Consider keeping one. If exploration guides modeling, use training data.
 
 <a id="1-5-feature-engineering-feature-selection"></a>
 
@@ -3453,7 +4754,21 @@ median       7.0             7.7    2.50    31.50
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 1.5. Feature Engineering & Feature Selection **Practice** | See how creating or choosing useful input columns helps the model. | [⬇️ Lesson ZIP](sample_code_folder/160-1-5-feature-engineering-feature-selection.zip) |
+| 160 - 1.5. Feature Engineering & Feature Selection **Practice** | See how creating or choosing useful input columns helps the model. | [Lesson ZIP](sample_code_folder/160-1-5-feature-engineering-feature-selection.zip) |
+
+**Before this lesson.** Know the target and which facts exist at prediction time.
+
+**In simple words.** A useful feature must be known in time. Some inputs repeat the same information. Choose features within training, not by inspecting final test answers.
+
+**Guess first.** Does a high feature-importance score prove a cause? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. It shows reliance by this model in this check.
+
+</details>
+
 
 **📌 Before you start.** Identify the raw columns the app will have when it makes a prediction.
 
@@ -3469,7 +4784,21 @@ median       7.0             7.7    2.50    31.50
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Visualization helps here! **Practice** | Shuffle model inputs one at a time and plot which one changes the score most. | [⬇️ Lesson ZIP](sample_code_folder/161-visualization-helps-here.zip) |
+| 161 - Visualization helps here! **Practice** | Shuffle model inputs one at a time and plot which one changes the score most. | [Lesson ZIP](sample_code_folder/161-visualization-helps-here.zip) |
+
+**Before this lesson.** Know the target and which facts exist at prediction time.
+
+**In simple words.** A useful feature must be known in time. Some inputs repeat the same information. Choose features within training, not by inspecting final test answers.
+
+**Guess first.** Does a high feature-importance score prove a cause? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. It shows reliance by this model in this check.
+
+</details>
+
 
 <a id="feature-engineering"></a>
 
@@ -3477,7 +4806,21 @@ median       7.0             7.7    2.50    31.50
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Feature Engineering **Practice** | Create age and an urgent-word flag from two raw fields. | [⬇️ Lesson ZIP](sample_code_folder/162-feature-engineering.zip) |
+| 162 - Feature Engineering **Practice** | Create age and an urgent-word flag from two raw fields. | [Lesson ZIP](sample_code_folder/162-feature-engineering.zip) |
+
+**Before this lesson.** Know the target and which facts exist at prediction time.
+
+**In simple words.** A useful feature must be known in time. Some inputs repeat the same information. Choose features within training, not by inspecting final test answers.
+
+**Guess first.** Does a high feature-importance score prove a cause? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. It shows reliance by this model in this check.
+
+</details>
+
 
 <a id="create-new-features"></a>
 
@@ -3485,7 +4828,21 @@ median       7.0             7.7    2.50    31.50
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Create new features **Practice** | Give the model numbers derived from dates and messages. | [⬇️ Lesson ZIP](sample_code_folder/163-create-new-features.zip) |
+| 163 - Create new features **Practice** | Give the model numbers derived from dates and messages. | [Lesson ZIP](sample_code_folder/163-create-new-features.zip) |
+
+**Before this lesson.** Know the target and which facts exist at prediction time.
+
+**In simple words.** A useful feature must be known in time. Some inputs repeat the same information. Choose features within training, not by inspecting final test answers.
+
+**Guess first.** Does a high feature-importance score prove a cause? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. It shows reliance by this model in this check.
+
+</details>
+
 
 Create age as of the input date, and turn a message keyword into a model feature. Repeat the same steps on a new row.
 
@@ -3515,7 +4872,7 @@ Create age as of the input date, and turn a message keyword into a model feature
 | 34 | 0 |
 | 24 | 0 |
 
-**🧪 Change one input.** Edit the input values in new_inputs.csv and compare the displayed predictions.
+**Your small change.** Edit the input values in new_inputs.csv and compare the displayed predictions. Save the named CSV before running again.
 
 
 <a id="transform-features"></a>
@@ -3524,7 +4881,21 @@ Create age as of the input date, and turn a message keyword into a model feature
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Transform features **Practice** | Change the shape of an input so the model can represent a curved pattern. | [⬇️ Lesson ZIP](sample_code_folder/166-transform-features.zip) |
+| 166 - Transform features **Practice** | Change the shape of an input so the model can represent a curved pattern. | [Lesson ZIP](sample_code_folder/166-transform-features.zip) |
+
+**Before this lesson.** Know the target and which facts exist at prediction time.
+
+**In simple words.** A useful feature must be known in time. Some inputs repeat the same information. Choose features within training, not by inspecting final test answers.
+
+**Guess first.** Does a high feature-importance score prove a cause? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. It shows reliance by this model in this check.
+
+</details>
+
 
 Run [Log Transformation](#log-transformation-log-scaling) and [Polynomial Features](#polynomial-features-feature-expansion). Both exercises read original measurements and pass the transformed columns into a model.
 
@@ -3534,7 +4905,21 @@ Run [Log Transformation](#log-transformation-log-scaling) and [Polynomial Featur
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Feature Selection **Practice** | Choose useful input columns, then see how the choice affects predictions. | [⬇️ Lesson ZIP](sample_code_folder/169-feature-selection.zip) |
+| 169 - Feature Selection **Practice** | Choose useful input columns, then see how the choice affects predictions. | [Lesson ZIP](sample_code_folder/169-feature-selection.zip) |
+
+**Before this lesson.** Know the target and which facts exist at prediction time.
+
+**In simple words.** A useful feature must be known in time. Some inputs repeat the same information. Choose features within training, not by inspecting final test answers.
+
+**Guess first.** Does a high feature-importance score prove a cause? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. It shows reliance by this model in this check.
+
+</details>
+
 
 <a id="remove-irrelevant-or-redundant-features"></a>
 
@@ -3542,7 +4927,21 @@ Run [Log Transformation](#log-transformation-log-scaling) and [Polynomial Featur
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Remove irrelevant or redundant features **Practice** | Remove an ID and a duplicate measurement before selecting model inputs. | [⬇️ Lesson ZIP](sample_code_folder/170-remove-irrelevant-or-redundant-features.zip) |
+| 170 - Remove irrelevant or redundant features **Practice** | Remove an ID and a duplicate measurement before selecting model inputs. | [Lesson ZIP](sample_code_folder/170-remove-irrelevant-or-redundant-features.zip) |
+
+**Before this lesson.** Know the target and which facts exist at prediction time.
+
+**In simple words.** A useful feature must be known in time. Some inputs repeat the same information. Choose features within training, not by inspecting final test answers.
+
+**Guess first.** Does a high feature-importance score prove a cause? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. It shows reliance by this model in this check.
+
+</details>
+
 
 <a id="use-statistical-tests-anova-chi-square-test"></a>
 
@@ -3550,9 +4949,23 @@ Run [Log Transformation](#log-transformation-log-scaling) and [Polynomial Featur
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Use statistical tests (ANOVA, Chi-square test) **Practice** | Compare ANOVA and chi-square to see which input each method chooses. | [⬇️ Lesson ZIP](sample_code_folder/171-use-statistical-tests-anova-chi-square-test.zip) |
+| 171 - Use statistical tests (ANOVA, Chi-square test) **Practice** | Compare ANOVA and chi-square to see which input each method chooses. | [Lesson ZIP](sample_code_folder/171-use-statistical-tests-anova-chi-square-test.zip) |
 
-Compare feature scores on original observations. Remove a duplicate measurement and an ID, fit ANOVA or chi-square selection inside the pipeline, and predict held-out labels.
+**Before this lesson.** Know the target and which facts exist at prediction time.
+
+**In simple words.** A useful feature must be known in time. Some inputs repeat the same information. Choose features within training, not by inspecting final test answers.
+
+**Guess first.** Does a high feature-importance score prove a cause? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. It shows reliance by this model in this check.
+
+</details>
+
+
+Compare feature scores on original observations. Remove a duplicate measurement and an ID, fit ANOVA or chi-square selection inside the pipeline, and predict kept-back labels.
 
 **📋 Sample data**
 
@@ -3579,13 +4992,13 @@ Compare feature scores on original observations. Remove a duplicate measurement 
 ```text
 ANOVA selected: ['minutes']
 Held-out labels: [0, 1]
-Chi-square selected: ['minutes']
+Chi-square selected: ['keyword']
 ```
 
-**🧪 Change one input.** Try changing id from 0 to 2 in sample.csv. Compare the new output.
+**Your small change.** In sample.csv, change one keyword indicator from 0 to 1. Keep the recorded review answer. Compare which field is selected. Changing id alone should not affect the model. Save the named CSV before running again.
 
 
-**💡 Takeaway.** Chi-square in this example receives nonnegative numeric inputs. In a real study, choose a test whose assumptions match the features and the task.
+**💡 Takeaway.** Chi-square uses the keyword indicator here. ANOVA uses the continuous minutes field and the indicator. These answer different statistical questions. Positive numbers alone do not make a feature suitable for chi-square.
 
 <a id="encoding-categorical-variables"></a>
 
@@ -3593,9 +5006,23 @@ Chi-square selected: ['minutes']
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Encoding categorical variables **Practice** | Turn category names into input numbers the model can read. | [⬇️ Lesson ZIP](sample_code_folder/174-encoding-categorical-variables.zip) |
+| 174 - Encoding category variables **Practice** | Turn category names into input numbers the model can read. | [Lesson ZIP](sample_code_folder/174-encoding-categorical-variables.zip) |
 
-Run [One-Hot Encoding](#one-hot-encoding-for-unordered-categories) on unordered inputs and [Label Encoding (For Ordered Categories)](#label-encoding-for-ordered-categories) for the separate ordinal-input and label demonstrations.
+**Before this lesson.** Know the target and which facts exist at prediction time.
+
+**In simple words.** A useful feature must be known in time. Some inputs repeat the same information. Choose features within training, not by inspecting final test answers.
+
+**Guess first.** Does a high feature-importance score prove a cause? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. It shows reliance by this model in this check.
+
+</details>
+
+
+Run [One-Hot Encoding](#one-hot-encoding-for-unordered-categories) on unordered inputs and [Turn ordered names into numbers (OrdinalEncoder)](#label-encoding-for-ordered-categories) for the separate ordinal-input and label demonstrations.
 
 <a id="scaling-and-normalization"></a>
 
@@ -3603,7 +5030,21 @@ Run [One-Hot Encoding](#one-hot-encoding-for-unordered-categories) on unordered 
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Scaling and Normalization **Practice** | Put distance and weight on comparable scales before predicting time. | [⬇️ Lesson ZIP](sample_code_folder/175-scaling-and-normalization.zip) |
+| 175 - Scaling and Normalization **Practice** | Put distance and weight on comparable scales before predicting time. | [Lesson ZIP](sample_code_folder/175-scaling-and-normalization.zip) |
+
+**Before this lesson.** Know the target and which facts exist at prediction time.
+
+**In simple words.** A useful feature must be known in time. Some inputs repeat the same information. Choose features within training, not by inspecting final test answers.
+
+**Guess first.** Does a high feature-importance score prove a cause? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. It shows reliance by this model in this check.
+
+</details>
+
 
 Run the two independent model examples under [Normalize or Standardize Data](#1-3-5-normalize-or-standardize-data).
 
@@ -3613,7 +5054,21 @@ Run the two independent model examples under [Normalize or Standardize Data](#1-
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Visualization Techniques **Practice** | Plot model importance and compare related inputs. | [⬇️ Lesson ZIP](sample_code_folder/176-visualization-techniques-2.zip) |
+| 176 - Visualization Techniques **Practice** | Plot model importance and compare related inputs. | [Lesson ZIP](sample_code_folder/176-visualization-techniques-2.zip) |
+
+**Before this lesson.** Know the target and which facts exist at prediction time.
+
+**In simple words.** A useful feature must be known in time. Some inputs repeat the same information. Choose features within training, not by inspecting final test answers.
+
+**Guess first.** Does a high feature-importance score prove a cause? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. It shows reliance by this model in this check.
+
+</details>
+
 
 <a id="bar-plots"></a>
 
@@ -3621,7 +5076,21 @@ Run the two independent model examples under [Normalize or Standardize Data](#1-
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Bar plots **Practice** | Use bars to compare how much each input helps the model. | [⬇️ Lesson ZIP](sample_code_folder/177-bar-plots.zip) |
+| 177 - Bar plots **Practice** | Use bars to compare how much each input helps the model. | [Lesson ZIP](sample_code_folder/177-bar-plots.zip) |
+
+**Before this lesson.** Know the target and which facts exist at prediction time.
+
+**In simple words.** A useful feature must be known in time. Some inputs repeat the same information. Choose features within training, not by inspecting final test answers.
+
+**Guess first.** Does a high feature-importance score prove a cause? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. It shows reliance by this model in this check.
+
+</details>
+
 
 <a id="pair-plots-2"></a>
 
@@ -3629,7 +5098,21 @@ Run the two independent model examples under [Normalize or Standardize Data](#1-
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Pair plots **Practice** | Use a pair plot to check relationships before deciding which columns to keep. | [⬇️ Lesson ZIP](sample_code_folder/178-pair-plots-2.zip) |
+| 178 - Pair plots **Practice** | Use a pair plot to check relationships before deciding which columns to keep. | [Lesson ZIP](sample_code_folder/178-pair-plots-2.zip) |
+
+**Before this lesson.** Know the target and which facts exist at prediction time.
+
+**In simple words.** A useful feature must be known in time. Some inputs repeat the same information. Choose features within training, not by inspecting final test answers.
+
+**Guess first.** Does a high feature-importance score prove a cause? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. It shows reliance by this model in this check.
+
+</details>
+
 
 Run the [Pair Plots](#pair-plots) for joint relationships and the [Feature Importance Plot](#feature-importance-plot) to see how a trained model uses the selected fields.
 
@@ -3639,7 +5122,21 @@ Run the [Pair Plots](#pair-plots) for joint relationships and the [Feature Impor
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 1.6. Data Splitting **Practice** | Give training, validation and test rows different jobs. | [⬇️ Lesson ZIP](sample_code_folder/179-1-6-data-splitting.zip) |
+| 179 - 1.6. Data Splitting **Core** | Give training, validation and test rows different jobs. | [Lesson ZIP](sample_code_folder/179-1-6-data-splitting.zip) |
+
+**Before this lesson.** Understand the three row roles from Start here.
+
+**In simple words.** Training teaches. Validation chooses. Test checks the final choice. Match the split to future use. Equal input numbers do not alone prove copied observations.
+
+**Guess first.** May you choose tree depth using the final test answers? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Use validation. Keep the final test for the frozen choice.
+
+</details>
+
 
 **📌 Before you start.** Know which column is the answer and which columns the model can use. After reading the three split roles, run [lesson 442](#lesson-442).
 
@@ -3655,7 +5152,21 @@ Run the [Pair Plots](#pair-plots) for joint relationships and the [Feature Impor
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Training set **Practice** | Use training rows to teach a decision tree how to flag urgent deliveries. | [⬇️ Lesson ZIP](sample_code_folder/180-training-set.zip) |
+| 180 - Training set **Practice** | Use training rows to teach a decision tree how to flag urgent deliveries. | [Lesson ZIP](sample_code_folder/180-training-set.zip) |
+
+**Before this lesson.** Understand the three row roles from Start here.
+
+**In simple words.** Training teaches. Validation chooses. Test checks the final choice. Match the split to future use. Equal input numbers do not alone prove copied observations.
+
+**Guess first.** May you choose tree depth using the final test answers? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Use validation. Keep the final test for the frozen choice.
+
+</details>
+
 
 Like practice questions with answers. The model learns from these rows. Any data step that learns an average or a category list learns it here.
 
@@ -3665,7 +5176,21 @@ Like practice questions with answers. The model learns from these rows. Any data
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Validation set **Practice** | Use validation rows to choose a tree depth. | [⬇️ Lesson ZIP](sample_code_folder/181-validation-set.zip) |
+| 181 - Validation set **Practice** | Use validation rows to choose a tree depth. | [Lesson ZIP](sample_code_folder/181-validation-set.zip) |
+
+**Before this lesson.** Understand the three row roles from Start here.
+
+**In simple words.** Training teaches. Validation chooses. Test checks the final choice. Match the split to future use. Equal input numbers do not alone prove copied observations.
+
+**Guess first.** May you choose tree depth using the final test answers? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Use validation. Keep the final test for the frozen choice.
+
+</details>
+
 
 Use these separate rows to choose between models or settings. The next exercise uses them to choose how deep a tree may grow.
 
@@ -3675,7 +5200,21 @@ Use these separate rows to choose between models or settings. The next exercise 
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Test set **Practice** | Check the chosen model once using its untouched test rows. | [⬇️ Lesson ZIP](sample_code_folder/182-test-set.zip) |
+| 182 - Test set **Practice** | Check the chosen model once using its untouched test rows. | [Lesson ZIP](sample_code_folder/182-test-set.zip) |
+
+**Before this lesson.** Understand the three row roles from Start here.
+
+**In simple words.** Training teaches. Validation chooses. Test checks the final choice. Match the split to future use. Equal input numbers do not alone prove copied observations.
+
+**Guess first.** May you choose tree depth using the final test answers? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Use validation. Keep the final test for the frozen choice.
+
+</details>
+
 
 Save these rows until the model’s settings are chosen. Evaluate the chosen model on them at the end.
 
@@ -3685,7 +5224,21 @@ Save these rows until the model’s settings are chosen. Evaluate the chosen mod
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Common split ratios **Practice** | Compare how many rows go into an 80/20 split and a 70/20/10 split. | [⬇️ Lesson ZIP](sample_code_folder/183-common-split-ratios.zip) |
+| 183 - Common split ratios **Practice** | Compare how many rows go into an 80/20 split and a 70/20/10 split. | [Lesson ZIP](sample_code_folder/183-common-split-ratios.zip) |
+
+**Before this lesson.** Understand the three row roles from Start here.
+
+**In simple words.** Training teaches. Validation chooses. Test checks the final choice. Match the split to future use. Equal input numbers do not alone prove copied observations.
+
+**Guess first.** May you choose tree depth using the final test answers? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Use validation. Keep the final test for the frozen choice.
+
+</details>
+
 
 The split scripts share a checked recipe. Lesson 184 uses 80/20 with a fixed depth. The other split lessons use 70/20/10 so readers can trace training, selection, and testing.
 
@@ -3695,7 +5248,21 @@ The split scripts share a checked recipe. Lesson 184 uses 80/20 with a fixed dep
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 80%-20% (Train-Test) **Practice** | Train with 80% of the rows and check the model with the remaining 20%. | [⬇️ Lesson ZIP](sample_code_folder/184-80-20-train-test.zip) |
+| 184 - 80%-20% (Train-Test) **Practice** | Train with 80% of the rows and check the model with the remaining 20%. | [Lesson ZIP](sample_code_folder/184-80-20-train-test.zip) |
+
+**Before this lesson.** Understand the three row roles from Start here.
+
+**In simple words.** Training teaches. Validation chooses. Test checks the final choice. Match the split to future use. Equal input numbers do not alone prove copied observations.
+
+**Guess first.** May you choose tree depth using the final test answers? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Use validation. Keep the final test for the frozen choice.
+
+</details>
+
 
 Use 80 rows to train and 20 to check. If you must choose between models, make those choices inside the 80, for example with cross-validation.
 
@@ -3705,7 +5272,21 @@ Use 80 rows to train and 20 to check. If you must choose between models, make th
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 70%-20%-10% (Train-Validation-Test) **Practice** | Use 70% to learn, 20% to choose tree depth and 10% to check it. | [⬇️ Lesson ZIP](sample_code_folder/185-70-20-10-train-validation-test.zip) |
+| 185 - 70%-20%-10% (Train-Validation-Test) **Practice** | Use 70% to learn, 20% to choose tree depth and 10% to check it. | [Lesson ZIP](sample_code_folder/185-70-20-10-train-validation-test.zip) |
+
+**Before this lesson.** Understand the three row roles from Start here.
+
+**In simple words.** Training teaches. Validation chooses. Test checks the final choice. Match the split to future use. Equal input numbers do not alone prove copied observations.
+
+**Guess first.** May you choose tree depth using the final test answers? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Use validation. Keep the final test for the frozen choice.
+
+</details>
+
 
 Use 70 rows to learn, 20 to choose a setting, and 10 to check the chosen model.
 
@@ -3715,15 +5296,29 @@ Use 70 rows to learn, 20 to choose a setting, and 10 to check the chosen model.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Stratified Sampling **Practice** | Keep similar proportions of urgent orders in each group. | [⬇️ Lesson ZIP](sample_code_folder/186-stratified-sampling.zip) |
+| 186 - Stratified Sampling **Practice** | Keep similar proportions of urgent orders in each group. | [Lesson ZIP](sample_code_folder/186-stratified-sampling.zip) |
+
+**Before this lesson.** Understand the three row roles from Start here.
+
+**In simple words.** Training teaches. Validation chooses. Test checks the final choice. Match the split to future use. Equal input numbers do not alone prove copied observations.
+
+**Guess first.** May you choose tree depth using the final test answers? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Use validation. Keep the final test for the frozen choice.
+
+</details>
+
 
 ![Training, validation, and test have 70, 20, and 10 rows, each with 20 percent urgent orders.](workbook-figures/stratified-sampling.png)
 
 **👀 Read the visual.** Compare both pieces of information. The bars have different lengths, and the urgent share is 20% in each.
 
-**👉 Use what you see.** Check that shipment IDs and input pairs stay in only one set before using the final test score.
+**👉 Use what you see.** Check that each shipment ID stays in only one set before using the final test score.
 
-The sample CSV contains **100 different shipments**. Twenty are urgent. The code checks unique IDs and unique input pairs before splitting, then confirms that neither can appear in two sets.
+The sample CSV contains **100 different shipments**. Twenty are urgent. The code checks unique shipment IDs and keeps each shipment in one set. Equal input values alone do not mean two records are copies.
 
 | Set | Rows | Urgent orders | Urgent share |
 | --- | --- | --- | --- |
@@ -3733,9 +5328,9 @@ The sample CSV contains **100 different shipments**. Twenty are urgent. The code
 
 **▶️ Run.** Extract the [⬇️ Lesson ZIP](sample_code_folder/186-stratified-sampling.zip). In the lesson folder, run `python -m pip install -r requirements.txt` once and then `python lesson.py`.
 
-**✅ Check.** Zero shared IDs or identical input rows. Depth 3 wins on validation. The model catches both urgent test orders and makes one false alarm. The two urgent cases teach you how to read the test counts. A larger batch is needed to estimate production performance.
+**✅ Check.** Zero shared shipment IDs. Different shipments may have equal input measurements. Depth 3 wins on validation. The model catches both urgent test orders and makes one false alarm. The two urgent cases teach you how to read the test counts. A larger batch is needed to estimate production performance.
 
-**🧪 Change one input.** Duplicate one row in sample.csv. The script should stop before fitting. Remove that copy, run the lesson again, then continue to [choose the right data split](#lesson-442).
+**Your small change.** Copy one training CSV row below itself. The script should stop before splitting. Delete the copy and rerun. Save the named CSV before running again.
 
 <a id="1-7-model-selection-training"></a>
 
@@ -3743,7 +5338,21 @@ The sample CSV contains **100 different shipments**. Twenty are urgent. The code
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 1.7. Model Selection & Training **Practice** | Compare candidate models using the same training task and a common error measure. | [⬇️ Lesson ZIP](sample_code_folder/187-1-7-model-selection-training.zip) |
+| 187 - 1.7. Model Selection & Training **Practice** | Compare candidate models using the same training task and a common error measure. | [Lesson ZIP](sample_code_folder/187-1-7-model-selection-training.zip) |
+
+**Before this lesson.** Know a baseline, a score and a model setting.
+
+**In simple words.** Compare candidates on the same validation rows. A setting controls learning. Cross-validation repeats checks inside training. Do not call the best validation score a final test.
+
+**Guess first.** Does the smallest training error always win? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. It may memorize. Use separate validation results to choose.
+
+</details>
+
 
 **📌 Before you start.** Find the training and validation sets. Try [the validation curve](#lesson-443) before choosing an advanced tuning method.
 
@@ -3759,7 +5368,21 @@ The sample CSV contains **100 different shipments**. Twenty are urgent. The code
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Choose the best Machine Learning model **Practice** | Check which model works better on the same rows and metric. | [⬇️ Lesson ZIP](sample_code_folder/188-choose-the-best-machine-learning-model.zip) |
+| 188 - Choose the best Machine Learning model **Practice** | Check which model works better on the same rows and metric. | [Lesson ZIP](sample_code_folder/188-choose-the-best-machine-learning-model.zip) |
+
+**Before this lesson.** Know a baseline, a score and a model setting.
+
+**In simple words.** Compare candidates on the same validation rows. A setting controls learning. Cross-validation repeats checks inside training. Do not call the best validation score a final test.
+
+**Guess first.** Does the smallest training error always win? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. It may memorize. Use separate validation results to choose.
+
+</details>
+
 
 Choose based on the answer. Use regression for a number, classification for a known category, and clustering to find groups when there are no known answers. Here the answer is urgent or not urgent.
 
@@ -3769,7 +5392,21 @@ Choose based on the answer. Use regression for a number, classification for a kn
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Train the model using the training dataset **Practice** | Give models the same inputs and known answers before comparing their errors. | [⬇️ Lesson ZIP](sample_code_folder/189-train-the-model-using-the-training-dataset.zip) |
+| 189 - Train the model using the training dataset **Practice** | Give models the same inputs and known answers before comparing their errors. | [Lesson ZIP](sample_code_folder/189-train-the-model-using-the-training-dataset.zip) |
+
+**Before this lesson.** Know a baseline, a score and a model setting.
+
+**In simple words.** Compare candidates on the same validation rows. A setting controls learning. Cross-validation repeats checks inside training. Do not call the best validation score a final test.
+
+**Guess first.** Does the smallest training error always win? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. It may memorize. Use separate validation results to choose.
+
+</details>
+
 
 Generate original delivery measurements and labels. Compare a baseline, logistic regression, a tree, a forest, and SVM on identical validation folds. Use these validation scores to select a model. Evaluate that choice on separate final test rows, as in the [delivery capstone](#lesson-447).
 
@@ -3798,18 +5435,32 @@ LogisticRegression 0.908
 DecisionTreeClassifier 0.744
 ```
 
-**🧪 Change one input.** Change an input and its known answer consistently in sample.csv. Rerun the comparison and check what changes.
+**Your small change.** Change an input and its known answer consistently in sample.csv. Rerun the comparison and check what changes. Save the named CSV before running again.
 
 
 **💡 Takeaway.** Use [Regression Algorithms](#regression-algorithms) for numeric predictions, [XGBoost and LightGBM](#xgboost-and-lightgbm) for boosted trees, and [Clustering Algorithms](#clustering-algorithms) for K-Means and DBSCAN.
 
 <a id="tune-hyperparameters"></a>
 
-#### 🎛️ Tune hyperparameters
+#### 🎛️ Tune model settings
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Tune hyperparameters **Practice** | Try different Ridge settings and compare how search methods find them. | [⬇️ Lesson ZIP](sample_code_folder/190-tune-hyperparameters.zip) |
+| 190 - Tune model settings **Practice** | Try different Ridge settings and compare how search methods find them. | [Lesson ZIP](sample_code_folder/190-tune-hyperparameters.zip) |
+
+**Before this lesson.** Know a baseline, a score and a model setting.
+
+**In simple words.** Compare candidates on the same validation rows. A setting controls learning. Cross-validation repeats checks inside training. Do not call the best validation score a final test.
+
+**Guess first.** Does the smallest training error always win? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. It may memorize. Use separate validation results to choose.
+
+</details>
+
 
 <a id="grid-search"></a>
 
@@ -3817,7 +5468,21 @@ DecisionTreeClassifier 0.744
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Grid Search **Practice** | Try every value in a small settings list and keep the best validation score. | [⬇️ Lesson ZIP](sample_code_folder/191-grid-search.zip) |
+| 191 - Grid Search **Practice** | Try every value in a small settings list and keep the best validation score. | [Lesson ZIP](sample_code_folder/191-grid-search.zip) |
+
+**Before this lesson.** Know a baseline, a score and a model setting.
+
+**In simple words.** Compare candidates on the same validation rows. A setting controls learning. Cross-validation repeats checks inside training. Do not call the best validation score a final test.
+
+**Guess first.** Does the smallest training error always win? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. It may memorize. Use separate validation results to choose.
+
+</details>
+
 
 Write a short list of settings. Test every setting on the same check rows. The next exercise tries four values of alpha.
 
@@ -3827,7 +5492,21 @@ Write a short list of settings. Test every setting on the same check rows. The n
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Random Search **Practice** | Test a random subset of settings when trying every option would take longer. | [⬇️ Lesson ZIP](sample_code_folder/192-random-search.zip) |
+| 192 - Random Search **Practice** | Test a random subset of settings when trying every option would take longer. | [Lesson ZIP](sample_code_folder/192-random-search.zip) |
+
+**Before this lesson.** Know a baseline, a score and a model setting.
+
+**In simple words.** Compare candidates on the same validation rows. A setting controls learning. Cross-validation repeats checks inside training. Do not call the best validation score a final test.
+
+**Guess first.** Does the smallest training error always win? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. It may memorize. Use separate validation results to choose.
+
+</details>
+
 
 Pick several settings from a bigger list at random. This exercise tries four out of twenty possibilities.
 
@@ -3837,7 +5516,21 @@ Pick several settings from a bigger list at random. This exercise tries four out
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Bayesian Optimization **Practice** | Use scores from earlier trials to choose another setting to try. | [⬇️ Lesson ZIP](sample_code_folder/193-bayesian-optimization.zip) |
+| 193 - Bayesian Optimization **Practice** | Use scores from earlier trials to choose another setting to try. | [Lesson ZIP](sample_code_folder/193-bayesian-optimization.zip) |
+
+**Before this lesson.** Know a baseline, a score and a model setting.
+
+**In simple words.** Compare candidates on the same validation rows. A setting controls learning. Cross-validation repeats checks inside training. Do not call the best validation score a final test.
+
+**Guess first.** Does the smallest training error always win? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. It may memorize. Use separate validation results to choose.
+
+</details>
+
 
 Generate a training set and search regularization settings using three strategies. Use the same validation folds and compare the chosen setting.
 
@@ -3869,7 +5562,7 @@ RandomizedSearchCV 0.062 MAE 0.837
 Bayesian 1.585 MAE 0.802
 ```
 
-**🧪 Change one input.** Edit new_inputs.csv and rerun the script. Change an input and its known answer consistently in sample.csv. Rerun the comparison and check what changes.
+**Your small change.** Edit new_inputs.csv and rerun the script. Change an input and its known answer consistently in sample.csv. Rerun the comparison and check what changes. Save the named CSV before running again.
 
 
 <a id="cross-validation"></a>
@@ -3878,7 +5571,21 @@ Bayesian 1.585 MAE 0.802
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Cross-validation **Practice** | Take turns holding different deliveries back and compare the error on each group. | [⬇️ Lesson ZIP](sample_code_folder/194-cross-validation.zip) |
+| 194 - Cross-validation **Core** | Take turns holding different deliveries back and compare the error on each group. | [Lesson ZIP](sample_code_folder/194-cross-validation.zip) |
+
+**Before this lesson.** Know a baseline, a score and a model setting.
+
+**In simple words.** Compare candidates on the same validation rows. A setting controls learning. Cross-validation repeats checks inside training. Do not call the best validation score a final test.
+
+**Guess first.** Does the smallest training error always win? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. It may memorize. Use separate validation results to choose.
+
+</details>
+
 
 Print the training and validation sizes and report the variation across folds on original delivery rows.
 
@@ -3907,7 +5614,7 @@ Print the training and validation sizes and report the variation across folds on
 | 1 | 4 | 2 | 0.37 |
 | 2 | 4 | 2 | 0.49 |
 
-**🧪 Change one input.** Change the known time for one delivery. Rerun and find which fold errors change.
+**Your small change.** Change the known time for one delivery. Rerun and find which fold errors change. Save the named CSV before running again.
 
 **🐍 Complete script from the ZIP**
 
@@ -3960,7 +5667,21 @@ print(table.round(2).to_string(index=False))
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 1.8. Model Evaluation **Practice** | Measure prediction errors on check rows and read the chart that explains them. | [⬇️ Lesson ZIP](sample_code_folder/195-1-8-model-evaluation.zip) |
+| 195 - 1.8. Model Evaluation **Practice** | Measure prediction errors on check rows and read the chart that explains them. | [Lesson ZIP](sample_code_folder/195-1-8-model-evaluation.zip) |
+
+**Before this lesson.** Count correct and wrong categories before calculating fractions.
+
+**In simple words.** A missed urgent order and a false alarm are different mistakes. Precision counts correct alerts out of alerts. Recall counts caught urgent orders out of real urgent orders.
+
+**Guess first.** Which denominator belongs to recall? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+All truly urgent orders. Write the counts first.
+
+</details>
+
 
 **📌 Before you start.** Keep test data separate and know the model’s prediction type. Try [classification thresholds](#lesson-444) or [grouped regression errors](#lesson-446).
 
@@ -3976,7 +5697,21 @@ print(table.round(2).to_string(index=False))
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Visualization is used here! **Practice** | Use separate charts to see missed cases, thresholds and feature importance. | [⬇️ Lesson ZIP](sample_code_folder/196-visualization-is-used-here-2.zip) |
+| 196 - Visualization is used here! **Practice** | Use separate charts to see missed cases, thresholds and feature importance. | [Lesson ZIP](sample_code_folder/196-visualization-is-used-here-2.zip) |
+
+**Before this lesson.** Count correct and wrong categories before calculating fractions.
+
+**In simple words.** A missed urgent order and a false alarm are different mistakes. Precision counts correct alerts out of alerts. Recall counts caught urgent orders out of real urgent orders.
+
+**Guess first.** Which denominator belongs to recall? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+All truly urgent orders. Write the counts first.
+
+</details>
+
 
 <a id="classification-metrics"></a>
 
@@ -3984,7 +5719,21 @@ print(table.round(2).to_string(index=False))
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Classification Metrics **Practice** | Check how a classifier handles urgent orders with several scores. | [⬇️ Lesson ZIP](sample_code_folder/197-classification-metrics.zip) |
+| 197 - Classification Metrics **Practice** | Check how a classifier handles urgent orders with several scores. | [Lesson ZIP](sample_code_folder/197-classification-metrics.zip) |
+
+**Before this lesson.** Count correct and wrong categories before calculating fractions.
+
+**In simple words.** A missed urgent order and a false alarm are different mistakes. Precision counts correct alerts out of alerts. Recall counts caught urgent orders out of real urgent orders.
+
+**Guess first.** Which denominator belongs to recall? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+All truly urgent orders. Write the counts first.
+
+</details>
+
 
 The script reserves 30 test orders. If a distance–weight pair appears in test, it is left out of training. During cross-validation, all training rows with a matching pair stay in the same fold.
 
@@ -3994,7 +5743,21 @@ The script reserves 30 test orders. If a distance–weight pair appears in test,
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Accuracy, Precision, Recall, F1-score, AUC-ROC **Practice** | Measure correct answers, false alarms, missed urgent cases and ranking. | [⬇️ Lesson ZIP](sample_code_folder/198-accuracy-precision-recall-f1-score-auc-roc.zip) |
+| 198 - Accuracy, Precision, Recall, F1-score, AUC-ROC **Practice** | Measure correct answers, false alarms, missed urgent cases and ranking. | [Lesson ZIP](sample_code_folder/198-accuracy-precision-recall-f1-score-auc-roc.zip) |
+
+**Before this lesson.** Count correct and wrong categories before calculating fractions.
+
+**In simple words.** A missed urgent order and a false alarm are different mistakes. Precision counts correct alerts out of alerts. Recall counts caught urgent orders out of real urgent orders.
+
+**Guess first.** Which denominator belongs to recall? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+All truly urgent orders. Write the counts first.
+
+</details>
+
 
 | Metric | How to read it in this example |
 | --- | --- |
@@ -4010,7 +5773,21 @@ The script reserves 30 test orders. If a distance–weight pair appears in test,
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Visualization Techniques **Practice** | Choose a chart that answers your question about classifier mistakes. | [⬇️ Lesson ZIP](sample_code_folder/204-visualization-techniques-3.zip) |
+| 204 - Visualization Techniques **Practice** | Choose a chart that answers your question about classifier mistakes. | [Lesson ZIP](sample_code_folder/204-visualization-techniques-3.zip) |
+
+**Before this lesson.** Count correct and wrong categories before calculating fractions.
+
+**In simple words.** A missed urgent order and a false alarm are different mistakes. Precision counts correct alerts out of alerts. Recall counts caught urgent orders out of real urgent orders.
+
+**Guess first.** Which denominator belongs to recall? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+All truly urgent orders. Write the counts first.
+
+</details>
+
 
 <a id="confusion-matrix"></a>
 
@@ -4018,7 +5795,21 @@ The script reserves 30 test orders. If a distance–weight pair appears in test,
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Confusion Matrix **Practice** | Locate missed urgent orders and false alarms in a labeled matrix. | [⬇️ Lesson ZIP](sample_code_folder/205-confusion-matrix.zip) |
+| 205 - Confusion Matrix **Core** | Locate missed urgent orders and false alarms in a labeled matrix. | [Lesson ZIP](sample_code_folder/205-confusion-matrix.zip) |
+
+**Before this lesson.** Count correct and wrong categories before calculating fractions.
+
+**In simple words.** A missed urgent order and a false alarm are different mistakes. Precision counts correct alerts out of alerts. Recall counts caught urgent orders out of real urgent orders.
+
+**Guess first.** Which denominator belongs to recall? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+All truly urgent orders. Write the counts first.
+
+</details>
+
 
 **▶️ Run.** Extract the [⬇️ Lesson ZIP](sample_code_folder/205-confusion-matrix.zip). In the lesson folder, run `python -m pip install -r requirements.txt` once and then `python lesson.py`.
 
@@ -4041,7 +5832,21 @@ The rows are the real answers. The columns are the guessed answers. With 1 meani
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| ROC Curve **Practice** | Compare catches and false alarms at two fixed practice cutoffs. | [⬇️ Lesson ZIP](sample_code_folder/206-roc-curve.zip) |
+| 206 - ROC Curve **Practice** | Compare catches and false alarms at two fixed practice cutoffs. | [Lesson ZIP](sample_code_folder/206-roc-curve.zip) |
+
+**Before this lesson.** Count correct and wrong categories before calculating fractions.
+
+**In simple words.** A missed urgent order and a false alarm are different mistakes. Precision counts correct alerts out of alerts. Recall counts caught urgent orders out of real urgent orders.
+
+**Guess first.** Which denominator belongs to recall? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+All truly urgent orders. Write the counts first.
+
+</details>
+
 
 **▶️ Run.** Extract the [⬇️ Lesson ZIP](sample_code_folder/206-roc-curve.zip). In the lesson folder, run `python -m pip install -r requirements.txt` once and then `python lesson.py`.
 
@@ -4064,11 +5869,25 @@ An urgent probability becomes an urgent prediction when it reaches a chosen cuto
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Feature Importance Plot **Practice** | Shuffle an input to see how much worse the model performs without its original values. | [⬇️ Lesson ZIP](sample_code_folder/207-feature-importance-plot.zip) |
+| 207 - Feature Importance Plot **Core** | Shuffle an input to see how much worse the model performs without its original values. | [Lesson ZIP](sample_code_folder/207-feature-importance-plot.zip) |
+
+**Before this lesson.** Count correct and wrong categories before calculating fractions.
+
+**In simple words.** A missed urgent order and a false alarm are different mistakes. Precision counts correct alerts out of alerts. Recall counts caught urgent orders out of real urgent orders.
+
+**Guess first.** Which denominator belongs to recall? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+All truly urgent orders. Write the counts first.
+
+</details>
+
 
 Shuffle one input at a time and see how the model’s score changes. A larger drop suggests the model depended more on that input in this check. Run the next exercise to draw the three graphs.
 
-Generate original order data, compare candidate classifiers on training folds, and evaluate the chosen model once on a held-out split. Plot confusion, ROC, and validation-fold feature importance.
+Generate original order data, compare candidate classifiers on training folds, and evaluate the chosen model once on a kept-back split. Plot confusion, ROC, and validation-fold feature importance.
 
 **📋 Sample data.** Preview of the first 5 of 120 rows.
 
@@ -4098,7 +5917,7 @@ Generate original order data, compare candidate classifiers on training folds, a
 | precision | 0.895 |
 | recall | 0.944 |
 
-**🧪 Change one input.** Edit new_inputs.csv and rerun the script. Change an input and its known answer consistently in sample.csv. Rerun the comparison and check what changes.
+**Your small change.** Edit new_inputs.csv and rerun the script. Change an input and its known answer consistently in sample.csv. Rerun the comparison and check what changes. Save the named CSV before running again.
 
 
 ![A two by two confusion matrix shows 10 correct regular orders, two false alarms, one missed urgent order and 17 correct urgent orders.](workbook-figures/feature-importance-plot-1.png)
@@ -4127,7 +5946,21 @@ Generate original order data, compare candidate classifiers on training folds, a
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Regression Metrics **Practice** | Read prediction errors in minutes and compare them with a simple baseline. Worked calculation using two test trips. | [⬇️ Lesson ZIP](sample_code_folder/208-regression-metrics.zip) |
+| 208 - Regression Metrics **Core** | Read prediction errors in minutes and compare them with a simple baseline. Worked calculation using two test trips. | [Lesson ZIP](sample_code_folder/208-regression-metrics.zip) |
+
+**Before this lesson.** Subtract two times and calculate an average.
+
+**In simple words.** An error is actual minus predicted. Its absolute value is the mistake size. MAE averages those sizes. RMSE gives large misses more weight. R squared compares with a mean benchmark.
+
+**Guess first.** Can the same average hide very different large mistakes? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+Yes. Inspect individual errors, counts and the largest misses too.
+
+</details>
+
 
 <a id="rmse-mae-r-score"></a>
 
@@ -4135,7 +5968,21 @@ Generate original order data, compare candidate classifiers on training folds, a
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| RMSE, MAE, R² score **Practice** | Compare average error, large misses and fit relative to a baseline. Worked calculation using two test trips. | [⬇️ Lesson ZIP](sample_code_folder/209-rmse-mae-r-score.zip) |
+| 209 - RMSE, MAE, R² score **Practice** | Compare average error, large misses and fit relative to a baseline. Worked calculation using two test trips. | [Lesson ZIP](sample_code_folder/209-rmse-mae-r-score.zip) |
+
+**Before this lesson.** Subtract two times and calculate an average.
+
+**In simple words.** An error is actual minus predicted. Its absolute value is the mistake size. MAE averages those sizes. RMSE gives large misses more weight. R squared compares with a mean benchmark.
+
+**Guess first.** Can the same average hide very different large mistakes? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+Yes. Inspect individual errors, counts and the largest misses too.
+
+</details>
+
 
 **🧮 Worked calculation.** The scores below use two test deliveries so you can see the arithmetic. For an error estimate across routes, weights, and zones, run [lesson 446](#lesson-446).
 
@@ -4151,11 +5998,25 @@ Generate original order data, compare candidate classifiers on training folds, a
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Residual Plots **Practice** | Plot actual minutes minus predicted minutes to see where the model is off. Worked calculation using two test trips. | [⬇️ Lesson ZIP](sample_code_folder/210-residual-plots.zip) |
+| 210 - Residual Plots **Practice** | Plot actual minutes minus predicted minutes to see where the model is off. Worked calculation using two test trips. | [Lesson ZIP](sample_code_folder/210-residual-plots.zip) |
+
+**Before this lesson.** Subtract two times and calculate an average.
+
+**In simple words.** An error is actual minus predicted. Its absolute value is the mistake size. MAE averages those sizes. RMSE gives large misses more weight. R squared compares with a mean benchmark.
+
+**Guess first.** Can the same average hide very different large mistakes? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+Yes. Inspect individual errors, counts and the largest misses too.
+
+</details>
+
 
 The plot has two test points. Treat it as practice reading the direction of an error. Try [lesson 446](#lesson-446) to inspect a larger test batch.
 
-Train on four original deliveries and compare predictions against two held-out values. Calculate errors in minutes and view the residuals.
+Train on four original deliveries and compare predictions against two kept-back values. Calculate errors in minutes and view the residuals.
 
 **📋 Sample data**
 
@@ -4186,10 +6047,10 @@ MAE: 2.0
 R²: 0.868
 ```
 
-**🧪 Change one input.** Edit the input values in new_inputs.csv and compare the displayed predictions.
+**Your small change.** Edit the input values in new_inputs.csv and compare the displayed predictions. Save the named CSV before running again.
 
 
-![A residual plot marks the calculated errors for the two held-out deliveries. Both dots are two minutes above the no-error line.](workbook-figures/residual-plots.png)
+![A residual plot marks the calculated errors for the two kept-back deliveries. Both dots are two minutes above the no-error line.](workbook-figures/residual-plots.png)
 
 **👀 Read the visual.** Each real delivery took two minutes longer than predicted. Use these two rows to practice the calculation, then use lesson 446 to investigate a larger sample.
 
@@ -4203,7 +6064,21 @@ R²: 0.868
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 1.9. Model Deployment **Practice** | Serve a delivery model through a local test endpoint. | [⬇️ Lesson ZIP](sample_code_folder/215-1-9-model-deployment.zip) |
+| 215 - 1.9. Model Deployment **Practice** | Serve a delivery model through a local test endpoint. | [Lesson ZIP](sample_code_folder/215-1-9-model-deployment.zip) |
+
+**Before this lesson.** Train and save a model. Know an input and a prediction.
+
+**In simple words.** A request gives inputs to a program. A response gives its answer or a clear problem. An HTTP status is a short result code. Local tests do not publish a server.
+
+**Guess first.** Should a negative distance receive a normal estimate? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Reject it with a clear explanation. A valid-looking value can still be outside the tested range.
+
+</details>
+
 
 **📌 Before you start.** Run a saved model and check the inputs the app expects. Then try [the local service in the capstone](#lesson-447).
 
@@ -4219,7 +6094,21 @@ R²: 0.868
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| APIs, Web Apps, or Cloud Services **Practice** | Send input data to a local API and inspect what comes back. | [⬇️ Lesson ZIP](sample_code_folder/216-apis-web-apps-or-cloud-services.zip) |
+| 216 - APIs, Web Apps, or Cloud Services **Practice** | Send input data to a local API and inspect what comes back. | [Lesson ZIP](sample_code_folder/216-apis-web-apps-or-cloud-services.zip) |
+
+**Before this lesson.** Train and save a model. Know an input and a prediction.
+
+**In simple words.** A request gives inputs to a program. A response gives its answer or a clear problem. An HTTP status is a short result code. Local tests do not publish a server.
+
+**Guess first.** Should a negative distance receive a normal estimate? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Reject it with a clear explanation. A valid-looking value can still be outside the tested range.
+
+</details>
+
 
 <a id="flask-fastapi-or-streamlit"></a>
 
@@ -4227,7 +6116,21 @@ R²: 0.868
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Flask, FastAPI, or Streamlit **Practice** | Run a local API example before comparing Python frameworks. | [⬇️ Lesson ZIP](sample_code_folder/220-flask-fastapi-or-streamlit.zip) |
+| 220 - Flask, FastAPI, or Streamlit **Practice** | Run a local API example before comparing Python frameworks. | [Lesson ZIP](sample_code_folder/220-flask-fastapi-or-streamlit.zip) |
+
+**Before this lesson.** Train and save a model. Know an input and a prediction.
+
+**In simple words.** A request gives inputs to a program. A response gives its answer or a clear problem. An HTTP status is a short result code. Local tests do not publish a server.
+
+**Guess first.** Should a negative distance receive a normal estimate? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Reject it with a clear explanation. A valid-looking value can still be outside the tested range.
+
+</details>
+
 
 <a id="fastapi"></a>
 
@@ -4235,7 +6138,21 @@ R²: 0.868
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| FastAPI **Practice** | Send valid and invalid deliveries to a FastAPI route and read the response. | [⬇️ Lesson ZIP](sample_code_folder/221-fastapi.zip) |
+| 221 - FastAPI **Practice** | Send valid and invalid deliveries to a FastAPI route and read the response. | [Lesson ZIP](sample_code_folder/221-fastapi.zip) |
+
+**Before this lesson.** Train and save a model. Know an input and a prediction.
+
+**In simple words.** A request gives inputs to a program. A response gives its answer or a clear problem. An HTTP status is a short result code. Local tests do not publish a server.
+
+**Guess first.** Should a negative distance receive a normal estimate? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Reject it with a clear explanation. A valid-looking value can still be outside the tested range.
+
+</details>
+
 
 Save an original delivery model, reload it, and submit one JSON request to a local FastAPI test client. The request goes through the API contract without starting a public server.
 
@@ -4266,7 +6183,7 @@ Invalid distance: 422
 {'distance_km': 5, 'weight_kg': 2} 200 {'minutes': 27.8}
 ```
 
-**🧪 Change one input.** Enter 15 km with 2 kg, then with 0 kg. Check that only the positive weight gives an estimate.
+**Your small change.** Enter 15 km with 2 kg, then with 0 kg. Check that only the positive weight gives an estimate. Save the named CSV before running again.
 
 
 <a id="flask"></a>
@@ -4275,7 +6192,21 @@ Invalid distance: 422
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Flask **Practice** | Send the same delivery fields to a Flask route and read the JSON reply. | [⬇️ Lesson ZIP](sample_code_folder/222-flask.zip) |
+| 222 - Flask **Practice** | Send the same delivery fields to a Flask route and read the JSON reply. | [Lesson ZIP](sample_code_folder/222-flask.zip) |
+
+**Before this lesson.** Train and save a model. Know an input and a prediction.
+
+**In simple words.** A request gives inputs to a program. A response gives its answer or a clear problem. An HTTP status is a short result code. Local tests do not publish a server.
+
+**Guess first.** Should a negative distance receive a normal estimate? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Reject it with a clear explanation. A valid-looking value can still be outside the tested range.
+
+</details>
+
 
 Send the same contract to a local Flask test client using an independently created training table.
 
@@ -4306,7 +6237,7 @@ Send the same contract to a local Flask test client using an independently creat
 {'distance_km': 20, 'weight_kg': 4} 200 {'minutes': 61.4}
 ```
 
-**🧪 Change one input.** Try changing distance_km from 5 to -2 in new_inputs.csv. Compare the new output.
+**Your small change.** Try changing distance_km from 5 to -2 in new_inputs.csv. Compare the new output. Save the named CSV before running again.
 
 
 <a id="streamlit"></a>
@@ -4315,7 +6246,21 @@ Send the same contract to a local Flask test client using an independently creat
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Streamlit **Practice** | Fill in a Streamlit form and see the delivery estimate change. | [⬇️ Lesson ZIP](sample_code_folder/223-streamlit.zip) |
+| 223 - Streamlit **Practice** | Fill in a Streamlit form and see the delivery estimate change. | [Lesson ZIP](sample_code_folder/223-streamlit.zip) |
+
+**Before this lesson.** Train and save a model. Know an input and a prediction.
+
+**In simple words.** A request gives inputs to a program. A response gives its answer or a clear problem. An HTTP status is a short result code. Local tests do not publish a server.
+
+**Guess first.** Should a negative distance receive a normal estimate? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Reject it with a clear explanation. A valid-looking value can still be outside the tested range.
+
+</details>
+
 
 Build a two-field web form and verify its displayed prediction with the Streamlit test driver.
 
@@ -4335,10 +6280,10 @@ Prediction: 27.5 minutes
 10 4 Prediction: 43.0 minutes
 ```
 
-**🧪 Change one input.** Enter distances of 5, 10 and 15 km with positive weights. The script fills out the sample form for each row.
+**Your small change.** Enter distances of 5, 10 and 15 km with positive weights. The script fills out the sample form for each row. Save the named CSV before running again.
 
 
-**💡 Takeaway.** For interactive use, save the Python inside the triple-quoted string into `delivery_app.py` and launch that file with the Streamlit command.
+**💡 Takeaway.** The ZIP now includes `delivery_app.py`. From its folder run `python -m streamlit run delivery_app.py`. Open the local address shown in the terminal. Stop with Ctrl+C. No code copying is needed.
 
 <a id="aws-google-cloud-or-heroku"></a>
 
@@ -4346,7 +6291,21 @@ Prediction: 27.5 minutes
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| AWS, Google Cloud, or Heroku **Reference** | Practice a local request check, then use the deployment notes for your platform. Local request check + manual cloud walkthrough. | [⬇️ Lesson ZIP](sample_code_folder/224-aws-google-cloud-or-heroku.zip) |
+| 224 - AWS, Google Cloud, or Heroku **Reference** | Practice a local request check, then use the deployment notes for your platform. | [Lesson ZIP](sample_code_folder/224-aws-google-cloud-or-heroku.zip) |
+
+**Before this lesson.** Train and save a model. Know an input and a prediction.
+
+**In simple words.** A request gives inputs to a program. A response gives its answer or a clear problem. An HTTP status is a short result code. Local tests do not publish a server.
+
+**Guess first.** Should a negative distance receive a normal estimate? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Reject it with a clear explanation. A valid-looking value can still be outside the tested range.
+
+</details>
+
 
 Use the [Cloud deployment walkthrough](#cloud-deployment-walkthrough) once a local request works.
 
@@ -4356,7 +6315,21 @@ Use the [Cloud deployment walkthrough](#cloud-deployment-walkthrough) once a loc
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| REST API or integrate with mobile/web apps **Practice** | Turn CSV rows into JSON request bodies a web or mobile app would send. | [⬇️ Lesson ZIP](sample_code_folder/228-rest-api-or-integrate-with-mobile-web-apps.zip) |
+| 228 - REST API or integrate with mobile/web apps **Practice** | Turn CSV rows into JSON request bodies a web or mobile app would send. | [Lesson ZIP](sample_code_folder/228-rest-api-or-integrate-with-mobile-web-apps.zip) |
+
+**Before this lesson.** Train and save a model. Know an input and a prediction.
+
+**In simple words.** A request gives inputs to a program. A response gives its answer or a clear problem. An HTTP status is a short result code. Local tests do not publish a server.
+
+**Guess first.** Should a negative distance receive a normal estimate? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Reject it with a clear explanation. A valid-looking value can still be outside the tested range.
+
+</details>
+
 
 A request sends the facts the model needs. A response sends its answer. The [web page example](#first-api-call-from-a-web-page) connects the form to that request.
 
@@ -4376,7 +6349,7 @@ POST /predict {"distance_km": 10, "weight_kg": 3}
 POST /predict {"distance_km": 14, "weight_kg": 4}
 ```
 
-**🧪 Change one input.** Try changing distance_km from 5 to 14 in sample.csv. Compare the new output.
+**Your small change.** Try changing distance_km from 5 to 14 in sample.csv. Compare the new output. Save the named CSV before running again.
 
 
 **💡 Takeaway.** Deploy only if you have an approved environment. Package the app, its dependencies, and the trusted model. Send this same request to the hosted endpoint and compare the response with the local test. [FastAPI testing](https://fastapi.tiangolo.com/tutorial/testing/)
@@ -4387,7 +6360,21 @@ POST /predict {"distance_km": 14, "weight_kg": 4}
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| First API call from a web page **Practice** | Send a distance to a local model from a web page and read the response. | [⬇️ Lesson ZIP](sample_code_folder/232-first-api-call-from-a-web-page.zip) |
+| 232 - First API call from a web page **Core** | Send a distance to a local model from a web page and read the response. | [Lesson ZIP](sample_code_folder/232-first-api-call-from-a-web-page.zip) |
+
+**Before this lesson.** Train and save a model. Know an input and a prediction.
+
+**In simple words.** A request gives inputs to a program. A response gives its answer or a clear problem. An HTTP status is a short result code. Local tests do not publish a server.
+
+**Guess first.** Should a negative distance receive a normal estimate? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Reject it with a clear explanation. A valid-looking value can still be outside the tested range.
+
+</details>
+
 
 **🎯 Goal.** Can a web page give a delivery distance to a model and show its answer? Open the page, type 4, and press Predict. The Python block tests the same request the button makes.
 
@@ -4413,10 +6400,10 @@ POST /predict {"distance_km": 14, "weight_kg": 4}
 | Open the page | 200 | NaN |
 | Predict 4 km | 200 | 18.0 |
 
-**🧪 Change one input.** Change 4 to 12 in new_inputs.csv. The local test request should report 34.0 minutes.
+**Your small change.** Change 4 to 12 in new_inputs.csv. The local test request should report 34.0 minutes. Save the named CSV before running again.
 
 
-**See the page locally.** Paste the two blocks into `web_delivery.py`. Install `uvicorn`. From that folder run `python -m uvicorn web_delivery:app --host 127.0.0.1 --port 8000`, then open `http://127.0.0.1:8000`. The browser sends a distance to the same API. A mobile app can send the same request. This lab checks the endpoint locally.
+**See the page locally.** The ZIP includes the app in `lesson.py`. From that folder run `python -m uvicorn lesson:app --host 127.0.0.1 --port 8000`, then open `http://127.0.0.1:8000`. The browser sends a distance to the same API. A mobile app can send the same request. This lab checks the endpoint locally.
 
 <a id="cloud-deployment-walkthrough"></a>
 
@@ -4424,7 +6411,21 @@ POST /predict {"distance_km": 14, "weight_kg": 4}
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Cloud deployment walkthrough **Reference** | Check your request format locally, then follow the deployment steps for your chosen platform. Local request check + manual cloud walkthrough. | [⬇️ Lesson ZIP](sample_code_folder/233-cloud-deployment-walkthrough.zip) |
+| 233 - Cloud deployment walkthrough **Reference** | Check your request format locally, then follow the deployment steps for your chosen platform. | [Lesson ZIP](sample_code_folder/233-cloud-deployment-walkthrough.zip) |
+
+**Before this lesson.** Train and save a model. Know an input and a prediction.
+
+**In simple words.** A request gives inputs to a program. A response gives its answer or a clear problem. An HTTP status is a short result code. Local tests do not publish a server.
+
+**Guess first.** Should a negative distance receive a normal estimate? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Reject it with a clear explanation. A valid-looking value can still be outside the tested range.
+
+</details>
+
 
 Use the same request on a cloud service after the local prediction works. No cloud account is needed for the Python exercise. Hosting below is a separate practice step, and may require billing.
 
@@ -4442,7 +6443,21 @@ Keep API credentials private and delete the practice service when you finish. Th
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 1.10. Model Monitoring & Maintenance **Practice** | Follow a model over several batches and decide when to investigate or retrain. | [⬇️ Lesson ZIP](sample_code_folder/234-1-10-model-monitoring-maintenance.zip) |
+| 234 - 1.10. Model Monitoring & Maintenance **Practice** | Follow a model over several batches and decide when to investigate or retrain. | [Lesson ZIP](sample_code_folder/234-1-10-model-monitoring-maintenance.zip) |
+
+**Before this lesson.** Read a model score and wait for actual outcomes.
+
+**In simple words.** Monitoring watches later inputs and results. Drift means change over time. A change is a reason to investigate, not an automatic instruction to replace a model.
+
+**Guess first.** Can we measure new accuracy before the true answers arrive? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Record predictions and wait for outcomes.
+
+</details>
+
 
 **📌 Before you start.** Know the original test score and how to identify later rows. See [the capstone monitoring step](#lesson-447).
 
@@ -4458,7 +6473,21 @@ Keep API credentials private and delete the practice service when you finish. Th
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Visualization helps track model performance! **Practice** | Plot how accuracy and input distances change between batches. | [⬇️ Lesson ZIP](sample_code_folder/235-visualization-helps-track-model-performance.zip) |
+| 235 - Visualization helps track model performance! **Practice** | Plot how accuracy and input distances change between batches. | [Lesson ZIP](sample_code_folder/235-visualization-helps-track-model-performance.zip) |
+
+**Before this lesson.** Read a model score and wait for actual outcomes.
+
+**In simple words.** Monitoring watches later inputs and results. Drift means change over time. A change is a reason to investigate, not an automatic instruction to replace a model.
+
+**Guess first.** Can we measure new accuracy before the true answers arrive? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Record predictions and wait for outcomes.
+
+</details>
+
 
 <a id="monitor-model-accuracy-performance-over-time"></a>
 
@@ -4466,7 +6495,21 @@ Keep API credentials private and delete the practice service when you finish. Th
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Monitor model accuracy & performance over time **Practice** | Check model accuracy after new delivery outcomes are recorded. | [⬇️ Lesson ZIP](sample_code_folder/236-monitor-model-accuracy-performance-over-time.zip) |
+| 236 - Monitor model accuracy & performance over time **Practice** | Check model accuracy after new delivery outcomes are recorded. | [Lesson ZIP](sample_code_folder/236-monitor-model-accuracy-performance-over-time.zip) |
+
+**Before this lesson.** Read a model score and wait for actual outcomes.
+
+**In simple words.** Monitoring watches later inputs and results. Drift means change over time. A change is a reason to investigate, not an automatic instruction to replace a model.
+
+**Guess first.** Can we measure new accuracy before the true answers arrive? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Record predictions and wait for outcomes.
+
+</details>
+
 
 Count correct predictions for each batch only after the real answers arrive.
 
@@ -4476,7 +6519,21 @@ Count correct predictions for each batch only after the real answers arrive.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Detect data drift **Practice** | See whether the new trips cover different distances than the earlier trips. | [⬇️ Lesson ZIP](sample_code_folder/237-detect-data-drift.zip) |
+| 237 - Detect data drift **Practice** | See whether the new trips cover different distances than the earlier trips. | [Lesson ZIP](sample_code_folder/237-detect-data-drift.zip) |
+
+**Before this lesson.** Read a model score and wait for actual outcomes.
+
+**In simple words.** Monitoring watches later inputs and results. Drift means change over time. A change is a reason to investigate, not an automatic instruction to replace a model.
+
+**Guess first.** Can we measure new accuracy before the true answers arrive? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Record predictions and wait for outcomes.
+
+</details>
+
 
 Compare what the model saw before with what arrives now. Here the recent distances are longer.
 
@@ -4486,7 +6543,21 @@ Compare what the model saw before with what arrives now. Here the recent distanc
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Implement automated alerts **Practice** | Raise a local alert if accuracy falls or the input data changes too much. | [⬇️ Lesson ZIP](sample_code_folder/238-implement-automated-alerts.zip) |
+| 238 - Implement automated alerts **Practice** | Raise a local alert if accuracy falls or the input data changes too much. | [Lesson ZIP](sample_code_folder/238-implement-automated-alerts.zip) |
+
+**Before this lesson.** Read a model score and wait for actual outcomes.
+
+**In simple words.** Monitoring watches later inputs and results. Drift means change over time. A change is a reason to investigate, not an automatic instruction to replace a model.
+
+**Guess first.** Can we measure new accuracy before the true answers arrive? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Record predictions and wait for outcomes.
+
+</details>
+
 
 Choose a lower limit for accuracy and an allowed shift in the inputs. The example prints an alert if either crosses its limit.
 
@@ -4496,7 +6567,21 @@ Choose a lower limit for accuracy and an allowed shift in the inputs. The exampl
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Retrain the model periodically with new data **Practice** | Train a candidate on newer deliveries and compare it with the running model on a later batch. | [⬇️ Lesson ZIP](sample_code_folder/239-retrain-the-model-periodically-with-new-data.zip) |
+| 239 - Retrain the model periodically with new data **Practice** | Train a candidate on newer deliveries and compare it with the running model on a later batch. | [Lesson ZIP](sample_code_folder/239-retrain-the-model-periodically-with-new-data.zip) |
+
+**Before this lesson.** Read a model score and wait for actual outcomes.
+
+**In simple words.** Monitoring watches later inputs and results. Drift means change over time. A change is a reason to investigate, not an automatic instruction to replace a model.
+
+**Guess first.** Can we measure new accuracy before the true answers arrive? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Record predictions and wait for outcomes.
+
+</details>
+
 
 Fit a new candidate using recent labeled rows, then compare the old and new model on a later batch.
 
@@ -4506,7 +6591,21 @@ Fit a new candidate using recent labeled rows, then compare the old and new mode
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Visualization Techniques **Practice** | Use a local dashboard to read the latest accuracy and see an alert. | [⬇️ Lesson ZIP](sample_code_folder/240-visualization-techniques-4.zip) |
+| 240 - Visualization Techniques **Practice** | Use a local dashboard to read the latest accuracy and see an alert. | [Lesson ZIP](sample_code_folder/240-visualization-techniques-4.zip) |
+
+**Before this lesson.** Read a model score and wait for actual outcomes.
+
+**In simple words.** Monitoring watches later inputs and results. Drift means change over time. A change is a reason to investigate, not an automatic instruction to replace a model.
+
+**Guess first.** Can we measure new accuracy before the true answers arrive? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Record predictions and wait for outcomes.
+
+</details>
+
 
 <a id="live-dashboards-using-tableau-power-bi-or-matplotlib-seaborn"></a>
 
@@ -4514,7 +6613,21 @@ Fit a new candidate using recent labeled rows, then compare the old and new mode
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Live dashboards using Tableau, Power BI, or Matplotlib/Seaborn **Practice** | Create a local dashboard and use the companion lessons to prepare BI imports. | [⬇️ Lesson ZIP](sample_code_folder/241-live-dashboards-using-tableau-power-bi-or-matplotlib-seaborn.zip) |
+| 241 - Live dashboards using Tableau, Power BI, or Matplotlib/Seaborn **Practice** | Create a local dashboard and use the companion lessons to prepare BI imports. | [Lesson ZIP](sample_code_folder/241-live-dashboards-using-tableau-power-bi-or-matplotlib-seaborn.zip) |
+
+**Before this lesson.** Read a model score and wait for actual outcomes.
+
+**In simple words.** Monitoring watches later inputs and results. Drift means change over time. A change is a reason to investigate, not an automatic instruction to replace a model.
+
+**Guess first.** Can we measure new accuracy before the true answers arrive? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Record predictions and wait for outcomes.
+
+</details>
+
 
 <a id="drift-detection-charts"></a>
 
@@ -4522,7 +6635,21 @@ Fit a new candidate using recent labeled rows, then compare the old and new mode
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Drift detection charts **Practice** | Compare the old and new distributions to see how delivery distances have shifted. | [⬇️ Lesson ZIP](sample_code_folder/246-drift-detection-charts.zip) |
+| 246 - Drift detection charts **Practice** | Compare the old and new distributions to see how delivery distances have shifted. | [Lesson ZIP](sample_code_folder/246-drift-detection-charts.zip) |
+
+**Before this lesson.** Read a model score and wait for actual outcomes.
+
+**In simple words.** Monitoring watches later inputs and results. Drift means change over time. A change is a reason to investigate, not an automatic instruction to replace a model.
+
+**Guess first.** Can we measure new accuracy before the true answers arrive? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Record predictions and wait for outcomes.
+
+</details>
+
 
 <a id="real-time-model-accuracy-tracking-dashboards"></a>
 
@@ -4530,7 +6657,21 @@ Fit a new candidate using recent labeled rows, then compare the old and new mode
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Real-time model accuracy tracking dashboards **Practice** | Watch how accuracy changes as batches with known results arrive. | [⬇️ Lesson ZIP](sample_code_folder/247-real-time-model-accuracy-tracking-dashboards.zip) |
+| 247 - Real-time model accuracy tracking dashboards **Practice** | Watch how accuracy changes as batches with known results arrive. | [Lesson ZIP](sample_code_folder/247-real-time-model-accuracy-tracking-dashboards.zip) |
+
+**Before this lesson.** Read a model score and wait for actual outcomes.
+
+**In simple words.** Monitoring watches later inputs and results. Drift means change over time. A change is a reason to investigate, not an automatic instruction to replace a model.
+
+**Guess first.** Can we measure new accuracy before the true answers arrive? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Record predictions and wait for outcomes.
+
+</details>
+
 
 Generate historical, recent, and future delivery batches. Compare input distributions, calculate accuracy after labels arrive, trigger an alert, and test a retrained candidate on a later batch.
 
@@ -4560,7 +6701,7 @@ ALERT: investigate before promoting a candidate.
 Later batch, live / candidate: 0.5 1.0
 ```
 
-**🧪 Change one input.** Try changing km from 19 to 14 in sample.csv. Compare the new output.
+**Your small change.** Try changing km from 19 to 14 in sample.csv. Compare the new output. Save the named CSV before running again.
 
 
 ![A step chart compares training and recent delivery distances. A separate bar chart compares accuracy on reference and recent labeled orders.](workbook-figures/real-time-model-accuracy-tracking-dashboards.png)
@@ -4577,7 +6718,21 @@ Later batch, live / candidate: 0.5 1.0
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| A dashboard that refreshes on your computer **Practice** | Run a local dashboard that reads the latest accuracy file. | [⬇️ Lesson ZIP](sample_code_folder/248-a-dashboard-that-refreshes-on-your-computer.zip) |
+| 248 - A dashboard that refreshes on your computer **Practice** | Run a local dashboard that reads the latest accuracy file. | [Lesson ZIP](sample_code_folder/248-a-dashboard-that-refreshes-on-your-computer.zip) |
+
+**Before this lesson.** Read a model score and wait for actual outcomes.
+
+**In simple words.** Monitoring watches later inputs and results. Drift means change over time. A change is a reason to investigate, not an automatic instruction to replace a model.
+
+**Guess first.** Can we measure new accuracy before the true answers arrive? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Record predictions and wait for outcomes.
+
+</details>
+
 
 **🎯 Goal.** What would a dashboard show after a fresh batch of answers arrives? Use a small history of three batches and display the latest labeled accuracy. The dashboard refreshes locally while it is open.
 
@@ -4596,7 +6751,7 @@ Later batch, live / candidate: 0.5 1.0
 | Alert threshold | 85% |
 | Alert visible | True |
 
-**🧪 Change one input.** Change the final batch’s Correct count in `sample.csv` from 16 to 18 and keep Checked at 20. Rerun `python lesson.py`. The result should show 90% accuracy and no alert.
+**Your small change.** In the Afternoon row, change Correct from 16 to 18. You should see 90% and Alert visible: False. Save the named CSV before running again.
 
 
 Run `python -m streamlit run monitoring_dashboard.py` in the folder where the exercise saved the file. While the dashboard is open, add a labeled row to `monitoring.csv` and calculate its Accuracy as Correct divided by Checked. The five-second refresh picks up the change. This refreshes the display. To update the actual model periodically, run the training-and-check code on a schedule, and keep the current model unless the candidate passes the agreed check.
@@ -4613,7 +6768,21 @@ Run `python -m streamlit run monitoring_dashboard.py` in the folder where the ex
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Scheduled model checks **Practice** | Reuse the same model check for each batch and see which one raises an alert. | [⬇️ Lesson ZIP](sample_code_folder/249-scheduled-model-checks.zip) |
+| 249 - Scheduled model checks **Practice** | Reuse the same model check for each batch and see which one raises an alert. | [Lesson ZIP](sample_code_folder/249-scheduled-model-checks.zip) |
+
+**Before this lesson.** Read a model score and wait for actual outcomes.
+
+**In simple words.** Monitoring watches later inputs and results. Drift means change over time. A change is a reason to investigate, not an automatic instruction to replace a model.
+
+**Guess first.** Can we measure new accuracy before the true answers arrive? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Record predictions and wait for outcomes.
+
+</details>
+
 
 **🎯 Goal.** What can a recurring model check do? Run the same check on two later batches. For each run, compare a candidate with the current model on rows the candidate did not learn from.
 
@@ -4632,7 +6801,7 @@ Monday                  0.0                    0.0 Keep current model
 Tuesday                  3.0                    0.0   Review candidate
 ```
 
-**🧪 Change one input.** Try changing distance from 1 to 3 in sample.csv. Compare the new output.
+**Your small change.** Try changing distance from 1 to 3 in sample.csv. Compare the new output. Save the named CSV before running again.
 
 
 The exercise runs two simulated check times immediately. To run it at real times, save the script and use your operating system’s scheduler to call `python your_script.py` on a schedule. For real batches, read the labeled CSV for that run and keep a log. Review a candidate on a meaningful, separate test set before replacing the current model.
@@ -4643,19 +6812,47 @@ The exercise runs two simulated check times immediately. To run it at real times
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 2. Data Sets **Practice** | Start the practice datasets with a small table of experience and salary. | [⬇️ Lesson ZIP](sample_code_folder/250-2-data-sets.zip) |
+| 250 - 2. Data Sets **Practice** | Start the practice datasets with a small table of experience and salary. | [Lesson ZIP](sample_code_folder/250-2-data-sets.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 **📌 Before you start.** Be able to read a CSV, choose a target, and explain how test rows are kept separate.
 
-The original dataset names below are **PDF section headings**. The code under each heading creates a new dataset. The workbook never downloads, loads, or copies any of those published datasets.
+These lessons use **invented practice data**. The historical heading names remain in coverage.csv for old references. They are not the published Titanic, Iris, MNIST or other named datasets. The separate independent project uses real UCI Wine data and records its source.
 
 <a id="2-1-salary-experience-dataset"></a>
 
-### 💵 2.1. Salary & Experience Dataset
+### 💵 2.1. Invented salary records
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 2.1. Salary & Experience Dataset **Practice** | Use years of experience and department from invented employee records to estimate salary. | [⬇️ Lesson ZIP](sample_code_folder/251-2-1-salary-experience-dataset.zip) |
+| 251 - Invented salary records **Practice** | Use years of experience and department from invented employee records to estimate salary. | [Lesson ZIP](sample_code_folder/251-2-1-salary-experience-dataset.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 <a id="description"></a>
 
@@ -4663,7 +6860,21 @@ The original dataset names below are **PDF section headings**. The code under ea
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Description **Reference** | Inspect the columns in the invented employee records and see what each row represents. | [⬇️ Lesson ZIP](sample_code_folder/252-description.zip) |
+| 252 - Description **Reference** | Inspect the columns in the invented employee records and see what each row represents. | [Lesson ZIP](sample_code_folder/252-description.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Predict a fictional employee’s salary from years of experience and department.
 
@@ -4673,7 +6884,21 @@ Predict a fictional employee’s salary from years of experience and department.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Practice **Practice** | Use years of experience and department from invented employee records to estimate salary. | [⬇️ Lesson ZIP](sample_code_folder/253-practice.zip) |
+| 253 - Practice **Practice** | Use years of experience and department from invented employee records to estimate salary. | [Lesson ZIP](sample_code_folder/253-practice.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 <a id="practice-2-1-missing-values"></a>
 
@@ -4681,7 +6906,21 @@ Predict a fictional employee’s salary from years of experience and department.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Missing values **Practice** | Find missing entries in the invented employee records and see how the example prepares them for a model. | [⬇️ Lesson ZIP](sample_code_folder/254-practice-2-1-missing-values.zip) |
+| 254 - Missing values **Practice** | Find missing entries in the invented employee records and see how the example prepares them for a model. | [Lesson ZIP](sample_code_folder/254-practice-2-1-missing-values.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Run the sample and inspect the missing-value handling before fitting.
 
@@ -4691,7 +6930,21 @@ Run the sample and inspect the missing-value handling before fitting.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Feature scaling **Practice** | Put the numerical inputs on a common scale before using the invented employee records in a model. | [⬇️ Lesson ZIP](sample_code_folder/255-practice-2-1-feature-scaling.zip) |
+| 255 - Feature scaling **Practice** | Put the numerical inputs on a common scale before using the invented employee records in a model. | [Lesson ZIP](sample_code_folder/255-practice-2-1-feature-scaling.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Inspect the numeric range or pixel range and follow the scaling step in the lab.
 
@@ -4701,7 +6954,21 @@ Inspect the numeric range or pixel range and follow the scaling step in the lab.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Outliers **Practice** | Look for unusual measurements in the invented employee records and see which rows need checking. | [⬇️ Lesson ZIP](sample_code_folder/256-practice-2-1-outliers.zip) |
+| 256 - Outliers **Practice** | Look for unusual measurements in the invented employee records and see which rows need checking. | [Lesson ZIP](sample_code_folder/256-practice-2-1-outliers.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Review the extreme values or pixel range. Decide whether each flagged value is possible.
 
@@ -4711,7 +6978,21 @@ Review the extreme values or pixel range. Decide whether each flagged value is p
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Categorical encoding **Practice** | Turn categories in the invented employee records into numbers the model can read. | [⬇️ Lesson ZIP](sample_code_folder/257-practice-2-1-categorical-encoding.zip) |
+| 257 - Category encoding **Practice** | Turn categories in the invented employee records into numbers the model can read. | [Lesson ZIP](sample_code_folder/257-practice-2-1-categorical-encoding.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Inspect the encoded fields and check how the model receives categories or class labels.
 
@@ -4753,7 +7034,7 @@ Field  Rows to review
 experience               0
 ```
 
-**🧪 Change one input.** Change an input in new_inputs.csv. Compare the predictions with the held-out check above.
+**Your small change.** Change an input in new_inputs.csv. Compare the predictions with the held-out check above. Save the named CSV before running again.
 
 
 **💡 Takeaway.** The missing label is dropped for supervised training. The two reported averages compare a median-filled summary and a complete-case summary without treating either as ground truth.
@@ -4764,17 +7045,45 @@ experience               0
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Source **Reference** | Read the dataset name from the PDF and inspect the invented employee records used in this exercise. | [⬇️ Lesson ZIP](sample_code_folder/258-source.zip) |
+| 258 - Source **Reference** | Read the dataset name from the PDF and inspect the invented employee records used in this exercise. | [Lesson ZIP](sample_code_folder/258-source.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Original practice data created for this workbook.
 
 <a id="2-2-titanic-dataset"></a>
 
-### ⛴️ 2.2. Titanic Dataset
+### ⛴️ 2.2. Invented ferry boarding records
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 2.2. Titanic Dataset **Practice** | Use age, fare and family details from invented ferry bookings to estimate priority boarding. | [⬇️ Lesson ZIP](sample_code_folder/259-2-2-titanic-dataset.zip) |
+| 259 - Invented ferry boarding records **Practice** | Use age, fare and family details from invented ferry bookings to estimate priority boarding. | [Lesson ZIP](sample_code_folder/259-2-2-titanic-dataset.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 <a id="description-2"></a>
 
@@ -4782,7 +7091,21 @@ Original practice data created for this workbook.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Description **Reference** | Inspect the columns in the invented ferry bookings and see what each row represents. | [⬇️ Lesson ZIP](sample_code_folder/260-description-2.zip) |
+| 260 - Description **Reference** | Inspect the columns in the invented ferry bookings and see what each row represents. | [Lesson ZIP](sample_code_folder/260-description-2.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Predict whether a fictional ferry traveler was assigned a priority boarding slot. This is an invented boarding exercise.
 
@@ -4792,7 +7115,21 @@ Predict whether a fictional ferry traveler was assigned a priority boarding slot
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Practice **Practice** | Use age, fare and family details from invented ferry bookings to estimate priority boarding. | [⬇️ Lesson ZIP](sample_code_folder/261-practice-2.zip) |
+| 261 - Practice **Practice** | Use age, fare and family details from invented ferry bookings to estimate priority boarding. | [Lesson ZIP](sample_code_folder/261-practice-2.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 <a id="practice-2-2-missing-values"></a>
 
@@ -4800,7 +7137,21 @@ Predict whether a fictional ferry traveler was assigned a priority boarding slot
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Missing values **Practice** | Find missing entries in the invented ferry bookings and see how the example prepares them for a model. | [⬇️ Lesson ZIP](sample_code_folder/262-practice-2-2-missing-values.zip) |
+| 262 - Missing values **Practice** | Find missing entries in the invented ferry bookings and see how the example prepares them for a model. | [Lesson ZIP](sample_code_folder/262-practice-2-2-missing-values.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Run the sample and inspect the missing-value handling before fitting.
 
@@ -4810,7 +7161,21 @@ Run the sample and inspect the missing-value handling before fitting.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Categorical encoding **Practice** | Turn categories in the invented ferry bookings into numbers the model can read. | [⬇️ Lesson ZIP](sample_code_folder/263-practice-2-2-categorical-encoding.zip) |
+| 263 - Category encoding **Practice** | Turn categories in the invented ferry bookings into numbers the model can read. | [Lesson ZIP](sample_code_folder/263-practice-2-2-categorical-encoding.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Inspect the encoded fields and check how the model receives categories or class labels.
 
@@ -4820,7 +7185,21 @@ Inspect the encoded fields and check how the model receives categories or class 
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Outliers **Practice** | Look for unusual measurements in the invented ferry bookings and see which rows need checking. | [⬇️ Lesson ZIP](sample_code_folder/264-practice-2-2-outliers.zip) |
+| 264 - Outliers **Practice** | Look for unusual measurements in the invented ferry bookings and see which rows need checking. | [Lesson ZIP](sample_code_folder/264-practice-2-2-outliers.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Review the extreme values or pixel range. Decide whether each flagged value is possible.
 
@@ -4830,7 +7209,21 @@ Review the extreme values or pixel range. Decide whether each flagged value is p
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Scaling **Practice** | Put the numerical inputs on a common scale before using the invented ferry bookings in a model. | [⬇️ Lesson ZIP](sample_code_folder/265-practice-2-2-scaling.zip) |
+| 265 - Scaling **Practice** | Put the numerical inputs on a common scale before using the invented ferry bookings in a model. | [Lesson ZIP](sample_code_folder/265-practice-2-2-scaling.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Check the normalized or standardized model inputs.
 
@@ -4840,7 +7233,21 @@ Check the normalized or standardized model inputs.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Feature extraction **Practice** | Make a family-size column from siblings and parents before predicting boarding priority. | [⬇️ Lesson ZIP](sample_code_folder/266-practice-2-2-feature-extraction.zip) |
+| 266 - Feature extraction **Practice** | Make a family-size column from siblings and parents before predicting boarding priority. | [Lesson ZIP](sample_code_folder/266-practice-2-2-feature-extraction.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Compare the original counts with the derived family size.
 
@@ -4882,7 +7289,7 @@ Field  Rows to review
 age               0
 ```
 
-**🧪 Change one input.** Change an input in new_inputs.csv. Compare the predictions with the held-out check above.
+**Your small change.** Change an input in new_inputs.csv. Compare the predictions with the held-out check above. Save the named CSV before running again.
 
 
 A flag asks you to inspect the original value. Keep it if the record is valid. A model prediction is an estimate.
@@ -4893,17 +7300,45 @@ A flag asks you to inspect the original value. Keep it if the record is valid. A
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Source **Reference** | Read the dataset name from the PDF and inspect the invented ferry bookings used in this exercise. | [⬇️ Lesson ZIP](sample_code_folder/267-source-2.zip) |
+| 267 - Source **Reference** | Read the dataset name from the PDF and inspect the invented ferry bookings used in this exercise. | [Lesson ZIP](sample_code_folder/267-source-2.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Original practice data created for this workbook.
 
 <a id="2-3-house-prices-dataset"></a>
 
-### 🏠 2.3. House Prices Dataset
+### 🏠 2.3. Invented house listings
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 2.3. House Prices Dataset **Practice** | Use floor area, rooms and neighborhood from invented property listings to estimate sale price. | [⬇️ Lesson ZIP](sample_code_folder/268-2-3-house-prices-dataset.zip) |
+| 268 - Invented house listings **Practice** | Use floor area, rooms and neighborhood from invented property listings to estimate sale price. | [Lesson ZIP](sample_code_folder/268-2-3-house-prices-dataset.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 <a id="description-3"></a>
 
@@ -4911,7 +7346,21 @@ Original practice data created for this workbook.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Description **Reference** | Inspect the columns in the invented property listings and see what each row represents. | [⬇️ Lesson ZIP](sample_code_folder/269-description-3.zip) |
+| 269 - Description **Reference** | Inspect the columns in the invented property listings and see what each row represents. | [Lesson ZIP](sample_code_folder/269-description-3.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Predict sale prices for fictional homes using area, room count, neighborhood, street type, exterior, pool, and garage.
 
@@ -4921,7 +7370,21 @@ Predict sale prices for fictional homes using area, room count, neighborhood, st
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Practice **Practice** | Use floor area, rooms and neighborhood from invented property listings to estimate sale price. | [⬇️ Lesson ZIP](sample_code_folder/270-practice-3.zip) |
+| 270 - Practice **Practice** | Use floor area, rooms and neighborhood from invented property listings to estimate sale price. | [Lesson ZIP](sample_code_folder/270-practice-3.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 <a id="practice-2-3-missing-values"></a>
 
@@ -4929,7 +7392,21 @@ Predict sale prices for fictional homes using area, room count, neighborhood, st
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Missing values **Practice** | Find missing entries in the invented property listings and see how the example prepares them for a model. | [⬇️ Lesson ZIP](sample_code_folder/271-practice-2-3-missing-values.zip) |
+| 271 - Missing values **Practice** | Find missing entries in the invented property listings and see how the example prepares them for a model. | [Lesson ZIP](sample_code_folder/271-practice-2-3-missing-values.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Run the sample and inspect the missing-value handling before fitting.
 
@@ -4939,7 +7416,21 @@ Run the sample and inspect the missing-value handling before fitting.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Categorical encoding **Practice** | Turn categories in the invented property listings into numbers the model can read. | [⬇️ Lesson ZIP](sample_code_folder/272-practice-2-3-categorical-encoding.zip) |
+| 272 - Category encoding **Practice** | Turn categories in the invented property listings into numbers the model can read. | [Lesson ZIP](sample_code_folder/272-practice-2-3-categorical-encoding.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Inspect the encoded fields and check how the model receives categories or class labels.
 
@@ -4949,7 +7440,21 @@ Inspect the encoded fields and check how the model receives categories or class 
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Outliers **Practice** | Look for unusual measurements in the invented property listings and see which rows need checking. | [⬇️ Lesson ZIP](sample_code_folder/273-practice-2-3-outliers.zip) |
+| 273 - Outliers **Practice** | Look for unusual measurements in the invented property listings and see which rows need checking. | [Lesson ZIP](sample_code_folder/273-practice-2-3-outliers.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Review the extreme values or pixel range. Decide whether each flagged value is possible.
 
@@ -4959,7 +7464,21 @@ Review the extreme values or pixel range. Decide whether each flagged value is p
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Feature scaling **Practice** | Put the numerical inputs on a common scale before using the invented property listings in a model. | [⬇️ Lesson ZIP](sample_code_folder/274-practice-2-3-feature-scaling.zip) |
+| 274 - Feature scaling **Practice** | Put the numerical inputs on a common scale before using the invented property listings in a model. | [Lesson ZIP](sample_code_folder/274-practice-2-3-feature-scaling.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Inspect the numeric range or pixel range and follow the scaling step in the lab.
 
@@ -4969,7 +7488,21 @@ Inspect the numeric range or pixel range and follow the scaling step in the lab.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Handling skewed data **Practice** | Use a log on prices so a few very expensive homes have less influence on the scale. | [⬇️ Lesson ZIP](sample_code_folder/275-practice-2-3-handling-skewed-data.zip) |
+| 275 - Handling skewed data **Practice** | Use a log on prices so a few very expensive homes have less influence on the scale. | [Lesson ZIP](sample_code_folder/275-practice-2-3-handling-skewed-data.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Compare the raw target with the log-transformed fit and reverse the transform before checking prices.
 
@@ -5009,7 +7542,7 @@ Field  Rows to review
 area               1
 ```
 
-**🧪 Change one input.** Change an input in new_inputs.csv. Compare the predictions with the held-out check above.
+**Your small change.** Change an input in new_inputs.csv. Compare the predictions with the held-out check above. Save the named CSV before running again.
 
 
 A flag asks you to inspect the original value. Keep it if the record is valid. A model prediction is an estimate.
@@ -5020,17 +7553,45 @@ A flag asks you to inspect the original value. Keep it if the record is valid. A
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Source **Reference** | Read the dataset name from the PDF and inspect the invented property listings used in this exercise. | [⬇️ Lesson ZIP](sample_code_folder/276-source-3.zip) |
+| 276 - Source **Reference** | Read the dataset name from the PDF and inspect the invented property listings used in this exercise. | [Lesson ZIP](sample_code_folder/276-source-3.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Original practice data created for this workbook.
 
 <a id="2-4-iris-dataset"></a>
 
-### 🌸 2.4. Iris Dataset
+### 🌸 2.4. Invented flower measurements
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 2.4. Iris Dataset **Practice** | Use sepal and petal measurements from invented flower measurements to estimate flower type. | [⬇️ Lesson ZIP](sample_code_folder/277-2-4-iris-dataset.zip) |
+| 277 - Invented flower measurements **Practice** | Use sepal and petal measurements from invented flower measurements to estimate flower type. | [Lesson ZIP](sample_code_folder/277-2-4-iris-dataset.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 <a id="description-4"></a>
 
@@ -5038,7 +7599,21 @@ Original practice data created for this workbook.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Description **Reference** | Inspect the columns in the invented flower measurements and see what each row represents. | [⬇️ Lesson ZIP](sample_code_folder/278-description-4.zip) |
+| 278 - Description **Reference** | Inspect the columns in the invented flower measurements and see what each row represents. | [Lesson ZIP](sample_code_folder/278-description-4.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Classify original measurements of three imaginary flower types using sepal and petal length and width.
 
@@ -5048,7 +7623,21 @@ Classify original measurements of three imaginary flower types using sepal and p
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Practice **Practice** | Use sepal and petal measurements from invented flower measurements to estimate flower type. | [⬇️ Lesson ZIP](sample_code_folder/279-practice-4.zip) |
+| 279 - Practice **Practice** | Use sepal and petal measurements from invented flower measurements to estimate flower type. | [Lesson ZIP](sample_code_folder/279-practice-4.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 <a id="practice-2-4-feature-scaling"></a>
 
@@ -5056,7 +7645,21 @@ Classify original measurements of three imaginary flower types using sepal and p
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Feature scaling **Practice** | Put the numerical inputs on a common scale before using the invented flower measurements in a model. | [⬇️ Lesson ZIP](sample_code_folder/280-practice-2-4-feature-scaling.zip) |
+| 280 - Feature scaling **Practice** | Put the numerical inputs on a common scale before using the invented flower measurements in a model. | [Lesson ZIP](sample_code_folder/280-practice-2-4-feature-scaling.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Inspect the numeric range or pixel range and follow the scaling step in the lab.
 
@@ -5066,7 +7669,21 @@ Inspect the numeric range or pixel range and follow the scaling step in the lab.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Outliers **Practice** | Look for unusual measurements in the invented flower measurements and see which rows need checking. | [⬇️ Lesson ZIP](sample_code_folder/281-practice-2-4-outliers.zip) |
+| 281 - Outliers **Practice** | Look for unusual measurements in the invented flower measurements and see which rows need checking. | [Lesson ZIP](sample_code_folder/281-practice-2-4-outliers.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Review the extreme values or pixel range. Decide whether each flagged value is possible.
 
@@ -5076,7 +7693,21 @@ Review the extreme values or pixel range. Decide whether each flagged value is p
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Categorical encoding **Practice** | Turn categories in the invented flower measurements into numbers the model can read. | [⬇️ Lesson ZIP](sample_code_folder/282-practice-2-4-categorical-encoding.zip) |
+| 282 - Category encoding **Practice** | Turn categories in the invented flower measurements into numbers the model can read. | [Lesson ZIP](sample_code_folder/282-practice-2-4-categorical-encoding.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Inspect the encoded fields and check how the model receives categories or class labels.
 
@@ -5086,13 +7717,27 @@ Inspect the encoded fields and check how the model receives categories or class 
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Visualization **Practice** | Plot petal and sepal measurements to see which flowers look similar. | [⬇️ Lesson ZIP](sample_code_folder/283-practice-2-4-visualization.zip) |
+| 283 - Visualization **Practice** | Plot petal and sepal measurements to see which flowers look similar. | [Lesson ZIP](sample_code_folder/283-practice-2-4-visualization.zip) |
 
-Inspect the training histograms and pair plots before reading the held-out predictions.
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
+
+Inspect the training histograms and pair plots before reading the kept-back predictions.
 
 Inspect measurements, encode target species, standardize the four features, and train a distance-based model.
 
-Read the original flower samples. Use training-only histograms and pair plots, then compare a held-out prediction with its known label.
+Read the original flower samples. Use training-only histograms and pair plots, then compare a kept-back prediction with its known label.
 
 **📋 Sample data**
 
@@ -5126,7 +7771,7 @@ Actual: ['fan', 'bell']
 Predicted: ['fan', 'bell']
 ```
 
-**🧪 Change one input.** Change an input in new_inputs.csv. Compare the predictions with the held-out check above.
+**Your small change.** Change an input in new_inputs.csv. Compare the predictions with the held-out check above. Save the named CSV before running again.
 
 
 ![Six flowers with known categories plotted by petal and sepal length. The three categories occupy distinct parts of the plot.](workbook-figures/source-4.png)
@@ -5141,17 +7786,45 @@ Predicted: ['fan', 'bell']
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Source **Reference** | Read the dataset name from the PDF and inspect the invented flower measurements used in this exercise. | [⬇️ Lesson ZIP](sample_code_folder/284-source-4.zip) |
+| 284 - Source **Reference** | Read the dataset name from the PDF and inspect the invented flower measurements used in this exercise. | [Lesson ZIP](sample_code_folder/284-source-4.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Original practice data created for this workbook.
 
 <a id="2-5-uci-adult-income-dataset"></a>
 
-### 👥 2.5. UCI Adult Income Dataset
+### 👥 2.5. Invented income records
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 2.5. UCI Adult Income Dataset **Practice** | Use age, education and working hours from invented income records to estimate income group. | [⬇️ Lesson ZIP](sample_code_folder/285-2-5-uci-adult-income-dataset.zip) |
+| 285 - Invented income records **Practice** | Use age, education and working hours from invented income records to estimate income group. | [Lesson ZIP](sample_code_folder/285-2-5-uci-adult-income-dataset.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 <a id="description-5"></a>
 
@@ -5159,7 +7832,21 @@ Original practice data created for this workbook.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Description **Reference** | Inspect the columns in the invented income records and see what each row represents. | [⬇️ Lesson ZIP](sample_code_folder/286-description-5.zip) |
+| 286 - Description **Reference** | Inspect the columns in the invented income records and see what each row represents. | [Lesson ZIP](sample_code_folder/286-description-5.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Predict whether a fictional worker’s annual income is above $50,000.
 
@@ -5169,7 +7856,21 @@ Predict whether a fictional worker’s annual income is above $50,000.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Practice **Practice** | Use age, education and working hours from invented income records to estimate income group. | [⬇️ Lesson ZIP](sample_code_folder/287-practice-5.zip) |
+| 287 - Practice **Practice** | Use age, education and working hours from invented income records to estimate income group. | [Lesson ZIP](sample_code_folder/287-practice-5.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 <a id="practice-2-5-missing-values"></a>
 
@@ -5177,7 +7878,21 @@ Predict whether a fictional worker’s annual income is above $50,000.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Missing values **Practice** | Find missing entries in the invented income records and see how the example prepares them for a model. | [⬇️ Lesson ZIP](sample_code_folder/288-practice-2-5-missing-values.zip) |
+| 288 - Missing values **Practice** | Find missing entries in the invented income records and see how the example prepares them for a model. | [Lesson ZIP](sample_code_folder/288-practice-2-5-missing-values.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Run the sample and inspect the missing-value handling before fitting.
 
@@ -5187,7 +7902,21 @@ Run the sample and inspect the missing-value handling before fitting.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Categorical encoding **Practice** | Turn categories in the invented income records into numbers the model can read. | [⬇️ Lesson ZIP](sample_code_folder/289-practice-2-5-categorical-encoding.zip) |
+| 289 - Category encoding **Practice** | Turn categories in the invented income records into numbers the model can read. | [Lesson ZIP](sample_code_folder/289-practice-2-5-categorical-encoding.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Inspect the encoded fields and check how the model receives categories or class labels.
 
@@ -5197,7 +7926,21 @@ Inspect the encoded fields and check how the model receives categories or class 
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Feature scaling **Practice** | Put the numerical inputs on a common scale before using the invented income records in a model. | [⬇️ Lesson ZIP](sample_code_folder/290-practice-2-5-feature-scaling.zip) |
+| 290 - Feature scaling **Practice** | Put the numerical inputs on a common scale before using the invented income records in a model. | [Lesson ZIP](sample_code_folder/290-practice-2-5-feature-scaling.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Inspect the numeric range or pixel range and follow the scaling step in the lab.
 
@@ -5207,7 +7950,21 @@ Inspect the numeric range or pixel range and follow the scaling step in the lab.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Outliers **Practice** | Look for unusual measurements in the invented income records and see which rows need checking. | [⬇️ Lesson ZIP](sample_code_folder/291-practice-2-5-outliers.zip) |
+| 291 - Outliers **Practice** | Look for unusual measurements in the invented income records and see which rows need checking. | [Lesson ZIP](sample_code_folder/291-practice-2-5-outliers.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Review the extreme values or pixel range. Decide whether each flagged value is possible.
 
@@ -5247,7 +8004,7 @@ Field  Rows to review
 age               0
 ```
 
-**🧪 Change one input.** Change an input in new_inputs.csv. Compare the predictions with the held-out check above.
+**Your small change.** Change an input in new_inputs.csv. Compare the predictions with the held-out check above. Save the named CSV before running again.
 
 
 A flag asks you to inspect the original value. Keep it if the record is valid. A model prediction is an estimate.
@@ -5258,17 +8015,45 @@ A flag asks you to inspect the original value. Keep it if the record is valid. A
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Source **Reference** | Read the dataset name from the PDF and inspect the invented income records used in this exercise. | [⬇️ Lesson ZIP](sample_code_folder/292-source-5.zip) |
+| 292 - Source **Reference** | Read the dataset name from the PDF and inspect the invented income records used in this exercise. | [Lesson ZIP](sample_code_folder/292-source-5.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Original practice data created for this workbook.
 
 <a id="2-6-wine-quality-dataset"></a>
 
-### 🍷 2.6. Wine Quality Dataset
+### 🍷 2.6. Invented drink measurements
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 2.6. Wine Quality Dataset **Practice** | Use alcohol, citric acid and sulphates from invented wine measurements to estimate quality. | [⬇️ Lesson ZIP](sample_code_folder/293-2-6-wine-quality-dataset.zip) |
+| 293 - Invented drink measurements **Practice** | Use alcohol, citric acid and sulphates from invented wine measurements to estimate quality. | [Lesson ZIP](sample_code_folder/293-2-6-wine-quality-dataset.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 <a id="description-6"></a>
 
@@ -5276,7 +8061,21 @@ Original practice data created for this workbook.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Description **Reference** | Inspect the columns in the invented wine measurements and see what each row represents. | [⬇️ Lesson ZIP](sample_code_folder/294-description-6.zip) |
+| 294 - Description **Reference** | Inspect the columns in the invented wine measurements and see what each row represents. | [Lesson ZIP](sample_code_folder/294-description-6.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Predict the review score of a fictional beverage from measured alcohol, citric acid, and sulphates.
 
@@ -5286,7 +8085,21 @@ Predict the review score of a fictional beverage from measured alcohol, citric a
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Practice **Practice** | Use alcohol, citric acid and sulphates from invented wine measurements to estimate quality. | [⬇️ Lesson ZIP](sample_code_folder/295-practice-6.zip) |
+| 295 - Practice **Practice** | Use alcohol, citric acid and sulphates from invented wine measurements to estimate quality. | [Lesson ZIP](sample_code_folder/295-practice-6.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 <a id="practice-2-6-missing-values"></a>
 
@@ -5294,7 +8107,21 @@ Predict the review score of a fictional beverage from measured alcohol, citric a
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Missing values **Practice** | Find missing entries in the invented wine measurements and see how the example prepares them for a model. | [⬇️ Lesson ZIP](sample_code_folder/296-practice-2-6-missing-values.zip) |
+| 296 - Missing values **Practice** | Find missing entries in the invented wine measurements and see how the example prepares them for a model. | [Lesson ZIP](sample_code_folder/296-practice-2-6-missing-values.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Run the sample and inspect the missing-value handling before fitting.
 
@@ -5304,7 +8131,21 @@ Run the sample and inspect the missing-value handling before fitting.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Outliers **Practice** | Look for unusual measurements in the invented wine measurements and see which rows need checking. | [⬇️ Lesson ZIP](sample_code_folder/297-practice-2-6-outliers.zip) |
+| 297 - Outliers **Practice** | Look for unusual measurements in the invented wine measurements and see which rows need checking. | [Lesson ZIP](sample_code_folder/297-practice-2-6-outliers.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Review the extreme values or pixel range. Decide whether each flagged value is possible.
 
@@ -5314,7 +8155,21 @@ Review the extreme values or pixel range. Decide whether each flagged value is p
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Feature scaling **Practice** | Put the numerical inputs on a common scale before using the invented wine measurements in a model. | [⬇️ Lesson ZIP](sample_code_folder/298-practice-2-6-feature-scaling.zip) |
+| 298 - Feature scaling **Practice** | Put the numerical inputs on a common scale before using the invented wine measurements in a model. | [Lesson ZIP](sample_code_folder/298-practice-2-6-feature-scaling.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Inspect the numeric range or pixel range and follow the scaling step in the lab.
 
@@ -5324,7 +8179,21 @@ Inspect the numeric range or pixel range and follow the scaling step in the lab.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Categorical encoding **Practice** | Turn categories in the invented wine measurements into numbers the model can read. | [⬇️ Lesson ZIP](sample_code_folder/299-practice-2-6-categorical-encoding.zip) |
+| 299 - Category encoding **Practice** | Turn categories in the invented wine measurements into numbers the model can read. | [Lesson ZIP](sample_code_folder/299-practice-2-6-categorical-encoding.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Inspect the encoded fields and check how the model receives categories or class labels.
 
@@ -5334,7 +8203,21 @@ Inspect the encoded fields and check how the model receives categories or class 
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Normalization **Practice** | Put the numerical inputs on a common scale before using the invented wine measurements in a model. | [⬇️ Lesson ZIP](sample_code_folder/300-practice-2-6-normalization.zip) |
+| 300 - Normalization **Practice** | Put the numerical inputs on a common scale before using the invented wine measurements in a model. | [Lesson ZIP](sample_code_folder/300-practice-2-6-normalization.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Check the 0–1 scaling step used in the relevant model.
 
@@ -5374,7 +8257,7 @@ Field  Rows to review
 alcohol               1
 ```
 
-**🧪 Change one input.** Change an input in new_inputs.csv. Compare the predictions with the held-out check above.
+**Your small change.** Change an input in new_inputs.csv. Compare the predictions with the held-out check above. Save the named CSV before running again.
 
 
 A flag asks you to inspect the original value. Keep it if the record is valid. A model prediction is an estimate.
@@ -5385,17 +8268,45 @@ A flag asks you to inspect the original value. Keep it if the record is valid. A
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Source **Reference** | Read the dataset name from the PDF and inspect the invented wine measurements used in this exercise. | [⬇️ Lesson ZIP](sample_code_folder/301-source-6.zip) |
+| 301 - Source **Reference** | Read the dataset name from the PDF and inspect the invented wine measurements used in this exercise. | [Lesson ZIP](sample_code_folder/301-source-6.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Original practice data created for this workbook.
 
 <a id="2-7-boston-housing-dataset"></a>
 
-### 🏘️ 2.7. Boston Housing Dataset
+### 🏘️ 2.7. Invented neighbourhood prices
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 2.7. Boston Housing Dataset **Practice** | Use room count, crime rate and household income from invented neighborhood records to estimate house price. | [⬇️ Lesson ZIP](sample_code_folder/302-2-7-boston-housing-dataset.zip) |
+| 302 - Invented neighbourhood prices **Practice** | Use room count, crime rate and household income from invented neighborhood records to estimate house price. | [Lesson ZIP](sample_code_folder/302-2-7-boston-housing-dataset.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 <a id="description-7"></a>
 
@@ -5403,7 +8314,21 @@ Original practice data created for this workbook.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Description **Reference** | Inspect the columns in the invented neighborhood records and see what each row represents. | [⬇️ Lesson ZIP](sample_code_folder/303-description-7.zip) |
+| 303 - Description **Reference** | Inspect the columns in the invented neighborhood records and see what each row represents. | [Lesson ZIP](sample_code_folder/303-description-7.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Predict a made-up neighborhood price using fictional crime, room count, income, and zone fields. These fields are the workbook’s own schema.
 
@@ -5413,7 +8338,21 @@ Predict a made-up neighborhood price using fictional crime, room count, income, 
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Practice **Practice** | Use room count, crime rate and household income from invented neighborhood records to estimate house price. | [⬇️ Lesson ZIP](sample_code_folder/304-practice-7.zip) |
+| 304 - Practice **Practice** | Use room count, crime rate and household income from invented neighborhood records to estimate house price. | [Lesson ZIP](sample_code_folder/304-practice-7.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 <a id="practice-2-7-missing-values"></a>
 
@@ -5421,7 +8360,21 @@ Predict a made-up neighborhood price using fictional crime, room count, income, 
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Missing values **Practice** | Find missing entries in the invented neighborhood records and see how the example prepares them for a model. | [⬇️ Lesson ZIP](sample_code_folder/305-practice-2-7-missing-values.zip) |
+| 305 - Missing values **Practice** | Find missing entries in the invented neighborhood records and see how the example prepares them for a model. | [Lesson ZIP](sample_code_folder/305-practice-2-7-missing-values.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Run the sample and inspect the missing-value handling before fitting.
 
@@ -5431,7 +8384,21 @@ Run the sample and inspect the missing-value handling before fitting.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Feature scaling **Practice** | Put the numerical inputs on a common scale before using the invented neighborhood records in a model. | [⬇️ Lesson ZIP](sample_code_folder/306-practice-2-7-feature-scaling.zip) |
+| 306 - Feature scaling **Practice** | Put the numerical inputs on a common scale before using the invented neighborhood records in a model. | [Lesson ZIP](sample_code_folder/306-practice-2-7-feature-scaling.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Inspect the numeric range or pixel range and follow the scaling step in the lab.
 
@@ -5441,7 +8408,21 @@ Inspect the numeric range or pixel range and follow the scaling step in the lab.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Outliers **Practice** | Look for unusual measurements in the invented neighborhood records and see which rows need checking. | [⬇️ Lesson ZIP](sample_code_folder/307-practice-2-7-outliers.zip) |
+| 307 - Outliers **Practice** | Look for unusual measurements in the invented neighborhood records and see which rows need checking. | [Lesson ZIP](sample_code_folder/307-practice-2-7-outliers.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Review the extreme values or pixel range. Decide whether each flagged value is possible.
 
@@ -5451,7 +8432,21 @@ Review the extreme values or pixel range. Decide whether each flagged value is p
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Categorical encoding **Practice** | Turn categories in the invented neighborhood records into numbers the model can read. | [⬇️ Lesson ZIP](sample_code_folder/308-practice-2-7-categorical-encoding.zip) |
+| 308 - Category encoding **Practice** | Turn categories in the invented neighborhood records into numbers the model can read. | [Lesson ZIP](sample_code_folder/308-practice-2-7-categorical-encoding.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Inspect the encoded fields and check how the model receives categories or class labels.
 
@@ -5491,7 +8486,7 @@ Field  Rows to review
 crime_per_1000               1
 ```
 
-**🧪 Change one input.** Change an input in new_inputs.csv. Compare the predictions with the held-out check above.
+**Your small change.** Change an input in new_inputs.csv. Compare the predictions with the held-out check above. Save the named CSV before running again.
 
 
 **💡 Takeaway.** The schema follows the learning exercise. The historical dataset’s published variables and assumptions can differ.
@@ -5502,17 +8497,45 @@ crime_per_1000               1
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Source **Reference** | Read the dataset name from the PDF and inspect the invented neighborhood records used in this exercise. | [⬇️ Lesson ZIP](sample_code_folder/309-source-7.zip) |
+| 309 - Source **Reference** | Read the dataset name from the PDF and inspect the invented neighborhood records used in this exercise. | [Lesson ZIP](sample_code_folder/309-source-7.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Original practice data created for this workbook.
 
 <a id="2-8-mnist-dataset"></a>
 
-### 🔢 2.8. MNIST Dataset
+### 🔢 2.8. Hand-drawn digit shapes
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 2.8. MNIST Dataset **Practice** | Use pixels in each drawing from hand-drawn digit shapes to estimate digit. | [⬇️ Lesson ZIP](sample_code_folder/310-2-8-mnist-dataset.zip) |
+| 310 - Hand-drawn digits **Practice** | Use pixels in each drawing from hand-drawn digit shapes to estimate digit. | [Lesson ZIP](sample_code_folder/310-2-8-mnist-dataset.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 <a id="description-8"></a>
 
@@ -5520,7 +8543,21 @@ Original practice data created for this workbook.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Description **Reference** | Inspect the columns in the hand-drawn digit shapes and see what each row represents. | [⬇️ Lesson ZIP](sample_code_folder/311-description-8.zip) |
+| 311 - Description **Reference** | Inspect the columns in the hand-drawn digit shapes and see what each row represents. | [Lesson ZIP](sample_code_folder/311-description-8.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Classify newly drawn digit glyphs. Each shape below uses workbook-designed pixels.
 
@@ -5530,7 +8567,21 @@ Classify newly drawn digit glyphs. Each shape below uses workbook-designed pixel
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Practice **Practice** | Use pixels in each drawing from hand-drawn digit shapes to estimate digit. | [⬇️ Lesson ZIP](sample_code_folder/312-practice-8.zip) |
+| 312 - Practice **Practice** | Use pixels in each drawing from hand-drawn digit shapes to estimate digit. | [Lesson ZIP](sample_code_folder/312-practice-8.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 <a id="practice-2-8-resizing"></a>
 
@@ -5538,7 +8589,21 @@ Classify newly drawn digit glyphs. Each shape below uses workbook-designed pixel
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Resizing **Practice** | Make the hand-drawn digit shapes the same size before using them in a model. | [⬇️ Lesson ZIP](sample_code_folder/313-practice-2-8-resizing.zip) |
+| 313 - Resizing **Practice** | Make the hand-drawn digit shapes the same size before using them in a model. | [Lesson ZIP](sample_code_folder/313-practice-2-8-resizing.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Print the original shape and watch the grid change before expanding it into features.
 
@@ -5548,7 +8613,21 @@ Print the original shape and watch the grid change before expanding it into feat
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Normalization **Practice** | Put the pixels on a common scale before using the hand-drawn digit shapes in a model. | [⬇️ Lesson ZIP](sample_code_folder/314-practice-2-8-normalization.zip) |
+| 314 - Normalization **Practice** | Put the pixels on a common scale before using the hand-drawn digit shapes in a model. | [Lesson ZIP](sample_code_folder/314-practice-2-8-normalization.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Check the 0–1 scaling step used in the relevant model.
 
@@ -5558,7 +8637,21 @@ Check the 0–1 scaling step used in the relevant model.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Feature scaling **Practice** | Put the pixels on a common scale before using the hand-drawn digit shapes in a model. | [⬇️ Lesson ZIP](sample_code_folder/315-practice-2-8-feature-scaling.zip) |
+| 315 - Feature scaling **Practice** | Put the pixels on a common scale before using the hand-drawn digit shapes in a model. | [Lesson ZIP](sample_code_folder/315-practice-2-8-feature-scaling.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Inspect the numeric range or pixel range and follow the scaling step in the lab.
 
@@ -5568,11 +8661,25 @@ Inspect the numeric range or pixel range and follow the scaling step in the lab.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Outliers **Practice** | Look for blank drawings or unusual pixel patterns in the hand-drawn digit shapes and see which rows need checking. | [⬇️ Lesson ZIP](sample_code_folder/316-practice-2-8-outliers.zip) |
+| 316 - Outliers **Practice** | Look for blank drawings or unusual pixel patterns in the hand-drawn digit shapes and see which rows need checking. | [Lesson ZIP](sample_code_folder/316-practice-2-8-outliers.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Review the extreme values or pixel range. Decide whether each flagged value is possible.
 
-Check the raw grid and pixel range, resize a copy, normalize intensities to 0–1, flatten the image, and predict held-out labels. Print a one-hot target separately.
+Check the raw grid and pixel range, resize a copy, normalize intensities to 0–1, flatten the image, and predict kept-back labels. Print a one-hot target separately.
 
 Create the glyph dataset in Python and use it in a model.
 
@@ -5603,7 +8710,7 @@ Blank images to inspect: 0
 Model-input shape: (10, 64)
 ```
 
-**🧪 Change one input.** Edit new_inputs.csv. Within a picture, # is an on pixel, a dot is an off pixel, and / starts the next row.
+**Your small change.** Edit new_inputs.csv. Within a picture, # is an on pixel, a dot is an off pixel, and / starts the next row. Save the named CSV before running again.
 
 
 **💡 Takeaway.** Resizing changes the grid. Flattening changes its representation. Keep the grid for a model that uses spatial features.
@@ -5614,17 +8721,45 @@ Model-input shape: (10, 64)
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Source **Reference** | Read the dataset name from the PDF and inspect the hand-drawn digit shapes used in this exercise. | [⬇️ Lesson ZIP](sample_code_folder/317-source-8.zip) |
+| 317 - Source **Reference** | Read the dataset name from the PDF and inspect the hand-drawn digit shapes used in this exercise. | [Lesson ZIP](sample_code_folder/317-source-8.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Original practice data created for this workbook.
 
 <a id="2-9-customer-segmentation-dataset"></a>
 
-### 🛍️ 2.9. Customer Segmentation Dataset
+### 🛍️ 2.9. Invented shopper groups
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 2.9. Customer Segmentation Dataset **Practice** | Use age, annual income and spending score from invented shopper records to estimate shopper group. | [⬇️ Lesson ZIP](sample_code_folder/318-2-9-customer-segmentation-dataset.zip) |
+| 318 - Invented shopper groups **Practice** | Use age, annual income and spending score from invented shopper records to estimate shopper group. | [Lesson ZIP](sample_code_folder/318-2-9-customer-segmentation-dataset.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 <a id="description-9"></a>
 
@@ -5632,7 +8767,21 @@ Original practice data created for this workbook.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Description **Reference** | Inspect the columns in the invented shopper records and see what each row represents. | [⬇️ Lesson ZIP](sample_code_folder/319-description-9.zip) |
+| 319 - Description **Reference** | Inspect the columns in the invented shopper records and see what each row represents. | [Lesson ZIP](sample_code_folder/319-description-9.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Group fictional customers based on age, annual income, spending score, and region.
 
@@ -5642,7 +8791,21 @@ Group fictional customers based on age, annual income, spending score, and regio
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Practice **Practice** | Use age, annual income and spending score from invented shopper records to estimate shopper group. | [⬇️ Lesson ZIP](sample_code_folder/320-practice-9.zip) |
+| 320 - Practice **Practice** | Use age, annual income and spending score from invented shopper records to estimate shopper group. | [Lesson ZIP](sample_code_folder/320-practice-9.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 <a id="practice-2-9-missing-values"></a>
 
@@ -5650,7 +8813,21 @@ Group fictional customers based on age, annual income, spending score, and regio
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Missing values **Practice** | Find missing entries in the invented shopper records and see how the example prepares them for a model. | [⬇️ Lesson ZIP](sample_code_folder/321-practice-2-9-missing-values.zip) |
+| 321 - Missing values **Practice** | Find missing entries in the invented shopper records and see how the example prepares them for a model. | [Lesson ZIP](sample_code_folder/321-practice-2-9-missing-values.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Run the sample and inspect the missing-value handling before fitting.
 
@@ -5660,7 +8837,21 @@ Run the sample and inspect the missing-value handling before fitting.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Feature scaling **Practice** | Put the numerical inputs on a common scale before using the invented shopper records in a model. | [⬇️ Lesson ZIP](sample_code_folder/322-practice-2-9-feature-scaling.zip) |
+| 322 - Feature scaling **Practice** | Put the numerical inputs on a common scale before using the invented shopper records in a model. | [Lesson ZIP](sample_code_folder/322-practice-2-9-feature-scaling.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Inspect the numeric range or pixel range and follow the scaling step in the lab.
 
@@ -5670,7 +8861,21 @@ Inspect the numeric range or pixel range and follow the scaling step in the lab.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Categorical encoding **Practice** | Turn categories in the invented shopper records into numbers the model can read. | [⬇️ Lesson ZIP](sample_code_folder/323-practice-2-9-categorical-encoding.zip) |
+| 323 - Category encoding **Practice** | Turn categories in the invented shopper records into numbers the model can read. | [Lesson ZIP](sample_code_folder/323-practice-2-9-categorical-encoding.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Inspect the encoded fields and check how the model receives categories or class labels.
 
@@ -5680,7 +8885,21 @@ Inspect the encoded fields and check how the model receives categories or class 
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Outliers **Practice** | Look for unusual measurements in the invented shopper records and see which rows need checking. | [⬇️ Lesson ZIP](sample_code_folder/324-practice-2-9-outliers.zip) |
+| 324 - Outliers **Practice** | Look for unusual measurements in the invented shopper records and see which rows need checking. | [Lesson ZIP](sample_code_folder/324-practice-2-9-outliers.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Review the extreme values or pixel range. Decide whether each flagged value is possible.
 
@@ -5720,7 +8939,7 @@ age  annual_income  score
 0.95  62.4       117400.0  78.95
 ```
 
-**🧪 Change one input.** Change annual_income or score in new_inputs.csv. Compare the new cluster with scaling turned on and off.
+**Your small change.** Change annual_income or score in new_inputs.csv. Compare the new cluster with scaling turned on and off. Save the named CSV before running again.
 
 
 **💡 Takeaway.** Cluster numbers can change between fits. Compare their profiles and stability rather than the numeric ID.
@@ -5731,17 +8950,45 @@ age  annual_income  score
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Source **Reference** | Read the dataset name from the PDF and inspect the invented shopper records used in this exercise. | [⬇️ Lesson ZIP](sample_code_folder/325-source-9.zip) |
+| 325 - Source **Reference** | Read the dataset name from the PDF and inspect the invented shopper records used in this exercise. | [Lesson ZIP](sample_code_folder/325-source-9.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Original practice data created for this workbook.
 
 <a id="2-10-bank-marketing-dataset"></a>
 
-### 🏦 2.10. Bank Marketing Dataset
+### 🏦 2.10. Invented bank campaign records
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 2.10. Bank Marketing Dataset **Practice** | Use balance, duration and job from invented bank campaign records to estimate subscription. | [⬇️ Lesson ZIP](sample_code_folder/326-2-10-bank-marketing-dataset.zip) |
+| 326 - Invented bank campaign records **Practice** | Use balance, duration and job from invented bank campaign records to estimate subscription. | [Lesson ZIP](sample_code_folder/326-2-10-bank-marketing-dataset.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 <a id="description-10"></a>
 
@@ -5749,7 +8996,21 @@ Original practice data created for this workbook.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Description **Reference** | Inspect the columns in the invented bank campaign records and see what each row represents. | [⬇️ Lesson ZIP](sample_code_folder/327-description-10.zip) |
+| 327 - Description **Reference** | Inspect the columns in the invented bank campaign records and see what each row represents. | [Lesson ZIP](sample_code_folder/327-description-10.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Predict whether a fictional customer will subscribe before the current call begins.
 
@@ -5759,7 +9020,21 @@ Predict whether a fictional customer will subscribe before the current call begi
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Practice **Practice** | Use balance, duration and job from invented bank campaign records to estimate subscription. | [⬇️ Lesson ZIP](sample_code_folder/328-practice-10.zip) |
+| 328 - Practice **Practice** | Use balance, duration and job from invented bank campaign records to estimate subscription. | [Lesson ZIP](sample_code_folder/328-practice-10.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 <a id="practice-2-10-categorical-encoding"></a>
 
@@ -5767,7 +9042,21 @@ Predict whether a fictional customer will subscribe before the current call begi
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Categorical encoding **Practice** | Turn categories in the invented bank campaign records into numbers the model can read. | [⬇️ Lesson ZIP](sample_code_folder/329-practice-2-10-categorical-encoding.zip) |
+| 329 - Category encoding **Practice** | Turn categories in the invented bank campaign records into numbers the model can read. | [Lesson ZIP](sample_code_folder/329-practice-2-10-categorical-encoding.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Inspect the encoded fields and check how the model receives categories or class labels.
 
@@ -5777,7 +9066,21 @@ Inspect the encoded fields and check how the model receives categories or class 
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Feature scaling **Practice** | Put the numerical inputs on a common scale before using the invented bank campaign records in a model. | [⬇️ Lesson ZIP](sample_code_folder/330-practice-2-10-feature-scaling.zip) |
+| 330 - Feature scaling **Practice** | Put the numerical inputs on a common scale before using the invented bank campaign records in a model. | [Lesson ZIP](sample_code_folder/330-practice-2-10-feature-scaling.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Inspect the numeric range or pixel range and follow the scaling step in the lab.
 
@@ -5787,7 +9090,21 @@ Inspect the numeric range or pixel range and follow the scaling step in the lab.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Outliers **Practice** | Look for unusual measurements in the invented bank campaign records and see which rows need checking. | [⬇️ Lesson ZIP](sample_code_folder/331-practice-2-10-outliers.zip) |
+| 331 - Outliers **Practice** | Look for unusual measurements in the invented bank campaign records and see which rows need checking. | [Lesson ZIP](sample_code_folder/331-practice-2-10-outliers.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Review the extreme values or pixel range. Decide whether each flagged value is possible.
 
@@ -5797,7 +9114,21 @@ Review the extreme values or pixel range. Decide whether each flagged value is p
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Missing values **Practice** | Find missing entries in the invented bank campaign records and see how the example prepares them for a model. | [⬇️ Lesson ZIP](sample_code_folder/332-practice-2-10-missing-values.zip) |
+| 332 - Missing values **Practice** | Find missing entries in the invented bank campaign records and see how the example prepares them for a model. | [Lesson ZIP](sample_code_folder/332-practice-2-10-missing-values.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Run the sample and inspect the missing-value handling before fitting.
 
@@ -5838,7 +9169,7 @@ Training-only descriptive duration scale: [-0.86, -0.63, -0.19, 0.88, -0.97, 1.7
 Missing cells before filling or removing rows: {'age': 0, 'balance': 0, 'job': 1, 'marital': 1, 'education': 0, 'prior': 0, 'subscribed': 0}
 ```
 
-**🧪 Change one input.** Change an input in new_inputs.csv. Compare the predictions with the held-out check above.
+**Your small change.** Change an input in new_inputs.csv. Compare the predictions with the held-out check above. Save the named CSV before running again.
 
 
 **💡 Takeaway.** Current-call duration becomes available after the call. Excluding it from the input prevents future information leaking into this before-the-call task.
@@ -5849,17 +9180,45 @@ Missing cells before filling or removing rows: {'age': 0, 'balance': 0, 'job': 1
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Source **Reference** | Read the dataset name from the PDF and inspect the invented bank campaign records used in this exercise. | [⬇️ Lesson ZIP](sample_code_folder/333-source-10.zip) |
+| 333 - Source **Reference** | Read the dataset name from the PDF and inspect the invented bank campaign records used in this exercise. | [Lesson ZIP](sample_code_folder/333-source-10.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Original practice data created for this workbook.
 
 <a id="2-11-heart-disease-dataset"></a>
 
-### ❤️ 2.11. Heart Disease Dataset
+### ❤️ 2.11. Invented health-related rows
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 2.11. Heart Disease Dataset **Practice** | Use age, cholesterol and other practice measurements from invented health-related rows to estimate fabricated label. | [⬇️ Lesson ZIP](sample_code_folder/334-2-11-heart-disease-dataset.zip) |
+| 334 - Invented health-related practice rows **Practice** | Use age, cholesterol and other practice measurements from invented health-related rows to estimate fabricated label. | [Lesson ZIP](sample_code_folder/334-2-11-heart-disease-dataset.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 <a id="description-11"></a>
 
@@ -5867,7 +9226,21 @@ Original practice data created for this workbook.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Description **Reference** | Inspect the columns in the invented health-related rows and see what each row represents. | [⬇️ Lesson ZIP](sample_code_folder/335-description-11.zip) |
+| 335 - Description **Reference** | Inspect the columns in the invented health-related rows and see what each row represents. | [Lesson ZIP](sample_code_folder/335-description-11.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Classify an invented label using fictional measurements. The labels are created for a coding exercise.
 
@@ -5877,7 +9250,21 @@ Classify an invented label using fictional measurements. The labels are created 
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Practice **Practice** | Use age, cholesterol and other practice measurements from invented health-related rows to estimate fabricated label. | [⬇️ Lesson ZIP](sample_code_folder/336-practice-11.zip) |
+| 336 - Practice **Practice** | Use age, cholesterol and other practice measurements from invented health-related rows to estimate fabricated label. | [Lesson ZIP](sample_code_folder/336-practice-11.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 <a id="practice-2-11-feature-scaling"></a>
 
@@ -5885,7 +9272,21 @@ Classify an invented label using fictional measurements. The labels are created 
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Feature scaling **Practice** | Put the numerical inputs on a common scale before using the invented health-related rows in a model. | [⬇️ Lesson ZIP](sample_code_folder/337-practice-2-11-feature-scaling.zip) |
+| 337 - Feature scaling **Practice** | Put the numerical inputs on a common scale before using the invented health-related rows in a model. | [Lesson ZIP](sample_code_folder/337-practice-2-11-feature-scaling.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Inspect the numeric range or pixel range and follow the scaling step in the lab.
 
@@ -5895,7 +9296,21 @@ Inspect the numeric range or pixel range and follow the scaling step in the lab.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Categorical encoding **Practice** | Turn categories in the invented health-related rows into numbers the model can read. | [⬇️ Lesson ZIP](sample_code_folder/338-practice-2-11-categorical-encoding.zip) |
+| 338 - Category encoding **Practice** | Turn categories in the invented health-related rows into numbers the model can read. | [Lesson ZIP](sample_code_folder/338-practice-2-11-categorical-encoding.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Inspect the encoded fields and check how the model receives categories or class labels.
 
@@ -5905,7 +9320,21 @@ Inspect the encoded fields and check how the model receives categories or class 
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Outliers **Practice** | Look for unusual measurements in the invented health-related rows and see which rows need checking. | [⬇️ Lesson ZIP](sample_code_folder/339-practice-2-11-outliers.zip) |
+| 339 - Outliers **Practice** | Look for unusual measurements in the invented health-related rows and see which rows need checking. | [Lesson ZIP](sample_code_folder/339-practice-2-11-outliers.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Review the extreme values or pixel range. Decide whether each flagged value is possible.
 
@@ -5945,10 +9374,10 @@ Field  Rows to review
 age               0
 ```
 
-**🧪 Change one input.** Change an input in new_inputs.csv. Compare the predictions with the held-out check above.
+**Your small change.** Change an input in new_inputs.csv. Compare the predictions with the held-out check above. Save the named CSV before running again.
 
 
-**💡 Takeaway.** Synthetic labels demonstrate preprocessing and classification. They have no clinical use.
+**💡 Takeaway.** Made-up labels demonstrate preprocessing and classification. They have no clinical use.
 
 <a id="source-11"></a>
 
@@ -5956,17 +9385,45 @@ age               0
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Source **Reference** | Read the dataset name from the PDF and inspect the invented health-related rows used in this exercise. | [⬇️ Lesson ZIP](sample_code_folder/340-source-11.zip) |
+| 340 - Source **Reference** | Read the dataset name from the PDF and inspect the invented health-related rows used in this exercise. | [Lesson ZIP](sample_code_folder/340-source-11.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Original practice data created for this workbook.
 
 <a id="2-12-fashion-mnist"></a>
 
-### 👕 2.12. Fashion MNIST
+### 👕 2.12. Hand-drawn clothing shapes
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 2.12. Fashion MNIST **Practice** | Use pixels in each drawing from hand-drawn clothing shapes to estimate clothing type. | [⬇️ Lesson ZIP](sample_code_folder/341-2-12-fashion-mnist.zip) |
+| 341 - Hand-drawn clothing shapes **Practice** | Use pixels in each drawing from hand-drawn clothing shapes to estimate clothing type. | [Lesson ZIP](sample_code_folder/341-2-12-fashion-mnist.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 <a id="description-12"></a>
 
@@ -5974,7 +9431,21 @@ Original practice data created for this workbook.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Description **Reference** | Inspect the columns in the hand-drawn clothing shapes and see what each row represents. | [⬇️ Lesson ZIP](sample_code_folder/342-description-12.zip) |
+| 342 - Description **Reference** | Inspect the columns in the hand-drawn clothing shapes and see what each row represents. | [Lesson ZIP](sample_code_folder/342-description-12.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Classify newly drawn clothing glyphs. Each shape below uses workbook-designed pixels.
 
@@ -5984,7 +9455,21 @@ Classify newly drawn clothing glyphs. Each shape below uses workbook-designed pi
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Practice **Practice** | Use pixels in each drawing from hand-drawn clothing shapes to estimate clothing type. | [⬇️ Lesson ZIP](sample_code_folder/343-practice-12.zip) |
+| 343 - Practice **Practice** | Use pixels in each drawing from hand-drawn clothing shapes to estimate clothing type. | [Lesson ZIP](sample_code_folder/343-practice-12.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 <a id="practice-2-12-resizing"></a>
 
@@ -5992,7 +9477,21 @@ Classify newly drawn clothing glyphs. Each shape below uses workbook-designed pi
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Resizing **Practice** | Resize one clothing drawing and check its dimensions and pixel count. | [⬇️ Lesson ZIP](sample_code_folder/344-practice-2-12-resizing.zip) |
+| 344 - Resizing **Practice** | Resize one clothing drawing and check its dimensions and pixel count. | [Lesson ZIP](sample_code_folder/344-practice-2-12-resizing.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 **✅ Try the dedicated task.** Change side from 8 to 10 and check the output for a 10 by 10 image and 100 pixels.
 
@@ -6004,7 +9503,21 @@ Print the original shape and watch the grid change before expanding it into feat
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Normalization **Practice** | Put the pixels on a common scale before using the hand-drawn clothing shapes in a model. | [⬇️ Lesson ZIP](sample_code_folder/345-practice-2-12-normalization.zip) |
+| 345 - Normalization **Practice** | Put the pixels on a common scale before using the hand-drawn clothing shapes in a model. | [Lesson ZIP](sample_code_folder/345-practice-2-12-normalization.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Check the 0–1 scaling step used in the relevant model.
 
@@ -6014,7 +9527,21 @@ Check the 0–1 scaling step used in the relevant model.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| One-hot encoding **Practice** | Turn categories in the hand-drawn clothing shapes into numbers the model can read. | [⬇️ Lesson ZIP](sample_code_folder/346-practice-2-12-one-hot-encoding.zip) |
+| 346 - One-hot encoding **Practice** | Turn categories in the hand-drawn clothing shapes into numbers the model can read. | [Lesson ZIP](sample_code_folder/346-practice-2-12-one-hot-encoding.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Print the indicator row for a sample clothing label.
 
@@ -6024,13 +9551,27 @@ Print the indicator row for a sample clothing label.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Flattening **Practice** | Flatten one clothing drawing and reconstruct the original pixel grid. | [⬇️ Lesson ZIP](sample_code_folder/347-practice-2-12-flattening.zip) |
+| 347 - Flattening **Practice** | Flatten one clothing drawing and reconstruct the original pixel grid. | [Lesson ZIP](sample_code_folder/347-practice-2-12-flattening.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 **✅ Try the dedicated task.** A 5 by 5 drawing becomes 25 values. Change order from C to F, compare the first ten values, and verify that reconstruction still works.
 
 Check that each image becomes one row with one entry per pixel.
 
-Check the raw grid and pixel range, resize a copy, normalize intensities to 0–1, flatten the image, and predict held-out labels. Print a one-hot target separately.
+Check the raw grid and pixel range, resize a copy, normalize intensities to 0–1, flatten the image, and predict kept-back labels. Print a one-hot target separately.
 
 Create the glyph dataset in Python and use it in a model.
 
@@ -6061,7 +9602,7 @@ Blank images to inspect: 0
 Model-input shape: (3, 64)
 ```
 
-**🧪 Change one input.** Edit new_inputs.csv. Within a picture, # is an on pixel, a dot is an off pixel, and / starts the next row.
+**Your small change.** Change order from C to F. The first ten entries should change while the recovered grid remains the same. Save the named CSV before running again.
 
 
 **💡 Takeaway.** Resizing changes the grid. Flattening changes its representation. Keep the grid for a model that uses spatial features.
@@ -6072,17 +9613,45 @@ Model-input shape: (3, 64)
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Source **Reference** | Read the dataset name from the PDF and inspect the hand-drawn clothing shapes used in this exercise. | [⬇️ Lesson ZIP](sample_code_folder/348-source-12.zip) |
+| 348 - Source **Reference** | Read the dataset name from the PDF and inspect the hand-drawn clothing shapes used in this exercise. | [Lesson ZIP](sample_code_folder/348-source-12.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Original practice data created for this workbook.
 
 <a id="2-13-google-play-store-dataset"></a>
 
-### 📱 2.13. Google Play Store Dataset
+### 📱 2.13. Invented app listings
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 2.13. Google Play Store Dataset **Practice** | Use price, rating and category from invented app listings to estimate install count. | [⬇️ Lesson ZIP](sample_code_folder/349-2-13-google-play-store-dataset.zip) |
+| 349 - Invented app listings **Practice** | Use price, rating and category from invented app listings to estimate install count. | [Lesson ZIP](sample_code_folder/349-2-13-google-play-store-dataset.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 <a id="description-13"></a>
 
@@ -6090,7 +9659,21 @@ Original practice data created for this workbook.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Description **Reference** | Inspect the columns in the invented app listings and see what each row represents. | [⬇️ Lesson ZIP](sample_code_folder/350-description-13.zip) |
+| 350 - Description **Reference** | Inspect the columns in the invented app listings and see what each row represents. | [Lesson ZIP](sample_code_folder/350-description-13.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Analyze fictional app listings with app name, category, rating, price, and install count.
 
@@ -6100,7 +9683,21 @@ Analyze fictional app listings with app name, category, rating, price, and insta
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Practice **Practice** | Use price, rating and category from invented app listings to estimate install count. | [⬇️ Lesson ZIP](sample_code_folder/351-practice-13.zip) |
+| 351 - Practice **Practice** | Use price, rating and category from invented app listings to estimate install count. | [Lesson ZIP](sample_code_folder/351-practice-13.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 <a id="practice-2-13-categorical-encoding"></a>
 
@@ -6108,7 +9705,21 @@ Analyze fictional app listings with app name, category, rating, price, and insta
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Categorical encoding **Practice** | Turn categories in the invented app listings into numbers the model can read. | [⬇️ Lesson ZIP](sample_code_folder/352-practice-2-13-categorical-encoding.zip) |
+| 352 - Category encoding **Practice** | Turn categories in the invented app listings into numbers the model can read. | [Lesson ZIP](sample_code_folder/352-practice-2-13-categorical-encoding.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Inspect the encoded fields and check how the model receives categories or class labels.
 
@@ -6118,7 +9729,21 @@ Inspect the encoded fields and check how the model receives categories or class 
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Missing values **Practice** | Find missing entries in the invented app listings and see how the example prepares them for a model. | [⬇️ Lesson ZIP](sample_code_folder/353-practice-2-13-missing-values.zip) |
+| 353 - Missing values **Practice** | Find missing entries in the invented app listings and see how the example prepares them for a model. | [Lesson ZIP](sample_code_folder/353-practice-2-13-missing-values.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Run the sample and inspect the missing-value handling before fitting.
 
@@ -6128,7 +9753,21 @@ Run the sample and inspect the missing-value handling before fitting.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Outliers **Practice** | Look for unusual measurements in the invented app listings and see which rows need checking. | [⬇️ Lesson ZIP](sample_code_folder/354-practice-2-13-outliers.zip) |
+| 354 - Outliers **Practice** | Look for unusual measurements in the invented app listings and see which rows need checking. | [Lesson ZIP](sample_code_folder/354-practice-2-13-outliers.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Review the extreme values or pixel range. Decide whether each flagged value is possible.
 
@@ -6165,10 +9804,10 @@ name  price  installs
 Plan     35     80000
 ```
 
-**🧪 Change one input.** Change price to $5 in new_inputs.csv. Run the same command and compare the result.
+**Your small change.** Change price to $5 in new_inputs.csv. Run the same command and compare the result. Save the named CSV before running again.
 
 
-**💡 Takeaway.** The synthetic 80,000-install listing dominates this tiny fit. Compare errors before trusting an extreme prediction or deciding whether to transform the target.
+**💡 Takeaway.** The made-up 80,000-install listing dominates this tiny fit. Compare errors before trusting an extreme prediction or deciding whether to transform the target.
 
 <a id="source-13"></a>
 
@@ -6176,7 +9815,21 @@ Plan     35     80000
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Source **Reference** | Read the dataset name from the PDF and inspect the invented app listings used in this exercise. | [⬇️ Lesson ZIP](sample_code_folder/355-source-13.zip) |
+| 355 - Source **Reference** | Read the dataset name from the PDF and inspect the invented app listings used in this exercise. | [Lesson ZIP](sample_code_folder/355-source-13.zip) |
+
+**Before this lesson.** Finish the main preparation and checking modules.
+
+**In simple words.** These are small invented practice datasets. Their old famous-dataset headings are historical labels. Use training rows to learn preparation and keep the check rows separate.
+
+**Guess first.** Do two correct examples prove that the model will work for a real population? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. They show the calculation. Check more suitable data and describe what is missing.
+
+</details>
+
 
 Original practice data created for this workbook.
 
@@ -6186,7 +9839,21 @@ Original practice data created for this workbook.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 3. Machine Learning Categories **Practice** | Try a delivery prediction, then explore the other types of learning. | [⬇️ Lesson ZIP](sample_code_folder/356-3-machine-learning-categories.zip) |
+| 356 - 3. Machine Learning Categories **Practice** | Try a delivery prediction, then explore the other types of learning. | [Lesson ZIP](sample_code_folder/356-3-machine-learning-categories.zip) |
+
+**Before this lesson.** Finish the main path through overfitting and validation.
+
+**In simple words.** Different algorithms learn different rules. The catalog is practice, not a leaderboard for choosing from final test scores. Use a common validation comparison for your own choice.
+
+**Guess first.** Should you choose a model by opening many final test results? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Use validation first, then one final check.
+
+</details>
+
 
 **📌 Before you start.** Know the difference between a prediction, a label, and feedback from an action.
 
@@ -6196,7 +9863,21 @@ Original practice data created for this workbook.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 3.1. Supervised Learning **Practice** | Use deliveries with known times to train and check a model. | [⬇️ Lesson ZIP](sample_code_folder/357-3-1-supervised-learning.zip) |
+| 357 - 3.1. Supervised Learning **Practice** | Use deliveries with known times to train and check a model. | [Lesson ZIP](sample_code_folder/357-3-1-supervised-learning.zip) |
+
+**Before this lesson.** Finish the main path through overfitting and validation.
+
+**In simple words.** Different algorithms learn different rules. The catalog is practice, not a leaderboard for choosing from final test scores. Use a common validation comparison for your own choice.
+
+**Guess first.** Should you choose a model by opening many final test results? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Use validation first, then one final check.
+
+</details>
+
 
 ![Read completed trips. Distance, weight and measured time. → Teach the model. Provide the inputs and measured answer for every training trip. → Try a new trip. Enter a new distance and weight and read the estimate.](workbook-figures/supervised-model-steps-mobile.png)
 
@@ -6210,7 +9891,21 @@ Original practice data created for this workbook.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Common Algorithms **Practice** | Fit a first supervised model and use the following lessons to try other algorithms. | [⬇️ Lesson ZIP](sample_code_folder/358-common-algorithms.zip) |
+| 358 - Common Algorithms **Practice** | Train a first supervised model and use the following lessons to try other algorithms. | [Lesson ZIP](sample_code_folder/358-common-algorithms.zip) |
+
+**Before this lesson.** Finish the main path through overfitting and validation.
+
+**In simple words.** Different algorithms learn different rules. The catalog is practice, not a leaderboard for choosing from final test scores. Use a common validation comparison for your own choice.
+
+**Guess first.** Should you choose a model by opening many final test results? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Use validation first, then one final check.
+
+</details>
+
 
 <a id="regression-algorithms"></a>
 
@@ -6218,7 +9913,21 @@ Original practice data created for this workbook.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Regression Algorithms **Practice** | Use known delivery times to learn how to predict a number. | [⬇️ Lesson ZIP](sample_code_folder/359-regression-algorithms.zip) |
+| 359 - Regression Algorithms **Practice** | Use known delivery times to learn how to predict a number. | [Lesson ZIP](sample_code_folder/359-regression-algorithms.zip) |
+
+**Before this lesson.** Finish the main path through overfitting and validation.
+
+**In simple words.** Different algorithms learn different rules. The catalog is practice, not a leaderboard for choosing from final test scores. Use a common validation comparison for your own choice.
+
+**Guess first.** Should you choose a model by opening many final test results? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Use validation first, then one final check.
+
+</details>
+
 
 <a id="linear-regression"></a>
 
@@ -6226,7 +9935,21 @@ Original practice data created for this workbook.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Linear Regression **Practice** | Fit a line to distance and weight and estimate delivery minutes. | [⬇️ Lesson ZIP](sample_code_folder/360-linear-regression.zip) |
+| 360 - Linear Regression **Practice** | Train a line to distance and weight and estimate delivery minutes. | [Lesson ZIP](sample_code_folder/360-linear-regression.zip) |
+
+**Before this lesson.** Finish the main path through overfitting and validation.
+
+**In simple words.** Different algorithms learn different rules. The catalog is practice, not a leaderboard for choosing from final test scores. Use a common validation comparison for your own choice.
+
+**Guess first.** Should you choose a model by opening many final test results? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Use validation first, then one final check.
+
+</details>
+
 
 **🎯 Goal.** How many minutes will this delivery take? Give the model distance, weight, and known times in training. Compare predictions with the actual times on rows set aside for checking.
 
@@ -6250,13 +9973,13 @@ Original practice data created for this workbook.
 4. Compare predictions with the measured answers in the check rows.
 5. Apply the fitted model to the new CSV rows and print a result for each row.
 
-**✅ Check.** Find the new 5 km, 2 kg delivery. Its estimated time is 22.02 minutes. The held-out mean absolute error (MAE) is 1.26 minutes.
+**✅ Check.** Find the new 5 km, 2 kg delivery. Its estimated time is 22.02 minutes. The kept-back mean absolute error (MAE) is 1.26 minutes.
 
 | Distance | Weight | Estimated time |
 | ---: | ---: | ---: |
 | 5 km | 2 kg | 22.02 minutes |
 
-**🧪 Change one input.** Change km or kg in new_inputs.csv. The model is trained on sample.csv. The new rows only receive predictions.
+**Your small change.** Change km or kg in new_inputs.csv. The model is trained on sample.csv. The new rows only receive predictions. Save the named CSV before running again.
 
 
 <a id="ridge-lasso-regression"></a>
@@ -6265,7 +9988,21 @@ Original practice data created for this workbook.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Ridge/Lasso Regression **Practice** | Compare two ways to keep a regression model from putting too much weight on an input. | [⬇️ Lesson ZIP](sample_code_folder/361-ridge-lasso-regression.zip) |
+| 361 - Ridge/Lasso Regression **Practice** | Compare two ways to keep a regression model from putting too much weight on an input. | [Lesson ZIP](sample_code_folder/361-ridge-lasso-regression.zip) |
+
+**Before this lesson.** Finish the main path through overfitting and validation.
+
+**In simple words.** Different algorithms learn different rules. The catalog is practice, not a leaderboard for choosing from final test scores. Use a common validation comparison for your own choice.
+
+**Guess first.** Should you choose a model by opening many final test results? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Use validation first, then one final check.
+
+</details>
+
 
 **🎯 Goal.** How many minutes will this delivery take? Give the model distance, weight, and known times in training. Compare predictions with the actual times on rows set aside for checking.
 
@@ -6294,7 +10031,7 @@ Original practice data created for this workbook.
 | ---: | ---: | ---: |
 | 5 km | 2 kg | 22.05 minutes |
 
-**🧪 Change one input.** Change km or kg in new_inputs.csv. The model is trained on sample.csv. The new rows only receive predictions.
+**Your small change.** Change km or kg in new_inputs.csv. The model is trained on sample.csv. The new rows only receive predictions. Save the named CSV before running again.
 
 
 <a id="polynomial-regression"></a>
@@ -6303,7 +10040,21 @@ Original practice data created for this workbook.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Polynomial Regression **Practice** | Add curved input terms to a model that predicts delivery time. | [⬇️ Lesson ZIP](sample_code_folder/364-polynomial-regression.zip) |
+| 364 - Polynomial Regression **Practice** | Add curved input terms to a model that predicts delivery time. | [Lesson ZIP](sample_code_folder/364-polynomial-regression.zip) |
+
+**Before this lesson.** Finish the main path through overfitting and validation.
+
+**In simple words.** Different algorithms learn different rules. The catalog is practice, not a leaderboard for choosing from final test scores. Use a common validation comparison for your own choice.
+
+**Guess first.** Should you choose a model by opening many final test results? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Use validation first, then one final check.
+
+</details>
+
 
 **🎯 Goal.** How many minutes will this delivery take? Give the model distance, weight, and known times in training. Compare predictions with the actual times on rows set aside for checking.
 
@@ -6326,13 +10077,13 @@ Original practice data created for this workbook.
 3. Read the new CSV rows, then apply the rules from the sample.
 4. Give each method the same practice data so you can compare the results.
 
-**✅ Check.** Find the new 5 km, 2 kg delivery. Its estimated time is 26.01 minutes. The held-out mean absolute error (MAE) is 1.66 minutes.
+**✅ Check.** Find the new 5 km, 2 kg delivery. Its estimated time is 26.01 minutes. The kept-back mean absolute error (MAE) is 1.66 minutes.
 
 | Distance | Weight | Estimated time |
 | ---: | ---: | ---: |
 | 5 km | 2 kg | 26.01 minutes |
 
-**🧪 Change one input.** Change km or kg in new_inputs.csv. The model is trained on sample.csv. The new rows only receive predictions.
+**Your small change.** Change km or kg in new_inputs.csv. The model is trained on sample.csv. The new rows only receive predictions. Save the named CSV before running again.
 
 
 <a id="support-vector-regression-svr"></a>
@@ -6341,7 +10092,21 @@ Original practice data created for this workbook.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Support Vector Regression (SVR) **Practice** | Use support vector regression to estimate a numeric delivery time. | [⬇️ Lesson ZIP](sample_code_folder/365-support-vector-regression-svr.zip) |
+| 365 - Support Vector Regression (SVR) **Practice** | Use support vector regression to estimate a numeric delivery time. | [Lesson ZIP](sample_code_folder/365-support-vector-regression-svr.zip) |
+
+**Before this lesson.** Finish the main path through overfitting and validation.
+
+**In simple words.** Different algorithms learn different rules. The catalog is practice, not a leaderboard for choosing from final test scores. Use a common validation comparison for your own choice.
+
+**Guess first.** Should you choose a model by opening many final test results? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Use validation first, then one final check.
+
+</details>
+
 
 **🎯 Goal.** How many minutes will this delivery take? Give the model distance, weight, and known times in training. Compare predictions with the actual times on rows set aside for checking.
 
@@ -6365,13 +10130,13 @@ Original practice data created for this workbook.
 4. Compare predictions with the measured answers in the check rows.
 5. Apply the fitted model to the new CSV rows and print a result for each row.
 
-**✅ Check.** Find the new 5 km, 2 kg delivery. Its estimated time is 32.28 minutes. The held-out mean absolute error (MAE) is 1.82 minutes.
+**✅ Check.** Find the new 5 km, 2 kg delivery. Its estimated time is 32.28 minutes. The kept-back mean absolute error (MAE) is 1.82 minutes.
 
 | Distance | Weight | Estimated time |
 | ---: | ---: | ---: |
 | 5 km | 2 kg | 32.28 minutes |
 
-**🧪 Change one input.** Change km or kg in new_inputs.csv. The model is trained on sample.csv. The new rows only receive predictions.
+**Your small change.** Change km or kg in new_inputs.csv. The model is trained on sample.csv. The new rows only receive predictions. Save the named CSV before running again.
 
 
 <a id="decision-trees-for-regression"></a>
@@ -6380,7 +10145,21 @@ Original practice data created for this workbook.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Decision Trees (for Regression) **Practice** | Split deliveries by conditions on distance and weight to predict minutes. | [⬇️ Lesson ZIP](sample_code_folder/366-decision-trees-for-regression.zip) |
+| 366 - Decision Trees (for Regression) **Practice** | Split deliveries by conditions on distance and weight to predict minutes. | [Lesson ZIP](sample_code_folder/366-decision-trees-for-regression.zip) |
+
+**Before this lesson.** Finish the main path through overfitting and validation.
+
+**In simple words.** Different algorithms learn different rules. The catalog is practice, not a leaderboard for choosing from final test scores. Use a common validation comparison for your own choice.
+
+**Guess first.** Should you choose a model by opening many final test results? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Use validation first, then one final check.
+
+</details>
+
 
 **🎯 Goal.** How many minutes will this delivery take? Give the model distance, weight, and known times in training. Compare predictions with the actual times on rows set aside for checking.
 
@@ -6404,13 +10183,13 @@ Original practice data created for this workbook.
 4. Compare predictions with the measured answers in the check rows.
 5. Apply the fitted model to the new CSV rows and print a result for each row.
 
-**✅ Check.** Find the new 5 km, 2 kg delivery. Its estimated time is 22.75 minutes. The held-out mean absolute error (MAE) is 5.52 minutes.
+**✅ Check.** Find the new 5 km, 2 kg delivery. Its estimated time is 22.75 minutes. The kept-back mean absolute error (MAE) is 5.52 minutes.
 
 | Distance | Weight | Estimated time |
 | ---: | ---: | ---: |
 | 5 km | 2 kg | 22.75 minutes |
 
-**🧪 Change one input.** Change km or kg in new_inputs.csv. The model is trained on sample.csv. The new rows only receive predictions.
+**Your small change.** Change km or kg in new_inputs.csv. The model is trained on sample.csv. The new rows only receive predictions. Save the named CSV before running again.
 
 
 <a id="random-forest-for-regression"></a>
@@ -6419,7 +10198,21 @@ Original practice data created for this workbook.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Random Forest (for Regression) **Practice** | Average the predictions of several trees for a delivery. | [⬇️ Lesson ZIP](sample_code_folder/367-random-forest-for-regression.zip) |
+| 367 - Random Forest (for Regression) **Practice** | Average the predictions of several trees for a delivery. | [Lesson ZIP](sample_code_folder/367-random-forest-for-regression.zip) |
+
+**Before this lesson.** Finish the main path through overfitting and validation.
+
+**In simple words.** Different algorithms learn different rules. The catalog is practice, not a leaderboard for choosing from final test scores. Use a common validation comparison for your own choice.
+
+**Guess first.** Should you choose a model by opening many final test results? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Use validation first, then one final check.
+
+</details>
+
 
 **🎯 Goal.** How many minutes will this delivery take? Give the model distance, weight, and known times in training. Compare predictions with the actual times on rows set aside for checking.
 
@@ -6443,13 +10236,13 @@ Original practice data created for this workbook.
 4. Compare predictions with the measured answers in the check rows.
 5. Apply the fitted model to the new CSV rows and print a result for each row.
 
-**✅ Check.** Find the new 5 km, 2 kg delivery. Its estimated time is 28.12 minutes. The held-out mean absolute error (MAE) is 5.05 minutes.
+**✅ Check.** Find the new 5 km, 2 kg delivery. Its estimated time is 28.12 minutes. The kept-back mean absolute error (MAE) is 5.05 minutes.
 
 | Distance | Weight | Estimated time |
 | ---: | ---: | ---: |
 | 5 km | 2 kg | 28.12 minutes |
 
-**🧪 Change one input.** Change km or kg in new_inputs.csv. The model is trained on sample.csv. The new rows only receive predictions.
+**Your small change.** Change km or kg in new_inputs.csv. The model is trained on sample.csv. The new rows only receive predictions. Save the named CSV before running again.
 
 
 <a id="gradient-boosting-gbm"></a>
@@ -6458,7 +10251,21 @@ Original practice data created for this workbook.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Gradient Boosting (GBM) **Practice** | Fit trees in sequence so later trees can correct earlier time errors. | [⬇️ Lesson ZIP](sample_code_folder/368-gradient-boosting-gbm.zip) |
+| 368 - Gradient Boosting (GBM) **Practice** | Fit trees in sequence so later trees can correct earlier time errors. | [Lesson ZIP](sample_code_folder/368-gradient-boosting-gbm.zip) |
+
+**Before this lesson.** Finish the main path through overfitting and validation.
+
+**In simple words.** Different algorithms learn different rules. The catalog is practice, not a leaderboard for choosing from final test scores. Use a common validation comparison for your own choice.
+
+**Guess first.** Should you choose a model by opening many final test results? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Use validation first, then one final check.
+
+</details>
+
 
 **🎯 Goal.** How many minutes will this delivery take? Give the model distance, weight, and known times in training. Compare predictions with the actual times on rows set aside for checking.
 
@@ -6482,13 +10289,13 @@ Original practice data created for this workbook.
 4. Compare predictions with the measured answers in the check rows.
 5. Apply the fitted model to the new CSV rows and print a result for each row.
 
-**✅ Check.** Find the new 5 km, 2 kg delivery. Its estimated time is 25.10 minutes. The held-out mean absolute error (MAE) is 3.99 minutes.
+**✅ Check.** Find the new 5 km, 2 kg delivery. Its estimated time is 25.10 minutes. The kept-back mean absolute error (MAE) is 3.99 minutes.
 
 | Distance | Weight | Estimated time |
 | ---: | ---: | ---: |
 | 5 km | 2 kg | 25.10 minutes |
 
-**🧪 Change one input.** Change km or kg in new_inputs.csv. The model is trained on sample.csv. The new rows only receive predictions.
+**Your small change.** Change km or kg in new_inputs.csv. The model is trained on sample.csv. The new rows only receive predictions. Save the named CSV before running again.
 
 
 <a id="xgboost"></a>
@@ -6497,7 +10304,21 @@ Original practice data created for this workbook.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| XGBoost **Practice** | Use XGBoost to predict delivery time and check the error in minutes. | [⬇️ Lesson ZIP](sample_code_folder/369-xgboost.zip) |
+| 369 - XGBoost **Practice** | Use XGBoost to predict delivery time and check the error in minutes. | [Lesson ZIP](sample_code_folder/369-xgboost.zip) |
+
+**Before this lesson.** Finish the main path through overfitting and validation.
+
+**In simple words.** Different algorithms learn different rules. The catalog is practice, not a leaderboard for choosing from final test scores. Use a common validation comparison for your own choice.
+
+**Guess first.** Should you choose a model by opening many final test results? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Use validation first, then one final check.
+
+</details>
+
 
 **🎯 Goal.** How many minutes will this delivery take? Give the model distance, weight, and known times in training. Compare predictions with the actual times on rows set aside for checking.
 
@@ -6521,13 +10342,13 @@ Original practice data created for this workbook.
 4. Compare predictions with the measured answers in the check rows.
 5. Apply the fitted model to the new CSV rows and print a result for each row.
 
-**✅ Check.** Find the new 5 km, 2 kg delivery. Its estimated time is 22.84 minutes. The held-out mean absolute error (MAE) is 5.71 minutes.
+**✅ Check.** Find the new 5 km, 2 kg delivery. Its estimated time is 22.84 minutes. The kept-back mean absolute error (MAE) is 5.71 minutes.
 
 | Distance | Weight | Estimated time |
 | ---: | ---: | ---: |
 | 5 km | 2 kg | 22.84 minutes |
 
-**🧪 Change one input.** Change km or kg in new_inputs.csv. The model is trained on sample.csv. The new rows only receive predictions.
+**Your small change.** Change km or kg in new_inputs.csv. The model is trained on sample.csv. The new rows only receive predictions. Save the named CSV before running again.
 
 
 <a id="lightgbm"></a>
@@ -6536,7 +10357,21 @@ Original practice data created for this workbook.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| LightGBM **Practice** | Use LightGBM to predict delivery time and read the held-out error. | [⬇️ Lesson ZIP](sample_code_folder/370-lightgbm.zip) |
+| 370 - LightGBM **Practice** | Use LightGBM to predict delivery time and read the kept-back error. | [Lesson ZIP](sample_code_folder/370-lightgbm.zip) |
+
+**Before this lesson.** Finish the main path through overfitting and validation.
+
+**In simple words.** Different algorithms learn different rules. The catalog is practice, not a leaderboard for choosing from final test scores. Use a common validation comparison for your own choice.
+
+**Guess first.** Should you choose a model by opening many final test results? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Use validation first, then one final check.
+
+</details>
+
 
 **🎯 Goal.** How many minutes will this delivery take? Give the model distance, weight, and known times in training. Compare predictions with the actual times on rows set aside for checking.
 
@@ -6559,13 +10394,13 @@ Original practice data created for this workbook.
 3. Read the new CSV rows, then apply the rules from the sample.
 4. Give each method the same practice data so you can compare the results.
 
-**✅ Check.** Find the new 5 km, 2 kg delivery. Its estimated time is 28.51 minutes. The held-out mean absolute error (MAE) is 5.03 minutes.
+**✅ Check.** Find the new 5 km, 2 kg delivery. Its estimated time is 28.51 minutes. The kept-back mean absolute error (MAE) is 5.03 minutes.
 
 | Distance | Weight | Estimated time |
 | ---: | ---: | ---: |
 | 5 km | 2 kg | 28.51 minutes |
 
-**🧪 Change one input.** Change km or kg in new_inputs.csv. The model is trained on sample.csv. The new rows only receive predictions.
+**Your small change.** Change km or kg in new_inputs.csv. The model is trained on sample.csv. The new rows only receive predictions. Save the named CSV before running again.
 
 
 <a id="classification-algorithms"></a>
@@ -6574,7 +10409,21 @@ Original practice data created for this workbook.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Classification Algorithms **Practice** | Use known late or on-time answers to predict a category for a new delivery. | [⬇️ Lesson ZIP](sample_code_folder/371-classification-algorithms.zip) |
+| 371 - Classification Algorithms **Practice** | Use known late or on-time answers to predict a category for a new delivery. | [Lesson ZIP](sample_code_folder/371-classification-algorithms.zip) |
+
+**Before this lesson.** Finish the main path through overfitting and validation.
+
+**In simple words.** Different algorithms learn different rules. The catalog is practice, not a leaderboard for choosing from final test scores. Use a common validation comparison for your own choice.
+
+**Guess first.** Should you choose a model by opening many final test results? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Use validation first, then one final check.
+
+</details>
+
 
 <a id="logistic-regression"></a>
 
@@ -6582,7 +10431,21 @@ Original practice data created for this workbook.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Logistic Regression **Practice** | Estimate whether a delivery will be late from its distance and weight. | [⬇️ Lesson ZIP](sample_code_folder/372-logistic-regression.zip) |
+| 372 - Logistic Regression **Practice** | Estimate whether a delivery will be late from its distance and weight. | [Lesson ZIP](sample_code_folder/372-logistic-regression.zip) |
+
+**Before this lesson.** Finish the main path through overfitting and validation.
+
+**In simple words.** Different algorithms learn different rules. The catalog is practice, not a leaderboard for choosing from final test scores. Use a common validation comparison for your own choice.
+
+**Guess first.** Should you choose a model by opening many final test results? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Use validation first, then one final check.
+
+</details>
+
 
 **🎯 Goal.** Was this delivery late? The inputs are distance and weight. The training answer is 1 for late and 0 for on time. Check the predictions on deliveries the model has not seen.
 
@@ -6605,7 +10468,7 @@ Original practice data created for this workbook.
 3. Teach the model from the training inputs and whether the delivery was late.
 4. Apply the fitted model to the new CSV rows and print a result for each row.
 
-**✅ Check.** This synthetic test has accuracy 1.0. Compare each example prediction with the answer at the same position. The example lines below only preview the test.
+**✅ Check.** This made-up test has accuracy 1.0. Compare each example prediction with the answer at the same position. The example lines below only preview the test.
 
 | Measure | Result |
 | --- | --- |
@@ -6613,7 +10476,7 @@ Original practice data created for this workbook.
 | Predicted classes (preview) | `[0, 1, 0, 1]` |
 | Actual classes (preview) | `[0, 1, 0, 1]` |
 
-**🧪 Change one input.** Change km or kg in new_inputs.csv. The model is trained on sample.csv. The new rows only receive predictions.
+**Your small change.** Change km or kg in new_inputs.csv. The model is trained on sample.csv. The new rows only receive predictions. Save the named CSV before running again.
 
 
 <a id="k-nearest-neighbors-knn"></a>
@@ -6622,7 +10485,21 @@ Original practice data created for this workbook.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| K-Nearest Neighbors (KNN) **Practice** | Look at nearby deliveries with known answers to predict late or on time. | [⬇️ Lesson ZIP](sample_code_folder/373-k-nearest-neighbors-knn.zip) |
+| 373 - K-Nearest Neighbors (KNN) **Practice** | Look at nearby deliveries with known answers to predict late or on time. | [Lesson ZIP](sample_code_folder/373-k-nearest-neighbors-knn.zip) |
+
+**Before this lesson.** Finish the main path through overfitting and validation.
+
+**In simple words.** Different algorithms learn different rules. The catalog is practice, not a leaderboard for choosing from final test scores. Use a common validation comparison for your own choice.
+
+**Guess first.** Should you choose a model by opening many final test results? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Use validation first, then one final check.
+
+</details>
+
 
 **🎯 Goal.** Was this delivery late? The inputs are distance and weight. The training answer is 1 for late and 0 for on time. Check the predictions on deliveries the model has not seen.
 
@@ -6645,7 +10522,7 @@ Original practice data created for this workbook.
 3. Teach the model from the training inputs and whether the delivery was late.
 4. Apply the fitted model to the new CSV rows and print a result for each row.
 
-**✅ Check.** This synthetic test has accuracy 1.0. Compare each example prediction with the answer at the same position. The example lines below only preview the test.
+**✅ Check.** This made-up test has accuracy 1.0. Compare each example prediction with the answer at the same position. The example lines below only preview the test.
 
 | Measure | Result |
 | --- | --- |
@@ -6653,7 +10530,7 @@ Original practice data created for this workbook.
 | Predicted classes (preview) | `[0, 1, 0, 1]` |
 | Actual classes (preview) | `[0, 1, 0, 1]` |
 
-**🧪 Change one input.** Change km or kg in new_inputs.csv. The model is trained on sample.csv. The new rows only receive predictions.
+**Your small change.** Change km or kg in new_inputs.csv. The model is trained on sample.csv. The new rows only receive predictions. Save the named CSV before running again.
 
 
 <a id="support-vector-machines-svm"></a>
@@ -6662,7 +10539,21 @@ Original practice data created for this workbook.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Support Vector Machines (SVM) **Practice** | Learn a boundary between late and on-time deliveries. | [⬇️ Lesson ZIP](sample_code_folder/374-support-vector-machines-svm.zip) |
+| 374 - Support Vector Machines (SVM) **Practice** | Learn a boundary between late and on-time deliveries. | [Lesson ZIP](sample_code_folder/374-support-vector-machines-svm.zip) |
+
+**Before this lesson.** Finish the main path through overfitting and validation.
+
+**In simple words.** Different algorithms learn different rules. The catalog is practice, not a leaderboard for choosing from final test scores. Use a common validation comparison for your own choice.
+
+**Guess first.** Should you choose a model by opening many final test results? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Use validation first, then one final check.
+
+</details>
+
 
 **🎯 Goal.** Was this delivery late? The inputs are distance and weight. The training answer is 1 for late and 0 for on time. Check the predictions on deliveries the model has not seen.
 
@@ -6685,7 +10576,7 @@ Original practice data created for this workbook.
 3. Teach the model from the training inputs and whether the delivery was late.
 4. Apply the fitted model to the new CSV rows and print a result for each row.
 
-**✅ Check.** This synthetic test has accuracy 1.0. Compare each example prediction with the answer at the same position. The example lines below only preview the test.
+**✅ Check.** This made-up test has accuracy 1.0. Compare each example prediction with the answer at the same position. The example lines below only preview the test.
 
 | Measure | Result |
 | --- | --- |
@@ -6693,7 +10584,7 @@ Original practice data created for this workbook.
 | Predicted classes (preview) | `[0, 1, 0, 1]` |
 | Actual classes (preview) | `[0, 1, 0, 1]` |
 
-**🧪 Change one input.** Change km or kg in new_inputs.csv. The model is trained on sample.csv. The new rows only receive predictions.
+**Your small change.** Change km or kg in new_inputs.csv. The model is trained on sample.csv. The new rows only receive predictions. Save the named CSV before running again.
 
 
 <a id="decision-trees-for-classification"></a>
@@ -6702,7 +10593,21 @@ Original practice data created for this workbook.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Decision Trees (for Classification) **Practice** | Use a tree of yes/no decisions to predict whether a delivery will be late. | [⬇️ Lesson ZIP](sample_code_folder/375-decision-trees-for-classification.zip) |
+| 375 - Decision Trees (for Classification) **Practice** | Use a tree of yes/no decisions to predict whether a delivery will be late. | [Lesson ZIP](sample_code_folder/375-decision-trees-for-classification.zip) |
+
+**Before this lesson.** Finish the main path through overfitting and validation.
+
+**In simple words.** Different algorithms learn different rules. The catalog is practice, not a leaderboard for choosing from final test scores. Use a common validation comparison for your own choice.
+
+**Guess first.** Should you choose a model by opening many final test results? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Use validation first, then one final check.
+
+</details>
+
 
 **🎯 Goal.** Was this delivery late? The inputs are distance and weight. The training answer is 1 for late and 0 for on time. Check the predictions on deliveries the model has not seen.
 
@@ -6725,7 +10630,7 @@ Original practice data created for this workbook.
 3. Teach the model from the training inputs and whether the delivery was late.
 4. Apply the fitted model to the new CSV rows and print a result for each row.
 
-**✅ Check.** This synthetic test has accuracy 1.0. Compare each example prediction with the answer at the same position. The example lines below only preview the test.
+**✅ Check.** This made-up test has accuracy 1.0. Compare each example prediction with the answer at the same position. The example lines below only preview the test.
 
 | Measure | Result |
 | --- | --- |
@@ -6733,7 +10638,7 @@ Original practice data created for this workbook.
 | Predicted classes (preview) | `[0, 1, 0, 1]` |
 | Actual classes (preview) | `[0, 1, 0, 1]` |
 
-**🧪 Change one input.** Change km or kg in new_inputs.csv. The model is trained on sample.csv. The new rows only receive predictions.
+**Your small change.** Change km or kg in new_inputs.csv. The model is trained on sample.csv. The new rows only receive predictions. Save the named CSV before running again.
 
 
 <a id="random-forest-for-classification"></a>
@@ -6742,7 +10647,21 @@ Original practice data created for this workbook.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Random Forest (for Classification) **Practice** | Combine votes from several trees to classify a new delivery. | [⬇️ Lesson ZIP](sample_code_folder/376-random-forest-for-classification.zip) |
+| 376 - Random Forest (for Classification) **Practice** | Combine votes from several trees to classify a new delivery. | [Lesson ZIP](sample_code_folder/376-random-forest-for-classification.zip) |
+
+**Before this lesson.** Finish the main path through overfitting and validation.
+
+**In simple words.** Different algorithms learn different rules. The catalog is practice, not a leaderboard for choosing from final test scores. Use a common validation comparison for your own choice.
+
+**Guess first.** Should you choose a model by opening many final test results? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Use validation first, then one final check.
+
+</details>
+
 
 **🎯 Goal.** Was this delivery late? The inputs are distance and weight. The training answer is 1 for late and 0 for on time. Check the predictions on deliveries the model has not seen.
 
@@ -6765,7 +10684,7 @@ Original practice data created for this workbook.
 3. Teach the model from the training inputs and whether the delivery was late.
 4. Apply the fitted model to the new CSV rows and print a result for each row.
 
-**✅ Check.** This synthetic test has accuracy 0.933. Compare each example prediction with the answer at the same position. The example lines below only preview the test.
+**✅ Check.** This made-up test has accuracy 0.933. Compare each example prediction with the answer at the same position. The example lines below only preview the test.
 
 | Measure | Result |
 | --- | --- |
@@ -6773,7 +10692,7 @@ Original practice data created for this workbook.
 | Predicted classes (preview) | `[1, 1, 0, 1]` |
 | Actual classes (preview) | `[0, 1, 0, 1]` |
 
-**🧪 Change one input.** Change km or kg in new_inputs.csv. The model is trained on sample.csv. The new rows only receive predictions.
+**Your small change.** Change km or kg in new_inputs.csv. The model is trained on sample.csv. The new rows only receive predictions. Save the named CSV before running again.
 
 
 <a id="naive-bayes"></a>
@@ -6782,7 +10701,21 @@ Original practice data created for this workbook.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Naive Bayes **Practice** | Use probabilities learned from known late and on-time deliveries. | [⬇️ Lesson ZIP](sample_code_folder/377-naive-bayes.zip) |
+| 377 - Naive Bayes **Practice** | Use probabilities learned from known late and on-time deliveries. | [Lesson ZIP](sample_code_folder/377-naive-bayes.zip) |
+
+**Before this lesson.** Finish the main path through overfitting and validation.
+
+**In simple words.** Different algorithms learn different rules. The catalog is practice, not a leaderboard for choosing from final test scores. Use a common validation comparison for your own choice.
+
+**Guess first.** Should you choose a model by opening many final test results? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Use validation first, then one final check.
+
+</details>
+
 
 **🎯 Goal.** Was this delivery late? The inputs are distance and weight. The training answer is 1 for late and 0 for on time. Check the predictions on deliveries the model has not seen.
 
@@ -6805,7 +10738,7 @@ Original practice data created for this workbook.
 3. Teach the model from the training inputs and whether the delivery was late.
 4. Apply the fitted model to the new CSV rows and print a result for each row.
 
-**✅ Check.** This synthetic test has accuracy 1.0. Compare each example prediction with the answer at the same position. The example lines below only preview the test.
+**✅ Check.** This made-up test has accuracy 1.0. Compare each example prediction with the answer at the same position. The example lines below only preview the test.
 
 | Measure | Result |
 | --- | --- |
@@ -6813,7 +10746,7 @@ Original practice data created for this workbook.
 | Predicted classes (preview) | `[0, 1, 0, 1]` |
 | Actual classes (preview) | `[0, 1, 0, 1]` |
 
-**🧪 Change one input.** Change km or kg in new_inputs.csv. The model is trained on sample.csv. The new rows only receive predictions.
+**Your small change.** Change km or kg in new_inputs.csv. The model is trained on sample.csv. The new rows only receive predictions. Save the named CSV before running again.
 
 
 <a id="gradient-boosting"></a>
@@ -6822,7 +10755,21 @@ Original practice data created for this workbook.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Gradient Boosting **Practice** | Add trees in sequence to correct the late/on-time model’s mistakes. | [⬇️ Lesson ZIP](sample_code_folder/378-gradient-boosting.zip) |
+| 378 - Gradient Boosting **Practice** | Add trees in sequence to correct the late/on-time model’s mistakes. | [Lesson ZIP](sample_code_folder/378-gradient-boosting.zip) |
+
+**Before this lesson.** Finish the main path through overfitting and validation.
+
+**In simple words.** Different algorithms learn different rules. The catalog is practice, not a leaderboard for choosing from final test scores. Use a common validation comparison for your own choice.
+
+**Guess first.** Should you choose a model by opening many final test results? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Use validation first, then one final check.
+
+</details>
+
 
 **🎯 Goal.** Was this delivery late? The inputs are distance and weight. The training answer is 1 for late and 0 for on time. Check the predictions on deliveries the model has not seen.
 
@@ -6845,7 +10792,7 @@ Original practice data created for this workbook.
 3. Teach the model from the training inputs and whether the delivery was late.
 4. Apply the fitted model to the new CSV rows and print a result for each row.
 
-**✅ Check.** This synthetic test has accuracy 1.0. Compare each example prediction with the answer at the same position. The example lines below only preview the test.
+**✅ Check.** This made-up test has accuracy 1.0. Compare each example prediction with the answer at the same position. The example lines below only preview the test.
 
 | Measure | Result |
 | --- | --- |
@@ -6853,7 +10800,7 @@ Original practice data created for this workbook.
 | Predicted classes (preview) | `[0, 1, 0, 1]` |
 | Actual classes (preview) | `[0, 1, 0, 1]` |
 
-**🧪 Change one input.** Change km or kg in new_inputs.csv. The model is trained on sample.csv. The new rows only receive predictions.
+**Your small change.** Change km or kg in new_inputs.csv. The model is trained on sample.csv. The new rows only receive predictions. Save the named CSV before running again.
 
 
 <a id="xgboost-2"></a>
@@ -6862,7 +10809,21 @@ Original practice data created for this workbook.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| XGBoost **Practice** | Use XGBoost to classify a delivery as late or on time. | [⬇️ Lesson ZIP](sample_code_folder/379-xgboost-2.zip) |
+| 379 - XGBoost **Practice** | Use XGBoost to classify a delivery as late or on time. | [Lesson ZIP](sample_code_folder/379-xgboost-2.zip) |
+
+**Before this lesson.** Finish the main path through overfitting and validation.
+
+**In simple words.** Different algorithms learn different rules. The catalog is practice, not a leaderboard for choosing from final test scores. Use a common validation comparison for your own choice.
+
+**Guess first.** Should you choose a model by opening many final test results? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Use validation first, then one final check.
+
+</details>
+
 
 **🎯 Goal.** Was this delivery late? The inputs are distance and weight. The training answer is 1 for late and 0 for on time. Check the predictions on deliveries the model has not seen.
 
@@ -6885,7 +10846,7 @@ Original practice data created for this workbook.
 3. Teach the model from the training inputs and whether the delivery was late.
 4. Apply the fitted model to the new CSV rows and print a result for each row.
 
-**✅ Check.** This synthetic test has accuracy 1.0. Compare each example prediction with the answer at the same position. The example lines below only preview the test.
+**✅ Check.** This made-up test has accuracy 1.0. Compare each example prediction with the answer at the same position. The example lines below only preview the test.
 
 | Measure | Result |
 | --- | --- |
@@ -6893,7 +10854,7 @@ Original practice data created for this workbook.
 | Predicted classes (preview) | `[0, 1, 0, 1]` |
 | Actual classes (preview) | `[0, 1, 0, 1]` |
 
-**🧪 Change one input.** Change km or kg in new_inputs.csv. The model is trained on sample.csv. The new rows only receive predictions.
+**Your small change.** Change km or kg in new_inputs.csv. The model is trained on sample.csv. The new rows only receive predictions. Save the named CSV before running again.
 
 
 <a id="lightgbm-2"></a>
@@ -6902,7 +10863,21 @@ Original practice data created for this workbook.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| LightGBM **Practice** | Use LightGBM to classify a delivery as late or on time. | [⬇️ Lesson ZIP](sample_code_folder/380-lightgbm-2.zip) |
+| 380 - LightGBM **Practice** | Use LightGBM to classify a delivery as late or on time. | [Lesson ZIP](sample_code_folder/380-lightgbm-2.zip) |
+
+**Before this lesson.** Finish the main path through overfitting and validation.
+
+**In simple words.** Different algorithms learn different rules. The catalog is practice, not a leaderboard for choosing from final test scores. Use a common validation comparison for your own choice.
+
+**Guess first.** Should you choose a model by opening many final test results? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Use validation first, then one final check.
+
+</details>
+
 
 **🎯 Goal.** Was this delivery late? The inputs are distance and weight. The training answer is 1 for late and 0 for on time. Check the predictions on deliveries the model has not seen.
 
@@ -6925,7 +10900,7 @@ Original practice data created for this workbook.
 3. Teach the model from the training inputs and whether the delivery was late.
 4. Apply the fitted model to the new CSV rows and print a result for each row.
 
-**✅ Check.** This synthetic test has accuracy 1.0. Compare each example prediction with the answer at the same position. The example lines below only preview the test.
+**✅ Check.** This made-up test has accuracy 1.0. Compare each example prediction with the answer at the same position. The example lines below only preview the test.
 
 | Measure | Result |
 | --- | --- |
@@ -6933,7 +10908,7 @@ Original practice data created for this workbook.
 | Predicted classes (preview) | `[0, 1, 0, 1]` |
 | Actual classes (preview) | `[0, 1, 0, 1]` |
 
-**🧪 Change one input.** Change km or kg in new_inputs.csv. The model is trained on sample.csv. The new rows only receive predictions.
+**Your small change.** Change km or kg in new_inputs.csv. The model is trained on sample.csv. The new rows only receive predictions. Save the named CSV before running again.
 
 
 <a id="k-means-classifier"></a>
@@ -6942,7 +10917,21 @@ Original practice data created for this workbook.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| K-Means Classifier **Practice** | Find clusters first, then use known labels to name each cluster. | [⬇️ Lesson ZIP](sample_code_folder/381-k-means-classifier.zip) |
+| 381 - K-Means Classifier **Practice** | Find clusters first, then use known labels to name each cluster. | [Lesson ZIP](sample_code_folder/381-k-means-classifier.zip) |
+
+**Before this lesson.** Finish the main path through overfitting and validation.
+
+**In simple words.** Different algorithms learn different rules. The catalog is practice, not a leaderboard for choosing from final test scores. Use a common validation comparison for your own choice.
+
+**Guess first.** Should you choose a model by opening many final test results? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Use validation first, then one final check.
+
+</details>
+
 
 The PDF uses this label under supervised learning. This exercise shows how to build a particular classifier from a K-Means transform and a label-based mapping learned on training data.
 
@@ -6971,12 +10960,73 @@ Cluster IDs: [0, 1, 0]
 Mapped class predictions: ['local', 'long', 'local']
 ```
 
-**🧪 Change one input.** Try changing x from 1.5 to 4 in new_inputs.csv. Compare the new output.
+**Your small change.** Try changing x from 1.5 to 4 in new_inputs.csv. Compare the new output. Save the named CSV before running again.
 
 
 **💡 Takeaway.** Standard K-Means outputs cluster IDs. A label-based mapping like the one above adds a supervised decision rule. Compare it with KNN before choosing a classifier.
 
 **XGBoost and LightGBM.** Use their [regression](#xgboost) or [classification](#xgboost-2) examples on the original delivery dataset. <a id="xgboost-and-lightgbm"></a>
+
+<a id="linear-discriminant-analysis-lda"></a>
+
+###### 🎯 Use labels to make fewer inputs (supervised LDA)
+
+| Lesson name | What you’ll do | Download |
+| --- | --- | --- |
+| 392 - Use labels to make fewer inputs (supervised LDA) **Practice** | Use known group labels to build a smaller set of measurements that separates the groups. | [Lesson ZIP](sample_code_folder/392-linear-discriminant-analysis-lda.zip) |
+
+**Before this lesson.** Read columns, spread and the projection notes in Extra topics.
+
+**In simple words.** A projection combines measurements into fewer columns. PCA keeps spread. LDA uses known labels. t-SNE shows local neighbours and is not a reliable map of distant groups.
+
+**Guess first.** Does every projection ignore labels? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. LDA uses them and is supervised.
+
+</details>
+
+
+Read original measurements, reduce their dimensions, and inspect the first rows of the new representation.
+
+LDA uses known answer labels to make a useful new direction. It is a supervised method. It is not part of unsupervised learning.
+
+**📋 Sample data**
+
+| long | wide | score | group |
+| --- | --- | --- | --- |
+| 2 | 1 | 3 | 0 |
+| 3 | 2 | 4 | 0 |
+| 4 | 1 | 2 | 0 |
+| 5 | 6 | 7 | 1 |
+| 6 | 7 | 8 | 1 |
+| 7 | 6 | 9 | 1 |
+| 8 | 8 | 7 | 1 |
+| 10 | 9 | 10 | 1 |
+
+**▶️ Run.** Unzip the [lesson files](sample_code_folder/392-linear-discriminant-analysis-lda.zip) and open a terminal in that folder. Install the lesson’s packages with `python -m pip install -r requirements.txt`, then run `python lesson.py`.
+
+**🔹 Steps in the script**
+
+1. Read the CSV and check its inputs, including long, wide, score.
+2. Learn the conversion on the training inputs before applying it to a new row.
+3. Apply the conversion learned from training to each new row.
+
+**✅ Check.** Look for Training class predictions: [0, 0, 0, 1, 1, 1, 1, 1] in the output excerpt below.
+
+```text
+Training class predictions: [0, 0, 0, 1, 1, 1, 1, 1]
+Output shape: (8, 1)
+First two rows: [[-3.92], [-2.91]]
+```
+
+**Your small change.** Change long, wide or score in one new row. Compare the resulting projection with the training projections. Save the named CSV before running again.
+
+
+**💡 Takeaway.** LDA is supervised because it uses the class labels. PCA and t-SNE above do not use them.
+
 
 <a id="3-2-unsupervised-learning"></a>
 
@@ -6984,7 +11034,21 @@ Mapped class predictions: ['local', 'long', 'local']
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 3.2. Unsupervised Learning **Practice** | Group similar shoppers using their measurements without given group labels. | [⬇️ Lesson ZIP](sample_code_folder/382-3-2-unsupervised-learning.zip) |
+| 382 - 3.2. Unsupervised Learning **Practice** | Group similar shoppers using their measurements without given group labels. | [Lesson ZIP](sample_code_folder/382-3-2-unsupervised-learning.zip) |
+
+**Before this lesson.** Understand scaling and distance between inputs.
+
+**In simple words.** Grouping has no supplied correct group labels. Inspect group profiles and stability. A group number is only a name. Some data has no useful groups.
+
+**Guess first.** Does group 2 mean better than group 1? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. The numbers have no ranking.
+
+</details>
+
 
 ![Read the inputs. Age, income and spending score. → Find groups. Put shoppers with similar measurements near one another. → Inspect the result. Read the group averages before describing each group.](workbook-figures/unsupervised-model-steps-mobile.png)
 
@@ -6998,7 +11062,21 @@ Mapped class predictions: ['local', 'long', 'local']
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Common Algorithms **Practice** | Explore how an algorithm can group shoppers from their measurements. | [⬇️ Lesson ZIP](sample_code_folder/383-common-algorithms-2.zip) |
+| 383 - Common Algorithms **Practice** | Explore how an algorithm can group shoppers from their measurements. | [Lesson ZIP](sample_code_folder/383-common-algorithms-2.zip) |
+
+**Before this lesson.** Understand scaling and distance between inputs.
+
+**In simple words.** Grouping has no supplied correct group labels. Inspect group profiles and stability. A group number is only a name. Some data has no useful groups.
+
+**Guess first.** Does group 2 mean better than group 1? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. The numbers have no ranking.
+
+</details>
+
 
 <a id="clustering-algorithms"></a>
 
@@ -7006,7 +11084,21 @@ Mapped class predictions: ['local', 'long', 'local']
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Clustering Algorithms **Practice** | Find groups of shoppers with similar ages, incomes and spending scores. | [⬇️ Lesson ZIP](sample_code_folder/384-clustering-algorithms.zip) |
+| 384 - Clustering Algorithms **Practice** | Find groups of shoppers with similar ages, incomes and spending scores. | [Lesson ZIP](sample_code_folder/384-clustering-algorithms.zip) |
+
+**Before this lesson.** Understand scaling and distance between inputs.
+
+**In simple words.** Grouping has no supplied correct group labels. Inspect group profiles and stability. A group number is only a name. Some data has no useful groups.
+
+**Guess first.** Does group 2 mean better than group 1? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. The numbers have no ranking.
+
+</details>
+
 
 Use measured inputs to find groups when the rows have no known group labels. Group numbers are names assigned by the algorithm. Use the plots to compare the groups’ shapes and profiles.
 
@@ -7016,7 +11108,21 @@ Use measured inputs to find groups when the rows have no known group labels. Gro
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| K-Means **Practice** | Choose three shopper groups and see where the fitted model puts new shoppers. | [⬇️ Lesson ZIP](sample_code_folder/385-k-means.zip) |
+| 385 - K-Means **Practice** | Choose three shopper groups and see where the trained model puts new shoppers. | [Lesson ZIP](sample_code_folder/385-k-means.zip) |
+
+**Before this lesson.** Understand scaling and distance between inputs.
+
+**In simple words.** Grouping has no supplied correct group labels. Inspect group profiles and stability. A group number is only a name. Some data has no useful groups.
+
+**Guess first.** Does group 2 mean better than group 1? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. The numbers have no ranking.
+
+</details>
+
 
 Read original customer measurements, scale them, and inspect group memberships and profiles.
 
@@ -7052,7 +11158,7 @@ age  income  spending
 group
 ```
 
-**🧪 Change one input.** Change a measurement in new_inputs.csv. The fitted scaler and algorithm process each row.
+**Your small change.** Change a measurement in new_inputs.csv. The fitted scaler and algorithm process each row. Save the named CSV before running again.
 
 
 ![Colors show assigned groups. The clustering also used age, which does not appear on these axes.](workbook-figures/k-means.png)
@@ -7069,7 +11175,21 @@ group
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Hierarchical Clustering **Practice** | See which shoppers merge first by reading the clustering tree from bottom to top. | [⬇️ Lesson ZIP](sample_code_folder/386-hierarchical-clustering.zip) |
+| 386 - Hierarchical Clustering **Practice** | See which shoppers merge first by reading the clustering tree from bottom to top. | [Lesson ZIP](sample_code_folder/386-hierarchical-clustering.zip) |
+
+**Before this lesson.** Understand scaling and distance between inputs.
+
+**In simple words.** Grouping has no supplied correct group labels. Inspect group profiles and stability. A group number is only a name. Some data has no useful groups.
+
+**Guess first.** Does group 2 mean better than group 1? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. The numbers have no ranking.
+
+</details>
+
 
 Read original customer measurements, scale them, and inspect group memberships and profiles.
 
@@ -7104,7 +11224,7 @@ age  income  spending
 group
 ```
 
-**🧪 Change one input.** Add one shopper to `sample.csv` and rerun to rebuild the tree using every row. Compare the lowest joins with the original tree.
+**Your small change.** Add a shopper with age 32, income 40 and spending 57. Regenerate the tree and see which branch joins first. Save the named CSV before running again.
 
 
 ![A dendrogram labels each shopper by CSV row number. A dashed line cuts the tree into three group branches.](workbook-figures/hierarchical-clustering-1.png)
@@ -7127,7 +11247,21 @@ group
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| DBSCAN **Practice** | Look for dense groups of shoppers and flag isolated points as noise. | [⬇️ Lesson ZIP](sample_code_folder/387-dbscan.zip) |
+| 387 - DBSCAN **Practice** | Look for dense groups of shoppers and flag isolated points as noise. | [Lesson ZIP](sample_code_folder/387-dbscan.zip) |
+
+**Before this lesson.** Understand scaling and distance between inputs.
+
+**In simple words.** Grouping has no supplied correct group labels. Inspect group profiles and stability. A group number is only a name. Some data has no useful groups.
+
+**Guess first.** Does group 2 mean better than group 1? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. The numbers have no ranking.
+
+</details>
+
 
 Read original customer measurements, scale them, and inspect group memberships and profiles.
 
@@ -7161,7 +11295,7 @@ age  income  spending
 group
 ```
 
-**🧪 Change one input.** Add an isolated shopper to `sample.csv` and rerun to find clusters again. Check whether its label is −1, which marks noise.
+**Your small change.** Add or edit a row in sample.csv, then rerun to refit. This method works on the whole group of rows. Save the named CSV before running again.
 
 
 ![Shopper IDs appear by their markers on an income by spending chart. Shapes distinguish the dense groups assigned on the supplied rows.](workbook-figures/dbscan.png)
@@ -7178,7 +11312,21 @@ group
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Gaussian Mixture Models (GMM) **Practice** | Give each shopper a probability of belonging to each group. | [⬇️ Lesson ZIP](sample_code_folder/388-gaussian-mixture-models-gmm.zip) |
+| 388 - Gaussian Mixture Models (GMM) **Practice** | Give each shopper a probability of belonging to each group. | [Lesson ZIP](sample_code_folder/388-gaussian-mixture-models-gmm.zip) |
+
+**Before this lesson.** Understand scaling and distance between inputs.
+
+**In simple words.** Grouping has no supplied correct group labels. Inspect group profiles and stability. A group number is only a name. Some data has no useful groups.
+
+**Guess first.** Does group 2 mean better than group 1? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. The numbers have no ranking.
+
+</details>
+
 
 Read original customer measurements, scale them, and inspect group memberships and profiles.
 
@@ -7214,7 +11362,7 @@ age  income  spending
 group
 ```
 
-**🧪 Change one input.** Change a measurement in new_inputs.csv. The fitted scaler and algorithm process each row.
+**Your small change.** Change a measurement in new_inputs.csv. The fitted scaler and algorithm process each row. Save the named CSV before running again.
 
 
 ![Colors show assigned groups. The clustering also used age, which does not appear on these axes.](workbook-figures/gaussian-mixture-models-gmm.png)
@@ -7231,7 +11379,21 @@ group
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Dimensionality Reduction **Practice** | Shrink three input measurements into fewer measurements you can inspect. | [⬇️ Lesson ZIP](sample_code_folder/389-dimensionality-reduction.zip) |
+| 389 - Dimensionality Reduction **Practice** | Shrink three input measurements into fewer measurements you can inspect. | [Lesson ZIP](sample_code_folder/389-dimensionality-reduction.zip) |
+
+**Before this lesson.** Read columns, spread and the projection notes in Extra topics.
+
+**In simple words.** A projection combines measurements into fewer columns. PCA keeps spread. LDA uses known labels. t-SNE shows local neighbours and is not a reliable map of distant groups.
+
+**Guess first.** Does every projection ignore labels? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. LDA uses them and is supervised.
+
+</details>
+
 
 <a id="principal-component-analysis-pca"></a>
 
@@ -7239,7 +11401,21 @@ group
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Principal Component Analysis (PCA) **Practice** | Combine overlapping measurements into fewer columns and see how much variation they keep. | [⬇️ Lesson ZIP](sample_code_folder/390-principal-component-analysis-pca.zip) |
+| 390 - Principal Component Analysis (PCA) **Practice** | Combine overlapping measurements into fewer columns and see how much variation they keep. | [Lesson ZIP](sample_code_folder/390-principal-component-analysis-pca.zip) |
+
+**Before this lesson.** Read columns, spread and the projection notes in Extra topics.
+
+**In simple words.** A projection combines measurements into fewer columns. PCA keeps spread. LDA uses known labels. t-SNE shows local neighbours and is not a reliable map of distant groups.
+
+**Guess first.** Does every projection ignore labels? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. LDA uses them and is supervised.
+
+</details>
+
 
 Read original measurements, reduce their dimensions, and inspect the first rows of the new representation.
 
@@ -7272,7 +11448,7 @@ Output shape: (8, 2)
 First two rows: [[-2.3, -0.19], [-1.66, -0.16]]
 ```
 
-**🧪 Change one input.** Change a measurement in new_inputs.csv. The fitted scaler and algorithm process each row.
+**Your small change.** Change a measurement in new_inputs.csv. The fitted scaler and algorithm process each row. Save the named CSV before running again.
 
 
 **💡 Takeaway.** Fit on training rows inside a prediction pipeline when evaluating a model.
@@ -7285,7 +11461,21 @@ Each new column is a mix of the original measurements. The variance values show 
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| t-Distributed Stochastic Neighbor Embedding (t-SNE) **Practice** | Draw similar rows near one another in a two-dimensional plot. | [⬇️ Lesson ZIP](sample_code_folder/391-t-distributed-stochastic-neighbor-embedding-t-sne.zip) |
+| 391 - t-Distributed Stochastic Neighbor Embedding (t-SNE) **Practice** | Draw similar rows near one another in a two-dimensional plot. | [Lesson ZIP](sample_code_folder/391-t-distributed-stochastic-neighbor-embedding-t-sne.zip) |
+
+**Before this lesson.** Read columns, spread and the projection notes in Extra topics.
+
+**In simple words.** A projection combines measurements into fewer columns. PCA keeps spread. LDA uses known labels. t-SNE shows local neighbours and is not a reliable map of distant groups.
+
+**Guess first.** Does every projection ignore labels? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. LDA uses them and is supervised.
+
+</details>
+
 
 Read original measurements, reduce their dimensions, and inspect the first rows of the new representation.
 
@@ -7317,7 +11507,7 @@ Output shape: (8, 2)
 First two rows: [[-0.47999998927116394, 21.760000228881836], [-2.5999999046325684, 13.529999732971191]]
 ```
 
-**🧪 Change one input.** Add one row to `sample.csv` and rerun to recompute all the plotted positions. Nearby points are useful cues. Axis values and distances across separated groups have limited meaning.
+**Your small change.** Add or edit a row in sample.csv, then rerun to refit. This method works on the whole group of rows. Save the named CSV before running again.
 
 
 ![A scatterplot marks each source row on two fitted t-SNE coordinates.](workbook-figures/t-distributed-stochastic-neighbor-embedding-t-sne.png)
@@ -7328,59 +11518,27 @@ First two rows: [[-0.47999998927116394, 21.760000228881836], [-2.599999904632568
 
 **💡 Takeaway.** Use this for inspecting neighborhoods in the given data. Distances between far groups can be misleading.
 
-<a id="linear-discriminant-analysis-lda"></a>
-
-###### 🎯 Linear Discriminant Analysis (LDA)
-
-| Lesson name | What you’ll do | Download |
-| --- | --- | --- |
-| Linear Discriminant Analysis (LDA) **Practice** | Use known group labels to build a smaller set of measurements that separates the groups. | [⬇️ Lesson ZIP](sample_code_folder/392-linear-discriminant-analysis-lda.zip) |
-
-Read original measurements, reduce their dimensions, and inspect the first rows of the new representation.
-
-LDA uses class labels to find a useful new axis, so it is supervised. Its position here follows the PDF’s order.
-
-**📋 Sample data**
-
-| long | wide | score | group |
-| --- | --- | --- | --- |
-| 2 | 1 | 3 | 0 |
-| 3 | 2 | 4 | 0 |
-| 4 | 1 | 2 | 0 |
-| 5 | 6 | 7 | 1 |
-| 6 | 7 | 8 | 1 |
-| 7 | 6 | 9 | 1 |
-| 8 | 8 | 7 | 1 |
-| 10 | 9 | 10 | 1 |
-
-**▶️ Run.** Unzip the [lesson files](sample_code_folder/392-linear-discriminant-analysis-lda.zip) and open a terminal in that folder. Install the lesson’s packages with `python -m pip install -r requirements.txt`, then run `python lesson.py`.
-
-**🔹 Steps in the script**
-
-1. Read the CSV and check its inputs, including long, wide, score.
-2. Learn the conversion on the training inputs before applying it to a new row.
-3. Apply the conversion learned from training to each new row.
-
-**✅ Check.** Look for Training class predictions: [0, 0, 0, 1, 1, 1, 1, 1] in the output excerpt below.
-
-```text
-Training class predictions: [0, 0, 0, 1, 1, 1, 1, 1]
-Output shape: (8, 1)
-First two rows: [[-3.92], [-2.91]]
-```
-
-**🧪 Change one input.** Change long, wide or score in one new row. Compare the resulting projection with the training projections.
-
-
-**💡 Takeaway.** LDA is supervised because it uses the class labels. PCA and t-SNE above do not use them.
-
 <a id="independent-component-analysis-ica"></a>
 
 ###### 🎛️ Independent Component Analysis (ICA)
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Independent Component Analysis (ICA) **Practice** | Use independent component analysis to separate patterns mixed across the measured columns. | [⬇️ Lesson ZIP](sample_code_folder/393-independent-component-analysis-ica.zip) |
+| 393 - Independent Component Analysis (ICA) **Practice** | Use independent component analysis to separate patterns mixed across the measured columns. | [Lesson ZIP](sample_code_folder/393-independent-component-analysis-ica.zip) |
+
+**Before this lesson.** Read columns, spread and the projection notes in Extra topics.
+
+**In simple words.** A projection combines measurements into fewer columns. PCA keeps spread. LDA uses known labels. t-SNE shows local neighbours and is not a reliable map of distant groups.
+
+**Guess first.** Does every projection ignore labels? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. LDA uses them and is supervised.
+
+</details>
+
 
 Read original measurements, reduce their dimensions, and inspect the first rows of the new representation.
 
@@ -7413,7 +11571,7 @@ First two rows: [[-1.21, -0.82], [-0.86, -0.65]]
 [2 1 3] -> [-1.21 -0.82]
 ```
 
-**🧪 Change one input.** Change a measurement in new_inputs.csv. The fitted scaler and algorithm process each row.
+**Your small change.** Change a measurement in new_inputs.csv. The fitted scaler and algorithm process each row. Save the named CSV before running again.
 
 
 **💡 Takeaway.** ICA seeks comparatively independent signals. Component order and sign can vary.
@@ -7424,7 +11582,21 @@ First two rows: [[-1.21, -0.82], [-0.86, -0.65]]
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Anomaly Detection **Practice** | Compare a typical parcel with one that needs a closer look. | [⬇️ Lesson ZIP](sample_code_folder/394-anomaly-detection.zip) |
+| 394 - Anomaly Detection **Practice** | Compare a typical parcel with one that needs a closer look. | [Lesson ZIP](sample_code_folder/394-anomaly-detection.zip) |
+
+**Before this lesson.** Understand an unusual value and a source check.
+
+**In simple words.** An anomaly detector flags a row unlike the usual training rows. A flag does not prove an error or harm. Investigate the source before removing it.
+
+**Guess first.** Should every flagged parcel be deleted? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. A valid unusual parcel may be important.
+
+</details>
+
 
 <a id="isolation-forest"></a>
 
@@ -7432,7 +11604,21 @@ First two rows: [[-1.21, -0.82], [-0.86, -0.65]]
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Isolation Forest **Practice** | Train on regular parcels and see which new measurements are unusual. | [⬇️ Lesson ZIP](sample_code_folder/395-isolation-forest.zip) |
+| 395 - Isolation Forest **Practice** | Train on regular parcels and see which new measurements are unusual. | [Lesson ZIP](sample_code_folder/395-isolation-forest.zip) |
+
+**Before this lesson.** Understand an unusual value and a source check.
+
+**In simple words.** An anomaly detector flags a row unlike the usual training rows. A flag does not prove an error or harm. Investigate the source before removing it.
+
+**Guess first.** Should every flagged parcel be deleted? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. A valid unusual parcel may be important.
+
+</details>
+
 
 Train an anomaly detector on routine original shipments. Score one typical and one much heavier shipment.
 
@@ -7461,7 +11647,7 @@ Example training shipments: [[10.0, 4.15], [9.73, 3.55], [9.55, 3.5]]
 Typical / unusually large: [1, -1, -1]
 ```
 
-**🧪 Change one input.** Edit the rows in new_inputs.csv. Compare a typical case with an unusually heavy parcel. A flag means check the original record.
+**Your small change.** Edit the rows in new_inputs.csv. Compare a typical case with an unusually heavy parcel. A flag means check the original record. Save the named CSV before running again.
 
 
 **💡 Takeaway.** −1 means the detector flagged the row. Investigate the source before removing anything.
@@ -7472,7 +11658,21 @@ Typical / unusually large: [1, -1, -1]
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| One-Class SVM **Practice** | Learn a boundary around typical parcels and check which new ones fall outside. | [⬇️ Lesson ZIP](sample_code_folder/396-one-class-svm.zip) |
+| 396 - One-Class SVM **Practice** | Learn a boundary around typical parcels and check which new ones fall outside. | [Lesson ZIP](sample_code_folder/396-one-class-svm.zip) |
+
+**Before this lesson.** Understand an unusual value and a source check.
+
+**In simple words.** An anomaly detector flags a row unlike the usual training rows. A flag does not prove an error or harm. Investigate the source before removing it.
+
+**Guess first.** Should every flagged parcel be deleted? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. A valid unusual parcel may be important.
+
+</details>
+
 
 Train an anomaly detector on routine original shipments. Score one typical and one much heavier shipment.
 
@@ -7501,7 +11701,7 @@ Example training shipments: [[10.0, 4.15], [9.73, 3.55], [9.55, 3.5]]
 Typical / unusually large: [1, -1, -1]
 ```
 
-**🧪 Change one input.** Edit the rows in new_inputs.csv. Compare a typical case with an unusually heavy parcel. A flag means check the original record.
+**Your small change.** Edit the rows in new_inputs.csv. Compare a typical case with an unusually heavy parcel. A flag means check the original record. Save the named CSV before running again.
 
 
 **💡 Takeaway.** −1 means the detector flagged the row. Investigate the source before removing anything.
@@ -7512,7 +11712,21 @@ Typical / unusually large: [1, -1, -1]
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Z-score Algorithm **Practice** | Check how many standard deviations a parcel weight lies from the training average. | [⬇️ Lesson ZIP](sample_code_folder/397-z-score-algorithm.zip) |
+| 397 - Z-score Algorithm **Practice** | Check how many standard deviations a parcel weight lies from the training average. | [Lesson ZIP](sample_code_folder/397-z-score-algorithm.zip) |
+
+**Before this lesson.** Understand an unusual value and a source check.
+
+**In simple words.** An anomaly detector flags a row unlike the usual training rows. A flag does not prove an error or harm. Investigate the source before removing it.
+
+**Guess first.** Should every flagged parcel be deleted? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. A valid unusual parcel may be important.
+
+</details>
+
 
 Measure how far three new readings are from the training average. Each z-score uses the training standard deviation as its unit.
 
@@ -7541,7 +11755,7 @@ Z-scores: [0.0, 24.49, 1.63]
 Flagged: [False, True, False]
 ```
 
-**🧪 Change one input.** Edit the rows in new_inputs.csv. Compare a typical case with an unusually heavy parcel. A flag means check the original record.
+**Your small change.** Edit the rows in new_inputs.csv. Compare a typical case with an unusually heavy parcel. A flag means check the original record. Save the named CSV before running again.
 
 
 A flag means the number is far from the training average. Check how it was measured before correcting or removing it.
@@ -7552,7 +11766,21 @@ A flag means the number is far from the training average. Check how it was measu
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Association **Practice** | Find which items shoppers put in the same basket. | [⬇️ Lesson ZIP](sample_code_folder/398-association.zip) |
+| 398 - Association **Practice** | Find which items shoppers put in the same basket. | [Lesson ZIP](sample_code_folder/398-association.zip) |
+
+**Before this lesson.** Count baskets and calculate a fraction.
+
+**In simple words.** Support is the share of baskets containing an item set. Confidence asks how often another item appears when one item is present. Neither proves buying one causes the other.
+
+**Guess first.** A pair appears in 3 of 5 baskets. What is support? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+3 divided by 5, or 60%.
+
+</details>
+
 
 <a id="apriori-algorithm"></a>
 
@@ -7560,7 +11788,21 @@ A flag means the number is far from the training average. Check how it was measu
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Apriori Algorithm **Practice** | Find frequent pairs by testing item combinations and dropping rare candidates. | [⬇️ Lesson ZIP](sample_code_folder/399-apriori-algorithm.zip) |
+| 399 - Apriori Algorithm **Practice** | Find frequent pairs by testing item combinations and dropping rare candidates. | [Lesson ZIP](sample_code_folder/399-apriori-algorithm.zip) |
+
+**Before this lesson.** Count baskets and calculate a fraction.
+
+**In simple words.** Support is the share of baskets containing an item set. Confidence asks how often another item appears when one item is present. Neither proves buying one causes the other.
+
+**Guess first.** A pair appears in 3 of 5 baskets. What is support? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+3 divided by 5, or 60%.
+
+</details>
+
 
 <a id="frequent-pattern-growth"></a>
 
@@ -7568,7 +11810,21 @@ A flag means the number is far from the training average. Check how it was measu
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Frequent Pattern Growth **Practice** | Find common item pairs by organizing recurring items in a tree. | [⬇️ Lesson ZIP](sample_code_folder/400-frequent-pattern-growth.zip) |
+| 400 - Frequent Pattern Growth **Practice** | Find common item pairs by organizing recurring items in a tree. | [Lesson ZIP](sample_code_folder/400-frequent-pattern-growth.zip) |
+
+**Before this lesson.** Count baskets and calculate a fraction.
+
+**In simple words.** Support is the share of baskets containing an item set. Confidence asks how often another item appears when one item is present. Neither proves buying one causes the other.
+
+**Guess first.** A pair appears in 3 of 5 baskets. What is support? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+3 divided by 5, or 60%.
+
+</details>
+
 
 Read five original baskets. Compare Apriori and FP-Growth on the same Boolean input and calculate the confidence of a rule.
 
@@ -7596,7 +11852,7 @@ fpgrowth [(('bread', 'milk'), 0.6)]
 Milk to bread confidence: 0.75
 ```
 
-**🧪 Change one input.** Add or change a basket in sample.csv. Use | between items. The printed support is the share of baskets that contain the item set.
+**Your small change.** Add or change a basket in sample.csv. Use | between items. The printed support is the share of baskets that contain the item set. Save the named CSV before running again.
 
 
 **💡 Takeaway.** The pair appears in 3 of 5 baskets. Bread occurs in 3 of the 4 baskets containing milk.
@@ -7607,7 +11863,21 @@ Milk to bread confidence: 0.75
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 3.3. Semi-Supervised Learning **Practice** | Fit a small classifier using rows with known and missing labels. | [⬇️ Lesson ZIP](sample_code_folder/402-3-3-semi-supervised-learning.zip) |
+| 402 - 3.3. Semi-Supervised Learning **Practice** | Train a small classifier using rows with known and missing labels. | [Lesson ZIP](sample_code_folder/402-3-3-semi-supervised-learning.zip) |
+
+**Before this lesson.** Finish supervised learning and separate validation first.
+
+**In simple words.** Some training answers are missing. Extra guesses can help or spread mistakes. Use a separate set of confirmed answers to check what happened.
+
+**Guess first.** Is a pseudo-label a confirmed fact? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. It is a model guess.
+
+</details>
+
 
 ![Start with labels. Train a first model using the known classes. → Use unlabeled rows. Add confident guesses as extra training labels. → Check the change. Compare with the original model on labeled check rows.](workbook-figures/semi-supervised-steps-mobile.png)
 
@@ -7621,7 +11891,21 @@ Milk to bread confidence: 0.75
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Common Algorithms **Practice** | Try one way to use both labeled and unlabeled rows before predicting new cases. | [⬇️ Lesson ZIP](sample_code_folder/403-common-algorithms-3.zip) |
+| 403 - Common Algorithms **Practice** | Try one way to use both labeled and unlabeled rows before predicting new cases. | [Lesson ZIP](sample_code_folder/403-common-algorithms-3.zip) |
+
+**Before this lesson.** Finish supervised learning and separate validation first.
+
+**In simple words.** Some training answers are missing. Extra guesses can help or spread mistakes. Use a separate set of confirmed answers to check what happened.
+
+**Guess first.** Is a pseudo-label a confirmed fact? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. It is a model guess.
+
+</details>
+
 
 <a id="semi-supervised-support-vector-machines-s3vm"></a>
 
@@ -7629,7 +11913,21 @@ Milk to bread confidence: 0.75
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Semi-Supervised Support Vector Machines (S3VM) **Practice** | See how a small support-vector example can choose labels for some unknown rows. | [⬇️ Lesson ZIP](sample_code_folder/404-semi-supervised-support-vector-machines-s3vm.zip) |
+| 404 - Semi-Supervised Support Vector Machines (S3VM) **Practice** | See how a small support-vector example can choose labels for some unknown rows. | [Lesson ZIP](sample_code_folder/404-semi-supervised-support-vector-machines-s3vm.zip) |
+
+**Before this lesson.** Finish supervised learning and separate validation first.
+
+**In simple words.** Some training answers are missing. Extra guesses can help or spread mistakes. Use a separate set of confirmed answers to check what happened.
+
+**Guess first.** Is a pseudo-label a confirmed fact? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. It is a model guess.
+
+</details>
+
 
 Use a small transductive SVM exercise. Try all labelings of four unlabeled points, fit an SVM for each, and keep the lowest weighted objective. The three new inputs come from a separate file and have no known answers. The script accepts four blank training labels and known classes −1 and 1.
 
@@ -7658,7 +11956,7 @@ Chosen training pseudo-labels: (-1, -1, 1, 1)
 Predictions for new rows: [-1, 1, 1]
 ```
 
-**🧪 Change one input.** Change x or y in new_inputs.csv. Keep two known classes and four unlabeled practice rows if editing sample.csv.
+**Your small change.** Change x or y in new_inputs.csv. Leave four blank labels and both known labels (-1 and 1) in sample.csv. Save the named CSV before running again.
 
 
 **💡 Takeaway.** The search solves a small balanced semi-supervised SVM formulation. Enumerating labels grows exponentially, so larger problems use an optimization solver.
@@ -7669,7 +11967,21 @@ Predictions for new rows: [-1, 1, 1]
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Label Propagation **Practice** | Pass labels from known points to nearby unknown points. | [⬇️ Lesson ZIP](sample_code_folder/405-label-propagation.zip) |
+| 405 - Label Propagation **Practice** | Pass labels from known points to nearby unknown points. | [Lesson ZIP](sample_code_folder/405-label-propagation.zip) |
+
+**Before this lesson.** Finish supervised learning and separate validation first.
+
+**In simple words.** Some training answers are missing. Extra guesses can help or spread mistakes. Use a separate set of confirmed answers to check what happened.
+
+**Guess first.** Is a pseudo-label a confirmed fact? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. It is a model guess.
+
+</details>
+
 
 Mask all but four labels per class. Propagate those labels across nearby training points, then score a separate labeled holdout.
 
@@ -7700,7 +12012,7 @@ Holdout accuracy: 1.0
 Predictions from new feature rows: [0, 1, 1]
 ```
 
-**🧪 Change one input.** Edit x or y in new_inputs.csv. These rows are kept separate from the rows with masked labels and the labeled check rows.
+**Your small change.** Edit x or y in new_inputs.csv. These rows are kept separate from the rows with masked labels and the labeled check rows. Save the named CSV before running again.
 
 
 <a id="self-training"></a>
@@ -7709,7 +12021,21 @@ Predictions from new feature rows: [0, 1, 1]
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Self-Training **Practice** | Use confident guesses as extra training labels and compare with the known check rows. | [⬇️ Lesson ZIP](sample_code_folder/406-self-training.zip) |
+| 406 - Self-Training **Practice** | Use confident guesses as extra training labels and compare with the known check rows. | [Lesson ZIP](sample_code_folder/406-self-training.zip) |
+
+**Before this lesson.** Finish supervised learning and separate validation first.
+
+**In simple words.** Some training answers are missing. Extra guesses can help or spread mistakes. Use a separate set of confirmed answers to check what happened.
+
+**Guess first.** Is a pseudo-label a confirmed fact? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. It is a model guess.
+
+</details>
+
 
 Fit an initial classifier with known labels. Let a self-training classifier add confident pseudo-labels. Compare both on the same untouched rows.
 
@@ -7733,7 +12059,7 @@ Fit an initial classifier with known labels. Let a self-training classifier add 
 4. Fit the model on the prepared training rows. Keep it for the checks below.
 5. Apply the fitted model to the new CSV rows and print a result for each row.
 
-**✅ Check.** In the supplied run, both methods score 1.0 on the held-out rows. The model assigned 46 pseudo-labels, and the measured score stayed the same.
+**✅ Check.** In the supplied run, both methods score 1.0 on the kept-back rows. The model assigned 46 pseudo-labels, and the measured score stayed the same.
 
 ```text
 Labeled / unlabeled training rows: 8 46
@@ -7741,10 +12067,10 @@ Added pseudo-labels: 46
 Labeled-only / self-training: 1.0 1.0
 ```
 
-**🧪 Change one input.** Edit x or y in new_inputs.csv. These rows are kept separate from the rows with masked labels and the labeled check rows.
+**Your small change.** Edit x or y in new_inputs.csv. These rows are kept separate from the rows with masked labels and the labeled check rows. Save the named CSV before running again.
 
 
-A pseudo-label is the model’s guess. Check the held-out rows with known answers before deciding whether adding guesses helped.
+A pseudo-label is the model’s guess. Check the kept-back rows with known answers before deciding whether adding guesses helped.
 
 <a id="co-training"></a>
 
@@ -7752,9 +12078,23 @@ A pseudo-label is the model’s guess. Check the held-out rows with known answer
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Co-Training **Practice** | Let models trained on different input columns teach each other from unlabeled rows. | [⬇️ Lesson ZIP](sample_code_folder/407-co-training.zip) |
+| 407 - Co-Training **Practice** | Let models trained on different input columns teach each other from unlabeled rows. | [Lesson ZIP](sample_code_folder/407-co-training.zip) |
 
-Train two classifiers on separate measurements of the same original rows. Give each model’s most confident guesses to the other view and compare predictions on held-out rows.
+**Before this lesson.** Finish supervised learning and separate validation first.
+
+**In simple words.** Some training answers are missing. Extra guesses can help or spread mistakes. Use a separate set of confirmed answers to check what happened.
+
+**Guess first.** Is a pseudo-label a confirmed fact? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. It is a model guess.
+
+</details>
+
+
+Train two classifiers on separate measurements of the same original rows. Give each model’s most confident guesses to the other view and compare predictions on kept-back rows.
 
 **📋 Sample data.** Preview of the first 5 of 72 rows.
 
@@ -7775,7 +12115,7 @@ Train two classifiers on separate measurements of the same original rows. Give e
 3. Have the two classifiers exchange confident labels on unlabeled training rows.
 4. Apply the fitted model to the new CSV rows and print a result for each row.
 
-**✅ Check.** Check **Labels per view**. Both classifiers have 13 labels after exchanging confident guesses. The toy held-out score is 1.0.
+**✅ Check.** Check **Labels per view**. Both classifiers have 13 labels after exchanging confident guesses. The toy kept-back score is 1.0.
 
 ```text
 Labeled / unlabeled training rows: 8 46
@@ -7783,7 +12123,7 @@ Labels per view: [13, 13]
 Holdout accuracy: 1.0
 ```
 
-**🧪 Change one input.** Edit x or y in new_inputs.csv. These rows are kept separate from the rows with masked labels and the labeled check rows.
+**Your small change.** Edit x or y in new_inputs.csv. These rows are kept separate from the rows with masked labels and the labeled check rows. Save the named CSV before running again.
 
 
 <a id="regression"></a>
@@ -7792,7 +12132,21 @@ Holdout accuracy: 1.0
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Regression **Practice** | Train a model with a few known numbers, then use its confident estimates to add practice rows. | [⬇️ Lesson ZIP](sample_code_folder/408-regression.zip) |
+| 408 - Regression **Practice** | Train a model with a few known numbers, then use its confident estimates to add practice rows. | [Lesson ZIP](sample_code_folder/408-regression.zip) |
+
+**Before this lesson.** Finish supervised learning and separate validation first.
+
+**In simple words.** Some training answers are missing. Extra guesses can help or spread mistakes. Use a separate set of confirmed answers to check what happened.
+
+**Guess first.** Is a pseudo-label a confirmed fact? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. It is a model guess.
+
+</details>
+
 
 Hide half the original training prices, add predicted values only where two simple regressors agree, and evaluate the result on an untouched holdout.
 
@@ -7816,7 +12170,7 @@ Hide half the original training prices, add predicted values only where two simp
 4. Fit the model on the prepared training rows. Keep it for the checks below.
 5. Apply the fitted model to the new CSV rows and print a result for each row.
 
-**✅ Check.** The supplied run adds five predicted training values. Held-out MAE rises from 0.47 to 0.57 after adding them, so keep the baseline for this comparison.
+**✅ Check.** The supplied run adds five predicted training values. Kept-back MAE rises from 0.47 to 0.57 after adding them, so keep the baseline for this comparison.
 
 ```text
 Added values: 5
@@ -7824,7 +12178,7 @@ Holdout MAE, before / after: 0.47 0.57
 Fresh estimates: [27.56, 60.9, 66.96]
 ```
 
-**🧪 Change one input.** Change the input in new_inputs.csv. The model supplies an estimated numeric value.
+**Your small change.** Change the input in new_inputs.csv. The model supplies an estimated numeric value. Save the named CSV before running again.
 
 
 <a id="3-4-reinforcement-learning"></a>
@@ -7833,7 +12187,21 @@ Fresh estimates: [27.56, 60.9, 66.96]
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 3.4. Reinforcement Learning **Practice** | Follow a robot’s moves and see the rewards it earns. | [⬇️ Lesson ZIP](sample_code_folder/410-3-4-reinforcement-learning.zip) |
+| 410 - 3.4. Reinforcement Learning **Practice** | Follow a robot’s moves and see the rewards it earns. | [Lesson ZIP](sample_code_folder/410-3-4-reinforcement-learning.zip) |
+
+**Before this lesson.** Read the robot, reward and network notes in Extra topics.
+
+**In simple words.** An agent chooses an action, sees a result and gets a reward. A policy is its action rule. Return adds rewards, often giving later rewards less weight.
+
+**Guess first.** Does one rewarded move prove a policy is reliable? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Check the whole policy over suitable trials.
+
+</details>
+
 
 ![Read the state. The robot starts in cell 3. → Take an action. It chooses to move right. → Get feedback. It reaches cell 4, the goal, and earns +1.](workbook-figures/reinforcement-steps-mobile.png)
 
@@ -7847,7 +12215,21 @@ Fresh estimates: [27.56, 60.9, 66.96]
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Key Concepts **Practice** | Connect the robot’s position, chosen move and reward using a short track. | [⬇️ Lesson ZIP](sample_code_folder/411-key-concepts.zip) |
+| 411 - Key Concepts **Practice** | Connect the robot’s position, chosen move and reward using a short track. | [Lesson ZIP](sample_code_folder/411-key-concepts.zip) |
+
+**Before this lesson.** Read the robot, reward and network notes in Extra topics.
+
+**In simple words.** An agent chooses an action, sees a result and gets a reward. A policy is its action rule. Return adds rewards, often giving later rewards less weight.
+
+**Guess first.** Does one rewarded move prove a policy is reliable? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Check the whole policy over suitable trials.
+
+</details>
+
 
 <a id="agent"></a>
 
@@ -7855,7 +12237,21 @@ Fresh estimates: [27.56, 60.9, 66.96]
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Agent **Practice** | See how a robot receives feedback after choosing which way to move. | [⬇️ Lesson ZIP](sample_code_folder/412-agent.zip) |
+| 412 - Agent **Practice** | See how a robot receives feedback after choosing which way to move. | [Lesson ZIP](sample_code_folder/412-agent.zip) |
+
+**Before this lesson.** Read the robot, reward and network notes in Extra topics.
+
+**In simple words.** An agent chooses an action, sees a result and gets a reward. A policy is its action rule. Return adds rewards, often giving later rewards less weight.
+
+**Guess first.** Does one rewarded move prove a policy is reliable? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Check the whole policy over suitable trials.
+
+</details>
+
 
 The learner that chooses a move. In this exercise, follow the dot on the track.
 
@@ -7865,7 +12261,21 @@ The learner that chooses a move. In this exercise, follow the dot on the track.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Environment **Practice** | Read the track rules that decide what happens after each move. | [⬇️ Lesson ZIP](sample_code_folder/413-environment.zip) |
+| 413 - Environment **Practice** | Read the track rules that decide what happens after each move. | [Lesson ZIP](sample_code_folder/413-environment.zip) |
+
+**Before this lesson.** Read the robot, reward and network notes in Extra topics.
+
+**In simple words.** An agent chooses an action, sees a result and gets a reward. A policy is its action rule. Return adds rewards, often giving later rewards less weight.
+
+**Guess first.** Does one rewarded move prove a policy is reliable? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Check the whole policy over suitable trials.
+
+</details>
+
 
 The world the learner plays in. It is a track with five cells and a goal at cell 4.
 
@@ -7875,7 +12285,21 @@ The world the learner plays in. It is a track with five cells and a goal at cell
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Actions **Practice** | Try moving left and right from the same starting cell. | [⬇️ Lesson ZIP](sample_code_folder/414-actions.zip) |
+| 414 - Actions **Practice** | Try moving left and right from the same starting cell. | [Lesson ZIP](sample_code_folder/414-actions.zip) |
+
+**Before this lesson.** Read the robot, reward and network notes in Extra topics.
+
+**In simple words.** An agent chooses an action, sees a result and gets a reward. A policy is its action rule. Return adds rewards, often giving later rewards less weight.
+
+**Guess first.** Does one rewarded move prove a policy is reliable? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Check the whole policy over suitable trials.
+
+</details>
+
 
 The moves the agent can make. In this exercise, 0 means left and 1 means right.
 
@@ -7885,7 +12309,21 @@ The moves the agent can make. In this exercise, 0 means left and 1 means right.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| State **Practice** | Give the robot different starting positions and see its next state. | [⬇️ Lesson ZIP](sample_code_folder/415-state.zip) |
+| 415 - State **Practice** | Give the robot different starting positions and see its next state. | [Lesson ZIP](sample_code_folder/415-state.zip) |
+
+**Before this lesson.** Read the robot, reward and network notes in Extra topics.
+
+**In simple words.** An agent chooses an action, sees a result and gets a reward. A policy is its action rule. Return adds rewards, often giving later rewards less weight.
+
+**Guess first.** Does one rewarded move prove a policy is reliable? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Check the whole policy over suitable trials.
+
+</details>
+
 
 What the agent knows now. Here it is the number of the cell it is standing in.
 
@@ -7895,7 +12333,21 @@ What the agent knows now. Here it is the number of the cell it is standing in.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Reward **Practice** | Compare the rewards for an ordinary move and a move that reaches the goal. | [⬇️ Lesson ZIP](sample_code_folder/416-reward.zip) |
+| 416 - Reward **Practice** | Compare the rewards for an ordinary move and a move that reaches the goal. | [Lesson ZIP](sample_code_folder/416-reward.zip) |
+
+**Before this lesson.** Read the robot, reward and network notes in Extra topics.
+
+**In simple words.** An agent chooses an action, sees a result and gets a reward. A policy is its action rule. Return adds rewards, often giving later rewards less weight.
+
+**Guess first.** Does one rewarded move prove a policy is reliable? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Check the whole policy over suitable trials.
+
+</details>
+
 
 A number received after a move. Reaching the goal gives +1. Every other move costs 0.02.
 
@@ -7905,7 +12357,21 @@ A number received after a move. Reaching the goal gives +1. Every other move cos
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Policy **Practice** | Follow a simple rule for choosing moves and compare the resulting rewards. | [⬇️ Lesson ZIP](sample_code_folder/417-policy.zip) |
+| 417 - Policy **Practice** | Follow a simple rule for choosing moves and compare the resulting rewards. | [Lesson ZIP](sample_code_folder/417-policy.zip) |
+
+**Before this lesson.** Read the robot, reward and network notes in Extra topics.
+
+**In simple words.** An agent chooses an action, sees a result and gets a reward. A policy is its action rule. Return adds rewards, often giving later rewards less weight.
+
+**Guess first.** Does one rewarded move prove a policy is reliable? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Check the whole policy over suitable trials.
+
+</details>
+
 
 A rule for choosing an action. The example’s policy always moves right.
 
@@ -7915,7 +12381,21 @@ A rule for choosing an action. The example’s policy always moves right.
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Value Function **Practice** | Add future rewards with more weight on the rewards that come sooner. | [⬇️ Lesson ZIP](sample_code_folder/418-value-function.zip) |
+| 418 - Value Function **Practice** | Add future rewards with more weight on the rewards that come sooner. | [Lesson ZIP](sample_code_folder/418-value-function.zip) |
+
+**Before this lesson.** Read the robot, reward and network notes in Extra topics.
+
+**In simple words.** An agent chooses an action, sees a result and gets a reward. A policy is its action rule. Return adds rewards, often giving later rewards less weight.
+
+**Guess first.** Does one rewarded move prove a policy is reliable? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Check the whole policy over suitable trials.
+
+</details>
+
 
 A value function is the expected discounted return when a policy starts from a given state. This lesson follows one fixed sequence and calculates the discounted return for that sequence.
 
@@ -7937,7 +12417,7 @@ Move  From cell Action  To cell  Reward
 2          1  Right        2   -0.02
 ```
 
-**🧪 Change one input.** Set `start` to 3 in `new_inputs.csv` and rerun. Find the row for 3 → 4. The reward for that move is 1.0.
+**Your small change.** Try changing start from 0 to 3 in new_inputs.csv. Compare the new output. Save the named CSV before running again.
 
 
 <a id="common-algorithms-4"></a>
@@ -7946,7 +12426,21 @@ Move  From cell Action  To cell  Reward
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Common Algorithms **Practice** | Learn from trial moves until the robot can choose a better path. | [⬇️ Lesson ZIP](sample_code_folder/419-common-algorithms-4.zip) |
+| 419 - Common Algorithms **Practice** | Learn from trial moves until the robot can choose a better path. | [Lesson ZIP](sample_code_folder/419-common-algorithms-4.zip) |
+
+**Before this lesson.** Read the robot, reward and network notes in Extra topics.
+
+**In simple words.** An agent chooses an action, sees a result and gets a reward. A policy is its action rule. Return adds rewards, often giving later rewards less weight.
+
+**Guess first.** Does one rewarded move prove a policy is reliable? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Check the whole policy over suitable trials.
+
+</details>
+
 
 <a id="q-learning"></a>
 
@@ -7954,7 +12448,21 @@ Move  From cell Action  To cell  Reward
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Q-Learning **Practice** | Build a table of expected rewards for each cell and move. | [⬇️ Lesson ZIP](sample_code_folder/420-q-learning.zip) |
+| 420 - Q-Learning **Practice** | Build a table of expected rewards for each cell and move. | [Lesson ZIP](sample_code_folder/420-q-learning.zip) |
+
+**Before this lesson.** Read the robot, reward and network notes in Extra topics.
+
+**In simple words.** An agent chooses an action, sees a result and gets a reward. A policy is its action rule. Return adds rewards, often giving later rewards less weight.
+
+**Guess first.** Does one rewarded move prove a policy is reliable? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Check the whole policy over suitable trials.
+
+</details>
+
 
 Start with zero action values. Let the agent explore and update a small Q-table from observed moves and rewards. Print its learned policy.
 
@@ -7974,7 +12482,7 @@ State values: [0.8, 0.86, 0.93, 1.0]
 Moves for test starts: [1, 1, 1]
 ```
 
-**🧪 Change one input.** Change a starting cell (0–3) in new_inputs.csv. Read the saved-in-memory policy’s preferred move, 0 left or 1 right.
+**Your small change.** Change a starting cell (0–3) in new_inputs.csv. Read the saved-in-memory policy’s preferred move, 0 left or 1 right. Save the named CSV before running again.
 
 
 ![Grouped bars compare the learned value of a left and a right move in cells zero through three.](workbook-figures/q-learning.png)
@@ -7989,7 +12497,21 @@ Moves for test starts: [1, 1, 1]
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Deep Q Networks (DQN) **Practice** | Teach a small neural network to score left and right moves. | [⬇️ Lesson ZIP](sample_code_folder/421-deep-q-networks-dqn.zip) |
+| 421 - Deep Q Networks (DQN) **Practice** | Teach a small neural network to score left and right moves. | [Lesson ZIP](sample_code_folder/421-deep-q-networks-dqn.zip) |
+
+**Before this lesson.** Read the robot, reward and network notes in Extra topics.
+
+**In simple words.** An agent chooses an action, sees a result and gets a reward. A policy is its action rule. Return adds rewards, often giving later rewards less weight.
+
+**Guess first.** Does one rewarded move prove a policy is reliable? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Check the whole policy over suitable trials.
+
+</details>
+
 
 Replace the Q-table with a small neural network. Train on a generated replay batch and use a separate target copy for the next-state values.
 
@@ -8011,7 +12533,7 @@ DQN policy: [1, 1, 1, 1]
 Moves for test starts: [1, 1, 1]
 ```
 
-**🧪 Change one input.** Try changing start from 0 to 3 in new_inputs.csv. Compare the new output.
+**Your small change.** Try changing start from 0 to 3 in new_inputs.csv. Compare the new output. Save the named CSV before running again.
 
 
 **💡 Takeaway.** The replay batch holds the toy environment’s transitions. In an image task, replace the one-hot state input with an encoder for the pixels.
@@ -8022,7 +12544,21 @@ Moves for test starts: [1, 1, 1]
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Policy Gradient Methods **Practice** | Improve the probability of choosing a move that has paid off. | [⬇️ Lesson ZIP](sample_code_folder/422-policy-gradient-methods.zip) |
+| 422 - Policy Gradient Methods **Practice** | Improve the probability of choosing a move that has paid off. | [Lesson ZIP](sample_code_folder/422-policy-gradient-methods.zip) |
+
+**Before this lesson.** Read the robot, reward and network notes in Extra topics.
+
+**In simple words.** An agent chooses an action, sees a result and gets a reward. A policy is its action rule. Return adds rewards, often giving later rewards less weight.
+
+**Guess first.** Does one rewarded move prove a policy is reliable? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Check the whole policy over suitable trials.
+
+</details>
+
 
 <a id="actor-critic"></a>
 
@@ -8030,7 +12566,21 @@ Moves for test starts: [1, 1, 1]
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Actor-Critic **Practice** | Use one part to choose actions and another to estimate how good they are. | [⬇️ Lesson ZIP](sample_code_folder/423-actor-critic.zip) |
+| 423 - Actor-Critic **Practice** | Use one part to choose actions and another to estimate how good they are. | [Lesson ZIP](sample_code_folder/423-actor-critic.zip) |
+
+**Before this lesson.** Read the robot, reward and network notes in Extra topics.
+
+**In simple words.** An agent chooses an action, sees a result and gets a reward. A policy is its action rule. Return adds rewards, often giving later rewards less weight.
+
+**Guess first.** Does one rewarded move prove a policy is reliable? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Check the whole policy over suitable trials.
+
+</details>
+
 
 Run direct policy gradient and actor–critic on a one-state environment. Both learn which button pays more. Actor–critic also learns a baseline value.
 
@@ -8051,7 +12601,7 @@ Actor-Critic chosen button: 1
 Estimated policy value: 0.72
 ```
 
-**🧪 Change one input.** Swap the two reward chances in sample.csv. Rerun and see which button each method prefers.
+**Your small change.** Swap the two reward chances in sample.csv. Rerun and see which button each method prefers. Save the named CSV before running again.
 
 
 <a id="monte-carlo-tree-search-mcts"></a>
@@ -8060,7 +12610,21 @@ Estimated policy value: 0.72
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Monte Carlo Tree Search (MCTS) **Practice** | Try several possible future move sequences before choosing a first move. | [⬇️ Lesson ZIP](sample_code_folder/424-monte-carlo-tree-search-mcts.zip) |
+| 424 - Monte Carlo Tree Search (MCTS) **Practice** | Try several possible future move sequences before choosing a first move. | [Lesson ZIP](sample_code_folder/424-monte-carlo-tree-search-mcts.zip) |
+
+**Before this lesson.** Read the robot, reward and network notes in Extra topics.
+
+**In simple words.** An agent chooses an action, sees a result and gets a reward. A policy is its action rule. Return adds rewards, often giving later rewards less weight.
+
+**Guess first.** Does one rewarded move prove a policy is reliable? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Check the whole policy over suitable trials.
+
+</details>
+
 
 Try tree search on the original five-cell track. Expand unvisited branches, choose known branches by an upper confidence bound, and back up a rollout return.
 
@@ -8080,7 +12644,7 @@ First-step visits: [17, 223]
 Recommended first action: 1
 ```
 
-**🧪 Change one input.** Change the ordinary move reward in sample.csv. Keep the goal and the list of state/action pairs. See whether the planner's first move changes.
+**Your small change.** Change the ordinary move reward in sample.csv. Keep the goal and the list of state/action pairs. See whether the planner's first move changes. Save the named CSV before running again.
 
 
 <a id="model-free"></a>
@@ -8089,7 +12653,21 @@ Recommended first action: 1
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Model-Free **Practice** | Learn which moves pay off through trial runs without needing a planning model. | [⬇️ Lesson ZIP](sample_code_folder/425-model-free.zip) |
+| 425 - Model-Free **Practice** | Learn which moves pay off through trial runs without needing a planning model. | [Lesson ZIP](sample_code_folder/425-model-free.zip) |
+
+**Before this lesson.** Read the robot, reward and network notes in Extra topics.
+
+**In simple words.** An agent chooses an action, sees a result and gets a reward. A policy is its action rule. Return adds rewards, often giving later rewards less weight.
+
+**Guess first.** Does one rewarded move prove a policy is reliable? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Check the whole policy over suitable trials.
+
+</details>
+
 
 Run [Q-Learning](#q-learning) by changing the per-move penalty, or use [Policy Optimization](#policy-gradient-methods) with different rewards. Both learn from observed feedback.
 
@@ -8099,7 +12677,21 @@ Run [Q-Learning](#q-learning) by changing the per-move penalty, or use [Policy O
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Model-Based **Practice** | Plan moves using rules that describe what happens next. | [⬇️ Lesson ZIP](sample_code_folder/427-model-based.zip) |
+| 427 - Model-Based **Practice** | Plan moves using rules that describe what happens next. | [Lesson ZIP](sample_code_folder/427-model-based.zip) |
+
+**Before this lesson.** Read the robot, reward and network notes in Extra topics.
+
+**In simple words.** An agent chooses an action, sees a result and gets a reward. A policy is its action rule. Return adds rewards, often giving later rewards less weight.
+
+**Guess first.** Does one rewarded move prove a policy is reliable? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Check the whole policy over suitable trials.
+
+</details>
+
 
 <a id="learn-the-model"></a>
 
@@ -8107,7 +12699,21 @@ Run [Q-Learning](#q-learning) by changing the per-move penalty, or use [Policy O
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Learn the Model **Practice** | Build a small transition table from observed moves and use it to plan. | [⬇️ Lesson ZIP](sample_code_folder/428-learn-the-model.zip) |
+| 428 - Learn the Model **Practice** | Build a small transition table from observed moves and use it to plan. | [Lesson ZIP](sample_code_folder/428-learn-the-model.zip) |
+
+**Before this lesson.** Read the robot, reward and network notes in Extra topics.
+
+**In simple words.** An agent chooses an action, sees a result and gets a reward. A policy is its action rule. Return adds rewards, often giving later rewards less weight.
+
+**Guess first.** Does one rewarded move prove a policy is reliable? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Check the whole policy over suitable trials.
+
+</details>
+
 
 <a id="given-the-model"></a>
 
@@ -8115,7 +12721,21 @@ Run [Q-Learning](#q-learning) by changing the per-move penalty, or use [Policy O
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Given the Model **Practice** | Plan the best move using a transition table that is already available. | [⬇️ Lesson ZIP](sample_code_folder/429-given-the-model.zip) |
+| 429 - Given the Model **Practice** | Plan the best move using a transition table that is already available. | [Lesson ZIP](sample_code_folder/429-given-the-model.zip) |
+
+**Before this lesson.** Read the robot, reward and network notes in Extra topics.
+
+**In simple words.** An agent chooses an action, sees a result and gets a reward. A policy is its action rule. Return adds rewards, often giving later rewards less weight.
+
+**Guess first.** Does one rewarded move prove a policy is reliable? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Check the whole policy over suitable trials.
+
+</details>
+
 
 Generate one observation for each state-action pair and store the resulting transition as a learned model. Compare a small look-ahead planner with the original rules and with the learned table.
 
@@ -8135,7 +12755,7 @@ Best action: 1
 Start 0, planned values: [0.7403087499999998, 0.8003249999999998]
 ```
 
-**🧪 Change one input.** Edit start in new_inputs.csv. The planner reads the supplied transition rules directly.
+**Your small change.** Edit start in new_inputs.csv. The planner reads the supplied transition rules directly. Save the named CSV before running again.
 
 
 **💡 Takeaway.** The deterministic table has every state-action pair. With incomplete or uncertain observations, quantify the uncertainty before using it for planning.
@@ -8146,13 +12766,27 @@ Start 0, planned values: [0.7403087499999998, 0.8003249999999998]
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Summary of Machine Learning Categories **Practice** | Match a delivery problem to one of the four learning categories. | [⬇️ Lesson ZIP](sample_code_folder/430-summary-of-machine-learning-categories.zip) |
+| 430 - Summary of Machine Learning Categories **Practice** | Match a delivery problem to one of the four learning categories. | [Lesson ZIP](sample_code_folder/430-summary-of-machine-learning-categories.zip) |
+
+**Before this lesson.** Explain number prediction, categories, groups and rewards.
+
+**In simple words.** Choose a learning task from the answer and feedback available. Multiple regression means several inputs. Multivariate regression can mean several outputs.
+
+**Guess first.** Does the word regression mean the answer is a known category? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Regression predicts numbers.
+
+</details>
+
 
 **✅ Try the dedicated task.** Match the kind of feedback to the learning category. Edit a row in new_inputs.csv to go from known answers to some answers and compare the category.
 
 | PDF category | Run first | What to check |
 | --- | --- | --- |
-| 🔵 Supervised | [Regression Algorithms](#regression-algorithms) or [Classification Algorithms](#classification-algorithms) | Compare held-out predictions with known labels. |
+| 🔵 Supervised | [Regression Algorithms](#regression-algorithms) or [Classification Algorithms](#classification-algorithms) | Compare kept-back predictions with known labels. |
 | 🟢 Unsupervised | [Clustering Algorithms](#clustering-algorithms), [Dimensionality Reduction](#dimensionality-reduction), [Anomaly Detection](#anomaly-detection) | Read profiles, projections, or flagged records. |
 | 🟣 Semi-Supervised | [Label Propagation](#label-propagation), [Self-Training](#self-training), [Co-Training](#co-training), or [S3VM](#semi-supervised-support-vector-machines-s3vm) | Keep a fully labeled holdout. |
 | 🟠 Reinforcement | [Q-Learning](#q-learning), [DQN](#deep-q-networks-dqn), [Policy Gradient Methods](#policy-gradient-methods), [Actor-Critic](#actor-critic), or [MCTS](#monte-carlo-tree-search-mcts) | Watch rewards and measure the final decision policy. |
@@ -8163,7 +12797,21 @@ Start 0, planned values: [0.7403087499999998, 0.8003249999999998]
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Machine Learning Algorithms **Practice** | Use delivery data to connect the diagram’s regression branch to a concrete prediction. | [⬇️ Lesson ZIP](sample_code_folder/431-machine-learning-algorithms.zip) |
+| 431 - Machine Learning Algorithms **Practice** | Use delivery data to connect the diagram’s regression branch to a concrete prediction. | [Lesson ZIP](sample_code_folder/431-machine-learning-algorithms.zip) |
+
+**Before this lesson.** Explain number prediction, categories, groups and rewards.
+
+**In simple words.** Choose a learning task from the answer and feedback available. Multiple regression means several inputs. Multivariate regression can mean several outputs.
+
+**Guess first.** Does the word regression mean the answer is a known category? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Regression predicts numbers.
+
+</details>
+
 
 The PDF’s closing diagram calls this **Every data scientist must know**. Jump to the worksheet for each branch. PCA and ICA are mapped to dimensionality reduction, and standard K-Means to clustering.
 
@@ -8173,7 +12821,21 @@ The PDF’s closing diagram calls this **Every data scientist must know**. Jump 
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Simple Linear Regression **Practice** | Use distance alone to predict delivery time. | [⬇️ Lesson ZIP](sample_code_folder/432-simple-linear-regression.zip) |
+| 432 - Simple Linear Regression **Practice** | Use distance alone to predict delivery time. | [Lesson ZIP](sample_code_folder/432-simple-linear-regression.zip) |
+
+**Before this lesson.** Explain number prediction, categories, groups and rewards.
+
+**In simple words.** Choose a learning task from the answer and feedback available. Multiple regression means several inputs. Multivariate regression can mean several outputs.
+
+**Guess first.** Does the word regression mean the answer is a known category? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Regression predicts numbers.
+
+</details>
+
 
 <a id="multivariate-regression"></a>
 
@@ -8181,7 +12843,21 @@ The PDF’s closing diagram calls this **Every data scientist must know**. Jump 
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Multivariate Regression **Practice** | Predict delivery minutes and fuel use for each new delivery. | [⬇️ Lesson ZIP](sample_code_folder/433-multivariate-regression.zip) |
+| 433 - Multivariate Regression **Practice** | Predict delivery minutes and fuel use for each new delivery. | [Lesson ZIP](sample_code_folder/433-multivariate-regression.zip) |
+
+**Before this lesson.** Explain number prediction, categories, groups and rewards.
+
+**In simple words.** Choose a learning task from the answer and feedback available. Multiple regression means several inputs. Multivariate regression can mean several outputs.
+
+**Guess first.** Does the word regression mean the answer is a known category? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Regression predicts numbers.
+
+</details>
+
 
 Use one input for a simple regression. Then fit multiple predictors for one target and fit a multivariate model for two targets.
 
@@ -8213,7 +12889,7 @@ Multiple-predictor predictions: [31.0, 42.0]
 Two outcomes per row: [[31.0, 1.55], [42.0, 1.95]]
 ```
 
-**🧪 Change one input.** Enter another distance and weight. Read the separate columns for estimated minutes and fuel litres.
+**Your small change.** Enter another distance and weight. Read the separate columns for estimated minutes and fuel litres. Save the named CSV before running again.
 
 
 **💡 Takeaway.** Multiple linear regression uses more than one predictor. In stricter usage, multivariate regression predicts more than one outcome.
@@ -8237,11 +12913,25 @@ Two outcomes per row: [[31.0, 1.55], [42.0, 1.95]]
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Choose the right data split **Core** | Compare random, customer-grouped, and chronological splits on the same delivery data. | [⬇️ Lesson ZIP](sample_code_folder/442-choose-the-right-split.zip) |
+| 442 - Choose the right data split **Core** | Compare random, customer-grouped, and chronological splits on the same delivery data. | [Lesson ZIP](sample_code_folder/442-choose-the-right-split.zip) |
+
+**Before this lesson.** Explain training and test roles.
+
+**In simple words.** Choose a split for the question, not for its best-looking score. Random rows, new customers and later dates are different questions.
+
+**Guess first.** Which split tests new customers? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+Keep customer groups separate.
+
+</details>
+
 
 **▶️ Run.** Extract the [⬇️ Lesson ZIP](sample_code_folder/442-choose-the-right-split.zip). In the lesson folder, run `python -m pip install -r requirements.txt` once and then `python lesson.py`.
 
-**✅ Check.** All plans share zero shipment IDs. The customer plan shares zero customers. Only the time plan puts all test dates after training. The script includes customer ID to show how known and unseen customers can change the task. Use that field only if you know it when making a prediction. Each split answers a different question.
+**✅ Check.** All plans share zero shipment IDs. The customer plan shares zero customers. Only the time plan puts all test dates after training. The script includes customer ID to show how known and new customers can change the task. Use that field only if you know it when making a prediction. Each split answers a different question.
 
 ![Random orders share 63 customers across train and test. The customer split shares none. The time split shares 84 and is the only plan with all test orders later.](workbook-figures/lesson-442-split-checks.png)
 
@@ -8249,7 +12939,7 @@ Two outcomes per row: [[31.0, 1.55], [42.0, 1.95]]
 
 **👉 Use what you see.** Inspect the split check before looking at MAE. All three plans keep shipment IDs disjoint with the supplied data.
 
-**🧪 Change one input.** Leave only customer in new_inputs.csv. Check that this plan keeps all rows for an unseen customer together.
+**Your small change.** Leave only customer in new_inputs.csv. Check that this plan keeps all rows for an unseen customer together. Save the named CSV before running again.
 
 | What the app will see | Pick this split | Check before fitting |
 | --- | --- | --- |
@@ -8257,7 +12947,7 @@ Two outcomes per row: [[31.0, 1.55], [42.0, 1.95]]
 | Customers who were never in training | Customer grouped | Check for zero shared customer IDs. |
 | Later deliveries | Time ordered | Check that the last training date is before the first test date. |
 
-**➡️ Next Core lesson.** [Choose a cutoff for rare urgent orders](#lesson-444). [Cross-validation guide](https://scikit-learn.org/stable/modules/cross_validation.html)
+**Next step.** Return to [Your learning path](LEARNING-PATH.md) and open the next unfinished module.
 
 <a id="lesson-443"></a>
 
@@ -8265,13 +12955,27 @@ Two outcomes per row: [[31.0, 1.55], [42.0, 1.95]]
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Spot overfitting with a validation curve **Practice** | Vary model complexity, read the training and validation errors, and test the selected setting once. | [⬇️ Lesson ZIP](sample_code_folder/443-learn-to-spot-overfitting.zip) |
+| 443 - Spot overfitting with a validation curve **Core** | Vary model complexity, read the training and validation errors, and test the selected setting once. | [Lesson ZIP](sample_code_folder/443-learn-to-spot-overfitting.zip) |
+
+**Before this lesson.** Understand a validation score and tree depth.
+
+**In simple words.** A deep tree can remember training details. Read training and validation errors together. Freeze the setting before the final test.
+
+**Guess first.** Why might a lower training error be a bad choice? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+It can come with a worse validation error.
+
+</details>
+
 
 **▶️ Run.** Extract the [⬇️ Lesson ZIP](sample_code_folder/443-learn-to-spot-overfitting.zip). In the lesson folder, run `python -m pip install -r requirements.txt` once and then `python lesson.py`.
 
 **✅ Check.** A depth-25 tree has almost zero training error but higher validation error. Depth 3 wins on validation.
 
-**🧪 Change one input.** Add a deeper tree to new_inputs.csv. Compare its training and validation errors with the shallower tree before checking the winner.
+**Your small change.** Add a deeper tree to new_inputs.csv. Compare its training and validation errors with the shallower tree before checking the winner. Save the named CSV before running again.
 
 ![Training and validation error are plotted at each tree depth. An orange diamond marks the lowest validation error at depth three.](workbook-figures/lesson-443-validation-curve.png)
 
@@ -8283,19 +12987,33 @@ Two outcomes per row: [[31.0, 1.55], [42.0, 1.95]]
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Choose a cutoff for rare urgent orders **Core** | Compare precision and recall and pick an alert cutoff on validation orders before testing. | [⬇️ Lesson ZIP](sample_code_folder/444-rare-event-threshold.zip) |
+| 444 - Choose a cutoff for rare urgent orders **Core** | Compare precision and recall and pick an alert cutoff on validation orders before testing. | [Lesson ZIP](sample_code_folder/444-rare-event-threshold.zip) |
+
+**Before this lesson.** Finish lesson 205 and the error-count practice.
+
+**In simple words.** Choose a cutoff on validation orders. More caught urgent orders may bring more false alarms. Team capacity and costs matter.
+
+**Guess first.** Does changing the cutoff retrain the model? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. It changes which scores raise alerts.
+
+</details>
+
 
 **▶️ Run.** Extract the [⬇️ Lesson ZIP](sample_code_folder/444-rare-event-threshold.zip). In the lesson folder, run `python -m pip install -r requirements.txt` once and then `python lesson.py`.
 
 **✅ Check.** The chosen cutoff catches 104 urgent test orders instead of 38. False alarms rise from 26 to 199.
 
-**🧪 Change one input.** Change min_recall from 0.70 to 0.85. Check why the new cutoff is lower and how the alert counts change. Pick a target on validation only.
+**Your small change.** Change min_recall from 0.70 to 0.85. Check why the new cutoff is lower and how the alert counts change. Pick a target on validation only. Save the named CSV before running again.
 
 ![A precision–recall curve for validation orders with the selected cutoff marked. A dashed line shows how rare urgent orders are.](workbook-figures/lesson-444-precision-recall.png)
 
 **👀 Read the visual.** Read precision and recall for the diamond, then compare default and chosen cutoffs in the separate test table.
 
-**➡️ Next Core lesson.** [Evaluate delivery errors by group](#lesson-446).
+**Next step.** Return to [Your learning path](LEARNING-PATH.md) and open the next unfinished module.
 
 <a id="lesson-445"></a>
 
@@ -8303,13 +13021,27 @@ Two outcomes per row: [[31.0, 1.55], [42.0, 1.95]]
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Check whether predicted probabilities are reliable **Practice** | Fit a calibration model using validation rows and compare probability quality on a separate test set. | [⬇️ Lesson ZIP](sample_code_folder/445-calibrate-probabilities.zip) |
+| 445 - Check whether predicted probabilities are reliable **Practice** | Train a calibration model using validation rows and compare probability quality on a separate test set. | [Lesson ZIP](sample_code_folder/445-calibrate-probabilities.zip) |
+
+**Before this lesson.** Understand probability and calibration in Extra topics.
+
+**In simple words.** Calibration compares stated chances with observed shares. More bins only change the picture's grouping, not the saved probability errors.
+
+**Guess first.** Must a probability adjustment improve every test? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+No. Check it on separate rows and inspect counts.
+
+</details>
+
 
 **▶️ Run.** Extract the [⬇️ Lesson ZIP](sample_code_folder/445-calibrate-probabilities.zip). In the lesson folder, run `python -m pip install -r requirements.txt` once and then `python lesson.py`.
 
 **✅ Check.** The two Brier scores are close. In this test the raw forest scores 0.1081 and the adjusted forest 0.1083. Use the chart to see where the probability estimates differ.
 
-**🧪 Change one input.** Change bins from 5 to 10. Compare the chart’s grouping. The Brier scores should stay the same.
+**Your small change.** Change bins from 5 to 10. Compare the chart’s grouping. The Brier scores should stay the same. Save the named CSV before running again.
 
 ![Calibration curves on the same test rows compare raw and adjusted predicted probability groups to the dashed ideal line.](workbook-figures/lesson-445-calibration.png)
 
@@ -8321,7 +13053,21 @@ Two outcomes per row: [[31.0, 1.55], [42.0, 1.95]]
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Evaluate delivery errors by route, weight and zone **Core** | Compare a delivery model to a median baseline on a larger batch of future deliveries. | [⬇️ Lesson ZIP](sample_code_folder/446-larger-regression-evaluation.zip) |
+| 446 - Evaluate delivery errors by route, weight and zone **Core** | Compare a delivery model to a median baseline on a larger batch of future deliveries. | [Lesson ZIP](sample_code_folder/446-larger-regression-evaluation.zip) |
+
+**Before this lesson.** Calculate MAE and explain a baseline.
+
+**In simple words.** Read overall error and errors by route, weight and zone. Put counts beside scores. A small group is less certain.
+
+**Guess first.** Which matters beside a group's MAE? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+Its size and the actual examples behind its errors.
+
+</details>
+
 
 **▶️ Run.** Extract the [⬇️ Lesson ZIP](sample_code_folder/446-larger-regression-evaluation.zip). In the lesson folder, run `python -m pip install -r requirements.txt` once and then `python lesson.py`.
 
@@ -8333,9 +13079,9 @@ Two outcomes per row: [[31.0, 1.55], [42.0, 1.95]]
 
 **👉 Use what you see.** Inspect the twelve underlying records to understand why the weight is missing. Check the same group in a later batch.
 
-**🧪 Change one input.** Change short_route_max_km from 25 to 20. The route-group counts should change while the overall model MAE stays the same.
+**Your small change.** Change short_route_max_km from 25 to 20. The route-group counts should change while the overall model MAE stays the same. Save the named CSV before running again.
 
-**➡️ Next Core lesson.** [Build and monitor the delivery model](#lesson-447).
+**Next step.** Return to [Your learning path](LEARNING-PATH.md) and open the next unfinished module.
 
 <a id="lesson-447"></a>
 
@@ -8343,7 +13089,21 @@ Two outcomes per row: [[31.0, 1.55], [42.0, 1.95]]
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| Capstone: From delivery CSV to local model service **Core** | Train, validate, test, and save a model. Send local requests and monitor later labeled deliveries. | [⬇️ Lesson ZIP](sample_code_folder/447-delivery-model-capstone.zip) |
+| 447 - Capstone: From delivery CSV to local model service **Core** | Train, validate, test, and save a model. Send local requests and monitor later labeled deliveries. | [Lesson ZIP](sample_code_folder/447-delivery-model-capstone.zip) |
+
+**Before this lesson.** Finish all earlier main-path modules.
+
+**In simple words.** Connect training, choice, final check, saved rules, requests and later monitoring. Explain each decision rather than only copying printed scores.
+
+**Guess first.** What does the later-batch alert ask you to do? Write your answer before running the example.
+
+<details>
+<summary>Read the reason after trying</summary>
+
+Investigate data and changes before replacing the model.
+
+</details>
+
 
 **▶️ Run.** Extract the [⬇️ Lesson ZIP](sample_code_folder/447-delivery-model-capstone.zip). In the lesson folder, run `python -m pip install -r requirements.txt` once and then `python lesson.py`.
 
@@ -8355,9 +13115,11 @@ Two outcomes per row: [[31.0, 1.55], [42.0, 1.95]]
 
 **👉 Use what you see.** Start with the West orders and verify what changed before fitting or shipping a replacement.
 
-**🧪 Change one input.** Change the 90 km request to 60 km. Run python send_requests.py to use your saved model. That request should receive 200 and an estimate.
+**Your small change.** Change the 90 km request to 60 km. Run python send_requests.py to use your saved model. That request should receive 200 and an estimate. Save the named CSV before running again.
 
-Open the lesson README for the **data dictionary**, the **10-point self-check**, and the command to open the local service. Run `python lesson.py` from the extracted [capstone ZIP](sample_code_folder/447-delivery-model-capstone.zip). It calls the included training, request, and monitoring modules. The request check uses a local test client. Training records package versions alongside the model. Only load Joblib artifacts you trained or trust. [Model persistence](https://scikit-learn.org/stable/model_persistence.html)
+Open the README in the extracted [project ZIP](sample_code_folder/447-delivery-model-capstone.zip). Its data dictionary explains each field. Its ten-point check asks you to explain your work.
+
+Run `python lesson.py`. It trains, checks example requests, then reads a later batch. The request check stays on this computer. The model notes record package versions. Load only a Joblib file you made or trust. [More about saved models](https://scikit-learn.org/stable/model_persistence.html)
 
 <a id="lesson-downloads"></a>
 
@@ -8378,662 +13140,662 @@ Use the badges to find **Core**, **Practice**, and **Reference** lessons. The li
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 001 · Start here **Practice** | Read a delivery table, teach a model with three rows, and ask it for a new delivery time. Shared code with lesson 002. | [⬇️ Lesson ZIP](sample_code_folder/001-start-here.zip) |
-| 002 · Your first prediction **Core** | Predict how long a 4 km delivery will take, then check the model against two trips with known times. Shared code with lesson 001. | [⬇️ Lesson ZIP](sample_code_folder/002-your-first-prediction.zip) |
+| 001 - Start here **Practice** | Read a delivery table, teach a model with three rows, and ask it for a new delivery time. | [Lesson ZIP](sample_code_folder/001-start-here.zip) |
+| 002 - Your first prediction **Core** | Predict how long a 4 km delivery will take, then check the model against two trips with known times. | [Lesson ZIP](sample_code_folder/002-your-first-prediction.zip) |
 
 ### 🟩 1. Data Science Pipeline
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 003 · 1. Data Science Pipeline **Practice** | Turn a business question into something you can measure before you choose a model. Shared code with lesson 005. | [⬇️ Lesson ZIP](sample_code_folder/003-1-data-science-pipeline.zip) |
+| 003 - 1. Data Science Pipeline **Practice** | Turn a business question into something you can measure before you choose a model. | [Lesson ZIP](sample_code_folder/003-1-data-science-pipeline.zip) |
 
 ### 🎯 1.1 Problem Definition
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 004 · 1.1 Problem Definition **Practice** | Decide what question the model should answer and how you will judge its answers. Shared code with lesson 006. | [⬇️ Lesson ZIP](sample_code_folder/004-1-1-problem-definition.zip) |
-| 005 · Understand the business problem or use case **Practice** | Name the decision you want to make for a delivery, a support message, or a shopper. Shared code with lesson 003. | [⬇️ Lesson ZIP](sample_code_folder/005-understand-the-business-problem-or-use-case.zip) |
-| 006 · Define the objective **Practice** | Decide whether the task needs a number, a category, or groups of similar rows. Shared code with lesson 004. | [⬇️ Lesson ZIP](sample_code_folder/006-define-the-objective.zip) |
-| 007 · Identify key performance metrics **Practice** | Pick a score that fits the question, such as minutes of error or how many urgent cases the model catches. | [⬇️ Lesson ZIP](sample_code_folder/007-identify-key-performance-metrics.zip) |
-| 008 · Understand the domain knowledge related to the data **Practice** | Write down what the data means, including its units and what you know before predicting. | [⬇️ Lesson ZIP](sample_code_folder/008-understand-the-domain-knowledge-related-to-the-data.zip) |
-| 009 · Set constraints & assumptions **Practice** | Record the time, hardware and accuracy limits that affect your project. | [⬇️ Lesson ZIP](sample_code_folder/009-set-constraints-assumptions.zip) |
+| 004 - 1.1 Problem Definition **Core** | Decide what question the model should answer and how you will judge its answers. | [Lesson ZIP](sample_code_folder/004-1-1-problem-definition.zip) |
+| 005 - Understand the business problem or use case **Practice** | Name the decision you want to make for a delivery, a support message, or a shopper. | [Lesson ZIP](sample_code_folder/005-understand-the-business-problem-or-use-case.zip) |
+| 006 - Define the objective **Practice** | Decide whether the task needs a number, a category, or groups of similar rows. | [Lesson ZIP](sample_code_folder/006-define-the-objective.zip) |
+| 007 - Identify key performance metrics **Practice** | Pick a score that fits the question, such as minutes of error or how many urgent cases the model catches. | [Lesson ZIP](sample_code_folder/007-identify-key-performance-metrics.zip) |
+| 008 - Understand the domain knowledge related to the data **Practice** | Write down what the data means, including its units and what you know before predicting. | [Lesson ZIP](sample_code_folder/008-understand-the-domain-knowledge-related-to-the-data.zip) |
+| 009 - Set constraints & assumptions **Core** | Record the time, hardware and accuracy limits that affect your project. | [Lesson ZIP](sample_code_folder/009-set-constraints-assumptions.zip) |
 
 ### 📥 1.2 Data Collection
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 010 · 1.2 Data Collection **Practice** | Read orders from a CSV, a small database, a local API, and a sample web page. Shared code family (see lesson 011 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/010-1-2-data-collection.zip) |
-| 011 · Identify data sources **Practice** | Compare four ways to bring order data into Python. Shared code family (see lesson 010 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/011-identify-data-sources.zip) |
-| 012 · Databases **Practice** | Put CSV orders into SQLite and read them back with a query. Shared code family (see lesson 010 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/012-databases.zip) |
-| 013 · APIs **Practice** | Use a local test client to request order rows and read the JSON reply. Shared code family (see lesson 010 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/013-apis.zip) |
-| 014 · Web scraping **Practice** | Read a sample HTML page and pick out order zones from tagged elements. Shared code family (see lesson 010 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/014-web-scraping.zip) |
-| 015 · Files **Practice** | Load a CSV with order IDs and zones, then check its rows. Shared code family (see lesson 010 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/015-files.zip) |
-| 016 · Gather structured and unstructured data **Practice** | Collect a delivery table, a text file, an image, and a short video into one folder. Shared code family (see lesson 017 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/016-gather-structured-and-unstructured-data.zip) |
-| 017 · Structured data (tables, CSVs) **Practice** | Use the table of order times as structured data and save the columns your team needs. Shared code family (see lesson 016 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/017-structured-data-tables-csvs.zip) |
-| 018 · Unstructured data (text, images, videos) **Practice** | Create and read a text file, picture and short video, then check the file list. Shared code family (see lesson 016 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/018-unstructured-data-text-images-videos.zip) |
-| 019 · Store data in a centralized location **Practice** | Save the collected records, media and file list in one location. Shared code family (see lesson 016 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/019-store-data-in-a-centralized-location.zip) |
-| 020 · Local storage **Practice** | Write practice files into a local folder and open them again. Shared code family (see lesson 016 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/020-local-storage.zip) |
-| 021 · Cloud storage **Reference** | Practice grouping files locally before following the cloud storage walkthrough. Local example + manual walkthrough. Shared code family (see lesson 016 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/021-cloud-storage.zip) |
-| 022 · Database storage **Practice** | Store orders in a database table and retrieve them with SQL. Shared code family (see lesson 010 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/022-database-storage.zip) |
-| 023 · Track metadata **Practice** | Record where a file came from, how large it is and what its columns contain. Shared code family (see lesson 016 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/023-track-metadata.zip) |
-| 024 · Data type **Practice** | Inspect the column types before sharing the delivery table. Shared code family (see lesson 016 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/024-data-type.zip) |
-| 025 · File size **Practice** | Read the size of the saved delivery file in bytes. Shared code family (see lesson 016 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/025-file-size.zip) |
-| 026 · Collection method **Practice** | Record how the sample file was collected so the next reader can trace it. Shared code family (see lesson 016 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/026-collection-method.zip) |
-| 027 · Handle data privacy & security concerns **Practice** | Export a delivery table with order IDs and times while keeping contact details out of the shared file. Shared code family (see lesson 016 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/027-handle-data-privacy-security-concerns.zip) |
-| 028 · GDPR **Practice** | Practice sharing only the fields the task needs. The sample uses fictitious contact details. Shared code family (see lesson 016 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/028-gdpr.zip) |
-| 029 · HIPAA **Practice** | Practice keeping a contact field out of a shared export using fictitious records. Shared code family (see lesson 016 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/029-hipaa.zip) |
+| 010 - 1.2 Data Collection **Practice** | Read orders from a CSV, a small database, a local API, and a sample web page. | [Lesson ZIP](sample_code_folder/010-1-2-data-collection.zip) |
+| 011 - Identify data sources **Practice** | Compare four ways to bring order data into Python. | [Lesson ZIP](sample_code_folder/011-identify-data-sources.zip) |
+| 012 - Databases **Practice** | Put CSV orders into SQLite and read them back with a query. | [Lesson ZIP](sample_code_folder/012-databases.zip) |
+| 013 - APIs **Practice** | Use a local test client to request order rows and read the JSON reply. | [Lesson ZIP](sample_code_folder/013-apis.zip) |
+| 014 - Web scraping **Practice** | Read a sample HTML page and pick out order zones from tagged elements. | [Lesson ZIP](sample_code_folder/014-web-scraping.zip) |
+| 015 - Files **Practice** | Load a CSV with order IDs and zones, then check its rows. | [Lesson ZIP](sample_code_folder/015-files.zip) |
+| 016 - Gather structured and unstructured data **Practice** | Collect a delivery table, a text file, an image, and a short video into one folder. | [Lesson ZIP](sample_code_folder/016-gather-structured-and-unstructured-data.zip) |
+| 017 - Structured data (tables, CSVs) **Practice** | Use the table of order times as structured data and save the columns your team needs. | [Lesson ZIP](sample_code_folder/017-structured-data-tables-csvs.zip) |
+| 018 - Unstructured data (text, images, videos) **Practice** | Create and read a text file, picture and short video, then check the file list. | [Lesson ZIP](sample_code_folder/018-unstructured-data-text-images-videos.zip) |
+| 019 - Store data in a centralized location **Practice** | Save the collected records, media and file list in one location. | [Lesson ZIP](sample_code_folder/019-store-data-in-a-centralized-location.zip) |
+| 020 - Local storage **Practice** | Write practice files into a local folder and open them again. | [Lesson ZIP](sample_code_folder/020-local-storage.zip) |
+| 021 - Cloud storage **Reference** | Practice grouping files locally before following the cloud storage walkthrough. | [Lesson ZIP](sample_code_folder/021-cloud-storage.zip) |
+| 022 - Database storage **Practice** | Store orders in a database table and retrieve them with SQL. | [Lesson ZIP](sample_code_folder/022-database-storage.zip) |
+| 023 - Track notes about the data **Practice** | Record where a file came from, how large it is and what its columns contain. | [Lesson ZIP](sample_code_folder/023-track-metadata.zip) |
+| 024 - Data type **Practice** | Inspect the column types before sharing the delivery table. | [Lesson ZIP](sample_code_folder/024-data-type.zip) |
+| 025 - File size **Practice** | Read the size of the saved delivery file in bytes. | [Lesson ZIP](sample_code_folder/025-file-size.zip) |
+| 026 - Collection method **Practice** | Record how the sample file was collected so the next reader can trace it. | [Lesson ZIP](sample_code_folder/026-collection-method.zip) |
+| 027 - Handle data privacy & security concerns **Practice** | Export a delivery table with order IDs and times while keeping contact details out of the shared file. | [Lesson ZIP](sample_code_folder/027-handle-data-privacy-security-concerns.zip) |
+| 028 - GDPR **Practice** | Practice sharing only the fields the task needs. The sample uses fictitious contact details. | [Lesson ZIP](sample_code_folder/028-gdpr.zip) |
+| 029 - HIPAA **Practice** | Practice keeping a contact field out of a shared export using fictitious records. | [Lesson ZIP](sample_code_folder/029-hipaa.zip) |
 
 ### 🧼 1.3 Data Cleaning & Preprocessing
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 030 · 1.3 Data Cleaning & Preprocessing **Practice** | Start by finding blanks and question marks in your delivery data. Shared code with lesson 031, lesson 032, lesson 033. | [⬇️ Lesson ZIP](sample_code_folder/030-1-3-data-cleaning-preprocessing.zip) |
+| 030 - 1.3 Data Cleaning & Preprocessing **Practice** | Start by finding blanks and question marks in your delivery data. | [Lesson ZIP](sample_code_folder/030-1-3-data-cleaning-preprocessing.zip) |
 
 ### 🕳️ 1.3.1 Handle Missing Values
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 031 · 1.3.1 Handle Missing Values **Practice** | Count missing entries and locate the delivery rows you need to review. Shared code with lesson 030, lesson 032, lesson 033. | [⬇️ Lesson ZIP](sample_code_folder/031-1-3-1-handle-missing-values.zip) |
-| 032 · Identify missing values **Core** | Find which weights or delivery zones are missing and read the affected rows. Shared code with lesson 030, lesson 031, lesson 033. | [⬇️ Lesson ZIP](sample_code_folder/032-identify-missing-values.zip) |
-| 033 · Null and NaN indicators **Practice** | Use pandas to count blank cells and question marks as missing. Shared code with lesson 030, lesson 031, lesson 032. | [⬇️ Lesson ZIP](sample_code_folder/033-null-and-nan-indicators.zip) |
-| 034 · Handle missing values **Practice** | Decide which incomplete delivery rows you can still use to train a model. Shared code with lesson 035. | [⬇️ Lesson ZIP](sample_code_folder/034-handle-missing-values.zip) |
-| 035 · Remove **Practice** | Drop a spare note column and remove rows missing a required distance or known time. Shared code with lesson 034. | [⬇️ Lesson ZIP](sample_code_folder/035-remove.zip) |
-| 036 · Impute **Practice** | Fill a missing parcel weight before estimating the delivery time. Shared code with lesson 037. | [⬇️ Lesson ZIP](sample_code_folder/036-impute.zip) |
-| 037 · Numerical Data: Mean, Median, Mode, KNN Imputer **Practice** | Compare four ways of filling the same missing weight and see how each changes the prediction. Shared code with lesson 036. | [⬇️ Lesson ZIP](sample_code_folder/037-numerical-data-mean-median-mode-knn-imputer.zip) |
-| 038 · Mean **Practice** | Fill an empty weight with the average of the measured training weights. | [⬇️ Lesson ZIP](sample_code_folder/038-mean.zip) |
-| 039 · Median **Practice** | Fill an empty weight with the middle training weight after sorting. | [⬇️ Lesson ZIP](sample_code_folder/039-median.zip) |
-| 040 · Mode **Practice** | Fill an empty weight with a value that appears most often in the training data. | [⬇️ Lesson ZIP](sample_code_folder/040-mode.zip) |
-| 041 · KNN Imputer **Practice** | Use two similar training deliveries to estimate a parcel’s missing weight. | [⬇️ Lesson ZIP](sample_code_folder/041-knn-imputer.zip) |
-| 042 · Categorical Data: Mode, "Unknown" placeholder **Practice** | Try the most common delivery zone and an explicit Unknown label for the same blank cell. | [⬇️ Lesson ZIP](sample_code_folder/042-categorical-data-mode-unknown-placeholder.zip) |
-| 043 · Categorical Mode **Practice** | Fill a missing zone with the most common zone in the training rows. | [⬇️ Lesson ZIP](sample_code_folder/043-categorical-mode.zip) |
-| 044 · Unknown placeholder **Practice** | Keep a blank zone visible to the model by using Unknown as its own category. | [⬇️ Lesson ZIP](sample_code_folder/044-unknown-placeholder.zip) |
-| 045 · Time-Series Data: Forward Fill (ffill), Backward Fill (bfill) **Practice** | Fill a gap in daily counts using the previous day or the next recorded day. Shared code with lesson 046. | [⬇️ Lesson ZIP](sample_code_folder/045-time-series-data-forward-fill-ffill-backward-fill-bfill.zip) |
-| 046 · Forward Fill (ffill) **Practice** | Carry the most recent known count forward to fill a missing day. Shared code with lesson 045. | [⬇️ Lesson ZIP](sample_code_folder/046-forward-fill-ffill.zip) |
-| 047 · Backward Fill (bfill) **Practice** | Use the next recorded count to repair a gap in historical data. | [⬇️ Lesson ZIP](sample_code_folder/047-backward-fill-bfill.zip) |
-| 048 · When missing values change the answer **Practice** | See how losing the slower trips can make the average delivery time look too low. | [⬇️ Lesson ZIP](sample_code_folder/048-when-missing-values-change-the-answer.zip) |
+| 031 - 1.3.1 Handle Missing Values **Practice** | Count missing entries and locate the delivery rows you need to review. | [Lesson ZIP](sample_code_folder/031-1-3-1-handle-missing-values.zip) |
+| 032 - Identify missing values **Core** | Find which weights or delivery zones are missing and read the affected rows. | [Lesson ZIP](sample_code_folder/032-identify-missing-values.zip) |
+| 033 - Null and NaN indicators **Practice** | Use pandas to count blank cells and question marks as missing. | [Lesson ZIP](sample_code_folder/033-null-and-nan-indicators.zip) |
+| 034 - Handle missing values **Practice** | Decide which incomplete delivery rows you can still use to train a model. | [Lesson ZIP](sample_code_folder/034-handle-missing-values.zip) |
+| 035 - Remove **Core** | Drop a spare note column and remove rows missing a required distance or known time. | [Lesson ZIP](sample_code_folder/035-remove.zip) |
+| 036 - Fill a blank **Practice** | Fill a missing parcel weight before estimating the delivery time. | [Lesson ZIP](sample_code_folder/036-impute.zip) |
+| 037 - Numerical Data: Mean, Median, Mode, KNN Imputer **Practice** | Compare four ways of filling the same missing weight and see how each changes the prediction. | [Lesson ZIP](sample_code_folder/037-numerical-data-mean-median-mode-knn-imputer.zip) |
+| 038 - Mean **Practice** | Fill an empty weight with the average of the measured training weights. | [Lesson ZIP](sample_code_folder/038-mean.zip) |
+| 039 - Median **Core** | Fill an empty weight with the middle training weight after sorting. | [Lesson ZIP](sample_code_folder/039-median.zip) |
+| 040 - Mode **Practice** | Fill an empty weight with a value that appears most often in the training data. | [Lesson ZIP](sample_code_folder/040-mode.zip) |
+| 041 - KNN Imputer **Practice** | Use two similar training deliveries to estimate a parcel’s missing weight. | [Lesson ZIP](sample_code_folder/041-knn-imputer.zip) |
+| 042 - Category Data: Mode, "Unknown" placeholder **Practice** | Try the most common delivery zone and an explicit Unknown label for the same blank cell. | [Lesson ZIP](sample_code_folder/042-categorical-data-mode-unknown-placeholder.zip) |
+| 043 - Category Mode **Practice** | Fill a missing zone with the most common zone in the training rows. | [Lesson ZIP](sample_code_folder/043-categorical-mode.zip) |
+| 044 - Unknown placeholder **Core** | Keep a blank zone visible to the model by using Unknown as its own category. | [Lesson ZIP](sample_code_folder/044-unknown-placeholder.zip) |
+| 045 - Time-Series Data: Forward Fill (ffill), Backward Fill (bfill) **Practice** | Fill a gap in daily counts using the previous day or the next recorded day. | [Lesson ZIP](sample_code_folder/045-time-series-data-forward-fill-ffill-backward-fill-bfill.zip) |
+| 046 - Forward Fill (ffill) **Practice** | Carry the most recent known count forward to fill a missing day. | [Lesson ZIP](sample_code_folder/046-forward-fill-ffill.zip) |
+| 047 - Backward Fill (bfill) **Practice** | Use the next recorded count to repair a gap in historical data. | [Lesson ZIP](sample_code_folder/047-backward-fill-bfill.zip) |
+| 048 - When missing values change the answer **Core** | See how losing the slower trips can make the average delivery time look too low. | [Lesson ZIP](sample_code_folder/048-when-missing-values-change-the-answer.zip) |
 
 ### 🔁 1.3.2 Remove Duplicates
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 049 · 1.3.2 Remove Duplicates **Practice** | Check whether repeated order records would give some deliveries extra weight in training. Shared code with lesson 050. | [⬇️ Lesson ZIP](sample_code_folder/049-1-3-2-remove-duplicates.zip) |
-| 050 · Detect & Remove Exact Duplicates **Practice** | Keep one copy of each exact row before training on distance and time. Shared code with lesson 049. | [⬇️ Lesson ZIP](sample_code_folder/050-detect-remove-exact-duplicates.zip) |
-| 051 · Handle Near-Duplicates **Practice** | Compare near-identical names and use the order ID before combining records. Shared code with lesson 052, lesson 053. | [⬇️ Lesson ZIP](sample_code_folder/051-handle-near-duplicates.zip) |
-| 052 · Standardize text cases and remove spaces **Practice** | Clean up capitalization and spaces so the same name has a consistent comparison key. Shared code with lesson 051, lesson 053. | [⬇️ Lesson ZIP](sample_code_folder/052-standardize-text-cases-and-remove-spaces.zip) |
-| 053 · Fuzzy matching **Practice** | Score how similar two names are, then use the order details to decide what to keep. Shared code with lesson 051, lesson 052. | [⬇️ Lesson ZIP](sample_code_folder/053-fuzzy-matching.zip) |
+| 049 - 1.3.2 Remove Duplicates **Practice** | Check whether repeated order records would give some deliveries extra weight in training. | [Lesson ZIP](sample_code_folder/049-1-3-2-remove-duplicates.zip) |
+| 050 - Detect & Remove Exact Duplicates **Core** | Keep one copy of each exact row before training on distance and time. | [Lesson ZIP](sample_code_folder/050-detect-remove-exact-duplicates.zip) |
+| 051 - Handle Near-Duplicates **Practice** | Compare near-identical names and use the order ID before combining records. | [Lesson ZIP](sample_code_folder/051-handle-near-duplicates.zip) |
+| 052 - Standardize text cases and remove spaces **Practice** | Clean up capitalization and spaces so the same name has a consistent comparison key. | [Lesson ZIP](sample_code_folder/052-standardize-text-cases-and-remove-spaces.zip) |
+| 053 - Fuzzy matching **Practice** | Score how similar two names are, then use the order details to decide what to keep. | [Lesson ZIP](sample_code_folder/053-fuzzy-matching.zip) |
 
 ### 🧰 1.3.3 Fix Inconsistent Data
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 054 · 1.3.3 Fix Inconsistent Data **Practice** | Get two systems’ dates, weight units and delivery zones into one shared format. Shared code family (see lesson 055 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/054-1-3-3-fix-inconsistent-data.zip) |
-| 055 · Standardize formats **Core** | Turn dates, pounds and uneven zone names into consistent model inputs, then predict a new delivery. Shared code family (see lesson 054 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/055-standardize-formats.zip) |
-| 056 · Convert date formats (MM/DD/YYYY to YYYY-MM-DD) **Practice** | Read US-style and ISO dates and convert both to YYYY-MM-DD. Shared code family (see lesson 054 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/056-convert-date-formats-mm-dd-yyyy-to-yyyy-mm-dd.zip) |
-| 057 · Convert text to lowercase and remove spaces **Practice** | Trim spaces and turn zone names into lowercase before the model uses them. Shared code family (see lesson 054 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/057-convert-text-to-lowercase-and-remove-spaces.zip) |
-| 058 · Ensure correct units (kg vs. lbs) **Practice** | Convert pounds to kilograms so every weight means the same thing to the model. Shared code family (see lesson 054 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/058-ensure-correct-units-kg-vs-lbs.zip) |
-| 059 · Fix typos and spelling variations **Practice** | Map known spelling variants to a single category before encoding it. | [⬇️ Lesson ZIP](sample_code_folder/059-fix-typos-and-spelling-variations.zip) |
+| 054 - 1.3.3 Fix Inconsistent Data **Practice** | Get two systems’ dates, weight units and delivery zones into one shared format. | [Lesson ZIP](sample_code_folder/054-1-3-3-fix-inconsistent-data.zip) |
+| 055 - Standardize formats **Core** | Turn dates, pounds and uneven zone names into consistent model inputs, then predict a new delivery. | [Lesson ZIP](sample_code_folder/055-standardize-formats.zip) |
+| 056 - Convert date formats (MM/DD/YYYY to YYYY-MM-DD) **Practice** | Read US-style and ISO dates and convert both to YYYY-MM-DD. | [Lesson ZIP](sample_code_folder/056-convert-date-formats-mm-dd-yyyy-to-yyyy-mm-dd.zip) |
+| 057 - Convert text to lowercase and remove spaces **Practice** | Trim spaces and turn zone names into lowercase before the model uses them. | [Lesson ZIP](sample_code_folder/057-convert-text-to-lowercase-and-remove-spaces.zip) |
+| 058 - Ensure correct units (kg vs. lbs) **Practice** | Convert pounds to kilograms so every weight means the same thing to the model. | [Lesson ZIP](sample_code_folder/058-ensure-correct-units-kg-vs-lbs.zip) |
+| 059 - Fix typos and spelling variations **Practice** | Map known spelling variants to a single category before encoding it. | [Lesson ZIP](sample_code_folder/059-fix-typos-and-spelling-variations.zip) |
 
 ### 📊 1.3.4 Handle Outliers
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 060 · 1.3.4 Handle Outliers **Practice** | Use parcel weights to see which records deserve a closer look. | [⬇️ Lesson ZIP](sample_code_folder/060-1-3-4-handle-outliers.zip) |
-| 061 · Detection Methods **Practice** | Compare two ways to flag unusual parcel weights and inspect the chart. Shared code with lesson 062. | [⬇️ Lesson ZIP](sample_code_folder/061-detection-methods.zip) |
-| 062 · Boxplots & Visualization **Practice** | Find a weight far from the others on a boxplot. Shared code with lesson 061. | [⬇️ Lesson ZIP](sample_code_folder/062-boxplots-visualization.zip) |
-| 063 · Z-score Method **Practice** | Flag a parcel that is more than three standard deviations from the average weight. | [⬇️ Lesson ZIP](sample_code_folder/063-z-score-method.zip) |
-| 064 · Interquartile Range (IQR) **Practice** | Use the middle half of the weight distribution to set a review range. | [⬇️ Lesson ZIP](sample_code_folder/064-interquartile-range-iqr.zip) |
-| 065 · Handling Strategies **Practice** | Compare deleting a confirmed error, clipping a value and applying a log. Shared code with lesson 066, lesson 067, lesson 068. | [⬇️ Lesson ZIP](sample_code_folder/065-handling-strategies.zip) |
-| 066 · Remove **Practice** | Remove an impossible negative parcel weight before fitting a model. Shared code with lesson 065, lesson 067, lesson 068. | [⬇️ Lesson ZIP](sample_code_folder/066-remove-2.zip) |
-| 067 · Cap/Clip Values **Practice** | Cap very low and very high weights using limits learned from training rows. Shared code with lesson 065, lesson 066, lesson 068. | [⬇️ Lesson ZIP](sample_code_folder/067-cap-clip-values.zip) |
-| 068 · Transform Data **Practice** | Use a log to shrink the effect of large weights, then compare the predicted time. Shared code with lesson 065, lesson 066, lesson 067. | [⬇️ Lesson ZIP](sample_code_folder/068-transform-data.zip) |
-| 069 · Spot, check, and handle an outlier **Core** | Review a recorded 90 kg parcel, correct it using the weighing slip, and compare the two predictions on a graph. | [⬇️ Lesson ZIP](sample_code_folder/069-spot-check-and-handle-an-outlier.zip) |
+| 060 - 1.3.4 Handle Outliers **Practice** | Use parcel weights to see which records deserve a closer look. | [Lesson ZIP](sample_code_folder/060-1-3-4-handle-outliers.zip) |
+| 061 - Detection Methods **Practice** | Compare two ways to flag unusual parcel weights and inspect the chart. | [Lesson ZIP](sample_code_folder/061-detection-methods.zip) |
+| 062 - Boxplots & Visualization **Practice** | Find a weight far from the others on a boxplot. | [Lesson ZIP](sample_code_folder/062-boxplots-visualization.zip) |
+| 063 - Z-score Method **Practice** | Flag a parcel that is more than three standard deviations from the average weight. | [Lesson ZIP](sample_code_folder/063-z-score-method.zip) |
+| 064 - Interquartile Range (IQR) **Practice** | Use the middle half of the weight distribution to set a review range. | [Lesson ZIP](sample_code_folder/064-interquartile-range-iqr.zip) |
+| 065 - Handling Strategies **Practice** | Compare deleting a confirmed error, clipping a value and applying a log. | [Lesson ZIP](sample_code_folder/065-handling-strategies.zip) |
+| 066 - Remove **Practice** | Remove an impossible negative parcel weight before fitting a model. | [Lesson ZIP](sample_code_folder/066-remove-2.zip) |
+| 067 - Cap/Clip Values **Practice** | Cap very low and very high weights using limits learned from training rows. | [Lesson ZIP](sample_code_folder/067-cap-clip-values.zip) |
+| 068 - Transform Data **Practice** | Use a log to shrink the effect of large weights, then compare the predicted time. | [Lesson ZIP](sample_code_folder/068-transform-data.zip) |
+| 069 - Spot, check, and handle an outlier **Core** | Review a recorded 90 kg parcel, correct it using the weighing slip, and compare the two predictions on a graph. | [Lesson ZIP](sample_code_folder/069-spot-check-and-handle-an-outlier.zip) |
 
 ### ⚖️ 1.3.5 Normalize or Standardize Data
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 070 · 1.3.5 Normalize or Standardize Data **Practice** | Learn a scale from training deliveries and reuse it on new rows. Shared code with lesson 125, lesson 175. | [⬇️ Lesson ZIP](sample_code_folder/070-1-3-5-normalize-or-standardize-data.zip) |
-| 071 · Normalization (Min-Max Scaling) **Core** | Scale known distances, then see what happens when training covers 1–50 km and someone enters 90 km. | [⬇️ Lesson ZIP](sample_code_folder/071-normalization-min-max-scaling.zip) |
-| 072 · Standardization (Z-score Scaling) **Practice** | Measure distance and weight relative to their training averages, then estimate a new delivery time. | [⬇️ Lesson ZIP](sample_code_folder/072-standardization-z-score-scaling.zip) |
-| 073 · When to use? **Practice** | Compare several transformations using the same rows and pick one based on validation error. Shared code with lesson 147. | [⬇️ Lesson ZIP](sample_code_folder/073-when-to-use.zip) |
+| 070 - 1.3.5 Normalize or Standardize Data **Practice** | Learn a scale from training deliveries and reuse it on new rows. | [Lesson ZIP](sample_code_folder/070-1-3-5-normalize-or-standardize-data.zip) |
+| 071 - Normalization (Min-Max Scaling) **Core** | Scale known distances, then see what happens when training covers 1–50 km and someone enters 90 km. | [Lesson ZIP](sample_code_folder/071-normalization-min-max-scaling.zip) |
+| 072 - Standardization (Z-score Scaling) **Practice** | Measure distance and weight relative to their training averages, then estimate a new delivery time. | [Lesson ZIP](sample_code_folder/072-standardization-z-score-scaling.zip) |
+| 073 - When to use? **Practice** | Compare several transformations using the same rows and pick one based on validation error. | [Lesson ZIP](sample_code_folder/073-when-to-use.zip) |
 
 ### 🏷️ 1.3.6 Convert Categorical Data
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 074 · 1.3.6 Convert Categorical Data **Practice** | Turn labels such as color into numerical columns a model can read. Shared code with lesson 075, lesson 126, lesson 174. | [⬇️ Lesson ZIP](sample_code_folder/074-1-3-6-convert-categorical-data.zip) |
-| 075 · One-Hot Encoding (For Unordered Categories) **Practice** | Give each known color its own 0-or-1 column and try a new color. Shared code with lesson 074, lesson 126, lesson 174. | [⬇️ Lesson ZIP](sample_code_folder/075-one-hot-encoding-for-unordered-categories.zip) |
-| 076 · Label Encoding (For Ordered Categories) **Practice** | Turn Low, Medium and High into ordered numbers before predicting a review action. | [⬇️ Lesson ZIP](sample_code_folder/076-label-encoding-for-ordered-categories.zip) |
-| 077 · Target Encoding (For High-Cardinality Categories) **Practice** | Summarize each supplier by its learned delay rate and try a supplier the model has never seen. | [⬇️ Lesson ZIP](sample_code_folder/077-target-encoding-for-high-cardinality-categories.zip) |
+| 074 - 1.3.6 Convert Category Data **Practice** | Turn labels such as color into numerical columns a model can read. | [Lesson ZIP](sample_code_folder/074-1-3-6-convert-categorical-data.zip) |
+| 075 - One-Hot Encoding (For Unordered Categories) **Core** | Give each known color its own 0-or-1 column and try a new color. | [Lesson ZIP](sample_code_folder/075-one-hot-encoding-for-unordered-categories.zip) |
+| 076 - Turn ordered names into numbers (OrdinalEncoder) **Practice** | Turn Low, Medium and High into ordered numbers before predicting a review action. | [Lesson ZIP](sample_code_folder/076-label-encoding-for-ordered-categories.zip) |
+| 077 - Target Encoding (For Many Different Categories) **Practice** | Summarize each supplier by its learned delay rate and try a supplier the model has never seen. | [Lesson ZIP](sample_code_folder/077-target-encoding-for-high-cardinality-categories.zip) |
 
 ### ✍️ 1.3.7 Text Data Cleaning
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 078 · 1.3.7 Text Data Cleaning **Practice** | Clean the capitalization and punctuation in support messages before classifying them. Shared code with lesson 079, lesson 127. | [⬇️ Lesson ZIP](sample_code_folder/078-1-3-7-text-data-cleaning.zip) |
-| 079 · Convert to lowercase & remove punctuation **Practice** | Compare the original and cleaned message, then see which category the model predicts. Shared code with lesson 078, lesson 127. | [⬇️ Lesson ZIP](sample_code_folder/079-convert-to-lowercase-remove-punctuation.zip) |
-| 080 · Remove stop words (e.g., "the", "and", "is") **Practice** | Drop selected common words such as the and is, then test a delivery or billing message. | [⬇️ Lesson ZIP](sample_code_folder/080-remove-stop-words-e-g-the-and-is.zip) |
-| 081 · Tokenization & Lemmatization **Practice** | Split sentences into words and bring a few word variants back to the same form. Shared code with lesson 082, lesson 083. | [⬇️ Lesson ZIP](sample_code_folder/081-tokenization-lemmatization.zip) |
-| 082 · Tokenization **Practice** | Break a support message into words so the model can count them. Shared code with lesson 081, lesson 083. | [⬇️ Lesson ZIP](sample_code_folder/082-tokenization.zip) |
-| 083 · Lemmatization **Practice** | Bring words such as charges and charged back to charge in the sample vocabulary. Shared code with lesson 081, lesson 082. | [⬇️ Lesson ZIP](sample_code_folder/083-lemmatization.zip) |
-| 084 · Convert Text to Numerical Representation **Practice** | Compare plain word counts and weighted word counts for short messages. | [⬇️ Lesson ZIP](sample_code_folder/084-convert-text-to-numerical-representation.zip) |
-| 085 · CountVectorizer **Practice** | Make one column for each learned word and count it in a new message. | [⬇️ Lesson ZIP](sample_code_folder/085-countvectorizer.zip) |
-| 086 · TF-IDF **Practice** | Make words that stand out across messages count more than words that appear everywhere. | [⬇️ Lesson ZIP](sample_code_folder/086-tf-idf.zip) |
-| 087 · Word Embeddings (Word2Vec, BERT, etc.) **Practice** | Represent a message with a short list of numbers and feed it into a classifier. Shared code with lesson 088. | [⬇️ Lesson ZIP](sample_code_folder/087-word-embeddings-word2vec-bert-etc.zip) |
-| 088 · Word2Vec **Practice** | Learn small word vectors from practice messages and average them to represent a new message. Shared code with lesson 087. | [⬇️ Lesson ZIP](sample_code_folder/088-word2vec.zip) |
-| 089 · BERT **Practice** | Use a tiny BERT model to inspect how token vectors become one message vector. | [⬇️ Lesson ZIP](sample_code_folder/089-bert.zip) |
+| 078 - 1.3.7 Text Data Cleaning **Practice** | Clean the capitalization and punctuation in support messages before classifying them. | [Lesson ZIP](sample_code_folder/078-1-3-7-text-data-cleaning.zip) |
+| 079 - Convert to lowercase & remove punctuation **Practice** | Compare the original and cleaned message, then see which category the model predicts. | [Lesson ZIP](sample_code_folder/079-convert-to-lowercase-remove-punctuation.zip) |
+| 080 - Remove stop words (e.g., "the", "and", "is") **Practice** | Drop selected common words such as the and is, then test a delivery or billing message. | [Lesson ZIP](sample_code_folder/080-remove-stop-words-e-g-the-and-is.zip) |
+| 081 - Tokenization & Lemmatization **Practice** | Split sentences into words and bring a few word variants back to the same form. | [Lesson ZIP](sample_code_folder/081-tokenization-lemmatization.zip) |
+| 082 - Tokenization **Practice** | Break a support message into words so the model can count them. | [Lesson ZIP](sample_code_folder/082-tokenization.zip) |
+| 083 - Lemmatization **Practice** | Bring words such as charges and charged back to charge in the sample vocabulary. | [Lesson ZIP](sample_code_folder/083-lemmatization.zip) |
+| 084 - Convert Text to Numerical Representation **Practice** | Compare plain word counts and weighted word counts for short messages. | [Lesson ZIP](sample_code_folder/084-convert-text-to-numerical-representation.zip) |
+| 085 - CountVectorizer **Practice** | Make one column for each learned word and count it in a new message. | [Lesson ZIP](sample_code_folder/085-countvectorizer.zip) |
+| 086 - TF-IDF **Practice** | Make words that stand out across messages count more than words that appear everywhere. | [Lesson ZIP](sample_code_folder/086-tf-idf.zip) |
+| 087 - Word Embeddings (Word2Vec, BERT, etc.) **Practice** | Represent a message with a short list of numbers and feed it into a classifier. | [Lesson ZIP](sample_code_folder/087-word-embeddings-word2vec-bert-etc.zip) |
+| 088 - Word2Vec **Practice** | Learn small word vectors from practice messages and average them to represent a new message. | [Lesson ZIP](sample_code_folder/088-word2vec.zip) |
+| 089 - BERT **Practice** | Use a tiny BERT model to inspect how token vectors become one message vector. | [Lesson ZIP](sample_code_folder/089-bert.zip) |
 
 ### ✅ 1.3.8 Handle Boolean Data
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 090 · 1.3.8 Handle Boolean Data **Practice** | Make mixed yes/no entries consistent before a model uses them. Shared code with lesson 091. | [⬇️ Lesson ZIP](sample_code_folder/090-1-3-8-handle-boolean-data.zip) |
-| 091 · Convert Boolean values to standard format (1 or 0) **Practice** | Change different spellings of yes and no into 1 and 0 and flag unrecognized values. Shared code with lesson 090. | [⬇️ Lesson ZIP](sample_code_folder/091-convert-boolean-values-to-standard-format-1-or-0.zip) |
-| 092 · Fill missing values with mode **Practice** | Fill an unknown signup flag with the most common training value before making a prediction. Shared code with lesson 128. | [⬇️ Lesson ZIP](sample_code_folder/092-fill-missing-values-with-mode.zip) |
+| 090 - 1.3.8 Handle Boolean Data **Practice** | Make mixed yes/no entries consistent before a model uses them. | [Lesson ZIP](sample_code_folder/090-1-3-8-handle-boolean-data.zip) |
+| 091 - Convert Boolean values to standard format (1 or 0) **Practice** | Change different spellings of yes and no into 1 and 0 and flag unrecognized values. | [Lesson ZIP](sample_code_folder/091-convert-boolean-values-to-standard-format-1-or-0.zip) |
+| 092 - Fill missing values with mode **Practice** | Fill an unknown signup flag with the most common training value before making a prediction. | [Lesson ZIP](sample_code_folder/092-fill-missing-values-with-mode.zip) |
 
 ### ⏳ 1.3.9 Handle Date/Time Data
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 093 · 1.3.9 Handle Date/Time Data **Practice** | Read written dates and timestamps so Python can use them consistently. Shared code with lesson 094, lesson 130. | [⬇️ Lesson ZIP](sample_code_folder/093-1-3-9-handle-date-time-data.zip) |
-| 094 · Convert to datetime format **Practice** | Parse two date formats and a Unix timestamp, and spot an unreadable value. Shared code with lesson 093, lesson 130. | [⬇️ Lesson ZIP](sample_code_folder/094-convert-to-datetime-format.zip) |
-| 095 · Extract useful features (Year, Month, Day, Weekday, Hour, etc.) **Practice** | Turn one timestamp into model inputs such as weekday and hour. | [⬇️ Lesson ZIP](sample_code_folder/095-extract-useful-features-year-month-day-weekday-hour-etc.zip) |
-| 096 · Year **Practice** | Pull the year out of each order date. | [⬇️ Lesson ZIP](sample_code_folder/096-year.zip) |
-| 097 · Month **Practice** | Pull the month out of each order date. | [⬇️ Lesson ZIP](sample_code_folder/097-month.zip) |
-| 098 · Day **Practice** | Pull the day of the month out of each order date. | [⬇️ Lesson ZIP](sample_code_folder/098-day.zip) |
-| 099 · Weekday **Practice** | Find the day of the week from each timestamp. | [⬇️ Lesson ZIP](sample_code_folder/099-weekday.zip) |
-| 100 · Hour **Practice** | Get the hour of the day so the model can use time of day. | [⬇️ Lesson ZIP](sample_code_folder/100-hour.zip) |
-| 101 · Handle missing dates using interpolation **Practice** | Estimate a missing time-series reading from the readings on either side. | [⬇️ Lesson ZIP](sample_code_folder/101-handle-missing-dates-using-interpolation.zip) |
+| 093 - 1.3.9 Handle Date/Time Data **Practice** | Read written dates and timestamps so Python can use them consistently. | [Lesson ZIP](sample_code_folder/093-1-3-9-handle-date-time-data.zip) |
+| 094 - Convert to datetime format **Practice** | Parse two date formats and a Unix timestamp, and spot an unreadable value. | [Lesson ZIP](sample_code_folder/094-convert-to-datetime-format.zip) |
+| 095 - Extract useful features (Year, Month, Day, Weekday, Hour, etc.) **Practice** | Turn one timestamp into model inputs such as weekday and hour. | [Lesson ZIP](sample_code_folder/095-extract-useful-features-year-month-day-weekday-hour-etc.zip) |
+| 096 - Year **Practice** | Pull the year out of each order date. | [Lesson ZIP](sample_code_folder/096-year.zip) |
+| 097 - Month **Practice** | Pull the month out of each order date. | [Lesson ZIP](sample_code_folder/097-month.zip) |
+| 098 - Day **Practice** | Pull the day of the month out of each order date. | [Lesson ZIP](sample_code_folder/098-day.zip) |
+| 099 - Weekday **Practice** | Find the day of the week from each timestamp. | [Lesson ZIP](sample_code_folder/099-weekday.zip) |
+| 100 - Hour **Practice** | Get the hour of the day so the model can use time of day. | [Lesson ZIP](sample_code_folder/100-hour.zip) |
+| 101 - Handle missing dates using interpolation **Practice** | Estimate a missing time-series reading from the readings on either side. | [Lesson ZIP](sample_code_folder/101-handle-missing-dates-using-interpolation.zip) |
 
 ### 🔢 1.3.10 Handle Large Numbers
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 102 · 1.3.10 Handle Large Numbers **Practice** | Check how a log makes large numeric values easier to compare. Shared code with lesson 103, lesson 136, lesson 167. | [⬇️ Lesson ZIP](sample_code_folder/102-1-3-10-handle-large-numbers.zip) |
-| 103 · Apply Log Transformation (if data is highly skewed) **Practice** | Use a log so a few very large readings have less influence on the scale. Shared code with lesson 102, lesson 136, lesson 167. | [⬇️ Lesson ZIP](sample_code_folder/103-apply-log-transformation-if-data-is-highly-skewed.zip) |
-| 104 · Convert to scientific notation (if values are too large) **Practice** | Display large numbers in compact scientific notation and read the original value alongside them. Shared code with lesson 129. | [⬇️ Lesson ZIP](sample_code_folder/104-convert-to-scientific-notation-if-values-are-too-large.zip) |
+| 102 - 1.3.10 Handle Large Numbers **Practice** | Check how a log makes large numeric values easier to compare. | [Lesson ZIP](sample_code_folder/102-1-3-10-handle-large-numbers.zip) |
+| 103 - Apply Log Transformation (if data is highly skewed) **Practice** | Use a log so a few very large readings have less influence on the scale. | [Lesson ZIP](sample_code_folder/103-apply-log-transformation-if-data-is-highly-skewed.zip) |
+| 104 - Convert to scientific notation (if values are too large) **Practice** | Display large numbers in compact scientific notation and read the original value alongside them. | [Lesson ZIP](sample_code_folder/104-convert-to-scientific-notation-if-values-are-too-large.zip) |
 
 ### 🗂️ Data Types, Issues & Preprocessing Techniques
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 105 · Data Types, Issues & Preprocessing Techniques **Practice** | Turn a nested record into a flat row and identify the fields a model can use. Shared code family (see lesson 109 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/105-data-types-issues-preprocessing-techniques.zip) |
-| 106 · Geospatial (Lat/Long, Addresses) **Practice** | Look up coordinates for three depots and use them to estimate delivery time. Shared code with lesson 107, lesson 108. | [⬇️ Lesson ZIP](sample_code_folder/106-geospatial-lat-long-addresses.zip) |
-| 107 · Convert to coordinates **Practice** | Turn a known depot name into latitude and longitude. Shared code with lesson 106, lesson 108. | [⬇️ Lesson ZIP](sample_code_folder/107-convert-to-coordinates.zip) |
-| 108 · Geocoding APIs **Reference** | Try a local address lookup and see how it handles an address outside its small list. Local example + manual walkthrough. Shared code with lesson 106, lesson 107. | [⬇️ Lesson ZIP](sample_code_folder/108-geocoding-apis.zip) |
-| 109 · Complex Data (JSON, XML, Dictionaries) **Practice** | Read the same delivery fields from a nested dictionary, JSON, and XML. Shared code family (see lesson 105 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/109-complex-data-json-xml-dictionaries.zip) |
-| 110 · Flatten JSON **Practice** | Flatten nested parcel details into named table columns. Shared code family (see lesson 105 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/110-flatten-json.zip) |
-| 111 · Extract XML fields **Practice** | Read relevant fields from an XML record and compare them with the tabular version. Shared code family (see lesson 105 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/111-extract-xml-fields.zip) |
-| 112 · Dictionaries and missing keys **Practice** | Handle a dictionary that lacks a parcel weight without losing the other fields. Shared code family (see lesson 105 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/112-dictionaries-and-missing-keys.zip) |
-| 113 · Images (Pixels, Matrices) **Practice** | Turn simple color pictures into a small matrix of numbers. Shared code with lesson 115, lesson 116, lesson 117. | [⬇️ Lesson ZIP](sample_code_folder/113-images-pixels-matrices.zip) |
-| 114 · Image embeddings **Practice** | Summarize a drawing with two numeric measurements and use them to predict its direction. | [⬇️ Lesson ZIP](sample_code_folder/114-image-embeddings.zip) |
-| 115 · Resize images **Practice** | Resize training and test pictures to the same dimensions. Shared code with lesson 113, lesson 116, lesson 117. | [⬇️ Lesson ZIP](sample_code_folder/115-resize-images.zip) |
-| 116 · Grayscale **Practice** | Turn RGB pictures into a single brightness channel before classifying them. Shared code with lesson 113, lesson 115, lesson 117. | [⬇️ Lesson ZIP](sample_code_folder/116-grayscale.zip) |
-| 117 · Convolutional Neural Networks (CNN) **Practice** | Pass a tiny image through a convolution before predicting light or dark. Shared code with lesson 113, lesson 115, lesson 116. | [⬇️ Lesson ZIP](sample_code_folder/117-convolutional-neural-networks-cnn.zip) |
-| 118 · Audio (Waves, Spectrograms) **Practice** | Create tones, inspect how their pitch looks in a plot, and classify them. Shared code with lesson 119, lesson 120, lesson 121. | [⬇️ Lesson ZIP](sample_code_folder/118-audio-waves-spectrograms.zip) |
-| 119 · WAV and MP3 **Practice** | Create a WAV tone and compare a converted MP3 with its decoded waveform. Shared code with lesson 118, lesson 120, lesson 121. | [⬇️ Lesson ZIP](sample_code_folder/119-wav-and-mp3.zip) |
-| 120 · Spectrograms **Practice** | See how a tone’s frequencies appear in a spectrogram. Shared code with lesson 118, lesson 119, lesson 121. | [⬇️ Lesson ZIP](sample_code_folder/120-spectrograms.zip) |
-| 121 · MFCC features **Practice** | Turn short tones into MFCC features and use them to predict low or high pitch. Shared code with lesson 118, lesson 119, lesson 120. | [⬇️ Lesson ZIP](sample_code_folder/121-mfcc-features.zip) |
-| 122 · Video (Frames, Sequences) **Practice** | Make a short video from frames and classify which way an object moves. Shared code with lesson 123, lesson 124. | [⬇️ Lesson ZIP](sample_code_folder/122-video-frames-sequences.zip) |
-| 123 · MP4 and frame extraction **Practice** | Save sample frames as MP4 and read the frames back for a model. Shared code with lesson 122, lesson 124. | [⬇️ Lesson ZIP](sample_code_folder/123-mp4-and-frame-extraction.zip) |
-| 124 · CNN and LSTM sequence modeling **Practice** | Use a CNN to read each frame and an LSTM to follow the movement over time. Shared code with lesson 122, lesson 123. | [⬇️ Lesson ZIP](sample_code_folder/124-cnn-and-lstm-sequence-modeling.zip) |
-| 125 · Numeric (int, float) **Practice** | Use whole-number and decimal measurements in a delivery model. Shared code with lesson 070, lesson 175. | [⬇️ Lesson ZIP](sample_code_folder/125-numeric-int-float.zip) |
-| 126 · Categorical (enum, labels) **Practice** | Turn category names into separate 0-or-1 columns for a model. Shared code with lesson 074, lesson 075, lesson 174. | [⬇️ Lesson ZIP](sample_code_folder/126-categorical-enum-labels.zip) |
-| 127 · Text (strings) **Practice** | Clean short text strings and turn their word counts into model inputs. Shared code with lesson 078, lesson 079. | [⬇️ Lesson ZIP](sample_code_folder/127-text-strings.zip) |
-| 128 · Boolean (True/False) **Practice** | Change a yes/no switch into a numeric input and fill missing values from training. Shared code with lesson 092. | [⬇️ Lesson ZIP](sample_code_folder/128-boolean-true-false.zip) |
-| 129 · Large Numbers (BigInt, Long Float) **Practice** | Read large values and display them in a shorter format. Shared code with lesson 104. | [⬇️ Lesson ZIP](sample_code_folder/129-large-numbers-bigint-long-float.zip) |
-| 130 · Datetime (Timestamps, Dates) **Practice** | Read dates and numeric timestamps into a consistent date field. Shared code with lesson 093, lesson 094. | [⬇️ Lesson ZIP](sample_code_folder/130-datetime-timestamps-dates.zip) |
+| 105 - Data Types, Issues & Preprocessing Techniques **Practice** | Turn a nested record into a flat row and identify the fields a model can use. | [Lesson ZIP](sample_code_folder/105-data-types-issues-preprocessing-techniques.zip) |
+| 106 - Geospatial (Lat/Long, Addresses) **Practice** | Look up coordinates for three depots and use them to estimate delivery time. | [Lesson ZIP](sample_code_folder/106-geospatial-lat-long-addresses.zip) |
+| 107 - Convert to coordinates **Practice** | Turn a known depot name into latitude and longitude. | [Lesson ZIP](sample_code_folder/107-convert-to-coordinates.zip) |
+| 108 - Geocoding APIs **Reference** | Try a local address lookup and see how it handles an address outside its small list. | [Lesson ZIP](sample_code_folder/108-geocoding-apis.zip) |
+| 109 - Complex Data (JSON, XML, Dictionaries) **Practice** | Read the same delivery fields from a nested dictionary, JSON, and XML. | [Lesson ZIP](sample_code_folder/109-complex-data-json-xml-dictionaries.zip) |
+| 110 - Flatten JSON **Practice** | Flatten nested parcel details into named table columns. | [Lesson ZIP](sample_code_folder/110-flatten-json.zip) |
+| 111 - Extract XML fields **Practice** | Read relevant fields from an XML record and compare them with the tabular version. | [Lesson ZIP](sample_code_folder/111-extract-xml-fields.zip) |
+| 112 - Dictionaries and missing keys **Practice** | Handle a dictionary that lacks a parcel weight without losing the other fields. | [Lesson ZIP](sample_code_folder/112-dictionaries-and-missing-keys.zip) |
+| 113 - Images (Pixels, Matrices) **Practice** | Turn simple color pictures into a small matrix of numbers. | [Lesson ZIP](sample_code_folder/113-images-pixels-matrices.zip) |
+| 114 - Image embeddings **Practice** | Summarize a drawing with two numeric measurements and use them to predict its direction. | [Lesson ZIP](sample_code_folder/114-image-embeddings.zip) |
+| 115 - Resize images **Practice** | Resize training and test pictures to the same dimensions. | [Lesson ZIP](sample_code_folder/115-resize-images.zip) |
+| 116 - Grayscale **Practice** | Turn RGB pictures into a single brightness channel before classifying them. | [Lesson ZIP](sample_code_folder/116-grayscale.zip) |
+| 117 - Image pixels for a nearest-neighbour model **Practice** | Turn a tiny picture into numbers, then predict light or dark with KNN. This is not a CNN. | [Lesson ZIP](sample_code_folder/117-convolutional-neural-networks-cnn.zip) |
+| 118 - Audio (Waves, Spectrograms) **Practice** | Create tones, inspect how their pitch looks in a plot, and classify them. | [Lesson ZIP](sample_code_folder/118-audio-waves-spectrograms.zip) |
+| 119 - WAV and MP3 **Practice** | Create a WAV tone and compare a converted MP3 with its decoded waveform. | [Lesson ZIP](sample_code_folder/119-wav-and-mp3.zip) |
+| 120 - Spectrograms **Practice** | See how a tone’s frequencies appear in a spectrogram. | [Lesson ZIP](sample_code_folder/120-spectrograms.zip) |
+| 121 - MFCC features **Practice** | Turn short tones into MFCC features and use them to predict low or high pitch. | [Lesson ZIP](sample_code_folder/121-mfcc-features.zip) |
+| 122 - Video (Frames, Sequences) **Practice** | Make a short video from frames and classify which way an object moves. | [Lesson ZIP](sample_code_folder/122-video-frames-sequences.zip) |
+| 123 - MP4 and frame extraction **Practice** | Save sample frames as MP4 and read the frames back for a model. | [Lesson ZIP](sample_code_folder/123-mp4-and-frame-extraction.zip) |
+| 124 - CNN and LSTM sequence modeling **Practice** | Use a CNN to read each frame and an LSTM to follow the movement over time. | [Lesson ZIP](sample_code_folder/124-cnn-and-lstm-sequence-modeling.zip) |
+| 125 - Numeric (int, float) **Practice** | Use whole-number and decimal measurements in a delivery model. | [Lesson ZIP](sample_code_folder/125-numeric-int-float.zip) |
+| 126 - Category (enum, labels) **Practice** | Turn category names into separate 0-or-1 columns for a model. | [Lesson ZIP](sample_code_folder/126-categorical-enum-labels.zip) |
+| 127 - Text (strings) **Practice** | Clean short text strings and turn their word counts into model inputs. | [Lesson ZIP](sample_code_folder/127-text-strings.zip) |
+| 128 - Boolean (True/False) **Practice** | Change a yes/no switch into a numeric input and fill missing values from training. | [Lesson ZIP](sample_code_folder/128-boolean-true-false.zip) |
+| 129 - Large Numbers (BigInt, Long Float) **Practice** | Read large values and display them in a shorter format. | [Lesson ZIP](sample_code_folder/129-large-numbers-bigint-long-float.zip) |
+| 130 - Datetime (Timestamps, Dates) **Practice** | Read dates and numeric timestamps into a consistent date field. | [Lesson ZIP](sample_code_folder/130-datetime-timestamps-dates.zip) |
 
 ### ℹ️ Data transformations
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 131 · Data **Practice** | Use original sensor readings to see how a numeric transformation changes model inputs. Shared code with lesson 132, lesson 133. | [⬇️ Lesson ZIP](sample_code_folder/131-data.zip) |
-| 132 · Min-Max Scaling (Normalization) **Practice** | Rescale the sensor training range to 0–1 and predict the costs of new readings. Shared code with lesson 131, lesson 133. | [⬇️ Lesson ZIP](sample_code_folder/132-min-max-scaling-normalization.zip) |
-| 133 · Fixed range [0, 1] **Practice** | See how the smallest and largest training readings map to 0 and 1. Shared code with lesson 131, lesson 132. | [⬇️ Lesson ZIP](sample_code_folder/133-fixed-range-0-1.zip) |
-| 134 · Fixed range [-1, 1] **Practice** | Rescale training readings to −1 through 1 and compare the scaled values. | [⬇️ Lesson ZIP](sample_code_folder/134-fixed-range-1-1.zip) |
-| 135 · Z-Score Standardization (Standardization) **Practice** | Measure sensor readings in standard deviations from the training average. | [⬇️ Lesson ZIP](sample_code_folder/135-z-score-standardization-standardization.zip) |
-| 136 · Log Transformation (Log Scaling) **Practice** | Use a log so large sensor readings have less influence on the scale. Shared code with lesson 102, lesson 103, lesson 167. | [⬇️ Lesson ZIP](sample_code_folder/136-log-transformation-log-scaling.zip) |
-| 137 · Log1p and base-10 log **Practice** | Compare what happens when you apply log1p to a reading and when you use a base-10 log. | [⬇️ Lesson ZIP](sample_code_folder/137-log1p-and-base-10-log.zip) |
-| 138 · Robust Scaling (Median & IQR Scaling) **Practice** | Scale readings using the middle value and the spread of the middle half. | [⬇️ Lesson ZIP](sample_code_folder/138-robust-scaling-median-iqr-scaling.zip) |
-| 139 · Power Transformations (Box-Cox & Yeo-Johnson) **Practice** | Try two power transformations on the same readings and compare the cost predictions. | [⬇️ Lesson ZIP](sample_code_folder/139-power-transformations-box-cox-yeo-johnson.zip) |
-| 140 · Box-Cox Transformation **Practice** | Use Box-Cox to reshape positive readings before predicting cost. | [⬇️ Lesson ZIP](sample_code_folder/140-box-cox-transformation.zip) |
-| 141 · Yeo-Johnson Transformation **Practice** | Use Yeo-Johnson on negative, zero and positive readings. | [⬇️ Lesson ZIP](sample_code_folder/141-yeo-johnson-transformation.zip) |
-| 142 · Quantile Transformation (Rank Scaling) **Practice** | Use the rank of each reading to place it on a new scale. | [⬇️ Lesson ZIP](sample_code_folder/142-quantile-transformation-rank-scaling.zip) |
-| 143 · Uniform distribution **Practice** | Spread readings across a uniform scale based on their ranks. | [⬇️ Lesson ZIP](sample_code_folder/143-uniform-distribution.zip) |
-| 144 · Normal distribution **Practice** | Map readings to a bell-shaped scale based on their ranks. | [⬇️ Lesson ZIP](sample_code_folder/144-normal-distribution.zip) |
-| 145 · Binning (Discretization) **Practice** | Put continuous sensor readings into bins and use the bins as model inputs. | [⬇️ Lesson ZIP](sample_code_folder/145-binning-discretization.zip) |
-| 146 · Polynomial Features (Feature Expansion) **Practice** | Add squared terms so a linear model can describe a curved pattern. Shared code with lesson 166, lesson 168. | [⬇️ Lesson ZIP](sample_code_folder/146-polynomial-features-feature-expansion.zip) |
-| 147 · Which Technique Should You Use? **Practice** | Use the same validation folds to compare which transformation makes better predictions. Shared code with lesson 073. | [⬇️ Lesson ZIP](sample_code_folder/147-which-technique-should-you-use.zip) |
+| 131 - Data **Practice** | Use original sensor readings to see how a numeric transformation changes model inputs. | [Lesson ZIP](sample_code_folder/131-data.zip) |
+| 132 - Min-Max Scaling (Normalization) **Practice** | Rescale the sensor training range to 0–1 and predict the costs of new readings. | [Lesson ZIP](sample_code_folder/132-min-max-scaling-normalization.zip) |
+| 133 - Fixed range [0, 1] **Practice** | See how the smallest and largest training readings map to 0 and 1. | [Lesson ZIP](sample_code_folder/133-fixed-range-0-1.zip) |
+| 134 - Fixed range [-1, 1] **Practice** | Rescale training readings to −1 through 1 and compare the scaled values. | [Lesson ZIP](sample_code_folder/134-fixed-range-1-1.zip) |
+| 135 - Z-Score Standardization (Standardization) **Practice** | Measure sensor readings in standard deviations from the training average. | [Lesson ZIP](sample_code_folder/135-z-score-standardization-standardization.zip) |
+| 136 - Log Transformation (Log Scaling) **Practice** | Use a log so large sensor readings have less influence on the scale. | [Lesson ZIP](sample_code_folder/136-log-transformation-log-scaling.zip) |
+| 137 - Log1p and base-10 log **Practice** | Compare what happens when you apply log1p to a reading and when you use a base-10 log. | [Lesson ZIP](sample_code_folder/137-log1p-and-base-10-log.zip) |
+| 138 - Robust Scaling (Median & IQR Scaling) **Practice** | Scale readings using the middle value and the spread of the middle half. | [Lesson ZIP](sample_code_folder/138-robust-scaling-median-iqr-scaling.zip) |
+| 139 - Power Transformations (Box-Cox & Yeo-Johnson) **Practice** | Try two power transformations on the same readings and compare the cost predictions. | [Lesson ZIP](sample_code_folder/139-power-transformations-box-cox-yeo-johnson.zip) |
+| 140 - Box-Cox Transformation **Practice** | Use Box-Cox to reshape positive readings before predicting cost. | [Lesson ZIP](sample_code_folder/140-box-cox-transformation.zip) |
+| 141 - Yeo-Johnson Transformation **Practice** | Use Yeo-Johnson on negative, zero and positive readings. | [Lesson ZIP](sample_code_folder/141-yeo-johnson-transformation.zip) |
+| 142 - Quantile Transformation (Rank Scaling) **Practice** | Use the rank of each reading to place it on a new scale. | [Lesson ZIP](sample_code_folder/142-quantile-transformation-rank-scaling.zip) |
+| 143 - Uniform distribution **Practice** | Spread readings across a uniform scale based on their ranks. | [Lesson ZIP](sample_code_folder/143-uniform-distribution.zip) |
+| 144 - Normal distribution **Practice** | Map readings to a bell-shaped scale based on their ranks. | [Lesson ZIP](sample_code_folder/144-normal-distribution.zip) |
+| 145 - Binning (Discretization) **Practice** | Put continuous sensor readings into bins and use the bins as model inputs. | [Lesson ZIP](sample_code_folder/145-binning-discretization.zip) |
+| 146 - Polynomial Features (Feature Expansion) **Practice** | Add squared terms so a linear model can describe a curved pattern. | [Lesson ZIP](sample_code_folder/146-polynomial-features-feature-expansion.zip) |
+| 147 - Which Technique Should You Use? **Practice** | Use the same validation folds to compare which transformation makes better predictions. | [Lesson ZIP](sample_code_folder/147-which-technique-should-you-use.zip) |
 
 ### 🔍 1.4. Exploratory Data Analysis (EDA)
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 148 · 1.4. Exploratory Data Analysis (EDA) **Practice** | Explore a delivery table with charts and numbers before you train. Shared code family (see lesson 149 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/148-1-4-exploratory-data-analysis-eda.zip) |
-| 149 · Visualization is used here! **Practice** | Use charts to see how weights spread and how time changes with distance. Shared code family (see lesson 148 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/149-visualization-is-used-here.zip) |
-| 150 · Data distributions (mean, median, skewness) **Practice** | Compare the mean, middle and skew of delivery measurements. Shared code family (see lesson 148 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/150-data-distributions-mean-median-skewness.zip) |
-| 151 · Trends, correlations, and patterns **Practice** | Look for relationships between distance, weight and time. Shared code family (see lesson 148 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/151-trends-correlations-and-patterns.zip) |
-| 152 · Detecting outliers & anomalies **Practice** | Spot unusually high weights so you can go back to the source rows. | [⬇️ Lesson ZIP](sample_code_folder/152-detecting-outliers-anomalies.zip) |
-| 153 · Feature relationships and multicollinearity **Practice** | Find two columns that tell almost the same story about distance. Shared code family (see lesson 148 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/153-feature-relationships-and-multicollinearity.zip) |
-| 154 · Visualization Techniques **Practice** | Use histograms, scatter plots, box plots, heatmaps and pair plots to explore the same table. Shared code family (see lesson 148 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/154-visualization-techniques.zip) |
-| 155 · Histograms **Practice** | Count how often each range of weights occurs. | [⬇️ Lesson ZIP](sample_code_folder/155-histograms.zip) |
-| 156 · Scatter Plots **Practice** | Put distance on one axis and delivery time on the other. | [⬇️ Lesson ZIP](sample_code_folder/156-scatter-plots.zip) |
-| 157 · Box Plots **Practice** | Find which weights sit far outside the usual group. | [⬇️ Lesson ZIP](sample_code_folder/157-box-plots.zip) |
-| 158 · Heatmaps **Practice** | Compare how strongly pairs of numeric columns move together. | [⬇️ Lesson ZIP](sample_code_folder/158-heatmaps.zip) |
-| 159 · Pair Plots **Practice** | View several pairs of input columns at once. Shared code family (see lesson 148 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/159-pair-plots.zip) |
+| 148 - 1.4. Exploratory Data Analysis (EDA) **Practice** | Explore a delivery table with charts and numbers before you train. | [Lesson ZIP](sample_code_folder/148-1-4-exploratory-data-analysis-eda.zip) |
+| 149 - Visualization is used here! **Practice** | Use charts to see how weights spread and how time changes with distance. | [Lesson ZIP](sample_code_folder/149-visualization-is-used-here.zip) |
+| 150 - Data distributions (mean, median, skewness) **Practice** | Compare the mean, middle and skew of delivery measurements. | [Lesson ZIP](sample_code_folder/150-data-distributions-mean-median-skewness.zip) |
+| 151 - Trends, correlations, and patterns **Practice** | Look for relationships between distance, weight and time. | [Lesson ZIP](sample_code_folder/151-trends-correlations-and-patterns.zip) |
+| 152 - Detecting outliers & anomalies **Practice** | Spot unusually high weights so you can go back to the source rows. | [Lesson ZIP](sample_code_folder/152-detecting-outliers-anomalies.zip) |
+| 153 - Feature relationships and overlap between inputs (multicollinearity) **Practice** | Find two columns that tell almost the same story about distance. | [Lesson ZIP](sample_code_folder/153-feature-relationships-and-multicollinearity.zip) |
+| 154 - Visualization Techniques **Practice** | Use histograms, scatter plots, box plots, heatmaps and pair plots to explore the same table. | [Lesson ZIP](sample_code_folder/154-visualization-techniques.zip) |
+| 155 - Histograms **Practice** | Count how often each range of weights occurs. | [Lesson ZIP](sample_code_folder/155-histograms.zip) |
+| 156 - Scatter Plots **Practice** | Put distance on one axis and delivery time on the other. | [Lesson ZIP](sample_code_folder/156-scatter-plots.zip) |
+| 157 - Box Plots **Practice** | Find which weights sit far outside the usual group. | [Lesson ZIP](sample_code_folder/157-box-plots.zip) |
+| 158 - Heatmaps **Practice** | Compare how strongly pairs of numeric columns move together. | [Lesson ZIP](sample_code_folder/158-heatmaps.zip) |
+| 159 - Pair Plots **Practice** | View several pairs of input columns at once. | [Lesson ZIP](sample_code_folder/159-pair-plots.zip) |
 
 ### 🛠️ 1.5. Feature Engineering & Feature Selection
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 160 · 1.5. Feature Engineering & Feature Selection **Practice** | See how creating or choosing useful input columns helps the model. Shared code family (see lesson 161 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/160-1-5-feature-engineering-feature-selection.zip) |
-| 161 · Visualization helps here! **Practice** | Shuffle model inputs one at a time and plot which one changes the score most. Shared code family (see lesson 160 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/161-visualization-helps-here.zip) |
-| 162 · Feature Engineering **Practice** | Create age and an urgent-word flag from two raw fields. Shared code with lesson 163, lesson 164, lesson 165. | [⬇️ Lesson ZIP](sample_code_folder/162-feature-engineering.zip) |
-| 163 · Create new features **Practice** | Give the model numbers derived from dates and messages. Shared code with lesson 162, lesson 164, lesson 165. | [⬇️ Lesson ZIP](sample_code_folder/163-create-new-features.zip) |
-| 164 · Age from Date of Birth **Practice** | Calculate age at a reference date before using it in a prediction. Shared code with lesson 162, lesson 163, lesson 165. | [⬇️ Lesson ZIP](sample_code_folder/164-age-from-date-of-birth.zip) |
-| 165 · Extracting keywords from text **Practice** | Mark whether a support message contains the word urgent. Shared code with lesson 162, lesson 163, lesson 164. | [⬇️ Lesson ZIP](sample_code_folder/165-extracting-keywords-from-text.zip) |
-| 166 · Transform features **Practice** | Change the shape of an input so the model can represent a curved pattern. Shared code with lesson 146, lesson 168. | [⬇️ Lesson ZIP](sample_code_folder/166-transform-features.zip) |
-| 167 · Log transformation **Practice** | Take a log of large sensor readings before predicting cost. Shared code with lesson 102, lesson 103, lesson 136. | [⬇️ Lesson ZIP](sample_code_folder/167-log-transformation.zip) |
-| 168 · Polynomial features **Practice** | Add powers of an input to capture a curve. Shared code with lesson 146, lesson 166. | [⬇️ Lesson ZIP](sample_code_folder/168-polynomial-features.zip) |
-| 169 · Feature Selection **Practice** | Choose useful input columns, then see how the choice affects predictions. Shared code with lesson 171. | [⬇️ Lesson ZIP](sample_code_folder/169-feature-selection.zip) |
-| 170 · Remove irrelevant or redundant features **Practice** | Remove an ID and a duplicate measurement before selecting model inputs. | [⬇️ Lesson ZIP](sample_code_folder/170-remove-irrelevant-or-redundant-features.zip) |
-| 171 · Use statistical tests (ANOVA, Chi-square test) **Practice** | Compare ANOVA and chi-square to see which input each method chooses. Shared code with lesson 169. | [⬇️ Lesson ZIP](sample_code_folder/171-use-statistical-tests-anova-chi-square-test.zip) |
-| 172 · ANOVA **Practice** | Use ANOVA to ask whether a numeric measurement differs across groups. | [⬇️ Lesson ZIP](sample_code_folder/172-anova.zip) |
-| 173 · Chi-square test **Practice** | Use a chi-square score with nonnegative inputs to choose a model column. | [⬇️ Lesson ZIP](sample_code_folder/173-chi-square-test.zip) |
-| 174 · Encoding categorical variables **Practice** | Turn category names into input numbers the model can read. Shared code with lesson 074, lesson 075, lesson 126. | [⬇️ Lesson ZIP](sample_code_folder/174-encoding-categorical-variables.zip) |
-| 175 · Scaling and Normalization **Practice** | Put distance and weight on comparable scales before predicting time. Shared code with lesson 070, lesson 125. | [⬇️ Lesson ZIP](sample_code_folder/175-scaling-and-normalization.zip) |
-| 176 · Visualization Techniques **Practice** | Plot model importance and compare related inputs. Shared code family (see lesson 160 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/176-visualization-techniques-2.zip) |
-| 177 · Bar plots **Practice** | Use bars to compare how much each input helps the model. Shared code with lesson 207. | [⬇️ Lesson ZIP](sample_code_folder/177-bar-plots.zip) |
-| 178 · Pair plots **Practice** | Use a pair plot to check relationships before deciding which columns to keep. Shared code family (see lesson 148 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/178-pair-plots-2.zip) |
+| 160 - 1.5. Feature Engineering & Feature Selection **Practice** | See how creating or choosing useful input columns helps the model. | [Lesson ZIP](sample_code_folder/160-1-5-feature-engineering-feature-selection.zip) |
+| 161 - Visualization helps here! **Practice** | Shuffle model inputs one at a time and plot which one changes the score most. | [Lesson ZIP](sample_code_folder/161-visualization-helps-here.zip) |
+| 162 - Feature Engineering **Practice** | Create age and an urgent-word flag from two raw fields. | [Lesson ZIP](sample_code_folder/162-feature-engineering.zip) |
+| 163 - Create new features **Practice** | Give the model numbers derived from dates and messages. | [Lesson ZIP](sample_code_folder/163-create-new-features.zip) |
+| 164 - Age from Date of Birth **Practice** | Calculate age at a reference date before using it in a prediction. | [Lesson ZIP](sample_code_folder/164-age-from-date-of-birth.zip) |
+| 165 - Extracting keywords from text **Practice** | Mark whether a support message contains the word urgent. | [Lesson ZIP](sample_code_folder/165-extracting-keywords-from-text.zip) |
+| 166 - Transform features **Practice** | Change the shape of an input so the model can represent a curved pattern. | [Lesson ZIP](sample_code_folder/166-transform-features.zip) |
+| 167 - Log transformation **Practice** | Take a log of large sensor readings before predicting cost. | [Lesson ZIP](sample_code_folder/167-log-transformation.zip) |
+| 168 - Polynomial features **Practice** | Add powers of an input to capture a curve. | [Lesson ZIP](sample_code_folder/168-polynomial-features.zip) |
+| 169 - Feature Selection **Practice** | Choose useful input columns, then see how the choice affects predictions. | [Lesson ZIP](sample_code_folder/169-feature-selection.zip) |
+| 170 - Remove irrelevant or redundant features **Practice** | Remove an ID and a duplicate measurement before selecting model inputs. | [Lesson ZIP](sample_code_folder/170-remove-irrelevant-or-redundant-features.zip) |
+| 171 - Use statistical tests (ANOVA, Chi-square test) **Practice** | Compare ANOVA and chi-square to see which input each method chooses. | [Lesson ZIP](sample_code_folder/171-use-statistical-tests-anova-chi-square-test.zip) |
+| 172 - ANOVA **Practice** | Use ANOVA to ask whether a numeric measurement differs across groups. | [Lesson ZIP](sample_code_folder/172-anova.zip) |
+| 173 - Chi-square test **Practice** | Use a chi-square score with nonnegative inputs to choose a model column. | [Lesson ZIP](sample_code_folder/173-chi-square-test.zip) |
+| 174 - Encoding category variables **Practice** | Turn category names into input numbers the model can read. | [Lesson ZIP](sample_code_folder/174-encoding-categorical-variables.zip) |
+| 175 - Scaling and Normalization **Practice** | Put distance and weight on comparable scales before predicting time. | [Lesson ZIP](sample_code_folder/175-scaling-and-normalization.zip) |
+| 176 - Visualization Techniques **Practice** | Plot model importance and compare related inputs. | [Lesson ZIP](sample_code_folder/176-visualization-techniques-2.zip) |
+| 177 - Bar plots **Practice** | Use bars to compare how much each input helps the model. | [Lesson ZIP](sample_code_folder/177-bar-plots.zip) |
+| 178 - Pair plots **Practice** | Use a pair plot to check relationships before deciding which columns to keep. | [Lesson ZIP](sample_code_folder/178-pair-plots-2.zip) |
 
 ### 🏗️ 1.6. Data Splitting
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 179 · 1.6. Data Splitting **Practice** | Give training, validation and test rows different jobs. Same split lab. Different check in each README; lesson 184 uses 80/20. | [⬇️ Lesson ZIP](sample_code_folder/179-1-6-data-splitting.zip) |
-| 180 · Training set **Practice** | Use training rows to teach a decision tree how to flag urgent deliveries. Same split lab. Different check in each README; lesson 184 uses 80/20. | [⬇️ Lesson ZIP](sample_code_folder/180-training-set.zip) |
-| 181 · Validation set **Practice** | Use validation rows to choose a tree depth. Same split lab. Different check in each README; lesson 184 uses 80/20. | [⬇️ Lesson ZIP](sample_code_folder/181-validation-set.zip) |
-| 182 · Test set **Practice** | Check the chosen model once using its untouched test rows. Same split lab. Different check in each README; lesson 184 uses 80/20. | [⬇️ Lesson ZIP](sample_code_folder/182-test-set.zip) |
-| 183 · Common split ratios **Practice** | Compare how many rows go into an 80/20 split and a 70/20/10 split. Same split lab. Different check in each README; lesson 184 uses 80/20. | [⬇️ Lesson ZIP](sample_code_folder/183-common-split-ratios.zip) |
-| 184 · 80%-20% (Train-Test) **Practice** | Train with 80% of the rows and check the model with the remaining 20%. Same split lab. Different check in each README; lesson 184 uses 80/20. | [⬇️ Lesson ZIP](sample_code_folder/184-80-20-train-test.zip) |
-| 185 · 70%-20%-10% (Train-Validation-Test) **Practice** | Use 70% to learn, 20% to choose tree depth and 10% to check it. Same split lab. Different check in each README; lesson 184 uses 80/20. | [⬇️ Lesson ZIP](sample_code_folder/185-70-20-10-train-validation-test.zip) |
-| 186 · Stratified Sampling **Practice** | Keep similar proportions of urgent orders in each group. Same split lab. Different check in each README; lesson 184 uses 80/20. | [⬇️ Lesson ZIP](sample_code_folder/186-stratified-sampling.zip) |
+| 179 - 1.6. Data Splitting **Core** | Give training, validation and test rows different jobs. | [Lesson ZIP](sample_code_folder/179-1-6-data-splitting.zip) |
+| 180 - Training set **Practice** | Use training rows to teach a decision tree how to flag urgent deliveries. | [Lesson ZIP](sample_code_folder/180-training-set.zip) |
+| 181 - Validation set **Practice** | Use validation rows to choose a tree depth. | [Lesson ZIP](sample_code_folder/181-validation-set.zip) |
+| 182 - Test set **Practice** | Check the chosen model once using its untouched test rows. | [Lesson ZIP](sample_code_folder/182-test-set.zip) |
+| 183 - Common split ratios **Practice** | Compare how many rows go into an 80/20 split and a 70/20/10 split. | [Lesson ZIP](sample_code_folder/183-common-split-ratios.zip) |
+| 184 - 80%-20% (Train-Test) **Practice** | Train with 80% of the rows and check the model with the remaining 20%. | [Lesson ZIP](sample_code_folder/184-80-20-train-test.zip) |
+| 185 - 70%-20%-10% (Train-Validation-Test) **Practice** | Use 70% to learn, 20% to choose tree depth and 10% to check it. | [Lesson ZIP](sample_code_folder/185-70-20-10-train-validation-test.zip) |
+| 186 - Stratified Sampling **Practice** | Keep similar proportions of urgent orders in each group. | [Lesson ZIP](sample_code_folder/186-stratified-sampling.zip) |
 
 ### 🤖 1.7. Model Selection & Training
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 187 · 1.7. Model Selection & Training **Practice** | Compare candidate models using the same training task and a common error measure. Shared code with lesson 188, lesson 189. | [⬇️ Lesson ZIP](sample_code_folder/187-1-7-model-selection-training.zip) |
-| 188 · Choose the best Machine Learning model **Practice** | Check which model works better on the same rows and metric. Shared code with lesson 187, lesson 189. | [⬇️ Lesson ZIP](sample_code_folder/188-choose-the-best-machine-learning-model.zip) |
-| 189 · Train the model using the training dataset **Practice** | Give models the same inputs and known answers before comparing their errors. Shared code with lesson 187, lesson 188. | [⬇️ Lesson ZIP](sample_code_folder/189-train-the-model-using-the-training-dataset.zip) |
-| 190 · Tune hyperparameters **Practice** | Try different Ridge settings and compare how search methods find them. Shared code with lesson 193. | [⬇️ Lesson ZIP](sample_code_folder/190-tune-hyperparameters.zip) |
-| 191 · Grid Search **Practice** | Try every value in a small settings list and keep the best validation score. | [⬇️ Lesson ZIP](sample_code_folder/191-grid-search.zip) |
-| 192 · Random Search **Practice** | Test a random subset of settings when trying every option would take longer. | [⬇️ Lesson ZIP](sample_code_folder/192-random-search.zip) |
-| 193 · Bayesian Optimization **Practice** | Use scores from earlier trials to choose another setting to try. Shared code with lesson 190. | [⬇️ Lesson ZIP](sample_code_folder/193-bayesian-optimization.zip) |
-| 194 · Cross-validation **Practice** | Take turns holding different deliveries back and compare the error on each group. | [⬇️ Lesson ZIP](sample_code_folder/194-cross-validation.zip) |
+| 187 - 1.7. Model Selection & Training **Practice** | Compare candidate models using the same training task and a common error measure. | [Lesson ZIP](sample_code_folder/187-1-7-model-selection-training.zip) |
+| 188 - Choose the best Machine Learning model **Practice** | Check which model works better on the same rows and metric. | [Lesson ZIP](sample_code_folder/188-choose-the-best-machine-learning-model.zip) |
+| 189 - Train the model using the training dataset **Practice** | Give models the same inputs and known answers before comparing their errors. | [Lesson ZIP](sample_code_folder/189-train-the-model-using-the-training-dataset.zip) |
+| 190 - Tune model settings **Practice** | Try different Ridge settings and compare how search methods find them. | [Lesson ZIP](sample_code_folder/190-tune-hyperparameters.zip) |
+| 191 - Grid Search **Practice** | Try every value in a small settings list and keep the best validation score. | [Lesson ZIP](sample_code_folder/191-grid-search.zip) |
+| 192 - Random Search **Practice** | Test a random subset of settings when trying every option would take longer. | [Lesson ZIP](sample_code_folder/192-random-search.zip) |
+| 193 - Bayesian Optimization **Practice** | Use scores from earlier trials to choose another setting to try. | [Lesson ZIP](sample_code_folder/193-bayesian-optimization.zip) |
+| 194 - Cross-validation **Core** | Take turns holding different deliveries back and compare the error on each group. | [Lesson ZIP](sample_code_folder/194-cross-validation.zip) |
 
 ### 📏 1.8. Model Evaluation
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 195 · 1.8. Model Evaluation **Practice** | Measure prediction errors on check rows and read the chart that explains them. Shared code family (see lesson 160 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/195-1-8-model-evaluation.zip) |
-| 196 · Visualization is used here! **Practice** | Use separate charts to see missed cases, thresholds and feature importance. Shared code family (see lesson 160 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/196-visualization-is-used-here-2.zip) |
-| 197 · Classification Metrics **Practice** | Check how a classifier handles urgent orders with several scores. Shared code family (see lesson 160 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/197-classification-metrics.zip) |
-| 198 · Accuracy, Precision, Recall, F1-score, AUC-ROC **Practice** | Measure correct answers, false alarms, missed urgent cases and ranking. Shared code family (see lesson 160 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/198-accuracy-precision-recall-f1-score-auc-roc.zip) |
-| 199 · Accuracy **Practice** | Count the share of predictions that match their known answers. | [⬇️ Lesson ZIP](sample_code_folder/199-accuracy.zip) |
-| 200 · Precision **Practice** | Find out how often an order predicted urgent is actually urgent. | [⬇️ Lesson ZIP](sample_code_folder/200-precision.zip) |
-| 201 · Recall **Practice** | Find out how many known urgent orders the model catches. | [⬇️ Lesson ZIP](sample_code_folder/201-recall.zip) |
-| 202 · F1-score **Practice** | Use one score that drops when either precision or recall is low. | [⬇️ Lesson ZIP](sample_code_folder/202-f1-score.zip) |
-| 203 · AUC-ROC **Practice** | Check how well the model ranks urgent orders across thresholds. | [⬇️ Lesson ZIP](sample_code_folder/203-auc-roc.zip) |
-| 204 · Visualization Techniques **Practice** | Choose a chart that answers your question about classifier mistakes. Shared code family (see lesson 160 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/204-visualization-techniques-3.zip) |
-| 205 · Confusion Matrix **Practice** | Locate missed urgent orders and false alarms in a labeled matrix. | [⬇️ Lesson ZIP](sample_code_folder/205-confusion-matrix.zip) |
-| 206 · ROC Curve **Practice** | Compare catches and false alarms at two fixed practice cutoffs. | [⬇️ Lesson ZIP](sample_code_folder/206-roc-curve.zip) |
-| 207 · Feature Importance Plot **Practice** | Shuffle an input to see how much worse the model performs without its original values. Shared code with lesson 177. | [⬇️ Lesson ZIP](sample_code_folder/207-feature-importance-plot.zip) |
-| 208 · Regression Metrics **Practice** | Read prediction errors in minutes and compare them with a simple baseline. Worked calculation using two test trips. Shared code with lesson 209, lesson 210. | [⬇️ Lesson ZIP](sample_code_folder/208-regression-metrics.zip) |
-| 209 · RMSE, MAE, R² score **Practice** | Compare average error, large misses and fit relative to a baseline. Worked calculation using two test trips. Shared code with lesson 208, lesson 210. | [⬇️ Lesson ZIP](sample_code_folder/209-rmse-mae-r-score.zip) |
-| 210 · Residual Plots **Practice** | Plot actual minutes minus predicted minutes to see where the model is off. Worked calculation using two test trips. Shared code with lesson 208, lesson 209. | [⬇️ Lesson ZIP](sample_code_folder/210-residual-plots.zip) |
-| 211 · RMSE **Practice** | Use RMSE to give bigger errors more weight. Worked calculation using two test trips. | [⬇️ Lesson ZIP](sample_code_folder/211-rmse.zip) |
-| 212 · MAE **Practice** | Read the average size of the error in the original unit, minutes. Worked calculation using two test trips. | [⬇️ Lesson ZIP](sample_code_folder/212-mae.zip) |
-| 213 · R² score **Practice** | Measure how much the model improves on a constant average prediction. Worked calculation using two test trips. | [⬇️ Lesson ZIP](sample_code_folder/213-r-score.zip) |
-| 214 · Compare multiple models **Practice** | Compare a simple baseline and a trained classifier on the same metric. Shared code family (see lesson 160 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/214-compare-multiple-models.zip) |
+| 195 - 1.8. Model Evaluation **Practice** | Measure prediction errors on check rows and read the chart that explains them. | [Lesson ZIP](sample_code_folder/195-1-8-model-evaluation.zip) |
+| 196 - Visualization is used here! **Practice** | Use separate charts to see missed cases, thresholds and feature importance. | [Lesson ZIP](sample_code_folder/196-visualization-is-used-here-2.zip) |
+| 197 - Classification Metrics **Practice** | Check how a classifier handles urgent orders with several scores. | [Lesson ZIP](sample_code_folder/197-classification-metrics.zip) |
+| 198 - Accuracy, Precision, Recall, F1-score, AUC-ROC **Practice** | Measure correct answers, false alarms, missed urgent cases and ranking. | [Lesson ZIP](sample_code_folder/198-accuracy-precision-recall-f1-score-auc-roc.zip) |
+| 199 - Accuracy **Practice** | Count the share of predictions that match their known answers. | [Lesson ZIP](sample_code_folder/199-accuracy.zip) |
+| 200 - Precision **Practice** | Find out how often an order predicted urgent is actually urgent. | [Lesson ZIP](sample_code_folder/200-precision.zip) |
+| 201 - Recall **Practice** | Find out how many known urgent orders the model catches. | [Lesson ZIP](sample_code_folder/201-recall.zip) |
+| 202 - F1-score **Practice** | Use one score that drops when either precision or recall is low. | [Lesson ZIP](sample_code_folder/202-f1-score.zip) |
+| 203 - AUC-ROC **Practice** | Check how well the model ranks urgent orders across thresholds. | [Lesson ZIP](sample_code_folder/203-auc-roc.zip) |
+| 204 - Visualization Techniques **Practice** | Choose a chart that answers your question about classifier mistakes. | [Lesson ZIP](sample_code_folder/204-visualization-techniques-3.zip) |
+| 205 - Confusion Matrix **Core** | Locate missed urgent orders and false alarms in a labeled matrix. | [Lesson ZIP](sample_code_folder/205-confusion-matrix.zip) |
+| 206 - ROC Curve **Practice** | Compare catches and false alarms at two fixed practice cutoffs. | [Lesson ZIP](sample_code_folder/206-roc-curve.zip) |
+| 207 - Feature Importance Plot **Core** | Shuffle an input to see how much worse the model performs without its original values. | [Lesson ZIP](sample_code_folder/207-feature-importance-plot.zip) |
+| 208 - Regression Metrics **Core** | Read prediction errors in minutes and compare them with a simple baseline. Worked calculation using two test trips. | [Lesson ZIP](sample_code_folder/208-regression-metrics.zip) |
+| 209 - RMSE, MAE, R² score **Practice** | Compare average error, large misses and fit relative to a baseline. Worked calculation using two test trips. | [Lesson ZIP](sample_code_folder/209-rmse-mae-r-score.zip) |
+| 210 - Residual Plots **Practice** | Plot actual minutes minus predicted minutes to see where the model is off. Worked calculation using two test trips. | [Lesson ZIP](sample_code_folder/210-residual-plots.zip) |
+| 211 - RMSE **Practice** | Use RMSE to give bigger errors more weight. Worked calculation using two test trips. | [Lesson ZIP](sample_code_folder/211-rmse.zip) |
+| 212 - MAE **Practice** | Read the average size of the error in the original unit, minutes. Worked calculation using two test trips. | [Lesson ZIP](sample_code_folder/212-mae.zip) |
+| 213 - R² score **Practice** | Measure how much the model improves on a constant average prediction. Worked calculation using two test trips. | [Lesson ZIP](sample_code_folder/213-r-score.zip) |
+| 214 - Compare multiple models **Practice** | Compare a simple baseline and a trained classifier on the same metric. | [Lesson ZIP](sample_code_folder/214-compare-multiple-models.zip) |
 
 ### 🚀 1.9. Model Deployment
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 215 · 1.9. Model Deployment **Practice** | Serve a delivery model through a local test endpoint. Shared code family (see lesson 216 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/215-1-9-model-deployment.zip) |
-| 216 · APIs, Web Apps, or Cloud Services **Practice** | Send input data to a local API and inspect what comes back. Shared code family (see lesson 215 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/216-apis-web-apps-or-cloud-services.zip) |
-| 217 · API deployment **Practice** | Test a prediction route before deploying it. Shared code family (see lesson 215 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/217-api-deployment.zip) |
-| 218 · Web app deployment **Practice** | Send a request from a small web page and show the estimate. Shared code with lesson 231, lesson 232. | [⬇️ Lesson ZIP](sample_code_folder/218-web-app-deployment.zip) |
-| 219 · Cloud services **Reference** | Check what an endpoint would accept before following a cloud deployment guide. Local request check + manual cloud walkthrough. | [⬇️ Lesson ZIP](sample_code_folder/219-cloud-services.zip) |
-| 220 · Flask, FastAPI, or Streamlit **Practice** | Run a local API example before comparing Python frameworks. Shared code family (see lesson 215 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/220-flask-fastapi-or-streamlit.zip) |
-| 221 · FastAPI **Practice** | Send valid and invalid deliveries to a FastAPI route and read the response. Shared code family (see lesson 215 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/221-fastapi.zip) |
-| 222 · Flask **Practice** | Send the same delivery fields to a Flask route and read the JSON reply. | [⬇️ Lesson ZIP](sample_code_folder/222-flask.zip) |
-| 223 · Streamlit **Practice** | Fill in a Streamlit form and see the delivery estimate change. | [⬇️ Lesson ZIP](sample_code_folder/223-streamlit.zip) |
-| 224 · AWS, Google Cloud, or Heroku **Reference** | Practice a local request check, then use the deployment notes for your platform. Local request check + manual cloud walkthrough. | [⬇️ Lesson ZIP](sample_code_folder/224-aws-google-cloud-or-heroku.zip) |
-| 225 · AWS **Reference** | Check sample payloads on your computer before trying the AWS walkthrough. Local request check + manual cloud walkthrough. | [⬇️ Lesson ZIP](sample_code_folder/225-aws.zip) |
-| 226 · Google Cloud **Reference** | Check sample payloads on your computer before trying the Google Cloud walkthrough. Local request check + manual cloud walkthrough. | [⬇️ Lesson ZIP](sample_code_folder/226-google-cloud.zip) |
-| 227 · Heroku **Reference** | Check sample payloads on your computer before trying the Heroku walkthrough. Local request check + manual cloud walkthrough. | [⬇️ Lesson ZIP](sample_code_folder/227-heroku.zip) |
-| 228 · REST API or integrate with mobile/web apps **Practice** | Turn CSV rows into JSON request bodies a web or mobile app would send. | [⬇️ Lesson ZIP](sample_code_folder/228-rest-api-or-integrate-with-mobile-web-apps.zip) |
-| 229 · REST API **Practice** | Try the same delivery API with several JSON inputs. Shared code family (see lesson 215 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/229-rest-api.zip) |
-| 230 · Mobile app integration **Reference** | Send the distance and weight fields a mobile app would send, using a local test client. Local example + manual walkthrough. Shared code family (see lesson 215 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/230-mobile-app-integration.zip) |
-| 231 · Web app integration **Practice** | Pass a distance from a small web page to an API route. Shared code with lesson 218, lesson 232. | [⬇️ Lesson ZIP](sample_code_folder/231-web-app-integration.zip) |
-| 232 · First API call from a web page **Practice** | Send a distance to a local model from a web page and read the response. Shared code with lesson 218, lesson 231. | [⬇️ Lesson ZIP](sample_code_folder/232-first-api-call-from-a-web-page.zip) |
-| 233 · Cloud deployment walkthrough **Reference** | Check your request format locally, then follow the deployment steps for your chosen platform. Local request check + manual cloud walkthrough. | [⬇️ Lesson ZIP](sample_code_folder/233-cloud-deployment-walkthrough.zip) |
+| 215 - 1.9. Model Deployment **Practice** | Serve a delivery model through a local test endpoint. | [Lesson ZIP](sample_code_folder/215-1-9-model-deployment.zip) |
+| 216 - APIs, Web Apps, or Cloud Services **Practice** | Send input data to a local API and inspect what comes back. | [Lesson ZIP](sample_code_folder/216-apis-web-apps-or-cloud-services.zip) |
+| 217 - API deployment **Practice** | Test a prediction route before deploying it. | [Lesson ZIP](sample_code_folder/217-api-deployment.zip) |
+| 218 - Web app deployment **Practice** | Send a request from a small web page and show the estimate. | [Lesson ZIP](sample_code_folder/218-web-app-deployment.zip) |
+| 219 - Cloud services **Reference** | Check what an endpoint would accept before following a cloud deployment guide. | [Lesson ZIP](sample_code_folder/219-cloud-services.zip) |
+| 220 - Flask, FastAPI, or Streamlit **Practice** | Run a local API example before comparing Python frameworks. | [Lesson ZIP](sample_code_folder/220-flask-fastapi-or-streamlit.zip) |
+| 221 - FastAPI **Practice** | Send valid and invalid deliveries to a FastAPI route and read the response. | [Lesson ZIP](sample_code_folder/221-fastapi.zip) |
+| 222 - Flask **Practice** | Send the same delivery fields to a Flask route and read the JSON reply. | [Lesson ZIP](sample_code_folder/222-flask.zip) |
+| 223 - Streamlit **Practice** | Fill in a Streamlit form and see the delivery estimate change. | [Lesson ZIP](sample_code_folder/223-streamlit.zip) |
+| 224 - AWS, Google Cloud, or Heroku **Reference** | Practice a local request check, then use the deployment notes for your platform. | [Lesson ZIP](sample_code_folder/224-aws-google-cloud-or-heroku.zip) |
+| 225 - AWS **Reference** | Check sample payloads on your computer before trying the AWS walkthrough. | [Lesson ZIP](sample_code_folder/225-aws.zip) |
+| 226 - Google Cloud **Reference** | Check sample payloads on your computer before trying the Google Cloud walkthrough. | [Lesson ZIP](sample_code_folder/226-google-cloud.zip) |
+| 227 - Heroku **Reference** | Check sample payloads on your computer before trying the Heroku walkthrough. | [Lesson ZIP](sample_code_folder/227-heroku.zip) |
+| 228 - REST API or integrate with mobile/web apps **Practice** | Turn CSV rows into JSON request bodies a web or mobile app would send. | [Lesson ZIP](sample_code_folder/228-rest-api-or-integrate-with-mobile-web-apps.zip) |
+| 229 - REST API **Practice** | Try the same delivery API with several JSON inputs. | [Lesson ZIP](sample_code_folder/229-rest-api.zip) |
+| 230 - Mobile app integration **Reference** | Send the distance and weight fields a mobile app would send, using a local test client. | [Lesson ZIP](sample_code_folder/230-mobile-app-integration.zip) |
+| 231 - Web app integration **Practice** | Pass a distance from a small web page to an API route. | [Lesson ZIP](sample_code_folder/231-web-app-integration.zip) |
+| 232 - First API call from a web page **Core** | Send a distance to a local model from a web page and read the response. | [Lesson ZIP](sample_code_folder/232-first-api-call-from-a-web-page.zip) |
+| 233 - Cloud deployment walkthrough **Reference** | Check your request format locally, then follow the deployment steps for your chosen platform. | [Lesson ZIP](sample_code_folder/233-cloud-deployment-walkthrough.zip) |
 
 ### 📈 1.10. Model Monitoring & Maintenance
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 234 · 1.10. Model Monitoring & Maintenance **Practice** | Follow a model over several batches and decide when to investigate or retrain. Shared code family (see lesson 235 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/234-1-10-model-monitoring-maintenance.zip) |
-| 235 · Visualization helps track model performance! **Practice** | Plot how accuracy and input distances change between batches. Shared code family (see lesson 234 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/235-visualization-helps-track-model-performance.zip) |
-| 236 · Monitor model accuracy & performance over time **Practice** | Check model accuracy after new delivery outcomes are recorded. Shared code family (see lesson 234 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/236-monitor-model-accuracy-performance-over-time.zip) |
-| 237 · Detect data drift **Practice** | See whether the new trips cover different distances than the earlier trips. Shared code family (see lesson 234 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/237-detect-data-drift.zip) |
-| 238 · Implement automated alerts **Practice** | Raise a local alert if accuracy falls or the input data changes too much. Shared code family (see lesson 234 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/238-implement-automated-alerts.zip) |
-| 239 · Retrain the model periodically with new data **Practice** | Train a candidate on newer deliveries and compare it with the running model on a later batch. Shared code family (see lesson 234 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/239-retrain-the-model-periodically-with-new-data.zip) |
-| 240 · Visualization Techniques **Practice** | Use a local dashboard to read the latest accuracy and see an alert. Shared code with lesson 241, lesson 248. | [⬇️ Lesson ZIP](sample_code_folder/240-visualization-techniques-4.zip) |
-| 241 · Live dashboards using Tableau, Power BI, or Matplotlib/Seaborn **Practice** | Create a local dashboard and use the companion lessons to prepare BI imports. Shared code with lesson 240, lesson 248. | [⬇️ Lesson ZIP](sample_code_folder/241-live-dashboards-using-tableau-power-bi-or-matplotlib-seaborn.zip) |
-| 242 · Tableau **Reference** | Turn batch counts into a CSV that Tableau can plot. Local example + manual walkthrough. | [⬇️ Lesson ZIP](sample_code_folder/242-tableau.zip) |
-| 243 · Power BI **Reference** | Turn batch counts into a CSV that Power BI can plot. Local example + manual walkthrough. | [⬇️ Lesson ZIP](sample_code_folder/243-power-bi.zip) |
-| 244 · Matplotlib **Practice** | Use Matplotlib to set up the comparison charts. Shared code family (see lesson 234 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/244-matplotlib.zip) |
-| 245 · Seaborn **Practice** | Use Seaborn to show how recent inputs compare with earlier ones. Shared code family (see lesson 234 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/245-seaborn.zip) |
-| 246 · Drift detection charts **Practice** | Compare the old and new distributions to see how delivery distances have shifted. Shared code family (see lesson 234 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/246-drift-detection-charts.zip) |
-| 247 · Real-time model accuracy tracking dashboards **Practice** | Watch how accuracy changes as batches with known results arrive. Shared code family (see lesson 234 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/247-real-time-model-accuracy-tracking-dashboards.zip) |
-| 248 · A dashboard that refreshes on your computer **Practice** | Run a local dashboard that reads the latest accuracy file. Shared code with lesson 240, lesson 241. | [⬇️ Lesson ZIP](sample_code_folder/248-a-dashboard-that-refreshes-on-your-computer.zip) |
-| 249 · Scheduled model checks **Practice** | Reuse the same model check for each batch and see which one raises an alert. | [⬇️ Lesson ZIP](sample_code_folder/249-scheduled-model-checks.zip) |
+| 234 - 1.10. Model Monitoring & Maintenance **Practice** | Follow a model over several batches and decide when to investigate or retrain. | [Lesson ZIP](sample_code_folder/234-1-10-model-monitoring-maintenance.zip) |
+| 235 - Visualization helps track model performance! **Practice** | Plot how accuracy and input distances change between batches. | [Lesson ZIP](sample_code_folder/235-visualization-helps-track-model-performance.zip) |
+| 236 - Monitor model accuracy & performance over time **Practice** | Check model accuracy after new delivery outcomes are recorded. | [Lesson ZIP](sample_code_folder/236-monitor-model-accuracy-performance-over-time.zip) |
+| 237 - Detect data drift **Practice** | See whether the new trips cover different distances than the earlier trips. | [Lesson ZIP](sample_code_folder/237-detect-data-drift.zip) |
+| 238 - Implement automated alerts **Practice** | Raise a local alert if accuracy falls or the input data changes too much. | [Lesson ZIP](sample_code_folder/238-implement-automated-alerts.zip) |
+| 239 - Retrain the model periodically with new data **Practice** | Train a candidate on newer deliveries and compare it with the running model on a later batch. | [Lesson ZIP](sample_code_folder/239-retrain-the-model-periodically-with-new-data.zip) |
+| 240 - Visualization Techniques **Practice** | Use a local dashboard to read the latest accuracy and see an alert. | [Lesson ZIP](sample_code_folder/240-visualization-techniques-4.zip) |
+| 241 - Live dashboards using Tableau, Power BI, or Matplotlib/Seaborn **Practice** | Create a local dashboard and use the companion lessons to prepare BI imports. | [Lesson ZIP](sample_code_folder/241-live-dashboards-using-tableau-power-bi-or-matplotlib-seaborn.zip) |
+| 242 - Tableau **Reference** | Turn batch counts into a CSV that Tableau can plot. | [Lesson ZIP](sample_code_folder/242-tableau.zip) |
+| 243 - Power BI **Reference** | Turn batch counts into a CSV that Power BI can plot. | [Lesson ZIP](sample_code_folder/243-power-bi.zip) |
+| 244 - Matplotlib **Practice** | Use Matplotlib to set up the comparison charts. | [Lesson ZIP](sample_code_folder/244-matplotlib.zip) |
+| 245 - Seaborn **Practice** | Use Seaborn to show how recent inputs compare with earlier ones. | [Lesson ZIP](sample_code_folder/245-seaborn.zip) |
+| 246 - Drift detection charts **Practice** | Compare the old and new distributions to see how delivery distances have shifted. | [Lesson ZIP](sample_code_folder/246-drift-detection-charts.zip) |
+| 247 - Real-time model accuracy tracking dashboards **Practice** | Watch how accuracy changes as batches with known results arrive. | [Lesson ZIP](sample_code_folder/247-real-time-model-accuracy-tracking-dashboards.zip) |
+| 248 - A dashboard that refreshes on your computer **Practice** | Run a local dashboard that reads the latest accuracy file. | [Lesson ZIP](sample_code_folder/248-a-dashboard-that-refreshes-on-your-computer.zip) |
+| 249 - Scheduled model checks **Practice** | Reuse the same model check for each batch and see which one raises an alert. | [Lesson ZIP](sample_code_folder/249-scheduled-model-checks.zip) |
 
 ### 🟪 2. Data Sets
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 250 · 2. Data Sets **Practice** | Start the practice datasets with a small table of experience and salary. Shared code family (see lesson 251 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/250-2-data-sets.zip) |
+| 250 - 2. Data Sets **Practice** | Start the practice datasets with a small table of experience and salary. | [Lesson ZIP](sample_code_folder/250-2-data-sets.zip) |
 
-### 📘 2.1. Salary & Experience Dataset
-
-| Lesson name | What you’ll do | Download |
-| --- | --- | --- |
-| 251 · 2.1. Salary & Experience Dataset **Practice** | Use years of experience and department from invented employee records to estimate salary. Shared code family (see lesson 250 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/251-2-1-salary-experience-dataset.zip) |
-| 252 · Description **Reference** | Inspect the columns in the invented employee records and see what each row represents. Shared code with lesson 258. | [⬇️ Lesson ZIP](sample_code_folder/252-description.zip) |
-| 253 · Practice **Practice** | Use years of experience and department from invented employee records to estimate salary. Shared code family (see lesson 250 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/253-practice.zip) |
-| 254 · Missing values **Practice** | Find missing entries in the invented employee records and see how the example prepares them for a model. Shared code family (see lesson 250 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/254-practice-2-1-missing-values.zip) |
-| 255 · Feature scaling **Practice** | Put the numerical inputs on a common scale before using the invented employee records in a model. Shared code family (see lesson 250 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/255-practice-2-1-feature-scaling.zip) |
-| 256 · Outliers **Practice** | Look for unusual measurements in the invented employee records and see which rows need checking. Shared code family (see lesson 250 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/256-practice-2-1-outliers.zip) |
-| 257 · Categorical encoding **Practice** | Turn categories in the invented employee records into numbers the model can read. Shared code family (see lesson 250 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/257-practice-2-1-categorical-encoding.zip) |
-| 258 · Source **Reference** | Read the dataset name from the PDF and inspect the invented employee records used in this exercise. Shared code with lesson 252. | [⬇️ Lesson ZIP](sample_code_folder/258-source.zip) |
-
-### 📘 2.2. Titanic Dataset
+### 📘 2.1. Invented salary records
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 259 · 2.2. Titanic Dataset **Practice** | Use age, fare and family details from invented ferry bookings to estimate priority boarding. Shared code family (see lesson 261 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/259-2-2-titanic-dataset.zip) |
-| 260 · Description **Reference** | Inspect the columns in the invented ferry bookings and see what each row represents. Shared code with lesson 267. | [⬇️ Lesson ZIP](sample_code_folder/260-description-2.zip) |
-| 261 · Practice **Practice** | Use age, fare and family details from invented ferry bookings to estimate priority boarding. Shared code family (see lesson 259 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/261-practice-2.zip) |
-| 262 · Missing values **Practice** | Find missing entries in the invented ferry bookings and see how the example prepares them for a model. Shared code family (see lesson 259 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/262-practice-2-2-missing-values.zip) |
-| 263 · Categorical encoding **Practice** | Turn categories in the invented ferry bookings into numbers the model can read. Shared code family (see lesson 259 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/263-practice-2-2-categorical-encoding.zip) |
-| 264 · Outliers **Practice** | Look for unusual measurements in the invented ferry bookings and see which rows need checking. Shared code family (see lesson 259 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/264-practice-2-2-outliers.zip) |
-| 265 · Scaling **Practice** | Put the numerical inputs on a common scale before using the invented ferry bookings in a model. Shared code family (see lesson 259 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/265-practice-2-2-scaling.zip) |
-| 266 · Feature extraction **Practice** | Make a family-size column from siblings and parents before predicting boarding priority. Shared code family (see lesson 259 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/266-practice-2-2-feature-extraction.zip) |
-| 267 · Source **Reference** | Read the dataset name from the PDF and inspect the invented ferry bookings used in this exercise. Shared code with lesson 260. | [⬇️ Lesson ZIP](sample_code_folder/267-source-2.zip) |
+| 251 - Invented salary records **Practice** | Use years of experience and department from invented employee records to estimate salary. | [Lesson ZIP](sample_code_folder/251-2-1-salary-experience-dataset.zip) |
+| 252 - Description **Reference** | Inspect the columns in the invented employee records and see what each row represents. | [Lesson ZIP](sample_code_folder/252-description.zip) |
+| 253 - Practice **Practice** | Use years of experience and department from invented employee records to estimate salary. | [Lesson ZIP](sample_code_folder/253-practice.zip) |
+| 254 - Missing values **Practice** | Find missing entries in the invented employee records and see how the example prepares them for a model. | [Lesson ZIP](sample_code_folder/254-practice-2-1-missing-values.zip) |
+| 255 - Feature scaling **Practice** | Put the numerical inputs on a common scale before using the invented employee records in a model. | [Lesson ZIP](sample_code_folder/255-practice-2-1-feature-scaling.zip) |
+| 256 - Outliers **Practice** | Look for unusual measurements in the invented employee records and see which rows need checking. | [Lesson ZIP](sample_code_folder/256-practice-2-1-outliers.zip) |
+| 257 - Category encoding **Practice** | Turn categories in the invented employee records into numbers the model can read. | [Lesson ZIP](sample_code_folder/257-practice-2-1-categorical-encoding.zip) |
+| 258 - Source **Reference** | Read the dataset name from the PDF and inspect the invented employee records used in this exercise. | [Lesson ZIP](sample_code_folder/258-source.zip) |
 
-### 📘 2.3. House Prices Dataset
-
-| Lesson name | What you’ll do | Download |
-| --- | --- | --- |
-| 268 · 2.3. House Prices Dataset **Practice** | Use floor area, rooms and neighborhood from invented property listings to estimate sale price. Shared code family (see lesson 270 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/268-2-3-house-prices-dataset.zip) |
-| 269 · Description **Reference** | Inspect the columns in the invented property listings and see what each row represents. Shared code with lesson 276. | [⬇️ Lesson ZIP](sample_code_folder/269-description-3.zip) |
-| 270 · Practice **Practice** | Use floor area, rooms and neighborhood from invented property listings to estimate sale price. Shared code family (see lesson 268 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/270-practice-3.zip) |
-| 271 · Missing values **Practice** | Find missing entries in the invented property listings and see how the example prepares them for a model. Shared code family (see lesson 268 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/271-practice-2-3-missing-values.zip) |
-| 272 · Categorical encoding **Practice** | Turn categories in the invented property listings into numbers the model can read. Shared code family (see lesson 268 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/272-practice-2-3-categorical-encoding.zip) |
-| 273 · Outliers **Practice** | Look for unusual measurements in the invented property listings and see which rows need checking. Shared code family (see lesson 268 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/273-practice-2-3-outliers.zip) |
-| 274 · Feature scaling **Practice** | Put the numerical inputs on a common scale before using the invented property listings in a model. Shared code family (see lesson 268 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/274-practice-2-3-feature-scaling.zip) |
-| 275 · Handling skewed data **Practice** | Use a log on prices so a few very expensive homes have less influence on the scale. Shared code family (see lesson 268 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/275-practice-2-3-handling-skewed-data.zip) |
-| 276 · Source **Reference** | Read the dataset name from the PDF and inspect the invented property listings used in this exercise. Shared code with lesson 269. | [⬇️ Lesson ZIP](sample_code_folder/276-source-3.zip) |
-
-### 📘 2.4. Iris Dataset
+### 📘 2.2. Invented ferry boarding records
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 277 · 2.4. Iris Dataset **Practice** | Use sepal and petal measurements from invented flower measurements to estimate flower type. Shared code family (see lesson 279 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/277-2-4-iris-dataset.zip) |
-| 278 · Description **Reference** | Inspect the columns in the invented flower measurements and see what each row represents. Shared code with lesson 284. | [⬇️ Lesson ZIP](sample_code_folder/278-description-4.zip) |
-| 279 · Practice **Practice** | Use sepal and petal measurements from invented flower measurements to estimate flower type. Shared code family (see lesson 277 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/279-practice-4.zip) |
-| 280 · Feature scaling **Practice** | Put the numerical inputs on a common scale before using the invented flower measurements in a model. | [⬇️ Lesson ZIP](sample_code_folder/280-practice-2-4-feature-scaling.zip) |
-| 281 · Outliers **Practice** | Look for unusual measurements in the invented flower measurements and see which rows need checking. Shared code family (see lesson 277 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/281-practice-2-4-outliers.zip) |
-| 282 · Categorical encoding **Practice** | Turn categories in the invented flower measurements into numbers the model can read. Shared code family (see lesson 277 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/282-practice-2-4-categorical-encoding.zip) |
-| 283 · Visualization **Practice** | Plot petal and sepal measurements to see which flowers look similar. Shared code family (see lesson 277 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/283-practice-2-4-visualization.zip) |
-| 284 · Source **Reference** | Read the dataset name from the PDF and inspect the invented flower measurements used in this exercise. Shared code with lesson 278. | [⬇️ Lesson ZIP](sample_code_folder/284-source-4.zip) |
+| 259 - Invented ferry boarding records **Practice** | Use age, fare and family details from invented ferry bookings to estimate priority boarding. | [Lesson ZIP](sample_code_folder/259-2-2-titanic-dataset.zip) |
+| 260 - Description **Reference** | Inspect the columns in the invented ferry bookings and see what each row represents. | [Lesson ZIP](sample_code_folder/260-description-2.zip) |
+| 261 - Practice **Practice** | Use age, fare and family details from invented ferry bookings to estimate priority boarding. | [Lesson ZIP](sample_code_folder/261-practice-2.zip) |
+| 262 - Missing values **Practice** | Find missing entries in the invented ferry bookings and see how the example prepares them for a model. | [Lesson ZIP](sample_code_folder/262-practice-2-2-missing-values.zip) |
+| 263 - Category encoding **Practice** | Turn categories in the invented ferry bookings into numbers the model can read. | [Lesson ZIP](sample_code_folder/263-practice-2-2-categorical-encoding.zip) |
+| 264 - Outliers **Practice** | Look for unusual measurements in the invented ferry bookings and see which rows need checking. | [Lesson ZIP](sample_code_folder/264-practice-2-2-outliers.zip) |
+| 265 - Scaling **Practice** | Put the numerical inputs on a common scale before using the invented ferry bookings in a model. | [Lesson ZIP](sample_code_folder/265-practice-2-2-scaling.zip) |
+| 266 - Feature extraction **Practice** | Make a family-size column from siblings and parents before predicting boarding priority. | [Lesson ZIP](sample_code_folder/266-practice-2-2-feature-extraction.zip) |
+| 267 - Source **Reference** | Read the dataset name from the PDF and inspect the invented ferry bookings used in this exercise. | [Lesson ZIP](sample_code_folder/267-source-2.zip) |
 
-### 📘 2.5. UCI Adult Income Dataset
-
-| Lesson name | What you’ll do | Download |
-| --- | --- | --- |
-| 285 · 2.5. UCI Adult Income Dataset **Practice** | Use age, education and working hours from invented income records to estimate income group. Shared code family (see lesson 287 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/285-2-5-uci-adult-income-dataset.zip) |
-| 286 · Description **Reference** | Inspect the columns in the invented income records and see what each row represents. Shared code with lesson 292. | [⬇️ Lesson ZIP](sample_code_folder/286-description-5.zip) |
-| 287 · Practice **Practice** | Use age, education and working hours from invented income records to estimate income group. Shared code family (see lesson 285 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/287-practice-5.zip) |
-| 288 · Missing values **Practice** | Find missing entries in the invented income records and see how the example prepares them for a model. Shared code family (see lesson 285 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/288-practice-2-5-missing-values.zip) |
-| 289 · Categorical encoding **Practice** | Turn categories in the invented income records into numbers the model can read. Shared code family (see lesson 285 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/289-practice-2-5-categorical-encoding.zip) |
-| 290 · Feature scaling **Practice** | Put the numerical inputs on a common scale before using the invented income records in a model. Shared code family (see lesson 285 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/290-practice-2-5-feature-scaling.zip) |
-| 291 · Outliers **Practice** | Look for unusual measurements in the invented income records and see which rows need checking. Shared code family (see lesson 285 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/291-practice-2-5-outliers.zip) |
-| 292 · Source **Reference** | Read the dataset name from the PDF and inspect the invented income records used in this exercise. Shared code with lesson 286. | [⬇️ Lesson ZIP](sample_code_folder/292-source-5.zip) |
-
-### 📘 2.6. Wine Quality Dataset
+### 📘 2.3. Invented house listings
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 293 · 2.6. Wine Quality Dataset **Practice** | Use alcohol, citric acid and sulphates from invented wine measurements to estimate quality. Shared code family (see lesson 295 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/293-2-6-wine-quality-dataset.zip) |
-| 294 · Description **Reference** | Inspect the columns in the invented wine measurements and see what each row represents. Shared code with lesson 301. | [⬇️ Lesson ZIP](sample_code_folder/294-description-6.zip) |
-| 295 · Practice **Practice** | Use alcohol, citric acid and sulphates from invented wine measurements to estimate quality. Shared code family (see lesson 293 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/295-practice-6.zip) |
-| 296 · Missing values **Practice** | Find missing entries in the invented wine measurements and see how the example prepares them for a model. | [⬇️ Lesson ZIP](sample_code_folder/296-practice-2-6-missing-values.zip) |
-| 297 · Outliers **Practice** | Look for unusual measurements in the invented wine measurements and see which rows need checking. Shared code family (see lesson 293 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/297-practice-2-6-outliers.zip) |
-| 298 · Feature scaling **Practice** | Put the numerical inputs on a common scale before using the invented wine measurements in a model. Shared code family (see lesson 293 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/298-practice-2-6-feature-scaling.zip) |
-| 299 · Categorical encoding **Practice** | Turn categories in the invented wine measurements into numbers the model can read. Shared code family (see lesson 293 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/299-practice-2-6-categorical-encoding.zip) |
-| 300 · Normalization **Practice** | Put the numerical inputs on a common scale before using the invented wine measurements in a model. | [⬇️ Lesson ZIP](sample_code_folder/300-practice-2-6-normalization.zip) |
-| 301 · Source **Reference** | Read the dataset name from the PDF and inspect the invented wine measurements used in this exercise. Shared code with lesson 294. | [⬇️ Lesson ZIP](sample_code_folder/301-source-6.zip) |
+| 268 - Invented house listings **Practice** | Use floor area, rooms and neighborhood from invented property listings to estimate sale price. | [Lesson ZIP](sample_code_folder/268-2-3-house-prices-dataset.zip) |
+| 269 - Description **Reference** | Inspect the columns in the invented property listings and see what each row represents. | [Lesson ZIP](sample_code_folder/269-description-3.zip) |
+| 270 - Practice **Practice** | Use floor area, rooms and neighborhood from invented property listings to estimate sale price. | [Lesson ZIP](sample_code_folder/270-practice-3.zip) |
+| 271 - Missing values **Practice** | Find missing entries in the invented property listings and see how the example prepares them for a model. | [Lesson ZIP](sample_code_folder/271-practice-2-3-missing-values.zip) |
+| 272 - Category encoding **Practice** | Turn categories in the invented property listings into numbers the model can read. | [Lesson ZIP](sample_code_folder/272-practice-2-3-categorical-encoding.zip) |
+| 273 - Outliers **Practice** | Look for unusual measurements in the invented property listings and see which rows need checking. | [Lesson ZIP](sample_code_folder/273-practice-2-3-outliers.zip) |
+| 274 - Feature scaling **Practice** | Put the numerical inputs on a common scale before using the invented property listings in a model. | [Lesson ZIP](sample_code_folder/274-practice-2-3-feature-scaling.zip) |
+| 275 - Handling skewed data **Practice** | Use a log on prices so a few very expensive homes have less influence on the scale. | [Lesson ZIP](sample_code_folder/275-practice-2-3-handling-skewed-data.zip) |
+| 276 - Source **Reference** | Read the dataset name from the PDF and inspect the invented property listings used in this exercise. | [Lesson ZIP](sample_code_folder/276-source-3.zip) |
 
-### 📘 2.7. Boston Housing Dataset
-
-| Lesson name | What you’ll do | Download |
-| --- | --- | --- |
-| 302 · 2.7. Boston Housing Dataset **Practice** | Use room count, crime rate and household income from invented neighborhood records to estimate house price. Shared code family (see lesson 304 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/302-2-7-boston-housing-dataset.zip) |
-| 303 · Description **Reference** | Inspect the columns in the invented neighborhood records and see what each row represents. Shared code with lesson 309. | [⬇️ Lesson ZIP](sample_code_folder/303-description-7.zip) |
-| 304 · Practice **Practice** | Use room count, crime rate and household income from invented neighborhood records to estimate house price. Shared code family (see lesson 302 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/304-practice-7.zip) |
-| 305 · Missing values **Practice** | Find missing entries in the invented neighborhood records and see how the example prepares them for a model. Shared code family (see lesson 302 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/305-practice-2-7-missing-values.zip) |
-| 306 · Feature scaling **Practice** | Put the numerical inputs on a common scale before using the invented neighborhood records in a model. Shared code family (see lesson 302 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/306-practice-2-7-feature-scaling.zip) |
-| 307 · Outliers **Practice** | Look for unusual measurements in the invented neighborhood records and see which rows need checking. Shared code family (see lesson 302 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/307-practice-2-7-outliers.zip) |
-| 308 · Categorical encoding **Practice** | Turn categories in the invented neighborhood records into numbers the model can read. Shared code family (see lesson 302 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/308-practice-2-7-categorical-encoding.zip) |
-| 309 · Source **Reference** | Read the dataset name from the PDF and inspect the invented neighborhood records used in this exercise. Shared code with lesson 303. | [⬇️ Lesson ZIP](sample_code_folder/309-source-7.zip) |
-
-### 📘 2.8. MNIST Dataset
+### 📘 2.4. Invented flower measurements
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 310 · 2.8. MNIST Dataset **Practice** | Use pixels in each drawing from hand-drawn digit shapes to estimate digit. Shared code family (see lesson 312 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/310-2-8-mnist-dataset.zip) |
-| 311 · Description **Reference** | Inspect the columns in the hand-drawn digit shapes and see what each row represents. Shared code with lesson 317. | [⬇️ Lesson ZIP](sample_code_folder/311-description-8.zip) |
-| 312 · Practice **Practice** | Use pixels in each drawing from hand-drawn digit shapes to estimate digit. Shared code family (see lesson 310 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/312-practice-8.zip) |
-| 313 · Resizing **Practice** | Make the hand-drawn digit shapes the same size before using them in a model. Shared code family (see lesson 310 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/313-practice-2-8-resizing.zip) |
-| 314 · Normalization **Practice** | Put the pixels on a common scale before using the hand-drawn digit shapes in a model. Shared code family (see lesson 310 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/314-practice-2-8-normalization.zip) |
-| 315 · Feature scaling **Practice** | Put the pixels on a common scale before using the hand-drawn digit shapes in a model. Shared code family (see lesson 310 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/315-practice-2-8-feature-scaling.zip) |
-| 316 · Outliers **Practice** | Look for blank drawings or unusual pixel patterns in the hand-drawn digit shapes and see which rows need checking. Shared code family (see lesson 310 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/316-practice-2-8-outliers.zip) |
-| 317 · Source **Reference** | Read the dataset name from the PDF and inspect the hand-drawn digit shapes used in this exercise. Shared code with lesson 311. | [⬇️ Lesson ZIP](sample_code_folder/317-source-8.zip) |
+| 277 - Invented flower measurements **Practice** | Use sepal and petal measurements from invented flower measurements to estimate flower type. | [Lesson ZIP](sample_code_folder/277-2-4-iris-dataset.zip) |
+| 278 - Description **Reference** | Inspect the columns in the invented flower measurements and see what each row represents. | [Lesson ZIP](sample_code_folder/278-description-4.zip) |
+| 279 - Practice **Practice** | Use sepal and petal measurements from invented flower measurements to estimate flower type. | [Lesson ZIP](sample_code_folder/279-practice-4.zip) |
+| 280 - Feature scaling **Practice** | Put the numerical inputs on a common scale before using the invented flower measurements in a model. | [Lesson ZIP](sample_code_folder/280-practice-2-4-feature-scaling.zip) |
+| 281 - Outliers **Practice** | Look for unusual measurements in the invented flower measurements and see which rows need checking. | [Lesson ZIP](sample_code_folder/281-practice-2-4-outliers.zip) |
+| 282 - Category encoding **Practice** | Turn categories in the invented flower measurements into numbers the model can read. | [Lesson ZIP](sample_code_folder/282-practice-2-4-categorical-encoding.zip) |
+| 283 - Visualization **Practice** | Plot petal and sepal measurements to see which flowers look similar. | [Lesson ZIP](sample_code_folder/283-practice-2-4-visualization.zip) |
+| 284 - Source **Reference** | Read the dataset name from the PDF and inspect the invented flower measurements used in this exercise. | [Lesson ZIP](sample_code_folder/284-source-4.zip) |
 
-### 📘 2.9. Customer Segmentation Dataset
-
-| Lesson name | What you’ll do | Download |
-| --- | --- | --- |
-| 318 · 2.9. Customer Segmentation Dataset **Practice** | Use age, annual income and spending score from invented shopper records to estimate shopper group. Shared code family (see lesson 320 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/318-2-9-customer-segmentation-dataset.zip) |
-| 319 · Description **Reference** | Inspect the columns in the invented shopper records and see what each row represents. Shared code with lesson 325. | [⬇️ Lesson ZIP](sample_code_folder/319-description-9.zip) |
-| 320 · Practice **Practice** | Use age, annual income and spending score from invented shopper records to estimate shopper group. Shared code family (see lesson 318 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/320-practice-9.zip) |
-| 321 · Missing values **Practice** | Find missing entries in the invented shopper records and see how the example prepares them for a model. Shared code family (see lesson 318 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/321-practice-2-9-missing-values.zip) |
-| 322 · Feature scaling **Practice** | Put the numerical inputs on a common scale before using the invented shopper records in a model. Shared code family (see lesson 318 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/322-practice-2-9-feature-scaling.zip) |
-| 323 · Categorical encoding **Practice** | Turn categories in the invented shopper records into numbers the model can read. Shared code family (see lesson 318 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/323-practice-2-9-categorical-encoding.zip) |
-| 324 · Outliers **Practice** | Look for unusual measurements in the invented shopper records and see which rows need checking. Shared code family (see lesson 318 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/324-practice-2-9-outliers.zip) |
-| 325 · Source **Reference** | Read the dataset name from the PDF and inspect the invented shopper records used in this exercise. Shared code with lesson 319. | [⬇️ Lesson ZIP](sample_code_folder/325-source-9.zip) |
-
-### 📘 2.10. Bank Marketing Dataset
+### 📘 2.5. Invented income records
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 326 · 2.10. Bank Marketing Dataset **Practice** | Use balance, duration and job from invented bank campaign records to estimate subscription. Shared code family (see lesson 328 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/326-2-10-bank-marketing-dataset.zip) |
-| 327 · Description **Reference** | Inspect the columns in the invented bank campaign records and see what each row represents. Shared code with lesson 333. | [⬇️ Lesson ZIP](sample_code_folder/327-description-10.zip) |
-| 328 · Practice **Practice** | Use balance, duration and job from invented bank campaign records to estimate subscription. Shared code family (see lesson 326 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/328-practice-10.zip) |
-| 329 · Categorical encoding **Practice** | Turn categories in the invented bank campaign records into numbers the model can read. Shared code family (see lesson 326 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/329-practice-2-10-categorical-encoding.zip) |
-| 330 · Feature scaling **Practice** | Put the numerical inputs on a common scale before using the invented bank campaign records in a model. Shared code family (see lesson 326 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/330-practice-2-10-feature-scaling.zip) |
-| 331 · Outliers **Practice** | Look for unusual measurements in the invented bank campaign records and see which rows need checking. Shared code family (see lesson 326 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/331-practice-2-10-outliers.zip) |
-| 332 · Missing values **Practice** | Find missing entries in the invented bank campaign records and see how the example prepares them for a model. Shared code family (see lesson 326 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/332-practice-2-10-missing-values.zip) |
-| 333 · Source **Reference** | Read the dataset name from the PDF and inspect the invented bank campaign records used in this exercise. Shared code with lesson 327. | [⬇️ Lesson ZIP](sample_code_folder/333-source-10.zip) |
+| 285 - Invented income records **Practice** | Use age, education and working hours from invented income records to estimate income group. | [Lesson ZIP](sample_code_folder/285-2-5-uci-adult-income-dataset.zip) |
+| 286 - Description **Reference** | Inspect the columns in the invented income records and see what each row represents. | [Lesson ZIP](sample_code_folder/286-description-5.zip) |
+| 287 - Practice **Practice** | Use age, education and working hours from invented income records to estimate income group. | [Lesson ZIP](sample_code_folder/287-practice-5.zip) |
+| 288 - Missing values **Practice** | Find missing entries in the invented income records and see how the example prepares them for a model. | [Lesson ZIP](sample_code_folder/288-practice-2-5-missing-values.zip) |
+| 289 - Category encoding **Practice** | Turn categories in the invented income records into numbers the model can read. | [Lesson ZIP](sample_code_folder/289-practice-2-5-categorical-encoding.zip) |
+| 290 - Feature scaling **Practice** | Put the numerical inputs on a common scale before using the invented income records in a model. | [Lesson ZIP](sample_code_folder/290-practice-2-5-feature-scaling.zip) |
+| 291 - Outliers **Practice** | Look for unusual measurements in the invented income records and see which rows need checking. | [Lesson ZIP](sample_code_folder/291-practice-2-5-outliers.zip) |
+| 292 - Source **Reference** | Read the dataset name from the PDF and inspect the invented income records used in this exercise. | [Lesson ZIP](sample_code_folder/292-source-5.zip) |
 
-### 📘 2.11. Heart Disease Dataset
-
-| Lesson name | What you’ll do | Download |
-| --- | --- | --- |
-| 334 · 2.11. Heart Disease Dataset **Practice** | Use age, cholesterol and other practice measurements from invented health-related rows to estimate fabricated label. Shared code family (see lesson 336 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/334-2-11-heart-disease-dataset.zip) |
-| 335 · Description **Reference** | Inspect the columns in the invented health-related rows and see what each row represents. Shared code with lesson 340. | [⬇️ Lesson ZIP](sample_code_folder/335-description-11.zip) |
-| 336 · Practice **Practice** | Use age, cholesterol and other practice measurements from invented health-related rows to estimate fabricated label. Shared code family (see lesson 334 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/336-practice-11.zip) |
-| 337 · Feature scaling **Practice** | Put the numerical inputs on a common scale before using the invented health-related rows in a model. Shared code family (see lesson 334 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/337-practice-2-11-feature-scaling.zip) |
-| 338 · Categorical encoding **Practice** | Turn categories in the invented health-related rows into numbers the model can read. Shared code family (see lesson 334 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/338-practice-2-11-categorical-encoding.zip) |
-| 339 · Outliers **Practice** | Look for unusual measurements in the invented health-related rows and see which rows need checking. Shared code family (see lesson 334 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/339-practice-2-11-outliers.zip) |
-| 340 · Source **Reference** | Read the dataset name from the PDF and inspect the invented health-related rows used in this exercise. Shared code with lesson 335. | [⬇️ Lesson ZIP](sample_code_folder/340-source-11.zip) |
-
-### 📘 2.12. Fashion MNIST
+### 📘 2.6. Invented drink measurements
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 341 · 2.12. Fashion MNIST **Practice** | Use pixels in each drawing from hand-drawn clothing shapes to estimate clothing type. Shared code family (see lesson 310 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/341-2-12-fashion-mnist.zip) |
-| 342 · Description **Reference** | Inspect the columns in the hand-drawn clothing shapes and see what each row represents. Shared code with lesson 348. | [⬇️ Lesson ZIP](sample_code_folder/342-description-12.zip) |
-| 343 · Practice **Practice** | Use pixels in each drawing from hand-drawn clothing shapes to estimate clothing type. Shared code family (see lesson 310 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/343-practice-12.zip) |
-| 344 · Resizing **Practice** | Resize one clothing drawing and check its dimensions and pixel count. | [⬇️ Lesson ZIP](sample_code_folder/344-practice-2-12-resizing.zip) |
-| 345 · Normalization **Practice** | Put the pixels on a common scale before using the hand-drawn clothing shapes in a model. Shared code family (see lesson 310 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/345-practice-2-12-normalization.zip) |
-| 346 · One-hot encoding **Practice** | Turn categories in the hand-drawn clothing shapes into numbers the model can read. Shared code family (see lesson 310 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/346-practice-2-12-one-hot-encoding.zip) |
-| 347 · Flattening **Practice** | Flatten one clothing drawing and reconstruct the original pixel grid. | [⬇️ Lesson ZIP](sample_code_folder/347-practice-2-12-flattening.zip) |
-| 348 · Source **Reference** | Read the dataset name from the PDF and inspect the hand-drawn clothing shapes used in this exercise. Shared code with lesson 342. | [⬇️ Lesson ZIP](sample_code_folder/348-source-12.zip) |
+| 293 - Invented drink measurements **Practice** | Use alcohol, citric acid and sulphates from invented wine measurements to estimate quality. | [Lesson ZIP](sample_code_folder/293-2-6-wine-quality-dataset.zip) |
+| 294 - Description **Reference** | Inspect the columns in the invented wine measurements and see what each row represents. | [Lesson ZIP](sample_code_folder/294-description-6.zip) |
+| 295 - Practice **Practice** | Use alcohol, citric acid and sulphates from invented wine measurements to estimate quality. | [Lesson ZIP](sample_code_folder/295-practice-6.zip) |
+| 296 - Missing values **Practice** | Find missing entries in the invented wine measurements and see how the example prepares them for a model. | [Lesson ZIP](sample_code_folder/296-practice-2-6-missing-values.zip) |
+| 297 - Outliers **Practice** | Look for unusual measurements in the invented wine measurements and see which rows need checking. | [Lesson ZIP](sample_code_folder/297-practice-2-6-outliers.zip) |
+| 298 - Feature scaling **Practice** | Put the numerical inputs on a common scale before using the invented wine measurements in a model. | [Lesson ZIP](sample_code_folder/298-practice-2-6-feature-scaling.zip) |
+| 299 - Category encoding **Practice** | Turn categories in the invented wine measurements into numbers the model can read. | [Lesson ZIP](sample_code_folder/299-practice-2-6-categorical-encoding.zip) |
+| 300 - Normalization **Practice** | Put the numerical inputs on a common scale before using the invented wine measurements in a model. | [Lesson ZIP](sample_code_folder/300-practice-2-6-normalization.zip) |
+| 301 - Source **Reference** | Read the dataset name from the PDF and inspect the invented wine measurements used in this exercise. | [Lesson ZIP](sample_code_folder/301-source-6.zip) |
 
-### 📘 2.13. Google Play Store Dataset
+### 📘 2.7. Invented neighbourhood prices
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 349 · 2.13. Google Play Store Dataset **Practice** | Use price, rating and category from invented app listings to estimate install count. Shared code family (see lesson 351 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/349-2-13-google-play-store-dataset.zip) |
-| 350 · Description **Reference** | Inspect the columns in the invented app listings and see what each row represents. Shared code with lesson 355. | [⬇️ Lesson ZIP](sample_code_folder/350-description-13.zip) |
-| 351 · Practice **Practice** | Use price, rating and category from invented app listings to estimate install count. Shared code family (see lesson 349 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/351-practice-13.zip) |
-| 352 · Categorical encoding **Practice** | Turn categories in the invented app listings into numbers the model can read. Shared code family (see lesson 349 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/352-practice-2-13-categorical-encoding.zip) |
-| 353 · Missing values **Practice** | Find missing entries in the invented app listings and see how the example prepares them for a model. Shared code family (see lesson 349 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/353-practice-2-13-missing-values.zip) |
-| 354 · Outliers **Practice** | Look for unusual measurements in the invented app listings and see which rows need checking. Shared code family (see lesson 349 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/354-practice-2-13-outliers.zip) |
-| 355 · Source **Reference** | Read the dataset name from the PDF and inspect the invented app listings used in this exercise. Shared code with lesson 350. | [⬇️ Lesson ZIP](sample_code_folder/355-source-13.zip) |
+| 302 - Invented neighbourhood prices **Practice** | Use room count, crime rate and household income from invented neighborhood records to estimate house price. | [Lesson ZIP](sample_code_folder/302-2-7-boston-housing-dataset.zip) |
+| 303 - Description **Reference** | Inspect the columns in the invented neighborhood records and see what each row represents. | [Lesson ZIP](sample_code_folder/303-description-7.zip) |
+| 304 - Practice **Practice** | Use room count, crime rate and household income from invented neighborhood records to estimate house price. | [Lesson ZIP](sample_code_folder/304-practice-7.zip) |
+| 305 - Missing values **Practice** | Find missing entries in the invented neighborhood records and see how the example prepares them for a model. | [Lesson ZIP](sample_code_folder/305-practice-2-7-missing-values.zip) |
+| 306 - Feature scaling **Practice** | Put the numerical inputs on a common scale before using the invented neighborhood records in a model. | [Lesson ZIP](sample_code_folder/306-practice-2-7-feature-scaling.zip) |
+| 307 - Outliers **Practice** | Look for unusual measurements in the invented neighborhood records and see which rows need checking. | [Lesson ZIP](sample_code_folder/307-practice-2-7-outliers.zip) |
+| 308 - Category encoding **Practice** | Turn categories in the invented neighborhood records into numbers the model can read. | [Lesson ZIP](sample_code_folder/308-practice-2-7-categorical-encoding.zip) |
+| 309 - Source **Reference** | Read the dataset name from the PDF and inspect the invented neighborhood records used in this exercise. | [Lesson ZIP](sample_code_folder/309-source-7.zip) |
+
+### 📘 2.8. Hand-drawn digit shapes
+
+| Lesson name | What you’ll do | Download |
+| --- | --- | --- |
+| 310 - Hand-drawn digits **Practice** | Use pixels in each drawing from hand-drawn digit shapes to estimate digit. | [Lesson ZIP](sample_code_folder/310-2-8-mnist-dataset.zip) |
+| 311 - Description **Reference** | Inspect the columns in the hand-drawn digit shapes and see what each row represents. | [Lesson ZIP](sample_code_folder/311-description-8.zip) |
+| 312 - Practice **Practice** | Use pixels in each drawing from hand-drawn digit shapes to estimate digit. | [Lesson ZIP](sample_code_folder/312-practice-8.zip) |
+| 313 - Resizing **Practice** | Make the hand-drawn digit shapes the same size before using them in a model. | [Lesson ZIP](sample_code_folder/313-practice-2-8-resizing.zip) |
+| 314 - Normalization **Practice** | Put the pixels on a common scale before using the hand-drawn digit shapes in a model. | [Lesson ZIP](sample_code_folder/314-practice-2-8-normalization.zip) |
+| 315 - Feature scaling **Practice** | Put the pixels on a common scale before using the hand-drawn digit shapes in a model. | [Lesson ZIP](sample_code_folder/315-practice-2-8-feature-scaling.zip) |
+| 316 - Outliers **Practice** | Look for blank drawings or unusual pixel patterns in the hand-drawn digit shapes and see which rows need checking. | [Lesson ZIP](sample_code_folder/316-practice-2-8-outliers.zip) |
+| 317 - Source **Reference** | Read the dataset name from the PDF and inspect the hand-drawn digit shapes used in this exercise. | [Lesson ZIP](sample_code_folder/317-source-8.zip) |
+
+### 📘 2.9. Invented shopper groups
+
+| Lesson name | What you’ll do | Download |
+| --- | --- | --- |
+| 318 - Invented shopper groups **Practice** | Use age, annual income and spending score from invented shopper records to estimate shopper group. | [Lesson ZIP](sample_code_folder/318-2-9-customer-segmentation-dataset.zip) |
+| 319 - Description **Reference** | Inspect the columns in the invented shopper records and see what each row represents. | [Lesson ZIP](sample_code_folder/319-description-9.zip) |
+| 320 - Practice **Practice** | Use age, annual income and spending score from invented shopper records to estimate shopper group. | [Lesson ZIP](sample_code_folder/320-practice-9.zip) |
+| 321 - Missing values **Practice** | Find missing entries in the invented shopper records and see how the example prepares them for a model. | [Lesson ZIP](sample_code_folder/321-practice-2-9-missing-values.zip) |
+| 322 - Feature scaling **Practice** | Put the numerical inputs on a common scale before using the invented shopper records in a model. | [Lesson ZIP](sample_code_folder/322-practice-2-9-feature-scaling.zip) |
+| 323 - Category encoding **Practice** | Turn categories in the invented shopper records into numbers the model can read. | [Lesson ZIP](sample_code_folder/323-practice-2-9-categorical-encoding.zip) |
+| 324 - Outliers **Practice** | Look for unusual measurements in the invented shopper records and see which rows need checking. | [Lesson ZIP](sample_code_folder/324-practice-2-9-outliers.zip) |
+| 325 - Source **Reference** | Read the dataset name from the PDF and inspect the invented shopper records used in this exercise. | [Lesson ZIP](sample_code_folder/325-source-9.zip) |
+
+### 📘 2.10. Invented bank campaign records
+
+| Lesson name | What you’ll do | Download |
+| --- | --- | --- |
+| 326 - Invented bank campaign records **Practice** | Use balance, duration and job from invented bank campaign records to estimate subscription. | [Lesson ZIP](sample_code_folder/326-2-10-bank-marketing-dataset.zip) |
+| 327 - Description **Reference** | Inspect the columns in the invented bank campaign records and see what each row represents. | [Lesson ZIP](sample_code_folder/327-description-10.zip) |
+| 328 - Practice **Practice** | Use balance, duration and job from invented bank campaign records to estimate subscription. | [Lesson ZIP](sample_code_folder/328-practice-10.zip) |
+| 329 - Category encoding **Practice** | Turn categories in the invented bank campaign records into numbers the model can read. | [Lesson ZIP](sample_code_folder/329-practice-2-10-categorical-encoding.zip) |
+| 330 - Feature scaling **Practice** | Put the numerical inputs on a common scale before using the invented bank campaign records in a model. | [Lesson ZIP](sample_code_folder/330-practice-2-10-feature-scaling.zip) |
+| 331 - Outliers **Practice** | Look for unusual measurements in the invented bank campaign records and see which rows need checking. | [Lesson ZIP](sample_code_folder/331-practice-2-10-outliers.zip) |
+| 332 - Missing values **Practice** | Find missing entries in the invented bank campaign records and see how the example prepares them for a model. | [Lesson ZIP](sample_code_folder/332-practice-2-10-missing-values.zip) |
+| 333 - Source **Reference** | Read the dataset name from the PDF and inspect the invented bank campaign records used in this exercise. | [Lesson ZIP](sample_code_folder/333-source-10.zip) |
+
+### 📘 2.11. Invented health-related rows
+
+| Lesson name | What you’ll do | Download |
+| --- | --- | --- |
+| 334 - Invented health-related practice rows **Practice** | Use age, cholesterol and other practice measurements from invented health-related rows to estimate fabricated label. | [Lesson ZIP](sample_code_folder/334-2-11-heart-disease-dataset.zip) |
+| 335 - Description **Reference** | Inspect the columns in the invented health-related rows and see what each row represents. | [Lesson ZIP](sample_code_folder/335-description-11.zip) |
+| 336 - Practice **Practice** | Use age, cholesterol and other practice measurements from invented health-related rows to estimate fabricated label. | [Lesson ZIP](sample_code_folder/336-practice-11.zip) |
+| 337 - Feature scaling **Practice** | Put the numerical inputs on a common scale before using the invented health-related rows in a model. | [Lesson ZIP](sample_code_folder/337-practice-2-11-feature-scaling.zip) |
+| 338 - Category encoding **Practice** | Turn categories in the invented health-related rows into numbers the model can read. | [Lesson ZIP](sample_code_folder/338-practice-2-11-categorical-encoding.zip) |
+| 339 - Outliers **Practice** | Look for unusual measurements in the invented health-related rows and see which rows need checking. | [Lesson ZIP](sample_code_folder/339-practice-2-11-outliers.zip) |
+| 340 - Source **Reference** | Read the dataset name from the PDF and inspect the invented health-related rows used in this exercise. | [Lesson ZIP](sample_code_folder/340-source-11.zip) |
+
+### 📘 2.12. Hand-drawn clothing shapes
+
+| Lesson name | What you’ll do | Download |
+| --- | --- | --- |
+| 341 - Hand-drawn clothing shapes **Practice** | Use pixels in each drawing from hand-drawn clothing shapes to estimate clothing type. | [Lesson ZIP](sample_code_folder/341-2-12-fashion-mnist.zip) |
+| 342 - Description **Reference** | Inspect the columns in the hand-drawn clothing shapes and see what each row represents. | [Lesson ZIP](sample_code_folder/342-description-12.zip) |
+| 343 - Practice **Practice** | Use pixels in each drawing from hand-drawn clothing shapes to estimate clothing type. | [Lesson ZIP](sample_code_folder/343-practice-12.zip) |
+| 344 - Resizing **Practice** | Resize one clothing drawing and check its dimensions and pixel count. | [Lesson ZIP](sample_code_folder/344-practice-2-12-resizing.zip) |
+| 345 - Normalization **Practice** | Put the pixels on a common scale before using the hand-drawn clothing shapes in a model. | [Lesson ZIP](sample_code_folder/345-practice-2-12-normalization.zip) |
+| 346 - One-hot encoding **Practice** | Turn categories in the hand-drawn clothing shapes into numbers the model can read. | [Lesson ZIP](sample_code_folder/346-practice-2-12-one-hot-encoding.zip) |
+| 347 - Flattening **Practice** | Flatten one clothing drawing and reconstruct the original pixel grid. | [Lesson ZIP](sample_code_folder/347-practice-2-12-flattening.zip) |
+| 348 - Source **Reference** | Read the dataset name from the PDF and inspect the hand-drawn clothing shapes used in this exercise. | [Lesson ZIP](sample_code_folder/348-source-12.zip) |
+
+### 📘 2.13. Invented app listings
+
+| Lesson name | What you’ll do | Download |
+| --- | --- | --- |
+| 349 - Invented app listings **Practice** | Use price, rating and category from invented app listings to estimate install count. | [Lesson ZIP](sample_code_folder/349-2-13-google-play-store-dataset.zip) |
+| 350 - Description **Reference** | Inspect the columns in the invented app listings and see what each row represents. | [Lesson ZIP](sample_code_folder/350-description-13.zip) |
+| 351 - Practice **Practice** | Use price, rating and category from invented app listings to estimate install count. | [Lesson ZIP](sample_code_folder/351-practice-13.zip) |
+| 352 - Category encoding **Practice** | Turn categories in the invented app listings into numbers the model can read. | [Lesson ZIP](sample_code_folder/352-practice-2-13-categorical-encoding.zip) |
+| 353 - Missing values **Practice** | Find missing entries in the invented app listings and see how the example prepares them for a model. | [Lesson ZIP](sample_code_folder/353-practice-2-13-missing-values.zip) |
+| 354 - Outliers **Practice** | Look for unusual measurements in the invented app listings and see which rows need checking. | [Lesson ZIP](sample_code_folder/354-practice-2-13-outliers.zip) |
+| 355 - Source **Reference** | Read the dataset name from the PDF and inspect the invented app listings used in this exercise. | [Lesson ZIP](sample_code_folder/355-source-13.zip) |
 
 ### 🧠 3. Machine Learning Categories
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 356 · 3. Machine Learning Categories **Practice** | Try a delivery prediction, then explore the other types of learning. Shared code family (see lesson 357 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/356-3-machine-learning-categories.zip) |
+| 356 - 3. Machine Learning Categories **Practice** | Try a delivery prediction, then explore the other types of learning. | [Lesson ZIP](sample_code_folder/356-3-machine-learning-categories.zip) |
 
 ### 🔵 3.1. Supervised Learning
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 357 · 3.1. Supervised Learning **Practice** | Use deliveries with known times to train and check a model. Shared code family (see lesson 356 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/357-3-1-supervised-learning.zip) |
-| 358 · Common Algorithms **Practice** | Fit a first supervised model and use the following lessons to try other algorithms. Shared code family (see lesson 356 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/358-common-algorithms.zip) |
-| 359 · Regression Algorithms **Practice** | Use known delivery times to learn how to predict a number. Shared code family (see lesson 356 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/359-regression-algorithms.zip) |
-| 360 · Linear Regression **Practice** | Fit a line to distance and weight and estimate delivery minutes. Shared code family (see lesson 356 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/360-linear-regression.zip) |
-| 361 · Ridge/Lasso Regression **Practice** | Compare two ways to keep a regression model from putting too much weight on an input. | [⬇️ Lesson ZIP](sample_code_folder/361-ridge-lasso-regression.zip) |
-| 362 · Ridge Regression **Practice** | Use Ridge to shrink large coefficients before estimating delivery minutes. | [⬇️ Lesson ZIP](sample_code_folder/362-ridge-regression.zip) |
-| 363 · Lasso Regression **Practice** | Use Lasso to shrink coefficients and allow some to become zero. | [⬇️ Lesson ZIP](sample_code_folder/363-lasso-regression.zip) |
-| 364 · Polynomial Regression **Practice** | Add curved input terms to a model that predicts delivery time. | [⬇️ Lesson ZIP](sample_code_folder/364-polynomial-regression.zip) |
-| 365 · Support Vector Regression (SVR) **Practice** | Use support vector regression to estimate a numeric delivery time. | [⬇️ Lesson ZIP](sample_code_folder/365-support-vector-regression-svr.zip) |
-| 366 · Decision Trees (for Regression) **Practice** | Split deliveries by conditions on distance and weight to predict minutes. | [⬇️ Lesson ZIP](sample_code_folder/366-decision-trees-for-regression.zip) |
-| 367 · Random Forest (for Regression) **Practice** | Average the predictions of several trees for a delivery. | [⬇️ Lesson ZIP](sample_code_folder/367-random-forest-for-regression.zip) |
-| 368 · Gradient Boosting (GBM) **Practice** | Fit trees in sequence so later trees can correct earlier time errors. | [⬇️ Lesson ZIP](sample_code_folder/368-gradient-boosting-gbm.zip) |
-| 369 · XGBoost **Practice** | Use XGBoost to predict delivery time and check the error in minutes. | [⬇️ Lesson ZIP](sample_code_folder/369-xgboost.zip) |
-| 370 · LightGBM **Practice** | Use LightGBM to predict delivery time and read the held-out error. | [⬇️ Lesson ZIP](sample_code_folder/370-lightgbm.zip) |
-| 371 · Classification Algorithms **Practice** | Use known late or on-time answers to predict a category for a new delivery. Shared code with lesson 372, lesson 437. | [⬇️ Lesson ZIP](sample_code_folder/371-classification-algorithms.zip) |
-| 372 · Logistic Regression **Practice** | Estimate whether a delivery will be late from its distance and weight. Shared code with lesson 371, lesson 437. | [⬇️ Lesson ZIP](sample_code_folder/372-logistic-regression.zip) |
-| 373 · K-Nearest Neighbors (KNN) **Practice** | Look at nearby deliveries with known answers to predict late or on time. | [⬇️ Lesson ZIP](sample_code_folder/373-k-nearest-neighbors-knn.zip) |
-| 374 · Support Vector Machines (SVM) **Practice** | Learn a boundary between late and on-time deliveries. | [⬇️ Lesson ZIP](sample_code_folder/374-support-vector-machines-svm.zip) |
-| 375 · Decision Trees (for Classification) **Practice** | Use a tree of yes/no decisions to predict whether a delivery will be late. | [⬇️ Lesson ZIP](sample_code_folder/375-decision-trees-for-classification.zip) |
-| 376 · Random Forest (for Classification) **Practice** | Combine votes from several trees to classify a new delivery. | [⬇️ Lesson ZIP](sample_code_folder/376-random-forest-for-classification.zip) |
-| 377 · Naive Bayes **Practice** | Use probabilities learned from known late and on-time deliveries. | [⬇️ Lesson ZIP](sample_code_folder/377-naive-bayes.zip) |
-| 378 · Gradient Boosting **Practice** | Add trees in sequence to correct the late/on-time model’s mistakes. | [⬇️ Lesson ZIP](sample_code_folder/378-gradient-boosting.zip) |
-| 379 · XGBoost **Practice** | Use XGBoost to classify a delivery as late or on time. | [⬇️ Lesson ZIP](sample_code_folder/379-xgboost-2.zip) |
-| 380 · LightGBM **Practice** | Use LightGBM to classify a delivery as late or on time. | [⬇️ Lesson ZIP](sample_code_folder/380-lightgbm-2.zip) |
-| 381 · K-Means Classifier **Practice** | Find clusters first, then use known labels to name each cluster. | [⬇️ Lesson ZIP](sample_code_folder/381-k-means-classifier.zip) |
+| 357 - 3.1. Supervised Learning **Practice** | Use deliveries with known times to train and check a model. | [Lesson ZIP](sample_code_folder/357-3-1-supervised-learning.zip) |
+| 358 - Common Algorithms **Practice** | Train a first supervised model and use the following lessons to try other algorithms. | [Lesson ZIP](sample_code_folder/358-common-algorithms.zip) |
+| 359 - Regression Algorithms **Practice** | Use known delivery times to learn how to predict a number. | [Lesson ZIP](sample_code_folder/359-regression-algorithms.zip) |
+| 360 - Linear Regression **Practice** | Train a line to distance and weight and estimate delivery minutes. | [Lesson ZIP](sample_code_folder/360-linear-regression.zip) |
+| 361 - Ridge/Lasso Regression **Practice** | Compare two ways to keep a regression model from putting too much weight on an input. | [Lesson ZIP](sample_code_folder/361-ridge-lasso-regression.zip) |
+| 362 - Ridge Regression **Practice** | Use Ridge to shrink large coefficients before estimating delivery minutes. | [Lesson ZIP](sample_code_folder/362-ridge-regression.zip) |
+| 363 - Lasso Regression **Practice** | Use Lasso to shrink coefficients and allow some to become zero. | [Lesson ZIP](sample_code_folder/363-lasso-regression.zip) |
+| 364 - Polynomial Regression **Practice** | Add curved input terms to a model that predicts delivery time. | [Lesson ZIP](sample_code_folder/364-polynomial-regression.zip) |
+| 365 - Support Vector Regression (SVR) **Practice** | Use support vector regression to estimate a numeric delivery time. | [Lesson ZIP](sample_code_folder/365-support-vector-regression-svr.zip) |
+| 366 - Decision Trees (for Regression) **Practice** | Split deliveries by conditions on distance and weight to predict minutes. | [Lesson ZIP](sample_code_folder/366-decision-trees-for-regression.zip) |
+| 367 - Random Forest (for Regression) **Practice** | Average the predictions of several trees for a delivery. | [Lesson ZIP](sample_code_folder/367-random-forest-for-regression.zip) |
+| 368 - Gradient Boosting (GBM) **Practice** | Fit trees in sequence so later trees can correct earlier time errors. | [Lesson ZIP](sample_code_folder/368-gradient-boosting-gbm.zip) |
+| 369 - XGBoost **Practice** | Use XGBoost to predict delivery time and check the error in minutes. | [Lesson ZIP](sample_code_folder/369-xgboost.zip) |
+| 370 - LightGBM **Practice** | Use LightGBM to predict delivery time and read the kept-back error. | [Lesson ZIP](sample_code_folder/370-lightgbm.zip) |
+| 371 - Classification Algorithms **Practice** | Use known late or on-time answers to predict a category for a new delivery. | [Lesson ZIP](sample_code_folder/371-classification-algorithms.zip) |
+| 372 - Logistic Regression **Practice** | Estimate whether a delivery will be late from its distance and weight. | [Lesson ZIP](sample_code_folder/372-logistic-regression.zip) |
+| 373 - K-Nearest Neighbors (KNN) **Practice** | Look at nearby deliveries with known answers to predict late or on time. | [Lesson ZIP](sample_code_folder/373-k-nearest-neighbors-knn.zip) |
+| 374 - Support Vector Machines (SVM) **Practice** | Learn a boundary between late and on-time deliveries. | [Lesson ZIP](sample_code_folder/374-support-vector-machines-svm.zip) |
+| 375 - Decision Trees (for Classification) **Practice** | Use a tree of yes/no decisions to predict whether a delivery will be late. | [Lesson ZIP](sample_code_folder/375-decision-trees-for-classification.zip) |
+| 376 - Random Forest (for Classification) **Practice** | Combine votes from several trees to classify a new delivery. | [Lesson ZIP](sample_code_folder/376-random-forest-for-classification.zip) |
+| 377 - Naive Bayes **Practice** | Use probabilities learned from known late and on-time deliveries. | [Lesson ZIP](sample_code_folder/377-naive-bayes.zip) |
+| 378 - Gradient Boosting **Practice** | Add trees in sequence to correct the late/on-time model’s mistakes. | [Lesson ZIP](sample_code_folder/378-gradient-boosting.zip) |
+| 379 - XGBoost **Practice** | Use XGBoost to classify a delivery as late or on time. | [Lesson ZIP](sample_code_folder/379-xgboost-2.zip) |
+| 380 - LightGBM **Practice** | Use LightGBM to classify a delivery as late or on time. | [Lesson ZIP](sample_code_folder/380-lightgbm-2.zip) |
+| 381 - K-Means Classifier **Practice** | Find clusters first, then use known labels to name each cluster. | [Lesson ZIP](sample_code_folder/381-k-means-classifier.zip) |
 
 ### 🟢 3.2. Unsupervised Learning
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 382 · 3.2. Unsupervised Learning **Practice** | Group similar shoppers using their measurements without given group labels. Shared code family (see lesson 383 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/382-3-2-unsupervised-learning.zip) |
-| 383 · Common Algorithms **Practice** | Explore how an algorithm can group shoppers from their measurements. Shared code family (see lesson 382 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/383-common-algorithms-2.zip) |
-| 384 · Clustering Algorithms **Practice** | Find groups of shoppers with similar ages, incomes and spending scores. Shared code family (see lesson 382 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/384-clustering-algorithms.zip) |
-| 385 · K-Means **Practice** | Choose three shopper groups and see where the fitted model puts new shoppers. Shared code family (see lesson 382 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/385-k-means.zip) |
-| 386 · Hierarchical Clustering **Practice** | See which shoppers merge first by reading the clustering tree from bottom to top. | [⬇️ Lesson ZIP](sample_code_folder/386-hierarchical-clustering.zip) |
-| 387 · DBSCAN **Practice** | Look for dense groups of shoppers and flag isolated points as noise. | [⬇️ Lesson ZIP](sample_code_folder/387-dbscan.zip) |
-| 388 · Gaussian Mixture Models (GMM) **Practice** | Give each shopper a probability of belonging to each group. | [⬇️ Lesson ZIP](sample_code_folder/388-gaussian-mixture-models-gmm.zip) |
-| 389 · Dimensionality Reduction **Practice** | Shrink three input measurements into fewer measurements you can inspect. Shared code with lesson 390, lesson 439. | [⬇️ Lesson ZIP](sample_code_folder/389-dimensionality-reduction.zip) |
-| 390 · Principal Component Analysis (PCA) **Practice** | Combine overlapping measurements into fewer columns and see how much variation they keep. Shared code with lesson 389, lesson 439. | [⬇️ Lesson ZIP](sample_code_folder/390-principal-component-analysis-pca.zip) |
-| 391 · t-Distributed Stochastic Neighbor Embedding (t-SNE) **Practice** | Draw similar rows near one another in a two-dimensional plot. | [⬇️ Lesson ZIP](sample_code_folder/391-t-distributed-stochastic-neighbor-embedding-t-sne.zip) |
-| 392 · Linear Discriminant Analysis (LDA) **Practice** | Use known group labels to build a smaller set of measurements that separates the groups. | [⬇️ Lesson ZIP](sample_code_folder/392-linear-discriminant-analysis-lda.zip) |
-| 393 · Independent Component Analysis (ICA) **Practice** | Use independent component analysis to separate patterns mixed across the measured columns. | [⬇️ Lesson ZIP](sample_code_folder/393-independent-component-analysis-ica.zip) |
-| 394 · Anomaly Detection **Practice** | Compare a typical parcel with one that needs a closer look. Shared code with lesson 395, lesson 440. | [⬇️ Lesson ZIP](sample_code_folder/394-anomaly-detection.zip) |
-| 395 · Isolation Forest **Practice** | Train on regular parcels and see which new measurements are unusual. Shared code with lesson 394, lesson 440. | [⬇️ Lesson ZIP](sample_code_folder/395-isolation-forest.zip) |
-| 396 · One-Class SVM **Practice** | Learn a boundary around typical parcels and check which new ones fall outside. | [⬇️ Lesson ZIP](sample_code_folder/396-one-class-svm.zip) |
-| 397 · Z-score Algorithm **Practice** | Check how many standard deviations a parcel weight lies from the training average. | [⬇️ Lesson ZIP](sample_code_folder/397-z-score-algorithm.zip) |
-| 398 · Association **Practice** | Find which items shoppers put in the same basket. Shared code with lesson 401, lesson 441. | [⬇️ Lesson ZIP](sample_code_folder/398-association.zip) |
-| 399 · Apriori Algorithm **Practice** | Find frequent pairs by testing item combinations and dropping rare candidates. | [⬇️ Lesson ZIP](sample_code_folder/399-apriori-algorithm.zip) |
-| 400 · Frequent Pattern Growth **Practice** | Find common item pairs by organizing recurring items in a tree. | [⬇️ Lesson ZIP](sample_code_folder/400-frequent-pattern-growth.zip) |
-| 401 · Frequently occurring items **Practice** | Add a shopping basket and see which item pairs remain common. Shared code with lesson 398, lesson 441. | [⬇️ Lesson ZIP](sample_code_folder/401-frequently-occurring-items.zip) |
+| 382 - 3.2. Unsupervised Learning **Practice** | Group similar shoppers using their measurements without given group labels. | [Lesson ZIP](sample_code_folder/382-3-2-unsupervised-learning.zip) |
+| 383 - Common Algorithms **Practice** | Explore how an algorithm can group shoppers from their measurements. | [Lesson ZIP](sample_code_folder/383-common-algorithms-2.zip) |
+| 384 - Clustering Algorithms **Practice** | Find groups of shoppers with similar ages, incomes and spending scores. | [Lesson ZIP](sample_code_folder/384-clustering-algorithms.zip) |
+| 385 - K-Means **Practice** | Choose three shopper groups and see where the trained model puts new shoppers. | [Lesson ZIP](sample_code_folder/385-k-means.zip) |
+| 386 - Hierarchical Clustering **Practice** | See which shoppers merge first by reading the clustering tree from bottom to top. | [Lesson ZIP](sample_code_folder/386-hierarchical-clustering.zip) |
+| 387 - DBSCAN **Practice** | Look for dense groups of shoppers and flag isolated points as noise. | [Lesson ZIP](sample_code_folder/387-dbscan.zip) |
+| 388 - Gaussian Mixture Models (GMM) **Practice** | Give each shopper a probability of belonging to each group. | [Lesson ZIP](sample_code_folder/388-gaussian-mixture-models-gmm.zip) |
+| 389 - Dimensionality Reduction **Practice** | Shrink three input measurements into fewer measurements you can inspect. | [Lesson ZIP](sample_code_folder/389-dimensionality-reduction.zip) |
+| 390 - Principal Component Analysis (PCA) **Practice** | Combine overlapping measurements into fewer columns and see how much variation they keep. | [Lesson ZIP](sample_code_folder/390-principal-component-analysis-pca.zip) |
+| 391 - t-Distributed Stochastic Neighbor Embedding (t-SNE) **Practice** | Draw similar rows near one another in a two-dimensional plot. | [Lesson ZIP](sample_code_folder/391-t-distributed-stochastic-neighbor-embedding-t-sne.zip) |
+| 392 - Use labels to make fewer inputs (supervised LDA) **Practice** | Use known group labels to build a smaller set of measurements that separates the groups. | [Lesson ZIP](sample_code_folder/392-linear-discriminant-analysis-lda.zip) |
+| 393 - Independent Component Analysis (ICA) **Practice** | Use independent component analysis to separate patterns mixed across the measured columns. | [Lesson ZIP](sample_code_folder/393-independent-component-analysis-ica.zip) |
+| 394 - Anomaly Detection **Practice** | Compare a typical parcel with one that needs a closer look. | [Lesson ZIP](sample_code_folder/394-anomaly-detection.zip) |
+| 395 - Isolation Forest **Practice** | Train on regular parcels and see which new measurements are unusual. | [Lesson ZIP](sample_code_folder/395-isolation-forest.zip) |
+| 396 - One-Class SVM **Practice** | Learn a boundary around typical parcels and check which new ones fall outside. | [Lesson ZIP](sample_code_folder/396-one-class-svm.zip) |
+| 397 - Z-score Algorithm **Practice** | Check how many standard deviations a parcel weight lies from the training average. | [Lesson ZIP](sample_code_folder/397-z-score-algorithm.zip) |
+| 398 - Association **Practice** | Find which items shoppers put in the same basket. | [Lesson ZIP](sample_code_folder/398-association.zip) |
+| 399 - Apriori Algorithm **Practice** | Find frequent pairs by testing item combinations and dropping rare candidates. | [Lesson ZIP](sample_code_folder/399-apriori-algorithm.zip) |
+| 400 - Frequent Pattern Growth **Practice** | Find common item pairs by organizing recurring items in a tree. | [Lesson ZIP](sample_code_folder/400-frequent-pattern-growth.zip) |
+| 401 - Frequently occurring items **Practice** | Add a shopping basket and see which item pairs remain common. | [Lesson ZIP](sample_code_folder/401-frequently-occurring-items.zip) |
 
 ### 🟣 3.3. Semi-Supervised Learning
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 402 · 3.3. Semi-Supervised Learning **Practice** | Fit a small classifier using rows with known and missing labels. Shared code with lesson 403, lesson 404. | [⬇️ Lesson ZIP](sample_code_folder/402-3-3-semi-supervised-learning.zip) |
-| 403 · Common Algorithms **Practice** | Try one way to use both labeled and unlabeled rows before predicting new cases. Shared code with lesson 402, lesson 404. | [⬇️ Lesson ZIP](sample_code_folder/403-common-algorithms-3.zip) |
-| 404 · Semi-Supervised Support Vector Machines (S3VM) **Practice** | See how a small support-vector example can choose labels for some unknown rows. Shared code with lesson 402, lesson 403. | [⬇️ Lesson ZIP](sample_code_folder/404-semi-supervised-support-vector-machines-s3vm.zip) |
-| 405 · Label Propagation **Practice** | Pass labels from known points to nearby unknown points. | [⬇️ Lesson ZIP](sample_code_folder/405-label-propagation.zip) |
-| 406 · Self-Training **Practice** | Use confident guesses as extra training labels and compare with the known check rows. Shared code with lesson 409. | [⬇️ Lesson ZIP](sample_code_folder/406-self-training.zip) |
-| 407 · Co-Training **Practice** | Let models trained on different input columns teach each other from unlabeled rows. | [⬇️ Lesson ZIP](sample_code_folder/407-co-training.zip) |
-| 408 · Regression **Practice** | Train a model with a few known numbers, then use its confident estimates to add practice rows. | [⬇️ Lesson ZIP](sample_code_folder/408-regression.zip) |
-| 409 · Classification (Semi-Supervised) **Practice** | Use labeled and unlabeled examples to predict a class for new points. Shared code with lesson 406. | [⬇️ Lesson ZIP](sample_code_folder/409-classification-semi-supervised.zip) |
+| 402 - 3.3. Semi-Supervised Learning **Practice** | Train a small classifier using rows with known and missing labels. | [Lesson ZIP](sample_code_folder/402-3-3-semi-supervised-learning.zip) |
+| 403 - Common Algorithms **Practice** | Try one way to use both labeled and unlabeled rows before predicting new cases. | [Lesson ZIP](sample_code_folder/403-common-algorithms-3.zip) |
+| 404 - Semi-Supervised Support Vector Machines (S3VM) **Practice** | See how a small support-vector example can choose labels for some unknown rows. | [Lesson ZIP](sample_code_folder/404-semi-supervised-support-vector-machines-s3vm.zip) |
+| 405 - Label Propagation **Practice** | Pass labels from known points to nearby unknown points. | [Lesson ZIP](sample_code_folder/405-label-propagation.zip) |
+| 406 - Self-Training **Practice** | Use confident guesses as extra training labels and compare with the known check rows. | [Lesson ZIP](sample_code_folder/406-self-training.zip) |
+| 407 - Co-Training **Practice** | Let models trained on different input columns teach each other from unlabeled rows. | [Lesson ZIP](sample_code_folder/407-co-training.zip) |
+| 408 - Regression **Practice** | Train a model with a few known numbers, then use its confident estimates to add practice rows. | [Lesson ZIP](sample_code_folder/408-regression.zip) |
+| 409 - Classification (Semi-Supervised) **Practice** | Use labeled and unlabeled examples to predict a class for new points. | [Lesson ZIP](sample_code_folder/409-classification-semi-supervised.zip) |
 
 ### 🟠 3.4. Reinforcement Learning
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 410 · 3.4. Reinforcement Learning **Practice** | Follow a robot’s moves and see the rewards it earns. Shared code with lesson 411, lesson 418. | [⬇️ Lesson ZIP](sample_code_folder/410-3-4-reinforcement-learning.zip) |
-| 411 · Key Concepts **Practice** | Connect the robot’s position, chosen move and reward using a short track. Shared code with lesson 410, lesson 418. | [⬇️ Lesson ZIP](sample_code_folder/411-key-concepts.zip) |
-| 412 · Agent **Practice** | See how a robot receives feedback after choosing which way to move. | [⬇️ Lesson ZIP](sample_code_folder/412-agent.zip) |
-| 413 · Environment **Practice** | Read the track rules that decide what happens after each move. | [⬇️ Lesson ZIP](sample_code_folder/413-environment.zip) |
-| 414 · Actions **Practice** | Try moving left and right from the same starting cell. | [⬇️ Lesson ZIP](sample_code_folder/414-actions.zip) |
-| 415 · State **Practice** | Give the robot different starting positions and see its next state. | [⬇️ Lesson ZIP](sample_code_folder/415-state.zip) |
-| 416 · Reward **Practice** | Compare the rewards for an ordinary move and a move that reaches the goal. | [⬇️ Lesson ZIP](sample_code_folder/416-reward.zip) |
-| 417 · Policy **Practice** | Follow a simple rule for choosing moves and compare the resulting rewards. | [⬇️ Lesson ZIP](sample_code_folder/417-policy.zip) |
-| 418 · Value Function **Practice** | Add future rewards with more weight on the rewards that come sooner. Shared code with lesson 410, lesson 411. | [⬇️ Lesson ZIP](sample_code_folder/418-value-function.zip) |
-| 419 · Common Algorithms **Practice** | Learn from trial moves until the robot can choose a better path. Shared code with lesson 420, lesson 425. | [⬇️ Lesson ZIP](sample_code_folder/419-common-algorithms-4.zip) |
-| 420 · Q-Learning **Practice** | Build a table of expected rewards for each cell and move. Shared code with lesson 419, lesson 425. | [⬇️ Lesson ZIP](sample_code_folder/420-q-learning.zip) |
-| 421 · Deep Q Networks (DQN) **Practice** | Teach a small neural network to score left and right moves. | [⬇️ Lesson ZIP](sample_code_folder/421-deep-q-networks-dqn.zip) |
-| 422 · Policy Gradient Methods **Practice** | Improve the probability of choosing a move that has paid off. Shared code with lesson 426. | [⬇️ Lesson ZIP](sample_code_folder/422-policy-gradient-methods.zip) |
-| 423 · Actor-Critic **Practice** | Use one part to choose actions and another to estimate how good they are. | [⬇️ Lesson ZIP](sample_code_folder/423-actor-critic.zip) |
-| 424 · Monte Carlo Tree Search (MCTS) **Practice** | Try several possible future move sequences before choosing a first move. | [⬇️ Lesson ZIP](sample_code_folder/424-monte-carlo-tree-search-mcts.zip) |
-| 425 · Model-Free **Practice** | Learn which moves pay off through trial runs without needing a planning model. Shared code with lesson 419, lesson 420. | [⬇️ Lesson ZIP](sample_code_folder/425-model-free.zip) |
-| 426 · Policy Optimization **Practice** | Adjust the robot’s chances of picking an action based on the rewards it earns. Shared code with lesson 422. | [⬇️ Lesson ZIP](sample_code_folder/426-policy-optimization.zip) |
-| 427 · Model-Based **Practice** | Plan moves using rules that describe what happens next. | [⬇️ Lesson ZIP](sample_code_folder/427-model-based.zip) |
-| 428 · Learn the Model **Practice** | Build a small transition table from observed moves and use it to plan. | [⬇️ Lesson ZIP](sample_code_folder/428-learn-the-model.zip) |
-| 429 · Given the Model **Practice** | Plan the best move using a transition table that is already available. | [⬇️ Lesson ZIP](sample_code_folder/429-given-the-model.zip) |
+| 410 - 3.4. Reinforcement Learning **Practice** | Follow a robot’s moves and see the rewards it earns. | [Lesson ZIP](sample_code_folder/410-3-4-reinforcement-learning.zip) |
+| 411 - Key Concepts **Practice** | Connect the robot’s position, chosen move and reward using a short track. | [Lesson ZIP](sample_code_folder/411-key-concepts.zip) |
+| 412 - Agent **Practice** | See how a robot receives feedback after choosing which way to move. | [Lesson ZIP](sample_code_folder/412-agent.zip) |
+| 413 - Environment **Practice** | Read the track rules that decide what happens after each move. | [Lesson ZIP](sample_code_folder/413-environment.zip) |
+| 414 - Actions **Practice** | Try moving left and right from the same starting cell. | [Lesson ZIP](sample_code_folder/414-actions.zip) |
+| 415 - State **Practice** | Give the robot different starting positions and see its next state. | [Lesson ZIP](sample_code_folder/415-state.zip) |
+| 416 - Reward **Practice** | Compare the rewards for an ordinary move and a move that reaches the goal. | [Lesson ZIP](sample_code_folder/416-reward.zip) |
+| 417 - Policy **Practice** | Follow a simple rule for choosing moves and compare the resulting rewards. | [Lesson ZIP](sample_code_folder/417-policy.zip) |
+| 418 - Value Function **Practice** | Add future rewards with more weight on the rewards that come sooner. | [Lesson ZIP](sample_code_folder/418-value-function.zip) |
+| 419 - Common Algorithms **Practice** | Learn from trial moves until the robot can choose a better path. | [Lesson ZIP](sample_code_folder/419-common-algorithms-4.zip) |
+| 420 - Q-Learning **Practice** | Build a table of expected rewards for each cell and move. | [Lesson ZIP](sample_code_folder/420-q-learning.zip) |
+| 421 - Deep Q Networks (DQN) **Practice** | Teach a small neural network to score left and right moves. | [Lesson ZIP](sample_code_folder/421-deep-q-networks-dqn.zip) |
+| 422 - Policy Gradient Methods **Practice** | Improve the probability of choosing a move that has paid off. | [Lesson ZIP](sample_code_folder/422-policy-gradient-methods.zip) |
+| 423 - Actor-Critic **Practice** | Use one part to choose actions and another to estimate how good they are. | [Lesson ZIP](sample_code_folder/423-actor-critic.zip) |
+| 424 - Monte Carlo Tree Search (MCTS) **Practice** | Try several possible future move sequences before choosing a first move. | [Lesson ZIP](sample_code_folder/424-monte-carlo-tree-search-mcts.zip) |
+| 425 - Model-Free **Practice** | Learn which moves pay off through trial runs without needing a planning model. | [Lesson ZIP](sample_code_folder/425-model-free.zip) |
+| 426 - Policy Optimization **Practice** | Adjust the robot’s chances of picking an action based on the rewards it earns. | [Lesson ZIP](sample_code_folder/426-policy-optimization.zip) |
+| 427 - Model-Based **Practice** | Plan moves using rules that describe what happens next. | [Lesson ZIP](sample_code_folder/427-model-based.zip) |
+| 428 - Learn the Model **Practice** | Build a small transition table from observed moves and use it to plan. | [Lesson ZIP](sample_code_folder/428-learn-the-model.zip) |
+| 429 - Given the Model **Practice** | Plan the best move using a transition table that is already available. | [Lesson ZIP](sample_code_folder/429-given-the-model.zip) |
 
 ### 📚 Category Summary & Final Algorithm Diagram
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 430 · Summary of Machine Learning Categories **Practice** | Match a delivery problem to one of the four learning categories. | [⬇️ Lesson ZIP](sample_code_folder/430-summary-of-machine-learning-categories.zip) |
-| 431 · Machine Learning Algorithms **Practice** | Use delivery data to connect the diagram’s regression branch to a concrete prediction. | [⬇️ Lesson ZIP](sample_code_folder/431-machine-learning-algorithms.zip) |
-| 432 · Simple Linear Regression **Practice** | Use distance alone to predict delivery time. Shared code with lesson 434. | [⬇️ Lesson ZIP](sample_code_folder/432-simple-linear-regression.zip) |
-| 433 · Multivariate Regression **Practice** | Predict delivery minutes and fuel use for each new delivery. | [⬇️ Lesson ZIP](sample_code_folder/433-multivariate-regression.zip) |
-| 434 · Simple Linear Regression (one input) **Practice** | Teach a model one relationship, from delivery distance to time. Shared code with lesson 432. | [⬇️ Lesson ZIP](sample_code_folder/434-simple-linear-regression-one-input.zip) |
-| 435 · Multiple Linear Regression **Practice** | Use distance and weight together to estimate one outcome. | [⬇️ Lesson ZIP](sample_code_folder/435-multiple-linear-regression.zip) |
-| 436 · Regression (diagram) **Reference** | Follow the regression branch of the diagram with a prediction measured in minutes. | [⬇️ Lesson ZIP](sample_code_folder/436-regression-diagram.zip) |
-| 437 · Classification (diagram) **Reference** | Follow the classification branch of the diagram and predict late or on time. Shared code with lesson 371, lesson 372. | [⬇️ Lesson ZIP](sample_code_folder/437-classification-diagram.zip) |
-| 438 · Clustering (diagram) **Reference** | Follow the clustering branch and group shoppers without known labels. Shared code family (see lesson 382 for the same script). | [⬇️ Lesson ZIP](sample_code_folder/438-clustering-diagram.zip) |
-| 439 · Dimensionality Reduction (diagram) **Reference** | Follow the dimensionality-reduction branch and shrink several measurements into two. Shared code with lesson 389, lesson 390. | [⬇️ Lesson ZIP](sample_code_folder/439-dimensionality-reduction-diagram.zip) |
-| 440 · Anomaly Detection (diagram) **Reference** | Follow the anomaly-detection branch and flag unusual deliveries. Shared code with lesson 394, lesson 395. | [⬇️ Lesson ZIP](sample_code_folder/440-anomaly-detection-diagram.zip) |
-| 441 · Association (diagram) **Reference** | Follow the association branch and find products that often appear together. Shared code with lesson 398, lesson 401. | [⬇️ Lesson ZIP](sample_code_folder/441-association-diagram.zip) |
+| 430 - Summary of Machine Learning Categories **Practice** | Match a delivery problem to one of the four learning categories. | [Lesson ZIP](sample_code_folder/430-summary-of-machine-learning-categories.zip) |
+| 431 - Machine Learning Algorithms **Practice** | Use delivery data to connect the diagram’s regression branch to a concrete prediction. | [Lesson ZIP](sample_code_folder/431-machine-learning-algorithms.zip) |
+| 432 - Simple Linear Regression **Practice** | Use distance alone to predict delivery time. | [Lesson ZIP](sample_code_folder/432-simple-linear-regression.zip) |
+| 433 - Multivariate Regression **Practice** | Predict delivery minutes and fuel use for each new delivery. | [Lesson ZIP](sample_code_folder/433-multivariate-regression.zip) |
+| 434 - Simple Linear Regression (one input) **Practice** | Teach a model one relationship, from delivery distance to time. | [Lesson ZIP](sample_code_folder/434-simple-linear-regression-one-input.zip) |
+| 435 - Multiple Linear Regression **Practice** | Use distance and weight together to estimate one outcome. | [Lesson ZIP](sample_code_folder/435-multiple-linear-regression.zip) |
+| 436 - Regression (diagram) **Reference** | Follow the regression branch of the diagram with a prediction measured in minutes. | [Lesson ZIP](sample_code_folder/436-regression-diagram.zip) |
+| 437 - Classification (diagram) **Reference** | Follow the classification branch of the diagram and predict late or on time. | [Lesson ZIP](sample_code_folder/437-classification-diagram.zip) |
+| 438 - Clustering (diagram) **Reference** | Follow the clustering branch and group shoppers without known labels. | [Lesson ZIP](sample_code_folder/438-clustering-diagram.zip) |
+| 439 - Dimensionality Reduction (diagram) **Reference** | Follow the dimensionality-reduction branch and shrink several measurements into two. | [Lesson ZIP](sample_code_folder/439-dimensionality-reduction-diagram.zip) |
+| 440 - Anomaly Detection (diagram) **Reference** | Follow the anomaly-detection branch and flag unusual deliveries. | [Lesson ZIP](sample_code_folder/440-anomaly-detection-diagram.zip) |
+| 441 - Association (diagram) **Reference** | Follow the association branch and find products that often appear together. | [Lesson ZIP](sample_code_folder/441-association-diagram.zip) |
 
 ### 💾 Train once, test many times
 
@@ -9045,12 +13807,12 @@ Use the badges to find **Core**, **Practice**, and **Reference** lessons. The li
 
 | Lesson name | What you’ll do | Download |
 | --- | --- | --- |
-| 442 · Choose the right data split **Core** | Compare random, customer-grouped, and chronological splits on the same delivery data. | [⬇️ Lesson ZIP](sample_code_folder/442-choose-the-right-split.zip) |
-| 443 · Spot overfitting with a validation curve **Practice** | Vary model complexity, read the training and validation errors, and test the selected setting once. | [⬇️ Lesson ZIP](sample_code_folder/443-learn-to-spot-overfitting.zip) |
-| 444 · Choose a cutoff for rare urgent orders **Core** | Compare precision and recall and pick an alert cutoff on validation orders before testing. Same labeled order CSV. Different decisions and scripts. | [⬇️ Lesson ZIP](sample_code_folder/444-rare-event-threshold.zip) |
-| 445 · Check whether predicted probabilities are reliable **Practice** | Fit a calibration model using validation rows and compare probability quality on a separate test set. Same labeled order CSV. Different decisions and scripts. | [⬇️ Lesson ZIP](sample_code_folder/445-calibrate-probabilities.zip) |
-| 446 · Evaluate delivery errors by route, weight and zone **Core** | Compare a delivery model to a median baseline on a larger batch of future deliveries. | [⬇️ Lesson ZIP](sample_code_folder/446-larger-regression-evaluation.zip) |
-| 447 · Capstone: From delivery CSV to local model service **Core** | Train, validate, test, and save a model. Send local requests and monitor later labeled deliveries. | [⬇️ Lesson ZIP](sample_code_folder/447-delivery-model-capstone.zip) |
+| 442 - Choose the right data split **Core** | Compare random, customer-grouped, and chronological splits on the same delivery data. | [Lesson ZIP](sample_code_folder/442-choose-the-right-split.zip) |
+| 443 - Spot overfitting with a validation curve **Core** | Vary model complexity, read the training and validation errors, and test the selected setting once. | [Lesson ZIP](sample_code_folder/443-learn-to-spot-overfitting.zip) |
+| 444 - Choose a cutoff for rare urgent orders **Core** | Compare precision and recall and pick an alert cutoff on validation orders before testing. | [Lesson ZIP](sample_code_folder/444-rare-event-threshold.zip) |
+| 445 - Check whether predicted probabilities are reliable **Practice** | Train a calibration model using validation rows and compare probability quality on a separate test set. | [Lesson ZIP](sample_code_folder/445-calibrate-probabilities.zip) |
+| 446 - Evaluate delivery errors by route, weight and zone **Core** | Compare a delivery model to a median baseline on a larger batch of future deliveries. | [Lesson ZIP](sample_code_folder/446-larger-regression-evaluation.zip) |
+| 447 - Capstone: From delivery CSV to local model service **Core** | Train, validate, test, and save a model. Send local requests and monitor later labeled deliveries. | [Lesson ZIP](sample_code_folder/447-delivery-model-capstone.zip) |
 
 <a id="train-save-test"></a>
 
@@ -9083,7 +13845,7 @@ The training command uses **16 rows to learn**, **4 to choose a model**, and **4
 | 11 km | — | North | 35.07 min | 36 min | 0.93 min |
 | 6 km | 1 kg | West | 25.45 min | — | — |
 
-**🧪 Change one input.** In `new_deliveries.csv`, change the 5 km distance to 7 and clear the original measured time in that row. Rerun `python test_delivery_model.py`. Find the 7 km estimate. Its error stays blank until you enter an observed time for that delivery.
+**Your small change.** Change the 90 km request to 60 km. Run python send_requests.py to use your saved model. That request should receive 200 and an estimate. Save the named CSV before running again.
 
 <details>
 <summary>Read the complete training script (`train_delivery_model.py`)</summary>

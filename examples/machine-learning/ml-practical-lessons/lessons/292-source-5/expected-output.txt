@@ -1,0 +1,15 @@
+PDF reference: UCI Adult Dataset
+Origin of this CSV: original synthetic practice rows
+Rows: 8
+        Column   Type
+           age  int64
+         hours  int64
+     education object
+     workclass object
+    occupation object
+marital_status object
+  income_group object
+ age  hours education workclass occupation marital_status income_group
+  22     25    school   private     retail         single  50k_or_less
+  30     35    degree   private    analyst         single  50k_or_less
+  36     45    degree    public    manager        married    above_50k

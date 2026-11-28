@@ -1,0 +1,3 @@
+       Average uses  Average time (min)
+      All six times                23.0
+Recorded times only                18.0

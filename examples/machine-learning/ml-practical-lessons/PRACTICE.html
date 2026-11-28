@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>PRACTICE</title><style>
+:root{color-scheme:light dark;--bg:#f5f7fa;--panel:#fff;--text:#203346;--muted:#4e6274;--line:#cbd6df;--link:#145b91}
+@media(prefers-color-scheme:dark){:root{--bg:#111c26;--panel:#192936;--text:#e6edf4;--muted:#b9c8d7;--line:#455d70;--link:#93caff}}
+html[data-theme=light]{color-scheme:light;--bg:#f5f7fa;--panel:#fff;--text:#203346;--muted:#4e6274;--line:#cbd6df;--link:#145b91}
+html[data-theme=dark]{color-scheme:dark;--bg:#111c26;--panel:#192936;--text:#e6edf4;--muted:#b9c8d7;--line:#455d70;--link:#93caff}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:18px/1.7 system-ui,sans-serif}header,main{max-width:1100px;margin:auto;padding:20px 28px}header{border-bottom:1px solid var(--line)}nav{display:flex;flex-wrap:wrap;gap:10px 22px}main{padding-bottom:90px}h1,h2,h3,h4,h5,h6{line-height:1.3;scroll-margin-top:20px}h1{font-size:2.2rem}h2{font-size:1.65rem;margin-top:2.7rem}h3{font-size:1.35rem}h4,h5,h6{font-size:1.15rem}p,li{max-width:86ch}li{margin:.35rem 0}a{color:var(--link);text-underline-offset:.15em}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #d78d13;outline-offset:3px}.skip{position:absolute;top:-100px}.skip:focus{top:0;background:var(--panel);padding:12px}table{border-collapse:collapse;width:100%;font-size:.95rem;background:var(--panel)}th,td{padding:10px 14px;text-align:left;border:1px solid var(--line);vertical-align:top}.table-frame{overflow-x:auto;margin:20px 0}code{font-size:.9em;overflow-wrap:anywhere}pre{background:var(--panel);border:1px solid var(--line);padding:18px;overflow-x:auto;line-height:1.5}pre code{overflow-wrap:normal}img{max-width:100%;height:auto;background:white}details{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:15px 20px;margin:18px 0}summary{cursor:pointer;font-weight:650}.tools{padding:18px;border:1px solid var(--line);background:var(--panel);margin:20px 0}.tools label{display:block}.tools input{width:min(100%,600px)}input,select,button{font:inherit;padding:7px 12px;border:1px solid var(--line);border-radius:5px;background:var(--panel);color:var(--text)}button{cursor:pointer}.copy{font-size:.8rem;float:right}.hint{color:var(--muted);font-size:.9rem}.toc ul{padding-left:22px}.toc{border-left:4px solid var(--line);padding-left:15px;max-height:420px;overflow:auto}.progress{height:4px;background:var(--link);position:fixed;left:0;top:0;z-index:10;width:0}.checklist-item{list-style:none}.checklist-item input{width:auto;margin-right:10px}[hidden]{display:none!important}@media(max-width:650px){body{font-size:17px}header,main{padding:16px}h1{font-size:1.8rem}th,td{padding:8px}.tools input{width:100%}}@media print{body{font-size:11pt;background:white;color:#111}header,.tools,.copy,.progress{display:none}main{padding:0;max-width:none}pre{white-space:pre-wrap}a{color:inherit}details{break-inside:avoid}h2,h3{break-after:avoid}}
+</style></head><body><a class="skip" href="#content">Skip to the lesson</a><div class="progress" aria-hidden="true"></div><header><nav aria-label="Course pages"><a href="START-HERE.html">Start here</a><a href="LEARNING-PATH.html">Learning path</a><a href="SETUP.html">Setup</a><a href="GLOSSARY.html">Word list</a><a href="Data-Science-and-Machine-Learning.html#lesson-downloads">Lesson library</a><button id="theme" type="button">Change colour theme</button></nav></header><main id="content"><h1 id="practice-before-looking-at-the-answer">Practice before looking at the answer</h1>
+<p><a href="LEARNING-PATH.html">Learning path</a> · <a href="GLOSSARY.html">Word list</a></p>
+<p>Use paper first. Then use Python if you chose that route. Say why you chose an answer. If you guessed, read the short answer and try a similar question tomorrow.</p>
+<h2 id="1-a-prediction">1. A prediction</h2>
+<p>Old trips follow <code>minutes = 10 + 2 × distance</code>. Guess the time for 5 km. Which part is the input? Do you need the actual time to make a new guess?</p>
+<details>
+<summary>Answer and reason</summary>
+<p>20 minutes. Distance is the input. You do not need the new trip's actual time to predict. You need it later to measure the error. This is a made-up exact rule; real trips vary.</p>
+</details>
+<h2 id="2-a-useful-project">2. A useful project</h2>
+<p>A store always gives free delivery for orders over 50 currency units. Must it train a model to decide who gets free delivery? What if it wants to guess a delivery time instead?</p>
+<details>
+<summary>Answer and reason</summary>
+<p>The free-delivery rule is already known. A normal rule is enough. Delivery time is less certain and may need a learned pattern, if enough useful examples exist. Decide whether the result helps a real decision before building a model.</p>
+</details>
+<h2 id="3-a-fair-check">3. A fair check</h2>
+<p>You will use the model next month. Would you check it on random past rows or on later dates? A customer has many orders. If you need to handle completely new customers, may that customer's orders be in both training and test?</p>
+<details>
+<summary>Answer and reason</summary>
+<p>Use later dates for the future-use question. For completely new customers, keep each customer's orders together. Two independent orders can have equal distance and weight; that alone does not make them the same order. Check identity and source, not only equal numbers.</p>
+</details>
+<h2 id="4-find-and-fix-data-problems">4. Find and fix data problems</h2>
+<p>You see <code>weight = 10</code>, <code>unit = lb</code>. The model expects kg. Another row has a blank weight. A third has 90 kg. Which is a known conversion? Which needs a learned fill value? Which needs a source check?</p>
+<details>
+<summary>Answer and reason</summary>
+<p>Convert 10 lb with the fixed pounds-to-kilograms rule: about 4.54 kg. A blank may use a fill value learned from training, if that is suitable for the task. The 90 kg value needs a source check before changing it. A large value can be valid. Zero and missing are different.</p>
+</details>
+<h2 id="review-after-module-4">Review after module 4</h2>
+<p>Close your notes. Write a project question, name its input and answer, choose its fair check, and name one possible data problem. Ask a friend to read your explanation. They should not need to know Python to understand it.</p>
+<h2 id="5-prepare-a-new-row">5. Prepare a new row</h2>
+<p>Training weights are 1, 2, 4, 5 and 8 kg. A new request has no weight. What is the middle training weight? Should you add the request to training before finding that value? Why might missingness itself matter?</p>
+<details>
+<summary>Answer and reason</summary>
+<p>The middle value, or median, is 4 kg. Use the value learned from training. Do not refit the fill rule on each request. Missing weights may come from one broken scale or one kind of order, so investigate the pattern. A fill is a useful guess, not a recovered measurement.</p>
+</details>
+<p>For a category, make columns such as North and South. North becomes <code>1, 0</code>. South becomes <code>0, 1</code>. A new name is not automatically a known zone. Decide whether to reject it, ask for help, or use a tested fallback.</p>
+<h2 id="6-a-simple-baseline">6. A simple baseline</h2>
+<p>A <strong>baseline</strong> is a simple rule used for comparison. Training times are 12, 14, 16, 20 and 22 minutes. The middle is 16. Guess 16 for every validation trip.</p>
+<div aria-label="Scrollable table" class="table-frame" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th>Actual validation time</th>
+<th>Baseline guess</th>
+<th>Size of mistake</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>18</td>
+<td>16</td>
+<td>2</td>
+</tr>
+<tr>
+<td>24</td>
+<td>16</td>
+<td>8</td>
+</tr>
+</tbody>
+</table></div>
+<p>The average mistake is <code>(2 + 8) ÷ 2 = 5</code> minutes. This is <strong>mean absolute error</strong>, or <strong>MAE</strong>. Absolute means ignore the sign when measuring the size.</p>
+<p><strong>Your task:</strong> A trained model guesses 19 and 22 for those same trips. What is its MAE? Which result is better on these two rows? Can two rows prove it is better for everyone?</p>
+<details>
+<summary>Answer and reason</summary>
+<p>The mistake sizes are 1 and 2 minutes. MAE is 1.5 minutes. That is better on these rows. Two rows are too few to make a strong general claim. Use more separate rows that match the future job.</p>
+</details>
+<p>Now make your own three-row table. Leave the mistake column blank. Fill it by hand. Then use the train-and-test lesson to compare a baseline and a model in code.</p>
+<h2 id="7-spot-memorizing">7. Spot memorizing</h2>
+<p>Model A has training MAE 0 and validation MAE 9. Model B has training MAE 3 and validation MAE 4. Which would you choose before the final test? What is the model-setting name in the tree-depth lesson?</p>
+<details>
+<summary>Answer and reason</summary>
+<p>Choose B on this validation evidence. A may have memorized training details. That is called overfitting. Tree depth is a setting that controls how many levels of decisions a tree can make. Do not choose using the final test answers.</p>
+</details>
+<h2 id="8-read-errors-and-uncertainty">8. Read errors and uncertainty</h2>
+<h3 id="a-setting-is-a-choice-not-a-magic-number">A setting is a choice, not a magic number</h3>
+<p>Ridge is a straight-line model with a penalty on large learned weights. Its <code>alpha</code> setting controls that penalty. Imagine comparing three fits on the same training and validation rows:</p>
+<div aria-label="Scrollable table" class="table-frame" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th>Fit</th>
+<th>What changes</th>
+<th>What to check</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>No penalty</td>
+<td>Weights are free to fit the training pattern.</td>
+<td>Does the rule make large mistakes elsewhere?</td>
+</tr>
+<tr>
+<td>Small penalty</td>
+<td>Weights are pulled towards zero a little.</td>
+<td>Does validation error improve?</td>
+</tr>
+<tr>
+<td>Large penalty</td>
+<td>Weights are pulled towards zero more.</td>
+<td>Has the model become too simple?</td>
+</tr>
+</tbody>
+</table></div>
+<p>These rows explain choices, not measured results. Run the Ridge lesson to see its prediction scores. To inspect learned input weights in lesson 362, add <code>print(model.coef_)</code> just after its <code>model.fit</code> line. These are training weights, not validation scores. Scale affects a penalty: expressing distance in metres gives a different coefficient from kilometres. Keep units clear and compare preparation choices within validation. Do not change units merely to get a smaller-looking weight.</p>
+<h3 id="read-the-size-and-direction-of-a-mistake">Read the size and direction of a mistake</h3>
+<p>Actual time is 30 minutes. The prediction is 24. The <strong>residual</strong>, or signed error, is <code>actual − prediction = 6</code>. It is positive because the model guessed too little.</p>
+<p>Compare two lists of mistake sizes:</p>
+<div aria-label="Scrollable table" class="table-frame" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th>Case</th>
+<th>Mistake sizes</th>
+<th>MAE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>2, 2, 2, 2, 2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B</td>
+<td>0, 0, 0, 0, 10</td>
+<td>2</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Your task:</strong> Why might a business prefer A, even though the averages match?</p>
+<details>
+<summary>Answer and reason</summary>
+<p>B has one large miss. That might break a promise to a customer. Read the average, number of cases, largest mistakes and the share within an agreed limit. RMSE is another score that gives large mistakes more weight. For errors 2 and 4, it is the square root of <code>(4 + 16) ÷ 2</code>, about 3.16 minutes. MAE for those two is 3 minutes.</p>
+</details>
+<p>To see small-sample uncertainty, suppose the first two mistake sizes are 1 and 1. Their average is 1. Add a third mistake of 10. The average becomes 4. A few rows can change a score a lot. This arithmetic illustrates uncertainty; it is not a confidence interval.</p>
+<p>For a larger exercise, split validation rows into several groups and print each group's size and MAE. Do not use this to keep changing your final test. Repeated model choices need validation, and a final report needs a fresh check.</p>
+<h2 id="review-after-module-8">Review after module 8</h2>
+<p>Without notes, calculate a median, an absolute error and an MAE. Explain why the best training score can lose on new rows. Then inspect one delivery group in lesson 446. Report its number of orders next to its error.</p>
+<h2 id="9-count-category-mistakes">9. Count category mistakes</h2>
+<p>There are 10 urgent orders. A model raises 8 alerts. Six alerts are truly urgent. Answer these questions:</p>
+<ol>
+<li>How many alerts are false alarms?</li>
+<li>How many urgent orders were missed?</li>
+<li>What share of alerts was right? This is <strong>precision</strong>.</li>
+<li>What share of real urgent orders was found? This is <strong>recall</strong>.</li>
+</ol>
+<details>
+<summary>Answers and reasons</summary>
+<p>Two false alarms: <code>8 − 6</code>. Four missed urgent orders: <code>10 − 6</code>. Precision is <code>6 ÷ 8 = 75%</code>. Recall is <code>6 ÷ 10 = 60%</code>. The denominators answer different questions. Write the counts before the ratios.</p>
+</details>
+<p>A <strong>cutoff</strong> turns a model score into an alert. Lowering it usually raises more alerts. The model's scores have not changed; the decision rule has changed. A score of 0.7 is not a promise. Calibration asks whether groups with a stated chance have outcomes at about that rate.</p>
+<h2 id="10-explain-without-claiming-a-cause">10. Explain without claiming a cause</h2>
+<p>A model uses umbrella sales to predict rainy days. Does selling more umbrellas cause rain? If shuffling a column makes the model worse, what have you learned?</p>
+<details>
+<summary>Answer and reason</summary>
+<p>Sales do not establish a cause of rain. They can be a clue associated with weather. Shuffling shows that the fitted model relied on that column in this check. It does not prove changing that fact will change the outcome.</p>
+</details>
+<h2 id="11-save-and-request">11. Save and request</h2>
+<p>You trained and saved a model. You change a new request from 4 km to 8 km. Must you train again? Should a −4 km request receive a normal estimate?</p>
+<details>
+<summary>Answer and reason</summary>
+<p>No retraining is needed for a new request. Reuse the saved preparation and model. A negative delivery distance is invalid and should get a clear error. An unfamiliar but possible long distance needs a stated service policy too; possible does not mean tested.</p>
+</details>
+<h2 id="12-respond-to-an-alert">12. Respond to an alert</h2>
+<p>Later errors rise in the West zone. Write three actions before replacing the model.</p>
+<details>
+<summary>One useful answer</summary>
+<p>Check the measurements and labels. Ask whether routes or recording rules changed. Inspect West examples and their count. Use a safe fallback if predictions can cause harm. Train a candidate only after deciding what changed, and compare it on a separate later batch. Record who makes the decision.</p>
+</details>
+<h2 id="review-after-module-12">Review after module 12</h2>
+<p>A support team can review only 20 alerts a day. A new cutoff would raise 100. Explain why recall alone cannot choose the cutoff. Write a short note for a manager: result, evidence, limits and next action. Then continue to the guided and independent projects.</p></main><script>
+(()=>{'use strict';
+const theme=document.getElementById('theme');let saved;try{saved=localStorage.getItem('ml-course-theme')}catch{}if(saved)document.documentElement.dataset.theme=saved;
+theme.addEventListener('click',()=>{const current=document.documentElement.dataset.theme|| (matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');const next=current==='dark'?'light':'dark';document.documentElement.dataset.theme=next;try{localStorage.setItem('ml-course-theme',next)}catch{}});
+for(const pre of document.querySelectorAll('pre')){const button=document.createElement('button');button.className='copy';button.textContent='Copy code';button.type='button';button.addEventListener('click',async()=>{const text=pre.querySelector('code')?.textContent||pre.textContent;try{if(navigator.clipboard?.writeText){await navigator.clipboard.writeText(text)}else{const area=document.createElement('textarea');area.value=text;document.body.append(area);area.select();if(!document.execCommand('copy'))throw Error();area.remove()}button.textContent='Copied'}catch{button.textContent='Select the text to copy'}setTimeout(()=>button.textContent='Copy code',1800)});pre.before(button)}
+const search=document.getElementById('lesson-search'),track=document.getElementById('lesson-track');if(search){const rows=[...document.querySelectorAll('tr[data-track]')];const update=()=>{const terms=search.value.toLowerCase().trim().split(/\s+/).filter(Boolean);let count=0;for(const row of rows){const show=(!track.value||row.dataset.track===track.value)&&terms.every(word=>row.textContent.toLowerCase().includes(word));row.hidden=!show;if(show)count++}document.getElementById('search-status').textContent=count+' matching lesson entries'};search.addEventListener('input',update);track.addEventListener('change',update);update()}
+for(const [index,input] of [...document.querySelectorAll('input[data-course-check]')].entries()){const key='ml-course-check:'+location.pathname+':'+index;try{input.checked=localStorage.getItem(key)==='yes'}catch{}input.addEventListener('change',()=>{try{localStorage.setItem(key,input.checked?'yes':'no')}catch{}})}
+const progress=document.querySelector('.progress');addEventListener('scroll',()=>{const size=document.documentElement.scrollHeight-innerHeight;progress.style.width=(size>0?100*scrollY/size:0)+'%'},{passive:true});
+})();
+</script></body></html>

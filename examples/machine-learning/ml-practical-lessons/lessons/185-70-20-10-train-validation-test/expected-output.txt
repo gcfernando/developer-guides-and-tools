@@ -1,0 +1,19 @@
+Shared shipment IDs across splits: 0
+       Set  Rows  Urgent  Urgent (%)
+  Training    70      14        20.0
+Validation    20       4        20.0
+      Test    10       2        20.0
+
+Validation scores by tree depth
+ Depth  Balanced accuracy
+     1              0.500
+     2              0.500
+     3              0.562
+Look for 70 training, 20 validation, and 10 test orders.
+Chosen depth: 3
+Test: 2 urgent caught, 0 urgent missed, 1 false alarms, 7 regular correct.
+The test contains only 2 urgent orders. A single missed order changes recall a lot.
+ distance_km  weight_kg  predicted_urgent
+           5          2             False
+          39          4             False
+          47          3             False

@@ -1,0 +1,1447 @@
+{
+  "review_date": "2026-11-27",
+  "numbered_lessons": 447,
+  "archives": 448,
+  "python_files_parsed": 455,
+  "distinct_script_bodies_ignoring_docstring_and_comments": 235,
+  "entrypoint_checks": 228,
+  "successful_entrypoint_checks": 215,
+  "expected_output_comparisons": 214,
+  "successful_expected_output_comparisons": 214,
+  "environment": {
+    "platform": "Windows",
+    "python": "3.12.10",
+    "pandas": "2.2.3",
+    "numpy": "2.2.3",
+    "scikit-learn": "1.6.1",
+    "scipy": "1.15.1",
+    "matplotlib": "3.10.0",
+    "fastapi": "0.115.8"
+  },
+  "structural_checks": {
+    "zip_crc_checks_passed": 448,
+    "missing_html_local_targets": 0,
+    "duplicate_html_ids": 0,
+    "missing_archive_readme_local_links": 0,
+    "markdown_html_code_blocks": 95,
+    "matching_code_blocks": 95,
+    "figure_files_inspected_in_contact_sheets": 100,
+    "html_images_missing_alt_attribute": 0
+  },
+  "limitations": [
+    "No dependencies were installed or changed.",
+    "Shared script bodies were deduplicated; not every archive was separately executed.",
+    "13 checks were blocked by absent optional packages or an unavailable media backend; they are not counted as course defects.",
+    "The environment differs from the recorded Linux teaching environment.",
+    "No clean installation test, cloud deployment, manual service-browser test or accessibility certification was performed.",
+    "Automated text/code/data inspection and expert review are not a substitute for a novice learner pilot."
+  ],
+  "targeted_checks": [
+    {
+      "check": "101 documented date edit",
+      "exit": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"<user-home>\\AppData\\Local\\Temp\\ml-course-audit\\runs\\101-handle-missing-dates-using-interpolation\\lesson.py\", line 18, in <module>\n    daily = data.set_index(\"day\")[\"orders\"].asfreq(\"D\")\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<user-home>\\AppData\\Roaming\\Python\\Python312\\site-packages\\pandas\\core\\generic.py\", line 9231, in asfreq\n    return asfreq(\n           ^^^^^^^\n  File \"<user-home>\\AppData\\Roaming\\Python\\Python312\\site-packages\\pandas\\core\\resample.py\", line 2837, in asfreq\n    new_obj = obj.reindex(dti, method=method, fill_value=fill_value)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<user-home>\\AppData\\Roaming\\Python\\Python312\\site-packages\\pandas\\core\\series.py\", line 5153, in reindex\n    return super().reindex(\n           ^^^^^^^^^^^^^^^^\n  File \"<user-home>\\AppData\\Roaming\\Python\\Python312\\site-packages\\pandas\\core\\generic.py\", line 5610, in reindex\n    return self._reindex_axes(\n           ^^^^^^^^^^^^^^^^^^^\n  File \"<user-home>\\AppData\\Roaming\\Python\\Python312\\site-packages\\pandas\\core\\generic.py\", line 5633, in _reindex_axes\n    new_index, indexer = ax.reindex(\n                         ^^^^^^^^^^^\n  File \"<user-home>\\AppData\\Roaming\\Python\\Python312\\site-packages\\pandas\\core\\indexes\\base.py\", line 4429, in reindex\n    raise ValueError(\"cannot reindex on an axis with duplicate labels\")\nValueError: cannot reindex on an axis with duplicate labels\n"
+    },
+    {
+      "check": "090 diagram values",
+      "exit": 0,
+      "stdout": "signed_up  flag\n      Yes   1.0\n     true   1.0\n        1   NaN\n       no   0.0\n    false   NaN\n        0   0.0\n  unknown   NaN\n"
+    },
+    {
+      "check": "071 train_range_model.py",
+      "exit": 0,
+      "stdout": "Check rows with known times\n distance_km  actual_minutes  predicted_minutes\n           5              20               20.0\n          30              70               70.0\n          48             106              106.0\nSaved range_model.joblib. Next, run python test_range_model.py.\n",
+      "stderr": ""
+    },
+    {
+      "check": "071 test_range_model.py",
+      "exit": 0,
+      "stdout": "Training range: 1 to 50 km\n distance_km scaled_distance demo_minutes app_minutes                      app_message\n           1          0.0000         12.0        12.0                   Estimate ready\n          25          0.4898         60.0        60.0                   Estimate ready\n          50          1.0000        110.0       110.0                   Estimate ready\n          90          1.8163        190.0           — Outside training range (1–50 km)\n",
+      "stderr": ""
+    }
+  ],
+  "entrypoint_results": [
+    {
+      "archive": "001-start-here.zip",
+      "exit_code": 0,
+      "seconds": 10.86,
+      "blocker": null
+    },
+    {
+      "archive": "003-1-data-science-pipeline.zip",
+      "exit_code": 0,
+      "seconds": 3.13,
+      "blocker": null
+    },
+    {
+      "archive": "004-1-1-problem-definition.zip",
+      "exit_code": 0,
+      "seconds": 3.13,
+      "blocker": null
+    },
+    {
+      "archive": "007-identify-key-performance-metrics.zip",
+      "exit_code": 0,
+      "seconds": 0.76,
+      "blocker": null
+    },
+    {
+      "archive": "008-understand-the-domain-knowledge-related-to-the-data.zip",
+      "exit_code": 0,
+      "seconds": 0.76,
+      "blocker": null
+    },
+    {
+      "archive": "009-set-constraints-assumptions.zip",
+      "exit_code": 0,
+      "seconds": 0.75,
+      "blocker": null
+    },
+    {
+      "archive": "010-1-2-data-collection.zip",
+      "exit_code": 0,
+      "seconds": 3.05,
+      "blocker": null
+    },
+    {
+      "archive": "016-gather-structured-and-unstructured-data.zip",
+      "exit_code": 1,
+      "seconds": 1.72,
+      "blocker": "Traceback (most recent call last):\n  File \"<user-home>\\AppData\\Local\\Temp\\ml-course-audit\\runs\\016-gather-structured-and-unstructured-data\\lesson.py\", line 36, in <module>\n    iio.imwrite(folder / \"video_fixture.mp4\", frames, fps=2)\n  File \"<user-home>\\AppData\\Roaming\\Python\\Python312\\site-packages\\imageio\\v3.py\", line 147, in imwrite\n    encoded = img_file.write(image, **kwargs)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<user-home>\\AppData\\Roaming\\Python\\Python312\\site-packages\\imageio\\plugins\\tifffile_v3.py\", line 224, in write\n    self._fh.write(image, **kwargs)\nTypeError: TiffWriter.write() got an unexpected keyword argument 'fps'\n"
+    },
+    {
+      "archive": "030-1-3-data-cleaning-preprocessing.zip",
+      "exit_code": 0,
+      "seconds": 0.88,
+      "blocker": null
+    },
+    {
+      "archive": "034-handle-missing-values.zip",
+      "exit_code": 0,
+      "seconds": 3.91,
+      "blocker": null
+    },
+    {
+      "archive": "036-impute.zip",
+      "exit_code": 0,
+      "seconds": 3.83,
+      "blocker": null
+    },
+    {
+      "archive": "038-mean.zip",
+      "exit_code": 0,
+      "seconds": 1.99,
+      "blocker": null
+    },
+    {
+      "archive": "039-median.zip",
+      "exit_code": 0,
+      "seconds": 1.99,
+      "blocker": null
+    },
+    {
+      "archive": "040-mode.zip",
+      "exit_code": 0,
+      "seconds": 2.03,
+      "blocker": null
+    },
+    {
+      "archive": "041-knn-imputer.zip",
+      "exit_code": 0,
+      "seconds": 2.28,
+      "blocker": null
+    },
+    {
+      "archive": "042-categorical-data-mode-unknown-placeholder.zip",
+      "exit_code": 0,
+      "seconds": 2.32,
+      "blocker": null
+    },
+    {
+      "archive": "043-categorical-mode.zip",
+      "exit_code": 0,
+      "seconds": 2.27,
+      "blocker": null
+    },
+    {
+      "archive": "044-unknown-placeholder.zip",
+      "exit_code": 0,
+      "seconds": 2.21,
+      "blocker": null
+    },
+    {
+      "archive": "045-time-series-data-forward-fill-ffill-backward-fill-bfill.zip",
+      "exit_code": 0,
+      "seconds": 2.1,
+      "blocker": null
+    },
+    {
+      "archive": "047-backward-fill-bfill.zip",
+      "exit_code": 0,
+      "seconds": 2.1,
+      "blocker": null
+    },
+    {
+      "archive": "048-when-missing-values-change-the-answer.zip",
+      "exit_code": 0,
+      "seconds": 2.37,
+      "blocker": null
+    },
+    {
+      "archive": "049-1-3-2-remove-duplicates.zip",
+      "exit_code": 0,
+      "seconds": 2.06,
+      "blocker": null
+    },
+    {
+      "archive": "051-handle-near-duplicates.zip",
+      "exit_code": 0,
+      "seconds": 0.82,
+      "blocker": null
+    },
+    {
+      "archive": "054-1-3-3-fix-inconsistent-data.zip",
+      "exit_code": 0,
+      "seconds": 2.15,
+      "blocker": null
+    },
+    {
+      "archive": "059-fix-typos-and-spelling-variations.zip",
+      "exit_code": 0,
+      "seconds": 1.91,
+      "blocker": null
+    },
+    {
+      "archive": "060-1-3-4-handle-outliers.zip",
+      "exit_code": 0,
+      "seconds": 1.46,
+      "blocker": null
+    },
+    {
+      "archive": "061-detection-methods.zip",
+      "exit_code": 0,
+      "seconds": 1.39,
+      "blocker": null
+    },
+    {
+      "archive": "063-z-score-method.zip",
+      "exit_code": 0,
+      "seconds": 1.42,
+      "blocker": null
+    },
+    {
+      "archive": "064-interquartile-range-iqr.zip",
+      "exit_code": 0,
+      "seconds": 1.46,
+      "blocker": null
+    },
+    {
+      "archive": "065-handling-strategies.zip",
+      "exit_code": 0,
+      "seconds": 2.15,
+      "blocker": null
+    },
+    {
+      "archive": "069-spot-check-and-handle-an-outlier.zip",
+      "exit_code": 0,
+      "seconds": 2.86,
+      "blocker": null
+    },
+    {
+      "archive": "070-1-3-5-normalize-or-standardize-data.zip",
+      "exit_code": 0,
+      "seconds": 2.09,
+      "blocker": null
+    },
+    {
+      "archive": "071-normalization-min-max-scaling.zip",
+      "exit_code": 0,
+      "seconds": 2.13,
+      "blocker": null
+    },
+    {
+      "archive": "072-standardization-z-score-scaling.zip",
+      "exit_code": 0,
+      "seconds": 2.15,
+      "blocker": null
+    },
+    {
+      "archive": "073-when-to-use.zip",
+      "exit_code": 0,
+      "seconds": 2.15,
+      "blocker": null
+    },
+    {
+      "archive": "074-1-3-6-convert-categorical-data.zip",
+      "exit_code": 0,
+      "seconds": 2.09,
+      "blocker": null
+    },
+    {
+      "archive": "076-label-encoding-for-ordered-categories.zip",
+      "exit_code": 0,
+      "seconds": 2.2,
+      "blocker": null
+    },
+    {
+      "archive": "077-target-encoding-for-high-cardinality-categories.zip",
+      "exit_code": 0,
+      "seconds": 2.18,
+      "blocker": null
+    },
+    {
+      "archive": "078-1-3-7-text-data-cleaning.zip",
+      "exit_code": 0,
+      "seconds": 2.22,
+      "blocker": null
+    },
+    {
+      "archive": "080-remove-stop-words-e-g-the-and-is.zip",
+      "exit_code": 0,
+      "seconds": 2.12,
+      "blocker": null
+    },
+    {
+      "archive": "081-tokenization-lemmatization.zip",
+      "exit_code": 0,
+      "seconds": 2.18,
+      "blocker": null
+    },
+    {
+      "archive": "084-convert-text-to-numerical-representation.zip",
+      "exit_code": 0,
+      "seconds": 2.15,
+      "blocker": null
+    },
+    {
+      "archive": "085-countvectorizer.zip",
+      "exit_code": 0,
+      "seconds": 2.25,
+      "blocker": null
+    },
+    {
+      "archive": "086-tf-idf.zip",
+      "exit_code": 0,
+      "seconds": 2.28,
+      "blocker": null
+    },
+    {
+      "archive": "087-word-embeddings-word2vec-bert-etc.zip",
+      "exit_code": 1,
+      "seconds": 2.25,
+      "blocker": "Traceback (most recent call last):\n  File \"<user-home>\\AppData\\Local\\Temp\\ml-course-audit\\runs\\087-word-embeddings-word2vec-bert-etc\\lesson.py\", line 17, in <module>\n    from gensim.models import Word2Vec\nModuleNotFoundError: No module named 'gensim'\n"
+    },
+    {
+      "archive": "089-bert.zip",
+      "exit_code": 1,
+      "seconds": 2.2,
+      "blocker": "Traceback (most recent call last):\n  File \"<user-home>\\AppData\\Local\\Temp\\ml-course-audit\\runs\\089-bert\\lesson.py\", line 16, in <module>\n    import torch\nModuleNotFoundError: No module named 'torch'\n"
+    },
+    {
+      "archive": "090-1-3-8-handle-boolean-data.zip",
+      "exit_code": 0,
+      "seconds": 0.87,
+      "blocker": null
+    },
+    {
+      "archive": "092-fill-missing-values-with-mode.zip",
+      "exit_code": 0,
+      "seconds": 2.18,
+      "blocker": null
+    },
+    {
+      "archive": "093-1-3-9-handle-date-time-data.zip",
+      "exit_code": 0,
+      "seconds": 1.04,
+      "blocker": null
+    },
+    {
+      "archive": "095-extract-useful-features-year-month-day-weekday-hour-etc.zip",
+      "exit_code": 0,
+      "seconds": 2.09,
+      "blocker": null
+    },
+    {
+      "archive": "096-year.zip",
+      "exit_code": 0,
+      "seconds": 2.01,
+      "blocker": null
+    },
+    {
+      "archive": "097-month.zip",
+      "exit_code": 0,
+      "seconds": 2.08,
+      "blocker": null
+    },
+    {
+      "archive": "098-day.zip",
+      "exit_code": 0,
+      "seconds": 2.12,
+      "blocker": null
+    },
+    {
+      "archive": "099-weekday.zip",
+      "exit_code": 0,
+      "seconds": 2.07,
+      "blocker": null
+    },
+    {
+      "archive": "100-hour.zip",
+      "exit_code": 0,
+      "seconds": 2.13,
+      "blocker": null
+    },
+    {
+      "archive": "101-handle-missing-dates-using-interpolation.zip",
+      "exit_code": 0,
+      "seconds": 0.91,
+      "blocker": null
+    },
+    {
+      "archive": "102-1-3-10-handle-large-numbers.zip",
+      "exit_code": 0,
+      "seconds": 2.11,
+      "blocker": null
+    },
+    {
+      "archive": "104-convert-to-scientific-notation-if-values-are-too-large.zip",
+      "exit_code": 0,
+      "seconds": 2.08,
+      "blocker": null
+    },
+    {
+      "archive": "105-data-types-issues-preprocessing-techniques.zip",
+      "exit_code": 0,
+      "seconds": 2.25,
+      "blocker": null
+    },
+    {
+      "archive": "106-geospatial-lat-long-addresses.zip",
+      "exit_code": 0,
+      "seconds": 2.11,
+      "blocker": null
+    },
+    {
+      "archive": "113-images-pixels-matrices.zip",
+      "exit_code": 0,
+      "seconds": 2.23,
+      "blocker": null
+    },
+    {
+      "archive": "114-image-embeddings.zip",
+      "exit_code": 0,
+      "seconds": 2.82,
+      "blocker": null
+    },
+    {
+      "archive": "118-audio-waves-spectrograms.zip",
+      "exit_code": 1,
+      "seconds": 0.25,
+      "blocker": "Traceback (most recent call last):\n  File \"<user-home>\\AppData\\Local\\Temp\\ml-course-audit\\runs\\118-audio-waves-spectrograms\\lesson.py\", line 13, in <module>\n    from imageio_ffmpeg import get_ffmpeg_exe\nModuleNotFoundError: No module named 'imageio_ffmpeg'\n"
+    },
+    {
+      "archive": "122-video-frames-sequences.zip",
+      "exit_code": 1,
+      "seconds": 0.31,
+      "blocker": "Traceback (most recent call last):\n  File \"<user-home>\\AppData\\Local\\Temp\\ml-course-audit\\runs\\122-video-frames-sequences\\lesson.py\", line 13, in <module>\n    import torch\nModuleNotFoundError: No module named 'torch'\n"
+    },
+    {
+      "archive": "131-data.zip",
+      "exit_code": 0,
+      "seconds": 2.21,
+      "blocker": null
+    },
+    {
+      "archive": "134-fixed-range-1-1.zip",
+      "exit_code": 0,
+      "seconds": 2.13,
+      "blocker": null
+    },
+    {
+      "archive": "135-z-score-standardization-standardization.zip",
+      "exit_code": 0,
+      "seconds": 2.2,
+      "blocker": null
+    },
+    {
+      "archive": "137-log1p-and-base-10-log.zip",
+      "exit_code": 0,
+      "seconds": 2.17,
+      "blocker": null
+    },
+    {
+      "archive": "138-robust-scaling-median-iqr-scaling.zip",
+      "exit_code": 0,
+      "seconds": 2.17,
+      "blocker": null
+    },
+    {
+      "archive": "139-power-transformations-box-cox-yeo-johnson.zip",
+      "exit_code": 0,
+      "seconds": 2.27,
+      "blocker": null
+    },
+    {
+      "archive": "140-box-cox-transformation.zip",
+      "exit_code": 0,
+      "seconds": 2.15,
+      "blocker": null
+    },
+    {
+      "archive": "141-yeo-johnson-transformation.zip",
+      "exit_code": 0,
+      "seconds": 2.12,
+      "blocker": null
+    },
+    {
+      "archive": "142-quantile-transformation-rank-scaling.zip",
+      "exit_code": 0,
+      "seconds": 2.22,
+      "blocker": null
+    },
+    {
+      "archive": "143-uniform-distribution.zip",
+      "exit_code": 0,
+      "seconds": 2.19,
+      "blocker": null
+    },
+    {
+      "archive": "144-normal-distribution.zip",
+      "exit_code": 0,
+      "seconds": 2.14,
+      "blocker": null
+    },
+    {
+      "archive": "145-binning-discretization.zip",
+      "exit_code": 0,
+      "seconds": 2.15,
+      "blocker": null
+    },
+    {
+      "archive": "146-polynomial-features-feature-expansion.zip",
+      "exit_code": 0,
+      "seconds": 2.15,
+      "blocker": null
+    },
+    {
+      "archive": "148-1-4-exploratory-data-analysis-eda.zip",
+      "exit_code": 0,
+      "seconds": 4.2,
+      "blocker": null
+    },
+    {
+      "archive": "152-detecting-outliers-anomalies.zip",
+      "exit_code": 0,
+      "seconds": 1.43,
+      "blocker": null
+    },
+    {
+      "archive": "155-histograms.zip",
+      "exit_code": 0,
+      "seconds": 2.52,
+      "blocker": null
+    },
+    {
+      "archive": "156-scatter-plots.zip",
+      "exit_code": 0,
+      "seconds": 2.46,
+      "blocker": null
+    },
+    {
+      "archive": "157-box-plots.zip",
+      "exit_code": 0,
+      "seconds": 2.54,
+      "blocker": null
+    },
+    {
+      "archive": "158-heatmaps.zip",
+      "exit_code": 0,
+      "seconds": 2.6,
+      "blocker": null
+    },
+    {
+      "archive": "160-1-5-feature-engineering-feature-selection.zip",
+      "exit_code": 0,
+      "seconds": 4.0,
+      "blocker": null
+    },
+    {
+      "archive": "162-feature-engineering.zip",
+      "exit_code": 0,
+      "seconds": 2.03,
+      "blocker": null
+    },
+    {
+      "archive": "169-feature-selection.zip",
+      "exit_code": 0,
+      "seconds": 2.15,
+      "blocker": null
+    },
+    {
+      "archive": "170-remove-irrelevant-or-redundant-features.zip",
+      "exit_code": 0,
+      "seconds": 2.18,
+      "blocker": null
+    },
+    {
+      "archive": "172-anova.zip",
+      "exit_code": 0,
+      "seconds": 2.17,
+      "blocker": null
+    },
+    {
+      "archive": "173-chi-square-test.zip",
+      "exit_code": 0,
+      "seconds": 2.22,
+      "blocker": null
+    },
+    {
+      "archive": "177-bar-plots.zip",
+      "exit_code": 0,
+      "seconds": 2.92,
+      "blocker": null
+    },
+    {
+      "archive": "179-1-6-data-splitting.zip",
+      "exit_code": 0,
+      "seconds": 2.1,
+      "blocker": null
+    },
+    {
+      "archive": "180-training-set.zip",
+      "exit_code": 0,
+      "seconds": 2.14,
+      "blocker": null
+    },
+    {
+      "archive": "181-validation-set.zip",
+      "exit_code": 0,
+      "seconds": 2.28,
+      "blocker": null
+    },
+    {
+      "archive": "182-test-set.zip",
+      "exit_code": 0,
+      "seconds": 2.2,
+      "blocker": null
+    },
+    {
+      "archive": "183-common-split-ratios.zip",
+      "exit_code": 0,
+      "seconds": 2.25,
+      "blocker": null
+    },
+    {
+      "archive": "184-80-20-train-test.zip",
+      "exit_code": 0,
+      "seconds": 2.12,
+      "blocker": null
+    },
+    {
+      "archive": "185-70-20-10-train-validation-test.zip",
+      "exit_code": 0,
+      "seconds": 2.11,
+      "blocker": null
+    },
+    {
+      "archive": "186-stratified-sampling.zip",
+      "exit_code": 0,
+      "seconds": 2.16,
+      "blocker": null
+    },
+    {
+      "archive": "187-1-7-model-selection-training.zip",
+      "exit_code": 0,
+      "seconds": 2.37,
+      "blocker": null
+    },
+    {
+      "archive": "190-tune-hyperparameters.zip",
+      "exit_code": 0,
+      "seconds": 2.19,
+      "blocker": null
+    },
+    {
+      "archive": "191-grid-search.zip",
+      "exit_code": 0,
+      "seconds": 2.07,
+      "blocker": null
+    },
+    {
+      "archive": "192-random-search.zip",
+      "exit_code": 0,
+      "seconds": 2.19,
+      "blocker": null
+    },
+    {
+      "archive": "194-cross-validation.zip",
+      "exit_code": 0,
+      "seconds": 2.06,
+      "blocker": null
+    },
+    {
+      "archive": "199-accuracy.zip",
+      "exit_code": 0,
+      "seconds": 2.71,
+      "blocker": null
+    },
+    {
+      "archive": "200-precision.zip",
+      "exit_code": 0,
+      "seconds": 2.76,
+      "blocker": null
+    },
+    {
+      "archive": "201-recall.zip",
+      "exit_code": 0,
+      "seconds": 2.74,
+      "blocker": null
+    },
+    {
+      "archive": "202-f1-score.zip",
+      "exit_code": 0,
+      "seconds": 2.71,
+      "blocker": null
+    },
+    {
+      "archive": "203-auc-roc.zip",
+      "exit_code": 0,
+      "seconds": 2.59,
+      "blocker": null
+    },
+    {
+      "archive": "205-confusion-matrix.zip",
+      "exit_code": 0,
+      "seconds": 2.58,
+      "blocker": null
+    },
+    {
+      "archive": "206-roc-curve.zip",
+      "exit_code": 0,
+      "seconds": 2.66,
+      "blocker": null
+    },
+    {
+      "archive": "208-regression-metrics.zip",
+      "exit_code": 0,
+      "seconds": 2.66,
+      "blocker": null
+    },
+    {
+      "archive": "211-rmse.zip",
+      "exit_code": 0,
+      "seconds": 2.56,
+      "blocker": null
+    },
+    {
+      "archive": "212-mae.zip",
+      "exit_code": 0,
+      "seconds": 2.53,
+      "blocker": null
+    },
+    {
+      "archive": "213-r-score.zip",
+      "exit_code": 0,
+      "seconds": 2.62,
+      "blocker": null
+    },
+    {
+      "archive": "215-1-9-model-deployment.zip",
+      "exit_code": 0,
+      "seconds": 2.78,
+      "blocker": null
+    },
+    {
+      "archive": "218-web-app-deployment.zip",
+      "exit_code": 0,
+      "seconds": 2.71,
+      "blocker": null
+    },
+    {
+      "archive": "219-cloud-services.zip",
+      "exit_code": 0,
+      "seconds": 0.88,
+      "blocker": null
+    },
+    {
+      "archive": "222-flask.zip",
+      "exit_code": 0,
+      "seconds": 2.76,
+      "blocker": null
+    },
+    {
+      "archive": "223-streamlit.zip",
+      "exit_code": 0,
+      "seconds": 6.72,
+      "blocker": null
+    },
+    {
+      "archive": "224-aws-google-cloud-or-heroku.zip",
+      "exit_code": 0,
+      "seconds": 0.84,
+      "blocker": null
+    },
+    {
+      "archive": "225-aws.zip",
+      "exit_code": 0,
+      "seconds": 0.85,
+      "blocker": null
+    },
+    {
+      "archive": "226-google-cloud.zip",
+      "exit_code": 0,
+      "seconds": 0.86,
+      "blocker": null
+    },
+    {
+      "archive": "227-heroku.zip",
+      "exit_code": 0,
+      "seconds": 0.89,
+      "blocker": null
+    },
+    {
+      "archive": "228-rest-api-or-integrate-with-mobile-web-apps.zip",
+      "exit_code": 0,
+      "seconds": 0.88,
+      "blocker": null
+    },
+    {
+      "archive": "233-cloud-deployment-walkthrough.zip",
+      "exit_code": 0,
+      "seconds": 0.85,
+      "blocker": null
+    },
+    {
+      "archive": "234-1-10-model-monitoring-maintenance.zip",
+      "exit_code": 0,
+      "seconds": 2.96,
+      "blocker": null
+    },
+    {
+      "archive": "240-visualization-techniques-4.zip",
+      "exit_code": 0,
+      "seconds": 3.18,
+      "blocker": null
+    },
+    {
+      "archive": "242-tableau.zip",
+      "exit_code": 0,
+      "seconds": 0.86,
+      "blocker": null
+    },
+    {
+      "archive": "243-power-bi.zip",
+      "exit_code": 0,
+      "seconds": 0.91,
+      "blocker": null
+    },
+    {
+      "archive": "249-scheduled-model-checks.zip",
+      "exit_code": 0,
+      "seconds": 2.15,
+      "blocker": null
+    },
+    {
+      "archive": "250-2-data-sets.zip",
+      "exit_code": 0,
+      "seconds": 2.19,
+      "blocker": null
+    },
+    {
+      "archive": "252-description.zip",
+      "exit_code": 0,
+      "seconds": 0.87,
+      "blocker": null
+    },
+    {
+      "archive": "259-2-2-titanic-dataset.zip",
+      "exit_code": 0,
+      "seconds": 2.14,
+      "blocker": null
+    },
+    {
+      "archive": "260-description-2.zip",
+      "exit_code": 0,
+      "seconds": 0.85,
+      "blocker": null
+    },
+    {
+      "archive": "268-2-3-house-prices-dataset.zip",
+      "exit_code": 0,
+      "seconds": 2.2,
+      "blocker": null
+    },
+    {
+      "archive": "269-description-3.zip",
+      "exit_code": 0,
+      "seconds": 0.84,
+      "blocker": null
+    },
+    {
+      "archive": "277-2-4-iris-dataset.zip",
+      "exit_code": 0,
+      "seconds": 5.08,
+      "blocker": null
+    },
+    {
+      "archive": "278-description-4.zip",
+      "exit_code": 0,
+      "seconds": 0.84,
+      "blocker": null
+    },
+    {
+      "archive": "280-practice-2-4-feature-scaling.zip",
+      "exit_code": 0,
+      "seconds": 4.77,
+      "blocker": null
+    },
+    {
+      "archive": "285-2-5-uci-adult-income-dataset.zip",
+      "exit_code": 0,
+      "seconds": 2.13,
+      "blocker": null
+    },
+    {
+      "archive": "286-description-5.zip",
+      "exit_code": 0,
+      "seconds": 0.87,
+      "blocker": null
+    },
+    {
+      "archive": "293-2-6-wine-quality-dataset.zip",
+      "exit_code": 0,
+      "seconds": 2.02,
+      "blocker": null
+    },
+    {
+      "archive": "294-description-6.zip",
+      "exit_code": 0,
+      "seconds": 0.84,
+      "blocker": null
+    },
+    {
+      "archive": "296-practice-2-6-missing-values.zip",
+      "exit_code": 0,
+      "seconds": 2.22,
+      "blocker": null
+    },
+    {
+      "archive": "300-practice-2-6-normalization.zip",
+      "exit_code": 0,
+      "seconds": 2.15,
+      "blocker": null
+    },
+    {
+      "archive": "302-2-7-boston-housing-dataset.zip",
+      "exit_code": 0,
+      "seconds": 2.19,
+      "blocker": null
+    },
+    {
+      "archive": "303-description-7.zip",
+      "exit_code": 0,
+      "seconds": 0.87,
+      "blocker": null
+    },
+    {
+      "archive": "310-2-8-mnist-dataset.zip",
+      "exit_code": 0,
+      "seconds": 2.23,
+      "blocker": null
+    },
+    {
+      "archive": "311-description-8.zip",
+      "exit_code": 0,
+      "seconds": 0.9,
+      "blocker": null
+    },
+    {
+      "archive": "318-2-9-customer-segmentation-dataset.zip",
+      "exit_code": 0,
+      "seconds": 2.71,
+      "blocker": null
+    },
+    {
+      "archive": "319-description-9.zip",
+      "exit_code": 0,
+      "seconds": 0.85,
+      "blocker": null
+    },
+    {
+      "archive": "326-2-10-bank-marketing-dataset.zip",
+      "exit_code": 0,
+      "seconds": 2.06,
+      "blocker": null
+    },
+    {
+      "archive": "327-description-10.zip",
+      "exit_code": 0,
+      "seconds": 0.85,
+      "blocker": null
+    },
+    {
+      "archive": "334-2-11-heart-disease-dataset.zip",
+      "exit_code": 0,
+      "seconds": 2.12,
+      "blocker": null
+    },
+    {
+      "archive": "335-description-11.zip",
+      "exit_code": 0,
+      "seconds": 0.8,
+      "blocker": null
+    },
+    {
+      "archive": "342-description-12.zip",
+      "exit_code": 0,
+      "seconds": 0.87,
+      "blocker": null
+    },
+    {
+      "archive": "344-practice-2-12-resizing.zip",
+      "exit_code": 0,
+      "seconds": 1.06,
+      "blocker": null
+    },
+    {
+      "archive": "347-practice-2-12-flattening.zip",
+      "exit_code": 0,
+      "seconds": 0.84,
+      "blocker": null
+    },
+    {
+      "archive": "349-2-13-google-play-store-dataset.zip",
+      "exit_code": 0,
+      "seconds": 2.05,
+      "blocker": null
+    },
+    {
+      "archive": "350-description-13.zip",
+      "exit_code": 0,
+      "seconds": 0.84,
+      "blocker": null
+    },
+    {
+      "archive": "356-3-machine-learning-categories.zip",
+      "exit_code": 0,
+      "seconds": 2.07,
+      "blocker": null
+    },
+    {
+      "archive": "361-ridge-lasso-regression.zip",
+      "exit_code": 0,
+      "seconds": 2.07,
+      "blocker": null
+    },
+    {
+      "archive": "362-ridge-regression.zip",
+      "exit_code": 0,
+      "seconds": 2.05,
+      "blocker": null
+    },
+    {
+      "archive": "363-lasso-regression.zip",
+      "exit_code": 0,
+      "seconds": 2.02,
+      "blocker": null
+    },
+    {
+      "archive": "364-polynomial-regression.zip",
+      "exit_code": 0,
+      "seconds": 2.09,
+      "blocker": null
+    },
+    {
+      "archive": "365-support-vector-regression-svr.zip",
+      "exit_code": 0,
+      "seconds": 2.06,
+      "blocker": null
+    },
+    {
+      "archive": "366-decision-trees-for-regression.zip",
+      "exit_code": 0,
+      "seconds": 2.12,
+      "blocker": null
+    },
+    {
+      "archive": "367-random-forest-for-regression.zip",
+      "exit_code": 0,
+      "seconds": 2.18,
+      "blocker": null
+    },
+    {
+      "archive": "368-gradient-boosting-gbm.zip",
+      "exit_code": 0,
+      "seconds": 2.16,
+      "blocker": null
+    },
+    {
+      "archive": "369-xgboost.zip",
+      "exit_code": 1,
+      "seconds": 2.01,
+      "blocker": "Traceback (most recent call last):\n  File \"<user-home>\\AppData\\Local\\Temp\\ml-course-audit\\runs\\369-xgboost\\lesson.py\", line 15, in <module>\n    from xgboost import XGBRegressor\nModuleNotFoundError: No module named 'xgboost'\n"
+    },
+    {
+      "archive": "370-lightgbm.zip",
+      "exit_code": 1,
+      "seconds": 2.06,
+      "blocker": "Traceback (most recent call last):\n  File \"<user-home>\\AppData\\Local\\Temp\\ml-course-audit\\runs\\370-lightgbm\\lesson.py\", line 15, in <module>\n    from lightgbm import LGBMRegressor\nModuleNotFoundError: No module named 'lightgbm'\n"
+    },
+    {
+      "archive": "371-classification-algorithms.zip",
+      "exit_code": 0,
+      "seconds": 2.09,
+      "blocker": null
+    },
+    {
+      "archive": "373-k-nearest-neighbors-knn.zip",
+      "exit_code": 0,
+      "seconds": 2.17,
+      "blocker": null
+    },
+    {
+      "archive": "374-support-vector-machines-svm.zip",
+      "exit_code": 0,
+      "seconds": 2.12,
+      "blocker": null
+    },
+    {
+      "archive": "375-decision-trees-for-classification.zip",
+      "exit_code": 0,
+      "seconds": 2.16,
+      "blocker": null
+    },
+    {
+      "archive": "376-random-forest-for-classification.zip",
+      "exit_code": 0,
+      "seconds": 2.27,
+      "blocker": null
+    },
+    {
+      "archive": "377-naive-bayes.zip",
+      "exit_code": 0,
+      "seconds": 2.13,
+      "blocker": null
+    },
+    {
+      "archive": "378-gradient-boosting.zip",
+      "exit_code": 0,
+      "seconds": 2.23,
+      "blocker": null
+    },
+    {
+      "archive": "379-xgboost-2.zip",
+      "exit_code": 1,
+      "seconds": 2.02,
+      "blocker": "Traceback (most recent call last):\n  File \"<user-home>\\AppData\\Local\\Temp\\ml-course-audit\\runs\\379-xgboost-2\\lesson.py\", line 14, in <module>\n    from xgboost import XGBClassifier\nModuleNotFoundError: No module named 'xgboost'\n"
+    },
+    {
+      "archive": "380-lightgbm-2.zip",
+      "exit_code": 1,
+      "seconds": 1.99,
+      "blocker": "Traceback (most recent call last):\n  File \"<user-home>\\AppData\\Local\\Temp\\ml-course-audit\\runs\\380-lightgbm-2\\lesson.py\", line 14, in <module>\n    from lightgbm import LGBMClassifier\nModuleNotFoundError: No module named 'lightgbm'\n"
+    },
+    {
+      "archive": "381-k-means-classifier.zip",
+      "exit_code": 0,
+      "seconds": 2.28,
+      "blocker": null
+    },
+    {
+      "archive": "382-3-2-unsupervised-learning.zip",
+      "exit_code": 0,
+      "seconds": 2.24,
+      "blocker": null
+    },
+    {
+      "archive": "386-hierarchical-clustering.zip",
+      "exit_code": 0,
+      "seconds": 2.72,
+      "blocker": null
+    },
+    {
+      "archive": "387-dbscan.zip",
+      "exit_code": 0,
+      "seconds": 2.23,
+      "blocker": null
+    },
+    {
+      "archive": "388-gaussian-mixture-models-gmm.zip",
+      "exit_code": 0,
+      "seconds": 2.26,
+      "blocker": null
+    },
+    {
+      "archive": "389-dimensionality-reduction.zip",
+      "exit_code": 0,
+      "seconds": 2.02,
+      "blocker": null
+    },
+    {
+      "archive": "391-t-distributed-stochastic-neighbor-embedding-t-sne.zip",
+      "exit_code": 0,
+      "seconds": 2.81,
+      "blocker": null
+    },
+    {
+      "archive": "392-linear-discriminant-analysis-lda.zip",
+      "exit_code": 0,
+      "seconds": 2.13,
+      "blocker": null
+    },
+    {
+      "archive": "393-independent-component-analysis-ica.zip",
+      "exit_code": 0,
+      "seconds": 2.01,
+      "blocker": null
+    },
+    {
+      "archive": "394-anomaly-detection.zip",
+      "exit_code": 0,
+      "seconds": 2.26,
+      "blocker": null
+    },
+    {
+      "archive": "396-one-class-svm.zip",
+      "exit_code": 0,
+      "seconds": 2.03,
+      "blocker": null
+    },
+    {
+      "archive": "397-z-score-algorithm.zip",
+      "exit_code": 0,
+      "seconds": 0.86,
+      "blocker": null
+    },
+    {
+      "archive": "398-association.zip",
+      "exit_code": 1,
+      "seconds": 0.83,
+      "blocker": "Traceback (most recent call last):\n  File \"<user-home>\\AppData\\Local\\Temp\\ml-course-audit\\runs\\398-association\\lesson.py\", line 12, in <module>\n    from mlxtend.frequent_patterns import apriori, fpgrowth\nModuleNotFoundError: No module named 'mlxtend'\n"
+    },
+    {
+      "archive": "399-apriori-algorithm.zip",
+      "exit_code": 1,
+      "seconds": 0.84,
+      "blocker": "Traceback (most recent call last):\n  File \"<user-home>\\AppData\\Local\\Temp\\ml-course-audit\\runs\\399-apriori-algorithm\\lesson.py\", line 12, in <module>\n    from mlxtend.frequent_patterns import apriori, fpgrowth\nModuleNotFoundError: No module named 'mlxtend'\n"
+    },
+    {
+      "archive": "400-frequent-pattern-growth.zip",
+      "exit_code": 1,
+      "seconds": 0.82,
+      "blocker": "Traceback (most recent call last):\n  File \"<user-home>\\AppData\\Local\\Temp\\ml-course-audit\\runs\\400-frequent-pattern-growth\\lesson.py\", line 12, in <module>\n    from mlxtend.frequent_patterns import apriori, fpgrowth\nModuleNotFoundError: No module named 'mlxtend'\n"
+    },
+    {
+      "archive": "402-3-3-semi-supervised-learning.zip",
+      "exit_code": 0,
+      "seconds": 2.03,
+      "blocker": null
+    },
+    {
+      "archive": "405-label-propagation.zip",
+      "exit_code": 0,
+      "seconds": 2.16,
+      "blocker": null
+    },
+    {
+      "archive": "406-self-training.zip",
+      "exit_code": 0,
+      "seconds": 2.11,
+      "blocker": null
+    },
+    {
+      "archive": "407-co-training.zip",
+      "exit_code": 0,
+      "seconds": 2.08,
+      "blocker": null
+    },
+    {
+      "archive": "408-regression.zip",
+      "exit_code": 0,
+      "seconds": 2.07,
+      "blocker": null
+    },
+    {
+      "archive": "410-3-4-reinforcement-learning.zip",
+      "exit_code": 0,
+      "seconds": 0.89,
+      "blocker": null
+    },
+    {
+      "archive": "412-agent.zip",
+      "exit_code": 0,
+      "seconds": 0.85,
+      "blocker": null
+    },
+    {
+      "archive": "413-environment.zip",
+      "exit_code": 0,
+      "seconds": 0.86,
+      "blocker": null
+    },
+    {
+      "archive": "414-actions.zip",
+      "exit_code": 0,
+      "seconds": 0.84,
+      "blocker": null
+    },
+    {
+      "archive": "415-state.zip",
+      "exit_code": 0,
+      "seconds": 0.85,
+      "blocker": null
+    },
+    {
+      "archive": "416-reward.zip",
+      "exit_code": 0,
+      "seconds": 0.82,
+      "blocker": null
+    },
+    {
+      "archive": "417-policy.zip",
+      "exit_code": 0,
+      "seconds": 0.85,
+      "blocker": null
+    },
+    {
+      "archive": "419-common-algorithms-4.zip",
+      "exit_code": 0,
+      "seconds": 0.95,
+      "blocker": null
+    },
+    {
+      "archive": "421-deep-q-networks-dqn.zip",
+      "exit_code": 1,
+      "seconds": 0.1,
+      "blocker": "Traceback (most recent call last):\n  File \"<user-home>\\AppData\\Local\\Temp\\ml-course-audit\\runs\\421-deep-q-networks-dqn\\lesson.py\", line 12, in <module>\n    import torch\nModuleNotFoundError: No module named 'torch'\n"
+    },
+    {
+      "archive": "422-policy-gradient-methods.zip",
+      "exit_code": 0,
+      "seconds": 0.84,
+      "blocker": null
+    },
+    {
+      "archive": "423-actor-critic.zip",
+      "exit_code": 0,
+      "seconds": 0.93,
+      "blocker": null
+    },
+    {
+      "archive": "424-monte-carlo-tree-search-mcts.zip",
+      "exit_code": 0,
+      "seconds": 0.95,
+      "blocker": null
+    },
+    {
+      "archive": "427-model-based.zip",
+      "exit_code": 0,
+      "seconds": 0.86,
+      "blocker": null
+    },
+    {
+      "archive": "428-learn-the-model.zip",
+      "exit_code": 0,
+      "seconds": 0.92,
+      "blocker": null
+    },
+    {
+      "archive": "429-given-the-model.zip",
+      "exit_code": 0,
+      "seconds": 0.93,
+      "blocker": null
+    },
+    {
+      "archive": "430-summary-of-machine-learning-categories.zip",
+      "exit_code": 0,
+      "seconds": 0.92,
+      "blocker": null
+    },
+    {
+      "archive": "431-machine-learning-algorithms.zip",
+      "exit_code": 0,
+      "seconds": 2.12,
+      "blocker": null
+    },
+    {
+      "archive": "432-simple-linear-regression.zip",
+      "exit_code": 0,
+      "seconds": 2.1,
+      "blocker": null
+    },
+    {
+      "archive": "433-multivariate-regression.zip",
+      "exit_code": 0,
+      "seconds": 2.12,
+      "blocker": null
+    },
+    {
+      "archive": "435-multiple-linear-regression.zip",
+      "exit_code": 0,
+      "seconds": 2.04,
+      "blocker": null
+    },
+    {
+      "archive": "436-regression-diagram.zip",
+      "exit_code": 0,
+      "seconds": 2.06,
+      "blocker": null
+    },
+    {
+      "archive": "442-choose-the-right-split.zip",
+      "exit_code": 0,
+      "seconds": 2.08,
+      "blocker": null
+    },
+    {
+      "archive": "443-learn-to-spot-overfitting.zip",
+      "exit_code": 0,
+      "seconds": 2.78,
+      "blocker": null
+    },
+    {
+      "archive": "444-rare-event-threshold.zip",
+      "exit_code": 0,
+      "seconds": 2.74,
+      "blocker": null
+    },
+    {
+      "archive": "445-calibrate-probabilities.zip",
+      "exit_code": 0,
+      "seconds": 3.1,
+      "blocker": null
+    },
+    {
+      "archive": "446-larger-regression-evaluation.zip",
+      "exit_code": 0,
+      "seconds": 2.14,
+      "blocker": null
+    },
+    {
+      "archive": "447-delivery-model-capstone.zip",
+      "exit_code": 0,
+      "seconds": 2.85,
+      "blocker": null
+    },
+    {
+      "archive": "train-and-test.zip",
+      "exit_code": 0,
+      "seconds": 2.04,
+      "blocker": null
+    }
+  ],
+  "additional_targeted_checks": [
+    {
+      "check": "Lesson 002 distance changed from 4 to 8 in new_inputs.csv",
+      "result": "Passed; output includes 26.0 minutes; original temporary input restored."
+    },
+    {
+      "check": "Shared Core implementations 002/001, 032/030, 055/054",
+      "result": "Sample CSV and new-input CSV contents match within each pair."
+    },
+    {
+      "check": "Report integrity",
+      "result": "71 complete CSV entries and matching HTML cards; unique HTML IDs and resolving local links."
+    }
+  ]
+}

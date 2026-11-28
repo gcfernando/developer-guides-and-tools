@@ -1,0 +1,7 @@
+Yeo-Johnson first two training rows: [[-1.6], [-0.9]]
+Actual costs: [23, 48]
+Predicted costs: [26.0, 47.0]
+ signal  predicted_cost
+     -4         -118.07
+      0           -1.23
+     14           29.82

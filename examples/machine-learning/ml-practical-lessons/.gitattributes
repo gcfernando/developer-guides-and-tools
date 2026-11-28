@@ -1,0 +1,4 @@
+# Keep editable lessons and generated downloads consistent on every system.
+* text=auto eol=lf
+*.zip binary
+*.png binary

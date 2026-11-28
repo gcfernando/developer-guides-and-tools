@@ -1,0 +1,4 @@
+ New row              Method  Filled kg  Prediction in minutes  Actual minutes
+       1 KNN (two neighbors)        3.0                  41.00            33.0
+       2 KNN (two neighbors)        2.0                  31.00            29.0
+       3 KNN (two neighbors)        3.0                  48.33               —

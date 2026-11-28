@@ -1,0 +1,8 @@
+Rows from the CSV and database: 3 3
+
+Orders returned by the local API
+ order_id  zone
+        1 north
+        2 south
+        3  west
+Parsed HTML: ['north', 'south', 'west']

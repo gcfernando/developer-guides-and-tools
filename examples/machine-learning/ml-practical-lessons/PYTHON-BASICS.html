@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>PYTHON BASICS</title><style>
+:root{color-scheme:light dark;--bg:#f5f7fa;--panel:#fff;--text:#203346;--muted:#4e6274;--line:#cbd6df;--link:#145b91}
+@media(prefers-color-scheme:dark){:root{--bg:#111c26;--panel:#192936;--text:#e6edf4;--muted:#b9c8d7;--line:#455d70;--link:#93caff}}
+html[data-theme=light]{color-scheme:light;--bg:#f5f7fa;--panel:#fff;--text:#203346;--muted:#4e6274;--line:#cbd6df;--link:#145b91}
+html[data-theme=dark]{color-scheme:dark;--bg:#111c26;--panel:#192936;--text:#e6edf4;--muted:#b9c8d7;--line:#455d70;--link:#93caff}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:18px/1.7 system-ui,sans-serif}header,main{max-width:1100px;margin:auto;padding:20px 28px}header{border-bottom:1px solid var(--line)}nav{display:flex;flex-wrap:wrap;gap:10px 22px}main{padding-bottom:90px}h1,h2,h3,h4,h5,h6{line-height:1.3;scroll-margin-top:20px}h1{font-size:2.2rem}h2{font-size:1.65rem;margin-top:2.7rem}h3{font-size:1.35rem}h4,h5,h6{font-size:1.15rem}p,li{max-width:86ch}li{margin:.35rem 0}a{color:var(--link);text-underline-offset:.15em}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #d78d13;outline-offset:3px}.skip{position:absolute;top:-100px}.skip:focus{top:0;background:var(--panel);padding:12px}table{border-collapse:collapse;width:100%;font-size:.95rem;background:var(--panel)}th,td{padding:10px 14px;text-align:left;border:1px solid var(--line);vertical-align:top}.table-frame{overflow-x:auto;margin:20px 0}code{font-size:.9em;overflow-wrap:anywhere}pre{background:var(--panel);border:1px solid var(--line);padding:18px;overflow-x:auto;line-height:1.5}pre code{overflow-wrap:normal}img{max-width:100%;height:auto;background:white}details{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:15px 20px;margin:18px 0}summary{cursor:pointer;font-weight:650}.tools{padding:18px;border:1px solid var(--line);background:var(--panel);margin:20px 0}.tools label{display:block}.tools input{width:min(100%,600px)}input,select,button{font:inherit;padding:7px 12px;border:1px solid var(--line);border-radius:5px;background:var(--panel);color:var(--text)}button{cursor:pointer}.copy{font-size:.8rem;float:right}.hint{color:var(--muted);font-size:.9rem}.toc ul{padding-left:22px}.toc{border-left:4px solid var(--line);padding-left:15px;max-height:420px;overflow:auto}.progress{height:4px;background:var(--link);position:fixed;left:0;top:0;z-index:10;width:0}.checklist-item{list-style:none}.checklist-item input{width:auto;margin-right:10px}[hidden]{display:none!important}@media(max-width:650px){body{font-size:17px}header,main{padding:16px}h1{font-size:1.8rem}th,td{padding:8px}.tools input{width:100%}}@media print{body{font-size:11pt;background:white;color:#111}header,.tools,.copy,.progress{display:none}main{padding:0;max-width:none}pre{white-space:pre-wrap}a{color:inherit}details{break-inside:avoid}h2,h3{break-after:avoid}}
+</style></head><body><a class="skip" href="#content">Skip to the lesson</a><div class="progress" aria-hidden="true"></div><header><nav aria-label="Course pages"><a href="START-HERE.html">Start here</a><a href="LEARNING-PATH.html">Learning path</a><a href="SETUP.html">Setup</a><a href="GLOSSARY.html">Word list</a><a href="Data-Science-and-Machine-Learning.html#lesson-downloads">Lesson library</a><button id="theme" type="button">Change colour theme</button></nav></header><main id="content"><h1 id="a-small-start-with-python">A small start with Python</h1>
+<p><a href="LEARNING-PATH.html">Back to the learning path</a></p>
+<p>Read <a href="START-HERE.html">Start here</a> and finish <a href="SETUP.html">Setup</a> first. This page explains the Python you will see in the first lessons. You do not need to remember every symbol.</p>
+<h2 id="1-give-a-value-a-name">1. Give a value a name</h2>
+<pre><code class="language-python">distance = 4
+minutes = 10 + 2 * distance
+print(minutes)
+</code></pre>
+<p>The first line stores 4 under the name <code>distance</code>. The second line calculates a time. Python uses <code>*</code> for multiplication. <code>print</code> shows a result. This prints <code>18</code>.</p>
+<p><code>=</code> means “store this value”. It is not a question about whether two values are equal.</p>
+<p><strong>Try it:</strong> Change 4 to 8. Predict the answer first. It should print 26.</p>
+<h2 id="2-keep-several-values-in-a-list">2. Keep several values in a list</h2>
+<pre><code class="language-python">distances = [1, 2, 3]
+print(distances[0])
+</code></pre>
+<p>Square brackets can hold a list. Python starts counting positions at zero, so position 0 holds the first value, 1.</p>
+<h2 id="3-read-a-table">3. Read a table</h2>
+<pre><code class="language-python">import pandas as pd
+table = pd.read_csv("sample.csv")
+print(table)
+</code></pre>
+<p><code>import</code> makes extra tools available. <code>pandas</code> is a package for tables. <code>pd</code> is a short name for it. <code>read_csv</code> reads a CSV file. A Python table from pandas is called a <strong>DataFrame</strong>.</p>
+<p>The quoted text <code>"sample.csv"</code> is a <strong>string</strong>: text rather than a number. Keep the quotes around text in code.</p>
+<p>For this example, put the script beside <code>sample.csv</code> and run it from that folder.</p>
+<h2 id="4-select-the-input-and-the-answer">4. Select the input and the answer</h2>
+<pre><code class="language-python">inputs = table[["distance_km"]]
+answers = table["minutes"]
+</code></pre>
+<p>The model wants inputs in a table. Two pairs of brackets keep <code>distance_km</code> as a one-column table. One pair selects <code>minutes</code> as one column of answers.</p>
+<p>The column names must exactly match the first line of the CSV. <code>Distance</code> and <code>distance_km</code> are different names.</p>
+<h2 id="5-select-some-rows">5. Select some rows</h2>
+<pre><code class="language-python">training = table.iloc[:3]
+checking = table.iloc[3:]
+</code></pre>
+<p><code>iloc</code> selects rows by position. <code>:3</code> means the rows before position 3: positions 0, 1 and 2. <code>3:</code> means position 3 and all rows after it. No row is in both groups here.</p>
+<p>This is an easy first example. Later lessons choose splits that match the real job. Do not always take the first three rows of an unfamiliar dataset.</p>
+<h2 id="6-train-and-predict">6. Train and predict</h2>
+<pre><code class="language-python">from sklearn.linear_model import LinearRegression
+model = LinearRegression()
+model.fit(training[["distance_km"]], training["minutes"])
+guesses = model.predict(checking[["distance_km"]])
+print(guesses)
+</code></pre>
+<p><code>LinearRegression</code> is a model that learns a straight-line rule. <code>model = LinearRegression()</code> creates an empty model. <code>fit</code> trains it from the inputs and answers. <code>predict</code> uses what it learned. It does not learn the check answers.</p>
+<p>The dot in <code>model.fit</code> asks that object to do a job. The words inside parentheses are what we give to that job. A job like this is called a <strong>method</strong>.</p>
+<h2 id="7-reuse-a-small-rule">7. Reuse a small rule</h2>
+<pre><code class="language-python">def estimate(distance):
+    return 10 + 2 * distance
+
+print(estimate(4))
+</code></pre>
+<p><code>def</code> defines a <strong>function</strong>: a named set of steps. <code>return</code> gives back an answer. The spaces at the start of the <code>return</code> line show that it belongs to the function. Keep those spaces. This example is a rule we wrote, rather than one learned by a model.</p>
+<h2 id="8-understand-a-pipeline">8. Understand a pipeline</h2>
+<p>A <strong>pipeline</strong> keeps several steps together. For example:</p>
+<ol>
+<li>Fill a missing weight with the middle training weight.</li>
+<li>Turn zone names into number columns.</li>
+<li>Give the result to a trained model.</li>
+</ol>
+<p><code>fit</code> learns the needed values from training rows. <code>transform</code> applies a learned change. <code>predict</code> runs the preparation and asks the model for an answer. Reuse the same fitted steps for new rows.</p>
+<h2 id="9-run-a-tiny-practice-script">9. Run a tiny practice script</h2>
+<ol>
+<li>Open a plain text editor.</li>
+<li>Copy the three lines from step 1.</li>
+<li>Save them as <code>first_steps.py</code> inside your extracted lesson folder. Keep the <code>.py</code> ending.</li>
+<li>Open a terminal in that folder. Run <code>python first_steps.py</code> after activating the environment from Setup.</li>
+<li>Check that it prints 18. Change the distance to 8. Save and run again.</li>
+</ol>
+<p>Type terminal commands in the terminal. Put Python code in the <code>.py</code> file. Do not type the Markdown backticks into either place.</p>
+<h2 id="check-your-understanding">Check your understanding</h2>
+<ol>
+<li>What does <code>fit</code> do? It learns from training examples.</li>
+<li>Does <code>predict</code> need the true answer for a new request? No. It uses the inputs.</li>
+<li>Why keep a preparation step with the model? New inputs need the same rules used during training.</li>
+<li>What is position zero? The first item.</li>
+</ol>
+<p>Next: follow the first module in <a href="LEARNING-PATH.html">the learning path</a>.</p></main><script>
+(()=>{'use strict';
+const theme=document.getElementById('theme');let saved;try{saved=localStorage.getItem('ml-course-theme')}catch{}if(saved)document.documentElement.dataset.theme=saved;
+theme.addEventListener('click',()=>{const current=document.documentElement.dataset.theme|| (matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');const next=current==='dark'?'light':'dark';document.documentElement.dataset.theme=next;try{localStorage.setItem('ml-course-theme',next)}catch{}});
+for(const pre of document.querySelectorAll('pre')){const button=document.createElement('button');button.className='copy';button.textContent='Copy code';button.type='button';button.addEventListener('click',async()=>{const text=pre.querySelector('code')?.textContent||pre.textContent;try{if(navigator.clipboard?.writeText){await navigator.clipboard.writeText(text)}else{const area=document.createElement('textarea');area.value=text;document.body.append(area);area.select();if(!document.execCommand('copy'))throw Error();area.remove()}button.textContent='Copied'}catch{button.textContent='Select the text to copy'}setTimeout(()=>button.textContent='Copy code',1800)});pre.before(button)}
+const search=document.getElementById('lesson-search'),track=document.getElementById('lesson-track');if(search){const rows=[...document.querySelectorAll('tr[data-track]')];const update=()=>{const terms=search.value.toLowerCase().trim().split(/\s+/).filter(Boolean);let count=0;for(const row of rows){const show=(!track.value||row.dataset.track===track.value)&&terms.every(word=>row.textContent.toLowerCase().includes(word));row.hidden=!show;if(show)count++}document.getElementById('search-status').textContent=count+' matching lesson entries'};search.addEventListener('input',update);track.addEventListener('change',update);update()}
+for(const [index,input] of [...document.querySelectorAll('input[data-course-check]')].entries()){const key='ml-course-check:'+location.pathname+':'+index;try{input.checked=localStorage.getItem(key)==='yes'}catch{}input.addEventListener('change',()=>{try{localStorage.setItem(key,input.checked?'yes':'no')}catch{}})}
+const progress=document.querySelector('.progress');addEventListener('scroll',()=>{const size=document.documentElement.scrollHeight-innerHeight;progress.style.width=(size>0?100*scrollY/size:0)+'%'},{passive:true});
+})();
+</script></body></html>

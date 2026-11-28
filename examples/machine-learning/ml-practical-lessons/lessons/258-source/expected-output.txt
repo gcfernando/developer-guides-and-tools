@@ -1,0 +1,11 @@
+PDF reference: Generated example
+Origin of this CSV: original synthetic practice rows
+Rows: 9
+    Column    Type
+experience   int64
+department  object
+    salary float64
+ experience  department  salary
+          1     Support 32000.0
+          2     Support 34000.0
+          4 Engineering 42000.0

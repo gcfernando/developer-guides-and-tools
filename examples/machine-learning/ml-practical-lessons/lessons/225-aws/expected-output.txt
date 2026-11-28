@@ -1,0 +1,8 @@
+ distance_km  weight_kg  valid  expected_status
+           5          2   True              200
+          15          6   True              200
+          -2          4  False              422
+           5          0  False              422
+Platform to explore: AWS
+These are expected responses from a local contract check.
+Use the FastAPI lesson to send real requests to a local test client.

@@ -1,0 +1,9 @@
+Missing ratings: 1
+name  price  installs
+Plan     35     80000
+ Map      4      2000
+Holdout forecast: [661.0]
+  name category  rating  price price_band rating_band  predicted_installs
+ Meter    tools     4.1      0       free     above_4              1000.0
+  Quiz     game     4.2      2       paid     above_4               661.0
+Puzzle     game     3.9      0       free   at_most_4               650.0

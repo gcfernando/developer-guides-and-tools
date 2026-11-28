@@ -1,0 +1,7 @@
+RandomForestRegressor MAE: 5.05
+First actual / predicted: 72.0 71.7
+New inputs and predictions:
+ km  kg  predicted_minutes
+  5   2              28.12
+ 16   4              50.05
+ 42   9              87.75

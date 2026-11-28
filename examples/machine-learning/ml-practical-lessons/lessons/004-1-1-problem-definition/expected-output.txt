@@ -1,0 +1,5 @@
+              use_case      objective
+Estimate delivery time     regression
+Route support messages classification
+        Group shoppers     clustering
+First decision: Estimate delivery time

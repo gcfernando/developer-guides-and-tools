@@ -1,0 +1,11 @@
+          Column  Missing cells
+     distance_km              0
+       weight_kg              1
+            zone              2
+delivery_minutes              0
+
+Rows to review
+ distance_km  weight_kg  zone
+           4        NaN north
+           6        2.0   NaN
+          10        1.0   NaN

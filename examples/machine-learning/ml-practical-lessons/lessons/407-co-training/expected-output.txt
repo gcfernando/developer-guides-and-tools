@@ -1,0 +1,4 @@
+Labeled / unlabeled training rows: 8 46
+Labels per view: [13, 13]
+Holdout accuracy: 1.0
+New guesses: [0, 1, 1]

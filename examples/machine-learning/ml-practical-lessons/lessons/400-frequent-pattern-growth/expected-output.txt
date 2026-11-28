@@ -1,0 +1,2 @@
+fpgrowth [(('bread', 'milk'), 0.6)]
+Milk to bread confidence: 0.75

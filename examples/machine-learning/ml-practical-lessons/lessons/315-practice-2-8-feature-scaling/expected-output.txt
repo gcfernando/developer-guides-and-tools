@@ -1,0 +1,8 @@
+First raw sketch: ['###', '#.#', '#.#', '#.#', '###']
+Blank images to inspect: 0
+Model-input shape: (10, 64)
+Pixel range: 0.0 1.0
+Targets: ['0', '7']
+Predictions: ['0', '7']
+First one-hot label: [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+New labels: ['0', '7']

@@ -1,0 +1,5 @@
+address,weight_kg,minutes
+Depot North,1,10
+Depot South,3,16
+Depot North,,12
+Unknown,2,15

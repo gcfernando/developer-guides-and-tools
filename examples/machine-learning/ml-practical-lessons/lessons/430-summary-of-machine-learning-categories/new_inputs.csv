@@ -1,0 +1,5 @@
+problem,target,feedback
+Predict package weight,weight,known answers
+Find unusual delivery routes,,no answers
+Classify photos with a few known labels,item type,some answers
+Learn parcel sorting with scoring,,rewards

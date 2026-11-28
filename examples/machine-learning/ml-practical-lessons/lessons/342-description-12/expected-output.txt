@@ -1,0 +1,11 @@
+PDF reference: Fashion MNIST Dataset
+Origin of this CSV: original synthetic practice rows
+Rows: 5
+    Column   Type
+     split object
+pixel_rows object
+     label object
+split                    pixel_rows    label
+train .###./#####/#.#.#/..#../.###.  T-shirt
+train ..#../.###./.###./#####/#####    dress
+train .###./.###./.#.#./.#.#./.#.#. trousers

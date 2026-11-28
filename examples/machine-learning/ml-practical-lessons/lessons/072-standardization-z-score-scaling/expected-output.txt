@@ -1,0 +1,17 @@
+Training rows before and after scaling
+ distance_km  weight_kg  scaled_distance  scaled_weight
+           2          1            -1.34          -1.34
+           4          3            -0.45           0.45
+           6          2             0.45          -0.45
+           8          4             1.34           1.34
+
+Check the predictions against actual deliveries
+ distance_km  weight_kg  actual_minutes  predicted_minutes
+          10          1              33               31.0
+          12          3              44               42.0
+
+New deliveries and their predicted minutes
+ distance_km  weight_kg  scaled_distance  scaled_weight  predicted_minutes
+           5          2             0.00          -0.45               27.5
+          10          3             2.24           0.45               39.0
+          12          4             3.13           1.34               46.0

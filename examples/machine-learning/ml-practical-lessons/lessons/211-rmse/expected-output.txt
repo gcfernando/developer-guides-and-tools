@@ -1,0 +1,7 @@
+Worked calculation: two test deliveries. Use lesson 446 for a larger evaluation.
+Typical error in minutes, with extra weight on large misses.
+2.0
+ distance_km  weight_kg  prediction
+           5          2        27.5
+          13          3        43.5
+          20          7        70.0

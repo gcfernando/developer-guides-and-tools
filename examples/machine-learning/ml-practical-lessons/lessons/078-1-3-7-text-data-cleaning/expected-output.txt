@@ -1,0 +1,7 @@
+    Original message   Cleaned message
+MY Parcel Is Late!!! my parcel is late
+Check actual / predicted: ['delivery', 'billing'] ['delivery', 'billing']
+               Raw message             Clean message Prediction
+     WHERE IS MY PARCEL!!!        where is my parcel   delivery
+    REFUND my card charge!     refund my card charge    billing
+The package never arrived. the package never arrived   delivery

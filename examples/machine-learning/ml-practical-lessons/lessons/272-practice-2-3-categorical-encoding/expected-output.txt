@@ -1,0 +1,15 @@
+Missing cells before filling or removing rows: {'area': 0, 'rooms': 0, 'neighborhood': 0, 'street': 0, 'exterior': 0, 'pool': 0, 'garage': 0, 'price': 0}
+Field  Rows to review
+ area               1
+price               1
+Flagged original rows: [4]
+ Original row  Actual answer  Prediction
+            7         187000    251362.9
+            8         395000    573207.9
+ Original row  Actual answer  Prediction  Prediction after inverse log
+            7         187000    251362.9                      206335.4
+            8         395000    573207.9                      483310.7
+ area  rooms neighborhood street exterior pool garage    prediction
+   55      2        North  paved     wood  NaN   none 218573.595948
+  140      5        South  paved    brick good double 573207.861393
+  105      4        North gravel     wood  NaN single 333573.595948

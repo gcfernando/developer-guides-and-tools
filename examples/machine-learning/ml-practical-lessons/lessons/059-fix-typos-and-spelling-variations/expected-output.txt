@@ -1,0 +1,6 @@
+category standard
+    Male     Male
+       M     Male
+  Female   Female
+  female   Female
+Held-out encoded row: [[1.0, 0.0]]

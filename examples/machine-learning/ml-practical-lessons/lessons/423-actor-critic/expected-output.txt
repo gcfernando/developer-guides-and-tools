@@ -1,0 +1,3 @@
+Policy gradient chosen button: 1
+Actor-Critic chosen button: 1
+Estimated policy value: 0.72

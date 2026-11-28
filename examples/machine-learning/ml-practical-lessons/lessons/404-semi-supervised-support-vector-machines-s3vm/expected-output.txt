@@ -1,0 +1,2 @@
+Chosen training pseudo-labels: (-1, -1, 1, 1)
+Predictions for new rows: [-1, 1, 1]

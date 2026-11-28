@@ -1,0 +1,14 @@
+Box-Cox first two training rows: [[-1.64], [-0.85]]
+Actual costs: [23, 48]
+Predicted costs: [26.5, 46.6]
+ signal  predicted_cost
+      3           14.76
+     15           30.88
+     40           42.52
+Yeo-Johnson first two training rows: [[-1.6], [-0.9]]
+Actual costs: [23, 48]
+Predicted costs: [26.0, 47.0]
+ signal  predicted_cost
+      3           13.99
+     15           30.63
+     40           42.79

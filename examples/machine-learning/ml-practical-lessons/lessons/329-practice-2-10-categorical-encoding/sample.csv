@@ -1,0 +1,9 @@
+age,balance,duration,job,marital,education,prior,subscribed
+21,500,60,student,single,school,none,no
+36,1200,110,admin,married,degree,none,no
+44,4200,210,manager,married,degree,success,yes
+51,6500,450,owner,married,graduate,success,yes
+28,300,35,,single,school,none,no
+60,12000,650,owner,,graduate,success,yes
+30,700,40,admin,single,degree,none,no
+49,5000,220,manager,married,degree,success,yes

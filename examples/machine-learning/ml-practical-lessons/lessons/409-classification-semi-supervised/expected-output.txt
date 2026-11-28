@@ -1,0 +1,4 @@
+Labeled / unlabeled training rows: 8 46
+Added pseudo-labels: 46
+Labeled-only / self-training: 1.0 1.0
+New guesses: [0, 1, 1]

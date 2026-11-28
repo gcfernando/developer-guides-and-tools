@@ -1,0 +1,13 @@
+ New row               Method  Filled kg  Prediction in minutes  Actual minutes
+       1                 Mean       2.33                  33.59            33.0
+       2                 Mean       2.00                  28.56            29.0
+       3                 Mean       2.33                  36.85               —
+       1               Median       2.00                  32.14            33.0
+       2               Median       2.00                  29.00            29.0
+       3               Median       2.00                  35.29               —
+       1 Most frequent (mode)       1.00                  45.00            33.0
+       2 Most frequent (mode)       2.00                  32.60            29.0
+       3 Most frequent (mode)       1.00                  57.40               —
+       1  KNN (two neighbors)       3.00                  41.00            33.0
+       2  KNN (two neighbors)       2.00                  31.00            29.0
+       3  KNN (two neighbors)       3.00                  48.33               —

@@ -1,0 +1,16 @@
+PDF reference: Kaggle Titanic Dataset
+Origin of this CSV: original synthetic practice rows
+Rows: 9
+   Column    Type
+      age float64
+     fare   int64
+pass_type  object
+ terminal  object
+    cabin  object
+ siblings   int64
+  parents   int64
+ priority   int64
+ age  fare pass_type terminal cabin  siblings  parents  priority
+18.0    12  standard    north   NaN         0        1         0
+ NaN    18  standard      NaN     A         1        0         0
+52.0    46   premium    south     B         0        0         1

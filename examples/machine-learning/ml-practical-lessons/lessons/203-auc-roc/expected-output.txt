@@ -1,0 +1,6 @@
+Measures ranking across thresholds. A random ranker is about 0.50.
+AUC-ROC 0.991
+ distance  weight  predicted_urgent
+        5       2                 0
+       28       7                 1
+       40       5                 1

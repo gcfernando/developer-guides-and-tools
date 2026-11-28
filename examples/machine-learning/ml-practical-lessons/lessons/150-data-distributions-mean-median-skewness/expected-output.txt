@@ -1,0 +1,5 @@
+        distance  route_distance  weight  minutes
+mean         7.0             7.7    4.33    35.33
+median       7.0             7.7    2.50    31.50
+skew         0.0            -0.0    2.20     1.26
+Distance overlap: 1.0

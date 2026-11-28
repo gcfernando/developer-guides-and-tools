@@ -1,0 +1,4 @@
+      address  weight_kg             latitude            longitude    estimated_minutes
+  North Depot          3                59.35                18.06                 22.5
+  South Depot          2                59.28                18.02                 23.0
+Unknown Depot          2 address needs review address needs review address needs review

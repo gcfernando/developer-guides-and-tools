@@ -1,0 +1,17 @@
+Missing cells before filling or removing rows: {'experience': 0, 'department': 0, 'salary': 1}
+     Field  Rows to review
+experience               0
+    salary               0
+Flagged original rows: []
+ Original row  Actual answer  Prediction
+            8        55000.0     55923.1
+            9        37000.0     37846.2
+ Original row  Actual answer  Prediction  Prediction with scaled target
+            8        55000.0     55923.1                        55923.1
+            9        37000.0     37846.2                        37846.2
+Average of available salaries: 45500.0
+Average with median-filled blanks: 45071.4
+ experience  department   prediction
+          1     Support 31384.615385
+          3     Support 37846.153846
+          4 Engineering 41743.589744

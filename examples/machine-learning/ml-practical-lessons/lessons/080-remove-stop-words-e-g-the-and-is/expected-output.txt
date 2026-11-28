@@ -1,0 +1,8 @@
+Before: ['the', 'parcel', 'is', 'not', 'here', 'and', 'am', 'waiting']
+After: ['parcel', 'not', 'here', 'am', 'waiting']
+Actual: ['delivery', 'billing']
+Predicted: ['delivery', 'billing']
+                         message predicted
+             The parcel is late!  delivery
+I need a refund for two charges.   billing
+          WHERE ARE MY PACKAGES?  delivery

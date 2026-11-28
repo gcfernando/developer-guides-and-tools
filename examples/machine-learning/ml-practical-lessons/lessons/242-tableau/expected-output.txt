@@ -1,0 +1,6 @@
+    Batch  Correct  Checked  Accuracy
+  Morning       18       20       0.9
+   Midday       14       20       0.7
+Afternoon       16       20       0.8
+In Tableau, open dashboard_import.csv, then chart Accuracy by Batch.
+Edit the sample, rerun Python, then refresh the imported file.

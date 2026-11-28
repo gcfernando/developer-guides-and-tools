@@ -1,0 +1,4 @@
+200 {'minutes': 27.8}
+{'distance_km': 5, 'weight_kg': 2} 200 {'minutes': 27.8}
+{'distance_km': 20, 'weight_kg': 4} 200 {'minutes': 61.4}
+{'distance_km': -2, 'weight_kg': 3} 400 {'error': 'Distance must be finite and nonnegative and weight positive.'}

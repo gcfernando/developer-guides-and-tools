@@ -1,0 +1,12 @@
+Original date Standard date Original weight  Weight (kg) Original zone Standard zone  South flag
+   01/02/2025    2025-01-02           10 lb         4.54         NORTH         north           0
+   2025-01-03    2025-01-03            8 kg         8.00         south         south           1
+   01/04/2025    2025-01-04          35 lbs        15.88         NORTH         north           0
+   2025-01-05    2025-01-05           16 kg        16.00         south         south           1
+   2025-01-06    2025-01-06           12 kg        12.00         north         north           0
+   Shipment  Actual time (min)  Predicted time (min)
+Check row 5                 35                  34.5
+      date  weight_kg  zone  weekday  is_south  predicted_minutes
+2025-01-07   8.164663 north        1         0              26.89
+2025-01-09   7.000000 south        3         1              25.89
+2025-01-10  13.607771 north        4         0              34.61

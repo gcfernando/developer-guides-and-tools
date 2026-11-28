@@ -1,0 +1,5 @@
+GridSearchCV 1 MAE 0.81
+ input_1  input_2  input_3  prediction
+       1        0       -1        5.93
+       0        0        0       -0.19
+      -1        1        2       -7.42

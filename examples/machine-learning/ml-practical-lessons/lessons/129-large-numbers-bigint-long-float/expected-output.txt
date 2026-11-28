@@ -1,0 +1,4 @@
+First ID: 123456789012345
+Traffic display: ['1.000e+02', '1.000e+04', '1.000e+06', '1.250e+10']
+Numeric log features: [4.62, 9.21, 13.82, 23.25]
+Held-out cost estimate: [30.8]

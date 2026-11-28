@@ -1,0 +1,7 @@
+normal first two training rows: [[-5.2], [-1.11]]
+Actual costs: [23, 48]
+Predicted costs: [31.7, 38.5]
+ signal  predicted_cost
+      3           26.38
+     15           33.36
+     40           36.88

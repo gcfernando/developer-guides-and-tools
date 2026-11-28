@@ -1,0 +1,7 @@
+Simple predictions: [45.0, 51.2]
+Multiple-predictor predictions: [31.0, 42.0]
+Two outcomes per row: [[31.0, 1.55], [42.0, 1.95]]
+ distance_km  weight_kg   prediction
+           5          2 [27.5, 0.85]
+          13          3  [43.5, 2.1]
+          20          7 [70.0, 3.35]

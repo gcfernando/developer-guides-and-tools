@@ -1,0 +1,3 @@
+Clips × frames × channels × height × width: (8, 4, 1, 6, 6)
+Decoded MP4 direction: [1]
+Directions for all new clips: [1, 0]

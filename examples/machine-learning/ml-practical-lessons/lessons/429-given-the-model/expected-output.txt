@@ -1,0 +1,5 @@
+given-the-model first-action values: [0.74, 0.8]
+Best action: 1
+Start 0, planned values: [0.7403087499999998, 0.8003249999999998]
+Start 1, planned values: [0.7403087499999998, 0.8634999999999999]
+Start 3, planned values: [0.8634999999999999, 1.0]

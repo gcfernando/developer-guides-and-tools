@@ -1,0 +1,14 @@
+Missing cells before filling or removing rows: {'age': 0, 'cholesterol': 0, 'blood_pressure': 0, 'exercise_score': 0, 'sex': 0, 'chest_pain': 0, 'example_label': 0}
+         Field  Rows to review
+           age               0
+   cholesterol               0
+blood_pressure               0
+exercise_score               0
+Flagged original rows: []
+ Original row  Actual answer  Prediction
+            7              0           0
+            8              1           1
+ age  cholesterol  blood_pressure  exercise_score sex chest_pain  prediction
+  29          155             111              80   F       none           0
+  65          277             155              34   F   reported           1
+  58          250             147              39   F   reported           1

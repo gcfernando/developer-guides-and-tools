@@ -1,0 +1,13 @@
+PDF reference: Google Play Store Dataset (Kaggle)
+Origin of this CSV: original synthetic practice rows
+Rows: 7
+  Column    Type
+    name  object
+category  object
+  rating float64
+   price  object
+installs  object
+  name category  rating price installs
+ Meter    tools     4.1    $0   1,000+
+   Map   travel     4.8    $4   2,000+
+Puzzle     game     3.9    $0     650+

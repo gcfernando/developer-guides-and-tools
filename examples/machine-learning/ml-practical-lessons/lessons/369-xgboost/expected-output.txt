@@ -1,0 +1,7 @@
+XGBRegressor MAE: 5.71
+First actual / predicted: 72.0 61.7
+New inputs and predictions:
+ km  kg  predicted_minutes
+  5   2          22.840000
+ 16   4          51.450001
+ 42   9          89.629997

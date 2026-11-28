@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>TEACHING</title><style>
+:root{color-scheme:light dark;--bg:#f5f7fa;--panel:#fff;--text:#203346;--muted:#4e6274;--line:#cbd6df;--link:#145b91}
+@media(prefers-color-scheme:dark){:root{--bg:#111c26;--panel:#192936;--text:#e6edf4;--muted:#b9c8d7;--line:#455d70;--link:#93caff}}
+html[data-theme=light]{color-scheme:light;--bg:#f5f7fa;--panel:#fff;--text:#203346;--muted:#4e6274;--line:#cbd6df;--link:#145b91}
+html[data-theme=dark]{color-scheme:dark;--bg:#111c26;--panel:#192936;--text:#e6edf4;--muted:#b9c8d7;--line:#455d70;--link:#93caff}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:18px/1.7 system-ui,sans-serif}header,main{max-width:1100px;margin:auto;padding:20px 28px}header{border-bottom:1px solid var(--line)}nav{display:flex;flex-wrap:wrap;gap:10px 22px}main{padding-bottom:90px}h1,h2,h3,h4,h5,h6{line-height:1.3;scroll-margin-top:20px}h1{font-size:2.2rem}h2{font-size:1.65rem;margin-top:2.7rem}h3{font-size:1.35rem}h4,h5,h6{font-size:1.15rem}p,li{max-width:86ch}li{margin:.35rem 0}a{color:var(--link);text-underline-offset:.15em}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #d78d13;outline-offset:3px}.skip{position:absolute;top:-100px}.skip:focus{top:0;background:var(--panel);padding:12px}table{border-collapse:collapse;width:100%;font-size:.95rem;background:var(--panel)}th,td{padding:10px 14px;text-align:left;border:1px solid var(--line);vertical-align:top}.table-frame{overflow-x:auto;margin:20px 0}code{font-size:.9em;overflow-wrap:anywhere}pre{background:var(--panel);border:1px solid var(--line);padding:18px;overflow-x:auto;line-height:1.5}pre code{overflow-wrap:normal}img{max-width:100%;height:auto;background:white}details{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:15px 20px;margin:18px 0}summary{cursor:pointer;font-weight:650}.tools{padding:18px;border:1px solid var(--line);background:var(--panel);margin:20px 0}.tools label{display:block}.tools input{width:min(100%,600px)}input,select,button{font:inherit;padding:7px 12px;border:1px solid var(--line);border-radius:5px;background:var(--panel);color:var(--text)}button{cursor:pointer}.copy{font-size:.8rem;float:right}.hint{color:var(--muted);font-size:.9rem}.toc ul{padding-left:22px}.toc{border-left:4px solid var(--line);padding-left:15px;max-height:420px;overflow:auto}.progress{height:4px;background:var(--link);position:fixed;left:0;top:0;z-index:10;width:0}.checklist-item{list-style:none}.checklist-item input{width:auto;margin-right:10px}[hidden]{display:none!important}@media(max-width:650px){body{font-size:17px}header,main{padding:16px}h1{font-size:1.8rem}th,td{padding:8px}.tools input{width:100%}}@media print{body{font-size:11pt;background:white;color:#111}header,.tools,.copy,.progress{display:none}main{padding:0;max-width:none}pre{white-space:pre-wrap}a{color:inherit}details{break-inside:avoid}h2,h3{break-after:avoid}}
+</style></head><body><a class="skip" href="#content">Skip to the lesson</a><div class="progress" aria-hidden="true"></div><header><nav aria-label="Course pages"><a href="START-HERE.html">Start here</a><a href="LEARNING-PATH.html">Learning path</a><a href="SETUP.html">Setup</a><a href="GLOSSARY.html">Word list</a><a href="Data-Science-and-Machine-Learning.html#lesson-downloads">Lesson library</a><button id="theme" type="button">Change colour theme</button></nav></header><main id="content"><h1 id="check-and-teach-this-course">Check and teach this course</h1>
+<p>The course is written for a reader with no ML or Python background. Use short, clear sentences. Explain each new word and action. Keep the correct names next to the plain explanation.</p>
+<h2 id="before-a-lesson">Before a lesson</h2>
+<ol>
+<li>Ask the learner to explain the prior skill.</li>
+<li>Read one tiny example together.</li>
+<li>Ask for a prediction before showing the result.</li>
+<li>Give a hint before giving a solution.</li>
+<li>Ask the learner to explain the result in their own words.</li>
+<li>Finish with a new case that is similar but not identical.</li>
+</ol>
+<p>Do not measure progress by the number of files run. Use the checks in the learning path. Keep the complete solution to the independent project out of the learner's first attempt.</p>
+<h2 id="build-the-deliverables">Build the deliverables</h2>
+<p>Editable lesson files live in <code>lessons/</code>. The workbook text is in <code>Data-Science-and-Machine-Learning.md</code>. Edit the simple-word help in each lesson README. The main guides explain the shared ideas.</p>
+<p>From this course folder, with the course environment active, run:</p>
+<pre><code class="language-bash">python -m pip install -r course_tools/requirements.txt
+python course_tools/build_course.py
+python course_tools/check_course.py
+</code></pre>
+<p>The build makes downloadable ZIPs and readable HTML pages. The checks inspect links, Python syntax and the documented practice changes. Run <code>python course_tools/check_course.py --run</code> to also run distinct lesson scripts. Optional packages may be absent; the report must say which lessons did not run. Build tools are for the author. A learner does not need them.</p>
+<h2 id="test-a-clean-computer-setup">Test a clean computer setup</h2>
+<p>This is a release task, not a claim that it has already passed.</p>
+<div aria-label="Scrollable table" class="table-frame" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th>Computer</th>
+<th>Python version</th>
+<th>Installation commands</th>
+<th>First prediction</th>
+<th>Main path</th>
+<th>Tester and date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Windows</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Mac</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Linux</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<p>Use a clean environment. Follow only the learner instructions. Record the full package versions and any missing operating-system tools. Keep the test output. Do not mark the platform passed just because code worked in an old environment.</p>
+<h2 id="observe-new-learners">Observe new learners</h2>
+<p>Ask several people who have never coded to try the first modules. Include students and working professionals. Ask them to say what they think each step means. Do not silently repair files for them.</p>
+<div aria-label="Scrollable table" class="table-frame" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th>Module and route</th>
+<th>What the learner could explain</th>
+<th>Where they stopped</th>
+<th>Help needed</th>
+<th>Time spent</th>
+<th>Change to try next</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<p>Record observed times before publishing course-time estimates. After a few days, ask learners to solve a small new case without the notes. The independent project checks transfer. A successful install or a copied output does not establish that.</p>
+<h2 id="score-an-independent-project">Score an independent project</h2>
+<p>Give 0 to 4 points in each area. Zero means missing. One means a claim with little evidence. Two means partly correct work. Three means correct work with a clear reason. Four means correct work plus a useful limitation or alternative.</p>
+<div aria-label="Scrollable table" class="table-frame" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th>Area</th>
+<th>Evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Problem and baseline</td>
+<td>A decision, target, available inputs and a simple comparison.</td>
+</tr>
+<tr>
+<td>Data quality</td>
+<td>Source, meanings, units, missingness and uncertain labels.</td>
+</tr>
+<tr>
+<td>Fair check</td>
+<td>Separate row roles and a split suited to the intended use.</td>
+</tr>
+<tr>
+<td>Results</td>
+<td>Counts, suitable errors, large mistakes and limits.</td>
+</tr>
+<tr>
+<td>Handoff</td>
+<td>Reproducible files, a readable explanation and next action.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Require evidence in every area. A high total cannot excuse leakage or using test answers to choose a model. Ask for a corrected project and a new fair check when those occur.</p>
+<h2 id="release-evidence">Release evidence</h2>
+<p>Keep a dated check report. Separate code changes, automated checks, manual browser checks, clean setup checks and observed learner results. The original audit remains in <code>course-review/</code>; it describes the old state. <code>course-review/implementation-status.csv</code> records the response and any checks that still require a person or another computer.</p></main><script>
+(()=>{'use strict';
+const theme=document.getElementById('theme');let saved;try{saved=localStorage.getItem('ml-course-theme')}catch{}if(saved)document.documentElement.dataset.theme=saved;
+theme.addEventListener('click',()=>{const current=document.documentElement.dataset.theme|| (matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');const next=current==='dark'?'light':'dark';document.documentElement.dataset.theme=next;try{localStorage.setItem('ml-course-theme',next)}catch{}});
+for(const pre of document.querySelectorAll('pre')){const button=document.createElement('button');button.className='copy';button.textContent='Copy code';button.type='button';button.addEventListener('click',async()=>{const text=pre.querySelector('code')?.textContent||pre.textContent;try{if(navigator.clipboard?.writeText){await navigator.clipboard.writeText(text)}else{const area=document.createElement('textarea');area.value=text;document.body.append(area);area.select();if(!document.execCommand('copy'))throw Error();area.remove()}button.textContent='Copied'}catch{button.textContent='Select the text to copy'}setTimeout(()=>button.textContent='Copy code',1800)});pre.before(button)}
+const search=document.getElementById('lesson-search'),track=document.getElementById('lesson-track');if(search){const rows=[...document.querySelectorAll('tr[data-track]')];const update=()=>{const terms=search.value.toLowerCase().trim().split(/\s+/).filter(Boolean);let count=0;for(const row of rows){const show=(!track.value||row.dataset.track===track.value)&&terms.every(word=>row.textContent.toLowerCase().includes(word));row.hidden=!show;if(show)count++}document.getElementById('search-status').textContent=count+' matching lesson entries'};search.addEventListener('input',update);track.addEventListener('change',update);update()}
+for(const [index,input] of [...document.querySelectorAll('input[data-course-check]')].entries()){const key='ml-course-check:'+location.pathname+':'+index;try{input.checked=localStorage.getItem(key)==='yes'}catch{}input.addEventListener('change',()=>{try{localStorage.setItem(key,input.checked?'yes':'no')}catch{}})}
+const progress=document.querySelector('.progress');addEventListener('scroll',()=>{const size=document.documentElement.scrollHeight-innerHeight;progress.style.width=(size>0?100*scrollY/size:0)+'%'},{passive:true});
+})();
+</script></body></html>

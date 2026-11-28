@@ -1,0 +1,7 @@
+Lasso MAE: 1.31
+First actual / predicted: 72.0 69.6
+New inputs and predictions:
+ km  kg  predicted_minutes
+  5   2              22.69
+ 16   4              42.70
+ 42   9              90.49

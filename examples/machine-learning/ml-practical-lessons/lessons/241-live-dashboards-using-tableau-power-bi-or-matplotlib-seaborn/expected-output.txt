@@ -1,0 +1,4 @@
+        Dashboard field Value
+Latest labeled accuracy   80%
+        Alert threshold   85%
+          Alert visible  True

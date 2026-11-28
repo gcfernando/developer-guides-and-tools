@@ -1,0 +1,6 @@
+Among truly urgent rows, how many did the model catch?
+recall 0.944
+ distance  weight  predicted_urgent
+        5       2                 0
+       28       7                 1
+       40       5                 1

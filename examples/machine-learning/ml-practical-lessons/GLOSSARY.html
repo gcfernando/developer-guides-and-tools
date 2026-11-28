@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>GLOSSARY</title><style>
+:root{color-scheme:light dark;--bg:#f5f7fa;--panel:#fff;--text:#203346;--muted:#4e6274;--line:#cbd6df;--link:#145b91}
+@media(prefers-color-scheme:dark){:root{--bg:#111c26;--panel:#192936;--text:#e6edf4;--muted:#b9c8d7;--line:#455d70;--link:#93caff}}
+html[data-theme=light]{color-scheme:light;--bg:#f5f7fa;--panel:#fff;--text:#203346;--muted:#4e6274;--line:#cbd6df;--link:#145b91}
+html[data-theme=dark]{color-scheme:dark;--bg:#111c26;--panel:#192936;--text:#e6edf4;--muted:#b9c8d7;--line:#455d70;--link:#93caff}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:18px/1.7 system-ui,sans-serif}header,main{max-width:1100px;margin:auto;padding:20px 28px}header{border-bottom:1px solid var(--line)}nav{display:flex;flex-wrap:wrap;gap:10px 22px}main{padding-bottom:90px}h1,h2,h3,h4,h5,h6{line-height:1.3;scroll-margin-top:20px}h1{font-size:2.2rem}h2{font-size:1.65rem;margin-top:2.7rem}h3{font-size:1.35rem}h4,h5,h6{font-size:1.15rem}p,li{max-width:86ch}li{margin:.35rem 0}a{color:var(--link);text-underline-offset:.15em}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #d78d13;outline-offset:3px}.skip{position:absolute;top:-100px}.skip:focus{top:0;background:var(--panel);padding:12px}table{border-collapse:collapse;width:100%;font-size:.95rem;background:var(--panel)}th,td{padding:10px 14px;text-align:left;border:1px solid var(--line);vertical-align:top}.table-frame{overflow-x:auto;margin:20px 0}code{font-size:.9em;overflow-wrap:anywhere}pre{background:var(--panel);border:1px solid var(--line);padding:18px;overflow-x:auto;line-height:1.5}pre code{overflow-wrap:normal}img{max-width:100%;height:auto;background:white}details{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:15px 20px;margin:18px 0}summary{cursor:pointer;font-weight:650}.tools{padding:18px;border:1px solid var(--line);background:var(--panel);margin:20px 0}.tools label{display:block}.tools input{width:min(100%,600px)}input,select,button{font:inherit;padding:7px 12px;border:1px solid var(--line);border-radius:5px;background:var(--panel);color:var(--text)}button{cursor:pointer}.copy{font-size:.8rem;float:right}.hint{color:var(--muted);font-size:.9rem}.toc ul{padding-left:22px}.toc{border-left:4px solid var(--line);padding-left:15px;max-height:420px;overflow:auto}.progress{height:4px;background:var(--link);position:fixed;left:0;top:0;z-index:10;width:0}.checklist-item{list-style:none}.checklist-item input{width:auto;margin-right:10px}[hidden]{display:none!important}@media(max-width:650px){body{font-size:17px}header,main{padding:16px}h1{font-size:1.8rem}th,td{padding:8px}.tools input{width:100%}}@media print{body{font-size:11pt;background:white;color:#111}header,.tools,.copy,.progress{display:none}main{padding:0;max-width:none}pre{white-space:pre-wrap}a{color:inherit}details{break-inside:avoid}h2,h3{break-after:avoid}}
+</style></head><body><a class="skip" href="#content">Skip to the lesson</a><div class="progress" aria-hidden="true"></div><header><nav aria-label="Course pages"><a href="START-HERE.html">Start here</a><a href="LEARNING-PATH.html">Learning path</a><a href="SETUP.html">Setup</a><a href="GLOSSARY.html">Word list</a><a href="Data-Science-and-Machine-Learning.html#lesson-downloads">Lesson library</a><button id="theme" type="button">Change colour theme</button></nav></header><main id="content"><h1 id="searchable-glossary">🔎 Searchable glossary</h1>
+<p><a href="Data-Science-and-Machine-Learning.html#contents">← Back to the workbook</a></p>
+<p>Press <strong>Ctrl+F</strong> on Windows or Linux, or <strong>Command+F</strong> on a Mac. Search for the term you saw in a lesson. The last column opens a worked example.</p>
+<h2 id="files-and-data">📄 Files and data</h2>
+<div aria-label="Scrollable table" class="table-frame" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Meaning</th>
+<th>Try it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>CSV</strong></td>
+<td>A text file of rows and columns. In the delivery exercise, each row holds one delivery.</td>
+<td><a href="Data-Science-and-Machine-Learning.html#your-first-prediction">First prediction</a></td>
+</tr>
+<tr>
+<td><strong>Terminal</strong></td>
+<td>An app for typing and running commands such as <code>python lesson.py</code>.</td>
+<td><a href="SETUP.html">Setup</a></td>
+</tr>
+<tr>
+<td><strong>Virtual environment</strong></td>
+<td>A folder with its own installed Python packages. The setup creates one called <code>.venv</code>.</td>
+<td><a href="SETUP.html">Setup</a></td>
+</tr>
+<tr>
+<td><strong>Input / feature</strong></td>
+<td>A value the app already knows, such as distance or parcel weight.</td>
+<td><a href="Data-Science-and-Machine-Learning.html#your-first-prediction">First prediction</a></td>
+</tr>
+<tr>
+<td><strong>Target / label</strong></td>
+<td>The answer you want the model to learn, such as measured minutes or whether a delivery was urgent.</td>
+<td><a href="Data-Science-and-Machine-Learning.html#your-first-prediction">First prediction</a></td>
+</tr>
+<tr>
+<td><strong>Prediction</strong></td>
+<td>The model’s answer for a particular input.</td>
+<td><a href="Data-Science-and-Machine-Learning.html#your-first-prediction">First prediction</a></td>
+</tr>
+<tr>
+<td><strong>Missing value / imputation</strong></td>
+<td>A field can be blank. Imputation is a rule for estimating the blank when filling it is appropriate. Learn that rule from training data.</td>
+<td><a href="Data-Science-and-Machine-Learning.html#1-3-1-handle-missing-values">Missing values</a></td>
+</tr>
+<tr>
+<td><strong>Outlier</strong></td>
+<td>An unusual value worth investigating. Check its source before deciding whether to keep, correct, or set it aside.</td>
+<td><a href="Data-Science-and-Machine-Learning.html#spot-check-and-handle-an-outlier">Outliers</a></td>
+</tr>
+<tr>
+<td><strong>Scaling</strong></td>
+<td>Changing the range or units of a number before a model uses it. A new value can lie outside the training range.</td>
+<td><a href="Data-Science-and-Machine-Learning.html#normalization-min-max-scaling">Min-Max Scaling</a></td>
+</tr>
+<tr>
+<td><strong>Encoding</strong></td>
+<td>Turning categories, such as delivery zones, into numbers the model can use.</td>
+<td><a href="Data-Science-and-Machine-Learning.html#one-hot-encoding-for-unordered-categories">One-Hot Encoding</a></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="training-and-checks">🧪 Training and checks</h2>
+<div aria-label="Scrollable table" class="table-frame" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Meaning</th>
+<th>Try it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Training / validation / test</strong></td>
+<td>Learn from training rows, select settings on validation rows, and check the chosen model on separate test rows.</td>
+<td><a href="Data-Science-and-Machine-Learning.html#lesson-442">Split selection</a></td>
+</tr>
+<tr>
+<td><strong>Data leakage</strong></td>
+<td>A model or its selection process sees information reserved for testing or unavailable when making a prediction.</td>
+<td><a href="Data-Science-and-Machine-Learning.html#lesson-442">Split selection</a></td>
+</tr>
+<tr>
+<td><strong>Stratification</strong></td>
+<td>Keeping roughly the same proportions of classes in each split.</td>
+<td><a href="Data-Science-and-Machine-Learning.html#stratified-sampling">Stratified Sampling</a></td>
+</tr>
+<tr>
+<td><strong>Group split</strong></td>
+<td>Keeping the rows for each customer together when you want to test on unseen customers.</td>
+<td><a href="Data-Science-and-Machine-Learning.html#lesson-442">Split selection</a></td>
+</tr>
+<tr>
+<td><strong>Chronological split</strong></td>
+<td>Learning on earlier dates and checking on later ones.</td>
+<td><a href="Data-Science-and-Machine-Learning.html#lesson-442">Split selection</a></td>
+</tr>
+<tr>
+<td><strong>Cross-validation</strong></td>
+<td>Taking turns using different subsets for validation and the rest for training. Fit any preparation step again inside each training subset.</td>
+<td><a href="Data-Science-and-Machine-Learning.html#which-technique-should-you-use">Compare transformations</a></td>
+</tr>
+<tr>
+<td><strong>Baseline</strong></td>
+<td>A simple reference, such as predicting the training median on every delivery.</td>
+<td><a href="Data-Science-and-Machine-Learning.html#lesson-446">Regression evaluation</a></td>
+</tr>
+<tr>
+<td><strong>Overfitting</strong></td>
+<td>Learning details that help on training rows but hurt on separate rows.</td>
+<td><a href="Data-Science-and-Machine-Learning.html#lesson-443">Validation curve</a></td>
+</tr>
+<tr>
+<td><strong>Confusion matrix</strong></td>
+<td>A count table comparing the model’s class with the real class. One cell counts urgent deliveries the model missed.</td>
+<td><a href="Data-Science-and-Machine-Learning.html#confusion-matrix">Confusion Matrix</a></td>
+</tr>
+<tr>
+<td><strong>Precision / recall</strong></td>
+<td>Precision asks what fraction of alerts were correct. Recall asks what fraction of actual urgent orders the model caught.</td>
+<td><a href="Data-Science-and-Machine-Learning.html#lesson-444">Rare-event cutoff</a></td>
+</tr>
+<tr>
+<td><strong>False alarm / missed urgent order</strong></td>
+<td>An alert for a regular delivery, or an urgent delivery that received no alert.</td>
+<td><a href="Data-Science-and-Machine-Learning.html#confusion-matrix">Confusion Matrix</a></td>
+</tr>
+<tr>
+<td><strong>Cutoff / threshold</strong></td>
+<td>The score at which the model starts raising an alert.</td>
+<td><a href="Data-Science-and-Machine-Learning.html#lesson-444">Rare-event cutoff</a></td>
+</tr>
+<tr>
+<td><strong>ROC curve</strong></td>
+<td>A chart of the fraction of urgent orders caught versus the fraction of regular orders that raise false alarms, as the cutoff changes.</td>
+<td><a href="Data-Science-and-Machine-Learning.html#roc-curve">ROC Curve</a></td>
+</tr>
+<tr>
+<td><strong>Calibration / Brier score</strong></td>
+<td>Calibration checks whether predicted chances agree with observed frequencies. Brier score measures mean squared probability error.</td>
+<td><a href="Data-Science-and-Machine-Learning.html#lesson-445">Calibration</a></td>
+</tr>
+<tr>
+<td><strong>MAE / RMSE</strong></td>
+<td>Measures of numerical error in the original units. MAE averages absolute errors. RMSE gives larger errors more weight.</td>
+<td><a href="Data-Science-and-Machine-Learning.html#lesson-446">Regression evaluation</a></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="using-a-model">🚚 Using a model</h2>
+<div aria-label="Scrollable table" class="table-frame" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Meaning</th>
+<th>Try it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Pipeline</strong></td>
+<td>A sequence of preparation steps and a model. It applies the learned preparation to new rows.</td>
+<td><a href="Data-Science-and-Machine-Learning.html#lesson-447">Capstone</a></td>
+</tr>
+<tr>
+<td><strong>API / HTTP status</strong></td>
+<td>An API accepts requests. Its HTTP status can report success (200), or explain a problem such as invalid fields (422 in the capstone).</td>
+<td><a href="Data-Science-and-Machine-Learning.html#lesson-447">Capstone</a></td>
+</tr>
+<tr>
+<td><strong>Drift / monitoring</strong></td>
+<td>Drift is change over time in inputs or their relationship to outcomes. Monitoring checks new data and tracks errors once measured outcomes arrive.</td>
+<td><a href="Data-Science-and-Machine-Learning.html#lesson-447">Capstone</a></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="small-numbers-and-shapes">Small numbers and shapes</h2>
+<div aria-label="Scrollable table" class="table-frame" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th>Word</th>
+<th>Simple meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mean</td>
+<td>Add the values and divide by their count. The mean of 2, 4 and 6 is 4.</td>
+</tr>
+<tr>
+<td>Median</td>
+<td>Sort values and find the middle. The median of 1, 2 and 90 is 2. With an even count, average the middle two.</td>
+</tr>
+<tr>
+<td>Mode</td>
+<td>A most common value. Ties need a stated rule.</td>
+</tr>
+<tr>
+<td>Percentage</td>
+<td>A share out of 100. Two out of ten is 20%.</td>
+</tr>
+<tr>
+<td>Distribution</td>
+<td>How values are spread across a range.</td>
+</tr>
+<tr>
+<td>Standard deviation</td>
+<td>A measure of how far values spread around their mean.</td>
+</tr>
+<tr>
+<td>Quartile / IQR</td>
+<td>Quartiles divide sorted values into quarters. IQR is the gap between the lower and upper quarters.</td>
+</tr>
+<tr>
+<td>Correlation</td>
+<td>A measure of how two values move together. It does not prove a cause.</td>
+</tr>
+<tr>
+<td>Row / column</td>
+<td>A row is one record across a table. A column is one kind of fact down it.</td>
+</tr>
+<tr>
+<td>Array / matrix / tensor</td>
+<td>Arrays hold values in positions. A matrix has rows and columns. Tensor is a general word for arrays with several dimensions.</td>
+</tr>
+<tr>
+<td>Shape</td>
+<td>The size along each array direction. Shape (6, 8) means six rows and eight values per row.</td>
+</tr>
+<tr>
+<td>Vector</td>
+<td>One list of numbers. A message embedding is one such list.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="code-and-learning-words">Code and learning words</h2>
+<div aria-label="Scrollable table" class="table-frame" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th>Word</th>
+<th>Simple meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Variable</td>
+<td>A name holding a value, such as distance = 4.</td>
+</tr>
+<tr>
+<td>String</td>
+<td>Text in code, often written in quotes. An ID can be a string even if it contains digits.</td>
+</tr>
+<tr>
+<td>Function / method</td>
+<td>Named steps that do a job. A method belongs to an object, as in model.predict.</td>
+</tr>
+<tr>
+<td>Package</td>
+<td>Extra Python tools. Install a package, then import the part you need.</td>
+</tr>
+<tr>
+<td>DataFrame / pandas</td>
+<td>A DataFrame is a table in Python. pandas supplies the table tools.</td>
+</tr>
+<tr>
+<td>CSV / JSON</td>
+<td>CSV is a text table. JSON is text with named fields, often used in requests.</td>
+</tr>
+<tr>
+<td>Fit</td>
+<td>Learn model or preparation values from training examples.</td>
+</tr>
+<tr>
+<td>Transform</td>
+<td>Apply a preparation rule. Use the rule learned during training.</td>
+</tr>
+<tr>
+<td>Model setting / hyperparameter</td>
+<td>A choice controlling learning, such as a tree's allowed depth.</td>
+</tr>
+<tr>
+<td>Regularization / alpha</td>
+<td>A penalty discouraging some complex fits or large weights. Alpha controls its strength in Ridge and Lasso. Feature units can affect the penalty.</td>
+</tr>
+<tr>
+<td>Coefficient / weight</td>
+<td>A learned value that changes how an input contributes to a model result.</td>
+</tr>
+<tr>
+<td>Loss</td>
+<td>A number measuring mistakes during learning. The model tries to reduce it.</td>
+</tr>
+<tr>
+<td>Optimizer / gradient</td>
+<td>An optimizer changes learned values. A gradient describes a direction of change for a loss.</td>
+</tr>
+<tr>
+<td>Epoch</td>
+<td>One pass through the training data.</td>
+</tr>
+<tr>
+<td>Embedding</td>
+<td>A list of numbers representing an item. It may be hand-built or learned.</td>
+</tr>
+<tr>
+<td>Token / vocabulary</td>
+<td>A token is a text piece, such as a word. A vocabulary is the set of pieces known by the text process.</td>
+</tr>
+<tr>
+<td>Pseudo-label</td>
+<td>A model's guessed training answer. It is not a confirmed fact.</td>
+</tr>
+<tr>
+<td>Silhouette</td>
+<td>A score about group separation under a chosen distance rule. It does not prove business usefulness.</td>
+</tr>
+<tr>
+<td>Probability</td>
+<td>A stated chance, between 0 and 1. It is not a promise for one event.</td>
+</tr>
+<tr>
+<td>R squared</td>
+<td>A score comparing squared errors with a mean-answer benchmark on the same check rows. Zero matches that benchmark; negative can be worse.</td>
+</tr>
+<tr>
+<td>Residual</td>
+<td>Actual value minus predicted value. Positive delivery residuals mean the guess was too short.</td>
+</tr>
+<tr>
+<td>Metadata / data dictionary</td>
+<td>Metadata is notes about data or a model. A data dictionary explains each field and its units.</td>
+</tr>
+<tr>
+<td>API / endpoint / port</td>
+<td>An API lets programs exchange requests and replies. An endpoint is a particular route, such as /predict. A port is a numbered connection point, such as 8000.</td>
+</tr>
+<tr>
+<td>Artifact / inference</td>
+<td>An artifact is a saved output, such as a model file. Inference means using a trained model to make predictions.</td>
+</tr>
+<tr>
+<td>Local / cloud</td>
+<td>Local runs on your computer. Cloud runs on another service's computers. A local test does not publish a service.</td>
+</tr>
+<tr>
+<td>Policy / return / exploration</td>
+<td>A policy chooses an action. Return adds rewards over a route. Exploration tries actions to learn about them.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Read <a href="PYTHON-BASICS.html">Python basics</a> for the symbols, and <a href="ELECTIVES.html">Extra topics</a> for advanced names. You do not need to learn them all before the first lesson.</p></main><script>
+(()=>{'use strict';
+const theme=document.getElementById('theme');let saved;try{saved=localStorage.getItem('ml-course-theme')}catch{}if(saved)document.documentElement.dataset.theme=saved;
+theme.addEventListener('click',()=>{const current=document.documentElement.dataset.theme|| (matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');const next=current==='dark'?'light':'dark';document.documentElement.dataset.theme=next;try{localStorage.setItem('ml-course-theme',next)}catch{}});
+for(const pre of document.querySelectorAll('pre')){const button=document.createElement('button');button.className='copy';button.textContent='Copy code';button.type='button';button.addEventListener('click',async()=>{const text=pre.querySelector('code')?.textContent||pre.textContent;try{if(navigator.clipboard?.writeText){await navigator.clipboard.writeText(text)}else{const area=document.createElement('textarea');area.value=text;document.body.append(area);area.select();if(!document.execCommand('copy'))throw Error();area.remove()}button.textContent='Copied'}catch{button.textContent='Select the text to copy'}setTimeout(()=>button.textContent='Copy code',1800)});pre.before(button)}
+const search=document.getElementById('lesson-search'),track=document.getElementById('lesson-track');if(search){const rows=[...document.querySelectorAll('tr[data-track]')];const update=()=>{const terms=search.value.toLowerCase().trim().split(/\s+/).filter(Boolean);let count=0;for(const row of rows){const show=(!track.value||row.dataset.track===track.value)&&terms.every(word=>row.textContent.toLowerCase().includes(word));row.hidden=!show;if(show)count++}document.getElementById('search-status').textContent=count+' matching lesson entries'};search.addEventListener('input',update);track.addEventListener('change',update);update()}
+for(const [index,input] of [...document.querySelectorAll('input[data-course-check]')].entries()){const key='ml-course-check:'+location.pathname+':'+index;try{input.checked=localStorage.getItem(key)==='yes'}catch{}input.addEventListener('change',()=>{try{localStorage.setItem(key,input.checked?'yes':'no')}catch{}})}
+const progress=document.querySelector('.progress');addEventListener('scroll',()=>{const size=document.documentElement.scrollHeight-innerHeight;progress.style.width=(size>0?100*scrollY/size:0)+'%'},{passive:true});
+})();
+</script></body></html>

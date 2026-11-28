@@ -1,0 +1,9 @@
+age,hours,education,workclass,occupation,marital_status,income_group
+22,25,school,private,retail,single,50k_or_less
+30,35,degree,private,analyst,single,50k_or_less
+36,45,degree,public,manager,married,above_50k
+49,47,graduate,private,,married,above_50k
+47,50,degree,,engineer,married,above_50k
+73,17,school,private,retail,single,50k_or_less
+28,28,school,public,,single,50k_or_less
+38,45,degree,public,engineer,married,above_50k

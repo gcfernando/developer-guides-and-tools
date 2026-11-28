@@ -1,0 +1,7 @@
+Pipeline MAE: 1.82
+First actual / predicted: 72.0 70.5
+New inputs and predictions:
+ km  kg  predicted_minutes
+  5   2              32.28
+ 16   4              39.67
+ 42   9              93.44

@@ -1,0 +1,11 @@
+age,annual_income,score,region
+21,24000,68,north
+24,,72,north
+22,27000,70,north
+42,57000,40,south
+46,60000,,south
+44,56000,42,south
+60,94000,75,west
+58,90000,77,west
+64,130000,80,west
+61,96000,78,west

@@ -1,0 +1,4 @@
+ANOVA selected: ['minutes']
+Held-out labels: [0, 1]
+Chi-square selected: ['keyword']
+Held-out labels: [0, 1]

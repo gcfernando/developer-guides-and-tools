@@ -1,0 +1,2 @@
+Similar names: 0.91
+Confirmed distinct orders: ['A', 'B']

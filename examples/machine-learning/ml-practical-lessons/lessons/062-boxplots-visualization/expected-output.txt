@@ -1,0 +1,2 @@
+ weight_kg  Z-score  IQR
+        80     True True

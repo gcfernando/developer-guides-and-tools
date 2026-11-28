@@ -1,0 +1,12 @@
+Shared shipment IDs across splits: 0
+     Set  Rows  Urgent  Urgent (%)
+Training    80      16        20.0
+    Test    20       4        20.0
+Look for 80 training orders and 20 test orders. The tree depth is fixed before testing.
+Chosen depth: 2
+Test: 4 urgent caught, 0 urgent missed, 1 false alarms, 15 regular correct.
+The test contains only 4 urgent orders. A single missed order changes recall a lot.
+ distance_km  weight_kg  predicted_urgent
+           5          2             False
+          39          4             False
+          47          3             False

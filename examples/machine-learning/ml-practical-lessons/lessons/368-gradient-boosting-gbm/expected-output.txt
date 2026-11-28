@@ -1,0 +1,7 @@
+GradientBoostingRegressor MAE: 3.99
+First actual / predicted: 72.0 78.4
+New inputs and predictions:
+ km  kg  predicted_minutes
+  5   2              25.10
+ 16   4              46.07
+ 42   9              91.46

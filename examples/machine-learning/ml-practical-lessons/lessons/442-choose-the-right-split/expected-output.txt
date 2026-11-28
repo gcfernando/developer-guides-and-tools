@@ -1,0 +1,7 @@
+    Plan  Test orders  Shared shipments  Shared customers  Test is entirely later  Test MAE (min)
+  random          105                 0                63                   False            2.92
+customer          105                 0                 0                   False            5.91
+    time          105                 0                84                    True            2.50
+
+Random: independent orders in the same setting. Customer: customers the model has never seen.
+Time: later orders. Their customers may already be known. Pick the plan before comparing scores.

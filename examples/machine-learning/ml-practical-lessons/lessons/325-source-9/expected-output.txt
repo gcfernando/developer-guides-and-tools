@@ -1,0 +1,12 @@
+PDF reference: Kaggle Customer Segmentation Dataset
+Origin of this CSV: original synthetic practice rows
+Rows: 10
+       Column    Type
+          age   int64
+annual_income float64
+        score float64
+       region  object
+ age  annual_income  score region
+  21        24000.0   68.0  north
+  24            NaN   72.0  north
+  22        27000.0   70.0  north

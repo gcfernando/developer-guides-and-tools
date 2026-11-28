@@ -1,0 +1,14 @@
+One completed delivery
+ distance_km  minutes
+           1       12
+
+Compare the recorded and predicted minutes
+ distance_km  minutes  predicted_minutes
+           5       20               20.0
+           6       22               22.0
+
+New delivery estimates
+ distance_km  Predicted time (min)
+           4                  18.0
+           7                  24.0
+           9                  28.0

@@ -1,0 +1,5 @@
+              use_case                          domain_check
+Estimate delivery time                     Distance is in km
+Route support messages              Negation changes meaning
+        Group shoppers Income and scores use different units
+First decision: Estimate delivery time

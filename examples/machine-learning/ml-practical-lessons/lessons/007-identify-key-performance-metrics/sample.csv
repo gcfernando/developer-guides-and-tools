@@ -1,0 +1,4 @@
+use_case,objective,metric,domain_check,constraint
+Estimate delivery time,regression,RMSE,Distance is in km,One laptop
+Route support messages,classification,F1,Negation changes meaning,Review missed items
+Group shoppers,clustering,Silhouette,Income and scores use different units,Groups must be interpretable

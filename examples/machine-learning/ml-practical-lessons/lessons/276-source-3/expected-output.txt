@@ -1,0 +1,16 @@
+PDF reference: Kaggle House Prices Dataset
+Origin of this CSV: original synthetic practice rows
+Rows: 8
+      Column   Type
+        area  int64
+       rooms  int64
+neighborhood object
+      street object
+    exterior object
+        pool object
+      garage object
+       price  int64
+ area  rooms neighborhood street exterior pool garage  price
+   55      2        North  paved     wood  NaN   none 165000
+   72      3        South  paved    brick  NaN single 215000
+  105      4        North gravel     wood  NaN single 280000

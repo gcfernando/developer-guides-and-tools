@@ -1,0 +1,13 @@
+Missing cells before filling or removing rows: {'crime_per_1000': 0, 'rooms': 0, 'household_income': 1, 'zone': 0, 'price': 0}
+           Field  Rows to review
+  crime_per_1000               1
+           rooms               0
+household_income               1
+Flagged original rows: [5, 6]
+ Original row  Actual answer  Prediction
+            7         230000    235290.5
+            8         312000    317095.4
+ crime_per_1000  rooms  household_income    zone    prediction
+              2      3           38000.0   North 180000.000000
+              1      5           61000.0   South 317095.435685
+              4      4               NaN Central 215000.000000

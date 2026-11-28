@@ -1,0 +1,11 @@
+PDF reference: MNIST Dataset
+Origin of this CSV: original synthetic practice rows
+Rows: 12
+    Column   Type
+     split object
+pixel_rows object
+     label  int64
+split          pixel_rows  label
+train ###/#.#/#.#/#.#/###      0
+train .#./##./.#./.#./###      1
+train ###/..#/###/#../###      2

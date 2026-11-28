@@ -1,0 +1,41 @@
+"""
+Policy Optimization
+
+Adjust the robot’s chances of picking an action based on the rewards it earns.
+
+Run: python lesson.py
+Try changing button from left to right in sample.csv. Compare the new output.
+"""
+
+from pathlib import Path
+import numpy as np
+import pandas as pd
+
+input_path = Path(__file__).resolve().with_name("sample.csv")
+
+
+rng = np.random.default_rng(7)
+
+# 1. Read the CSV and check its inputs, including button, chance_of_reward.
+buttons = pd.read_csv(input_path)
+reward_chance = buttons["chance_of_reward"].to_numpy()
+
+
+# 2. Compare the printed output with the original values.
+for method in ["Policy gradient"]:
+    logits = np.zeros(2)
+    critic = 0.0
+    for _ in range(500):
+        probabilities = np.exp(logits - logits.max())
+        probabilities /= probabilities.sum()
+        action = rng.choice(2, p=probabilities)
+        reward = float(rng.random() < reward_chance[action])
+        gradient = np.eye(2)[action] - probabilities
+        advantage = reward
+        if method == "Actor-Critic":
+            advantage = reward - critic
+            critic += 0.05 * advantage
+        logits += 0.08 * advantage * gradient
+    print(method, "chosen button:", int(logits.argmax()))
+    if method == "Actor-Critic":
+        print("Estimated policy value:", round(critic, 2))

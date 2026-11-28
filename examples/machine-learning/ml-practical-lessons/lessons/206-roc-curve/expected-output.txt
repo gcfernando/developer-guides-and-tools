@@ -1,0 +1,5 @@
+ Cutoff  Urgent caught  Urgent missed  False alarms  Urgent recall  False alarm rate
+   0.25             18              0             2          1.000             0.167
+   0.75             17              1             1          0.944             0.083
+AUC-ROC: 0.991
+Here the test cutoffs are fixed for teaching. Choose an app cutoff on validation data.

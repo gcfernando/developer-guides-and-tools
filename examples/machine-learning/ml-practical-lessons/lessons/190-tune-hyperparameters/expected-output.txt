@@ -1,0 +1,7 @@
+GridSearchCV 1 MAE 0.81
+RandomizedSearchCV 0.062 MAE 0.837
+Bayesian 1.585 MAE 0.802
+ input_1  input_2  input_3  prediction
+       1        0       -1        5.85
+       0        0        0       -0.20
+      -1        1        2       -7.36

@@ -1,0 +1,7 @@
+distance_km,weight_kg,zone
+15,3,North
+45,,South
+65,10,West
+90,4,North
+-4,3,West
+12,3,Unknown

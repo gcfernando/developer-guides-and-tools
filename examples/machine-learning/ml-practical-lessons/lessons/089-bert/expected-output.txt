@@ -1,0 +1,6 @@
+Training matrix: (6, 16)
+Held-out predictions: ['delivery', 'billing']
+                         message predicted
+             The parcel is late!  delivery
+I need a refund for two charges.  delivery
+          WHERE ARE MY PACKAGES?  delivery

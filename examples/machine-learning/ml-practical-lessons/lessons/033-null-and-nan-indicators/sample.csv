@@ -1,0 +1,7 @@
+distance_km,weight_kg,zone,delivery_minutes
+2,1,north,19
+4,,north,30
+6,2,,29
+8,4,south,40
+10,1,?,33
+12,3,south,44

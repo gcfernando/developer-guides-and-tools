@@ -1,0 +1,3 @@
+Recent accuracy: 0.53 median km change: 7.0
+ALERT: investigate before promoting a candidate.
+Later batch, live / candidate: 0.5 1.0

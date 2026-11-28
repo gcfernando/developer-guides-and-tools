@@ -1,0 +1,7 @@
+Z-Score Standardization first two training rows: [[-0.82], [-0.75]]
+Actual costs: [23, 48]
+Predicted costs: [23.9, 37.7]
+ signal  predicted_cost
+      3           21.69
+     15           25.40
+     40           33.12

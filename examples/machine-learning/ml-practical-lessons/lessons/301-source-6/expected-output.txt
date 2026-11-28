@@ -1,0 +1,12 @@
+PDF reference: UCI Wine Quality Dataset
+Origin of this CSV: original synthetic practice rows
+Rows: 8
+     Column    Type
+    alcohol float64
+citric_acid float64
+  sulphates float64
+    quality   int64
+ alcohol  citric_acid  sulphates  quality
+     8.0          0.2        0.3        4
+     9.0          0.2        0.4        5
+    10.0          0.3        NaN        5

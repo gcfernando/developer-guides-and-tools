@@ -1,0 +1,5 @@
+distance_km,weight_kg,zone,actual_minutes
+5,2,North,23
+8,3,South,34
+11,,North,36
+6,1,West,

@@ -1,0 +1,6 @@
+Combines precision and recall. It falls when either score is low.
+F1 0.919
+ distance  weight  predicted_urgent
+        5       2                 0
+       28       7                 1
+       40       5                 1

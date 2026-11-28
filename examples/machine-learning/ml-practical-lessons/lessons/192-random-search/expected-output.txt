@@ -1,0 +1,5 @@
+RandomizedSearchCV 0.062 MAE 0.837
+ input_1  input_2  input_3  prediction
+       1        0       -1        6.06
+       0        0        0       -0.16
+      -1        1        2       -7.51

@@ -1,0 +1,10 @@
+age,fare,pass_type,terminal,cabin,siblings,parents,priority
+18,12,standard,north,,0,1,0
+,18,standard,,A,1,0,0
+52,46,premium,south,B,0,0,1
+34,24,standard,north,,1,1,0
+62,64,premium,south,C,0,0,1
+65,22,standard,south,B,0,0,1
+29,120,premium,north,A,2,0,1
+19,19,standard,north,,0,1,0
+57,42,premium,south,B,1,1,1

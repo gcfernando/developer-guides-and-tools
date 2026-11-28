@@ -1,0 +1,10 @@
+ day  requests  forward  backward
+   1      10.0     10.0      10.0
+   2       NaN     10.0      16.0
+   3      16.0     16.0      16.0
+   4      19.0     19.0      19.0
+Day 5 forecast: [22.0]
+ day  prediction
+   6        24.7
+   7        27.4
+  10        35.5

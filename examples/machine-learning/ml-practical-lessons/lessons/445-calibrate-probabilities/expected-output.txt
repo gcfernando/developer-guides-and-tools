@@ -1,0 +1,3 @@
+Raw forest test Brier score: 0.1081
+Adjusted forest test Brier score: 0.1083
+Lower Brier score is better on this probability check. Changing bins changes the visual, not the score.

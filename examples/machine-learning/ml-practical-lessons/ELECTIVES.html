@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ELECTIVES</title><style>
+:root{color-scheme:light dark;--bg:#f5f7fa;--panel:#fff;--text:#203346;--muted:#4e6274;--line:#cbd6df;--link:#145b91}
+@media(prefers-color-scheme:dark){:root{--bg:#111c26;--panel:#192936;--text:#e6edf4;--muted:#b9c8d7;--line:#455d70;--link:#93caff}}
+html[data-theme=light]{color-scheme:light;--bg:#f5f7fa;--panel:#fff;--text:#203346;--muted:#4e6274;--line:#cbd6df;--link:#145b91}
+html[data-theme=dark]{color-scheme:dark;--bg:#111c26;--panel:#192936;--text:#e6edf4;--muted:#b9c8d7;--line:#455d70;--link:#93caff}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:18px/1.7 system-ui,sans-serif}header,main{max-width:1100px;margin:auto;padding:20px 28px}header{border-bottom:1px solid var(--line)}nav{display:flex;flex-wrap:wrap;gap:10px 22px}main{padding-bottom:90px}h1,h2,h3,h4,h5,h6{line-height:1.3;scroll-margin-top:20px}h1{font-size:2.2rem}h2{font-size:1.65rem;margin-top:2.7rem}h3{font-size:1.35rem}h4,h5,h6{font-size:1.15rem}p,li{max-width:86ch}li{margin:.35rem 0}a{color:var(--link);text-underline-offset:.15em}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #d78d13;outline-offset:3px}.skip{position:absolute;top:-100px}.skip:focus{top:0;background:var(--panel);padding:12px}table{border-collapse:collapse;width:100%;font-size:.95rem;background:var(--panel)}th,td{padding:10px 14px;text-align:left;border:1px solid var(--line);vertical-align:top}.table-frame{overflow-x:auto;margin:20px 0}code{font-size:.9em;overflow-wrap:anywhere}pre{background:var(--panel);border:1px solid var(--line);padding:18px;overflow-x:auto;line-height:1.5}pre code{overflow-wrap:normal}img{max-width:100%;height:auto;background:white}details{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:15px 20px;margin:18px 0}summary{cursor:pointer;font-weight:650}.tools{padding:18px;border:1px solid var(--line);background:var(--panel);margin:20px 0}.tools label{display:block}.tools input{width:min(100%,600px)}input,select,button{font:inherit;padding:7px 12px;border:1px solid var(--line);border-radius:5px;background:var(--panel);color:var(--text)}button{cursor:pointer}.copy{font-size:.8rem;float:right}.hint{color:var(--muted);font-size:.9rem}.toc ul{padding-left:22px}.toc{border-left:4px solid var(--line);padding-left:15px;max-height:420px;overflow:auto}.progress{height:4px;background:var(--link);position:fixed;left:0;top:0;z-index:10;width:0}.checklist-item{list-style:none}.checklist-item input{width:auto;margin-right:10px}[hidden]{display:none!important}@media(max-width:650px){body{font-size:17px}header,main{padding:16px}h1{font-size:1.8rem}th,td{padding:8px}.tools input{width:100%}}@media print{body{font-size:11pt;background:white;color:#111}header,.tools,.copy,.progress{display:none}main{padding:0;max-width:none}pre{white-space:pre-wrap}a{color:inherit}details{break-inside:avoid}h2,h3{break-after:avoid}}
+</style></head><body><a class="skip" href="#content">Skip to the lesson</a><div class="progress" aria-hidden="true"></div><header><nav aria-label="Course pages"><a href="START-HERE.html">Start here</a><a href="LEARNING-PATH.html">Learning path</a><a href="SETUP.html">Setup</a><a href="GLOSSARY.html">Word list</a><a href="Data-Science-and-Machine-Learning.html#lesson-downloads">Lesson library</a><button id="theme" type="button">Change colour theme</button></nav></header><main id="content"><h1 id="extra-topics-one-small-step-at-a-time">Extra topics, one small step at a time</h1>
+<p><a href="LEARNING-PATH.html">Learning path</a> · <a href="GLOSSARY.html">Word list</a></p>
+<p>These topics are optional. Finish the main path first. A technical name is useful for looking things up. You do not need to remember every name now.</p>
+<p>Before starting an extra topic, explain its small first example on paper. If that is hard, use the named earlier skill first.</p>
+<div aria-label="Scrollable table" class="table-frame" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th>Topic</th>
+<th>Know this first</th>
+<th>Start with this small task</th>
+<th>What the name means</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>KNN fill, lesson 041</td>
+<td>Missing values, scaling, averages</td>
+<td>Draw three deliveries. Fill a blank from two nearby examples.</td>
+<td>KNN means nearest neighbours. “Near” depends on the input scale.</td>
+</tr>
+<tr>
+<td>Target encoding, 077</td>
+<td>Categories, training and leakage</td>
+<td>Count delayed orders for one supplier. Leave a row's own answer out when preparing that training row.</td>
+<td>Replace a name with a number learned from training answers. Small groups need care.</td>
+</tr>
+<tr>
+<td>Power and rank changes, 139–144</td>
+<td>Graphs, training and validation</td>
+<td>Write five numbers before and after one change. Explain what happened to their gaps.</td>
+<td>Box–Cox and Yeo–Johnson change a number's shape. Quantiles use ranks.</td>
+</tr>
+<tr>
+<td>Powers of inputs, 146/364</td>
+<td>Multiplication, overfitting</td>
+<td>For x = 2, calculate x, x squared and x cubed: 2, 4 and 8.</td>
+<td>Polynomial features add powers or products so a model can fit a curve.</td>
+</tr>
+<tr>
+<td>Feature tests, 169–173</td>
+<td>Inputs, labels, validation</td>
+<td>Compare a useful field, a random field and an ID.</td>
+<td>ANOVA compares group variation. Chi-square checks count or indicator features. Each has assumptions.</td>
+</tr>
+<tr>
+<td>Cross-validation, 194</td>
+<td>Training, validation and average error</td>
+<td>Make three piles of cards. Take turns holding one pile back.</td>
+<td>Use several training/check divisions to inspect performance. Learn preparation again within each training pile.</td>
+</tr>
+<tr>
+<td>Grid and random search, 191–192</td>
+<td>A setting and cross-validation</td>
+<td>Compare just two settings by hand.</td>
+<td>Grid tries listed settings. Random search samples choices.</td>
+</tr>
+<tr>
+<td>Bayesian search, 193</td>
+<td>Validation, search, uncertainty</td>
+<td>Draw a list of tried settings and scores. Ask which untried setting is worth trying next.</td>
+<td>Use earlier trials to guide a later trial. The helper model and search rule need extra study.</td>
+</tr>
+<tr>
+<td>ROC and precision-recall curves, 206/444</td>
+<td>Error counts and fractions</td>
+<td>Change a cutoff on ten scored orders. Count misses and false alarms each time.</td>
+<td>Curves show trade-offs as the cutoff moves. They do not choose the business policy for you.</td>
+</tr>
+<tr>
+<td>Calibration, 445</td>
+<td>Probability and many check rows</td>
+<td>Group cases with similar predicted chances. Compare the average chance with the share that happened.</td>
+<td>Check whether stated chances match observed rates. A small group is uncertain.</td>
+</tr>
+<tr>
+<td>PCA, 390</td>
+<td>Columns, graphs and spread</td>
+<td>Draw two overlapping measurements and a new direction that keeps much of their spread.</td>
+<td>Combine columns into fewer directions. High retained spread does not prove a useful prediction.</td>
+</tr>
+<tr>
+<td>LDA, 392</td>
+<td>Known labels and projections</td>
+<td>Draw a direction that helps separate two known groups.</td>
+<td>This method uses labels, so it is supervised.</td>
+</tr>
+<tr>
+<td>ICA, 393</td>
+<td>Mixed measurements</td>
+<td>Imagine two microphones both hearing two speakers.</td>
+<td>Try to separate mixed signals into more independent parts. Parts can change order or sign.</td>
+</tr>
+<tr>
+<td>t-SNE, 391</td>
+<td>Similarity and scaling</td>
+<td>Mark each row on a two-dimensional picture. Check its nearby neighbours.</td>
+<td>Show local neighbours. Far-apart groups and axis values have limited meaning.</td>
+</tr>
+<tr>
+<td>K-Means, DBSCAN and GMM, 385–388</td>
+<td>Distance, scaling and groups</td>
+<td>Group paper points. Add a point between groups and one far away.</td>
+<td>K-Means uses centres. DBSCAN uses dense areas. GMM gives chances across groups.</td>
+</tr>
+<tr>
+<td>TF-IDF, 086</td>
+<td>Word counts</td>
+<td>Count one word in three messages. Compare a common word with one found in only one message.</td>
+<td>Give words different weights based on how common they are across training messages.</td>
+</tr>
+<tr>
+<td>Word2Vec and BERT, 088–089</td>
+<td>Words as numbers, vectors, neural networks</td>
+<td>Compare a word-count row with a short list of numbers representing a message.</td>
+<td>These are ways to make word or message representations. The workbook's random BERT example has no learned language knowledge.</td>
+</tr>
+<tr>
+<td>Images and CNNs, 113–117</td>
+<td>Arrays and basic networks</td>
+<td>Draw a 3 by 3 pixel grid. Flatten it. Then move a small filter over it by hand.</td>
+<td>A CNN learns filters over nearby pixels. The pixel/KNN lesson is only preparation.</td>
+</tr>
+<tr>
+<td>Image features, 114</td>
+<td>Pixels, rows and columns</td>
+<td>Compare the vertical and horizontal spread of a small line drawing.</td>
+<td>An embedding is a list of numbers representing an item. It can be hand-built or learned.</td>
+</tr>
+<tr>
+<td>Audio and MFCC, 118–121</td>
+<td>Time, waves and sampling</td>
+<td>Compare two tones, their wave pictures and their frequency peaks.</td>
+<td>MFCC is a compact summary made through several frequency-processing steps. Study these separately.</td>
+</tr>
+<tr>
+<td>Video and LSTM, 122–124</td>
+<td>Images, arrays and networks</td>
+<td>Read the same frames forwards and backwards. Explain why motion changes.</td>
+<td>An LSTM processes a sequence. A tensor is an array with named or understood dimensions.</td>
+</tr>
+<tr>
+<td>Semi-supervised methods, 402–409</td>
+<td>Supervised learning and a fair holdout</td>
+<td>Mark confirmed labels and guessed labels in different colours. Show one wrong guess spreading.</td>
+<td>Learn from some known answers and some unanswered rows. Guesses are not confirmed facts.</td>
+</tr>
+<tr>
+<td>Q-learning, 420</td>
+<td>Actions, rewards and averages</td>
+<td>Move along the five-cell track. Work out one action's reward and a discounted later reward.</td>
+<td>Learn a table of action values from feedback. Exploration means trying a move to learn about it.</td>
+</tr>
+<tr>
+<td>DQN, 421</td>
+<td>Q-learning, networks and loss</td>
+<td>Replace one small Q-table row with two network outputs.</td>
+<td>Use a neural network for action values. Replay reuses past moves; a target copy helps the updates.</td>
+</tr>
+<tr>
+<td>Actor–critic, 423</td>
+<td>Probability, rewards and policy</td>
+<td>Choose between two buttons. Compare the reward with an expected reward.</td>
+<td>The actor chooses. The critic estimates value. This toy task is not a full robot system.</td>
+</tr>
+<tr>
+<td>MCTS, 424</td>
+<td>Trees, rewards and planning</td>
+<td>Draw two possible move paths. Try each and record its return.</td>
+<td>Search possible futures before choosing a move. The planner needs a way to simulate what happens next.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="a-few-useful-safeguards-for-learning">A few useful safeguards for learning</h2>
+<p>Do not apply every preparation method to the same table. First name the problem. Compare one sensible candidate with doing nothing, using validation rows.</p>
+<p>Scaling can leave an ordinary straight-line model's predictions unchanged. That is a useful result. To see why scale can matter, compare the nearest-neighbour model with and without scaling. Use the same validation rows. Do not decide from training scores.</p>
+<p>For groups, try two choices of K, where K is the number of centres. Then try data without clear groups. Compare profiles and whether small changes produce very different groups. A silhouette score describes separation under a distance rule. It does not prove the groups help a business.</p>
+<p>For dates, hours repeat. 23:00 and 00:00 are only an hour apart. Do not assume their written hour numbers give a useful distance. Time zones also matter: record whether a timestamp is local time or UTC. Keep the meaning and prediction time with the data.</p>
+<p>For text, try “not late”, “late!”, a product code and a name where case matters. Removing punctuation or common words can remove useful meaning. The right choice depends on the task and language.</p>
+<p>For neural networks, learn one step at a time: inputs, weights, output, loss, update, and a separate check. A <strong>loss</strong> measures mistakes during learning. An <strong>optimizer</strong> changes weights to reduce that loss. An <strong>epoch</strong> is one pass through training data. Do not start by memorizing a long training loop.</p></main><script>
+(()=>{'use strict';
+const theme=document.getElementById('theme');let saved;try{saved=localStorage.getItem('ml-course-theme')}catch{}if(saved)document.documentElement.dataset.theme=saved;
+theme.addEventListener('click',()=>{const current=document.documentElement.dataset.theme|| (matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');const next=current==='dark'?'light':'dark';document.documentElement.dataset.theme=next;try{localStorage.setItem('ml-course-theme',next)}catch{}});
+for(const pre of document.querySelectorAll('pre')){const button=document.createElement('button');button.className='copy';button.textContent='Copy code';button.type='button';button.addEventListener('click',async()=>{const text=pre.querySelector('code')?.textContent||pre.textContent;try{if(navigator.clipboard?.writeText){await navigator.clipboard.writeText(text)}else{const area=document.createElement('textarea');area.value=text;document.body.append(area);area.select();if(!document.execCommand('copy'))throw Error();area.remove()}button.textContent='Copied'}catch{button.textContent='Select the text to copy'}setTimeout(()=>button.textContent='Copy code',1800)});pre.before(button)}
+const search=document.getElementById('lesson-search'),track=document.getElementById('lesson-track');if(search){const rows=[...document.querySelectorAll('tr[data-track]')];const update=()=>{const terms=search.value.toLowerCase().trim().split(/\s+/).filter(Boolean);let count=0;for(const row of rows){const show=(!track.value||row.dataset.track===track.value)&&terms.every(word=>row.textContent.toLowerCase().includes(word));row.hidden=!show;if(show)count++}document.getElementById('search-status').textContent=count+' matching lesson entries'};search.addEventListener('input',update);track.addEventListener('change',update);update()}
+for(const [index,input] of [...document.querySelectorAll('input[data-course-check]')].entries()){const key='ml-course-check:'+location.pathname+':'+index;try{input.checked=localStorage.getItem(key)==='yes'}catch{}input.addEventListener('change',()=>{try{localStorage.setItem(key,input.checked?'yes':'no')}catch{}})}
+const progress=document.querySelector('.progress');addEventListener('scroll',()=>{const size=document.documentElement.scrollHeight-innerHeight;progress.style.width=(size>0?100*scrollY/size:0)+'%'},{passive:true});
+})();
+</script></body></html>

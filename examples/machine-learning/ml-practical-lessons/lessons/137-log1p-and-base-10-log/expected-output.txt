@@ -1,0 +1,17 @@
+ signal  log1p  log10
+      1  0.693  0.000
+      5  1.792  0.699
+     12  2.565  1.079
+     20  3.045  1.301
+     35  3.584  1.544
+     80  4.394  1.903
+    160  5.081  2.204
+     10  2.398  1.000
+     55  4.025  1.740
+Log Transformation first two training rows: [[0.69], [1.79]]
+Actual costs: [23, 48]
+Predicted costs: [26.7, 47.2]
+ signal  predicted_cost
+      3           13.94
+     15           31.43
+     40           43.30

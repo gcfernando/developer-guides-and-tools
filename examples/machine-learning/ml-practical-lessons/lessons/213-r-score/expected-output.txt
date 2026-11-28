@@ -1,0 +1,7 @@
+Worked calculation: two test deliveries. Use lesson 446 for a larger evaluation.
+Compares errors with a simple average baseline. 1 is perfect and negative is worse than that baseline.
+0.868
+ distance_km  weight_kg  prediction
+           5          2        27.5
+          13          3        43.5
+          20          7        70.0

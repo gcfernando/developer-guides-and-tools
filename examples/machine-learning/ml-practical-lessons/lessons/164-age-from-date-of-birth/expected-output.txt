@@ -1,0 +1,11 @@
+ age  urgent
+  34       0
+  24       0
+  42       1
+  32       0
+  27       1
+Held-out prediction: [0]
+     birth            message  prediction
+1996-05-01      urgent parcel           0
+1990-07-04     regular update           1
+2000-01-01 thanks for writing           0

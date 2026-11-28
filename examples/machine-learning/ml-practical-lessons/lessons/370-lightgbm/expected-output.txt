@@ -1,0 +1,7 @@
+New inputs and predictions:
+ km  kg  predicted_minutes
+  5   2              28.51
+ 16   4              48.65
+ 42   9              90.40
+LGBMRegressor MAE: 5.03
+First actual / predicted: 72.0 79.4

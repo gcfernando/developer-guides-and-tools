@@ -1,0 +1,7 @@
+    address  minutes  parcel.kg  latitude  longitude
+Depot North       10        1.0     59.35      18.05
+Depot South       16        3.0     59.28      18.02
+Depot North       12        NaN     59.35      18.05
+    Unknown       15        2.0       NaN        NaN
+XML weight: 2.0
+Held-out estimate: [12.0]

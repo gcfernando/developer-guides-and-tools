@@ -1,0 +1,5 @@
+One MFCC row: 8
+New WAV sound: ['high']
+Decoded MP3 sound: ['high']
+285 low
+920 high

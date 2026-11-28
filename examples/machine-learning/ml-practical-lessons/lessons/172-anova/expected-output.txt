@@ -1,0 +1,2 @@
+ANOVA selected: ['minutes']
+Held-out labels: [0, 1]

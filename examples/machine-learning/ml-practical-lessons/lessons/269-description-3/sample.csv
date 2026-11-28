@@ -1,0 +1,9 @@
+area,rooms,neighborhood,street,exterior,pool,garage,price
+55,2,North,paved,wood,,none,165000
+72,3,South,paved,brick,,single,215000
+105,4,North,gravel,wood,,single,280000
+200,6,South,paved,brick,good,double,760000
+85,3,North,paved,wood,,single,220000
+95,4,South,gravel,brick,,double,270000
+68,3,North,paved,wood,,none,187000
+140,5,South,paved,brick,good,double,395000

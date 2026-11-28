@@ -1,0 +1,15 @@
+PDF reference: UCI Heart Disease Dataset
+Origin of this CSV: original synthetic practice rows
+Rows: 8
+        Column   Type
+           age  int64
+   cholesterol  int64
+blood_pressure  int64
+exercise_score  int64
+           sex object
+    chest_pain object
+ example_label  int64
+ age  cholesterol  blood_pressure  exercise_score sex chest_pain  example_label
+  29          155             111              80   F       none              0
+  38          166             118              72   M       none              0
+  58          250             147              39   F   reported              1

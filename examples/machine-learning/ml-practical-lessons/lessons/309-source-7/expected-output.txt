@@ -1,0 +1,13 @@
+PDF reference: UCI Boston Housing Dataset
+Origin of this CSV: original synthetic practice rows
+Rows: 8
+          Column    Type
+  crime_per_1000   int64
+           rooms   int64
+household_income float64
+            zone  object
+           price   int64
+ crime_per_1000  rooms  household_income    zone  price
+              2      3           38000.0   North 180000
+              1      5           57000.0   South 300000
+              4      4               NaN Central 215000

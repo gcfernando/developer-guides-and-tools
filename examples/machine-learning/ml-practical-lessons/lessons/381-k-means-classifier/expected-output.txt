@@ -1,0 +1,2 @@
+Cluster IDs: [0, 1, 0]
+Mapped class predictions: ['local', 'long', 'local']

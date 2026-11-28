@@ -1,0 +1,13 @@
+signed_up  flag
+      Yes   1.0
+       No   0.0
+     True   1.0
+        0   0.0
+        1   1.0
+  unknown   NaN
+Imputed value: [1.0]
+Prediction: [1]
+signed_up  flag  prediction
+  unknown   NaN           1
+      Yes   1.0           1
+        0   0.0           0

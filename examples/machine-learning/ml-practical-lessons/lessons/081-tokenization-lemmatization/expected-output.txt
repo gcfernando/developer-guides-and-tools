@@ -1,0 +1,7 @@
+Tokens: ['late', 'parcel', 'and', 'two', 'charge']
+Actual: ['delivery', 'billing']
+Predicted: ['delivery', 'billing']
+                         message predicted
+             The parcel is late!  delivery
+I need a refund for two charges.   billing
+          WHERE ARE MY PACKAGES?  delivery

@@ -1,0 +1,13 @@
+Worked examples
+                                      problem      feedback learning_category
+                        Predict delivery time known answers        Supervised
+          Group routes by distance and weight    no answers      Unsupervised
+             Tag the remaining delivery notes  some answers   Semi-supervised
+Learn which corridor reaches the loading door       rewards     Reinforcement
+
+Your examples
+                                problem      feedback learning_category
+                 Predict package weight known answers        Supervised
+           Find unusual delivery routes    no answers      Unsupervised
+Classify photos with a few known labels  some answers   Semi-supervised
+      Learn parcel sorting with scoring       rewards     Reinforcement

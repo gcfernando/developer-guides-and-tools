@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>INDEPENDENT PROJECT</title><style>
+:root{color-scheme:light dark;--bg:#f5f7fa;--panel:#fff;--text:#203346;--muted:#4e6274;--line:#cbd6df;--link:#145b91}
+@media(prefers-color-scheme:dark){:root{--bg:#111c26;--panel:#192936;--text:#e6edf4;--muted:#b9c8d7;--line:#455d70;--link:#93caff}}
+html[data-theme=light]{color-scheme:light;--bg:#f5f7fa;--panel:#fff;--text:#203346;--muted:#4e6274;--line:#cbd6df;--link:#145b91}
+html[data-theme=dark]{color-scheme:dark;--bg:#111c26;--panel:#192936;--text:#e6edf4;--muted:#b9c8d7;--line:#455d70;--link:#93caff}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:18px/1.7 system-ui,sans-serif}header,main{max-width:1100px;margin:auto;padding:20px 28px}header{border-bottom:1px solid var(--line)}nav{display:flex;flex-wrap:wrap;gap:10px 22px}main{padding-bottom:90px}h1,h2,h3,h4,h5,h6{line-height:1.3;scroll-margin-top:20px}h1{font-size:2.2rem}h2{font-size:1.65rem;margin-top:2.7rem}h3{font-size:1.35rem}h4,h5,h6{font-size:1.15rem}p,li{max-width:86ch}li{margin:.35rem 0}a{color:var(--link);text-underline-offset:.15em}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #d78d13;outline-offset:3px}.skip{position:absolute;top:-100px}.skip:focus{top:0;background:var(--panel);padding:12px}table{border-collapse:collapse;width:100%;font-size:.95rem;background:var(--panel)}th,td{padding:10px 14px;text-align:left;border:1px solid var(--line);vertical-align:top}.table-frame{overflow-x:auto;margin:20px 0}code{font-size:.9em;overflow-wrap:anywhere}pre{background:var(--panel);border:1px solid var(--line);padding:18px;overflow-x:auto;line-height:1.5}pre code{overflow-wrap:normal}img{max-width:100%;height:auto;background:white}details{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:15px 20px;margin:18px 0}summary{cursor:pointer;font-weight:650}.tools{padding:18px;border:1px solid var(--line);background:var(--panel);margin:20px 0}.tools label{display:block}.tools input{width:min(100%,600px)}input,select,button{font:inherit;padding:7px 12px;border:1px solid var(--line);border-radius:5px;background:var(--panel);color:var(--text)}button{cursor:pointer}.copy{font-size:.8rem;float:right}.hint{color:var(--muted);font-size:.9rem}.toc ul{padding-left:22px}.toc{border-left:4px solid var(--line);padding-left:15px;max-height:420px;overflow:auto}.progress{height:4px;background:var(--link);position:fixed;left:0;top:0;z-index:10;width:0}.checklist-item{list-style:none}.checklist-item input{width:auto;margin-right:10px}[hidden]{display:none!important}@media(max-width:650px){body{font-size:17px}header,main{padding:16px}h1{font-size:1.8rem}th,td{padding:8px}.tools input{width:100%}}@media print{body{font-size:11pt;background:white;color:#111}header,.tools,.copy,.progress{display:none}main{padding:0;max-width:none}pre{white-space:pre-wrap}a{color:inherit}details{break-inside:avoid}h2,h3{break-after:avoid}}
+</style></head><body><a class="skip" href="#content">Skip to the lesson</a><div class="progress" aria-hidden="true"></div><header><nav aria-label="Course pages"><a href="START-HERE.html">Start here</a><a href="LEARNING-PATH.html">Learning path</a><a href="SETUP.html">Setup</a><a href="GLOSSARY.html">Word list</a><a href="Data-Science-and-Machine-Learning.html#lesson-downloads">Lesson library</a><button id="theme" type="button">Change colour theme</button></nav></header><main id="content"><h1 id="build-a-model-for-a-new-table">Build a model for a new table</h1>
+<p><a href="LEARNING-PATH.html">Learning path</a> · <a href="PROJECT-CHOICES.html">Project choices</a></p>
+<p>Finish the guided delivery project first. This task checks whether you can use the ideas on a different table. There is no complete model script to copy.</p>
+<h2 id="your-question">Your question</h2>
+<p>Can chemical measurements help predict one of three wine types in a small historical dataset?</p>
+<p>This is a real teaching benchmark, not the invented drink table in the workbook. It has 178 rows and 13 measured inputs. You do not need to taste or handle wine. The task is about numbers in a table.</p>
+<p>The source is <a href="https://archive.ics.uci.edu/dataset/109/wine">UCI Wine</a>, by Stefan Aeberhard and M. Forina. This copy comes from scikit-learn. The files include attribution and the data licence. Source units are not supplied for every field, so do not invent them.</p>
+<h2 id="1-open-the-files">1. Open the files</h2>
+<p>Open <code>projects/wine</code>. Its README explains the files. With the active course environment, run:</p>
+<pre><code class="language-bash">python starter.py
+</code></pre>
+<p>It prints row counts and field names. It does not train a model for you.</p>
+<h2 id="2-write-a-brief">2. Write a brief</h2>
+<p>Use the questions in Project choices. State the target, possible inputs and a simple baseline. The three target values are names, not a low-to-high ranking. Do not use row ID as an input.</p>
+<p>Explain a limit: this historical sample does not establish performance on all wines, new countries or a future instrument. The file split is for a classroom comparison of similar recorded samples. It does not test future dates or unseen producers.</p>
+<h2 id="3-inspect-and-plan">3. Inspect and plan</h2>
+<ol>
+<li>Read <code>data_dictionary.csv</code>.</li>
+<li>Inspect missing values and numeric ranges in <code>training.csv</code>.</li>
+<li>Choose a simple baseline and one candidate model.</li>
+<li>Decide whether the candidate needs scaling.</li>
+<li>Write which values will be learned from training only.</li>
+</ol>
+<h2 id="4-fill-in-the-missing-work">4. Fill in the missing work</h2>
+<p>Copy <code>starter.py</code> to <code>my_model.py</code>. Keep your own notes. Add the steps yourself:</p>
+<ul>
+<li>Read training inputs and their targets.</li>
+<li>Train a baseline and your candidate.</li>
+<li>Compare them on <code>validation.csv</code> with the same metric.</li>
+<li>Inspect counts and mistakes for each target type.</li>
+<li>Choose one model. Save your choice and reason before using the final check.</li>
+</ul>
+<p>Use the glossary, earlier small lessons or a hint from a teacher if needed. Do not open the instructor answer file to choose a model.</p>
+<h2 id="5-make-final-predictions">5. Make final predictions</h2>
+<p>Read <code>test_inputs.csv</code>. Save one guess per row to <code>predictions.csv</code>, with exactly these two columns:</p>
+<pre><code class="language-text">row_id,predicted_type
+</code></pre>
+<p>Keep each row ID exactly once. <code>predicted_type</code> must be 0, 1 or 2. Then run:</p>
+<pre><code class="language-bash">python instructor/check_predictions.py predictions.csv
+</code></pre>
+<p>The checker reads the separate answer file and prints the final counts and score. Do not use that score to keep changing your model. If you do, this test becomes part of choosing, and a new independent evaluation is needed.</p>
+<h2 id="6-explain-and-hand-over">6. Explain and hand over</h2>
+<p>Write a small model card. Include the data source, choice, baseline, validation comparison, final count table, mistakes and limits. Give your script and notes to another learner. They should be able to run it and explain why the model might fail elsewhere.</p>
+<p>Use the five-area rubric in <a href="TEACHING.html#score-an-independent-project">Teaching</a>. The goal is a reasoned, repeatable result. A high score alone is not a pass if the model used the final answers while choosing.</p>
+<h2 id="ideas-route">Ideas route</h2>
+<p>You can still complete the brief, identify the target and inputs, explain the split, calculate an accuracy from a teacher-supplied count table, and write the limitations. State that you assessed the project rather than built the Python model.</p></main><script>
+(()=>{'use strict';
+const theme=document.getElementById('theme');let saved;try{saved=localStorage.getItem('ml-course-theme')}catch{}if(saved)document.documentElement.dataset.theme=saved;
+theme.addEventListener('click',()=>{const current=document.documentElement.dataset.theme|| (matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');const next=current==='dark'?'light':'dark';document.documentElement.dataset.theme=next;try{localStorage.setItem('ml-course-theme',next)}catch{}});
+for(const pre of document.querySelectorAll('pre')){const button=document.createElement('button');button.className='copy';button.textContent='Copy code';button.type='button';button.addEventListener('click',async()=>{const text=pre.querySelector('code')?.textContent||pre.textContent;try{if(navigator.clipboard?.writeText){await navigator.clipboard.writeText(text)}else{const area=document.createElement('textarea');area.value=text;document.body.append(area);area.select();if(!document.execCommand('copy'))throw Error();area.remove()}button.textContent='Copied'}catch{button.textContent='Select the text to copy'}setTimeout(()=>button.textContent='Copy code',1800)});pre.before(button)}
+const search=document.getElementById('lesson-search'),track=document.getElementById('lesson-track');if(search){const rows=[...document.querySelectorAll('tr[data-track]')];const update=()=>{const terms=search.value.toLowerCase().trim().split(/\s+/).filter(Boolean);let count=0;for(const row of rows){const show=(!track.value||row.dataset.track===track.value)&&terms.every(word=>row.textContent.toLowerCase().includes(word));row.hidden=!show;if(show)count++}document.getElementById('search-status').textContent=count+' matching lesson entries'};search.addEventListener('input',update);track.addEventListener('change',update);update()}
+for(const [index,input] of [...document.querySelectorAll('input[data-course-check]')].entries()){const key='ml-course-check:'+location.pathname+':'+index;try{input.checked=localStorage.getItem(key)==='yes'}catch{}input.addEventListener('change',()=>{try{localStorage.setItem(key,input.checked?'yes':'no')}catch{}})}
+const progress=document.querySelector('.progress');addEventListener('scroll',()=>{const size=document.documentElement.scrollHeight-innerHeight;progress.style.width=(size>0?100*scrollY/size:0)+'%'},{passive:true});
+})();
+</script></body></html>

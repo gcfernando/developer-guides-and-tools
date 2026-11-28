@@ -1,0 +1,9 @@
+ Year  Month  Day  Weekday  Hour
+ 2025      2    3        0     8
+ 2025      2    3        0    10
+ 2025      2    4        1     8
+ 2025      2    4        1    10
+       timestamp  Weekday  Hour  estimated_orders
+2025-02-05 09:00        2     9              18.0
+2025-03-08 17:30        5    17              43.0
+2026-01-12 08:30        0     8              10.0

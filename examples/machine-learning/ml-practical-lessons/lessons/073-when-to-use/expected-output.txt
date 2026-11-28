@@ -1,0 +1,9 @@
+Raw                         MAE 10.88
+Min-Max Scaling             MAE 12.18
+Z-Score Standardization     MAE 10.94
+Log Transformation          MAE 3.64
+Robust Scaling              MAE 10.37
+Power Transformations       MAE 3.64
+Quantile Transformation     MAE 12.63
+Binning                     MAE 12.63
+Polynomial Features         MAE 10.80

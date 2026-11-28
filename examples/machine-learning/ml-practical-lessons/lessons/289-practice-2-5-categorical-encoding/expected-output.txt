@@ -1,0 +1,12 @@
+Missing cells before filling or removing rows: {'age': 0, 'hours': 0, 'education': 0, 'workclass': 1, 'occupation': 1, 'marital_status': 0, 'income_group': 0}
+Field  Rows to review
+  age               0
+hours               0
+Flagged original rows: []
+ Original row Actual answer  Prediction
+            7   50k_or_less 50k_or_less
+            8     above_50k   above_50k
+ age  hours education workclass occupation marital_status  prediction
+  22     25    school   private     retail         single 50k_or_less
+  38     45    degree    public   engineer        married   above_50k
+  36     45    degree    public    manager        married   above_50k

@@ -1,0 +1,8 @@
+Explicit Unknown  zone  filled  minutes
+  NaN Unknown    29.00
+south   south    40.00
+north   north    24.50
+ east    east    31.17
+          Method  Check row Zone sent to encoder  Actual time (min)  Predicted time (min)
+Explicit Unknown          5              Unknown                 33                  29.0
+Explicit Unknown          6                south                 44                  40.0

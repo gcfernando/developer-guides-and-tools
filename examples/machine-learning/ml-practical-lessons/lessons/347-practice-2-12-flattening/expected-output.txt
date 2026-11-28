@@ -1,0 +1,3 @@
+Original shape: (5, 5). Flattened shape: (25,).
+First ten values: [0, 255, 255, 255, 0, 255, 255, 255, 255, 255]
+Recovered the original grid: True

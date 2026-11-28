@@ -1,0 +1,8 @@
+Binning first two training rows: [[1.0, 0.0, 0.0], [1.0, 0.0, 0.0]]
+Actual costs: [23, 48]
+Predicted costs: [25.0, 53.0]
+Training edges: [1.0, 54.0, 107.0, 160.0]
+ signal  predicted_cost
+      3            25.0
+     15            25.0
+     40            25.0

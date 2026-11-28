@@ -1,0 +1,5 @@
+TfidfVectorizer parcel feature: 0.52 predictions: ['delivery', 'billing']
+                         message predicted
+             The parcel is late!  delivery
+I need a refund for two charges.   billing
+          WHERE ARE MY PACKAGES?  delivery

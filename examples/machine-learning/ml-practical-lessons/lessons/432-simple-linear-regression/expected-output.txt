@@ -1,0 +1,5 @@
+Simple predictions: [45.0, 51.2]
+ distance_km  minutes
+           5     29.5
+          12     51.2
+          20     76.0

@@ -1,0 +1,10 @@
+Confirmed errors removed: 1
+remove only
+ weight_used_by_model  original_weight_kg  predicted_minutes  actual_minutes
+                  7.0                 7.0               28.1              32
+remove and clip
+ weight_used_by_model  original_weight_kg  predicted_minutes  actual_minutes
+                  7.0                 7.0               44.3              32
+remove and log
+ weight_used_by_model  original_weight_kg  predicted_minutes  actual_minutes
+             2.079442                 7.0               38.8              32

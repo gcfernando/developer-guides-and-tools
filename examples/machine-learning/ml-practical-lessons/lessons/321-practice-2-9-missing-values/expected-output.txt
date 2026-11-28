@@ -1,0 +1,23 @@
+       age  annual_income  score
+0.05  21.4        25050.0  40.70
+0.95  62.4       117400.0  78.95
+passthrough         age  annual_income  score
+group
+0      21.5        25500.0   69.0
+1      60.7       104666.7   77.3
+2      39.0        57666.7   51.3
+New group: [1]
+ age  annual_income  score region  cluster
+  21        24000.0   68.0  north        0
+  61        96000.0   78.0   west        1
+  22        27000.0   70.0  north        0
+StandardScaler()         age  annual_income  score
+group
+0      22.3        25500.0   70.0
+1      60.7       104666.7   77.3
+2      44.0        57666.7   41.0
+New group: [1]
+ age  annual_income  score region  cluster
+  21        24000.0   68.0  north        0
+  61        96000.0   78.0   west        1
+  22        27000.0   70.0  north        0

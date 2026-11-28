@@ -1,0 +1,7 @@
+{'source': 'original sample', 'method': 'created in Python', 'bytes': 27, 'types': {'order_id': 'int64', 'minutes': 'int64'}}
+file_type  collected
+     text       True
+    image       True
+    video       True
+Image width and height: (16, 16)
+Video frames read: 2

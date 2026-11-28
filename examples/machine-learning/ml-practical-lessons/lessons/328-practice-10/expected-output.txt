@@ -1,0 +1,14 @@
+Balance / duration range: {'balance': {'min': 300, 'max': 12000}, 'duration': {'min': 35, 'max': 650}}
+Training-only descriptive duration scale: [-0.86, -0.63, -0.19, 0.88, -0.97, 1.77]
+Missing cells before filling or removing rows: {'age': 0, 'balance': 0, 'job': 1, 'marital': 1, 'education': 0, 'prior': 0, 'subscribed': 0}
+   Field  Rows to review
+ balance               0
+duration               0
+Flagged original rows: []
+ Original row Actual answer Prediction
+            7            no         no
+            8           yes        yes
+ age  balance  duration     job marital education   prior prediction
+  21      500        60 student  single    school    none         no
+  49     5000       220 manager married    degree success        yes
+  44     4200       210 manager married    degree success        yes

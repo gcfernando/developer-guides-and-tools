@@ -1,0 +1,94 @@
+# Numerical Data: Mean, Median, Mode, KNN Imputer
+
+**Lesson 037 · Practice**
+
+## Your goal
+
+Compare four ways of filling the same missing weight and see how each changes the prediction.
+
+## Before you start
+
+Find a missing input and a missing answer. Keep training and checks separate.
+
+Use the [main learning path](../LEARNING-PATH.html) if you have not learned this yet. For extra topics, read [the extra-topic guide](../ELECTIVES.html). These links work when this folder is extracted directly into the complete course folder.
+
+## The idea in simple words
+
+A fill is an estimate, not a recovered fact. Learn a fill rule on training rows. Reuse it on new rows. Do not invent training answers.
+
+## Guess first
+
+May a new request change the saved training median? Write your answer before running the script.
+
+## Run one step at a time
+
+1. Extract this ZIP. Open folders until you see `lesson.py`.
+2. Open a terminal in that folder. Activate the course environment as shown in Setup. Every `python` below means that environment's Python.
+3. The main path uses the common course packages. If this lesson needs more, use the same Python to install `requirements.txt` with the course constraint file. See Setup step 8. Do not install optional media packages just to read a lesson.
+4. Run these lines one at a time. Wait for each to finish.
+
+```bash
+python lesson.py
+```
+
+## Check the result
+
+Read the column names and units before the numbers. The original files produced this example. Your deliberate data edits may change it.
+
+```text
+ New row               Method  Filled kg  Prediction in minutes  Actual minutes
+       1                 Mean       2.33                  33.59            33.0
+       2                 Mean       2.00                  28.56            29.0
+       3                 Mean       2.33                  36.85               —
+       1               Median       2.00                  32.14            33.0
+       2               Median       2.00                  29.00            29.0
+       3               Median       2.00                  35.29               —
+       1 Most frequent (mode)       1.00                  45.00            33.0
+       2 Most frequent (mode)       2.00                  32.60            29.0
+       3 Most frequent (mode)       1.00                  57.40               —
+       1  KNN (two neighbors)       3.00                  41.00            33.0
+       2  KNN (two neighbors)       2.00                  31.00            29.0
+```
+
+[See the complete expected output](expected-output.txt). Explain one row aloud. A matching number is a check of the calculation, not proof of real-world quality.
+
+## Change one thing
+
+Change a distance in new_inputs.csv. Clear actual_minutes on that row: the old measured time does not describe your invented request. Compare the new guess.
+
+Open the named CSV in a plain text editor. Keep its column names and commas. Save the same file name before running again. If you invent a request by changing its inputs, clear its old measured answer. Only score it after you have a real outcome for that new case.
+
+## If you get stuck
+
+If a file is missing, list the files with `dir` or `ls` and enter the folder holding the script. If a column or value is wrong, compare it with a fresh extracted CSV. Use a new folder to start over; keep your edited copy if useful. Use Setup for package or terminal errors.
+
+## Explain the result
+
+<details>
+<summary>Read the answer after trying</summary>
+
+No. Apply the saved rule. A deliberate retraining step is a separate action.
+
+</details>
+
+You can move on when you can explain the goal, the changed value and why the result did or did not change. Then return to the next box in the main learning path.
+
+
+## 📋 Sample data
+
+| distance_km | weight_kg | zone | delivery_minutes |
+| --- | --- | --- | --- |
+| 2 | 1 | north | 19 |
+| 4 | — | north | 30 |
+| 6 | 2 | — | 29 |
+| 8 | 4 | south | 40 |
+| 10 | 1 | ? | 33 |
+| 12 | 3 | south | 44 |
+
+## 📩 Supplied new inputs
+
+| distance_km | weight_kg | actual_minutes |
+| --- | --- | --- |
+| 10 | — | 33 |
+| 6 | 2 | 29 |
+| 14 | — | — |

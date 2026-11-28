@@ -1,0 +1,6 @@
+Among rows the model called urgent, how many really were urgent?
+precision 0.895
+ distance  weight  predicted_urgent
+        5       2                 0
+       28       7                 1
+       40       5                 1

@@ -1,0 +1,5 @@
+              use_case     metric
+Estimate delivery time       RMSE
+Route support messages         F1
+        Group shoppers Silhouette
+First decision: Estimate delivery time

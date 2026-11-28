@@ -1,0 +1,15 @@
+Missing cells before filling or removing rows: {'alcohol': 0, 'citric_acid': 0, 'sulphates': 1, 'quality': 0}
+      Field  Rows to review
+    alcohol               1
+citric_acid               0
+  sulphates               0
+Flagged original rows: [6]
+Training median used for missing sulphates: 0.6
+ Original row  Actual answer  Prediction
+            7              5         5.2
+            8              7         7.1
+Class predictions: ['lower', 'higher']
+ alcohol  citric_acid  sulphates  prediction
+     8.0          0.2        0.3    4.279202
+    12.1          0.4        0.7    7.065527
+    10.0          0.3        NaN    5.000000
