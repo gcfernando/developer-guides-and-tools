@@ -28,10 +28,17 @@ def structure():
     for path in sources:
         try: ast.parse(path.read_text(encoding='utf-8'))
         except SyntaxError as error: problems.append(f'{path}: {error}')
-    htmls=list(ROOT.glob('*.html'))
+    htmls=list(ROOT.glob('*.html'))+[ROOT/'course-review/report.html']
     parsed={p:BeautifulSoup(p.read_text(encoding='utf-8'),'html.parser') for p in htmls}
     id_sets={p:{e['id'] for e in soup.select('[id]')} for p,soup in parsed.items()}
     for path,soup in parsed.items():
+        expected='https://gcfernando.github.io/developer-guides-and-tools/examples/machine-learning/ml-practical-lessons/'+path.relative_to(ROOT).as_posix()
+        canonical=soup.select('link[rel="canonical"]')
+        if len(canonical)!=1 or canonical[0].get('href')!=expected:
+            problems.append(f'{path.relative_to(ROOT)}: missing or incorrect canonical URL')
+        description=soup.select('meta[name="description"]')
+        if len(description)!=1 or not description[0].get('content','').strip():
+            problems.append(f'{path.relative_to(ROOT)}: missing description')
         ids=[e['id'] for e in soup.select('[id]')]
         if len(ids)!=len(set(ids)): problems.append(f'Duplicate IDs: {path.name}')
         for tag in soup.select('a[href],img[src]'):

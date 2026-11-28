@@ -2542,5 +2542,26 @@
       "A new GitHub Actions run after publishing this repair",
       "Local Jekyll site build; Ruby is not available in this session"
     ]
+  },
+  "ci_site_metadata_repair": {
+    "date": "2026-11-28",
+    "failed_commit": "43250a7",
+    "cause": "The static course HTML pages and review report lacked canonical links and meta descriptions required by the published-site checker.",
+    "changes": [
+      "The page generator supplies exact published URLs and a page-specific description for all 12 root readers.",
+      "The authored review report includes its canonical URL and description.",
+      "The course checker now checks publication metadata for the 12 root readers and the review report.",
+      "The author instructions require a Jekyll build and the published-site check as well as npm test."
+    ],
+    "verified": [
+      "Full npm test passed.",
+      "All 13 canonical URLs, descriptions and titles passed an independent check against the actual repository _config.yml.",
+      "Removing a page canonical and a review description in a temporary copy produced the expected checker failures.",
+      "Course checks passed: 458 Python sources, 13 HTML pages including the review, 448 archives, 447 manifest entries, 8 learner regression groups and page controls."
+    ],
+    "not_verified": [
+      "Full local Jekyll build: Ruby is unavailable in this session.",
+      "The next GitHub Actions run after publishing this repair."
+    ]
   }
 }

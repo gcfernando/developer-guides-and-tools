@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>TEACHING</title><style>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="canonical" href="https://gcfernando.github.io/developer-guides-and-tools/examples/machine-learning/ml-practical-lessons/TEACHING.html"><meta name="description" content="Build, check and teach the beginner machine learning course, and record evidence from learner practice."><title>TEACHING</title><style>
 :root{color-scheme:light dark;--bg:#f5f7fa;--panel:#fff;--text:#203346;--muted:#4e6274;--line:#cbd6df;--link:#145b91}
 @media(prefers-color-scheme:dark){:root{--bg:#111c26;--panel:#192936;--text:#e6edf4;--muted:#b9c8d7;--line:#455d70;--link:#93caff}}
 html[data-theme=light]{color-scheme:light;--bg:#f5f7fa;--panel:#fff;--text:#203346;--muted:#4e6274;--line:#cbd6df;--link:#145b91}
@@ -31,6 +31,11 @@ npm test
 npm run check:repository
 </code></pre>
 <p>In Windows PowerShell, use <code>npm.cmd</code> if PowerShell blocks <code>npm.ps1</code>. The repository checks include rules for links in Markdown. Course checks alone do not cover all publication rules. Keep repository lesson links relative to <code>lessons/&lt;lesson&gt;/</code>; the build adjusts guide links in each ZIP's browser page for a folder extracted directly inside the course folder.</p>
+<p>For a website release, also set up Ruby and Bundler as required by the repository. Install the gems with <code>bundle install</code>, then run these commands from the repository root:</p>
+<pre><code class="language-bash">npm run site:build
+npm run check:site
+</code></pre>
+<p>The website check runs after the site build. It checks the published pages, including each page's title, short description and canonical URL (its main web address). A passing <code>npm test</code> does not replace this website check. If Ruby is unavailable, record that the full site build still needs verification.</p>
 <h2 id="test-a-clean-computer-setup">Test a clean computer setup</h2>
 <p>This is a release task, not a claim that it has already passed.</p>
 <div aria-label="Scrollable table" class="table-frame" role="region" tabindex="0"><table>

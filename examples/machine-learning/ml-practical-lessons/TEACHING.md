@@ -37,6 +37,15 @@ npm run check:repository
 
 In Windows PowerShell, use `npm.cmd` if PowerShell blocks `npm.ps1`. The repository checks include rules for links in Markdown. Course checks alone do not cover all publication rules. Keep repository lesson links relative to `lessons/<lesson>/`; the build adjusts guide links in each ZIP's browser page for a folder extracted directly inside the course folder.
 
+For a website release, also set up Ruby and Bundler as required by the repository. Install the gems with `bundle install`, then run these commands from the repository root:
+
+```bash
+npm run site:build
+npm run check:site
+```
+
+The website check runs after the site build. It checks the published pages, including each page's title, short description and canonical URL (its main web address). A passing `npm test` does not replace this website check. If Ruby is unavailable, record that the full site build still needs verification.
+
 ## Test a clean computer setup
 
 This is a release task, not a claim that it has already passed.

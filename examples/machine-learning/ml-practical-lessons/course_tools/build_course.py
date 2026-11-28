@@ -16,6 +16,20 @@ COURSE_URL = 'https://gcfernando.github.io/developer-guides-and-tools/examples/m
 PAGES = ['README', 'START-HERE', 'SETUP', 'PYTHON-BASICS', 'LEARNING-PATH', 'PRACTICE',
          'PROJECT-CHOICES', 'ELECTIVES', 'GLOSSARY', 'INDEPENDENT-PROJECT', 'TEACHING',
          'Data-Science-and-Machine-Learning']
+PAGE_DESCRIPTIONS = {
+    'README': 'Start a practical machine learning course with simple explanations, guided lessons and an independent project.',
+    'START-HERE': 'Learn what machine learning does with small examples, plain English and basic computer steps.',
+    'SETUP': 'Set up Python, open the course files and run your first machine learning lesson one step at a time.',
+    'PYTHON-BASICS': 'Learn the Python basics used in this course, including values, lists, tables, functions and predictions.',
+    'LEARNING-PATH': 'Follow the beginner learning path from reading a table to checking a model and finishing a project.',
+    'PRACTICE': 'Practise machine learning ideas with small questions, worked examples and explained answers.',
+    'PROJECT-CHOICES': 'Choose a useful machine learning question, compare a simple baseline and plan a fair check.',
+    'ELECTIVES': 'Explore optional machine learning topics after learning the basic skills they need.',
+    'GLOSSARY': 'Find simple English explanations of machine learning and Python words used in this course.',
+    'INDEPENDENT-PROJECT': 'Use real wine measurements to plan, build and check a machine learning project independently.',
+    'TEACHING': 'Build, check and teach the beginner machine learning course, and record evidence from learner practice.',
+    'Data-Science-and-Machine-Learning': 'Browse practical machine learning lessons, sample data, downloadable code and simple explanations.',
+}
 
 STYLE = '''
 :root{color-scheme:light dark;--bg:#f5f7fa;--panel:#fff;--text:#203346;--muted:#4e6274;--line:#cbd6df;--link:#145b91}
@@ -37,7 +51,7 @@ const progress=document.querySelector('.progress');addEventListener('scroll',()=
 '''
 
 
-def render(text, title, prefix='', workbook=False):
+def render(text, title, prefix='', workbook=False, canonical=None, description=None):
     text=re.sub(r'\A---\n.*?\n---\n', '', text, flags=re.S)
     text=text.replace('<details>', '<details markdown="1">')
     body=markdown.markdown(text,extensions=['tables','fenced_code','toc','md_in_html','sane_lists'],extension_configs={'toc':{'permalink':False}})
@@ -75,7 +89,12 @@ def render(text, title, prefix='', workbook=False):
     for td in soup.find_all('td'):
         if td.get_text(strip=True)=='[ ]':
             td.clear(); box=soup.new_tag('input',attrs={'type':'checkbox','data-course-check':'','aria-label':'Mark this module complete'}); td.append(box)
-    return '<!doctype html>\n<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+html.escape(title)+'</title><style>'+STYLE+'</style></head><body><a class="skip" href="#content">Skip to the lesson</a><div class="progress" aria-hidden="true"></div><header><nav aria-label="Course pages"><a href="'+prefix+'START-HERE.html">Start here</a><a href="'+prefix+'LEARNING-PATH.html">Learning path</a><a href="'+prefix+'SETUP.html">Setup</a><a href="'+prefix+'GLOSSARY.html">Word list</a><a href="'+prefix+'Data-Science-and-Machine-Learning.html#lesson-downloads">Lesson library</a><button id="theme" type="button">Change colour theme</button></nav></header><main id="content">'+str(soup)+'</main><script>'+SCRIPT+'</script></body></html>\n'
+    metadata=''
+    if canonical:
+        metadata+='<link rel="canonical" href="'+html.escape(canonical,quote=True)+'">'
+    if description:
+        metadata+='<meta name="description" content="'+html.escape(description,quote=True)+'">'
+    return '<!doctype html>\n<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'+metadata+'<title>'+html.escape(title)+'</title><style>'+STYLE+'</style></head><body><a class="skip" href="#content">Skip to the lesson</a><div class="progress" aria-hidden="true"></div><header><nav aria-label="Course pages"><a href="'+prefix+'START-HERE.html">Start here</a><a href="'+prefix+'LEARNING-PATH.html">Learning path</a><a href="'+prefix+'SETUP.html">Setup</a><a href="'+prefix+'GLOSSARY.html">Word list</a><a href="'+prefix+'Data-Science-and-Machine-Learning.html#lesson-downloads">Lesson library</a><button id="theme" type="button">Change colour theme</button></nav></header><main id="content">'+str(soup)+'</main><script>'+SCRIPT+'</script></body></html>\n'
 
 
 def zip_folder(folder, output):
@@ -101,7 +120,9 @@ def main():
     for name in PAGES:
         source=ROOT/(name+'.md')
         if not source.is_file(): raise SystemExit(f'Missing source: {source.name}')
-        html_text=render(source.read_text(encoding='utf-8'),name.replace('-',' '),workbook=name=='Data-Science-and-Machine-Learning')
+        html_text=render(source.read_text(encoding='utf-8'),name.replace('-',' '),
+                         workbook=name=='Data-Science-and-Machine-Learning',
+                         canonical=COURSE_URL+name+'.html',description=PAGE_DESCRIPTIONS[name])
         output=ROOT/(name+'.html'); output.write_text(html_text,encoding='utf-8',newline='\n')
         hashes[output.name]=hashlib.sha256(output.read_bytes()).hexdigest()
     for folder in sorted((ROOT/'lessons').iterdir()):
